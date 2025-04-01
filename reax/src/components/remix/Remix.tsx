@@ -14,6 +14,8 @@ import {
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+const defaultCopy = document.getElementById('remix-description')!.innerHTML;
+
 window.s3_remix_modal_controller = {
   openModal: () => {},
   closeModal: () => {},
@@ -25,8 +27,8 @@ const Remix = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const cursorPositionRef = useRef<number | null>(null);
 
-  const [__, setIsAnimating] = useState(true);
-  const [_, setStickerError] = useState('');
+  const [isAnimating, setIsAnimating] = useState(true);
+  const [stickerError, setStickerError] = useState('');
   const [isModelLoading, setIsModelLoading] = useState(true);
 
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -34,6 +36,7 @@ const Remix = () => {
   const [stickerName, setStickerName] = useState('');
 
   useEffect(() => {
+    setIsAnimating(true);
     if (window.s3_remix_modal_controller) {
       window.s3_remix_modal_controller.openModal = () => setIsModalOpen(true);
       window.s3_remix_modal_controller.closeModal = () => setIsModalOpen(false);
@@ -261,7 +264,12 @@ const Remix = () => {
       inputRef.current.selectionEnd = cursorPositionRef.current;
     }
 
-    document.getElementById('remix-description')!.innerHTML = `You are personalising this product with: ${stickerName}`;
+    if (stickerName) {
+      document.getElementById('remix-description')!.innerHTML =
+        `You are personalising this product with: ${stickerName}`;
+    } else {
+      document.getElementById('remix-description')!.innerHTML = defaultCopy;
+    }
   }, [stickerName]);
 
   return (
@@ -327,7 +335,7 @@ const Remix = () => {
 
                   <h2
                     style={{
-                      color: '#ffffff',
+                      color: window.s3_remix_config?.stickerTextColor || '#fff',
                       position: 'absolute',
                       width: '100%',
                       inset: 0,
@@ -337,7 +345,8 @@ const Remix = () => {
                       justifyContent: 'center',
                       alignItems: 'center',
                       fontSize: '5rem',
-                      opacity: 0.8,
+                      transition: 'opacity 0.5s ease',
+                      opacity: isAnimating ? 0 : 0.8,
                     }}
                   >
                     <span
@@ -361,6 +370,8 @@ const Remix = () => {
                       position: 'absolute',
                       bottom: '15rem',
                       width: '100%',
+                      transition: 'opacity 0.5s ease',
+                      opacity: isAnimating ? 0 : 1,
                     }}
                   >
                     <div
@@ -487,6 +498,7 @@ const Remix = () => {
                         ></path>
                       </svg>
                     </div>
+                    {/* {stickerError ? <p style={{ color: 'red' }}>{stickerError}</p> : null} */}
                   </div>
 
                   <p
