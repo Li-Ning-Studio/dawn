@@ -37,6 +37,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "#cart-icon-bubble, account-icon {display: none !important;}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
