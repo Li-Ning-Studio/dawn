@@ -19,7 +19,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "custom_css": [".price {display: none;}"],
+      "custom_css": [],
       "settings": {
         "products_per_page": 12,
         "columns_desktop": 3,
@@ -39,5 +39,8 @@
       }
     }
   },
-  "order": ["banner", "product-grid"]
+  "order": [
+    "banner",
+    "product-grid"
+  ]
 }
