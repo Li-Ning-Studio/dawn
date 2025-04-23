@@ -17,8 +17,8 @@
           "repeater": "{{ page.metafields.custom.distributor_list.value }}",
           "settings": {
             "title": "{{ block.repeater.company_name.value }}",
-            "text": "<p>{{ block.repeater.phone_number.value }}</p>",
-            "link_label": "{{ block.repeater.company_name.value }}",
+            "text": "<p><strong>Region(s):</strong> {{ block.repeater.region | metafield_tag }}<br/><strong>Address:</strong> {{ block.repeater.address | metafield_tag }}<br/><strong>Contact Number:</strong>{{ block.repeater.phone_number.value }}<br/><strong>Email: </strong>{{ block.repeater.email.value }}</p>",
+            "link_label": "",
             "link": ""
           }
         }
