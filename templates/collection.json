@@ -19,6 +19,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [
+        ".price,.card__badge {display: none;}"
+      ],
       "settings": {
         "products_per_page": 12,
         "columns_desktop": 3,
