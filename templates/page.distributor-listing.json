@@ -9,8 +9,43 @@
  */
 {
   "sections": {
+    "multicolumn_LjhEEj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AiLCCY": {
+          "type": "column",
+          "repeater": "{{ page.metafields.custom.distributor_list.value }}",
+          "settings": {
+            "title": "{{ block.repeater.company_name.value }}",
+            "text": "<p>{{ block.repeater.phone_number.value }}</p>",
+            "link_label": "{{ block.repeater.company_name.value }}",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_AiLCCY"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -18,6 +53,7 @@
     }
   },
   "order": [
+    "multicolumn_LjhEEj",
     "main"
   ]
 }
