@@ -9,52 +9,20 @@
  */
 {
   "sections": {
-    "image_banner_z9pw6i": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_VjGjWY": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_MYzfyt": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_bKJzWm": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop All",
-            "button_link_1": "shopify://collections",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_VjGjWY",
-        "text_MYzfyt",
-        "buttons_bKJzWm"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+    "video_QTQ9cC": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/yt.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
         "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "rich_text_7jqcW9": {
@@ -63,21 +31,21 @@
         "heading_neEwJB": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Now Serving Hundred in the USA!",
             "heading_size": "h1"
           }
         },
         "text_3pYRy7": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Your favorite rackets, shoes, bags & more.</p>"
           }
         },
         "button_XKBFTq": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Shop All",
+            "button_link": "shopify://collections",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -167,7 +135,7 @@
     }
   },
   "order": [
-    "image_banner_z9pw6i",
+    "video_QTQ9cC",
     "rich_text_7jqcW9",
     "image_banner",
     "featured_collection_xx4Qcn"
