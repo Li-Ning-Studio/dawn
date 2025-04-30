@@ -15,7 +15,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "text": "HUNDRED",
             "text_style": "uppercase"
           }
         },
@@ -73,6 +73,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "sku_4W4raJ": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -85,7 +91,8 @@
         "buy_buttons",
         "description",
         "collapsible_tab_McAyVV",
-        "share"
+        "share",
+        "sku_4W4raJ"
       ],
       "settings": {
         "enable_sticky_info": true,
