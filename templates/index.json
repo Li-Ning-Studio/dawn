@@ -211,6 +211,47 @@
         "show_text_below": false
       }
     },
+    "collection_list_dKPEzK": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_EzthHm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton"
+          }
+        },
+        "featured_collection_rP6KwW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cricket"
+          }
+        },
+        "featured_collection_CENaV7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pickleball-1"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_EzthHm",
+        "featured_collection_rP6KwW",
+        "featured_collection_CENaV7"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Shop By Sport",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
     "image_banner_xntHjm": {
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
@@ -396,6 +437,7 @@
     "rich_text_pTRTBn",
     "featured_collection_WHYGUP",
     "image_banner",
+    "collection_list_dKPEzK",
     "image_banner_xntHjm",
     "rich_text_tiFVLK",
     "featured_collection_zQbmAT",
