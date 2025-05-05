@@ -208,7 +208,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 28
       }
     },
     "image_banner_xntHjm": {
@@ -227,6 +227,49 @@
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
+    },
+    "rich_text_tiFVLK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XdCDag": {
+          "type": "heading",
+          "settings": {
+            "heading": "rich text about zephyr series",
+            "heading_size": "h1"
+          }
+        },
+        "text_XMy9Pg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_PaLgdk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XdCDag",
+        "text_XMy9Pg",
+        "button_PaLgdk"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -235,6 +278,7 @@
     "rich_text_pTRTBn",
     "image_banner",
     "featured_collection_dfaLFg",
-    "image_banner_xntHjm"
+    "image_banner_xntHjm",
+    "rich_text_tiFVLK"
   ]
 }
