@@ -85,47 +85,21 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "rich_text_7jqcW9": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_neEwJB": {
-          "type": "heading",
-          "settings": {
-            "heading": "Now Serving Hundred in the USA!",
-            "heading_size": "h1"
-          }
-        },
-        "text_3pYRy7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Your favorite rackets, shoes, bags & more.</p>"
-          }
-        },
-        "button_XKBFTq": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop All",
-            "button_link": "shopify://collections/badminton",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_neEwJB",
-        "text_3pYRy7",
-        "button_XKBFTq"
-      ],
-      "name": "t:sections.rich-text.presets.name",
+    "image_banner_K9VnDf": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "image": "shopify://shop_images/velocity_banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "image_banner": {
@@ -196,7 +170,7 @@
   },
   "order": [
     "slideshow_g8rW7A",
-    "rich_text_7jqcW9",
+    "image_banner_K9VnDf",
     "image_banner",
     "featured_collection_xx4Qcn"
   ]
