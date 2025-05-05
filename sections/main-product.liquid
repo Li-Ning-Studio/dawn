@@ -140,7 +140,8 @@
                     product: product,
                     use_variant: true,
                     show_badges: true,
-                    price_class: 'price--large'
+                    price_class: 'price--large',
+                    show_compare_at_price: true
                   -%}
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
@@ -543,6 +544,12 @@
                   and product.available == true
                 %}
                   {% render 'stringing' %}
+                {% endif %}
+                {% if product.metafields.custom_but_hidden.stickers == true
+                  and product.available == true
+                  and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model
+                %}
+                  {% render 'remix' %}
                 {% endif %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',

@@ -61,7 +61,7 @@
   {%- if picker_type == 'swatch' -%}
     {% assign hex_from_map = product.metafields.custom_but_hidden.hex_map.value[value] %}
     {% assign color_at_image = product.variants | where: 'option1', value | first %}
-    {% if option.name == 'Colour' and color_at_image.featured_image %}
+    {% if product.metafields.custom_but_hidden.show_image_swatch.value == true and color_at_image.featured_image %}
       {% assign image_src = color_at_image.featured_image %}
     {% endif %}
     {%- capture help_text -%}
@@ -125,3 +125,27 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+
+<script defer="defer">
+  var modelName =
+    '{{ product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model.value.name | json }}';
+
+    var racketFrameColor = {{ product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_racket_frame_color.value | default: '#8348ff' | json }};
+    var racketGripColor = {{ product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_racket_grip_color.value | default: '#ffffff' | json }};
+    var logoColor = {{ product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_logo_color.value | default: '#ff0000' | json }};
+    var stickerTextColor = {{ product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_sticker_text_color.value | default: '#ffffff' | json }};
+
+    var obj = {
+        racketFrameColor,
+        racketGripColor,
+        logoColor,
+        stickerTextColor,
+        modelPath:  '{{ product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model.value.name | downcase | prepend: 'rmx-' | append: '.glb' | asset_url }}'
+    }
+
+    console.log(obj)
+
+  if (typeof modelName === 'string' && modelName != 'null') {
+    window.s3_remix_config = obj;
+  }
+</script>
