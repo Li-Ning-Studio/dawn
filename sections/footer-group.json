@@ -14,6 +14,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_KDDqiT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hundred-logo_1.png",
+            "image_width": 215,
+            "alignment": ""
+          }
+        },
         "comm_channel_LtGX8G": {
           "type": "comm_channel",
           "settings": {
@@ -38,8 +46,8 @@
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "Payments",
+            "menu": "payment-methods"
           }
         },
         "brand_information_iR8KqB": {
@@ -50,6 +58,7 @@
         }
       },
       "block_order": [
+        "image_KDDqiT",
         "comm_channel_LtGX8G",
         "comm_channel_kMqUag",
         "footer-0",
