@@ -80,6 +80,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "custom_liquid_XPWXd8": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'tabby-installments'%}"
+          }
         }
       },
       "block_order": [
@@ -93,7 +99,8 @@
         "description",
         "collapsible_tab_McAyVV",
         "collapsible-row-1",
-        "share"
+        "share",
+        "custom_liquid_XPWXd8"
       ],
       "settings": {
         "enable_sticky_info": true,
