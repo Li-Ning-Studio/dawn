@@ -39,10 +39,9 @@
 {%- endstyle -%}
 
 {%- liquid
-  assign products_size = section.settings.products | size
-  assign products_to_display = products_size
+  assign products_to_display = section.settings.products.size
 
-  if products_size > section.settings.products_to_show
+  if section.settings.products.size > section.settings.products_to_show
     assign products_to_display = section.settings.products_to_show
     assign more_in_collection = true
   endif
@@ -96,7 +95,7 @@
       >
         {% assign skip_card_product_styles = false %}
 
-        {%- if products_size > 0 -%}
+        {%- if section.settings.products.size > 0 -%}
           {% assign lazy_load = false %}
           {%- for product in section.settings.products limit: section.settings.products_to_show -%}
             {% if lazy_load == false and forloop.index > max_columns_to_show %}
@@ -219,8 +218,7 @@
       "type": "product_list",
       "id": "products",
       "label": "Products",
-      "limit": 25,
-      "info": "Select products to display in this section"
+      "limit": 25
     },
     {
       "type": "range",
@@ -516,4 +514,4 @@
     }
   ]
 }
-{% endschema %} 
+{% endschema %}
