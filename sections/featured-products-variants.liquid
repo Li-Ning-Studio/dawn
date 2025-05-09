@@ -144,6 +144,7 @@
                       lazy_load: lazy_load,
                       show_secondary_image: section.settings.show_secondary_image,
                       show_vendor: section.settings.show_vendor,
+                      show_color: section.settings.show_color,
                       show_rating: section.settings.show_rating,
                       skip_styles: skip_card_product_styles,
                       section_id: section.id,
@@ -179,6 +180,7 @@
                   lazy_load: lazy_load,
                   show_secondary_image: section.settings.show_secondary_image,
                   show_vendor: section.settings.show_vendor,
+                  show_color: section.settings.show_color,
                   show_rating: section.settings.show_rating,
                   skip_styles: skip_card_product_styles,
                   section_id: section.id,
@@ -210,6 +212,7 @@
               {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
               {% render 'card-product',
                 show_vendor: section.settings.show_vendor,
+                show_color: section.settings.show_color,
                 media_aspect_ratio: section.settings.image_ratio,
                 image_shape: section.settings.image_shape,
                 lazy_load: false,
@@ -502,6 +505,12 @@
       "id": "show_vendor",
       "default": false,
       "label": "Show vendor"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_color",
+      "default": false,
+      "label": "Show color"
     },
     {
       "type": "checkbox",
