@@ -103,9 +103,9 @@
       >
         {% assign skip_card_product_styles = false %}
 
-        {%- if products_size > 0 -%}
+        {%- if section.settings.products != blank -%}
           {% assign lazy_load = false %}
-          {%- for product in products -%}
+          {%- for product in section.settings.products -%}
             {% if forloop.index > section.settings.products_to_show %}
               {% break %}
             {% endif %}
