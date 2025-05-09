@@ -225,7 +225,10 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
-
+            {%- if show_color and card_variant -%}
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ card_variant.option1 }}</div>
+            {%- endif -%}
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
             {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
