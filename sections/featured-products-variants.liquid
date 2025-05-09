@@ -129,8 +129,13 @@
                       style="--animation-order: {{ total_products_shown | plus: 1 }};"
                     {% endif %}
                   >
+                    {% assign variant_product = product %}
+                    {% assign variant_product_title = product.title | append: ' - ' | append: color_option %}
+                    {% assign variant_product = variant_product | json | replace: product.title, variant_product_title %}
+                    {% assign variant_product = variant_product | json_parse %}
+                    
                     {% render 'card-product',
-                      card_product: product,
+                      card_product: variant_product,
                       card_variant: variant,
                       media_aspect_ratio: section.settings.image_ratio,
                       image_shape: section.settings.image_shape,
