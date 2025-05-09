@@ -4,7 +4,7 @@
   Accepts:
   - card_product: {Object} Product Liquid object (optional)
   - card_variant: {Object} Variant Liquid object (optional)
-  - card_title: {String} String for title override (optional)
+  - card_title: {String} String for title (optional)
   - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
   - image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
   - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
@@ -150,7 +150,7 @@
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
               >
-                {{ card_title | default:(card_product.title | escape) }}
+                {{ card_product.title | escape }}
               </a>
             </h3>
           </div>
@@ -206,9 +206,9 @@
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
               {% if card_variant %}
-                {{ card_title | default:(card_product.title | append: ' - ' | append: card_variant.option1 | default: '' | escape) }}
+                {{ card_product.title | append: ' - ' | append: card_variant.option1 | default: '' | escape }}
               {% else %}
-                {{ card_title | default:(card_product.title | escape) }}
+                {{ card_product.title | escape }}
               {% endif %}
             </a>
           </h3>
