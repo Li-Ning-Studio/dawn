@@ -212,7 +212,11 @@
                   {{ card_product.title | append: ' - ' | append: card_variant.option1 | default: '' | escape }}
                 {% endif %}
               {% else %}
-                {{ card_product.title | escape }}
+                {% if card_title != blank %}
+                  {{ card_title | escape }}
+                {% else %}
+                  {{ card_product.title | escape }}
+                {% endif %}
               {% endif %}
             </a>
           </h3>
