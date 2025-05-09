@@ -105,39 +105,77 @@
 
         {%- if section.settings.products != blank -%}
           {% assign lazy_load = false %}
+          {% assign total_products_shown = 0 %}
+          
           {%- for product in section.settings.products -%}
-            {% if forloop.index > section.settings.products_to_show %}
-              {% break %}
-            {% endif %}
-            {% if lazy_load == false and forloop.index > max_columns_to_show %}
-              {% assign lazy_load = true %}
-            {% endif %}
-            <li
-              id="Slide-{{ section.id }}-{{ forloop.index }}"
-              class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
+            {% if section.settings.show_color_variants %}
+              {%- for variant in product.variants -%}
+                {% if total_products_shown >= section.settings.products_to_show %}
+                  {% break %}
+                {% endif %}
+                
+                {% if lazy_load == false and total_products_shown >= max_columns_to_show %}
+                  {% assign lazy_load = true %}
+                {% endif %}
+                
+                <li
+                  id="Slide-{{ section.id }}-{{ total_products_shown | plus: 1 }}"
+                  class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ total_products_shown | plus: 1 }};"
+                  {% endif %}
+                >
+                  {% render 'card-product',
+                    card_product: product,
+                    card_variant: variant,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    image_shape: section.settings.image_shape,
+                    lazy_load: lazy_load,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    skip_styles: skip_card_product_styles,
+                    section_id: section.id,
+                    quick_add: section.settings.quick_add
+                  %}
+                </li>
+                {% assign total_products_shown = total_products_shown | plus: 1 %}
+                {%- assign skip_card_product_styles = true -%}
+              {%- endfor -%}
+            {% else %}
+              {% if total_products_shown >= section.settings.products_to_show %}
+                {% break %}
               {% endif %}
-            >
-              <!-- Debug output -->
-              <div style="display: none;">
-                Product: {{ product | json }}
-              </div>
-              {% render 'card-product',
-                card_product: product,
-                media_aspect_ratio: section.settings.image_ratio,
-                image_shape: section.settings.image_shape,
-                lazy_load: lazy_load,
-                show_secondary_image: section.settings.show_secondary_image,
-                show_vendor: section.settings.show_vendor,
-                show_rating: section.settings.show_rating,
-                skip_styles: skip_card_product_styles,
-                section_id: section.id,
-                quick_add: section.settings.quick_add
-              %}
-            </li>
-            {%- assign skip_card_product_styles = true -%}
+              
+              {% if lazy_load == false and total_products_shown >= max_columns_to_show %}
+                {% assign lazy_load = true %}
+              {% endif %}
+              
+              <li
+                id="Slide-{{ section.id }}-{{ total_products_shown | plus: 1 }}"
+                class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ total_products_shown | plus: 1 }};"
+                {% endif %}
+              >
+                {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  image_shape: section.settings.image_shape,
+                  lazy_load: lazy_load,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  skip_styles: skip_card_product_styles,
+                  section_id: section.id,
+                  quick_add: section.settings.quick_add
+                %}
+              </li>
+              {% assign total_products_shown = total_products_shown | plus: 1 %}
+              {%- assign skip_card_product_styles = true -%}
+            {% endif %}
           {%- endfor -%}
         {%- else -%}
           {%- for i in (1..section.settings.columns_desktop) -%}
@@ -235,6 +273,13 @@
       "label": "Products",
       "limit": 25,
       "info": "Select products to display in this section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_color_variants",
+      "label": "Show Color Variants",
+      "default": false,
+      "info": "When enabled, each color variant will be shown as a separate product card"
     },
     {
       "type": "range",
