@@ -138,7 +138,7 @@
                     {% render 'card-product',
                       card_product: product,
                       card_variant: variant,
-                      card_title: product.title,
+                      card_title: product.title | append: ' - ' | append: color_option,
                       media_aspect_ratio: section.settings.image_ratio,
                       image_shape: section.settings.image_shape,
                       lazy_load: lazy_load,
