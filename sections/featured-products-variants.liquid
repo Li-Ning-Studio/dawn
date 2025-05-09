@@ -109,39 +109,44 @@
           
           {%- for product in section.settings.products -%}
             {% if section.settings.show_color_variants %}
+              {% assign unique_colors = '' %}
               {%- for variant in product.variants -%}
-                {% if total_products_shown >= section.settings.products_to_show %}
-                  {% break %}
-                {% endif %}
-                
-                {% if lazy_load == false and total_products_shown >= max_columns_to_show %}
-                  {% assign lazy_load = true %}
-                {% endif %}
-                
-                <li
-                  id="Slide-{{ section.id }}-{{ total_products_shown | plus: 1 }}"
-                  class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ total_products_shown | plus: 1 }};"
+                {% assign color_option = variant.option1 %}
+                {% unless unique_colors contains color_option %}
+                  {% if total_products_shown >= section.settings.products_to_show %}
+                    {% break %}
                   {% endif %}
-                >
-                  {% render 'card-product',
-                    card_product: product,
-                    card_variant: variant,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    image_shape: section.settings.image_shape,
-                    lazy_load: lazy_load,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    skip_styles: skip_card_product_styles,
-                    section_id: section.id,
-                    quick_add: section.settings.quick_add
-                  %}
-                </li>
-                {% assign total_products_shown = total_products_shown | plus: 1 %}
-                {%- assign skip_card_product_styles = true -%}
+                  
+                  {% if lazy_load == false and total_products_shown >= max_columns_to_show %}
+                    {% assign lazy_load = true %}
+                  {% endif %}
+                  
+                  <li
+                    id="Slide-{{ section.id }}-{{ total_products_shown | plus: 1 }}"
+                    class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ total_products_shown | plus: 1 }};"
+                    {% endif %}
+                  >
+                    {% render 'card-product',
+                      card_product: product,
+                      card_variant: variant,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      image_shape: section.settings.image_shape,
+                      lazy_load: lazy_load,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      skip_styles: skip_card_product_styles,
+                      section_id: section.id,
+                      quick_add: section.settings.quick_add
+                    %}
+                  </li>
+                  {% assign total_products_shown = total_products_shown | plus: 1 %}
+                  {%- assign skip_card_product_styles = true -%}
+                  {% assign unique_colors = unique_colors | append: color_option | append: ',' %}
+                {% endunless %}
               {%- endfor -%}
             {% else %}
               {% if total_products_shown >= section.settings.products_to_show %}
