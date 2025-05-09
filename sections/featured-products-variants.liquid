@@ -100,11 +100,6 @@
         class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if products == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
         role="list"
         aria-label="{{ 'general.slider.name' | t }}"
-        data-slider="{% if show_mobile_slider or show_desktop_slider %}true{% else %}false{% endif %}"
-        data-slider-mobile="{% if show_mobile_slider %}true{% else %}false{% endif %}"
-        data-slider-desktop="{% if show_desktop_slider %}true{% else %}false{% endif %}"
-        data-slider-columns="{{ section.settings.columns_desktop }}"
-        data-slider-mobile-columns="{{ section.settings.columns_mobile }}"
       >
         {% assign skip_card_product_styles = false %}
 
@@ -218,7 +213,7 @@
         {%- endif -%}
       </ul>
       {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="slider-buttons no-js-hidden">
+        <div class="slider-buttons">
           <button
             type="button"
             class="slider-button slider-button--prev"
@@ -226,14 +221,15 @@
             aria-label="{{ 'general.slider.previous_slide' | t }}"
             aria-controls="Slider-{{ section.id }}"
           >
-            <span class="visually-hidden">{{ 'general.slider.previous_slide' | t }}</span>
-            {% render 'icon-caret' %}
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
           </button>
           <div class="slider-counter caption">
             <span class="slider-counter--current">1</span>
             <span aria-hidden="true"> / </span>
             <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ total_products_shown }}</span>
+            <span class="slider-counter--total">{{ products_to_display }}</span>
           </div>
           <button
             type="button"
@@ -242,8 +238,9 @@
             aria-label="{{ 'general.slider.next_slide' | t }}"
             aria-controls="Slider-{{ section.id }}"
           >
-            <span class="visually-hidden">{{ 'general.slider.next_slide' | t }}</span>
-            {% render 'icon-caret' %}
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
           </button>
         </div>
       {%- endif -%}
