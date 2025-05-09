@@ -105,19 +105,23 @@
 
         {%- if section.settings.selected_products.size > 0 and selected_variants.size > 0 -%}
           {% assign lazy_load = false %}
-          {%- for variant_id in selected_variants limit: section.settings.products_to_show -%}
+          {% assign displayed_count = 0 %}
+          {%- for variant_id in selected_variants -%}
+            {% if displayed_count >= section.settings.products_to_show %}
+              {% break %}
+            {% endif %}
             {% for product in section.settings.selected_products %}
               {% assign variant = product.variants | where: "id", variant_id | first %}
               {% if variant %}
-                {% if lazy_load == false and forloop.index > max_columns_to_show %}
+                {% if lazy_load == false and displayed_count >= max_columns_to_show %}
                   {% assign lazy_load = true %}
                 {% endif %}
                 <li
-                  id="Slide-{{ section.id }}-{{ forloop.index }}"
+                  id="Slide-{{ section.id }}-{{ displayed_count | plus: 1 }}"
                   class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
-                    style="--animation-order: {{ forloop.index }};"
+                    style="--animation-order: {{ displayed_count | plus: 1 }};"
                   {% endif %}
                 >
                   <div class="variant-card">
@@ -131,9 +135,19 @@
                           height="400"
                         >
                       </div>
+                    {% else %}
+                      <div class="variant-image">
+                        <img 
+                          src="{{ product.featured_image | img_url: '400x' }}" 
+                          alt="{{ variant.title }}"
+                          loading="lazy"
+                          width="400"
+                          height="400"
+                        >
+                      </div>
                     {% endif %}
                     <div class="variant-details">
-                      <h3 class="variant-title">{{ variant.title }}</h3>
+                      <h3 class="variant-title">{{ product.title }} - {{ variant.title }}</h3>
                       <div class="variant-price">
                         {{ variant.price | money }}
                         {% if variant.compare_at_price > variant.price %}
@@ -170,6 +184,7 @@
                     </div>
                   </div>
                 </li>
+                {% assign displayed_count = displayed_count | plus: 1 %}
                 {% break %}
               {% endif %}
             {% endfor %}
