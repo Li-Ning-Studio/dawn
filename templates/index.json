@@ -27,16 +27,17 @@
       "name": "Featured Products",
       "settings": {
         "products": [
-          "blade-lite"
+          "blade-lite",
+          "raze"
         ],
         "show_color_variants": true,
-        "products_to_show": 4,
+        "products_to_show": 8,
         "title": "Featured Products",
         "heading_size": "h1",
         "description": "",
         "description_style": "body",
         "columns_desktop": 4,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": true,
         "view_all_link": "",
