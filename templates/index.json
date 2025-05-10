@@ -140,11 +140,29 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
+        "image": "shopify://shop_images/ba.jpg",
+        "mobile_image": "shopify://shop_images/respo.jpg",
         "subtitle": "Dominance Starts Here",
         "title": "SILENCE THE RALLY",
         "description": "Battle Series is a professional-grade racket with a slim Vapor Shaft for quicker acceleration and offensive finishing shots.",
         "button_text": "Get ready to battle",
         "button_link": "shopify://collections/battle-series"
+      }
+    },
+    "swipeable_products_th9ndJ": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "BATTLE SERIES",
+        "products": [
+          "battle-900-4u",
+          "battle-700",
+          "battle-600"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "hero_component_CciL6e": {
@@ -230,22 +248,6 @@
           "jp-70-power",
           "jp-70",
           "jp-66"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "swipeable_products_th9ndJ": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "BATTLE SERIES",
-        "products": [
-          "battle-900-4u",
-          "battle-700",
-          "battle-600"
         ],
         "show_color_variants": true,
         "color_scheme": "",
