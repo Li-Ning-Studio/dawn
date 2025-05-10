@@ -122,13 +122,27 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "slideshow_a4djVE": {
+      "type": "slideshow",
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "hero_component_CciL6e": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/velocity_banner_32b61872-8396-4dae-a076-9d1cc7d84959.png",
         "mobile_image": "shopify://shop_images/velocity_banner_responsive.png",
-        "subtitle": "Power Meets Precision",
+        "subtitle": "Move Like Never Before",
         "title": "ENGINEERED FOR INTENSITY",
         "description": "Shock melts away underfoot while energy bounces back so you're ready to finish every rally in style.",
         "button_text": "LEVEL UP",
@@ -211,16 +225,29 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "hero_component_GYiFKe": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "subtitle": "Prnx",
+        "title": "SILENCE THE RALLY",
+        "description": "Battle Series is a professional-grade racket with a slim Vapor Shaft for quicker acceleration and offensive finishing shots.",
+        "button_text": "Get ready to battle",
+        "button_link": "/"
+      }
     }
   },
   "order": [
     "image_banner",
     "slideshow_g8rW7A",
+    "slideshow_a4djVE",
     "hero_component_CciL6e",
     "swipeable_products_gHfNxP",
     "hero_component_kR89Gr",
     "swipeable_products_UQnnX3",
     "hero_component_CgQxwD",
-    "swipeable_products_Tqw38a"
+    "swipeable_products_Tqw38a",
+    "hero_component_GYiFKe"
   ]
 }
