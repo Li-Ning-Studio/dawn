@@ -136,6 +136,17 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "hero_component_GYiFKe": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "subtitle": "Dominance Starts Here",
+        "title": "SILENCE THE RALLY",
+        "description": "Battle Series is a professional-grade racket with a slim Vapor Shaft for quicker acceleration and offensive finishing shots.",
+        "button_text": "Get ready to battle",
+        "button_link": "shopify://collections/battle-series"
+      }
+    },
     "hero_component_CciL6e": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -226,15 +237,20 @@
         "padding_bottom": 100
       }
     },
-    "hero_component_GYiFKe": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "swipeable_products_th9ndJ": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
       "settings": {
-        "subtitle": "Dominance Starts Here",
-        "title": "SILENCE THE RALLY",
-        "description": "Battle Series is a professional-grade racket with a slim Vapor Shaft for quicker acceleration and offensive finishing shots.",
-        "button_text": "Get ready to battle",
-        "button_link": "shopify://collections/battle-series"
+        "title": "BATTLE SERIES",
+        "products": [
+          "battle-900-4u",
+          "battle-700",
+          "battle-600"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
@@ -242,12 +258,13 @@
     "image_banner",
     "slideshow_g8rW7A",
     "slideshow_a4djVE",
+    "hero_component_GYiFKe",
+    "swipeable_products_th9ndJ",
     "hero_component_CciL6e",
     "swipeable_products_gHfNxP",
     "hero_component_kR89Gr",
     "swipeable_products_UQnnX3",
     "hero_component_CgQxwD",
-    "swipeable_products_Tqw38a",
-    "hero_component_GYiFKe"
+    "swipeable_products_Tqw38a"
   ]
 }
