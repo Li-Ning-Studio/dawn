@@ -163,6 +163,25 @@
         "button_text": "GRAB IT NOW",
         "button_link": "shopify://collections/zephyr-series"
       }
+    },
+    "swipeable_products_UQnnX3": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "ZEPHYR SERIES",
+        "products": [
+          "zephyr-20-extend",
+          "zephyr-20-wide",
+          "zephyr-70-extend",
+          "zephyr-70-wide",
+          "zephyr-80-extend",
+          "zephyr-80-wide"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -170,6 +189,7 @@
     "slideshow_g8rW7A",
     "hero_component_CciL6e",
     "swipeable_products_gHfNxP",
-    "hero_component_kR89Gr"
+    "hero_component_kR89Gr",
+    "swipeable_products_UQnnX3"
   ]
 }
