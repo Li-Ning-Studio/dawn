@@ -48,11 +48,27 @@
         "button_text": "BUY IT NOW!",
         "button_link": "/"
       }
+    },
+    "swipeable_products_fpGpGK": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "HYPER SERIES",
+        "products": [
+          "hyper-drive",
+          "hyper-turf"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "hero_component_r4mw48",
     "swipeable_products_hJCCwh",
-    "hero_component_PydEJe"
+    "hero_component_PydEJe",
+    "swipeable_products_fpGpGK"
   ]
 }
