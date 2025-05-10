@@ -85,93 +85,33 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "image_banner_K9VnDf": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
+    "hero_component_CciL6e": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/velocity_banner.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "image": "shopify://shop_images/velocity_banner_32b61872-8396-4dae-a076-9d1cc7d84959.png",
+        "mobile_image": "shopify://shop_images/velocity_banner_responsive.png",
+        "subtitle": "Power Meets Precision",
+        "title": "ENGINEERED FOR INTENSITY",
+        "description": "Shock melts away underfoot while energy bounces back so you're ready to finish every rally in style.",
+        "button_text": "LEVEL UP",
+        "button_link": "shopify://products/velocity-elite"
       }
     },
-    "rich_text_pTRTBn": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_yHFh7h": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Engineered For Intensity</strong>",
-            "heading_size": "hxl"
-          }
-        },
-        "text_aAXrQX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Shock melts away underfoot while energy bounces back so you're ready to finish every rally in style.<br/></p>"
-          }
-        },
-        "button_fpAtUW": {
-          "type": "button",
-          "settings": {
-            "button_label": "Level Up",
-            "button_link": "shopify://products/velocity-elite",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_yHFh7h",
-        "text_aAXrQX",
-        "button_fpAtUW"
-      ],
-      "name": "t:sections.rich-text.presets.name",
+    "swipeable_products_gHfNxP": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "title": "VELOCITY SERIES",
+        "products": [
+          "velocity",
+          "velocity-elite",
+          "velocity-z-pbx"
+        ],
+        "show_color_variants": true,
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 36,
-        "padding_bottom": 100
-      }
-    },
-    "featured_collection_WHYGUP": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "velocity",
-        "products_to_show": 10,
-        "title": "Velocity Series",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 2,
-        "enable_desktop_slider": true,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 100
+        "padding_top": 100,
+        "padding_bottom": 36
       }
     },
     "image_banner": {
@@ -392,9 +332,8 @@
   },
   "order": [
     "slideshow_g8rW7A",
-    "image_banner_K9VnDf",
-    "rich_text_pTRTBn",
-    "featured_collection_WHYGUP",
+    "hero_component_CciL6e",
+    "swipeable_products_gHfNxP",
     "image_banner",
     "image_banner_xntHjm",
     "rich_text_tiFVLK",
