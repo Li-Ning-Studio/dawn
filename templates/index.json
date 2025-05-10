@@ -21,9 +21,23 @@
         "button_text": "GET IT NOW",
         "button_link": "shopify://products/blade-lite"
       }
+    },
+    "swipeable_products_hJCCwh": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Blade Lite",
+        "products": [
+          "blade-lite"
+        ],
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "hero_component_r4mw48"
+    "hero_component_r4mw48",
+    "swipeable_products_hJCCwh"
   ]
 }
