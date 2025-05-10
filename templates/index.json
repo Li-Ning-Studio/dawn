@@ -63,12 +63,26 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "hero_component_B7cdAV": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Flutter_Series_Banner.webp",
+        "mobile_image": "shopify://shop_images/Flutter_Series_Banner_Responsive_jpg.webp",
+        "subtitle": "Flutter Rackets",
+        "title": "GRACE IN MOTION",
+        "description": "Lightweight design meets exceptional precision for total court control.",
+        "button_text": "GRAB IT",
+        "button_link": "/"
+      }
     }
   },
   "order": [
     "hero_component_r4mw48",
     "swipeable_products_hJCCwh",
     "hero_component_PydEJe",
-    "swipeable_products_fpGpGK"
+    "swipeable_products_fpGpGK",
+    "hero_component_B7cdAV"
   ]
 }
