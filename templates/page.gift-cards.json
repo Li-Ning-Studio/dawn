@@ -11,13 +11,56 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_VqiQbc": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Gift_Banner_1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "rich_text_RrWUP6": {
+      "type": "rich-text",
+      "blocks": {
+        "text_gEknDa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing Hundred Gift Cards, a perfect gift for active lifestyle lovers.</p><h2>Buying Gift Cards</h2><ul><li>You can buy Hundred Gift Cards by visiting <a href=\"https://in.hndrd.co/buy-gift-card\">this page.</a></li><li>Choose occasion, amount and delivery details and continue to checkout.</li><li>Upon successful payment for the gift card, an email containing gift-card details will be sent to the recipient mail which you entered while buying the gift card.</li><li>Keep in mind that gift cards cannot be purchased together with physical products.</li></ul><h2>How it Works</h2><p>When you have a Hundred Gift Card Code, you can use that as a payment method to buy products from our online store. Just choose Gift Card option while you are presented to select a payment method on the checkout page. The gift card value will be subtracted from the order value. If the gift-card value covers the order value, the order will be successful and you can use the remaining balance of the gift-card on future purchases. If it does not, you can pay the remaining amount using any other payment option like UPI, Cards etc.</p><p>Here are other things to keep it mind:</p><ul><li>Gift Cards are non-returnable and non-refundable.</li><li>Gift Cards have a validity of 12 months from the date of the purchase.</li><li>It is a bearer document. Hundred will not replace the Gift Card if it is stolen, lost or damaged.</li><li>It is valid only in the Indian region of the Hundred Website in.hndrd.co.</li><li>If you have entered the wrong email address for the recipient of the Hundred Gift Card and you need to change it, you can contact us and we will help you.</li><li>If you need to know the remaining balance on your Hundred Gift Card, please contact us and we will help you.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "text_gEknDa"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_VqiQbc",
+    "rich_text_RrWUP6"
   ]
 }
