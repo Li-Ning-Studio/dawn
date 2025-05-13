@@ -29,7 +29,7 @@
         "button_text": "",
         "link_to": "/",
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 0
       }
     },
     "hero_component_kpzj3M": {
@@ -38,19 +38,54 @@
       "settings": {
         "image": "shopify://shop_images/banner_3.png",
         "mobile_image": "shopify://shop_images/responsive_3.png",
-        "subtitle": "Prnx",
-        "title": "PHOTON LIKE MOVEMENTS",
-        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
-        "button_text": "BEND YOUR OPPONENT",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
         "link_to": "/",
         "padding_top": 100,
-        "padding_bottom": 0
+        "padding_bottom": 100
+      }
+    },
+    "collection_list_fnqTVg": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_hiMGEF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_nYhGqa": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_hiMGEF",
+        "featured_collection_nYhGqa"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Terra Series",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
     "hero_component_yViQhe",
-    "hero_component_kpzj3M"
+    "hero_component_kpzj3M",
+    "collection_list_fnqTVg"
   ]
 }
