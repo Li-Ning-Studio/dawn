@@ -31,10 +31,26 @@
         "padding_top": 0,
         "padding_bottom": 100
       }
+    },
+    "hero_component_kpzj3M": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_3.png",
+        "mobile_image": "shopify://shop_images/responsive_3.png",
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "hero_component_yViQhe"
+    "hero_component_yViQhe",
+    "hero_component_kpzj3M"
   ]
 }
