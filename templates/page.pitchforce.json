@@ -11,13 +11,30 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_pkQwwJ": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_1.png",
+        "mobile_image": "shopify://shop_images/responsive_1.png",
+        "subtitle": "PitchForce",
+        "title": "The Dominance Redefined on the Pitch",
+        "description": "Making every Step a Game Changer",
+        "button_text": "STEP UP",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 76
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_pkQwwJ"
   ]
 }
