@@ -31,10 +31,25 @@
         "padding_top": 0,
         "padding_bottom": 76
       }
+    },
+    "swipeable_products_8aWCBG": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "pitchforcee"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "hero_component_pkQwwJ"
+    "hero_component_pkQwwJ",
+    "swipeable_products_8aWCBG"
   ]
 }
