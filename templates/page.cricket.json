@@ -179,6 +179,68 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 12,
+        "padding_bottom": 76
+      }
+    },
+    "collapsible_content_VrewbJ": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_qQJYVy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_hraqib": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_fFVqKj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_7gLRkj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_qQJYVy",
+        "collapsible_row_hraqib",
+        "collapsible_row_fFVqKj",
+        "collapsible_row_7gLRkj"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Frequently Asked Questions</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
@@ -189,6 +251,7 @@
     "rich_text_a8WmER",
     "hero_component_kpzj3M",
     "multicolumn_qAnKiU",
-    "multicolumn_BLrkff"
+    "multicolumn_BLrkff",
+    "collapsible_content_VrewbJ"
   ]
 }
