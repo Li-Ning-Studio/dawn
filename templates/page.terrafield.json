@@ -186,6 +186,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_kiyADL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Hynb4k": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>VEGAN LEATHER UPPER</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_ML46VX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Crafted from high-quality vegan leather, Terra Field offers both durability and ethical elegance, ensuring the shoes are both tough and environmentally considerate.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_ygGbab": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Hynb4k",
+        "text_ML46VX",
+        "button_ygGbab"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_3.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -196,6 +244,7 @@
     "image_with_text_KxFHGb",
     "hero_component_kCKPwE",
     "image_with_text_wzGk76",
-    "hero_component_HJDRf6"
+    "hero_component_HJDRf6",
+    "image_with_text_kiyADL"
   ]
 }
