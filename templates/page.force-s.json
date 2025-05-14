@@ -68,7 +68,7 @@
         "button_tRTijB": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false
           }
@@ -95,12 +95,61 @@
         "padding_top": 76,
         "padding_bottom": 76
       }
+    },
+    "image_with_text_Q9Dcqw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bFXgG3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_cJmpEC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_LdG9nb": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bFXgG3",
+        "text_cJmpEC",
+        "button_LdG9nb"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 76
+      }
     }
   },
   "order": [
     "main",
     "hero_video_component_q4LLam",
     "hero_component_qzJ8rU",
-    "image_with_text_G46TMW"
+    "image_with_text_G46TMW",
+    "image_with_text_Q9Dcqw"
   ]
 }
