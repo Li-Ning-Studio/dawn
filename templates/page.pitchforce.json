@@ -103,6 +103,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_8rW8yR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HtVty8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>ENERGYLAYER MIDSOLE</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_MWH7cw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_JPVqdp": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HtVty8",
+        "text_MWH7cw",
+        "button_JPVqdp"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1_58b11b9b-5987-4f97-b978-5206b241c2da.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -110,6 +158,7 @@
     "hero_component_pkQwwJ",
     "swipeable_products_8aWCBG",
     "rich_text_GMjQUp",
-    "hero_component_Fq9Tfm"
+    "hero_component_Fq9Tfm",
+    "image_with_text_8rW8yR"
   ]
 }
