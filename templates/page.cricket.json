@@ -32,6 +32,49 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_a8WmER": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_H8cfDY": {
+          "type": "heading",
+          "settings": {
+            "heading": "New Release!",
+            "heading_size": "h1"
+          }
+        },
+        "text_PpPgAY": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_L7HYc7": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_H8cfDY",
+        "text_PpPgAY",
+        "button_L7HYc7"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "hero_component_kpzj3M": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -97,6 +140,7 @@
   "order": [
     "main",
     "hero_component_yViQhe",
+    "rich_text_a8WmER",
     "hero_component_kpzj3M",
     "multicolumn_qAnKiU"
   ]
