@@ -11,13 +11,30 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_ExNEbA": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_responsive.jpg",
+        "subtitle": "Lead every inning",
+        "title": "Introducing Terra Field",
+        "description": "Designed for Dominance, Performance, and Leadership",
+        "button_text": "BUY NOW",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_ExNEbA"
   ]
 }
