@@ -199,6 +199,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_rBH3QV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LTcRQw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>FEATHERFIT UPPER</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_c6EfpH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The upper of the Pitch Force utilizes FeatherFit technology, a premium mesh that molds to the shape of your foot for a custom fit. This lightweight, breathable material keeps your feet cool and dry by wicking away moisture, ensuring maximum comfort throughout the match.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_DbC3zB": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LTcRQw",
+        "text_c6EfpH",
+        "button_DbC3zB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/3_b257ecc4-04f6-4546-bf12-48ad3b5bdf57.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -208,6 +256,7 @@
     "rich_text_GMjQUp",
     "hero_component_Fq9Tfm",
     "image_with_text_8rW8yR",
-    "image_with_text_rdBrnV"
+    "image_with_text_rdBrnV",
+    "image_with_text_rBH3QV"
   ]
 }
