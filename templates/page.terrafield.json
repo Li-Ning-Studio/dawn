@@ -394,32 +394,74 @@
         "padding_bottom": 84
       }
     },
-    "hero_component_ygaTrd": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "featured_product_xTrriU": {
+      "type": "featured-product",
+      "blocks": {
+        "text_WEFdX3": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_68TgKR": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_tfckbP": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_WKyHVC": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_wq3Q6L": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_qYtyCn": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_g6PaYT": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_WEFdX3",
+        "title_68TgKR",
+        "price_tfckbP",
+        "variant_picker_WKyHVC",
+        "quantity_selector_wq3Q6L",
+        "buy_buttons_qYtyCn",
+        "share_g6PaYT"
+      ],
+      "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "subtitle": "",
-        "title": "Lead every Inning withHundred TerraField",
-        "description": "Gear up with Hundred TerraField – premium performance wear built to lead every inning.",
-        "button_text": "SHOP NOW",
-        "link_to": "shopify://products/terrafield",
-        "padding_top": 0,
-        "padding_bottom": 84
-      }
-    },
-    "hero_component_B3MGXb": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_6.jpg",
-        "mobile_image": "shopify://shop_images/Banner_6_responsive.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "product": "terrafield",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -437,7 +479,6 @@
     "hero_component_prNygp",
     "image_with_text_4hQgY6",
     "image_with_text_B8jBaQ",
-    "hero_component_ygaTrd",
-    "hero_component_B3MGXb"
+    "featured_product_xTrriU"
   ]
 }
