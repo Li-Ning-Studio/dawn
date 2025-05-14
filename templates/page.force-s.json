@@ -21,8 +21,8 @@
       "type": "hero-video-component",
       "name": "Hero Video Component",
       "settings": {
-        "video": "shopify://files/videos/banner.webm",
-        "mobile_video": "shopify://files/videos/responsive.webm",
+        "video": "shopify://files/videos/banner loop.mp4",
+        "mobile_video": "shopify://files/videos/responsive loop.webm",
         "subtitle": "Prnx",
         "title": "MOTION IN ACTION",
         "description": "Experience the speed and precision with our latest video showcase",
@@ -31,76 +31,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 52
-      }
-    },
-    "featured_product_jmLAPb": {
-      "type": "featured-product",
-      "blocks": {
-        "text_NWYVef": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_pbg3W7": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_3nBeJr": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_PKHfWP": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "dropdown",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_bV8A4D": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_brVrx3": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_Re8imW": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_NWYVef",
-        "title_pbg3W7",
-        "price_3nBeJr",
-        "variant_picker_PKHfWP",
-        "quantity_selector_bV8A4D",
-        "buy_buttons_brVrx3",
-        "share_Re8imW"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "force-s-wide",
-        "color_scheme": "",
-        "secondary_background": true,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 20,
-        "padding_bottom": 76
       }
     },
     "hero_component_qzJ8rU": {
@@ -354,12 +284,96 @@
         "padding_top": 76,
         "padding_bottom": 76
       }
+    },
+    "hero_component_DnKeqU": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_0103d935-be17-46a5-ac6a-cdffcb83df40.png",
+        "mobile_image": "shopify://shop_images/banner_responsive_2_c75daa7c-a5f6-4745-b7ba-1f03ac473fdb.png",
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_ChHLaf": {
+      "type": "featured-product",
+      "blocks": {
+        "text_zBY6LX": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_XEETwX": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_JTqcQm": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_LqHBen": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_df8zne": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_MFdihq": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_Yi6V3E": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_zBY6LX",
+        "title_XEETwX",
+        "price_JTqcQm",
+        "variant_picker_LqHBen",
+        "quantity_selector_df8zne",
+        "buy_buttons_MFdihq",
+        "share_Yi6V3E"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "force-s-essentials-pac",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "right",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 76,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_video_component_q4LLam",
-    "featured_product_jmLAPb",
     "hero_component_qzJ8rU",
     "image_with_text_G46TMW",
     "hero_component_3rVkQY",
@@ -367,6 +381,8 @@
     "hero_component_phbgF9",
     "image_with_text_pN9epB",
     "hero_component_iyNFCq",
-    "image_with_text_NMVzND"
+    "image_with_text_NMVzND",
+    "hero_component_DnKeqU",
+    "featured_product_ChHLaf"
   ]
 }
