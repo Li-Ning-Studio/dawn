@@ -135,6 +135,52 @@
         "padding_top": 76,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_BLrkff": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VdfMeP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_22.webp",
+            "title": "HYPER TURF",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "column_rwQjK3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_18.webp",
+            "title": "HYPER DRIVE",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VdfMeP",
+        "column_rwQjK3"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "HYPER SERIES",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 76,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -142,6 +188,7 @@
     "hero_component_yViQhe",
     "rich_text_a8WmER",
     "hero_component_kpzj3M",
-    "multicolumn_qAnKiU"
+    "multicolumn_qAnKiU",
+    "multicolumn_BLrkff"
   ]
 }
