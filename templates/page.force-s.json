@@ -33,18 +33,74 @@
         "padding_bottom": 52
       }
     },
-    "swipeable_products_mkfCiX": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
+    "featured_product_jmLAPb": {
+      "type": "featured-product",
+      "blocks": {
+        "text_NWYVef": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_pbg3W7": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_3nBeJr": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_PKHfWP": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_bV8A4D": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_brVrx3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_Re8imW": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_NWYVef",
+        "title_pbg3W7",
+        "price_3nBeJr",
+        "variant_picker_PKHfWP",
+        "quantity_selector_bV8A4D",
+        "buy_buttons_brVrx3",
+        "share_Re8imW"
+      ],
+      "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "title": "",
-        "products": [
-          "force-s-wide"
-        ],
-        "show_color_variants": true,
+        "product": "force-s-wide",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 56
+        "secondary_background": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 20,
+        "padding_bottom": 76
       }
     },
     "hero_component_qzJ8rU": {
@@ -303,7 +359,7 @@
   "order": [
     "main",
     "hero_video_component_q4LLam",
-    "swipeable_products_mkfCiX",
+    "featured_product_jmLAPb",
     "hero_component_qzJ8rU",
     "image_with_text_G46TMW",
     "hero_component_3rVkQY",
