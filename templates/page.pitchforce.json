@@ -43,13 +43,57 @@
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 32,
-        "padding_bottom": 0
+        "padding_bottom": 76
+      }
+    },
+    "rich_text_GMjQUp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VCUDj3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Available in 4 Colors",
+            "heading_size": "h0"
+          }
+        },
+        "text_6DNAeM": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_hQQX9x": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_VCUDj3",
+        "text_6DNAeM",
+        "button_hQQX9x"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
     "hero_component_pkQwwJ",
-    "swipeable_products_8aWCBG"
+    "swipeable_products_8aWCBG",
+    "rich_text_GMjQUp"
   ]
 }
