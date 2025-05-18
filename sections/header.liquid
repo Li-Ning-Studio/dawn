@@ -68,16 +68,16 @@
   .header__logo-divider {
     border-left: 1px solid rgba(var(--color-foreground), 0.2);
     height: 1.6rem;
-    margin: 0 0.8rem;
+    margin: 0 1.4rem 0 0.8rem
   }
 
   .header__country-flag {
     display: block;
-    height: 1.6rem;
+    height: 1.9rem;
     width: auto;
   }
 
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 350px) {
     .header__logo-divider,
     .header__country-flag {
       display: none;
@@ -177,7 +177,7 @@
           </a>
           {%- if section.settings.country_flag_code != blank -%}
             <span class="header__logo-divider" aria-hidden="true"></span>
-            <img src="https://flagcdn.com/24x18/{{ section.settings.country_flag_code | downcase }}.png" class="header__country-flag" width="24" height="18" alt="{{ section.settings.country_flag_code }}">
+            <img src="https://flagcdn.com/h80/{{ section.settings.country_flag_code | downcase }}.png" class="header__country-flag" width="24" height="18" alt="{{ section.settings.country_flag_code }}">
           {%- endif -%}
         </div>
       {%- if request.page_type == 'index' -%}
