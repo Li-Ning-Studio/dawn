@@ -37,7 +37,8 @@
 {%- endstyle -%}
 
 <div class="gradient color-{{ section.settings.color_scheme }}">
-  {%- paginate collection.products by section.settings.products_per_page -%}
+  {% assign sorted_collection_products = collection.products | sort: 'available' | reverse %}
+  {%- paginate sorted_collection_products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
@@ -124,7 +125,7 @@
           data-cascade
         {% endif %}
       >
-        {%- if collection.products.size == 0 -%}
+        {%- if sorted_collection_products.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
             <div class="title-wrapper center">
@@ -154,7 +155,7 @@
               "
             >
               {% assign skip_card_product_styles = false %}
-              {%- for product in collection.products -%}
+              {%- for product in sorted_collection_products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
