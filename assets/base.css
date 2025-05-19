@@ -2992,6 +2992,7 @@ details-disclosure > details {
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-badge-foreground));
   word-break: break-word;
+  overflow:hidden;
 }
 
 .badge::after {
