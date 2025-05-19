@@ -14,52 +14,52 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "comm_channel_LtGX8G": {
+        "image_jLKpkq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hundred-logo_1.png",
+            "image_width": 190,
+            "alignment": ""
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support",
+            "menu": "footer"
+          }
+        },
+        "brand_information_N3RDtf": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "comm_channel_eTNi3T": {
           "type": "comm_channel",
           "settings": {
             "channel_label": "Mail",
             "channel_link": "mailto:support@hndrd.co"
           }
         },
-        "comm_channel_kMqUag": {
+        "comm_channel_ftMHbL": {
           "type": "comm_channel",
           "settings": {
             "channel_label": "WhatsApp",
-            "channel_link": "https://wa.me/+91-8707204138"
-          }
-        },
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "channel_link": "https://wa.me/+13319808562"
           }
         }
       },
       "block_order": [
-        "comm_channel_LtGX8G",
-        "comm_channel_kMqUag",
+        "image_jLKpkq",
         "footer-0",
-        "footer-1",
-        "footer-2"
+        "brand_information_N3RDtf",
+        "comm_channel_eTNi3T",
+        "comm_channel_ftMHbL"
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "subfooter_title": "Have any queries?",
+        "subfooter_title": "Have any questions?",
         "subfooter_subtitle": "We are here to help. Lets Talk ⟶",
         "subfooter_background": "radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#0f59e315 68% 70%,#0000 72%) 17px 17px /calc(2 * 17px) calc(2 * 17px),radial-gradient(35.36% 35.36% at 0 75%,#0000 66%,#0f59e315 68% 70%,#0000 72%) 17px 17px /calc(2 * 17px) calc(2 * 17px),radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#0f59e315 68% 70%,#0000 72%) 0 0 /calc(2 * 17px) calc(2 * 17px),radial-gradient(35.36% 35.36% at 0 75%,#0000 66%,#0f59e315 68% 70%,#0000 72%) 0 0 /calc(2 * 17px) calc(2 * 17px),repeating-conic-gradient(#fafafa 0 25%,#0000 0 50%) 0 0 /calc(2 * 17px) calc(2 * 17px),radial-gradient(#0000 66%,#0f59e315 68% 70%,#0000 72%) 0 calc(17px / 2) /17px 17px #fafafa; padding: 9rem 1rem;",
         "newsletter_enable": true,
