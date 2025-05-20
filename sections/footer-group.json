@@ -14,20 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "comm_channel_LtGX8G": {
-          "type": "comm_channel",
-          "settings": {
-            "channel_label": "Mail",
-            "channel_link": "mailto:support@hndrd.co"
-          }
-        },
-        "comm_channel_kMqUag": {
-          "type": "comm_channel",
-          "settings": {
-            "channel_label": "WhatsApp",
-            "channel_link": "https://wa.me/+91-8859100100"
-          }
-        },
         "image_yebQzD": {
           "type": "image",
           "settings": {
@@ -63,6 +49,20 @@
             "show_social": true
           }
         },
+        "comm_channel_LtGX8G": {
+          "type": "comm_channel",
+          "settings": {
+            "channel_label": "Mail",
+            "channel_link": "mailto:support@hndrd.co"
+          }
+        },
+        "comm_channel_kMqUag": {
+          "type": "comm_channel",
+          "settings": {
+            "channel_label": "WhatsApp",
+            "channel_link": "https://wa.me/+91-8859100100"
+          }
+        },
         "footer-1": {
           "type": "link_list",
           "settings": {
@@ -72,13 +72,13 @@
         }
       },
       "block_order": [
-        "comm_channel_LtGX8G",
-        "comm_channel_kMqUag",
         "image_yebQzD",
         "footer-0",
         "link_list_Fk4niA",
         "link_list_LQLyj9",
         "brand_information_E4CRak",
+        "comm_channel_LtGX8G",
+        "comm_channel_kMqUag",
         "footer-1"
       ],
       "settings": {
