@@ -23,13 +23,23 @@
       "settings": {
         "image": "shopify://shop_images/banner_1.png",
         "mobile_image": "shopify://shop_images/responsive_1.png",
-        "subtitle": "PitchForce",
-        "title": "The Dominance Redefined on the Pitch",
-        "description": "Making every Step a Game Changer",
-        "button_text": "STEP UP",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
         "link_to": "shopify://products/pitchforcee",
         "padding_top": 0,
-        "padding_bottom": 76
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_HiHjYf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"mt-40 mb-10 flex justify-center px-2 text-center\">\n       <section>\n  <p style=\"text-align: center;\">PitchForce</p>\n<h1 style=\"font-size: 2.7rem;text-align: center;margin-top:0rem;font-weight: 700;line-height: 3rem;letter-spacing: -2px;\"> <span style=\"color:#695d5e;\">The Dominance</span> <br/><span style=\"color:#0b6831;\">Redefined on the Pitch</span></h1>\n  <p style=\"text-align: center;\">Making every Step a Game Changer</p>\n<div style=\"display: flex; justify-content: center;\">\n  <a href=\"/product/pitchforcee/\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1.5rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%);\ntext-decoration: none;\">\nStep Up\n</a>\n</div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "swipeable_products_8aWCBG": {
@@ -337,6 +347,7 @@
   "order": [
     "main",
     "hero_component_pkQwwJ",
+    "custom_liquid_HiHjYf",
     "swipeable_products_8aWCBG",
     "rich_text_GMjQUp",
     "hero_component_Fq9Tfm",
