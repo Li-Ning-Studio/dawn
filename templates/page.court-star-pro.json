@@ -11,13 +11,30 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_Ykgyww": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_7a283798-033b-4e98-b358-d68e22e1f808.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_res.jpg",
+        "subtitle": "Play Like a Legend with",
+        "title": "COURT STAR PRO",
+        "description": "Superior Grip, Unbeatable Speed, and Unstoppable Style, Because Winners Don’t Compromise.",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_Ykgyww"
   ]
 }
