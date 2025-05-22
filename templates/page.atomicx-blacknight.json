@@ -41,11 +41,75 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "swipeable_products_C66hiJ": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "atomic-x-black-knight"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_WBEyKr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ak8na8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>VAPORSHAFT - 7.0M</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_LeYcRr": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Crafted with a thickness of 7.0 m for a flexible profile, it features a striking ability that improves the power of athletes by multitudes to boost your swings.</strong></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_iVN8M7": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ak8na8",
+        "text_LeYcRr",
+        "button_iVN8M7"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_1_d1db6ad5-fba4-4c2c-8010-3be445dfe9f4.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_4tqqwk",
-    "custom_liquid_iTPQDb"
+    "custom_liquid_iTPQDb",
+    "swipeable_products_C66hiJ",
+    "image_with_text_WBEyKr"
   ]
 }
