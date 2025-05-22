@@ -11,13 +11,30 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_kdwJAE": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_29144e3c-ee7d-4f13-863d-288a64391917.jpg",
+        "subtitle": "Rule the Game with",
+        "title": "RAZE PRO",
+        "description": "Grip that Holds, Speed that Thrills, and Style that Kills. Made For Those Who Play to Win.",
+        "button_text": "",
+        "link_to": "shopify://products/raze-pro",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_kdwJAE"
   ]
 }
