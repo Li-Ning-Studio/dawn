@@ -36,7 +36,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<style>\n  /* Same size as \"Before They're History!\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  /* Style for the image */\n  .logo-image {\n    max-width: 400px;  /* Adjust the width as needed */\n    height: auto;\n    display: block;\n    margin: 0 auto;  /* Center the image horizontally */\n    margin-bottom: 0; /* Remove extra space below the image */\n  }\n\n  /* Remove margin from h1 */\n  h1 {\n    margin: 0;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <p style=\"text-align: center;\">Rule the Game with</p>\n    <!-- Image placed outside of h1 -->\n    <img src=\"https://hundredstrapiprodin-16636.kxcdn.com/uploads/PREVIEW_1_424e6142ec/PREVIEW_1_424e6142ec.gif\" class=\"logo-image\">\n    <!-- Removed h1 element -->\n    <p style=\"text-align: center;\">Grip that Holds, Speed that Thrills, and Style that Kills. Made For Those Who Play to Win.</p>\n  </section>\n</section>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
