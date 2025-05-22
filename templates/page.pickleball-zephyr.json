@@ -11,13 +11,86 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_YmahHt": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_ee53b8b8-a848-4dc6-9369-005a7c570045.jpg",
+        "mobile_image": "shopify://shop_images/Banner_responsive_5a80e463-056d-4ea3-a135-15f6dc83cfee.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_8N4qDP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Rkb4NF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/01Artboard-2_42aca2ae-db1e-4d6f-904f-f8a3f97c5db4.png",
+            "title": "<strong>ZEPHYR 20</strong>",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/zephyr-20-wide"
+          }
+        },
+        "column_CRrTCr": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_d4QWht": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Rkb4NF",
+        "column_CRrTCr",
+        "column_d4QWht"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_YmahHt",
+    "multicolumn_8N4qDP"
   ]
 }
