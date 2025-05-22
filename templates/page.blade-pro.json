@@ -41,11 +41,42 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "swipeable_products_4qxYqt": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "blade-pro"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_Ck8nd8": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_3_120b5f25-32f0-4964-b6e9-a33a3f4b228f.jpg",
+        "mobile_image": "shopify://shop_images/Banner_3_Responsive_c4bce0a4-d834-44b4-8f58-35ceeb5a1499.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_component_8FfaxX",
-    "custom_liquid_4HTYwj"
+    "custom_liquid_4HTYwj",
+    "swipeable_products_4qxYqt",
+    "hero_component_Ck8nd8"
   ]
 }
