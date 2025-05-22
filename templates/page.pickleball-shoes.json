@@ -30,10 +30,57 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_AKTCLt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_CGkKrx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_R_69b65d90-b6de-4965-86ca-513f8eb749bb.jpg",
+            "title": "COURTSONIC PBX",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/court-sonic-pbx"
+          }
+        },
+        "column_rQha4L": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_R_f6ec3b6b-76ca-4430-ba1d-2cf797d4df85.jpg",
+            "title": "COURTSTEP PBX",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/court-step-pbx"
+          }
+        }
+      },
+      "block_order": [
+        "column_CGkKrx",
+        "column_rQha4L"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "MODEL",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "main",
-    "hero_component_WGXR8X"
+    "hero_component_WGXR8X",
+    "multicolumn_AKTCLt"
   ]
 }
