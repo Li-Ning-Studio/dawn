@@ -23,13 +23,23 @@
       "settings": {
         "image": "shopify://shop_images/Banner_2_7a283798-033b-4e98-b358-d68e22e1f808.jpg",
         "mobile_image": "shopify://shop_images/Banner_2_res.jpg",
-        "subtitle": "Play Like a Legend with",
-        "title": "COURT STAR PRO",
-        "description": "Superior Grip, Unbeatable Speed, and Unstoppable Style, Because Winners Don’t Compromise.",
+        "subtitle": "",
+        "title": "",
+        "description": "",
         "button_text": "",
         "link_to": "shopify://products/court-star-pro",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_jgitkd": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  /* Same size as \"Before They're History!\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  /* Style for the image */\n  .logo-image {\n    max-width: 400px;  /* Adjust the width as needed */\n    height: auto;\n    display: block;\n    margin: 0 auto;  /* Center the image horizontally */\n    margin-bottom: 0; /* Remove extra space below the image */\n  }\n\n  /* Remove margin from h1 */\n  h1 {\n    margin: 0;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <p style=\"text-align: center;\">Play Like a Legend with</p>\n    <!-- Image placed outside of h1 -->\n    <img src=\"https://hundredstrapiprodin-16636.kxcdn.com/uploads/Logo_Gif_8e485f0579/Logo_Gif_8e485f0579.gif\" class=\"logo-image\">\n    <!-- Removed h1 element -->\n    <p style=\"text-align: center;\">Superior Grip, Unbeatable Speed, and Unstoppable Style, Because Winners Don’t Compromise.</p>\n  </section>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "swipeable_products_N4jRek": {
@@ -209,6 +219,7 @@
   "order": [
     "main",
     "hero_component_Ykgyww",
+    "custom_liquid_jgitkd",
     "swipeable_products_N4jRek",
     "image_with_text_4dn4bJ",
     "image_with_text_3CDfii",
