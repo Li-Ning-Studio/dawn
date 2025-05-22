@@ -94,8 +94,8 @@
         "text_MWH7cw": {
           "type": "text",
           "settings": {
-            "text": "<p>The Pitch Force incorporates the EnergyLayer Midsole, a specialized foam designed for superior cushioning and support. This foam layer absorbs impact and provides optimal support during every step, jump, and dive, reducing fatigue and keeping you focused on your game.<br/><br/></p>",
-            "text_style": "body"
+            "text": "<p><strong>The Pitch Force incorporates the EnergyLayer Midsole, a specialized foam designed for superior cushioning and support. This foam layer absorbs impact and provides optimal support during every step, jump, and dive, reducing fatigue and keeping you focused on your game.<br/><br/></strong></p>",
+            "text_style": "subtitle"
           }
         },
         "button_JPVqdp": {
@@ -142,8 +142,8 @@
         "text_ggChQE": {
           "type": "text",
           "settings": {
-            "text": "<p>The Pitch Force features the advanced TerraSpike Rubber Outsole, designed to deliver sturdy grip and stability on any cricket pitch. This specialized outsole ensures you maintain perfect footing during fast movements, sudden stops, and varying weather conditions. With TerraSpike, you can confidently tackle every challenge on the field.<br/><br/></p>",
-            "text_style": "body"
+            "text": "<p><strong>The Pitch Force features the advanced TerraSpike Rubber Outsole, designed to deliver sturdy grip and stability on any cricket pitch. This specialized outsole ensures you maintain perfect footing during fast movements, sudden stops, and varying weather conditions. With TerraSpike, you can confidently tackle every challenge on the field.<br/><br/></strong></p>",
+            "text_style": "subtitle"
           }
         },
         "button_cF88am": {
@@ -190,8 +190,8 @@
         "text_c6EfpH": {
           "type": "text",
           "settings": {
-            "text": "<p>The upper of the Pitch Force utilizes FeatherFit technology, a premium mesh that molds to the shape of your foot for a custom fit. This lightweight, breathable material keeps your feet cool and dry by wicking away moisture, ensuring maximum comfort throughout the match.</p>",
-            "text_style": "body"
+            "text": "<p><strong>The upper of the Pitch Force utilizes FeatherFit technology, a premium mesh that molds to the shape of your foot for a custom fit. This lightweight, breathable material keeps your feet cool and dry by wicking away moisture, ensuring maximum comfort throughout the match.</strong></p>",
+            "text_style": "subtitle"
           }
         },
         "button_DbC3zB": {
@@ -223,6 +223,16 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 76
+      }
+    },
+    "custom_liquid_aGFFhf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"\">\n<h1 style=\"font-size: 2rem;text-align: center; margin: 6rem 0rem; font-weight: 700;line-height: 3rem;letter-spacing: -2px;margin-bottom: 2rem;\"> <span style=\"color:#0b6831;\">PitchForce</span> <br/>Force Perfection</h1>\n</section>\n<div style=\"display: flex; justify-content: center; margin-bottom: 7rem;\">\n <a href=\"/product/pitchforcee/\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1.5rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%);\ntext-decoration: none;\">\nStep Up\n</a>\n</div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "featured_product_6XQVfb": {
@@ -321,6 +331,7 @@
     "image_with_text_8rW8yR",
     "image_with_text_rdBrnV",
     "image_with_text_rBH3QV",
+    "custom_liquid_aGFFhf",
     "featured_product_6XQVfb",
     "hero_component_qkFLpd"
   ]
