@@ -108,6 +108,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_yBnpXy": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nJx4VW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>AIRFLOW UPPER</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_Eaprm7": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Built with a TPU and mesh combination, the Raze Pro’s upper breathes with every move, circulating air to keep feet cool and focused. A design that adapts and flexes, it provides just the right fit to keep you comfortable.</h5>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_DA8xrL": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nJx4VW",
+        "text_Eaprm7",
+        "button_DA8xrL"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_1_9aef13f5-a353-4040-aec6-b2aa70b9c634.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -115,6 +163,7 @@
     "hero_component_kdwJAE",
     "swipeable_products_Jhzh7b",
     "hero_component_6M7R6A",
-    "image_with_text_YPzjPq"
+    "image_with_text_YPzjPq",
+    "image_with_text_yBnpXy"
   ]
 }
