@@ -116,13 +116,13 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>AIRFLOW UPPER</strong>",
-            "heading_size": "h0"
+            "heading_size": "h1"
           }
         },
         "text_Eaprm7": {
           "type": "text",
           "settings": {
-            "text": "<h5>Built with a TPU and mesh combination, the Raze Pro’s upper breathes with every move, circulating air to keep feet cool and focused. A design that adapts and flexes, it provides just the right fit to keep you comfortable.</h5>",
+            "text": "<p>Built with a TPU and mesh combination, the Raze Pro’s upper breathes with every move, circulating air to keep feet cool and focused. A design that adapts and flexes, it provides just the right fit to keep you comfortable.</p>",
             "text_style": "subtitle"
           }
         },
@@ -156,6 +156,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_UDbGYe": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UzaQMn": {
+          "type": "heading",
+          "settings": {
+            "heading": "HEXAQFOAM MIDSOLE",
+            "heading_size": "h1"
+          }
+        },
+        "text_DVy8LJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cushioned for smooth, confident landings, the Raze Pro midsole is made with a dense<strong>HexaFoam</strong>layer just under 1 inch thick. This foam layer provides stability with lasting support to help you maintain agility on the court.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_7w8eJ3": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UzaQMn",
+        "text_DVy8LJ",
+        "button_7w8eJ3"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_2_1cf60090-9120-454e-a064-681e3b4442ca.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -164,6 +212,7 @@
     "swipeable_products_Jhzh7b",
     "hero_component_6M7R6A",
     "image_with_text_YPzjPq",
-    "image_with_text_yBnpXy"
+    "image_with_text_yBnpXy",
+    "image_with_text_UDbGYe"
   ]
 }
