@@ -62,51 +62,8 @@
       "settings": {
         "custom_liquid": "<style>\n  @keyframes flicker {\n    0% { color: black; }\n    20% { color: #0074b1; } /* Very Light Pearl White */\n    40% { color: #8ac811; } /* Lighter Blue */\n    60% { color: #db573d; } /* Soft Red */\n    80% { color: #008354; } /* Softer Navy */\n    100% { color: black; }\n  }\n\n  .flicker {\n    animation: flicker 1s infinite steps(1); /* Very abrupt changes */\n  }\n</style>\n\n<h1 style=\"background-image: linear-gradient(135deg, #0ba360 0%, #3cba92 100%); background-clip: text; -webkit-background-clip: text; color: transparent; font-size: 2.7rem; font-weight: 700; line-height: 3rem; letter-spacing: -2px; text-align: center; margin: 5rem 0.2rem;\">\n  Available in <span class=\"flicker\">4</span> Colors\n</h1>",
         "color_scheme": "",
-        "padding_top": 40,
+        "padding_top": 28,
         "padding_bottom": 52
-      }
-    },
-    "rich_text_GMjQUp": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_VCUDj3": {
-          "type": "heading",
-          "settings": {
-            "heading": "Available in 4 Colors",
-            "heading_size": "h0"
-          }
-        },
-        "text_6DNAeM": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
-        "button_hQQX9x": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_VCUDj3",
-        "text_6DNAeM",
-        "button_hQQX9x"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 76
       }
     },
     "hero_component_Fq9Tfm": {
@@ -360,7 +317,6 @@
     "custom_liquid_HiHjYf",
     "swipeable_products_8aWCBG",
     "custom_liquid_mriHHM",
-    "rich_text_GMjQUp",
     "hero_component_Fq9Tfm",
     "image_with_text_8rW8yR",
     "image_with_text_rdBrnV",
