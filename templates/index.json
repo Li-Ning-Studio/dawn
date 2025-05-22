@@ -124,37 +124,44 @@
         "featured_collection_eNUdCY": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "cricket-kit-bags"
           }
         },
         "featured_collection_4JnVqX": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "insoles"
           }
         },
         "featured_collection_MMxEzH": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "badminton-shuttlecocks"
+          }
+        },
+        "featured_collection_QGfQdX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories"
           }
         }
       },
       "block_order": [
         "featured_collection_eNUdCY",
         "featured_collection_4JnVqX",
-        "featured_collection_MMxEzH"
+        "featured_collection_MMxEzH",
+        "featured_collection_QGfQdX"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "Collections",
+        "title": "Power Your Play",
         "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
