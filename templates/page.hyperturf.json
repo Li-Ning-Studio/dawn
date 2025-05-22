@@ -45,11 +45,76 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
+    },
+    "hero_component_3r4w4L": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_10_1.jpg",
+        "mobile_image": "shopify://shop_images/Responsive_10.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_yTwDcq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TQBTNG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HEXAFOAM MIDSOLE</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_VEiC8P": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The Hyper Turf shoes feature a HexaFoam midsole, providing superior shock absorption. This advanced cushioning technology ensures players remain comfortable and energized throughout long matches, perfect for enduring the rigors of competitive play.</strong></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_rtdTQE": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TQBTNG",
+        "text_VEiC8P",
+        "button_rtdTQE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_1_deddc424-f0bc-4e8b-b352-1019cf7b61c9.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "main",
     "hero_component_LUA8g7",
-    "swipeable_products_7jBCCB"
+    "swipeable_products_7jBCCB",
+    "hero_component_3r4w4L",
+    "image_with_text_yTwDcq"
   ]
 }
