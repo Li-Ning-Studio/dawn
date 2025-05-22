@@ -151,6 +151,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_M3RP3L": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_XYaKkt": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>T - FUSE</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_xxpyNT": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The T-Joint reinforces intersection of the shaft and head and ensures faster recovery.</strong></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_wKnT3t": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XYaKkt",
+        "text_xxpyNT",
+        "button_wKnT3t"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_3_70c111a0-d0e7-431a-b2c1-ebde673363fa.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -159,6 +207,7 @@
     "custom_liquid_iTPQDb",
     "swipeable_products_C66hiJ",
     "image_with_text_WBEyKr",
-    "image_with_text_nQrF6t"
+    "image_with_text_nQrF6t",
+    "image_with_text_M3RP3L"
   ]
 }
