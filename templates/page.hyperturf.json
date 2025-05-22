@@ -137,7 +137,7 @@
         "text_F7t3Tq": {
           "type": "text",
           "settings": {
-            "text": "<p>Equipped with the advanced TerraSpike outsole, the Hyper Turf shoes guarantee unbeatable grip and stability. This design enables players to execute swift and precise movements confidently across various synthetic pitch conditions.<br/></p>",
+            "text": "<p><strong>Equipped with the advanced TerraSpike outsole, the Hyper Turf shoes guarantee unbeatable grip and stability. This design enables players to execute swift and precise movements confidently across various synthetic pitch conditions.<br/></strong></p>",
             "text_style": "subtitle"
           }
         },
@@ -186,6 +186,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_t7tw9F": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qyhmX8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HIGH-QUALITY VEGAN LEATHER UPPER</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Q73C9c": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Crafted from high-quality vegan leather, the Hyper Turf shoes are both durable and environmentally conscious. This material ensures the shoes withstand frequent play while supporting sustainability, making them a smart choice for eco-aware athletes.</strong></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_B3iBdW": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qyhmX8",
+        "text_Q73C9c",
+        "button_B3iBdW"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_5.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
@@ -196,6 +244,7 @@
     "image_with_text_yTwDcq",
     "hero_component_i6mGH6",
     "image_with_text_QK4rWn",
-    "hero_component_zhHRBp"
+    "hero_component_zhHRBp",
+    "image_with_text_t7tw9F"
   ]
 }
