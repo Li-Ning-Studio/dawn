@@ -66,7 +66,7 @@
         "button_YGETME": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false
           }
@@ -93,12 +93,61 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_3CDfii": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TkW7iB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HEEL LOCK</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_RGrLNK": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Experience a fit that feels like it’s made just for you. The Heel Lock secures your foot, preventing slips and keeping you comfortable through every game.</strong><br/></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_MTUVCj": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TkW7iB",
+        "text_RGrLNK",
+        "button_MTUVCj"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Artboard_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_Ykgyww",
     "swipeable_products_N4jRek",
-    "image_with_text_4dn4bJ"
+    "image_with_text_4dn4bJ",
+    "image_with_text_3CDfii"
   ]
 }
