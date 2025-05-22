@@ -144,6 +144,63 @@
         "padding_top": 0,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_RYwdFy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HcynLM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ZEROEDGE.jpg",
+            "title": "<strong>ZeroEdge</strong>",
+            "text": "<h5>Features a sleek, seamless paddle edge that improves aerodynamic efficiency, allowing for faster swing speeds</h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DGbrNf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/EDGESECURE.jpg",
+            "title": "<strong>EdgeSecure</strong>",
+            "text": "<h5>Not only protects against chipping and cracking but also adds a slight weight to the paddle’s head, creating a more head-heavy feel.</h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GAV4r6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/POLYCORE.jpg",
+            "title": "<strong>PolyCore</strong>",
+            "text": "<h5>Standard hexagonal core offers a reliable balance of power, control, and durability making it a trusted choice for all players</h5>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HcynLM",
+        "column_DGbrNf",
+        "column_GAV4r6"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -151,6 +208,7 @@
     "hero_component_YmahHt",
     "multicolumn_8N4qDP",
     "multicolumn_KyYnya",
-    "custom_liquid_p3cYU9"
+    "custom_liquid_p3cYU9",
+    "multicolumn_RYwdFy"
   ]
 }
