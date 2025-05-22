@@ -80,11 +80,28 @@
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
+    },
+    "swipeable_products_9aE9J3": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "WIDE SERIES",
+        "products": [
+          "phantom-20-wide",
+          "phantom-60-wide",
+          "phantom-80-wide"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 72,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_component_zJx9Xi",
-    "image_banner_3EF8G6"
+    "image_banner_3EF8G6",
+    "swipeable_products_9aE9J3"
   ]
 }
