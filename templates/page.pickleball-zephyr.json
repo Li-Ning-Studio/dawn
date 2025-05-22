@@ -88,11 +88,58 @@
         "padding_top": 72,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_KyYnya": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_z9UTfF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/WIDE.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8j88NH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/EXTEND.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_z9UTfF",
+        "column_8j88NH"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "main",
     "hero_component_YmahHt",
-    "multicolumn_8N4qDP"
+    "multicolumn_8N4qDP",
+    "multicolumn_KyYnya"
   ]
 }
