@@ -11,13 +11,41 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_8FfaxX": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_ff56a94c-6385-4131-9e4d-a717a9f885bd.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_Responsive_fb2b5131-6abb-4375-afb8-226aa0735a16.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_4HTYwj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  /* Same size as \"Before They're History!\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  /* Style for the image */\n  .logo-image {\n    max-width: 350px; /* Adjust the width as needed */\n    height: auto;\n    display: block;\n    margin: 0 auto; /* Center the image horizontally */\n    margin-bottom: 0; /* Remove extra space below the image */\n  }\n\n  /* Remove margin from h1 */\n  h1 {\n    margin: 0;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <p style=\"text-align: center;\">Introducing</p>\n    <!-- Image placed outside of h1 -->\n    <img src=\"https://hundredstrapiprodin-16636.kxcdn.com/uploads/final_c2439560e8/final_c2439560e8.gif\" alt=\"Blade Pro Image\" class=\"logo-image\">\n    <!-- Removed h1 element -->\n    <p style=\"text-align: center;\">Master the court, one step at a time</p>\n  </section>\n</section>\n\n<div style=\"display: flex; justify-content: center; margin-top: 20px;\">\n  <a href=\"/product/blade-pro\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1.5rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: black;\n    text-decoration: none;\">\n    BUY NOW\n  </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_8FfaxX",
+    "custom_liquid_4HTYwj"
   ]
 }
