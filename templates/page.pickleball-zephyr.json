@@ -177,27 +177,49 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_APd6ir": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/AEROBOOST.jpg",
+            "title": "<strong>AeroBoost</strong>",
+            "text": "<h5>Precision-engineered cutout in the paddle that enhances swing speed by reducing air drag and optimizing aerodynamic efficiency</h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LTXG8d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/CNTRLFOAM.jpg",
+            "title": "<strong>CntrlFoam</strong>",
+            "text": "<h5>Advanced foam injection technology that enhances stability and boosts power transfer, so energy flows into the ball with each swing</h5>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_HcynLM",
         "column_DGbrNf",
-        "column_GAV4r6"
+        "column_GAV4r6",
+        "column_APd6ir",
+        "column_LTXG8d"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button label",
+        "image_ratio": "portrait",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
