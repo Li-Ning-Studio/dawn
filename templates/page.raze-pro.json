@@ -45,11 +45,76 @@
         "padding_top": 52,
         "padding_bottom": 0
       }
+    },
+    "hero_component_6M7R6A": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_e9eee45c-b0ca-4473-bcf1-f806f42db8e6.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_YPzjPq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_K6ifap": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>EXTENDED HEEL LOCK</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_9Eq7LV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Raze Pro’s<strong> extended heel lock</strong> is a game-changer, offering superior rearfoot stability and enhanced support. With every step, it works to reduce strain, creating a secure fit that helps keep you balanced through quick pivots and rapid movements.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_xV4yUp": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_K6ifap",
+        "text_9Eq7LV",
+        "button_xV4yUp"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_3_1cfe84f6-3698-473f-9f02-57139aeb53ee.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_kdwJAE",
-    "swipeable_products_Jhzh7b"
+    "swipeable_products_Jhzh7b",
+    "hero_component_6M7R6A",
+    "image_with_text_YPzjPq"
   ]
 }
