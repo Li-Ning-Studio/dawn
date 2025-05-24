@@ -1,4 +1,6 @@
 :root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -263,7 +265,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 ::selection {
-  background-color: beige;
+  background-color: #ffa200;
 }
 
 .text-body {
@@ -342,7 +344,7 @@ h2,
   h2,
   .h2 {
     font-size: calc(var(--font-heading-scale) * 2.4rem);
-    letter-spacing: -1px;
+    letter-spacing: 0px;
   }
 }
 
@@ -367,7 +369,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
+  font-size: calc(var(--font-heading-scale) * 1.1rem);
 }
 
 @media only screen and (min-width: 750px) {
@@ -564,12 +566,12 @@ hr {
   height: 0.1rem;
   background-color: rgba(var(--color-foreground), 0.2);
   display: block;
-  margin: 5rem 0;
+  margin: 4rem 0;
 }
 
 @media screen and (min-width: 750px) {
   hr {
-    margin: 7rem 0;
+    margin: 5rem 0;
   }
 }
 
@@ -666,8 +668,8 @@ h3 .icon-arrow,
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .svg-wrapper > svg {
@@ -1929,7 +1931,7 @@ input[type='checkbox'] {
   width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   display: flex;
   border-radius: var(--inputs-radius);
-  min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+  min-height: calc((var(--inputs-border-width) * 2) + 3.8rem);
 }
 
 .quantity:after {
@@ -2124,7 +2126,8 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  font-weight: 800;
+  background-color: var(--secondary-accent-color);
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -2297,7 +2300,7 @@ input[type='checkbox'] {
   text-align: center;
   padding: 0.8rem 0;
   margin: 0;
-  /* letter-spacing: 0.1rem; */
+  letter-spacing: 0;
   /* min-height: 3.8rem; */
 }
 
@@ -2855,7 +2858,7 @@ details[open] > .mega-menu__content {
 
 .header__menu-item:hover {
   color: rgb(var(--color-foreground));
-  border-bottom-color: var(--accent-color);
+  border-bottom-color: var(--secondary-accent-color);
 }
 
 /* .header__menu-item span {
