@@ -31,10 +31,21 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_a9i3Ad": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"mt-40 mb-10 flex justify-center px-2 text-center\">\n       <section>\n  <p style=\"text-align: center;\">Blade Lite II</p>\n<h1 style=\"font-size: 2.2rem;text-align: center;margin-top:0rem;font-weight: 900;line-height: 3rem;letter-spacing: -2px;\"> <span style=\"color:#000000;\">Performance</span> <br/><span style=\"color:#f3c334;\"> Woven Through Every Thread</span></h1>\n  <p style=\"text-align: center;\">For Fit, Feel, and Performance</p>\n<div style=\"display: flex; justify-content: center;\">\n  <a href=\"/product/blade-lite-ii/\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1.5rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: linear-gradient(2deg, #e0ae3a 0%, #ffd87d 100%);\ntext-decoration: none;\">\nShop Now\n</a>\n</div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "hero_component_fCymwc"
+    "hero_component_fCymwc",
+    "custom_liquid_a9i3Ad"
   ]
 }
