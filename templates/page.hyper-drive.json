@@ -11,13 +11,295 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_kHJGEx": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_d849e795-9c71-454f-baf5-cee164c1ed29.jpg",
+        "mobile_image": "shopify://shop_images/banner_responssive.webp",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_KL4VkG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"mt-40 mb-10 flex justify-center px-2 text-center\">\n       <section>\n  <p style=\"text-align: center;\">Introducing HyperDrive</p>\n<h1 style=\"font-size: 2.7rem;text-align: center;margin-top:0rem;font-weight: 700;line-height: 3rem;letter-spacing: -2px;\"> <span style=\"color: var(--gray-30);\">Designed for</span> <br/>The Modern Cricketer</h1>\n  <p style=\"text-align: center;\">Top Notch Performance with every step</p>\n<div style=\"display: flex; justify-content: center;\">\n  <a href=\"/product/hyper-drive\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1.5rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: #d81520;\ntext-decoration: none;\">\nBUY NOW\n</a>\n</div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 72
+      }
+    },
+    "hero_component_RdNyjF": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_4_c64858b5-07c1-48e9-86f1-9bac1ae1edc6.jpg",
+        "mobile_image": "shopify://shop_images/banner_4responsive.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_BxGnyR": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "COMES IN 4 SHADES",
+        "products": [
+          "hyper-drive"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 72
+      }
+    },
+    "image_with_text_JjHmL3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_afneM9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HEXAFOAM MIDSOLE</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_rNxJnf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hyperdrive's HexaFoam Midsole is designed to absorb impact and provide superior comfort. Its unique hexagonal structure evenly distributes pressure, ensuring a cushioned and responsive feel with every step.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_QCBYr7": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_afneM9",
+        "text_rNxJnf",
+        "button_QCBYr7"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_2_52269ef8-126c-4121-b06f-b1c1f110db41.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "image_with_text_8BbHFV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tzbVx7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>TERRASPIKE OUTSOLE</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Mfw9j3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The TerraSpike Rubber Outsole is engineered for exceptional traction and stability on various surfaces. Its advanced design features strategically placed spikes that provide a secure grip, allowing for agile and confident movements.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_cDMnnM": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tzbVx7",
+        "text_Mfw9j3",
+        "button_cDMnnM"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_1_4cabb5f6-f085-405d-9b04-4a27d96d056c.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "image_with_text_GrqyPn": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_XBzU8d": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>VEGAN LEATHER UPPER</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_xWq4HV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The PU or Engineered Leather Upper, also known as Vegan Leather combines durability and flexibility, offering a robust yet comfortable fit that withstands the rigors of intense play.<br/><br/></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_egfPBH": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XBzU8d",
+        "text_xWq4HV",
+        "button_egfPBH"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_5_c28b2c0f-81dd-400a-9b61-587adfa0d3f1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "image_with_text_WATgjg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xDAhbW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>STABILITY PLATE EMBEDDED</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_nMXpwF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A support plate in cricket shoes is a critical feature designed to enhance stability and performance. Positioned within the midsole, this plate provides additional support, preventing excessive foot movement and reducing the risk of injuries.<br/></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_m6NxyJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xDAhbW",
+        "text_nMXpwF",
+        "button_m6NxyJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_3_b1193bc7-e59e-4a36-a1a9-095e14609b54.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "custom_liquid_jVqWM8": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"\">\n<h1 style=\"font-size: 2.7rem;text-align: center; margin: 6rem 0rem; font-weight: 700;line-height: 3rem;letter-spacing: -2px;margin-bottom: 2rem;\"> <span style=\"color: var(--gray-30);\">Dominate the Pitch with</span> <br/>Hundred HyperDrive</h1>\n</section>\n<div style=\"display: flex; justify-content: center; margin-bottom: 7rem;\">\n<a href=\"/product/hyper-drive\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1.5rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: #d81520;\ntext-decoration: none;\n    \">\nSHOP NOW\n</a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_RggwMB": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_6_ada64064-7cc2-4502-929e-960b209cb168.jpg",
+        "mobile_image": "shopify://shop_images/banner_6_responsive_fe2040b2-c599-4903-b5e6-2d5f6cf0888d.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/hyper-drive",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_kHJGEx",
+    "custom_liquid_KL4VkG",
+    "hero_component_RdNyjF",
+    "swipeable_products_BxGnyR",
+    "image_with_text_JjHmL3",
+    "image_with_text_8BbHFV",
+    "image_with_text_GrqyPn",
+    "image_with_text_WATgjg",
+    "custom_liquid_jVqWM8",
+    "hero_component_RggwMB"
   ]
 }
