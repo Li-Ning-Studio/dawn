@@ -55,12 +55,70 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_a9ndVh": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VUTBKA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/07.jpg",
+            "title": "<strong>ACTIVE GRIP OUTSOLE</strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MGLGxb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/06.jpg",
+            "title": "<strong>FLYKNIT</strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tnfdnz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/10.2.jpg",
+            "title": "<strong>X-CUSHION</strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VUTBKA",
+        "column_MGLGxb",
+        "column_tnfdnz"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_fCymwc",
     "custom_liquid_a9i3Ad",
-    "swipeable_products_LBP9PA"
+    "swipeable_products_LBP9PA",
+    "multicolumn_a9ndVh"
   ]
 }
