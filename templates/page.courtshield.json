@@ -151,6 +151,69 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_EgJki7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Wd67rB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>ENERGYLAYER MIDSOLE</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_T7cwct": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At the core of the Court Shield lies the Energy Layer – a specialized foam midsole that combines the resilience of Energy Layer foam with enhanced cushioning properties. This layer is designed to absorb impact and provide all-around support during every step, jump, and lunge. The Energy Layer reduces fatigue, ensuring you stay energized and focused throughout your game.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_kMk4Ch": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wd67rB",
+        "text_T7cwct",
+        "button_kMk4Ch"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_3_4f13f810-66ba-46b8-9202-404c3b821674.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_mWgbH7": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_2_010e449d-b7fd-4596-a426-397c787cf4bd.jpg",
+        "mobile_image": "shopify://shop_images/banner_r_2_23f43ff6-5d34-47a0-8a57-471477d68497.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -159,6 +222,8 @@
     "custom_liquid_GA6bJi",
     "swipeable_products_GLcDqG",
     "image_with_text_3hGn9h",
-    "image_with_text_ndN6YB"
+    "image_with_text_ndN6YB",
+    "image_with_text_EgJki7",
+    "hero_component_mWgbH7"
   ]
 }
