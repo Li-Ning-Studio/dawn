@@ -41,11 +41,26 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "swipeable_products_LBP9PA": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "blade-lite-ii"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_component_fCymwc",
-    "custom_liquid_a9i3Ad"
+    "custom_liquid_a9i3Ad",
+    "swipeable_products_LBP9PA"
   ]
 }
