@@ -181,6 +181,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_jbApce": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hAAtHW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>TPU HEEL SUPPORT</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_tienbb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Incorporating a TPU heel support, the Terra Lite enhances stability and support, crucial for executing rapid directional changes and maintaining balance throughout the game.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_6zbfMf": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hAAtHW",
+        "text_tienbb",
+        "button_6zbfMf"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/3_562897a0-263b-40f4-8577-40ab62aed8a6.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -191,6 +239,7 @@
     "hero_component_bTTpwN",
     "image_with_text_RJCHV9",
     "image_with_text_BxWfT7",
-    "hero_component_rkUcVM"
+    "hero_component_rkUcVM",
+    "image_with_text_jbApce"
   ]
 }
