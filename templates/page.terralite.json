@@ -229,6 +229,79 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_mT6niJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8F98h6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>EC0-FRIENDLY DURABILITY</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Nnxmfc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Crafted from high-quality vegan leather, the Terra Lite not only offers durability to withstand frequent play but also maintains environmental consciousness with its eco-friendly materials.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_ccmawK": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8F98h6",
+        "text_Nnxmfc",
+        "button_ccmawK"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/4_ea07a18a-78fa-4911-a0cf-083e9bbd0496.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_V7NmaV": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"\">\n<h1 style=\"font-size: 2.7rem;text-align: center; margin: 6rem 0rem; font-weight: 700;line-height: 3rem;letter-spacing: -2px;margin-bottom: 2rem;\"> <span style=\"color: #074598;\">Agility Redefined with</span> <br/>TerraLite</h1>\n</section>\n<div style=\"display: flex; justify-content: center; margin-bottom: 7rem;\">\n<a href=\"/product/terralite\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1.5rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: #074598;\ntext-decoration: none;\n    \">\nGrab Your Pair Now\n</a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_pT9E8D": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_3_ec0b03b1-0a61-4774-9c64-845418e9f589.png",
+        "mobile_image": "shopify://shop_images/Responsive_3_a88076f2-7e45-4a92-bd28-e7f8c32938ab.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -240,6 +313,9 @@
     "image_with_text_RJCHV9",
     "image_with_text_BxWfT7",
     "hero_component_rkUcVM",
-    "image_with_text_jbApce"
+    "image_with_text_jbApce",
+    "image_with_text_mT6niJ",
+    "custom_liquid_V7NmaV",
+    "hero_component_pT9E8D"
   ]
 }
