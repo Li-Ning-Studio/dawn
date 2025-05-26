@@ -70,6 +70,102 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_RJCHV9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6m7Y3k": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>LIGHTWEIGHT COMFORT</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Qe66ff": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Terra Lite cricket shoes feature an engineered PU leather upper that keeps the shoes incredibly light, ensuring players can move swiftly and comfortably without being weighed down.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_nnFTPQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6m7Y3k",
+        "text_Qe66ff",
+        "button_nnFTPQ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/2_0432a62b-6b7c-4927-8043-ab758daec755.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_BxWfT7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9GrmaF": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>OPTIMIZED AGILITY</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_HcadMW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The lightweight design combined with robust materials ensures that the Terra Lite doesn't compromise on agility. Players can execute quick movements and adapt swiftly to play demands without resistance from their footwear.<br/></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_MTqgCU": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9GrmaF",
+        "text_HcadMW",
+        "button_MTqgCU"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1_da8c7a2f-5cac-4612-90e1-bb039264b90e.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -77,6 +173,8 @@
     "hero_component_66TBUj",
     "custom_liquid_7aLJ6A",
     "swipeable_products_Hrqxek",
-    "hero_component_bTTpwN"
+    "hero_component_bTTpwN",
+    "image_with_text_RJCHV9",
+    "image_with_text_BxWfT7"
   ]
 }
