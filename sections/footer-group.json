@@ -29,10 +29,18 @@
             "menu": "footer"
           }
         },
-        "brand_information_N3RDtf": {
-          "type": "brand_information",
+        "link_list_68wCjJ": {
+          "type": "link_list",
           "settings": {
-            "show_social": true
+            "heading": "Quick links",
+            "menu": "quick-links"
+          }
+        },
+        "link_list_dztVJB": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Payment Methods",
+            "menu": "payment-methods"
           }
         },
         "comm_channel_eTNi3T": {
@@ -48,14 +56,22 @@
             "channel_label": "WhatsApp",
             "channel_link": "https://wa.me/+13319808562"
           }
+        },
+        "brand_information_N3RDtf": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
         }
       },
       "block_order": [
         "image_jLKpkq",
         "footer-0",
-        "brand_information_N3RDtf",
+        "link_list_68wCjJ",
+        "link_list_dztVJB",
         "comm_channel_eTNi3T",
-        "comm_channel_ftMHbL"
+        "comm_channel_ftMHbL",
+        "brand_information_N3RDtf"
       ],
       "settings": {
         "color_scheme": "scheme-1",
