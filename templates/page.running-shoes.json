@@ -11,13 +11,29 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_pcWxzn": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_4.jpg",
+        "subtitle": "Now available",
+        "title": "HUNDRED RUNNING SHOES",
+        "description": "For Faster, Safer, and More Comfortable Running",
+        "button_text": "Explore",
+        "link_to": "shopify://collections/running-shoes",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_pcWxzn"
   ]
 }
