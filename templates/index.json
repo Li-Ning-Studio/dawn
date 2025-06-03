@@ -213,13 +213,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Raze_Pro_banner.jpg",
-        "mobile_image": "shopify://shop_images/Raze_Pro_responsive.jpg",
-        "subtitle": "Raze Pro",
-        "title": "UNMATCHED SUPPORT FOR EVERY STEP",
-        "description": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
-        "button_text": "GET IT NOW!",
-        "link_to": "shopify://products/raze-pro",
+        "image": "shopify://shop_images/1_e2e6f98d-5194-40eb-892f-811178ec208b.jpg",
+        "mobile_image": "shopify://shop_images/1-resp.jpg",
+        "subtitle": "Hundred Essentials",
+        "title": "Move Like You Mean It",
+        "description": "Activewear engineered for performance, built for everyday hustle.",
+        "button_text": "Own Your Movement",
+        "link_to": "shopify://collections/clothing",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -228,13 +228,23 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "RAZE SERIES",
+        "title": "Shop the Drop",
         "products": [
-          "raze-pro"
+          "air-crush-t-shirt",
+          "ace-short",
+          "core-t-shirt",
+          "everyday-polo-t-shirt",
+          "neoflex-shorts",
+          "signature-t-shirt",
+          "smash-volt-t-shirt",
+          "sprint-jacket",
+          "frostbite-tee",
+          "court-t-shirt",
+          "grader-t-shirt"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
-        "padding_top": 40,
+        "padding_top": 16,
         "padding_bottom": 72
       }
     },
