@@ -43,29 +43,20 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/badminton"
           }
         },
         "column_p3rQT9": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Cricket.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_cyKN3G": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_iRm33e": {
+        "column_BFJ9qq": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Tennis.jpg",
@@ -79,16 +70,15 @@
       "block_order": [
         "column_QTEkyB",
         "column_p3rQT9",
-        "column_cyKN3G",
-        "column_iRm33e"
+        "column_BFJ9qq"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
+        "title": "Shop By Sports",
+        "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button label",
+        "image_ratio": "portrait",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -96,8 +86,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 32,
+        "padding_bottom": 0
       }
     }
   },
