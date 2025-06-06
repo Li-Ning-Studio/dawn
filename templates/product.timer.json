@@ -30,6 +30,12 @@
             "text_style": "subtitle"
           }
         },
+        "custom_liquid_AxHh7h": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.price < 5000 %} {# Shopify prices are in cents #}\n  <div id=\"timer-container\">\n    <p>Limited time offer! Deal ends in:</p>\n    <div id=\"countdown-timer\"></div>\n  </div>\n\n  <script>\n    // Set your countdown target (e.g., 24 hours from page load)\n    const countdownTarget = new Date().getTime() + (24 * 60 * 60 * 1000);\n\n    const timerInterval = setInterval(function () {\n      const now = new Date().getTime();\n      const distance = countdownTarget - now;\n\n      if (distance < 0) {\n        clearInterval(timerInterval);\n        document.getElementById(\"countdown-timer\").innerHTML = \"Expired\";\n        return;\n      }\n\n      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n      const seconds = Math.floor((distance % (1000 * 60)) / 1000);\n\n      document.getElementById(\"countdown-timer\").innerHTML =\n        hours + \"h \" + minutes + \"m \" + seconds + \"s \";\n    }, 1000);\n  </script>\n\n  <style>\n    #timer-container {\n      background: #f9f2d7;\n      border: 1px solid #e0c77c;\n      padding: 15px;\n      margin-top: 10px;\n      font-weight: bold;\n      color: #a87400;\n    }\n  </style>\n{% endif %}"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -95,6 +101,7 @@
         "vendor",
         "title",
         "caption",
+        "custom_liquid_AxHh7h",
         "price",
         "variant_picker",
         "quantity_selector",
