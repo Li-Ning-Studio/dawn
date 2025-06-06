@@ -147,63 +147,6 @@
         "padding_bottom": 0
       }
     },
-    "multicolumn_UmqqJf": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_gp6WYe": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Rackets.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://collections/badminton"
-          }
-        },
-        "column_cAbyYP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Shoes.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_HwB8bX": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Bags.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_gp6WYe",
-        "column_cAbyYP",
-        "column_HwB8bX"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Highest Discounted Product",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 32,
-        "padding_bottom": 0
-      }
-    },
     "collage_bcf6tY": {
       "type": "collage",
       "blocks": {
@@ -223,7 +166,7 @@
         "image_EdRJNc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Artboard_10.jpg"
+            "image": "shopify://shop_images/Responsive_3_d7352f9f-f764-4fc5-96d0-c02586deeae3.jpg"
           }
         }
       },
@@ -237,8 +180,162 @@
         "heading": "Multimedia collage",
         "heading_size": "h2",
         "desktop_layout": "left",
-        "mobile_layout": "column",
+        "mobile_layout": "collage",
         "card_styles": "none",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_iqEeaH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Fk4APc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_9.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rJ6KbT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_59864be1-7b7a-4bc8-9e08-88d46ac3fde6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Ekp9w7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_5.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Fk4APc",
+        "column_rJ6KbT",
+        "column_Ekp9w7"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_UmqqJf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gp6WYe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_6_89dd32b8-41b1-4567-902b-0917e69c2992.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/badminton"
+          }
+        },
+        "column_cAbyYP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_12.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HwB8bX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_7.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_gp6WYe",
+        "column_cAbyYP",
+        "column_HwB8bX"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Highest Discounted Product",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "collage_XaiU67": {
+      "type": "collage",
+      "blocks": {
+        "product_LcP6Gi": {
+          "type": "product",
+          "settings": {
+            "product": "atomic-x-black-knight",
+            "second_image": false
+          }
+        },
+        "image_mpbitR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_b29461f0-b6b3-4702-ac69-6b65310a109f.jpg"
+          }
+        },
+        "image_hAL7LJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_bb3f120a-0fcc-43c9-b9f2-da52af24591c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_LcP6Gi",
+        "image_mpbitR",
+        "image_hAL7LJ"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -267,16 +364,6 @@
             "link": ""
           }
         },
-        "column_YLriz6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_8.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_er9pcR": {
           "type": "column",
           "settings": {
@@ -291,7 +378,6 @@
       "block_order": [
         "column_Gmi6yy",
         "column_QLqWmG",
-        "column_YLriz6",
         "column_er9pcR"
       ],
       "name": "t:sections.multicolumn.presets.name",
@@ -300,7 +386,7 @@
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "square",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -318,8 +404,10 @@
     "hero_video_component_RdFkwa",
     "multicolumn_M8qycr",
     "multicolumn_UWV9KM",
-    "multicolumn_UmqqJf",
     "collage_bcf6tY",
+    "multicolumn_iqEeaH",
+    "multicolumn_UmqqJf",
+    "collage_XaiU67",
     "multicolumn_Pk8Ebq"
   ]
 }
