@@ -44,6 +44,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_fYXKrh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #394597 0%, #5869c5 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Shop By Sports</h1>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "multicolumn_M8qycr": {
       "type": "multicolumn",
       "blocks": {
@@ -414,6 +424,7 @@
     "main",
     "hero_video_component_RdFkwa",
     "custom_liquid_43wbWw",
+    "custom_liquid_fYXKrh",
     "multicolumn_M8qycr",
     "multicolumn_UWV9KM",
     "collage_bcf6tY",
