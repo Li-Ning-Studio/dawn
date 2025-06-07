@@ -53,22 +53,10 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "countdown_timer_NFKAfw": {
-      "type": "countdown-timer",
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Flash Sale Ends Soon!",
-        "end_time": "2025-06-09 00:00",
-        "background": "radial-gradient(rgba(241, 229, 230, 0.82) 30%, rgba(255, 154, 158, 1) 100%)",
-        "text_color": "#ec3f3f",
-        "padding_top": 16
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "countdown_timer_NFKAfw"
+    "header"
   ]
 }
