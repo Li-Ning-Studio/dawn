@@ -22,6 +22,9 @@
     },
     "hero_component_E67em3": {
       "type": "hero-component",
+      "custom_css": [
+        ".hero-component__content-container{padding-bottom:20px;}"
+      ],
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Page_banner_4797f6bc-453e-4f54-99b8-1d7cefc8dce2.jpg",
@@ -71,9 +74,9 @@
         "image": "shopify://shop_images/T-Rex_800_B.jpg",
         "mobile_image": "shopify://shop_images/T-Rex_800_R.jpg",
         "subtitle": "T Rex 800",
-        "title": "<!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Rumbling Of High-Volt Smashes",
-        "description": "<!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
-        "button_text": "<!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Get It Now!",
+        "title": "Rumbling Of High-Volt Smashes",
+        "description": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
+        "button_text": "Get It Now!",
         "link_to": "shopify://products/t-rex-800",
         "padding_top": 0,
         "padding_bottom": 0
