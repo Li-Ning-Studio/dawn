@@ -30,6 +30,13 @@
             "text_style": "subtitle"
           }
         },
+        "custom_liquid_a7NXWH": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% assign rating_float = product.metafields.reviews.rating.value | strip | times: 1 %}\n{%\nassign rating = rating_float | floor %}\n<div class=\"product-stars\" style=\"margin:0;\">\n  {% for i in (1..5) %}\n    {% if i <= rating %}\n      ★\n    {% else %}\n      ☆\n    {% endif %}\n  {% endfor %}\n({{product.metafields.reviews.rating_count}} reviews)\n</div>"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -95,6 +102,7 @@
         "vendor",
         "title",
         "caption",
+        "custom_liquid_a7NXWH",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -139,10 +147,21 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_rwLwmx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "custom_liquid_rwLwmx"
   ]
 }
