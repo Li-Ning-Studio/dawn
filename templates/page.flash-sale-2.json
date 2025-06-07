@@ -178,6 +178,46 @@
         "padding_bottom": 0
       }
     },
+    "collage_chyhjH": {
+      "type": "collage",
+      "blocks": {
+        "image_pUBjYa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Pickleball_531e7607-1add-4f1b-ace1-6c4ba94f50e0.jpg"
+          }
+        },
+        "product_DgchYB": {
+          "type": "product",
+          "settings": {
+            "product": "force-s-essentials-pac",
+            "second_image": false
+          }
+        },
+        "collection_ExQKtC": {
+          "type": "collection",
+          "settings": {
+            "collection": "pickleball"
+          }
+        }
+      },
+      "block_order": [
+        "image_pUBjYa",
+        "product_DgchYB",
+        "collection_ExQKtC"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_liquid_cd3F96": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -305,7 +345,7 @@
             "image": "shopify://shop_images/4.2_9e1afef4-f25d-454a-b039-adb667bf53a1.png",
             "title": "",
             "text": "",
-            "link_label": "Free Drawstring Bags",
+            "link_label": "",
             "link": "shopify://collections/free-drawstring-bag"
           }
         },
@@ -525,46 +565,6 @@
         "link_to": "shopify://collections/flash-sale",
         "padding_top": 8,
         "padding_bottom": 0
-      }
-    },
-    "collage_chyhjH": {
-      "type": "collage",
-      "blocks": {
-        "image_pUBjYa": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Pickleball_531e7607-1add-4f1b-ace1-6c4ba94f50e0.jpg"
-          }
-        },
-        "product_DgchYB": {
-          "type": "product",
-          "settings": {
-            "product": "force-s-essentials-pac",
-            "second_image": false
-          }
-        },
-        "collection_ExQKtC": {
-          "type": "collection",
-          "settings": {
-            "collection": "pickleball"
-          }
-        }
-      },
-      "block_order": [
-        "image_pUBjYa",
-        "product_DgchYB",
-        "collection_ExQKtC"
-      ],
-      "name": "t:sections.collage.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
