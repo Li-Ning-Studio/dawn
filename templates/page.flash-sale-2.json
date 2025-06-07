@@ -350,16 +350,6 @@
     "multicolumn_UmqqJf": {
       "type": "multicolumn",
       "blocks": {
-        "column_gp6WYe": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_6_89dd32b8-41b1-4567-902b-0917e69c2992.png",
-            "title": "",
-            "text": "",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/bazook"
-          }
-        },
         "column_cAbyYP": {
           "type": "column",
           "settings": {
@@ -368,6 +358,16 @@
             "text": "",
             "link_label": "SHOP NOW",
             "link": "shopify://products/drive-cricket-kit-bag"
+          }
+        },
+        "column_gp6WYe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_c8256d7b-b25d-4f4d-b2ab-ef556030eecd.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/bazook"
           }
         },
         "column_HwB8bX": {
@@ -382,8 +382,8 @@
         }
       },
       "block_order": [
-        "column_gp6WYe",
         "column_cAbyYP",
+        "column_gp6WYe",
         "column_HwB8bX"
       ],
       "name": "t:sections.multicolumn.presets.name",
@@ -457,6 +457,16 @@
             "link": "shopify://products/flutter-s-zoom"
           }
         },
+        "column_er9pcR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_dc155f24-e245-4c3e-a279-34ccfc91e783.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/blade-lite-ii"
+          }
+        },
         "column_QLqWmG": {
           "type": "column",
           "settings": {
@@ -466,79 +476,12 @@
             "link_label": "SHOP NOW",
             "link": "shopify://products/n-ergy-80"
           }
-        },
-        "column_er9pcR": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_11.png",
-            "title": "",
-            "text": "",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/predator-82-extra-strong"
-          }
         }
       },
       "block_order": [
         "column_Gmi6yy",
-        "column_QLqWmG",
-        "column_er9pcR"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_CgaTG6": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_GRCW3U": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_9d702769-5974-4d6e-87a9-9bbe1b0c4ed6.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/flutter-s-zoom"
-          }
-        },
-        "column_KJTFhD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_a065bb58-f5f4-4c14-9720-fe2b354971c4.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/n-ergy-80"
-          }
-        },
-        "column_jMqdez": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_11.png",
-            "title": "",
-            "text": "",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/predator-82-extra-strong"
-          }
-        }
-      },
-      "block_order": [
-        "column_GRCW3U",
-        "column_KJTFhD",
-        "column_jMqdez"
+        "column_er9pcR",
+        "column_QLqWmG"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -590,7 +533,6 @@
     "multicolumn_UmqqJf",
     "collage_XaiU67",
     "multicolumn_Pk8Ebq",
-    "multicolumn_CgaTG6",
     "hero_component_fhYexr"
   ]
 }
