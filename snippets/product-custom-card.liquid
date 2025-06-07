@@ -8,9 +8,17 @@
 {{ 'component-product-information-card.css' | asset_url | stylesheet_tag }}
 
 <div class="product-information-card">
-  <img src="{{ block.settings.icon | img_url: 'icon' }}" class="pic-icon" style="width:22px">
-  <div class="pic-content-container">
+  <div class="pic-top-row">
+    <img
+      src="{{ block.settings.icon | image_url: width:25 }}"
+      width="25"
+      height="25"
+      class="pic-icon"
+      style="width:22px"
+    >
     <div class="h4 pic-title">{{ block.settings.title }}</div>
+  </div>
+  <div class="pic-content-container">
     <div class="rte pic-content">
       {{ block.settings.content }}
     </div>
