@@ -17,6 +17,17 @@
         "padding_bottom": 28
       }
     },
+    "countdown_timer_kxATRA": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Flash Sale Ends Soon!",
+        "end_time": "2025-06-09 00:00",
+        "background": "linear-gradient(93deg, rgba(130, 228, 79, 1) 14%, rgba(255, 250, 99, 0.94) 85%)",
+        "text_color": "#104f7c",
+        "padding_top": 16
+      }
+    },
     "hero_video_component_RdFkwa": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -519,6 +530,7 @@
   },
   "order": [
     "main",
+    "countdown_timer_kxATRA",
     "hero_video_component_RdFkwa",
     "custom_liquid_fYXKrh",
     "multicolumn_M8qycr",
