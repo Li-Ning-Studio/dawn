@@ -526,6 +526,46 @@
         "padding_top": 8,
         "padding_bottom": 0
       }
+    },
+    "collage_chyhjH": {
+      "type": "collage",
+      "blocks": {
+        "image_pUBjYa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Pickleball_531e7607-1add-4f1b-ace1-6c4ba94f50e0.jpg"
+          }
+        },
+        "product_DgchYB": {
+          "type": "product",
+          "settings": {
+            "product": "force-s-essentials-pac",
+            "second_image": false
+          }
+        },
+        "collection_ExQKtC": {
+          "type": "collection",
+          "settings": {
+            "collection": "pickleball"
+          }
+        }
+      },
+      "block_order": [
+        "image_pUBjYa",
+        "product_DgchYB",
+        "collection_ExQKtC"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -536,6 +576,7 @@
     "multicolumn_M8qycr",
     "custom_liquid_g9bLdF",
     "multicolumn_UWV9KM",
+    "collage_chyhjH",
     "custom_liquid_cd3F96",
     "collection_list_NHWedP",
     "custom_liquid_h3e4K6",
