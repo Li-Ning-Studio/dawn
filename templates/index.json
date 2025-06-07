@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "countdown_timer_RUMRPz": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Flash Sale Ends Soon!",
+        "end_time": "2025-06-09",
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 98.273%, rgba(0, 0, 0, 1) 100%)",
+        "text_color": "#ff4269",
+        "padding_top": 62
+      }
+    },
     "hero_component_E67em3": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -22,17 +33,6 @@
         "link_to": "shopify://pages/flash-sale",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "countdown_timer_RUMRPz": {
-      "type": "countdown-timer",
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Flash Sale Ends Soon!",
-        "end_time": "2025-06-09",
-        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 98.273%, rgba(0, 0, 0, 1) 100%)",
-        "text_color": "#ff4269",
-        "padding_top": 62
       }
     },
     "hero_component_pmECNB": {
@@ -349,8 +349,8 @@
     }
   },
   "order": [
-    "hero_component_E67em3",
     "countdown_timer_RUMRPz",
+    "hero_component_E67em3",
     "hero_component_pmECNB",
     "swipeable_products_ak84Mc",
     "hero_component_RKxJeB",
