@@ -1,0 +1,59 @@
+{% comment %}
+  Renders a Custom Simpl Banner of product's price (regular, sale)
+
+  Accepts:
+  - product: {Object} Product Liquid object (optional)
+  - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
+  Usage:
+  {% render 'simpl', product: product %}
+{% endcomment %}
+{{ 'component-product-information-card.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  if use_variant
+    assign target = product.selected_or_first_available_variant
+  elsif placeholder
+    assign target = null
+  else
+    assign target = product
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 1999
+  assign price_min = product.price_min
+  assign price_max = product.price_max
+  assign available = target.available | default: false
+  assign money_price = price | money
+  assign money_price_min = price_min | money
+  assign money_price_max = price_max | money
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+    assign money_price_min = price_min | money_with_currency
+    assign money_price_max = price_max | money_with_currency
+  endif
+
+  if target == product and product.price_varies
+    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+-%}
+
+{%- unless target == null and placeholder == null -%}
+  <div class="product-information-card">
+    <svg
+      class="pic-icon"
+      style="width:30px;"
+      viewBox="0 0 27 35"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M23.237 8.727L26.617 5.274L25.894 4.536C19.974 -1.512 10.349 -1.512 4.43003 4.536C-1.23297 10.323 -1.46697 19.61 3.73003 25.706L0.328031 29.135L1.05003 29.873C6.97003 35.921 16.595 35.921 22.514 29.873C28.201 24.086 28.434 14.799 23.237 8.727ZM5.87503 6.037C10.722 1.06 18.505 0.822 23.633 5.298L21.7 7.275C17.598 3.845 11.562 4.084 7.74003 7.989C3.91803 11.894 3.68503 18.086 7.04003 22.253L5.15303 24.182C0.771031 18.919 1.00403 10.99 5.87503 6.037ZM21.046 28.373C16.176 33.35 8.41503 33.588 3.26403 29.087L5.20003 27.111C9.30103 30.54 15.337 30.301 19.16 26.396C22.982 22.491 23.215 16.3 19.859 12.132L21.746 10.204C26.151 15.49 25.918 23.42 21.047 28.373H21.046Z" fill="currentColor"></path>
+    </svg>
+    <div class="pic-content-container">
+      <div class="h4 pic-title">Zero Interest EMI</div>
+      <div class="rte pic-content">
+        Pay in 3 easy interest-free payments of {{ price_min | divided_by: 3 | money_with_currency }} with Simpl. Learn
+        more at checkout.
+      </div>
+    </div>
+  </div>
+{% endunless %}

@@ -1,0 +1,20 @@
+.product-information-card {
+  display:flex; 
+  align-items: flex-start; 
+  column-gap: 10px;
+  margin:1.5rem 0;
+}
+
+.product-information-card .pic-icon{
+  width: 35px;
+  padding-top:5px;
+}
+
+.product-information-card > .pic-content-container > .pic-title{
+  padding:10px 0 5px 0;
+  font-size:1.4rem;
+}
+
+.product-information-card .pic-content-container > .pic-content{
+  font-size:1.3rem;
+}

@@ -133,6 +133,12 @@
                     </h2>
                   </a>
                 </div>
+              {%- when 'product-simpl-card' -%}
+                {%- render 'product-simpl-card', product: product, use_variant: true -%}
+              {%- when 'product-express-card' -%}
+                {%- render 'product-express-card' -%}
+              {%- when 'product-custom-card' -%}
+                {%- render 'product-custom-card', product: product, block: block -%}
               {%- when 'price' -%}
                 {%- if product.available or section.settings.display_price_out_of_stock -%}
                   <div
@@ -915,6 +921,38 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "product-simpl-card",
+      "name": "Simpl Card",
+      "limit": 1
+    },
+    {
+      "type": "product-express-card",
+      "name": "Express Timeline",
+      "limit": 1
+    },
+    {
+      "type": "product-custom-card",
+      "name": "Custom Info Card",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "liquid",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "icon"
+        }
+      ]
     },
     {
       "type": "sku",

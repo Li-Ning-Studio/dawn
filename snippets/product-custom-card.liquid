@@ -1,0 +1,18 @@
+{% comment %}
+  Renders a Express Shipping Timeline Banner
+
+  Accepts:
+  Usage:
+  {% render 'express-shipping-timeline', product: product %}
+{% endcomment %}
+{{ 'component-product-information-card.css' | asset_url | stylesheet_tag }}
+
+<div class="product-information-card">
+  <img src="{{ block.settings.icon | img_url: 'icon' }}" class="pic-icon" style="width:22px">
+  <div class="pic-content-container">
+    <div class="h4 pic-title">{{ block.settings.title }}</div>
+    <div class="rte pic-content">
+      {{ block.settings.content }}
+    </div>
+  </div>
+</div>
