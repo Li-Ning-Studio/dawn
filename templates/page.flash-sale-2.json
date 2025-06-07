@@ -557,6 +557,16 @@
         "padding_top": 8,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_mJmjwc": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hundred-timer text-center py-10\">\n  <!-- Gradient Heading -->\n  <h2 class=\"text-4xl sm:text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800\">\n    24 Hours Only\n  </h2>\n  <p class=\"text-sm text-gray-500 mb-6\">Sale ends May 8th at 11:59 PM</p>\n\n  <!-- Countdown -->\n  <div id=\"countdown\" class=\"flex justify-center flex-wrap gap-4\">\n    <div class=\"glass-box shadow-red\">\n      <span id=\"days\" class=\"time-num\">00</span>\n      <span class=\"time-label\">Days</span>\n    </div>\n    <div class=\"glass-box shadow-teal\">\n      <span id=\"hours\" class=\"time-num\">00</span>\n      <span class=\"time-label\">Hours</span>\n    </div>\n    <div class=\"glass-box shadow-red\">\n      <span id=\"minutes\" class=\"time-num\">00</span>\n      <span class=\"time-label\">Minutes</span>\n    </div>\n    <div class=\"glass-box shadow-teal\">\n      <span id=\"seconds\" class=\"time-num\">00</span>\n      <span class=\"time-label\">Seconds</span>\n    </div>\n  </div>\n\n  <!-- Ended Message -->\n  <div id=\"ended-container\" class=\"hidden mt-8\">\n    <h2 class=\"text-3xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500\">\n      The Sale Has Ended!\n    </h2>\n    <p class=\"text-gray-600 mt-2\">We hope you got some great deals!</p>\n  </div>\n</div>\n\n<!-- Scoped Tailwind Styling -->\n<style>\n  .hundred-timer .glass-box {\n    @apply flex flex-col items-center justify-center bg-white/60 backdrop-blur-md rounded-2xl p-4 sm:p-6 w-24 h-24 sm:w-28 sm:h-28 border border-gray-200;\n  }\n\n  .hundred-timer .time-num {\n    @apply text-3xl sm:text-5xl font-bold text-gray-800;\n  }\n\n  .hundred-timer .time-label {\n    @apply text-xs sm:text-sm font-semibold uppercase text-gray-500 mt-1;\n  }\n\n  .hundred-timer .shadow-red {\n    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.15);\n  }\n\n  .hundred-timer .shadow-teal {\n    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.15);\n  }\n</style>\n\n<!-- Countdown Script -->\n<script>\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const saleDate = new Date(\"2025-05-08T23:59:00Z\").getTime();\n\n    const daysEl = document.getElementById(\"days\");\n    const hoursEl = document.getElementById(\"hours\");\n    const minutesEl = document.getElementById(\"minutes\");\n    const secondsEl = document.getElementById(\"seconds\");\n    const countdown = document.getElementById(\"countdown\");\n    const endedContainer = document.getElementById(\"ended-container\");\n\n    function updateCountdown() {\n      const now = new Date().getTime();\n      const diff = saleDate - now;\n\n      if (diff <= 0) {\n        clearInterval(timer);\n        countdown.classList.add(\"hidden\");\n        endedContainer.classList.remove(\"hidden\");\n        return;\n      }\n\n      const d = Math.floor(diff / (1000 * 60 * 60 * 24));\n      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));\n      const s = Math.floor((diff % (1000 * 60)) / 1000);\n\n      daysEl.textContent = String(d).padStart(2, \"0\");\n      hoursEl.textContent = String(h).padStart(2, \"0\");\n      minutesEl.textContent = String(m).padStart(2, \"0\");\n      secondsEl.textContent = String(s).padStart(2, \"0\");\n    }\n\n    const timer = setInterval(updateCountdown, 1000);\n    updateCountdown();\n  });\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -575,6 +585,7 @@
     "collage_XaiU67",
     "multicolumn_Pk8Ebq",
     "multicolumn_CgaTG6",
-    "hero_component_fhYexr"
+    "hero_component_fhYexr",
+    "custom_liquid_mJmjwc"
   ]
 }
