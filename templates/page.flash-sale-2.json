@@ -38,7 +38,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/flash-sale",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -197,12 +197,6 @@
             "collection": "cricket-shoes"
           }
         },
-        "featured_collection_hbQc3N": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "brv2"
-          }
-        },
         "featured_collection_WTFDzc": {
           "type": "featured_collection",
           "settings": {
@@ -214,13 +208,19 @@
           "settings": {
             "collection": "topwear"
           }
+        },
+        "featured_collection_hbQc3N": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "brv2"
+          }
         }
       },
       "block_order": [
         "featured_collection_Fq6iTU",
-        "featured_collection_hbQc3N",
         "featured_collection_WTFDzc",
-        "featured_collection_6MeMf7"
+        "featured_collection_6MeMf7",
+        "featured_collection_hbQc3N"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
@@ -348,7 +348,7 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Banner_f91fbd0d-6736-4cbe-84fb-c40daeae3812.png",
-        "mobile_image": "shopify://shop_images/Banner_f91fbd0d-6736-4cbe-84fb-c40daeae3812.png",
+        "mobile_image": "shopify://shop_images/responsive.png",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -387,8 +387,8 @@
             "image": "shopify://shop_images/Artboard_7.jpg",
             "title": "",
             "text": "",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/panzer"
+            "link_label": "",
+            "link": "shopify://collections/sale-tennis"
           }
         }
       },
