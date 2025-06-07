@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "countdown_timer_txn7pi": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Flash Sale Ends Soon!",
+        "end_time": "2025-06-09",
+        "background": "#ffffff",
+        "text_color": "#ffa300",
+        "padding_top": 40
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -36,17 +47,6 @@
         "enable_sorting": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "countdown_timer_txn7pi": {
-      "type": "countdown-timer",
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Flash Sale Ends Soon!",
-        "end_time": "",
-        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1) 100%)",
-        "text_color": "#ffffff",
-        "padding_top": 16
       }
     }
   },
