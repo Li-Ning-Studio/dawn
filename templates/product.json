@@ -77,6 +77,7 @@
         },
         "collapsible_tab_UKdtFh": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Product Disclosures",
             "icon": "none",
@@ -141,5 +142,8 @@
       }
     }
   },
-  "order": ["main", "related-products"]
+  "order": [
+    "main",
+    "related-products"
+  ]
 }
