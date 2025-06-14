@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,10 +25,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_YLrnCM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Mci9DM": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_XHJXDC": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Customer Service Team</h3><p>Call us: +91-79008-99008</p><p>Customer service desk (Opening Hours): Mon - Sat: 10am to 7pm</p><h3>Grievance Office</h3><p>In case, we are unable to solve your issue to your satisfaction, you can reach our nominated Grievance Officer: Shreyas Nagaraj (<a href=\"mailto:grievance.officer@lining.studio\">grievance.officer@lining.studio</a> )</p><h3>Email us</h3><p>You can reach out to us at: <a href=\"mailto:support@lining.studio\">support@lining.studio</a></p><h3>Headquarters</h3><p>No. 155, 2nd Cross Road, 6th Block, Sun City Layout, JP Nagar 7th phase, Bangalore KA 560076</p>"
+          }
+        },
+        "button_a3qDrH": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Mci9DM",
+        "text_XHJXDC",
+        "button_a3qDrH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "form"
+    "form",
+    "rich_text_YLrnCM"
   ]
 }
