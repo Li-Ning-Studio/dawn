@@ -185,13 +185,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2_eebce74f-e68a-4b83-b343-273043274467.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_Responsive_277b5e6f-ac48-4637-9f62-069d121a0f80.jpg",
-        "subtitle": "Z-Tronic 100",
-        "title": "Light in hand, heavy on impact",
-        "description": "Designed for players seeking powerful smashes and relentless attacks",
-        "button_text": "Feel the Power",
-        "link_to": "shopify://products/primearmour-800",
+        "image": "shopify://shop_images/Ioniq_Banner.jpg",
+        "mobile_image": "shopify://shop_images/12.jpg",
+        "subtitle": "Ioniq Rackets",
+        "title": "<!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Serve, Swing, Smash",
+        "description": "<!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Head heavy rackets that oppose air resistance for a seamless gameplay",
+        "button_text": "<!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Get It Now!",
+        "link_to": "shopify://collections/ioniq-rackets",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -200,11 +200,16 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Unleash the Z-Tronic",
+        "title": "Ioniq series",
         "products": [
-          "z-tronic-100"
+          "ioniq-turbo-4u",
+          "ioniq-turbo-5u",
+          "ioniq-80-limited-edition",
+          "ioniq-80",
+          "ioniq-100-4u",
+          "ioniq-100-3u"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 72
