@@ -14,6 +14,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_tktqdA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studio-logo.jpg",
+            "image_width": 205,
+            "alignment": ""
+          }
+        },
         "comm_channel_LtGX8G": {
           "type": "comm_channel",
           "settings": {
@@ -41,13 +49,21 @@
             "heading": "Payment Methods",
             "menu": "payment-methods"
           }
+        },
+        "brand_information_WgDMnM": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
         }
       },
       "block_order": [
+        "image_tktqdA",
         "comm_channel_LtGX8G",
         "comm_channel_kMqUag",
         "footer-0",
-        "footer-1"
+        "footer-1",
+        "brand_information_WgDMnM"
       ],
       "settings": {
         "color_scheme": "scheme-1",
