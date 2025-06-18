@@ -143,6 +143,60 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_NdhLTY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"flex justify-center text-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      SINGAPORE\n    </span>\n  </h1>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_WGgjhU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yBAhmG": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zU3G6p": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_yBAhmG",
+        "column_zU3G6p"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -151,6 +205,8 @@
     "custom_liquid_B3dATj",
     "multicolumn_7FaXD6",
     "custom_liquid_GUTeF7",
-    "multicolumn_WrY9pC"
+    "multicolumn_WrY9pC",
+    "custom_liquid_NdhLTY",
+    "multicolumn_WGgjhU"
   ]
 }
