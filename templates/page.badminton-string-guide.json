@@ -123,12 +123,61 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_zU8xP6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NNByLA": {
+          "type": "heading",
+          "settings": {
+            "heading": "DURABILITY",
+            "heading_size": "h1"
+          }
+        },
+        "text_EQhxfX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All strings experience wear and tear over time and usage. But with high-quality material & make - strings last much longer. Durability mainly depends on the string gauge. Over time, the usage and tension of the racket will also affect its durability. Thicker gauge strings are more durable and will lead to lesser restringing.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_tRBeeR": {
+          "type": "button",
+          "settings": {
+            "button_label": "EXPLORE DURABILITY STRINGS",
+            "button_link": "shopify://collections/durability-string",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NNByLA",
+        "text_EQhxfX",
+        "button_tRBeeR"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/no_7_string.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "rich_text_eqrdBm",
     "image_with_text_AWyQHa",
-    "swipeable_products_wHhByU"
+    "swipeable_products_wHhByU",
+    "image_with_text_zU8xP6"
   ]
 }
