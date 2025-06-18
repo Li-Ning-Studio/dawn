@@ -48,8 +48,9 @@
         "column_nptDYL": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/camp_3_52bb92f6-e782-43e3-ac12-c6cddadbd23d.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -57,17 +58,9 @@
         "column_HVzVB8": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_9ADmkn": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/camp_2_b3afb9bd-0c78-41c2-a9b7-f8a8c881710f.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -75,8 +68,7 @@
       },
       "block_order": [
         "column_nptDYL",
-        "column_HVzVB8",
-        "column_9ADmkn"
+        "column_HVzVB8"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
