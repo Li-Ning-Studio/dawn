@@ -32,6 +32,49 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_LrQCJQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_irPnPq": {
+          "type": "heading",
+          "settings": {
+            "heading": "BADMINTON RACKET BUYING GUIDE",
+            "heading_size": "h1"
+          }
+        },
+        "text_36xPfQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>★ A BADMINTON RACKET IS A CAREFULLY DESIGNED INSTRUMENT MADE WITH SELECT MATERIALS AND COMPONENTS. THE MAIN BODY INCLUDES A SLENDER FRAME WITH THE RACKET HEAD, THE SHAFT, THE CAP, AND THE GRIP.</p><p>★ THE MAIN POINTS TO CONSIDER TO SELECT THE BEST RACKET ARE THE FEATURES THAT AFFECT YOUR GAMEPLAY.</p>"
+          }
+        },
+        "button_3we6eY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_irPnPq",
+        "text_36xPfQ",
+        "button_3we6eY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_a8jmBd": {
       "type": "multicolumn",
       "blocks": {
@@ -292,6 +335,7 @@
   "order": [
     "main",
     "hero_component_6fgCrg",
+    "rich_text_LrQCJQ",
     "multicolumn_a8jmBd",
     "image_with_text_RGArc6",
     "multicolumn_RXDE4E",
