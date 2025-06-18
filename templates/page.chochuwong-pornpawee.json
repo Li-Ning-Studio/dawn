@@ -11,13 +11,154 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_NmFRiE": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_62ea952a-96ed-4bd2-bf67-619383fde809.png",
+        "mobile_image": "shopify://shop_images/banner_r_50d96927-df5a-4d76-865e-b1e633233915.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_cg4fV6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    /* Slowed down animation */\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  /* Style for the smaller text with increased boldness and reduced spacing */\n  .smaller-text {\n    font-size: 1.5rem;\n    line-height: 1.4rem; /* Adjusted line-height for less spacing */\n    font-weight: 700;  /* Increased font weight for bolder look */\n    margin-top: 0.5rem; /* Adjusted margin for less spacing */\n    padding: 0 10px;\n    letter-spacing: -0.5px;\n    color: #333;\n  }\n\n  /* Adjust overall spacing and alignment */\n  .content-section {\n    margin: 0 auto;\n    padding: 20px;\n    max-width: 800px;\n    text-align: center;\n  }\n\n  .quote-text {\n    font-size: 1.2rem;\n    line-height: 1.8rem;\n    margin-top: 20px;\n    padding: 10px 20px;\n    color: #555;\n  }\n\n  p {\n    margin: 0;\n    padding: 0;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section class=\"content-section\">\n    <p>Champion</p>\n    <h1 style=\"margin: 10px 0;\">\n      <span class=\"animated-gradient large-text\">\nChochuwong Pornpawee\n      </span>\n      <br />\n      <span class=\"smaller-text\">\n        GEAR UP WITH THE EQUIPMENT CHAMPIONS TRUST, <br /> BECAUSE EVERY MATCH DESERVES YOUR BEST.\n      </span>\n    </h1>\n    <p class=\"quote-text\">\n     🏆✨\n    </p>\n  </section>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_cEgMyX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NmMwaP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/camp_3_cb36b980-fc87-4723-b110-9b26ed58b844.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CDydGX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/camp_2_90b42d69-3abd-4959-a50d-88cd0af2b71f.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NmMwaP",
+        "column_CDydGX"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_jziyKF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NxhLCi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Play like a champion with Chochuwong Pornpawee's choice.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Gtie4A": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_jgCNhM": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NxhLCi",
+        "text_Gtie4A",
+        "button_jgCNhM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "swipeable_products_HK6MMt": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "axforce-100-3u",
+          "holster-gear-kit-bag",
+          "no-1-boost",
+          "zip-pocket-joggers",
+          "off-court-slide-on",
+          "li-ning-wristband",
+          "step-socks",
+          "gp-3000-overgrip"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_NmFRiE",
+    "custom_liquid_cg4fV6",
+    "multicolumn_cEgMyX",
+    "rich_text_jziyKF",
+    "swipeable_products_HK6MMt"
   ]
 }
