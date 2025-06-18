@@ -151,6 +151,112 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_9teWw9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Jk8EDA": {
+          "type": "heading",
+          "settings": {
+            "heading": "MASTER EVERY SHOT, DOMINATE EVERY MATCH.",
+            "heading_size": "h1"
+          }
+        },
+        "text_UCKAWX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Champion's Choice<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_P9dJYD": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Jk8EDA",
+        "text_UCKAWX",
+        "button_P9dJYD"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/post_4_8f33ce04-9718-4028-9902-418edaed89dd.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_w9wgyf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_x4FUqL": {
+          "type": "heading",
+          "settings": {
+            "heading": "At Li-Ning Studio, our passion goes beyond products, we stand by every player, every step of the way. From their first swing to championship victories, We are proud to support those who push the limits and chase greatness",
+            "heading_size": "h1"
+          }
+        },
+        "text_UjtLMe": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_ALbf3w": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_x4FUqL",
+        "text_UjtLMe",
+        "button_ALbf3w"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_GHYkDd": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner.png",
+        "mobile_image": "shopify://shop_images/banner_r.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -159,6 +265,9 @@
     "custom_liquid_cNYBER",
     "multicolumn_ABBzL9",
     "rich_text_rCBrRF",
-    "swipeable_products_4TQKDV"
+    "swipeable_products_4TQKDV",
+    "image_with_text_9teWw9",
+    "rich_text_w9wgyf",
+    "hero_component_GHYkDd"
   ]
 }
