@@ -128,11 +128,57 @@
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
+        "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_RXDE4E": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PVrYGj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/7.jpg",
+            "title": "Ultra Flex to Flexible",
+            "text": "<p>Flexible rackets are good for juniors, defence players, beginner to intermediate players and advanced players who are well adapted to flexible rackets.</p>",
+            "link_label": "VERSATILE RACKETS",
+            "link": "shopify://collections/badminton-rackets"
+          }
+        },
+        "column_yQP9gD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6_3.jpg",
+            "title": "Mid Flex To Stiff",
+            "text": "<p>Stiff rackets are good for advanced players, attacking players, and hard hitters well adapted to middle flexible rackets who are looking to upgrade for more control.<br/></p>",
+            "link_label": "CONTROL RACKETS",
+            "link": "shopify://collections/badminton-rackets"
+          }
+        }
+      },
+      "block_order": [
+        "column_PVrYGj",
+        "column_yQP9gD"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -142,6 +188,7 @@
     "main",
     "hero_component_6fgCrg",
     "multicolumn_a8jmBd",
-    "image_with_text_RGArc6"
+    "image_with_text_RGArc6",
+    "multicolumn_RXDE4E"
   ]
 }
