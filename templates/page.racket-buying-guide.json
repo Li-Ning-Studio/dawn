@@ -40,8 +40,8 @@
           "settings": {
             "image": "shopify://shop_images/2_4.jpg",
             "title": "Power Attacks",
-            "text": "<p>Head-heavy rackets improve your smash performance as the racket’s weight is concentrated in the head and gives enhanced power. These are ideal for attacking players.</p>",
-            "link_label": "",
+            "text": "<h5>Head-heavy rackets improve your smash performance as the racket’s weight is concentrated in the head and gives enhanced power. These are ideal for attacking players.</h5>",
+            "link_label": "ATTACKING RACKETS",
             "link": "shopify://collections/attacking-rackets"
           }
         },
@@ -71,18 +71,18 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
+        "title": "Balance Point",
+        "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button label",
+        "image_ratio": "portrait",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
