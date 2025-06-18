@@ -199,6 +199,49 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_FXNeLE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_knKFCm": {
+          "type": "heading",
+          "settings": {
+            "heading": "At Li-Ning Studio, our passion goes beyond products, we stand by every player, every step of the way. From their first swing to championship victories, We are proud to support those who push the limits and chase greatness",
+            "heading_size": "h1"
+          }
+        },
+        "text_bnXmAm": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_gjYxyi": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_knKFCm",
+        "text_bnXmAm",
+        "button_gjYxyi"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -208,6 +251,7 @@
     "multicolumn_cEgMyX",
     "rich_text_jziyKF",
     "swipeable_products_HK6MMt",
-    "image_with_text_nNp36f"
+    "image_with_text_nNp36f",
+    "rich_text_FXNeLE"
   ]
 }
