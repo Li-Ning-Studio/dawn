@@ -83,20 +83,20 @@
         "heading_8H4X3L": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "<strong>Play like a champion with Ong Yew Sin's choice.</strong>",
             "heading_size": "h1"
           }
         },
         "text_gMGerM": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": ""
           }
         },
         "button_DnBr8c": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -119,6 +119,28 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "swipeable_products_CFTcFt": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "aeronaut-9000-4u",
+          "phoenix-kitbag",
+          "no-1-boost",
+          "comfort-line-hoodie",
+          "li-ning-athletic-joggers",
+          "off-court-slide-on",
+          "li-ning-wristband",
+          "5-star-socks",
+          "gp-3000-overgrip"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -126,6 +148,7 @@
     "hero_component_AQUnCC",
     "custom_liquid_37Rr67",
     "multicolumn_NAAePA",
-    "rich_text_GymmF9"
+    "rich_text_GymmF9",
+    "swipeable_products_CFTcFt"
   ]
 }
