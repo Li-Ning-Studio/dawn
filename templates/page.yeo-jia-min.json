@@ -11,13 +11,30 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_GbRgba": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_ab33fee7-a1b9-4da1-932f-9024466060e4.png",
+        "mobile_image": "shopify://shop_images/banner_r_567ca31f-3270-42bb-94fc-9a39461b21cb.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_GbRgba"
   ]
 }
