@@ -97,6 +97,52 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_WrY9pC": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FzUyRc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/post_4_73ce463f-453c-4ba7-a5e4-38950e3af526.png",
+            "title": "",
+            "text": "",
+            "link_label": "CHOCHUWONG PORNPAWEE",
+            "link": "shopify://pages/chochuwong-pornpawee"
+          }
+        },
+        "column_zVcApC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/post_4_1c329e81-88e9-4dfa-b6ec-df471156e0e3.png",
+            "title": "",
+            "text": "",
+            "link_label": "PITCHAMON OPATNIPUT",
+            "link": "shopify://pages/pitchamon-opatniput"
+          }
+        }
+      },
+      "block_order": [
+        "column_FzUyRc",
+        "column_zVcApC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -104,6 +150,7 @@
     "hero_component_rP8EyX",
     "custom_liquid_B3dATj",
     "multicolumn_7FaXD6",
-    "custom_liquid_GUTeF7"
+    "custom_liquid_GUTeF7",
+    "multicolumn_WrY9pC"
   ]
 }
