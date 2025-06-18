@@ -151,6 +151,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_nNp36f": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kxJXyA": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"IF YOU GIVE UP  YOU CAN'T WIN, BUT IF YOU FIGHT, YOU HAVE A CHANCE TO WIN\"",
+            "heading_size": "h1"
+          }
+        },
+        "text_Lt8bFU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>― Chochuwong Pornpawee<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_XaQ9HB": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kxJXyA",
+        "text_Lt8bFU",
+        "button_XaQ9HB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/post_4_73ce463f-453c-4ba7-a5e4-38950e3af526.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -159,6 +207,7 @@
     "custom_liquid_cg4fV6",
     "multicolumn_cEgMyX",
     "rich_text_jziyKF",
-    "swipeable_products_HK6MMt"
+    "swipeable_products_HK6MMt",
+    "image_with_text_nNp36f"
   ]
 }
