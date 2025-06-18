@@ -48,8 +48,9 @@
         "column_9FkazF": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/camp_3_73aa7b4c-c169-4073-b5ef-a9f04fe8496d.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -57,8 +58,9 @@
         "column_cdphdj": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/camp_2_23ee9437-d400-4568-8b83-545cd41f2575.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -85,12 +87,78 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_rCBrRF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4YeY7x": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Play like a champion with Kim Astrup Sørensen's choice.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_dbjAHH": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_xXaxXm": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4YeY7x",
+        "text_dbjAHH",
+        "button_xXaxXm"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "swipeable_products_4TQKDV": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "bladex-900-4u",
+          "qube-square-bag",
+          "no-1-boost",
+          "skystripe-t-shirt",
+          "a-300",
+          "li-ning-wristband",
+          "5-star-socks",
+          "gp-3000-overgrip"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_component_zxW7Xe",
     "custom_liquid_cNYBER",
-    "multicolumn_ABBzL9"
+    "multicolumn_ABBzL9",
+    "rich_text_rCBrRF",
+    "swipeable_products_4TQKDV"
   ]
 }
