@@ -11,13 +11,124 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_eqrdBm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jhP8MK": {
+          "type": "heading",
+          "settings": {
+            "heading": "BADMINTON STRINGS GUIDE",
+            "heading_size": "h1"
+          }
+        },
+        "text_wcHVN6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Learning more about your badminton equipment benefits everyone from newbies to professionals. Your string choice impacts your game which is an important tip for beginners. Every badminton string comes with specific benefits that help improve the performance of your racket.</p><p>Here we present a simple guide for choosing the best string for you:</p>"
+          }
+        },
+        "button_XqiKHm": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jhP8MK",
+        "text_wcHVN6",
+        "button_XqiKHm"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_AWyQHa": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9keA7C": {
+          "type": "heading",
+          "settings": {
+            "heading": "POWER",
+            "heading_size": "h1"
+          }
+        },
+        "text_MNeUxy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Power, or as needed for strings, repulsion power is achieved through elasticity. The strings stretch and restore their original position when hitting a shuttle and generate power.<br/>Thinner gauge strings are bouncier with a brighter sound and give more repulsion power.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_p7YPRt": {
+          "type": "button",
+          "settings": {
+            "button_label": "EXPLORE POWER STRINGS",
+            "button_link": "shopify://collections/power-strings",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9keA7C",
+        "text_MNeUxy",
+        "button_p7YPRt"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/no_1_string.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "swipeable_products_wHhByU": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "POWER STRINGS",
+        "products": [
+          "no-1-boost",
+          "no-3-boost",
+          "no-1"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_eqrdBm",
+    "image_with_text_AWyQHa",
+    "swipeable_products_wHhByU"
   ]
 }
