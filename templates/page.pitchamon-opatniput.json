@@ -31,10 +31,21 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_6qaF8g": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    /* Slowed down animation */\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  /* Style for the smaller text with increased boldness and reduced spacing */\n  .smaller-text {\n    font-size: 1.5rem;\n    line-height: 1.4rem; /* Adjusted line-height for less spacing */\n    font-weight: 700;  /* Increased font weight for bolder look */\n    margin-top: 0.5rem; /* Adjusted margin for less spacing */\n    padding: 0 10px;\n    letter-spacing: -0.5px;\n    color: #333;\n  }\n\n  /* Adjust overall spacing and alignment */\n  .content-section {\n    margin: 0 auto;\n    padding: 20px;\n    max-width: 800px;\n    text-align: center;\n  }\n\n  .quote-text {\n    font-size: 1.2rem;\n    line-height: 1.8rem;\n    margin-top: 20px;\n    padding: 10px 20px;\n    color: #555;\n  }\n\n  p {\n    margin: 0;\n    padding: 0;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section class=\"content-section\">\n    <p>Champion</p>\n    <h1 style=\"margin: 10px 0;\">\n      <span class=\"animated-gradient large-text\">\nPitchamon Opatniput\n      </span>\n      <br />\n      <span class=\"smaller-text\">\n        GEAR UP WITH THE EQUIPMENT CHAMPIONS TRUST, <br /> BECAUSE EVERY MATCH DESERVES YOUR BEST.\n      </span>\n    </h1>\n    <p class=\"quote-text\">\n     🏆✨\n    </p>\n  </section>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "hero_component_kLiTUn"
+    "hero_component_kLiTUn",
+    "custom_liquid_6qaF8g"
   ]
 }
