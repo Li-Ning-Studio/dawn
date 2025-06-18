@@ -87,12 +87,79 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_N3bAXx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fnFhqL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Play like a champion with Loh Kean Yew's choice.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_tUYmLH": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_kQjVkw": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fnFhqL",
+        "text_tUYmLH",
+        "button_kQjVkw"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "swipeable_products_BW3tx7": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "axforce-90-dragon-max-4u",
+          "charter-kitbag",
+          "no-1-boost",
+          "line-shorts",
+          "a-300",
+          "off-court-slide-on",
+          "li-ning-wristband",
+          "5-star-socks",
+          "gp-3000-overgrip"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_component_6gztrP",
     "custom_liquid_EkNn8Q",
-    "multicolumn_V4mEUC"
+    "multicolumn_V4mEUC",
+    "rich_text_N3bAXx",
+    "swipeable_products_BW3tx7"
   ]
 }
