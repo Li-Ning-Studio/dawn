@@ -87,12 +87,56 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_kYfU8K": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_64K6Dy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Play like a champion with Teo Ee Yi's choice.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_8G9VaL": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_Jxtecb": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_64K6Dy",
+        "text_8G9VaL",
+        "button_Jxtecb"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "hero_component_WFecxm",
     "custom_liquid_rYrzKk",
-    "multicolumn_hdpza6"
+    "multicolumn_hdpza6",
+    "rich_text_kYfU8K"
   ]
 }
