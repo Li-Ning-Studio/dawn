@@ -57,7 +57,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 68
       }
     },
     "image_with_text_AWyQHa": {
@@ -105,7 +105,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 72
       }
     },
     "swipeable_products_wHhByU": {
@@ -121,7 +121,7 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 72
       }
     },
     "image_with_text_zU8xP6": {
@@ -169,7 +169,183 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
+        "padding_bottom": 76
+      }
+    },
+    "swipeable_products_qAPUYF": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "<strong>DURABILITY STRINGS</strong>",
+        "products": [
+          "no-7",
+          "no-7-boost"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_nM63QN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4EQMCK": {
+          "type": "heading",
+          "settings": {
+            "heading": "BALANCE",
+            "heading_size": "h1"
+          }
+        },
+        "text_C4UbYU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Balanced strings are optimized for both repulsion power and durability. They offer balanced play for powerful strikes with durability and crisp hitting sound that makes it ideal for a balanced player.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_XqfPfx": {
+          "type": "button",
+          "settings": {
+            "button_label": "EXPLORE BALANCED STRINGS",
+            "button_link": "shopify://collections/balanced-string",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4EQMCK",
+        "text_C4UbYU",
+        "button_XqfPfx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/no_5_string.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "swipeable_products_8EVELi": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "BALANCED STRINGS",
+        "products": [],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_MkNhyc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zQPhxq": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_WzwiAU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you haven’t got the right string or tension, you’re not making the most of your playing equipment.</p><p>Spend time analysing your needs based on your game style - this helps you choose the best badminton string.</p><p>If you are interested in knowing more about your string and how it can improve your game, we have an in-depth guide for you.</p><p>The main characteristics to look out for are string type and player control offered by the string.<br/>This guide covers :</p><h4>Understanding string type</h4><ol><li>String Gauge</li><li>String material</li><li>Feel of the String</li></ol><h4>What Badminton String Should You Use?</h4><ol><li>Playing level</li><li>Playing style</li><li>Personal preference</li></ol><h3>Understanding String Type</h3><h4>String gauge</h4><p>The string gauge refers to its thickness which is the defining characteristic of a badminton string. We have a range of strings available from <a href=\"https://in.lining.studio/product/no-3\">0.63mm</a> to <a href=\"https://in.lining.studio/product/no-7-boost\">0.70mm</a>.<br/>This may not sound like a lot to the newbie but can make a significant difference in your game. Thicker strings are more durable but thinner strings offer more control.</p><h4>String Feel</h4><p>Depends on material properties & coating. A harder string may give more repulsion and power while a softer string may give more control.</p>"
+          }
+        },
+        "button_8pxrpD": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zQPhxq",
+        "text_WzwiAU",
+        "button_8pxrpD"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_LBBeCf": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/string_material_-_web.jpg",
+        "mobile_image": "shopify://shop_images/string_material_-_mobile.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_84mEaq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HmHdx8": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_JjMamz": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>What Badminton String Should You Use?</h3><h4>Playing level</h4><p>A thinner string works better for pros as it gives you incredible control and ‘touch’ whereas a thicker string is better for beginners as you might not feel the real advantages a thin string might give you.</p><h4>Playing style</h4><p>Playing style matters because it guides what you want most from the string.<br/>If you’re an offence-oriented player with consecutively powerful shots you may be looking for a durable string. If you’re a defensive style player you may need a string with high repulsion power. A balanced player will be more suited to strings that offer optimized control and power.</p><h4>Personal preference</h4><p>The answer to what’s the ‘<em>best</em>’ string, however, depends on your comfort and skills. Even with all these recommendations, there is no <em>one size fits all</em> solution! Some advanced players might go for a thick string and beginners might want to go for a thin string because they like the sound it gives or if they want to experiment with different strings.</p>"
+          }
+        },
+        "button_FeqrhC": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HmHdx8",
+        "text_JjMamz",
+        "button_FeqrhC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -178,6 +354,12 @@
     "rich_text_eqrdBm",
     "image_with_text_AWyQHa",
     "swipeable_products_wHhByU",
-    "image_with_text_zU8xP6"
+    "image_with_text_zU8xP6",
+    "swipeable_products_qAPUYF",
+    "image_with_text_nM63QN",
+    "swipeable_products_8EVELi",
+    "rich_text_MkNhyc",
+    "hero_component_LBBeCf",
+    "rich_text_84mEaq"
   ]
 }
