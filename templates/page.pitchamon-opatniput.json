@@ -87,12 +87,78 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_C3at3x": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iUrKWG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Play like a champion with Pitchamon Opatniput's choice.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_aRVyrm": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_cz3HTJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_iUrKWG",
+        "text_aRVyrm",
+        "button_cz3HTJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "swipeable_products_3wfeaN": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "bladex-900-4u",
+          "qube-square-bag",
+          "no-1-boost",
+          "classic-shorts",
+          "off-court-slide-on",
+          "li-ning-wristband",
+          "5-star-socks",
+          "gp-3000-overgrip"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_component_kLiTUn",
     "custom_liquid_6qaF8g",
-    "multicolumn_D6DJFP"
+    "multicolumn_D6DJFP",
+    "rich_text_C3at3x",
+    "swipeable_products_3wfeaN"
   ]
 }
