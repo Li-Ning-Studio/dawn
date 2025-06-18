@@ -182,6 +182,63 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_E78Qyr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_V3Jhtb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Material.jpg",
+            "title": "RACKET MATERIAL",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_66LD6z": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Weight.jpg",
+            "title": "RACKET WEIGHT",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DQLXtj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/FRame_Type.jpg",
+            "title": "RACKET FRAME TYPE",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_V3Jhtb",
+        "column_66LD6z",
+        "column_DQLXtj"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -189,6 +246,7 @@
     "hero_component_6fgCrg",
     "multicolumn_a8jmBd",
     "image_with_text_RGArc6",
-    "multicolumn_RXDE4E"
+    "multicolumn_RXDE4E",
+    "multicolumn_E78Qyr"
   ]
 }
