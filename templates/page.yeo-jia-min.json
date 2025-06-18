@@ -145,7 +145,7 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Swipeable Products",
+        "title": "",
         "products": [
           "axforce-70-4u",
           "holomatrix-kit-bag",
@@ -161,6 +161,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_TpbnXq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rXky3m": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"I WASN'T AFRAID TO CHALLENGE PEOPLE OLDER OR BETTER THAN ME. I WAS NOT AFRAID TO LOSE\"",
+            "heading_size": "h1"
+          }
+        },
+        "text_pnCKzY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>―Yeo Jia Min</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Ak6EAr": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rXky3m",
+        "text_pnCKzY",
+        "button_Ak6EAr"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/post_4_021ad5f4-7fd4-4865-a945-d5939193cf0a.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -169,6 +217,7 @@
     "custom_liquid_WUkGRh",
     "multicolumn_dTEd96",
     "rich_text_FMpN7K",
-    "swipeable_products_PDQxCh"
+    "swipeable_products_PDQxCh",
+    "image_with_text_TpbnXq"
   ]
 }
