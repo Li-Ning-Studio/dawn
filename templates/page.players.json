@@ -265,6 +265,52 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_mjV69L": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nCqwPT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/post_4_8f33ce04-9718-4028-9902-418edaed89dd.png",
+            "title": "",
+            "text": "",
+            "link_label": "KIM ASTRUP SØRENSEN",
+            "link": "shopify://pages/kim-astrup"
+          }
+        },
+        "column_q6cQgA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/post_4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nCqwPT",
+        "column_q6cQgA"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -278,6 +324,7 @@
     "multicolumn_WGgjhU",
     "custom_liquid_iN9rUH",
     "multicolumn_bAHdxp",
-    "custom_liquid_N697D7"
+    "custom_liquid_N697D7",
+    "multicolumn_mjV69L"
   ]
 }
