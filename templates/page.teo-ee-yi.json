@@ -151,6 +151,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_cPXnpp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TYtQzd": {
+          "type": "heading",
+          "settings": {
+            "heading": "MASTER EVERY SHOT, DOMINATE EVERY MATCH.",
+            "heading_size": "h1"
+          }
+        },
+        "text_6mwngQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Champion's Choice</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Q4jeKi": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TYtQzd",
+        "text_6mwngQ",
+        "button_Q4jeKi"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/post_4_d3b24086-4ee0-46a0-9573-226bb62cb497.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -159,6 +207,7 @@
     "custom_liquid_rYrzKk",
     "multicolumn_hdpza6",
     "rich_text_kYfU8K",
-    "swipeable_products_tNieyU"
+    "swipeable_products_tNieyU",
+    "image_with_text_cPXnpp"
   ]
 }
