@@ -209,6 +209,64 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_UJCR8h": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dDYQje": {
+          "type": "heading",
+          "settings": {
+            "heading": "At Li-Ning Studio, our passion goes beyond products, we stand by every player, every step of the way. From their first swing to championship victories, We are proud to support those who push the limits and chase greatness",
+            "heading_size": "h1"
+          }
+        },
+        "text_V3FVVM": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_HqmpDd": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dDYQje",
+        "text_V3FVVM",
+        "button_HqmpDd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_rwGY9X": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner.png",
+        "mobile_image": "shopify://shop_images/banner_r.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -218,6 +276,8 @@
     "multicolumn_TdFUBQ",
     "rich_text_VEYXDX",
     "swipeable_products_Khjzfx",
-    "image_with_text_MzUDX3"
+    "image_with_text_MzUDX3",
+    "rich_text_UJCR8h",
+    "hero_component_rwGY9X"
   ]
 }
