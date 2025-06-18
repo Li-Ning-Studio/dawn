@@ -82,6 +82,17 @@
             ]
           }
         },
+        "product_highlight_7FTrt3": {
+          "type": "product_highlight",
+          "settings": {
+            "title": "Zero Interest EMI",
+            "description": "Pay in 3 easy interest-free payments of {{ product.price_min | divided_by: 3 | money_with_currency }} with Simpl. Learn\n        more at checkout.",
+            "icon": "<svg style=\"width: 21px; height: 21px;\" viewbox=\"0 0 27 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M23.237 8.727L26.617 5.274L25.894 4.536C19.974 -1.512 10.349 -1.512 4.43003 4.536C-1.23297 10.323 -1.46697 19.61 3.73003 25.706L0.328031 29.135L1.05003 29.873C6.97003 35.921 16.595 35.921 22.514 29.873C28.201 24.086 28.434 14.799 23.237 8.727ZM5.87503 6.037C10.722 1.06 18.505 0.822 23.633 5.298L21.7 7.275C17.598 3.845 11.562 4.084 7.74003 7.989C3.91803 11.894 3.68503 18.086 7.04003 22.253L5.15303 24.182C0.771031 18.919 1.00403 10.99 5.87503 6.037ZM21.046 28.373C16.176 33.35 8.41503 33.588 3.26403 29.087L5.20003 27.111C9.30103 30.54 15.337 30.301 19.16 26.396C22.982 22.491 23.215 16.3 19.859 12.132L21.746 10.204C26.151 15.49 25.918 23.42 21.047 28.373H21.046Z\" fill=\"currentColor\"></path></svg>",
+            "collections": [
+              "court-mat"
+            ]
+          }
+        },
         "forms_inline_mqTNGV": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
@@ -93,8 +104,8 @@
             "errors_color": "#e02229",
             "text_alignment": "left",
             "form_alignment": "center",
-            "padding_top": 15,
-            "padding_bottom": 17,
+            "padding_top": 0,
+            "padding_bottom": 0,
             "padding_right": 0,
             "padding_left": 0
           }
@@ -150,6 +161,7 @@
         "buy_buttons",
         "product_highlight_yCCtLT",
         "product_highlight_bU8EAF",
+        "product_highlight_7FTrt3",
         "forms_inline_mqTNGV",
         "description",
         "collapsible_tab_McAyVV",
