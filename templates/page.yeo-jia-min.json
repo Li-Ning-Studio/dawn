@@ -41,11 +41,68 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_dTEd96": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YkanQn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/camp_3_3b2fc4a2-8061-4923-a67d-e47c26eac8e4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YUzpBk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/camp_2_8ced7c3d-04ff-44c7-a776-ad3daca881ef.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_c8Bq49": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YkanQn",
+        "column_YUzpBk",
+        "column_c8Bq49"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_GbRgba",
-    "custom_liquid_WUkGRh"
+    "custom_liquid_WUkGRh",
+    "multicolumn_dTEd96"
   ]
 }
