@@ -53,6 +53,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
@@ -90,6 +91,23 @@
             "collections": [
               "court-mat"
             ]
+          }
+        },
+        "forms_inline_mqTNGV": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "517228",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
           }
         },
         "description": {
@@ -144,6 +162,7 @@
         "product_highlight_yCCtLT",
         "product_highlight_bU8EAF",
         "product_highlight_7FTrt3",
+        "forms_inline_mqTNGV",
         "description",
         "collapsible_tab_McAyVV",
         "collapsible-row-1",
@@ -165,6 +184,34 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "1750240663ebf2e4b3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_FmXPAY": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "517228",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_FmXPAY"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "related-products": {
@@ -215,6 +262,7 @@
   },
   "order": [
     "main",
+    "1750240663ebf2e4b3",
     "related-products",
     "1749537046e7aecdbc",
     "custom_liquid_VHXQrk"
