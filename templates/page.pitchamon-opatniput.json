@@ -151,6 +151,97 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_Bfd8w3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dzRGCc": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"THE PRESSURE IS PART AND PARCEL OF THE SPORT, THIS IS WHAT WE NEED TO HANDLE WHEN WE WIN MAJOR TITLES.\"",
+            "heading_size": "h1"
+          }
+        },
+        "text_JkqFc7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>― Pitchamon Opatniput</p>",
+            "text_style": "body"
+          }
+        },
+        "button_gc8NaD": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dzRGCc",
+        "text_JkqFc7",
+        "button_gc8NaD"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/post_4_1c329e81-88e9-4dfa-b6ec-df471156e0e3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_bhd4Nx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nBQbfe": {
+          "type": "heading",
+          "settings": {
+            "heading": "At Li-Ning Studio, our passion goes beyond products, we stand by every player, every step of the way. From their first swing to championship victories, We are proud to support those who push the limits and chase greatness",
+            "heading_size": "h1"
+          }
+        },
+        "text_bm4xmW": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_tmjEQG": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nBQbfe",
+        "text_bm4xmW",
+        "button_tmjEQG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -159,6 +250,8 @@
     "custom_liquid_6qaF8g",
     "multicolumn_D6DJFP",
     "rich_text_C3at3x",
-    "swipeable_products_3wfeaN"
+    "swipeable_products_3wfeaN",
+    "image_with_text_Bfd8w3",
+    "rich_text_bhd4Nx"
   ]
 }
