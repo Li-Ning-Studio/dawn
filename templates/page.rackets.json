@@ -52,23 +52,95 @@
           "settings": {
             "collection": "aeronaut"
           }
+        },
+        "featured_collection_rRnATz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "windstorm"
+          }
+        },
+        "featured_collection_N73R39": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bladex"
+          }
         }
       },
       "block_order": [
         "featured_collection_rQLW3k",
         "featured_collection_Uk6zz3",
-        "featured_collection_ANPHii"
+        "featured_collection_ANPHii",
+        "featured_collection_rRnATz",
+        "featured_collection_N73R39"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "Collections",
         "heading_size": "h1",
         "image_ratio": "portrait",
-        "columns_desktop": 3,
+        "columns_desktop": 5,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_NmwFjY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_6fhqmJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Tectonic_7_I.jpg",
+            "title": "FLEXIBLE FRAME",
+            "text": "",
+            "link_label": "Tectonic Series",
+            "link": "shopify://collections/tectonic"
+          }
+        },
+        "column_G9fn4r": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/G-Force.jpg",
+            "title": "G-FORCE HIGH TENSION",
+            "text": "",
+            "link_label": "G-Force Series",
+            "link": "shopify://collections/g-force"
+          }
+        },
+        "column_JVbQQe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Aeronaut_9000_I.jpg",
+            "title": "ABSOLUTE CONTROL",
+            "text": "",
+            "link_label": "Aeronaut Series",
+            "link": "shopify://collections/aeronaut"
+          }
+        }
+      },
+      "block_order": [
+        "column_6fhqmJ",
+        "column_G9fn4r",
+        "column_JVbQQe"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -77,6 +149,7 @@
   "order": [
     "main",
     "hero_component_QwxAVH",
-    "collection_list_pYY97w"
+    "collection_list_pYY97w",
+    "multicolumn_NmwFjY"
   ]
 }
