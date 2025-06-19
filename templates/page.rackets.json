@@ -330,6 +330,47 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_list_kynwYh": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_MpjyAz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-strings"
+          }
+        },
+        "featured_collection_zyLU7W": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "shuttlecocks"
+          }
+        },
+        "featured_collection_QFfb4g": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-kit-bags"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_MpjyAz",
+        "featured_collection_zyLU7W",
+        "featured_collection_QFfb4g"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "SHOP ACCESSORIES",
+        "heading_size": "h2",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -339,6 +380,7 @@
     "multicolumn_NmwFjY",
     "image_with_text_zTtzid",
     "swipeable_products_9pwit7",
-    "image_with_text_6FbCtC"
+    "image_with_text_6FbCtC",
+    "collection_list_kynwYh"
   ]
 }
