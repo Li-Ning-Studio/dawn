@@ -31,10 +31,52 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "collection_list_pYY97w": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_rQLW3k": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tectonic"
+          }
+        },
+        "featured_collection_Uk6zz3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "g-force"
+          }
+        },
+        "featured_collection_ANPHii": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "aeronaut"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_rQLW3k",
+        "featured_collection_Uk6zz3",
+        "featured_collection_ANPHii"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "hero_component_QwxAVH"
+    "hero_component_QwxAVH",
+    "collection_list_pYY97w"
   ]
 }
