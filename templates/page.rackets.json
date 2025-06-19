@@ -111,6 +111,16 @@
             "link": "shopify://collections/g-force"
           }
         },
+        "column_U8LCnA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BladeX_200.jpg",
+            "title": "SUPREME MOBILITY",
+            "text": "",
+            "link_label": "Bladex Series",
+            "link": "shopify://collections/bladex"
+          }
+        },
         "column_JVbQQe": {
           "type": "column",
           "settings": {
@@ -120,20 +130,43 @@
             "link_label": "Aeronaut Series",
             "link": "shopify://collections/aeronaut"
           }
+        },
+        "column_46TAEq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Winstorm_78-S.jpg",
+            "title": "SUPERLIGHT RACKETS",
+            "text": "",
+            "link_label": "Windstorm Series",
+            "link": ""
+          }
+        },
+        "column_h69GmX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3D_Calibar.jpg",
+            "title": "HIGH-TECH GEOMETRIC FRAME",
+            "text": "",
+            "link_label": "3D Calibar Series",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_6fhqmJ",
         "column_G9fn4r",
-        "column_JVbQQe"
+        "column_U8LCnA",
+        "column_JVbQQe",
+        "column_46TAEq",
+        "column_h69GmX"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "Collections",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button label",
+        "image_ratio": "portrait",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "center",
