@@ -27,7 +27,10 @@
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Banner_3_1.webp",
@@ -101,7 +104,11 @@
           }
         }
       },
-      "block_order": ["slide_ng8fEC", "slide_aQkY96", "slide_rJ9bAC"],
+      "block_order": [
+        "slide_ng8fEC",
+        "slide_aQkY96",
+        "slide_rJ9bAC"
+      ],
       "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {
@@ -139,7 +146,9 @@
         "title": "SILENCE THE RALLY",
         "description": "Battle Series is a professional-grade racket with a slim Vapor Shaft for quicker acceleration and offensive finishing shots.",
         "button_text": "GET READY TO BATTLE",
-        "button_link": "shopify://collections/battle-series"
+        "link_to": "shopify://collections/battle-series",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "swipeable_products_th9ndJ": {
@@ -147,7 +156,11 @@
       "name": "Swipeable Products",
       "settings": {
         "title": "BATTLE SERIES",
-        "products": ["battle-900-4u", "battle-700", "battle-600"],
+        "products": [
+          "battle-900-4u",
+          "battle-700",
+          "battle-600"
+        ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 100,
@@ -164,7 +177,9 @@
         "title": "ENGINEERED FOR INTENSITY",
         "description": "Shock melts away underfoot while energy bounces back so you're ready to finish every rally in style.",
         "button_text": "LEVEL UP",
-        "button_link": "shopify://products/velocity-elite"
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "swipeable_products_gHfNxP": {
@@ -172,7 +187,9 @@
       "name": "Swipeable Products",
       "settings": {
         "title": "VELOCITY SERIES",
-        "products": ["velocity-elite"],
+        "products": [
+          "velocity-elite"
+        ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 100,
@@ -189,7 +206,9 @@
         "title": "POWER ERASES LIMITS",
         "description": "Experience superior offense and speed with this professional paddle packed with high-tech that delivers pure power.",
         "button_text": "GRAB IT NOW",
-        "button_link": "shopify://collections/zephyr-series"
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "swipeable_products_UQnnX3": {
@@ -221,7 +240,9 @@
         "title": "SPEED THAT ECHOES",
         "description": "High-repulsion string that launches shuttles off your racket with the most satisfying, clean sound.",
         "button_text": "LET IT FLY",
-        "button_link": "shopify://products/jp65-magnite"
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "swipeable_products_Tqw38a": {
@@ -229,7 +250,13 @@
       "name": "Swipeable Products",
       "settings": {
         "title": "BADMINTON STRINGS",
-        "products": ["jp65-magnite", "jp58-magnite", "jp-70-power", "jp-70", "jp-66"],
+        "products": [
+          "jp65-magnite",
+          "jp58-magnite",
+          "jp-70-power",
+          "jp-70",
+          "jp-66"
+        ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 100,
