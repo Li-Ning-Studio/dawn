@@ -212,22 +212,11 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "custom_liquid_VHXQrk": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section class=\"nextgen-stats\">\n  <div class=\"container\">\n    <h2 class=\"title\">Indian Landscape</h2>\n    <p class=\"subtitle\">Pickleball Takes Over India’s Sports Scene</p>\n\n    <div class=\"stats-grid\">\n      <div class=\"stat-item\">\n        <div class=\"stat-value\">2500+</div>\n        <div class=\"stat-label\">Courts by 2028</div>\n      </div>\n      <div class=\"stat-item\">\n        <div class=\"stat-value\">100K+</div>\n        <div class=\"stat-label\">Registered Players</div>\n      </div>\n      <div class=\"stat-item\">\n        <div class=\"stat-value\">1M</div>\n        <div class=\"stat-label\">Players by 2028</div>\n      </div>\n      <div class=\"stat-item\">\n        <div class=\"stat-value\">11×</div>\n        <div class=\"stat-label\">YoY Booking Growth</div>\n      </div>\n      <div class=\"stat-item\">\n        <div class=\"stat-value\">300%</div>\n        <div class=\"stat-label\">Court Listing Surge</div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n  .nextgen-stats {\n    padding: 5rem 1rem;\n    background: #fff;\n    text-align: center;\n  }\n\n  .nextgen-stats .title {\n    font-size: 2.5rem;\n    font-weight: 700;\n    margin-bottom: 0.25rem;\n    color: #111;\n    letter-spacing: -0.02em;\n  }\n\n  .nextgen-stats .subtitle {\n    font-size: 1.1rem;\n    color: #666;\n    margin-bottom: 3rem;\n    font-weight: 400;\n  }\n\n  .stats-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));\n    gap: 3rem 2rem;\n    max-width: 1000px;\n    margin: 0 auto;\n  }\n\n  .stat-item {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    line-height: 1.2;\n  }\n\n  .stat-value {\n    font-size: 3rem;\n    font-weight: 800;\n    color: #000;\n    letter-spacing: -0.03em;\n  }\n\n  .stat-label {\n    margin-top: 0.5rem;\n    font-size: 0.95rem;\n    color: #444;\n    font-weight: 400;\n    max-width: 90%;\n  }\n\n  @media (max-width: 600px) {\n    .stat-value {\n      font-size: 2.2rem;\n    }\n    .stat-label {\n      font-size: 0.9rem;\n    }\n  }\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "1749537046e7aecdbc",
-    "custom_liquid_VHXQrk"
+    "1749537046e7aecdbc"
   ]
 }
