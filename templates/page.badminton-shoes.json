@@ -31,10 +31,108 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "collection_list_wMKNPY": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_AWKwDw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ultra"
+          }
+        },
+        "featured_collection_C8qQjN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ranger"
+          }
+        },
+        "featured_collection_jxk6mT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "saga"
+          }
+        },
+        "featured_collection_NpgGwJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "blast"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_AWKwDw",
+        "featured_collection_C8qQjN",
+        "featured_collection_jxk6mT",
+        "featured_collection_NpgGwJ"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_K4QikV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_reNUqQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Land lightly and perform fiercely on the court",
+            "heading_size": "h1"
+          }
+        },
+        "text_AJf7N4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Accelerate Now</p>",
+            "text_style": "body"
+          }
+        },
+        "button_bpeTie": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET IT NOW!",
+            "button_link": "shopify://products/ranger-lite-se-ii",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_reNUqQ",
+        "text_AJf7N4",
+        "button_bpeTie"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Ranger_Lite_SE_II_50_50.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "zoom-in",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "hero_component_nw6Qpx"
+    "hero_component_nw6Qpx",
+    "collection_list_wMKNPY",
+    "image_with_text_K4QikV"
   ]
 }
