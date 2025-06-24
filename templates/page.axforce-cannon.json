@@ -59,12 +59,70 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_yK4Eft": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_6RXmFG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_4.jpg",
+            "title": "SOnic BOOM IMPACT",
+            "text": "<p>This gives an elaborate sense of contact hits, fast delivery speed, crisp sound, and strong sound impact.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QXFRip": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_6.jpg",
+            "title": "STD MODULUS",
+            "text": "<p>Standard modulus carbon fiber offers excellent performance characteristics, including high strength-to-weight ratio, excellent fatigue resistance, and dimensional stability.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UE4yLN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_5.jpg",
+            "title": "FLEXIBLE SHAFT",
+            "text": "<p>The racket shaft is forged for flexing your smashes and defences with top notch efficiency. Its tensile profile offers greater flexibility which optimises the shaft for better smash defence.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_6RXmFG",
+        "column_QXFRip",
+        "column_UE4yLN"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_jdzBwW",
     "custom_liquid_EgFpGY",
-    "swipeable_products_hx9em3"
+    "swipeable_products_hx9em3",
+    "multicolumn_yK4Eft"
   ]
 }
