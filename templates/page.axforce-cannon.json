@@ -11,13 +11,60 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_jdzBwW": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/category_banner_1.jpg",
+        "mobile_image": "shopify://shop_images/responsive.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_EgFpGY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<h1 style=\"font-size: 2.25rem;text-align: center;margin: 5.5rem 0.2rem;font-weight: 700;line-height: 3rem;letter-spacing: -2px;\"> <span style=\"color: var(--gray-30);\">Choose your Colour  </span>, Choose your Weight.</h1>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "swipeable_products_hx9em3": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "axforce-cannon-4u",
+          "axforce-cannon-5u",
+          "axforce-cannon-6u",
+          "axforce-cannon-pro-4u",
+          "axforce-cannon-pro-5u"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_jdzBwW",
+    "custom_liquid_EgFpGY",
+    "swipeable_products_hx9em3"
   ]
 }
