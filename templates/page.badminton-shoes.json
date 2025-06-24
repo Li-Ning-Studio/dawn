@@ -127,12 +127,73 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "swipeable_products_YNkq7X": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Best Sellers",
+        "products": [
+          "ultra-fly-ii",
+          "ultra-fly",
+          "ultra-power-jr",
+          "ultra-iv",
+          "ultra-iii-limited-edition-men"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_j98qd8": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_UYQcNq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "socks"
+          }
+        },
+        "featured_collection_C9jPhL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "water-bottles"
+          }
+        },
+        "featured_collection_z9mJUf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "backpacks"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_UYQcNq",
+        "featured_collection_C9jPhL",
+        "featured_collection_z9mJUf"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Shop Accessories",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_nw6Qpx",
     "collection_list_wMKNPY",
-    "image_with_text_K4QikV"
+    "image_with_text_K4QikV",
+    "swipeable_products_YNkq7X",
+    "collection_list_j98qd8"
   ]
 }
