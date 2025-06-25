@@ -15,10 +15,10 @@
       "settings": {
         "image": "shopify://shop_images/G-force_Banner.jpg",
         "mobile_image": "shopify://shop_images/G-force_Responsive_Banner.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
+        "subtitle": "G‑Force Badminton Rackets",
+        "title": "PRECISION POWER FOR EVERY RALLY",
+        "description": "Li-Ning G-Force rackets with head heavy balance, built for aggressive shots, fast swings, and total control",
+        "button_text": "UNLEASH YOUR G‑FORCE",
         "link_to": "shopify://collections/g-force",
         "padding_top": 0,
         "padding_bottom": 0
@@ -51,10 +51,26 @@
         "padding_top": 48,
         "padding_bottom": 0
       }
+    },
+    "hero_component_iq8qEP": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Apparels_Banner.jpg",
+        "mobile_image": "shopify://shop_images/Apparels_banner_responsive.jpg",
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "hero_component_TibVrV",
-    "swipeable_products_iKFLXy"
+    "swipeable_products_iKFLXy",
+    "hero_component_iq8qEP"
   ]
 }
