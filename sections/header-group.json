@@ -20,10 +20,18 @@
             "text": "Join us on Whatsapp for exclusive discounts & content",
             "link": "https://chat.whatsapp.com/JBmqXtwUE7Q1V1tH7sesPR"
           }
+        },
+        "announcement_iLmYWT": {
+          "type": "announcement",
+          "settings": {
+            "text": "Get your hands on our hottest looks: New Apparel Collection",
+            "link": "shopify://collections/clothing"
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_iLmYWT"
       ],
       "settings": {
         "auto_rotate": true,
