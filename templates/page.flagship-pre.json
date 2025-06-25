@@ -58,9 +58,20 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/Artboard_1_40892a00-5e58-422a-a9d7-f92a15fa0c3a.jpg",
-            "caption": "Speak Fluent Power with",
+            "caption": "Speak Fluent Power",
             "heading": "<strong>Nitrix </strong>",
             "text": "<h5>/nai-triks/</h5><p></p><p>Every racket in the lineup is designed for players with an attacking style of play. It focuses on power, impact, and the ability to put pressure on the opponent through strong, decisive shots.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_ptyiYx": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/coming_flareon.jpg",
+            "caption": "Leave Lightning Behind",
+            "heading": "<strong>Flareon</strong>",
+            "text": "<h5><em>/flae-ree-on/</em></h5><p></p><p>Every racket in the lineup is designed for players who rely on quick reactions, fast hands, and early shot-taking. It focuses on acceleration, recovery, and the ability to stay ahead in high-tempo rallies. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -75,23 +86,12 @@
             "button_label": "",
             "button_link": ""
           }
-        },
-        "row_ptyiYx": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/coming_flareon.jpg",
-            "caption": "Leave Lightning Behind with",
-            "heading": "<strong>Flareon</strong>",
-            "text": "<h5><em>/flae-ree-on/</em></h5><p></p><p>Every racket in the lineup is designed for players who rely on quick reactions, fast hands, and early shot-taking. It focuses on acceleration, recovery, and the ability to stay ahead in high-tempo rallies. </p>",
-            "button_label": "",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
         "row_Ytgnbe",
-        "row_f9bm8e",
-        "row_ptyiYx"
+        "row_ptyiYx",
+        "row_f9bm8e"
       ],
       "custom_css": [
         ".multirow h2,.multirow h3,.multirow .card__heading,.multirow .multicolumn-card__info h3 {position: relative;}",
