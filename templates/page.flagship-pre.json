@@ -23,14 +23,14 @@
         "heading_zF3J3p": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "<strong>Join The Launch Party!</strong>",
             "heading_size": "h1"
           }
         },
         "paragraph_jHbnck": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Drop your email below to get exclusive launch benefits like discounts, pre-booking and more.<br/></p>"
           }
         },
         "email_form_9YxfhT": {
@@ -58,9 +58,9 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/Artboard_1_40892a00-5e58-422a-a9d7-f92a15fa0c3a.jpg",
-            "caption": "Caption",
-            "heading": "<strong>Nitrix</strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "caption": "Speak Fluent Power with",
+            "heading": "<strong>Nitrix </strong>",
+            "text": "<h5>/nai-triks/</h5><p></p><p>Every racket in the lineup is designed for players with an attacking style of play. It focuses on power, impact, and the ability to put pressure on the opponent through strong, decisive shots.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -69,9 +69,9 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/coming_hyfonic.jpg",
-            "caption": "Caption",
+            "caption": "A Marksman Never Shoots Twice",
             "heading": "<strong>Hyphonic</strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<h5><em>/hai-fon-ik/</em></h5><p>Every racket in the lineup is designed for sharp accuracy and intentional placement. It focuses on clean execution, fine control of angles, and the ability to win points through precision-based play. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -80,9 +80,9 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/coming_flareon.jpg",
-            "caption": "Caption",
+            "caption": "Leave Lightning Behind with",
             "heading": "<strong>Flareon</strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<h5><em>/flae-ree-on/</em></h5><p></p><p>Every racket in the lineup is designed for players who rely on quick reactions, fast hands, and early shot-taking. It focuses on acceleration, recovery, and the ability to stay ahead in high-tempo rallies. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -92,6 +92,10 @@
         "row_Ytgnbe",
         "row_f9bm8e",
         "row_ptyiYx"
+      ],
+      "custom_css": [
+        ".multirow h2,.multirow h3,.multirow .card__heading,.multirow .multicolumn-card__info h3 {position: relative;}",
+        "/* Style for pronunciation text when added manually */.pronunciation {display: block; font-size: 0.75em; font-style: italic; color: #666666; margin-top: 4px; font-weight: normal; letter-spacing: 0.5px;}"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
