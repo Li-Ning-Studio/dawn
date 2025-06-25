@@ -209,6 +209,52 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_zLUfhX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_ckazza": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Shuttlecocks.jpg",
+            "title": "HIT WITH CONTROL",
+            "text": "<p>Fly High with superior quality shuttlecocks for better control. </p>",
+            "link_label": "BUY NOW!",
+            "link": "shopify://collections/shuttlecocks"
+          }
+        },
+        "column_Ux4WkB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Accessories.jpg",
+            "title": "ACCESSORIZE THE WIN",
+            "text": "<p>Secure your place as a champion with our skillfully made gear.</p>",
+            "link_label": "GEAR NOW!",
+            "link": "shopify://collections/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "column_ckazza",
+        "column_Ux4WkB"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Gear Made Just For You!",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -221,6 +267,7 @@
     "hero_component_Nd47g8",
     "swipeable_products_h9aq4L",
     "hero_component_8aGUPp",
-    "swipeable_products_4Nkray"
+    "swipeable_products_4Nkray",
+    "multicolumn_zLUfhX"
   ]
 }
