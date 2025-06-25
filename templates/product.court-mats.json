@@ -40,6 +40,16 @@
           "type": "price",
           "settings": {}
         },
+        "product_highlight_eLDrRi": {
+          "type": "product_highlight",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "description": "",
+            "icon": "",
+            "collections": []
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -146,6 +156,7 @@
         "custom_liquid_a7NXWH",
         "caption",
         "price",
+        "product_highlight_eLDrRi",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -165,17 +176,119 @@
         "display_price_out_of_stock": true,
         "enable_sticky_info": true,
         "color_scheme": "",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "columns",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 24,
         "padding_bottom": 12
+      }
+    },
+    "collapsible_content_fD6AE8": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_RC6D9P": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How durable are these mats?",
+            "icon": "question_mark",
+            "row_content": "<p>Durability depends on how well and frequently you follow our maintenance and cleaning guidelines. A chart has been shared for your reference above</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8eCrny": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "From where are the mats dispatched ?",
+            "icon": "question_mark",
+            "row_content": "<p>Hundred mats are dispatched from Hyderabad.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UwaWUe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the delivery timelines post payment ?",
+            "icon": "question_mark",
+            "row_content": "<p>Post payment, mats are usually dispatched<br/>on the 2nd day. They will reach your place anywhere between 6 – 15<br/>days depending on the proximity of your installation location, hub distance and<br/>weather conditions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gt8Ake": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the ideal flooring to be prepared beforelaying a mat?",
+            "icon": "question_mark",
+            "row_content": "<p>The below are the ideal flooring<br/>conditions to be made ready before laying the mats:</p><p>1.   Newly laid Wooden Flooring (5 days after drying of polish)</p><p>2. Old Wooden Flooring (All damages repaired)</p><p>3. Cement Flooring (Zero Level and Smooth Surface free of dust) .<em>Before laying flooring must be kept dry for at least 10 days</em></p><p>4.   Cement Flooring + EVA Cushion Pads (6mm) :<em> This flooring combination is ideal to ensure injury free playing<br/>conditions. It helps to extend the life of your court mat.</em></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UPVYNF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is there any suggestion on how to make the cement flooring?",
+            "icon": "question_mark",
+            "row_content": "<p>We have seen many infrastructure owners creating<br/>RCC cement flooring with 8 X 8 blocks which helps to avoid cracks to develop in<br/>the surface</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CN4UHG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Any suggestions on which wood is ideal for flooringand who are the vendors we can connect with who will provide us with goodquality and service?",
+            "icon": "question_mark",
+            "row_content": "<p>Please connect with our infrastructure team on<br/>WhatsApp and they will guide you through the same.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cUdKC6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "We are totally clueless on which EVA Cushions are goodbecause of so many vendors selling various materials, can you guide us?",
+            "icon": "question_mark",
+            "row_content": "<p>Please connect with our infrastructure team on WhatsApp and they will guide you through the same.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7MANUq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Any suggestions on what is the ideal lighting brand orideal lighting specifications?",
+            "icon": "question_mark",
+            "row_content": "<p>Please connect with our infrastructure team on WhatsApp and they will guide you through the same. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_RC6D9P",
+        "collapsible_row_8eCrny",
+        "collapsible_row_UwaWUe",
+        "collapsible_row_gt8Ake",
+        "collapsible_row_UPVYNF",
+        "collapsible_row_CN4UHG",
+        "collapsible_row_cUdKC6",
+        "collapsible_row_7MANUq"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Frequenty Asked Questions</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 4,
+        "padding_bottom": 36
       }
     },
     "related-products": {
@@ -216,6 +329,7 @@
   },
   "order": [
     "main",
+    "collapsible_content_fD6AE8",
     "related-products",
     "1749537046e7aecdbc"
   ]
