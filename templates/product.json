@@ -106,7 +106,6 @@
         "share"
       ],
       "settings": {
-        "display_price_out_of_stock": true,
         "enable_sticky_info": true,
         "color_scheme": "",
         "media_size": "large",
@@ -141,5 +140,8 @@
       }
     }
   },
-  "order": ["main", "related-products"]
+  "order": [
+    "main",
+    "related-products"
+  ]
 }
