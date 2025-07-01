@@ -121,7 +121,11 @@
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
-                <div style="margin-bottom: 0.5rem" class="product__title" {{ block.shopify_attributes }}>
+                <div
+                  style="margin-bottom: 0.5rem; margin-top: 0.3rem"
+                  class="product__title"
+                  {{ block.shopify_attributes }}
+                >
                   <h1 style="letter-spacing:-1px; font-weight: 700; line-height: 120%">{{ product.title | escape }}</h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
@@ -130,51 +134,52 @@
                   </a>
                 </div>
               {%- when 'price' -%}
-                <div
-                  style="margin-top: 0.5rem"
-                  id="price-{{ section.id }}"
-                  role="status"
-                  {{ block.shopify_attributes }}
-                >
-                  {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large',
-                    show_compare_at_price: true
-                  -%}
-                </div>
-                {%- if product.quantity_price_breaks_configured? -%}
-                  <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
-                    <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+                {%- if product.available or section.settings.display_price_out_of_stock -%}
+                  <div
+                    style="margin-top: 0.5rem"
+                    id="price-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}
+                  >
+                    {%- render 'price',
+                      product: product,
+                      use_variant: true,
+                      show_badges: true,
+                      price_class: 'price--large',
+                      show_compare_at_price: true
+                    -%}
                   </div>
-                {%- endif -%}
-
-                {% comment %}
-                  {%- if cart.taxes_included or cart.duties_included or shop.shipping_policy.body != blank -%}
-                    <div class="product__tax caption rte">
-                      {%- if cart.duties_included and cart.taxes_included -%}
-                        {{ 'products.product.duties_and_taxes_included' | t }}
-                      {%- elsif cart.taxes_included -%}
-                        {{ 'products.product.taxes_included' | t }}
-                      {%- elsif cart.duties_included -%}
-                        {{ 'products.product.duties_included' | t }}
-                      {%- endif -%}
-                      {%- if shop.shipping_policy.body != blank -%}
-                        {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                      {%- endif -%}
+                  {%- if product.quantity_price_breaks_configured? -%}
+                    <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
+                      <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                     </div>
                   {%- endif -%}
-                {% endcomment %}
 
-                <div {{ block.shopify_attributes }}>
-                  {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                  {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                    {{ form | payment_terms }}
-                  {%- endform -%}
-                </div>
+                  {% comment %}
+                    {%- if cart.taxes_included or cart.duties_included or shop.shipping_policy.body != blank -%}
+                      <div class="product__tax caption rte">
+                        {%- if cart.duties_included and cart.taxes_included -%}
+                          {{ 'products.product.duties_and_taxes_included' | t }}
+                        {%- elsif cart.taxes_included -%}
+                          {{ 'products.product.taxes_included' | t }}
+                        {%- elsif cart.duties_included -%}
+                          {{ 'products.product.duties_included' | t }}
+                        {%- endif -%}
+                        {%- if shop.shipping_policy.body != blank -%}
+                          {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  {% endcomment %}
 
+                  <div {{ block.shopify_attributes }}>
+                    {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+                    {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                      {{ form | payment_terms }}
+                    {%- endform -%}
+                  </div>
+                {%- endif -%}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -246,6 +251,8 @@
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
+              {% when 'product_highlight' %}
+                {% render 'product-highlight', block: block.settings, product: product %}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
@@ -275,13 +282,41 @@
                     </details>
                   </div>
 
-                {% else %}
+                {% elsif block.settings.heading == 'Product Disclosures' %}
                   <div
-                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6"
+                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
                     class="product__accordion accordion quick-add-hidden"
                     {{ block.shopify_attributes }}
                   >
-                    <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <details
+                      styls="color: var(--gray-90); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
+                      id="Details-{{ block.id }}-{{ section.id }}"
+                    >
+                      <summary>
+                        <div class="summary__title">
+                          {% render 'icon-accordion', icon: block.settings.icon %}
+                          <h2 class="h4 accordion__title inline-richtext">
+                            {{ block.settings.heading | default: block.settings.page.title | escape }}
+                          </h2>
+                        </div>
+                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        {% render 'product-disclosures' %}
+                      </div>
+                    </details>
+                  </div>
+
+                {% else %}
+                  <div
+                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
+                    class="product__accordion accordion quick-add-hidden"
+                    {{ block.shopify_attributes }}
+                  >
+                    <details
+                      styls="color: var(--gray-90); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
+                      id="Details-{{ block.id }}-{{ section.id }}"
+                    >
                       <summary>
                         <div class="summary__title">
                           {% render 'icon-accordion', icon: block.settings.icon %}
@@ -545,20 +580,31 @@
                 %}
                   {% render 'stringing' %}
                 {% endif %}
-                {% if product.metafields.custom_but_hidden.stickers == true
+                {% if settings.is_remix_enabled_globally
+                  and product.metafields.custom_but_hidden.stickers == true
                   and product.available == true
                   and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model
                 %}
                   {% render 'remix' %}
                 {% endif %}
+                {% if settings.is_tshirt_printing_enabled_globally
+                  and product.available == true
+                  and product.metafields.custom_but_hidden.customise == true
+                %}
+                  {% render 'tshirt-printing' %}
+                {% endif %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+                {% if product.tags contains 'Service' %}
+                  <p>This service cannot be purchased seperately.</p>
+                {% else %}
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    show_pickup_availability: true
+                  -%}
+                {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -815,7 +861,7 @@
   </div>
 
   {% if product.metafields.custom_but_hidden.s_plus_reference.value != blank %}
-    <div style="margin: 12rem 2rem;">
+    <div style="margin: 7rem 2rem;">
       {% render 's-plus' %}
     </div>
   {% endif %}
@@ -1009,6 +1055,36 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "product_highlight",
+      "name": "Product Highlight",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "liquid",
+          "id": "description",
+          "label": "Description",
+          "info": "Supports Liquid code. Available variables: product, shop"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "Icon",
+          "info": "Paste complete SVG code including <svg> tags"
+        },
+        {
+          "type": "collection_list",
+          "id": "collections",
+          "label": "Collections",
+          "info": "Show this highlight only on these collections"
         }
       ]
     },
@@ -2174,6 +2250,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_price_out_of_stock",
+      "default": true,
+      "label": "Display Price for Out of Stock Items"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",

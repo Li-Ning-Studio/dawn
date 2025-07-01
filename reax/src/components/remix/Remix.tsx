@@ -266,9 +266,11 @@ const Remix = () => {
 
     if (stickerName) {
       document.getElementById('remix-description')!.innerHTML =
-        `Uniquely Yours — You are making this ${document.title.split('-')[0].split(' –')[0]} truly yours by personalising with <span id="the-sticker" class='emojiFont'>${stickerName}</span>`;
+        `Uniquely Yours — You are making this ${window.s3_product_name} truly yours by personalising with <span id="the-sticker" class='emojiFont'>${stickerName}</span>`;
+      document.getElementsByClassName('product-form__submit button')[0]?.classList?.add('glowing');
     } else {
       document.getElementById('remix-description')!.innerHTML = defaultCopy;
+      document.getElementsByClassName('product-form__submit button')[0]?.classList?.remove('glowing');
     }
   }, [stickerName]);
 
@@ -363,7 +365,7 @@ const Remix = () => {
                             ✨ Racket Remix
                           </span>{' '}
                           {` `}
-                          by Studio
+                          by {window.s3_brand}
                         </h3>
                       </div>
                       <svg
@@ -541,7 +543,7 @@ const Remix = () => {
                       }}
                     >
                       <input
-                        className="emojiFont"
+                        className="emojiFont services-input"
                         type="text"
                         name="name"
                         id="sticker-name-input"

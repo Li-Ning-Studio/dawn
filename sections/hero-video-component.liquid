@@ -1,0 +1,238 @@
+<section class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} isolate gradient hero-video-component">
+  {% if section.settings.video != blank %}
+    <a href="{{ section.settings.link_to }}" class="hero-video-component__media-container">
+      {% comment %}
+        {% assign fetch_priority = 'auto' %}
+        {% assign loading = 'lazy' %}
+        {% assign preload = 'none' %}
+      {% endcomment %}
+
+      {% comment %}
+        {% if section.index0 == 0 %}
+          {% assign fetch_priority = 'high' %}
+          {% assign loading = 'eager' %}
+          {% assign preload = 'auto' %}
+        {% endif %}
+      {% endcomment %}
+
+      <div class="mobile-video-container global-media-settings--full-width">
+        {{
+          section.settings.mobile_video
+          | video_tag: image_size: '600x', autoplay: true, muted: true, loop: true, playsinline: true
+        }}
+      </div>
+
+      <div class="video-container global-media-settings--full-width">
+        {{
+          section.settings.video
+          | video_tag: image_size: '1600x', autoplay: true, muted: true, loop: true, playsinline: true
+        }}
+      </div>
+    </a>
+  {% endif %}
+
+  <div class="hero-video-component__content-container">
+    <div class="hero-video-component__content">
+      {% if section.settings.subtitle != blank %}
+        <h3 style="font-size: 1.3rem; margin-top: 2rem; color: rgba(var(--color-foreground), 0.7); font-weight: 100;">
+          {{ section.settings.subtitle }}
+        </h3>
+      {% endif %}
+
+      {% if section.settings.title != blank %}
+        <h2 class="hero-video-component__title">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <p class="hero-video-component__description">{{ section.settings.description }}</p>
+      {% endif %}
+
+      {% if section.settings.button_text != blank %}
+        <a
+          style="padding: 2.5rem 4rem; background: #ebedf0; border-radius: 100px;"
+          href="{{ section.settings.link_to }}"
+          class="button button--tertiary"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .mobile-video-container {
+    display: none;
+  }
+
+  .video-container {
+    display: block;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-video-container {
+      display: block;
+    }
+
+    .video-container {
+      display: none;
+    }
+  }
+
+  .hero-video-component__media-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-video-component__video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .hero-video-component__content-container {
+    width: 100%;
+  }
+
+  .hero-video-component__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-video-component__title {
+    font-size: 5rem;
+    margin: 0;
+    margin-top: -0.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+
+  .hero-video-component__description {
+    font-size: 1.8rem;
+    margin: 1.4rem 0 2.8rem 0;
+    line-height: 1.5;
+    color: rgba(var(--color-foreground), 0.7);
+  }
+
+  @media (max-width: 768px) {
+    .hero-video-component__title {
+      font-size: 3rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Hero Video Component",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Desktop Video"
+    },
+    {
+      "type": "video",
+      "id": "mobile_video",
+      "label": "Mobile Video"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Title",
+      "info": "Small text that appears above the Title",
+      "default": "Prnx"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Prnx"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Prnx"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Prnx"
+    },
+    {
+      "type": "url",
+      "id": "link_to",
+      "label": "Link To",
+      "default": "/"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Video Component",
+      "settings": {
+        "title": "MOTION IN ACTION",
+        "description": "Experience the speed and precision with our latest video showcase",
+        "button_text": "EXPLORE MORE"
+      }
+    }
+  ]
+}
+{% endschema %}

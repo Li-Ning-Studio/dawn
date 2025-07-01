@@ -10,7 +10,7 @@ function Stringing({
   stringingCollectionId: string | null;
   maxTension: string | null;
 }) {
-  const maxTensionPounds = parseInt((maxTension || '69').replace(/[^\d.]/g, ''));
+  const maxTensionPounds = parseInt(maxTension?.match(/\d+/g)?.pop() || '69');
   const [stringingProducts, setStringingProducts] = useState<ProductNodes>([]);
   const [config, setConfig] = useState<TConfig>({
     stringProduct: null,
@@ -61,7 +61,8 @@ function Stringing({
                 key={id}
                 htmlFor={id}
                 style={{
-                  display: 'flex',
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
                   alignItems: 'center',
                   margin: '1.5rem 0',
                   justifyContent: 'space-between',
@@ -87,17 +88,52 @@ function Stringing({
                   name="string-product"
                   id={id}
                 />
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gridColumn: '1/12',
+                    padding: '6px 0',
+                    fontSize: '1.4rem',
+                  }}
+                >
                   <img
                     width={80}
                     height={80}
                     src={string.featuredImage?.url}
                     alt={string.featuredImage?.altText || ''}
                   />
-                  <span style={{ color: 'var(--gray-80)', fontSize: '1.5rem' }}>{string?.title}</span>
-                </div>
-                <div style={{ fontSize: '1.2rem' }}>
-                  {parseInt(string.priceRange.minVariantPrice.amount)} {string.priceRange.minVariantPrice.currencyCode}
+                  <div
+                    style={{
+                      width: '100%',
+                      letterSpacing: '0px',
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <p style={{ color: 'var(--gray-90)', margin: '0' }}>{string?.title}</p>
+                      <span style={{ color: 'var(--gray-60)', fontSize: '1.25rem' }}>
+                        {parseInt(string.priceRange.minVariantPrice.amount)}{' '}
+                        {string.priceRange.minVariantPrice.currencyCode}
+                      </span>
+                    </div>
+                    {string?.metafield?.value ? (
+                      <p
+                        style={{
+                          margin: '0',
+                          lineHeight: '1.4',
+                          color: 'var(--gray-60)',
+                        }}
+                      >
+                        {string?.metafield?.value}
+                      </p>
+                    ) : null}
+                  </div>
                 </div>
               </label>
             );
@@ -113,10 +149,7 @@ function Stringing({
         {config.stringProduct ? (
           <div>
             <legend className="form__label">
-              <span>
-                {config.stringVariant?.selectedOptions.find((x) => x.name === 'Color')?.value ||
-                  `${config.stringProduct?.title}, Now choose the Color`}
-              </span>
+              <span>Select Color for {config.stringProduct.title} String</span>
             </legend>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
               {config.stringProduct.variants.nodes
@@ -152,6 +185,7 @@ function Stringing({
                     >
                       <input
                         data-sku={variant.sku}
+                        data-string={(config?.stringProduct?.title || '') + ' - ' + variant.title}
                         disabled={variant.availableForSale === false}
                         onChange={(_) => {
                           setConfig({
@@ -196,9 +230,7 @@ function Stringing({
         {config.stringVariant ? (
           <div>
             <legend className="form__label">
-              <span>
-                {config.stringVariant?.title} {config.stringProduct?.title}, select Tension now
-              </span>
+              <span>adjust Tension</span>
             </legend>
             <div
               style={{
@@ -261,8 +293,9 @@ function Stringing({
           }}
         >
           <p>
-            All set! You are customising this racket with {config.stringVariant?.selectedOptions[0].value}{' '}
-            {config.stringProduct?.title} string and the tension of {config.tension} LBS.
+            All set for the court! You are customising this {window.s3_product_name} Racket with{' '}
+            {config.stringVariant?.selectedOptions[0].value} {config.stringProduct?.title}, strung at the tension of{' '}
+            {config.tension} LBS.
           </p>
         </div>
       ) : null}
