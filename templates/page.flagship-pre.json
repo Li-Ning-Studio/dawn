@@ -17,38 +17,32 @@
         "padding_bottom": 28
       }
     },
-    "newsletter_fmCLd7": {
-      "type": "newsletter",
+    "175151886054422368": {
+      "type": "apps",
       "blocks": {
-        "heading_zF3J3p": {
-          "type": "heading",
+        "forms_inline_ri4zry": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "heading": "<strong>Join The Launch Party!</strong>",
-            "heading_size": "h1"
+            "form_id": "540812",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 9,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
           }
-        },
-        "paragraph_jHbnck": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Drop your email below to get exclusive launch benefits like discounts, pre-booking and more.<br/></p>"
-          }
-        },
-        "email_form_9YxfhT": {
-          "type": "email_form",
-          "settings": {}
         }
       },
       "block_order": [
-        "heading_zF3J3p",
-        "paragraph_jHbnck",
-        "email_form_9YxfhT"
+        "forms_inline_ri4zry"
       ],
-      "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "include_margins": true
       }
     },
     "multirow_bLThDy": {
@@ -117,7 +111,7 @@
   },
   "order": [
     "main",
-    "newsletter_fmCLd7",
+    "175151886054422368",
     "multirow_bLThDy"
   ]
 }
