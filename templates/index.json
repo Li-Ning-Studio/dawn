@@ -118,6 +118,36 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "hero_component_mnpwfC": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01.png",
+        "mobile_image": "shopify://shop_images/02-min.png",
+        "subtitle": "Elevate Your Game with",
+        "title": "HUNDRED HYPERSPIKE VOLLEYBALL SHOES",
+        "description": "Built for Power Jumps and Lightning Reflexes",
+        "button_text": "SPIKE HIGHER",
+        "link_to": "shopify://products/hyperspike",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_6DxbDf": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "OWN THE NET",
+        "products": [
+          "hyperspike",
+          "hyperspike-pro"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -128,6 +158,8 @@
     "hero_component_n9R8Ji",
     "swipeable_products_qF6iTW",
     "hero_component_eFU6Jy",
-    "swipeable_products_E6q4Mq"
+    "swipeable_products_E6q4Mq",
+    "hero_component_mnpwfC",
+    "swipeable_products_6DxbDf"
   ]
 }
