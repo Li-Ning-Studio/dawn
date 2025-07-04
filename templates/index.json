@@ -9,51 +9,23 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Hundred Dot Co",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Say Hi to the brand new Hundred Facelift",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": ["heading", "text", "button"],
+    "hero_component_nKcbRQ": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/3_a9d82b1613.jpg",
-        "image_2": "shopify://shop_images/2_b258d39af3.jpg",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "image": "shopify://shop_images/1_2_1.jpg",
+        "mobile_image": "shopify://shop_images/2_1_1.jpg",
+        "subtitle": "Make Every Stride Count with",
+        "title": "HUNDRED JAKARTA VI RUNNING SHOES",
+        "description": "Lightweight Comfort Meets Urban Endurance",
+        "button_text": "RUN THE CITY",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
-  "order": ["image_banner"]
+  "order": [
+    "hero_component_nKcbRQ"
+  ]
 }
