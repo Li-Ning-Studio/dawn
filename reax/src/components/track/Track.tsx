@@ -2,7 +2,10 @@ import * as Progress from '@radix-ui/react-progress';
 import { useEffect, useState } from 'react';
 
 // Constants
-const API_ENDPOINT = 'https://sitemap.hndrd.co/shipment-updates';
+const API_ENDPOINT =
+  window.s3_brand == 'Studio'
+    ? 'https://sitemap.lining.studio/shipment-updates'
+    : 'https://sitemap.hndrd.co/shipment-updates';
 const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes in milliseconds
 const MOBILE_BREAKPOINT = 768;
 
@@ -53,9 +56,9 @@ const getStatus = (bucketNumber: number | undefined, isConfimedByShopify: boolea
     case 5:
       return {
         status: 'Delivery Failed',
-        stage: 'Cancelled',
-        message: 'We could not deliver your order.',
-        progress: 100,
+        stage: 'Shipped',
+        message: 'We could not deliver your order. The delivery may or may not be reattempted tomorrow',
+        progress: 90,
         color: COLOR.RED,
       };
 
