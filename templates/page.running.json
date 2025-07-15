@@ -11,13 +11,110 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_z9KqWR": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_4.jpg",
+        "mobile_image": "shopify://shop_images/R_Banner_2.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_fh3cUT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .animated-gradient {\n    background: linear-gradient(306deg, #000000 0%, #f7197e 33%, #8a2be2 66%, #000000 100%);\n    background-size: 400% 400%;\n\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    /* Slower animation */\n    -webkit-animation: GradientAnimation 3s ease infinite;\n    -moz-animation: GradientAnimation 3s ease infinite;\n    animation: GradientAnimation 3s ease infinite;\n  }\n\n  @-webkit-keyframes GradientAnimation {\n    0% { background-position: 0% 0%; }\n    50% { background-position: 100% 100%; }\n    100% { background-position: 0% 0%; }\n  }\n\n  @-moz-keyframes GradientAnimation {\n    0% { background-position: 0% 0%; }\n    50% { background-position: 100% 100%; }\n    100% { background-position: 0% 0%; }\n  }\n\n  @keyframes GradientAnimation {\n    0% { background-position: 0% 0%; }\n    50% { background-position: 100% 100%; }\n    100% { background-position: 0% 0%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <p style=\"text-align: center;\">Kini Hadir</p>\n    <h1 style=\"font-size: 2.25rem; text-align: center; margin-top: 0rem; font-weight: 700; line-height: 3rem; letter-spacing: -2px;\">\n      <span class=\"animated-gradient large-text\">\n        HUNDRED RUNNING SHOES\n      </span>\n    </h1>\n    <p style=\"text-align: center;\">Untuk Lari Yang Lebih Cepat, Aman, dan Nyaman</p>\n  </section>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_YpKgUJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bPfDjR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_30.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "SPRINT PACE",
+            "link": "shopify://products/sprint-pac"
+          }
+        },
+        "column_8nUb4P": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_12.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "GLIDE PACE",
+            "link": "shopify://products/glide-pac"
+          }
+        },
+        "column_dPLMqd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_23.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "SMOOTH RUN",
+            "link": "shopify://products/smooth-run"
+          }
+        },
+        "column_azDKDt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_25.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "SOFT STRIDE",
+            "link": "shopify://products/soft-stride"
+          }
+        }
+      },
+      "block_order": [
+        "column_bPfDjR",
+        "column_8nUb4P",
+        "column_dPLMqd",
+        "column_azDKDt"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_z9KqWR",
+    "custom_liquid_fh3cUT",
+    "multicolumn_YpKgUJ"
   ]
 }
