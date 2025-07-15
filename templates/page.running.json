@@ -109,12 +109,72 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_Q3rcrc": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<h1 style=\"background-image: linear-gradient(100deg, #f4428c 30%, #224bc6 60%);\n            background-clip: text;\n            -webkit-background-clip: text;\n            color: transparent;\n            font-size: 2.7rem;\n            font-weight: 700;\n            line-height: 3rem;\n            letter-spacing: -2px;\n            text-align: center;\n            margin: 5.5rem 0.2rem;\"><span style=\"display: block;\" class=\"gradient-text\">Keunggulan Hundred Running Shoes</span></h1>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_EL7Uy3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_x3DfNi": {
+          "type": "heading",
+          "settings": {
+            "heading": "TEKNOLOGI BOUNCE CORE",
+            "heading_size": "h1"
+          }
+        },
+        "text_rNrwm8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dilengkapi sistem bantalan responsif di midsole yang dirancang untuk membantu meningkatkan energi di setiap langkah. Sangat cocok digunakan bagi pelari jarak jauh atau marathon.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_8fRa3A": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_x3DfNi",
+        "text_rNrwm8",
+        "button_8fRa3A"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/4_5.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_z9KqWR",
     "custom_liquid_fh3cUT",
-    "multicolumn_YpKgUJ"
+    "multicolumn_YpKgUJ",
+    "custom_liquid_Q3rcrc",
+    "image_with_text_EL7Uy3"
   ]
 }
