@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,10 +25,98 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_KJgEwj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UJfaUc": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_KKVQ3k": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By providing a phone number you are authorizing Li-Ning Studio to contact you via call, SMS, or WhatsApp. This overrides any registration of DNC/NDNC<br/><br/></p>"
+          }
+        },
+        "button_8BJnAi": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UJfaUc",
+        "text_KKVQ3k",
+        "button_8BJnAi"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_LwacYN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4bYViy": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_PxA6CX": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Customer Service Team</h3><p>Call us: +65-692-92-092</p><p>Customer service desk (Opening Hours): Mon - Sat: 12:30 pm to 9:30 pm</p><h3>Email us</h3><p>You can reach out to us at: <a href=\"mailto:support@lining.studio\">support@lining.studio</a></p><h3>Headquarters</h3><p>20 Sims Ln, Sunlight Sports, Kai Xuan Centre, Singapore 387358</p>"
+          }
+        },
+        "button_mJw6AA": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4bYViy",
+        "text_PxA6CX",
+        "button_mJw6AA"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "form"
+    "form",
+    "rich_text_KJgEwj",
+    "rich_text_LwacYN"
   ]
 }
