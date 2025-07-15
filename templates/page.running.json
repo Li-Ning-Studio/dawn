@@ -167,6 +167,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_UbQxPJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hcwLqF": {
+          "type": "heading",
+          "settings": {
+            "heading": "HYPERKNIT UPPER",
+            "heading_size": "h1"
+          }
+        },
+        "text_H8fk7n": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Menggunakan kain lembut namun tetap menjaga bentuk kaki selama pemakaian serta sirkulasi udara yang baik sehingga mencegah rasa panas berlebih selama pemakaian.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_H7M9xy": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hcwLqF",
+        "text_H8fk7n",
+        "button_H7M9xy"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/8.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -175,6 +223,7 @@
     "custom_liquid_fh3cUT",
     "multicolumn_YpKgUJ",
     "custom_liquid_Q3rcrc",
-    "image_with_text_EL7Uy3"
+    "image_with_text_EL7Uy3",
+    "image_with_text_UbQxPJ"
   ]
 }
