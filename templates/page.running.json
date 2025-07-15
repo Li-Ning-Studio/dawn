@@ -215,6 +215,100 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_tmniFL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AtnJwi": {
+          "type": "heading",
+          "settings": {
+            "heading": "HEEL SHIELD",
+            "heading_size": "h1"
+          }
+        },
+        "text_PVFirH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Terdapat pelindung ekstra di bagian tumit yang berguna untuk menghindari cedera dan memberi rasa aman.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wMQ3K9": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AtnJwi",
+        "text_PVFirH",
+        "button_wMQ3K9"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/3_773f50b8-ab30-49ab-b4d8-0d8021813274.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_bQHP6K": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_q7tqx3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_abf10082-4aa6-4ac2-bf04-dbb1920e8562.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xtk4Yx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5_04270a53-591e-4459-b68f-523e7f9b69ba.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_q7tqx3",
+        "column_xtk4Yx"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Contoh Pemakaian",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -224,6 +318,8 @@
     "multicolumn_YpKgUJ",
     "custom_liquid_Q3rcrc",
     "image_with_text_EL7Uy3",
-    "image_with_text_UbQxPJ"
+    "image_with_text_UbQxPJ",
+    "image_with_text_tmniFL",
+    "multicolumn_bQHP6K"
   ]
 }
