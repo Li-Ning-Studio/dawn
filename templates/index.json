@@ -167,6 +167,52 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_cDbYaA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Cb7YNi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_2.jpg",
+            "title": "WEAR TO WIN",
+            "text": "<p>Comfort Syncs with Success</p>",
+            "link_label": "SUIT UP!",
+            "link": "shopify://collections/t-shirt-and-polos"
+          }
+        },
+        "column_iJ7PwK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_1.jpg",
+            "title": "ON COURT ESSENTIALS",
+            "text": "<p>Small essentials that make a big difference, ensuring you have everything you need to succeed.</p>",
+            "link_label": "GEAR UP!",
+            "link": "shopify://collections/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "column_Cb7YNi",
+        "column_iJ7PwK"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -179,6 +225,7 @@
     "hero_component_trUwK4",
     "swipeable_products_iawfNn",
     "hero_component_7M7MEr",
-    "swipeable_products_biMJUe"
+    "swipeable_products_biMJUe",
+    "multicolumn_cDbYaA"
   ]
 }
