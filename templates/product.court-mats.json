@@ -213,6 +213,147 @@
         "padding_bottom": 12
       }
     },
+    "rich_text_JPpwUL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4AgVwy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Court Mat Storage Guidelines</strong>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4AgVwy"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_ewq9aD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .table-wrapper {\n    text-align: center;\n    margin-top: 2em;\n  }\n\n  .custom-guidelines-table {\n    display: inline-table;\n    border-collapse: collapse;\n    font-family: Arial, sans-serif;\n    font-size: 14px;\n    width: 100%; /* You can reduce this if you want narrower table */\n  }\n\n  .custom-guidelines-table th,\n  .custom-guidelines-table td {\n    border: 1px solid #ccc;\n    padding: 10px;\n    text-align: left;\n    vertical-align: top;\n  }\n\n  .custom-guidelines-table th {\n    background-color: #f7f7f7;\n    color: #333;\n    font-weight: bold;\n  }\n\n  .custom-guidelines-table tr:nth-child(even) {\n    background-color: #fafafa;\n  }\n</style>\n\n<div class=\"table-wrapper\">\n  <table class=\"custom-guidelines-table\">\n    <thead>\n      <tr>\n        <th>Category</th>\n        <th>Guidelines</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Environment</td>\n        <td>Keep the room clean and dry. Avoid humidity or wet air (AC not mandatory).</td>\n      </tr>\n      <tr>\n        <td>Sunlight</td>\n        <td>Do not expose court mats to direct sunlight.</td>\n      </tr>\n      <tr>\n        <td>Stacking</td>\n        <td>Do not stack mats on top of each other. Prevents deformation and uneven surfaces.</td>\n      </tr>\n      <tr>\n        <td>Weight Impact</td>\n        <td>Bottom mat may get misshaped if overloaded. May result in lumps or uneven spreading.</td>\n      </tr>\n      <tr>\n        <td>Storage Position</td>\n        <td>Do not store mats vertically. Edges may tear and misalign. Risk of toppling.</td>\n      </tr>\n      <tr>\n        <td>Safety</td>\n        <td>Incorrect storage can cause injury or damage to the mat.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_9ti4LK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RPMm93": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Recommended surfaces for highest mat performance</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_Cyypax": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Wooden </strong>(New)</li><li><strong>Cement - RCC </strong> (Preferably with 6mm cushion)</li><li><strong>Old Wooden  </strong>(Damages Repaired)</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RPMm93",
+        "text_Cyypax"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_TNnGUD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4x4kDx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Additional Accessories along with the Mat</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_z649Jx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The following products will be provided on a complimentary basis along with your purchase : </p><ul><li><strong>Silicon Welding Rod (50M) </strong></li><li><strong>External Tape (50M)</strong> (Green/ Red/ Blue/ Grey)</li><li><strong>Double Sided Tape (50M)</strong></li></ul><p></p><p></p><p></p>"
+          }
+        },
+        "button_p9pr8k": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4x4kDx",
+        "text_z649Jx",
+        "button_p9pr8k"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_DyFYrM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ERbpbA": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Cleaning and Maintenance Guidelines</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_GBymdb": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Sub Surface Requirements</strong></p><p><br/>The subsurface for the Hundred Court Mat must be clean, plain, dry and free of cracks. The water content of the concrete ground shall not exceed 2.5% and that of the gypsum ground 0.5%.<br/><br/><strong>Laying Procedure</strong></p><p><br/>The ground must be cleaned thoroughly before laying of the Court Mat, which shall be unfolded and spread out longer than 24 hours in advance and the temperature on the site shall not be lower than 15°C.<br/>Before pasting, roll about half the unfolded sports floor in an opposite direction, adhere the double-sided adhesive tape onto the ground (only adhere where two parts joined) and then slowly combine the sports floor.<br/><br/><strong>Welding - Hot Welding</strong></p><p><br/>Before the Hundred Court Mat welding and the slotting area shall be cleaned thoroughly.<br/>Make a slot on the surface of the sports floor by hand or by machine. The temperature shall not be less than 500°C during hot welding, which can be achieved manually or with a fully-automatic machine. Prior to welding, test the temperature and speed with a short welding line. After the welding seam cools, eliminate the excessive welding with the following steps:<br/>1. Level off half the projected welding line with a crescent shovel<br/>2. Remaining to be removed after the welding line has been absolutely cooled.<br/><br/><strong>Cleaning and Maintenance</strong></p><p><br/>The court mat must be cleaned and dusted with a damp mop and vacuum cleaning. Follow the steps below:<br/>1. Thorough Vacuuming of the entire court ensuring that dust has been fully removed before continuing to the next step, as mopping on dust may cause the dust to get deposited on the mat<br/>2. Damp mopping with neutral detergent (Avoid Lines on the court mat)<br/>3. Damp mopping with water<br/>4. Dry mop to soak up any remaining water or dust deposits<br/><br/><strong>To extend the life of the Court Mat -</strong></p><p><br/>1. A dust absorbing mat should be placed at the entrance of the facility and must regularly cleaned<br/>2. Avoid dust depositing on the mat.<br/><br/>The maintenance frequency depends on the conditions and the usage intensity.<br/><br/><em>Use of those cleaning machines which may wear the sports floor is prohibited.<br/></em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ERbpbA",
+        "text_GBymdb"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "collapsible_content_fD6AE8": {
       "type": "collapsible-content",
       "blocks": {
@@ -353,6 +494,11 @@
   },
   "order": [
     "main",
+    "rich_text_JPpwUL",
+    "custom_liquid_ewq9aD",
+    "rich_text_9ti4LK",
+    "rich_text_TNnGUD",
+    "rich_text_DyFYrM",
     "collapsible_content_fD6AE8",
     "related-products",
     "1749537046e7aecdbc"
