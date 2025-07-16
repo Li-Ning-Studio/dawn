@@ -101,6 +101,7 @@
         },
         "product_highlight_bU8EAF": {
           "type": "product_highlight",
+          "disabled": true,
           "settings": {
             "title": "Express Shipping",
             "description": "Get it as soon as {{ 'now' | date: '%s' | plus: 259200 | date: '%B %d, %A' }} when you choose Hundred Express at checkout.",
@@ -112,6 +113,7 @@
         },
         "product_highlight_7FTrt3": {
           "type": "product_highlight",
+          "disabled": true,
           "settings": {
             "title": "Zero Interest EMI",
             "description": "Pay in 3 easy interest-free payments of {{ product.price_min | divided_by: 3 | money_with_currency }} with Simpl. Learn\n        more at checkout.",
