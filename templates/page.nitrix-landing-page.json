@@ -58,146 +58,48 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_YmFV4f": {
-      "type": "image-with-text",
+    "multicolumn_944gAN": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_xqUqGH": {
-          "type": "heading",
+        "column_yegyeV": {
+          "type": "column",
           "settings": {
-            "heading": "<strong>VAPORSHAFT 6.1MM</strong>",
-            "heading_size": "h1"
+            "image": "shopify://shop_images/A_3_2f5f2bab-2ff5-464a-b061-9968c33620a8.jpg",
+            "title": "<strong>VAPORSHAFT 6.1MM</strong>",
+            "text": "<p><strong>Thin. Fast. Lethal.<br/></strong>Shaft engineering at its finest. It cuts drag, loads quicker, and delivers a powerful whip.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "text_zBKXNJ": {
-          "type": "text",
+        "column_XbagD9": {
+          "type": "column",
           "settings": {
-            "text": "<p><strong>Thin. Fast. Lethal.<br/></strong>Shaft engineering at its finest. It cuts drag, loads quicker, and delivers a powerful whip.<br/><br/><strong><br/></strong></p>",
-            "text_style": "body"
-          }
-        },
-        "button_b4jLD3": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_xqUqGH",
-        "text_zBKXNJ",
-        "button_b4jLD3"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/A_3_2f5f2bab-2ff5-464a-b061-9968c33620a8.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 72,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_haQDcj": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_w8YEe3": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>CURVE2 FRAME GEOMETRY </strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_9rLefC": {
-          "type": "text",
-          "settings": {
+            "image": "shopify://shop_images/A_2_0916bceb-764a-48f1-a328-32973eecb1ed.jpg",
+            "title": "<strong>CURVE2 FRAME GEOMETRY </strong>",
             "text": "<p><strong>Power Begins at the Frame<br/></strong>Specialised frame shape that increases sweet spot coverage. Experience cleaner contact and stronger punch.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_q36f9g": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_w8YEe3",
-        "text_9rLefC",
-        "button_q36f9g"
+        "column_yegyeV",
+        "column_XbagD9"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "image": "shopify://shop_images/A_2_0916bceb-764a-48f1-a328-32973eecb1ed.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_xEQ4PW": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_wqzbKK": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>CNTRL FOAM</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_9X7FGh": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Refined Touch<br/></strong>Keeps feedback clean and consistent off the stringbed.<br/><br/><strong>Impact Dampening</strong><br/>Absorbs shock at contact for a steadier feel<br/><br/><strong>Frame Stability<br/></strong>Keeps the racket balanced and steady.<br/><br/><br/><br/></p>",
-            "text_style": "body"
-          }
-        },
-        "button_WUNK8Y": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_wqzbKK",
-        "text_9X7FGh",
-        "button_WUNK8Y"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/A_5_6c54b635-c2ec-44ff-b4ab-1d80b6d7042c.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -241,50 +143,59 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_6mkaid": {
-      "type": "image-with-text",
+    "multicolumn_dXwFQN": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_mpHVAz": {
-          "type": "heading",
+        "column_HGdYa4": {
+          "type": "column",
           "settings": {
-            "heading": "",
-            "heading_size": "h1"
+            "image": "shopify://shop_images/A_5_6c54b635-c2ec-44ff-b4ab-1d80b6d7042c.jpg",
+            "title": "<strong>CNTRL FOAM</strong>",
+            "text": "<p><strong>Refined Touch<br/></strong>Keeps feedback clean and consistent off the stringbed.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "text_JeHxPx": {
-          "type": "text",
+        "column_qFbg9y": {
+          "type": "column",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "image": "shopify://shop_images/A_1_b785de35-be92-4f43-8d15-1478fd6ea22c.jpg",
+            "title": "<strong>T FUSE</strong>",
+            "text": "<p><strong>Steady Through Impact<br/></strong> A seamless joint holds firm during high-speed rallies, keeping the frame stable and composed.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "button_f7EmCw": {
-          "type": "button",
+        "column_4NA4YM": {
+          "type": "column",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "image": "shopify://shop_images/A_4_8c8482ad-2ee1-4679-8fbe-a88d7bd3df51.jpg",
+            "title": "<strong>M46X CARBON FIBRE</strong>",
+            "text": "<p><strong>Strength That Reacts<br/></strong>M46X is the highest-grade carbon fibre. It remains ultra-light to handle, yet withstands impact with unshakable strength.<br/></p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_mpHVAz",
-        "text_JeHxPx",
-        "button_f7EmCw"
+        "column_HGdYa4",
+        "column_qFbg9y",
+        "column_4NA4YM"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "image": "shopify://shop_images/A_1_b785de35-be92-4f43-8d15-1478fd6ea22c.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
         "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -295,10 +206,8 @@
     "hero_video_component_3XJE7q",
     "custom_liquid_9pbcxY",
     "hero_component_C6wjWj",
-    "image_with_text_YmFV4f",
-    "image_with_text_haQDcj",
-    "image_with_text_xEQ4PW",
+    "multicolumn_944gAN",
     "collage_RK8CiY",
-    "image_with_text_6mkaid"
+    "multicolumn_dXwFQN"
   ]
 }
