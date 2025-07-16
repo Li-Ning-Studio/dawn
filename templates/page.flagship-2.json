@@ -61,9 +61,7 @@
       "blocks": {
         "image_QrtFDe": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Banner_2_R_689c8b36-c51a-4d79-8339-9445711f38da.jpg"
-          }
+          "settings": {}
         },
         "product_hjbtJw": {
           "type": "product",
@@ -72,17 +70,15 @@
             "second_image": false
           }
         },
-        "collection_JUHKnK": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
+        "image_ad3XCK": {
+          "type": "image",
+          "settings": {}
         }
       },
       "block_order": [
         "image_QrtFDe",
         "product_hjbtJw",
-        "collection_JUHKnK"
+        "image_ad3XCK"
       ],
       "name": "t:sections.collage.presets.name",
       "settings": {
@@ -95,6 +91,123 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "hero_component_P9QyDA": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_4e26373e-a465-444b-8999-da1df91ac57e.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_4035e68b-aa68-4965-983e-e89e6afbc057.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collage_bL6XU4": {
+      "type": "collage",
+      "blocks": {
+        "image_LV76cY": {
+          "type": "image",
+          "settings": {}
+        },
+        "product_p7Xh7q": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "image_caHJPE": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_LV76cY",
+        "product_p7Xh7q",
+        "image_caHJPE"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_njCimW": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_c3d5c494-2cbe-4105-bb6f-b0ba96bb2212.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_755c702e-b790-46ef-a396-fc38ded67ccb.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collage_irUd4t": {
+      "type": "collage",
+      "blocks": {
+        "image_ARqFBb": {
+          "type": "image",
+          "settings": {}
+        },
+        "product_GUjwWe": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "image_VeRxF9": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_ARqFBb",
+        "product_GUjwWe",
+        "image_VeRxF9"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_zRg4TP": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_b29b9bcf-4e5a-423f-9c29-8f0d1dd67edc.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_4f890185-10b9-4787-9995-6c30e661fe00.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -102,6 +215,11 @@
     "hero_component_hdAtTh",
     "custom_liquid_kacMde",
     "hero_component_JjCPLQ",
-    "collage_rihNGP"
+    "collage_rihNGP",
+    "hero_component_P9QyDA",
+    "collage_bL6XU4",
+    "hero_component_njCimW",
+    "collage_irUd4t",
+    "hero_component_zRg4TP"
   ]
 }
