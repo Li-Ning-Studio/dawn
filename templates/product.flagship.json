@@ -38,6 +38,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "variant_picker": {
@@ -51,8 +52,26 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "forms_inline_LR3rnw": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "561782",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
@@ -61,11 +80,11 @@
         "product_highlight_RWLVy7": {
           "type": "product_highlight",
           "settings": {
-            "title": "What's Included",
-            "description": "This item comes with just the cricket bag, without any gear.",
-            "icon": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg width=\"24px\" height=\"24px\" stroke-width=\"1.5\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" color=\"#000000\"><path d=\"M2.6954 7.18536L11.6954 11.1854L12.3046 9.81464L3.3046 5.81464L2.6954 7.18536ZM12.75 21.5V10.5H11.25V21.5H12.75ZM12.3046 11.1854L21.3046 7.18536L20.6954 5.81464L11.6954 9.81464L12.3046 11.1854Z\" fill=\"#000000\"></path><path d=\"M3 17.1101V6.88992C3 6.65281 3.13964 6.43794 3.35632 6.34164L11.7563 2.6083C11.9115 2.53935 12.0885 2.53935 12.2437 2.6083L20.6437 6.34164C20.8604 6.43794 21 6.65281 21 6.88992V17.1101C21 17.3472 20.8604 17.5621 20.6437 17.6584L12.2437 21.3917C12.0885 21.4606 11.9115 21.4606 11.7563 21.3917L3.35632 17.6584C3.13964 17.5621 3 17.3472 3 17.1101Z\" stroke=\"#000000\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M7.5 4.5L16.1437 8.34164C16.3604 8.43794 16.5 8.65281 16.5 8.88992V12.5\" stroke=\"#000000\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>",
+            "title": "Flagship Edition",
+            "description": "The one that makes the others jealous.",
+            "icon": "<svg width=\"22px\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19.4668 8.69379L19.7134 8.12811C20.1529 7.11947 20.9445 6.31641 21.9323 5.87708L22.6919 5.53922C23.1027 5.35653 23.1027 4.75881 22.6919 4.57612L21.9748 4.25714C20.9616 3.80651 20.1558 2.97373 19.7238 1.93083L19.4706 1.31953C19.2942 0.893489 18.7058 0.893489 18.5293 1.31953L18.2761 1.93083C17.8442 2.97373 17.0384 3.80651 16.0252 4.25714L15.3081 4.57612C14.8973 4.75881 14.8973 5.35653 15.3081 5.53922L16.0677 5.87708C17.0555 6.31641 17.8471 7.11947 18.2866 8.12811L18.5331 8.69379C18.7136 9.10792 19.2864 9.10792 19.4668 8.69379ZM5 6C4.68525 6 4.38886 6.14819 4.2 6.4L1.2 10.4C0.913337 10.7822 0.937093 11.3138 1.25671 11.669L10.2567 21.669C10.4464 21.8797 10.7165 22 11 22C11.2835 22 11.5537 21.8797 11.7433 21.669L20.7433 11.669L19.2567 10.331L11 19.5052L3.29335 10.9422L5.5 8H14V6H5Z\"></path></svg>",
             "collections": [
-              "cricket-kit-bags"
+              "flagship"
             ]
           }
         },
@@ -149,6 +168,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "forms_inline_LR3rnw",
         "buy_buttons",
         "product_highlight_RWLVy7",
         "product_highlight_yCCtLT",
