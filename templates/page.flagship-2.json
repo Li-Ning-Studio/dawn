@@ -32,6 +32,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_EjyxCG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n/* Container */\n.flagship-announcement {\n  text-align: center;\n  padding: 3rem 1rem;\n  font-family: sans-serif;\n}\n\n/* Top and bottom texts */\n.flagship-announcement .small-text {\n  font-size: 0.9rem;\n  color: #666;\n  margin: 0.5rem 0;\n}\n\n/* Animated middle text */\n.flagship-announcement .animated-text-wrapper {\n  position: relative;\n  display: inline-block;\n  overflow: hidden;\n  font-size: 2rem;\n  font-weight: 700;\n  color: #000;\n}\n\n.flagship-announcement .animated-text-wrapper::before {\n  content: \"\";\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  width: 0%;\n  height: 100%;\n  background: #000;\n  z-index: 0;\n  transition: width 0.5s ease, left 0.5s ease;\n  transform: translateX(-50%);\n}\n\n.flagship-announcement .animated-text {\n  position: relative;\n  z-index: 1;\n  color: #000;\n  transition: color 0.5s ease;\n}\n\n.flagship-announcement .animated-text-wrapper:hover::before {\n  width: 100%;\n  left: 50%;\n}\n\n.flagship-announcement .animated-text-wrapper:hover .animated-text {\n  color: #fff;\n}\n</style>\n\n<div class=\"flagship-announcement\">\n  <div class=\"small-text\">Hundred presents</div>\n  \n  <div class=\"animated-text-wrapper\">\n    <span class=\"animated-text\">Flagship Racket Series</span>\n  </div>\n  \n  <div class=\"small-text\">for the ones who matter</div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_kacMde": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -250,6 +260,7 @@
   "order": [
     "main",
     "hero_component_hdAtTh",
+    "custom_liquid_EjyxCG",
     "custom_liquid_kacMde",
     "hero_component_JjCPLQ",
     "collage_rihNGP",
