@@ -11,13 +11,327 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_video_component_3XJE7q": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/venom launch video (1).mp4",
+        "mobile_video": "shopify://files/videos/venom launch video (2).mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_MAyiWL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b9D9HC": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_LyeNWB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Nitrix series stands at the forefront of raw power, and uncompromising attack on the court. Belonging to the flagship trio alongside Flareon- known for speed, and Hyfonic- defined by control, Nitrix is Hundred’s answer to cementing itself as the unchallenged force born for lethal play. </p>"
+          }
+        },
+        "button_EGqkeF": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_b9D9HC",
+        "text_LyeNWB",
+        "button_EGqkeF"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_YmFV4f": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xqUqGH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>VAPORSHAFT 6.1MM</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_zBKXNJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Thin. Fast. Lethal.<br/></strong>Shaft engineering at its finest. It cuts drag, loads quicker, and delivers a powerful whip.<br/><br/><strong><br/></strong></p>",
+            "text_style": "body"
+          }
+        },
+        "button_b4jLD3": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xqUqGH",
+        "text_zBKXNJ",
+        "button_b4jLD3"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_3_2f5f2bab-2ff5-464a-b061-9968c33620a8.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_haQDcj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_w8YEe3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>CURVE2 FRAME GEOMETRY </strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_9rLefC": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Power Begins at the Frame<br/></strong>Specialised frame shape that increases sweet spot coverage. Experience cleaner contact and stronger punch.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_q36f9g": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_w8YEe3",
+        "text_9rLefC",
+        "button_q36f9g"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_2_0916bceb-764a-48f1-a328-32973eecb1ed.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_C6wjWj": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_18f1ce67-a724-472a-8daf-7cf746c900dd.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_159443e3-6b87-4e7f-829c-7a345b3e3e1b.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/nitrix-70-venom",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_xEQ4PW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wqzbKK": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>CNTRL FOAM</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_9X7FGh": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Refined Touch<br/></strong>Keeps feedback clean and consistent off the stringbed.<br/><br/><strong>Impact Dampening</strong><br/>Absorbs shock at contact for a steadier feel<br/><br/><strong>Frame Stability<br/></strong>Keeps the racket balanced and steady.<br/><br/><br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_WUNK8Y": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wqzbKK",
+        "text_9X7FGh",
+        "button_WUNK8Y"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_5_6c54b635-c2ec-44ff-b4ab-1d80b6d7042c.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_RK8CiY": {
+      "type": "collage",
+      "blocks": {
+        "image_mVcVAX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/POST_1_34adfd3c-5e38-4881-962e-f99c13e29ea7.png"
+          }
+        },
+        "image_V46rdm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Post_1.png"
+          }
+        },
+        "image_UgGKDL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Post_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_mVcVAX",
+        "image_V46rdm",
+        "image_UgGKDL"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "none",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_6mkaid": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_mpHVAz": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_JeHxPx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_f7EmCw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mpHVAz",
+        "text_JeHxPx",
+        "button_f7EmCw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_1_b785de35-be92-4f43-8d15-1478fd6ea22c.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_video_component_3XJE7q",
+    "rich_text_MAyiWL",
+    "image_with_text_YmFV4f",
+    "image_with_text_haQDcj",
+    "hero_component_C6wjWj",
+    "image_with_text_xEQ4PW",
+    "collage_RK8CiY",
+    "image_with_text_6mkaid"
   ]
 }
