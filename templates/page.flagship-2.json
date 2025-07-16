@@ -47,6 +47,7 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Banner_1_3df3b85a-30bd-4a6e-9c94-fa80ae14cffc.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_19d4aaee-87c1-40df-8260-1d908dea202a.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -70,7 +71,7 @@
             "second_image": false
           }
         },
-        "image_ad3XCK": {
+        "image_YEtLix": {
           "type": "image",
           "settings": {}
         }
@@ -78,7 +79,7 @@
       "block_order": [
         "image_QrtFDe",
         "product_hjbtJw",
-        "image_ad3XCK"
+        "image_YEtLix"
       ],
       "name": "t:sections.collage.presets.name",
       "settings": {
@@ -194,6 +195,21 @@
         "padding_bottom": 36
       }
     },
+    "hero_component_zRg4TP": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_b29b9bcf-4e5a-423f-9c29-8f0d1dd67edc.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_4f890185-10b9-4787-9995-6c30e661fe00.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "collage_hqJRRb": {
       "type": "collage",
       "blocks": {
@@ -228,21 +244,6 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "hero_component_zRg4TP": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_1_b29b9bcf-4e5a-423f-9c29-8f0d1dd67edc.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_4f890185-10b9-4787-9995-6c30e661fe00.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     }
   },
