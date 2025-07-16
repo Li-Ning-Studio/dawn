@@ -194,6 +194,42 @@
         "padding_bottom": 36
       }
     },
+    "collage_hqJRRb": {
+      "type": "collage",
+      "blocks": {
+        "image_J4nHrq": {
+          "type": "image",
+          "settings": {}
+        },
+        "product_CWxUNp": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "image_eHd8bY": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_J4nHrq",
+        "product_CWxUNp",
+        "image_eHd8bY"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_zRg4TP": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -220,6 +256,7 @@
     "collage_bL6XU4",
     "hero_component_njCimW",
     "collage_irUd4t",
-    "hero_component_zRg4TP"
+    "hero_component_zRg4TP",
+    "collage_hqJRRb"
   ]
 }
