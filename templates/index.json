@@ -81,12 +81,29 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "swipeable_products_zrC9Ci": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "AERO SERIES",
+        "products": [
+          "aero-fly",
+          "aero-lite",
+          "aero-speed"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "hero_component_mgTY3K",
     "hero_component_PJTLfn",
     "swipeable_products_i696z7",
-    "hero_component_d87YfQ"
+    "hero_component_d87YfQ",
+    "swipeable_products_zrC9Ci"
   ]
 }
