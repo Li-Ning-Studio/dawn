@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,10 +25,98 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_ttd7aj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Lnirc3": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_gigEeh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By providing a phone number you are authorizing Li-Ning Studio to contact you via call, SMS, or WhatsApp. This overrides any registration of DNC/NDNC<br/><br/></p>"
+          }
+        },
+        "button_AbJBMR": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Lnirc3",
+        "text_gigEeh",
+        "button_AbJBMR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_BhrFbC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_c49cDx": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_XHjACx": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Customer Service Team</h3><p>Call us: +971-52-365-4250</p><p>Customer service desk (Opening Hours): Mon - Sat: 10am to 7pm</p><h3>Email us</h3><p>You can reach out to us at: <a href=\"mailto:support@lining.studio\">support@lining.studio</a></p><h3>Headquarters</h3><p>SIT Tower - 1701, Silicon Oasis, Dubai, United Arab Emirates</p>"
+          }
+        },
+        "button_dafiaw": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_c49cDx",
+        "text_XHjACx",
+        "button_dafiaw"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "form"
+    "form",
+    "rich_text_ttd7aj",
+    "rich_text_BhrFbC"
   ]
 }
