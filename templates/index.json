@@ -222,6 +222,52 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_jH9CK9": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_EcUTbU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/apparels.jpg",
+            "title": "SUIT UP TO WIN",
+            "text": "<p>With Li-Ning apparels, stylize your on-court experience like never before!</p>",
+            "link_label": "GET THE LOOK",
+            "link": "shopify://collections/clothing"
+          }
+        },
+        "column_UrnkGG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/shuttlecocks_1.jpg",
+            "title": "CUT THROUGH AIR!",
+            "text": "<p>Control the ebb and flow in each rally.</p>",
+            "link_label": "BUY HERE!",
+            "link": "shopify://collections/shuttles"
+          }
+        }
+      },
+      "block_order": [
+        "column_EcUTbU",
+        "column_UrnkGG"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "THE ACCESSORY COLLECTION",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -235,6 +281,7 @@
     "hero_component_hKYT68",
     "swipeable_products_WkWQNa",
     "hero_component_xDqGLU",
-    "swipeable_products_ryzd9F"
+    "swipeable_products_ryzd9F",
+    "multicolumn_jH9CK9"
   ]
 }
