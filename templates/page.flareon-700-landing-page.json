@@ -288,16 +288,6 @@
             "link": "shopify://products/nitrix-70-venom"
           }
         },
-        "column_DbeHKL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/V.jpg",
-            "title": "ATTACK",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/nitrix-70-volta"
-          }
-        },
         "column_yRPFaD": {
           "type": "column",
           "settings": {
@@ -307,12 +297,22 @@
             "link_label": "",
             "link": "shopify://products/hyfonic-7"
           }
+        },
+        "column_DbeHKL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/V.jpg",
+            "title": "ATTACK",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/nitrix-70-volta"
+          }
         }
       },
       "block_order": [
         "column_qr8aFn",
-        "column_DbeHKL",
-        "column_yRPFaD"
+        "column_yRPFaD",
+        "column_DbeHKL"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -323,7 +323,7 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
