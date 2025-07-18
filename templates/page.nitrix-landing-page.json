@@ -78,7 +78,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://products/nitrix-70-venom",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -200,7 +200,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://products/nitrix-70-venom",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -250,6 +250,63 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_VE8jan": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pBFn6a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_ab549237-062a-4026-8105-a47ab014588a.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/nitrix-70-volta"
+          }
+        },
+        "column_GqXRGn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_e578f9d6-1504-49c4-bc96-0e25abc4ac49.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/hyfonic-7"
+          }
+        },
+        "column_Uf3Lnw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_b0b1f2b3-af1c-4c20-ad1f-db083c6f53f5.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/flareon-700"
+          }
+        }
+      },
+      "block_order": [
+        "column_pBFn6a",
+        "column_GqXRGn",
+        "column_Uf3Lnw"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<em><strong>More From The Flagship Lineup</strong></em>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -265,6 +322,7 @@
     "hero_component_6Ji8wn",
     "custom_liquid_rXxg4N",
     "hero_component_ViHczn",
-    "multicolumn_YmTxPe"
+    "multicolumn_YmTxPe",
+    "multicolumn_VE8jan"
   ]
 }
