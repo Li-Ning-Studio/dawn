@@ -37,7 +37,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n    alt=\"Nitrix Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n  <!-- Gradient Button -->\n  <a href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #64c136, #2ca52c);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    Explore More\n  </a>\n</div>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n    alt=\"Nitrix Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n  <!-- Gradient Button -->\n  <a href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #64c136, #2ca52c);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE  </a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -62,7 +62,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 32px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -115,8 +115,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Cntrl_Foam.jpg",
-            "title": "<strong>CNTRL FOAM</strong>",
-            "text": "<p>Inserted in the frame to dampen vibration and stabilize the racket on contact. </p>",
+            "title": "",
+            "text": "<p>Inserted in the frame to <strong>dampen vibration</strong> and <strong>stabilize </strong>the racket on contact. </p>",
             "link_label": "",
             "link": ""
           }
@@ -125,8 +125,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/T-FUSE.jpg",
-            "title": "<strong>T FUSE</strong>",
-            "text": "<p>A unified frame-to-shaft connection that enhances stability and energy transfer.</p>",
+            "title": "",
+            "text": "<p>A unified <strong>frame-to-shaft </strong>connection that enhances <strong>stability </strong>and <strong>energy transfer</strong>.</p>",
             "link_label": "",
             "link": ""
           }
@@ -135,8 +135,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/M46X.jpg",
-            "title": "<strong>M46X CARBON FIBRE</strong>",
-            "text": "",
+            "title": "",
+            "text": "<p>Reinforced <strong>Carbon </strong>structure for a <strong>crisp</strong>, <strong>responsive </strong>feel.</p>",
             "link_label": "",
             "link": ""
           }
@@ -184,8 +184,23 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Attack Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REVOLUTIONIZING POWER\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play like a champion with the most powerful racket in your hands \n  </h2>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Attack Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REVOLUTIONIZING POWER\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play like a champion with the most powerful racket in your hand \n  </h2>",
         "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_ViHczn": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_f53083d3-2380-4b31-b2b7-8c23c1ff1651.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_ef424c4f-3701-40a8-82bf-be50f934150f.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -220,7 +235,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "",
+        "title": "Trusted By Champions",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "portrait",
@@ -229,41 +244,11 @@
         "columns_desktop": 2,
         "column_alignment": "center",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "hero_component_ViHczn": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_2_f53083d3-2380-4b31-b2b7-8c23c1ff1651.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R_ef424c4f-3701-40a8-82bf-be50f934150f.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "hero_component_C6wjWj": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_1_18f1ce67-a724-472a-8daf-7cf746c900dd.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_159443e3-6b87-4e7f-829c-7a345b3e3e1b.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/nitrix-70-venom",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     }
   },
@@ -279,8 +264,7 @@
     "multicolumn_dXwFQN",
     "hero_component_6Ji8wn",
     "custom_liquid_rXxg4N",
-    "multicolumn_YmTxPe",
     "hero_component_ViHczn",
-    "hero_component_C6wjWj"
+    "multicolumn_YmTxPe"
   ]
 }
