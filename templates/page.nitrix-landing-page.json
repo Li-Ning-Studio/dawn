@@ -30,7 +30,17 @@
         "link_to": "/",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_3wrLyj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "hero_component_C6wjWj": {
@@ -230,6 +240,7 @@
   "order": [
     "main",
     "hero_video_component_Ei6eD6",
+    "custom_liquid_3wrLyj",
     "hero_component_C6wjWj",
     "hero_component_MaVYaG",
     "hero_component_LE9qR6",
