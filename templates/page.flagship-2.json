@@ -75,7 +75,7 @@
           "settings": {
             "button_label": "Enter Attack Mode →",
             "button_link": "shopify://pages/nitrix",
-            "button_style_secondary": true
+            "button_style_secondary": false
           }
         }
       },
@@ -121,7 +121,7 @@
         "button_DkhBJC": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Speed Starts Here",
             "button_link": "shopify://pages/nitrix",
             "button_style_secondary": true
           }
@@ -137,6 +137,54 @@
         "image": "shopify://shop_images/4_b0b1f2b3-af1c-4c20-ad1f-db083c6f53f5.jpg",
         "height": "large",
         "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-20c62ed1-afb2-4f2b-8d0e-6ff0433e48c7",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "image_with_text_NwWW6W": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dEP8YQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_QEppzq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There’s no margin for error when the game is decided by millimeters. <strong>Hyfonic</strong> is the sniper’s choice; precision that’s surgical. It shares the stage with Hundred’s Nitrix that crushes with raw force and Flareon that burns with speed. Hyfonic calculates angles like none other. </p><p>This is precision in its purest form where it plays the game of fractions and walks away with accuracy so sharp it feels inevitable. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_bN9cBU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Precision Awaits →",
+            "button_link": "shopify://pages/nitrix",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dEP8YQ",
+        "text_QEppzq",
+        "button_bN9cBU"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/3_e578f9d6-1504-49c4-bc96-0e25abc4ac49.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
@@ -144,7 +192,7 @@
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
         "section_color_scheme": "",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-c57341a8-c5ce-4660-88c9-22b1fddba46a",
         "padding_top": 16,
         "padding_bottom": 16
       }
@@ -156,6 +204,7 @@
     "hero_component_hdAtTh",
     "custom_liquid_EjyxCG",
     "image_with_text_jPMiPP",
-    "image_with_text_hjKkyD"
+    "image_with_text_hjKkyD",
+    "image_with_text_NwWW6W"
   ]
 }
