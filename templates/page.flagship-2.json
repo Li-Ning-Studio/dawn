@@ -101,40 +101,40 @@
         "padding_bottom": 16
       }
     },
-    "image_with_text_hjKkyD": {
+    "image_with_text_gg4dMp": {
       "type": "image-with-text",
       "blocks": {
-        "heading_LwgDnw": {
+        "heading_hxzzcX": {
           "type": "heading",
           "settings": {
             "heading": "",
             "heading_size": "h1"
           }
         },
-        "text_466kTG": {
+        "text_NkUbX4": {
           "type": "text",
           "settings": {
-            "text": "<p>Flareon zooms where others hesitate. In Hundred’s flagship trio, where Nitrix brings the storm and Hyfonic dictates the tempo, this series is the speed specialist. Lightning-fast swings, razor-sharp reactions, and seamless mobility make it a force that can never be caught up to. When the difference between winning and losing is a split-second, Flareon serves you victory, every time. </p>",
+            "text": "<p><strong>Nitrix 70 Volta</strong> is built for clean, aggressive power. Its head-heavy balance and aerodynamic frame allow you to cut through the air and generate maximum power in every swing. M46X carbon fiber boosts energy transfer, while AECG+ carbon fibre ensures a sharp snap-back and structural rigidity. With T-Fuse technology strengthening the racket’s core, Volta is built to be a smash machine. </p>",
             "text_style": "body"
           }
         },
-        "button_DkhBJC": {
+        "button_PDypj7": {
           "type": "button",
           "settings": {
-            "button_label": "Speed Starts Here",
-            "button_link": "shopify://pages/nitrix",
+            "button_label": "Enter Attack Mode→",
+            "button_link": "shopify://pages/nitrix-70-volta",
             "button_style_secondary": true
           }
         }
       },
       "block_order": [
-        "heading_LwgDnw",
-        "text_466kTG",
-        "button_DkhBJC"
+        "heading_hxzzcX",
+        "text_NkUbX4",
+        "button_PDypj7"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/4_b0b1f2b3-af1c-4c20-ad1f-db083c6f53f5.jpg",
+        "image": "shopify://shop_images/2_ab549237-062a-4026-8105-a47ab014588a.jpg",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -144,7 +144,7 @@
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
         "section_color_scheme": "",
-        "color_scheme": "scheme-20c62ed1-afb2-4f2b-8d0e-6ff0433e48c7",
+        "color_scheme": "scheme-a06966ed-7c64-4f36-a8f6-38d7f033d163",
         "padding_top": 16,
         "padding_bottom": 16
       }
@@ -170,7 +170,7 @@
           "type": "button",
           "settings": {
             "button_label": "Precision Awaits →",
-            "button_link": "shopify://pages/nitrix",
+            "button_link": "shopify://pages/hyfonic-7",
             "button_style_secondary": false
           }
         }
@@ -196,6 +196,54 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "image_with_text_hjKkyD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LwgDnw": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_466kTG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Flareon zooms where others hesitate. In Hundred’s flagship trio, where Nitrix brings the storm and Hyfonic dictates the tempo, this series is the speed specialist. Lightning-fast swings, razor-sharp reactions, and seamless mobility make it a force that can never be caught up to. When the difference between winning and losing is a split-second, Flareon serves you victory, every time. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_DkhBJC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Speed Starts Here →",
+            "button_link": "shopify://pages/flareon-700",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_LwgDnw",
+        "text_466kTG",
+        "button_DkhBJC"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/4_b0b1f2b3-af1c-4c20-ad1f-db083c6f53f5.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-20c62ed1-afb2-4f2b-8d0e-6ff0433e48c7",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
@@ -204,7 +252,8 @@
     "hero_component_hdAtTh",
     "custom_liquid_EjyxCG",
     "image_with_text_jPMiPP",
-    "image_with_text_hjKkyD",
-    "image_with_text_NwWW6W"
+    "image_with_text_gg4dMp",
+    "image_with_text_NwWW6W",
+    "image_with_text_hjKkyD"
   ]
 }
