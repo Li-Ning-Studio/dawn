@@ -11,13 +11,152 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_wt9P86": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Main_L.jpg",
+        "mobile_image": "shopify://shop_images/Main_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_my6gWj": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Second_L_7499bb5a-ddeb-40ce-91b6-1cae36de9a3c.jpg",
+        "mobile_image": "shopify://shop_images/Second_R_67685755-44b5-4ade-85e6-400077af739e.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_MTWdfj": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/third_L_c9777959-f509-4949-b1f4-c61a9e2c873e.jpg",
+        "mobile_image": "shopify://shop_images/Third_R_8719e0f1-67ed-463c-8a63-c6f44c8eafb6.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_iAYBeq": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fourth_L_f03a50b0-057f-46f4-b0a3-65b8699351cb.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R_239f362f-c559-4cb1-a621-756c9db22770.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_GWrDmc": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iG984A": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_1_e60d1308-5fe2-4e0d-bec3-90adea638231.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LCEV69": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3_c8ea7efc-fb45-493b-b67d-d7bc216ed0c8.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qWXwJc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_4_1183b44d-ff7b-4dbf-8cf6-3e949532295c.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_iG984A",
+        "column_LCEV69",
+        "column_qWXwJc"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_jmKay8": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fifth_L_56c4d498-8a39-4727-a2bd-9fa9a2a834be.jpg",
+        "mobile_image": "shopify://shop_images/Fifth_R_57144ca3-4c4d-4f3b-895f-a45aae5f0787.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_wt9P86",
+    "hero_component_my6gWj",
+    "hero_component_MTWdfj",
+    "hero_component_iAYBeq",
+    "multicolumn_GWrDmc",
+    "hero_component_jmKay8"
   ]
 }
