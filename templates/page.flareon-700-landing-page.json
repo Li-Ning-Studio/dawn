@@ -17,8 +17,19 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_BWrRdY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Catch Me If You Can\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/logo_0fc56931-21ab-48bc-8376-9f877a680ec2.png?v=1752833409\" \n    alt=\"Flareon Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 1px 0 15px;\">\n    LEAVE LIGHTNING BEHIND\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"/collections/all\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #fc4b35, #8c0901);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    SPEED STARTS HERE\n  </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_XAbEhH": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Main_L_26401439-335d-4780-8da1-ad87337e58d2.jpg",
@@ -28,16 +39,6 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_BWrRdY": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Catch Me If You Can\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/logo_0fc56931-21ab-48bc-8376-9f877a680ec2.png?v=1752833409\" \n    alt=\"Flareon Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 1px 0 15px;\">\n    LEAVE LIGHTNING BEHIND\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"/collections/all\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #fc4b35, #8c0901);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    Explore More\n  </a>\n</div>",
-        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -57,14 +58,14 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_UahkwG": {
+    "custom_liquid_trxNBq": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 33px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #fc4b35, #8c0901);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Torsion Stop System\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   FAST. FIERCE. FLAREON\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Racket-stabilizing tech eliminates twisting for a clear shot path\n  </h2>",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "hero_component_RUFFgN": {
@@ -84,27 +85,13 @@
     },
     "custom_liquid_JzUJYF": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 33px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #fc4b35, #8c0901);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "hero_component_RWMpkV": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Fourth_L_ea478dbe-38e6-4320-84bf-446fbaa3e556.jpg",
-        "mobile_image": "shopify://shop_images/Fourth_R_636db7cc-4d55-478c-8076-d31e01efb168.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "multicolumn_RqGbNY": {
@@ -115,7 +102,7 @@
           "settings": {
             "image": "shopify://shop_images/A_2_ffb573bb-8a6a-4a70-bd7a-659b704874ef.jpg",
             "title": "",
-            "text": "",
+            "text": "<p>Tightly woven <strong>carbon mes</strong>h for <strong>strength </strong>and <strong>structure</strong></p>",
             "link_label": "",
             "link": ""
           }
@@ -125,7 +112,7 @@
           "settings": {
             "image": "shopify://shop_images/A_3_45449874-612b-4f5b-ac69-912ff3aa2f56.jpg",
             "title": "",
-            "text": "",
+            "text": "<p><strong>Aerospace </strong>grade <strong>Graphite </strong>for structural integrity</p>",
             "link_label": "",
             "link": ""
           }
@@ -134,8 +121,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/A_4_261af990-91b7-45c8-b84e-7f6248143f26.jpg",
-            "title": "Colum",
-            "text": "",
+            "title": "",
+            "text": "<p>A unified <strong>frame-to-shaft</strong> connection that enhances <strong>stability </strong>and <strong>energy transfer</strong></p>",
             "link_label": "",
             "link": ""
           }
@@ -164,6 +151,46 @@
         "padding_bottom": 36
       }
     },
+    "hero_component_RWMpkV": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fourth_L_ea478dbe-38e6-4320-84bf-446fbaa3e556.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R_636db7cc-4d55-478c-8076-d31e01efb168.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pUCC4t": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Speed Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REDEFINING SPEED  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play at a pace that cannot be caught  </h2>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_H3gmaG": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_d6ee277b-ba44-424e-9445-f078bf9306d8.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_ea925854-41bb-4e3b-9148-4199405cf6db.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "multicolumn_axkrTf": {
       "type": "multicolumn",
       "blocks": {
@@ -186,34 +213,8 @@
             "link_label": "",
             "link": ""
           }
-        }
-      },
-      "block_order": [
-        "column_ytXqNk",
-        "column_NNJgxd"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "multicolumn_wVE3Dd": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_QQjeXE": {
+        },
+        "column_bjRbj4": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Pl3.jpg",
@@ -223,7 +224,7 @@
             "link": ""
           }
         },
-        "column_tgUgzF": {
+        "column_RcKcRr": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Pl4.jpg",
@@ -235,8 +236,10 @@
         }
       },
       "block_order": [
-        "column_QQjeXE",
-        "column_tgUgzF"
+        "column_ytXqNk",
+        "column_NNJgxd",
+        "column_bjRbj4",
+        "column_RcKcRr"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -246,27 +249,12 @@
         "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "hero_component_H3gmaG": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_2_d6ee277b-ba44-424e-9445-f078bf9306d8.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R_ea925854-41bb-4e3b-9148-4199405cf6db.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -331,17 +319,17 @@
   },
   "order": [
     "main",
-    "hero_component_XAbEhH",
     "custom_liquid_BWrRdY",
+    "hero_component_XAbEhH",
     "hero_component_iPLTj6",
-    "custom_liquid_UahkwG",
+    "custom_liquid_trxNBq",
     "hero_component_RUFFgN",
     "custom_liquid_JzUJYF",
-    "hero_component_RWMpkV",
     "multicolumn_RqGbNY",
-    "multicolumn_axkrTf",
-    "multicolumn_wVE3Dd",
+    "hero_component_RWMpkV",
+    "custom_liquid_pUCC4t",
     "hero_component_H3gmaG",
+    "multicolumn_axkrTf",
     "multicolumn_MW6fF9"
   ]
 }
