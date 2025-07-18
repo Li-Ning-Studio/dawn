@@ -83,7 +83,7 @@
         "column_HGdYa4": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_5_6c54b635-c2ec-44ff-b4ab-1d80b6d7042c.jpg",
+            "image": "shopify://shop_images/Cntrl_Foam.jpg",
             "title": "<strong>CNTRL FOAM</strong>",
             "text": "<p><strong>Refined Touch<br/></strong>Precision-placed inside the frame, CNTRL Foam reduces vibration and stabilizes the racket on contact. The result: a clean, connected feel that holds steady under high-impact play</p>",
             "link_label": "",
@@ -93,7 +93,7 @@
         "column_qFbg9y": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_1_b785de35-be92-4f43-8d15-1478fd6ea22c.jpg",
+            "image": "shopify://shop_images/T-FUSE.jpg",
             "title": "<strong>T FUSE</strong>",
             "text": "<p><strong>Steady Through Impact<br/></strong>A unified frame-to-shaft connection that adds stability and reduces torsion during aggressive play. Made to stay solid under pressure.</p>",
             "link_label": "",
@@ -103,7 +103,7 @@
         "column_4NA4YM": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_4_8c8482ad-2ee1-4679-8fbe-a88d7bd3df51.jpg",
+            "image": "shopify://shop_images/M46X.jpg",
             "title": "<strong>M46X CARBON FIBRE</strong>",
             "text": "<p><strong>Power Transfer Redefined</strong><br/>This high-performance carbon construction enhances power-transfer and responsiveness at impact. M46X ensures superior energy return, making every swing feel efficient, especially during backcourt attacks.<br/></p>",
             "link_label": "",
@@ -133,6 +133,66 @@
         "padding_top": 48,
         "padding_bottom": 36
       }
+    },
+    "hero_component_6Ji8wn": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fifth_L.jpg",
+        "mobile_image": "shopify://shop_images/Fifth_R.jpg",
+        "subtitle": "The first racket in the world to feature a groundbreaking 6.1mm ultra-thin shaft.",
+        "title": "REVOLUTIONIZING RACKET ENGINEERING",
+        "description": "ENGINEERED FOR UNMATCHED SPEED AND CONTROL WITH THE WORLD’S FIRST 6.1MM SHAFT.",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_YmTxPe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Kdhaf7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_16a813d4-df77-4017-994b-ad800e254469.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rTY4kR": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Kdhaf7",
+        "column_rTY4kR"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -141,6 +201,8 @@
     "hero_component_MaVYaG",
     "hero_component_LE9qR6",
     "hero_component_PCUFNt",
-    "multicolumn_dXwFQN"
+    "multicolumn_dXwFQN",
+    "hero_component_6Ji8wn",
+    "multicolumn_YmTxPe"
   ]
 }
