@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_video_component_Ei6eD6": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/1920x700.mp4",
+        "mobile_video": "shopify://files/videos/sq.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
     "hero_component_C6wjWj": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -213,6 +229,7 @@
   },
   "order": [
     "main",
+    "hero_video_component_Ei6eD6",
     "hero_component_C6wjWj",
     "hero_component_MaVYaG",
     "hero_component_LE9qR6",
