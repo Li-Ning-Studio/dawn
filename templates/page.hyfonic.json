@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_video_component_3HQ98H": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/1920x700_65a41dc9-07d0-46a9-bf88-d84e742b2188.mp4",
+        "mobile_video": "shopify://files/videos/sq_fdc323f8-f018-4061-805f-362311e8f898.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_LNFDdK": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -25,6 +41,21 @@
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "hero_component_8DKYHj": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Main_L_61e07fb2-6514-40fd-8269-e6b549d1e739.jpg",
+        "mobile_image": "shopify://shop_images/Main_R_91a9c254-356c-41ee-89ad-02117c48606b.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_GyVHB7": {
@@ -36,11 +67,151 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "hero_component_ydmjKP": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Second_L_f9d24e31-7cde-4361-a113-07d2989bbce8.jpg",
+        "mobile_image": "shopify://shop_images/Second_R_27808d56-f4da-412a-a4fe-eeb54eb314e8.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_CNj6Cn": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/third_L_45fb91db-18ee-4876-946e-12eadaa911f4.jpg",
+        "mobile_image": "shopify://shop_images/Third_R_3420a9b9-808a-4f0c-8f4e-34475179a651.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_CKrmPr": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fourth_L_2712e6c3-f06c-4891-b9d8-59fd3cd92ac0.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R_f62c35b0-9511-40c7-8d92-b13b3ade03ad.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_gLhGAX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yLb8Fy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_4_886e6edc-5775-4703-ba34-0b041722b2c6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WEQBgc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3_c448c4b7-cabd-43d0-bc5b-77d33c5366fe.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7hXP3d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_5_ee6b4f7c-0b44-4c64-8fb2-99f6d91d9433.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_yLb8Fy",
+        "column_WEQBgc",
+        "column_7hXP3d"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_tXQnNJ": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fifth_L_26077329-da01-4bd2-98f6-4c365a5d3ece.jpg",
+        "mobile_image": "shopify://shop_images/Fifth_R_e36af03f-c67f-4a40-a2ff-b694cfc7d9af.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_wtQWwJ": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_5edc28d3-f5de-4b7f-9197-c749776a1745.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_11dd2452-6c68-4627-9c98-359a10c9ab9c.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
+    "hero_video_component_3HQ98H",
     "custom_liquid_LNFDdK",
-    "custom_liquid_GyVHB7"
+    "hero_component_8DKYHj",
+    "custom_liquid_GyVHB7",
+    "hero_component_ydmjKP",
+    "hero_component_CNj6Cn",
+    "hero_component_CKrmPr",
+    "multicolumn_gLhGAX",
+    "hero_component_tXQnNJ",
+    "hero_component_wtQWwJ"
   ]
 }
