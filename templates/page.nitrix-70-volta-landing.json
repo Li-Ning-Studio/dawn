@@ -36,7 +36,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo.png?v=1752830936\" \n    alt=\"Nitrix Volta Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 20px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"/collections/all\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to left, #134294, #417feb);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    Explore More\n  </a>\n</div>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo.png?v=1752830936\" \n    alt=\"Nitrix Volta Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"/products/nitrix-70-volta\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to left, #134294, #417feb);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    Explore More\n  </a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -53,6 +53,16 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_J8NN3a": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 33px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to left, #134294, #417feb);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -83,6 +93,16 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_QtDn7Q": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 33px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to left, #134294, #417feb);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -163,8 +183,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2_79a32964-588b-4eca-83cd-f02f89445997.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R_fbe4dbec-2b23-461e-bad5-b4fe8e9ef2d9.jpg",
+        "image": "shopify://shop_images/Banner_2_a1a890d5-e9bc-4bd0-addf-d55f8526b6b8.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_f1b936da-a961-4254-a7cc-86e506156796.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -180,8 +200,10 @@
     "hero_component_wt9P86",
     "custom_liquid_Dfa6WV",
     "hero_component_my6gWj",
+    "custom_liquid_J8NN3a",
     "hero_component_MTWdfj",
     "hero_component_iAYBeq",
+    "custom_liquid_QtDn7Q",
     "multicolumn_GWrDmc",
     "hero_component_jmKay8",
     "hero_component_gYmyYA"
