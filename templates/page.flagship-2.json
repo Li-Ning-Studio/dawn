@@ -50,14 +50,14 @@
         "custom_liquid": "<style>\n  .animated-gradient {\n    background: linear-gradient(\n      145deg,\n      #67ca51 0%,\n      #67ca51 30%,\n      #b92724 35%,\n      #b92724 65%,\n      #6e32c0 70%,\n      #6e32c0 100%\n    );\n    background-size: 400% 400%;\n\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    /* Slowed down animation */\n    -webkit-animation: GradientAnimation 6s ease infinite;\n    -moz-animation: GradientAnimation 6s ease infinite;\n    animation: GradientAnimation 6s ease infinite;\n  }\n\n  @-webkit-keyframes GradientAnimation {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GradientAnimation {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GradientAnimation {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  /* Same size as \"Before They're History!\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <p style=\"text-align: center;\">Intoducing</p>\n    <h1 style=\"font-size: 3rem; text-align: center; margin-top: 0rem; font-weight: 700; line-height: 3rem; letter-spacing: -2px;\">\n      <span class=\"animated-gradient large-text\">\n       The Flagship Lineup\n      </span>\n      <br />Experience The Heart of Performance\n    </h1>\n    <p style=\"text-align: center;\">Designed For The Professionals</p>\n  </section>\n</section>",
         "color_scheme": "",
         "padding_top": 24,
-        "padding_bottom": 28
+        "padding_bottom": 0
       }
     },
     "custom_liquid_GiTtq8": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  \n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 1000; color: #555; margin: 20px 0 30px;\">\n   ACROSS COURTS WORLD WIDE\n  </h2>\n\n  <!-- Gradient Button with Countdown -->\n  <a id=\"attack-button\" href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n    text-align: center;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE\n  </a>\n\n  <!-- Countdown Timer Script -->\n  <script>\n    // Set the date we're counting down to\n    var countDownDate = new Date(\"Jul 25, 2025 00:00:00\").getTime();\n\n    // Update the countdown every 1 second\n    var x = setInterval(function() {\n      \n      // Get the current date and time\n      var now = new Date().getTime();\n      \n      // Calculate the difference between now and the count down date\n      var distance = countDownDate - now;\n      \n      // Time calculations for days, hours, minutes, and seconds\n      var days = Math.floor(distance / (1000 * 60 * 60 * 24));\n      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n      var seconds = Math.floor((distance % (1000 * 60)) / 1000);\n      \n      // Update the button text with the countdown\n      document.getElementById(\"attack-button\").innerHTML = days + \"D : \" + hours + \"H : \" + minutes + \"M : \" + seconds + \"S\";\n      \n      // If the countdown is over, display a message\n      if (distance < 0) {\n        clearInterval(x);\n        document.getElementById(\"attack-button\").innerHTML = \"EXPIRED\";\n      }\n    }, 1000);\n  </script>\n</div>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 5px 5px;\">\n  \n  <!-- Subtitle -->\n  <h2 style=\"font-size: 14px; letter-spacing: 0.5px; font-weight: 1000; color: #666666; margin: px 0 10px;\">\n   ACROSS COURTS WORLDWIDE\n  </h2>\n\n  <!-- Gradient Button with Countdown -->\n  <a id=\"attack-button\" href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n    text-align: center;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE\n  </a>\n\n  <!-- Countdown Timer Script -->\n  <script>\n    // Set the date we're counting down to\n    var countDownDate = new Date(\"Jul 25, 2025 00:00:00\").getTime();\n\n    // Update the countdown every 1 second\n    var x = setInterval(function() {\n      \n      // Get the current date and time\n      var now = new Date().getTime();\n      \n      // Calculate the difference between now and the count down date\n      var distance = countDownDate - now;\n      \n      // Time calculations for days, hours, minutes, and seconds\n      var days = Math.floor(distance / (1000 * 60 * 60 * 24));\n      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n      var seconds = Math.floor((distance % (1000 * 60)) / 1000);\n      \n      // Update the button text with the countdown\n      document.getElementById(\"attack-button\").innerHTML = days + \"D : \" + hours + \"H : \" + minutes + \"M : \" + seconds + \"S\";\n      \n      // If the countdown is over, display a message\n      if (distance < 0) {\n        clearInterval(x);\n        document.getElementById(\"attack-button\").innerHTML = \"EXPIRED\";\n      }\n    }, 1000);\n  </script>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -109,34 +109,6 @@
         "color_scheme": "scheme-c5a7677a-37ad-48d4-8346-662351ba2e4d",
         "padding_top": 16,
         "padding_bottom": 16
-      }
-    },
-    "1752852807f1fb61ba": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_bP8nw7": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "540812",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_bP8nw7"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "image_with_text_gg4dMp": {
@@ -281,6 +253,34 @@
         "color_scheme": "scheme-20c62ed1-afb2-4f2b-8d0e-6ff0433e48c7",
         "padding_top": 16,
         "padding_bottom": 16
+      }
+    },
+    "1752852807f1fb61ba": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_bP8nw7": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "540812",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_bP8nw7"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
