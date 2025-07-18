@@ -270,6 +270,63 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_MW6fF9": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qr8aFn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/N.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/nitrix-70-venom"
+          }
+        },
+        "column_DbeHKL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/V.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/nitrix-70-volta"
+          }
+        },
+        "column_yRPFaD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/H.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/hyfonic-7"
+          }
+        }
+      },
+      "block_order": [
+        "column_qr8aFn",
+        "column_DbeHKL",
+        "column_yRPFaD"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -284,6 +341,7 @@
     "multicolumn_RqGbNY",
     "multicolumn_axkrTf",
     "multicolumn_wVE3Dd",
-    "hero_component_H3gmaG"
+    "hero_component_H3gmaG",
+    "multicolumn_MW6fF9"
   ]
 }
