@@ -42,21 +42,6 @@
         "padding_bottom": 0
       }
     },
-    "hero_component_RUFFgN": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/third_L_be6ab367-612b-463d-bc5e-c8dfea0efb65.jpg",
-        "mobile_image": "shopify://shop_images/Third_R_74b8460b-165a-42bb-870d-e2544e41c74f.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_iPLTj6": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -76,8 +61,48 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 35px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 7px;\">\n    Catch Me If You Can\n  </p>\n\n  <!-- Gradient Text Instead of Logo Image -->\n  <h1 style=\"\n    font-size: 32px;\n    font-weight: 700;\n    margin: 20px 0;\n    background: linear-gradient(to right, #8c0901, #fc4b35);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    FLAREON 700\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 1px 0 15px;\">\n    LEAVE LIGHTNING BEHIND\n  </h2>\n</div>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 33px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #fc4b35, #8c0901);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
         "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_RUFFgN": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/third_L_be6ab367-612b-463d-bc5e-c8dfea0efb65.jpg",
+        "mobile_image": "shopify://shop_images/Third_R_74b8460b-165a-42bb-870d-e2544e41c74f.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_JzUJYF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 33px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #fc4b35, #8c0901);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_RWMpkV": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fourth_L_ea478dbe-38e6-4320-84bf-446fbaa3e556.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R_636db7cc-4d55-478c-8076-d31e01efb168.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -181,21 +206,6 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "hero_component_RWMpkV": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Fourth_L_ea478dbe-38e6-4320-84bf-446fbaa3e556.jpg",
-        "mobile_image": "shopify://shop_images/Fourth_R_636db7cc-4d55-478c-8076-d31e01efb168.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -266,12 +276,13 @@
     "main",
     "hero_component_XAbEhH",
     "custom_liquid_BWrRdY",
-    "hero_component_RUFFgN",
     "hero_component_iPLTj6",
     "custom_liquid_UahkwG",
+    "hero_component_RUFFgN",
+    "custom_liquid_JzUJYF",
+    "hero_component_RWMpkV",
     "multicolumn_RqGbNY",
     "multicolumn_axkrTf",
-    "hero_component_RWMpkV",
     "multicolumn_wVE3Dd",
     "hero_component_H3gmaG"
   ]
