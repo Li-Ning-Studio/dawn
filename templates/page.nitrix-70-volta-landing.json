@@ -61,7 +61,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 33px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to left, #134294, #417feb);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n   \n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to left, #134294, #417feb);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    LET THE SMASH BEGIN\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Achieve a faster swing speed that land with power  </h2>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -84,6 +84,7 @@
     },
     "hero_component_iAYBeq": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Fourth_L_f03a50b0-057f-46f4-b0a3-65b8699351cb.jpg",
@@ -113,9 +114,9 @@
         "column_iG984A": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_1_e60d1308-5fe2-4e0d-bec3-90adea638231.jpg",
+            "image": "shopify://shop_images/A_2_f952fe72-78a4-4792-ab25-ccfe0330bf19.jpg",
             "title": "",
-            "text": "",
+            "text": "<p>Reinforced <strong>Carbon </strong>structure for a <strong>crisp</strong>, <strong>responsive </strong>feel</p>",
             "link_label": "",
             "link": ""
           }
@@ -125,7 +126,7 @@
           "settings": {
             "image": "shopify://shop_images/A_3_c8ea7efc-fb45-493b-b67d-d7bc216ed0c8.jpg",
             "title": "",
-            "text": "",
+            "text": "<p>Specialised <strong>frame shape</strong> that increases <strong>sweet-spot</strong> coverage</p>",
             "link_label": "",
             "link": ""
           }
@@ -135,7 +136,7 @@
           "settings": {
             "image": "shopify://shop_images/A_4_1183b44d-ff7b-4dbf-8cf6-3e949532295c.jpg",
             "title": "",
-            "text": "",
+            "text": "<p><strong>Aerospace </strong>grade <strong>Graphite </strong>for structural intregrity</p>",
             "link_label": "",
             "link": ""
           }
@@ -160,8 +161,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "hero_component_jmKay8": {
@@ -170,9 +171,9 @@
       "settings": {
         "image": "shopify://shop_images/Fifth_L_56c4d498-8a39-4727-a2bd-9fa9a2a834be.jpg",
         "mobile_image": "shopify://shop_images/Fifth_R_57144ca3-4c4d-4f3b-895f-a45aae5f0787.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
+        "subtitle": "The Ultimate Attack Racket",
+        "title": "Revolutionizing Power",
+        "description": "Play like a champion with the most powerful racket in your hand",
         "button_text": "",
         "link_to": "/",
         "padding_top": 0,
@@ -193,6 +194,41 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_XdPzLw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VXDJa7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_a6ff948f-2cb4-4778-95c3-1170ead520a5.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VXDJa7"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Trusted By Champions</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -206,6 +242,7 @@
     "custom_liquid_QtDn7Q",
     "multicolumn_GWrDmc",
     "hero_component_jmKay8",
-    "hero_component_gYmyYA"
+    "hero_component_gYmyYA",
+    "multicolumn_XdPzLw"
   ]
 }
