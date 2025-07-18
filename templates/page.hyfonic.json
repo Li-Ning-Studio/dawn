@@ -211,6 +211,63 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_43PMhy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VKCHrb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_958d5bed-b55e-4cf4-9900-2052ba8b5bea.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/nitrix"
+          }
+        },
+        "column_7AVzdx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_b0b1f2b3-af1c-4c20-ad1f-db083c6f53f5.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/flareon-700"
+          }
+        },
+        "column_JX9wn9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_ab549237-062a-4026-8105-a47ab014588a.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/nitrix-70-volta"
+          }
+        }
+      },
+      "block_order": [
+        "column_VKCHrb",
+        "column_7AVzdx",
+        "column_JX9wn9"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<em><strong>More From The Flagship Lineup</strong></em>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -225,6 +282,7 @@
     "multicolumn_gLhGAX",
     "hero_component_tXQnNJ",
     "custom_liquid_eqUYUQ",
-    "hero_component_wtQWwJ"
+    "hero_component_wtQWwJ",
+    "multicolumn_43PMhy"
   ]
 }
