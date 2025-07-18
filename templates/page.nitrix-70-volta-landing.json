@@ -36,7 +36,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo.png?v=1752830936\" \n    alt=\"Nitrix Volta Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"/products/nitrix-70-volta\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to left, #134294, #417feb);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    Explore More\n  </a>\n</div>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for smooth, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo.png?v=1752830936\" \n    alt=\"Nitrix Volta Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"/products/nitrix-70-volta\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to left, #134294, #417feb);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE\n  </a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -61,7 +61,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n   \n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to left, #134294, #417feb);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    LET THE SMASH BEGIN\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Achieve a faster swing speed that land with power  </h2>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 13px; font-weight: 500; color: #666666; margin-bottom: 1px;\">\n   \n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to left, #134294, #417feb);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    LET THE SMASH BEGIN\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #666666; margin: 10px 0 2px;\">\n    Achieve a faster swing speed that lands every shot with power  </h2>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -136,7 +136,7 @@
           "settings": {
             "image": "shopify://shop_images/A_4_1183b44d-ff7b-4dbf-8cf6-3e949532295c.jpg",
             "title": "",
-            "text": "<p><strong>Aerospace </strong>grade <strong>Graphite </strong>for structural intregrity</p>",
+            "text": "<p><strong>Aerospace </strong>grade <strong>Graphite </strong>for structural integrity</p>",
             "link_label": "",
             "link": ""
           }
@@ -171,13 +171,23 @@
       "settings": {
         "image": "shopify://shop_images/Fifth_L_56c4d498-8a39-4727-a2bd-9fa9a2a834be.jpg",
         "mobile_image": "shopify://shop_images/Fifth_R_57144ca3-4c4d-4f3b-895f-a45aae5f0787.jpg",
-        "subtitle": "The Ultimate Attack Racket",
-        "title": "Revolutionizing Power",
-        "description": "Play like a champion with the most powerful racket in your hand",
+        "subtitle": "",
+        "title": "",
+        "description": "",
         "button_text": "",
         "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_YgRWtg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Attack Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #00154f, #2785b5);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REVOLUTIONIZING POWER\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play like a champion with the most powerful racket in your hand \n  </h2>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "hero_component_gYmyYA": {
@@ -242,6 +252,7 @@
     "custom_liquid_QtDn7Q",
     "multicolumn_GWrDmc",
     "hero_component_jmKay8",
+    "custom_liquid_YgRWtg",
     "hero_component_gYmyYA",
     "multicolumn_XdPzLw"
   ]
