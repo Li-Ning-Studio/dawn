@@ -17,148 +17,62 @@
         "padding_bottom": 28
       }
     },
-    "hero_video_component_3XJE7q": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/venom launch video (1).mp4",
-        "mobile_video": "shopify://files/videos/venom launch video (2).mp4",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_9pbcxY": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"nitrix-hero\">\n  <p class=\"nitrix-subtitle\">The Flagship of Power</p>\n  <h1 class=\"nitrix-text\">NITRIX</h1>\n  <p class=\"nitrix-description\">\n    Born for dominance. Built to strike fear.<br />\n    Nitrix leads the Hundred trio as the ultimate power weapon on the court.\n  </p>\n</div>\n\n<style>\n  .nitrix-hero {\n    text-align: center;\n    width: 100%;\n    padding: 80px 20px;\n  }\n\n  .nitrix-subtitle {\n    font-size: 2rem; /* BIG */\n    font-weight: 800;\n    margin-bottom: 20px;\n    color: #111;\n    text-transform: uppercase;\n  }\n\n  .nitrix-text {\n    font-size: 6rem; /* BOLDER headline */\n    font-weight: 900;\n    text-transform: uppercase;\n    background: linear-gradient(135deg, #27e726 0%, #000000 50%, #27e726 100%);\n    background-size: 300% auto;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    color: transparent;\n    animation: nitrixShimmer 6s ease-in-out infinite;\n    margin: 0;\n    padding: 0;\n  }\n\n  @keyframes nitrixShimmer {\n    0% {\n      background-position: 200% center;\n    }\n    50% {\n      background-position: 0% center;\n    }\n    100% {\n      background-position: 200% center;\n    }\n  }\n\n  .nitrix-description {\n    max-width: 800px;\n    margin: 30px auto 0;\n    font-size: 1.5rem; /* BIGGER */\n    font-weight: 700;\n    line-height: 1.8;\n    color: #222;\n  }\n</style>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_C6wjWj": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Banner_1_18f1ce67-a724-472a-8daf-7cf746c900dd.jpg",
         "mobile_image": "shopify://shop_images/Banner_1_R_159443e3-6b87-4e7f-829c-7a345b3e3e1b.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
+        "subtitle": "Nitrix 70 Volta is built for clean, aggressive power.",
+        "title": "NITRIX 70 VENOM",
+        "description": "SPEAKS FLUENT POWER",
         "button_text": "",
         "link_to": "shopify://products/nitrix-70-venom",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_hwjbq8": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "hero_component_MaVYaG": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "custom_liquid": "<section class=\"nitrix-hero-section\">\n  <h2 class=\"nitrix-tagline\">Speak Fluent Power</h2>\n  <p class=\"nitrix-hero-text\">\n    The Nitrix Series is built for players who hit hard, play fast, and never back down.\n    Every racket in this lineup is engineered for relentless attackers who finish points, not trade them.\n  </p>\n</section>\n\n<style>\n  .nitrix-hero-section {\n    text-align: center;\n    padding: 100px 20px 60px;\n    max-width: 1000px;\n    margin: 0 auto;\n  }\n\n  .nitrix-tagline {\n    font-size: 3.5rem;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: 1.5px;\n    margin-bottom: 30px;\n    color: #111;\n  }\n\n  .nitrix-hero-text {\n    font-size: 1.7rem;\n    font-weight: 700;\n    color: #222;\n    line-height: 2;\n    max-width: 800px;\n    margin: 0 auto;\n  }\n</style>",
-        "color_scheme": "",
+        "image": "shopify://shop_images/Second_L.jpg",
+        "mobile_image": "shopify://shop_images/Second_R.jpg",
+        "subtitle": "Shaft engineering at its finest. It cuts drag, loads quicker, and delivers a powerful whip.",
+        "title": "THIN. FAST. LETHAL.",
+        "description": "VAPORSHAFT 6.1 MM",
+        "button_text": "",
+        "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "multicolumn_944gAN": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_yegyeV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/A_3_2f5f2bab-2ff5-464a-b061-9968c33620a8.jpg",
-            "title": "<strong>VAPORSHAFT 6.1MM</strong>",
-            "text": "<p><strong>Thin. Fast. Lethal.<br/></strong>Shaft engineering at its finest. It cuts drag, loads quicker, and delivers a powerful whip.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_XbagD9": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/A_2_0916bceb-764a-48f1-a328-32973eecb1ed.jpg",
-            "title": "<strong>CURVE2 FRAME GEOMETRY </strong>",
-            "text": "<p><strong>Power Begins at the Frame<br/></strong>Specialised frame shape that increases sweet spot coverage. Experience cleaner contact and stronger punch.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_yegyeV",
-        "column_XbagD9"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
+    "hero_component_LE9qR6": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
+        "image": "shopify://shop_images/third_L.jpg",
+        "mobile_image": "shopify://shop_images/Third_R.jpg",
+        "subtitle": "",
         "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "collage_RK8CiY": {
-      "type": "collage",
-      "blocks": {
-        "image_mVcVAX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/POST_1_34adfd3c-5e38-4881-962e-f99c13e29ea7.png"
-          }
-        },
-        "image_V46rdm": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Post_1.png"
-          }
-        },
-        "image_UgGKDL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Post_2.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_mVcVAX",
-        "image_V46rdm",
-        "image_UgGKDL"
-      ],
-      "name": "t:sections.collage.presets.name",
+    "hero_component_PCUFNt": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "none",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_pap38x": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section class=\"nitrix-breakdown\">\n  <div class=\"nitrix-description-block\">\n    <p>\n      Designed with full swings, aggressive smashes, and decisive shot making in mind,\n      Nitrix puts pressure where it belongs on your opponent. If your style is offense first,\n      Nitrix is your weapon of choice.\n    </p>\n  </div>\n\n  <div class=\"nitrix-three-points\">\n    <div>\n      <h3>What It Does</h3>\n      <p>Helps players generate explosive power and take control of every point.</p>\n    </div>\n    <div>\n      <h3>Who It’s For</h3>\n      <p>Aggressive players who dominate with attack, not defense.</p>\n    </div>\n    <div>\n      <h3>What It Focuses On</h3>\n      <p>Power. Pressure. Finishing shots with authority.</p>\n    </div>\n  </div>\n\n  <div class=\"nitrix-flagship\">\n    <h3>Flagship Series Power Meets Precision</h3>\n    <p>\n      The Nitrix Series stands at the forefront of raw, unfiltered power.\n      An uncompromising force on the court.\n      As one of Hundreds elite trio alongside Flareon for speed and Hyfonic for control,\n      Nitrix is built to establish dominance from the very first serve.\n      It is not just designed to play hard, it is built to end points.\n    </p>\n  </div>\n</section>\n\n<style>\n  .nitrix-breakdown {\n    background: #f8f8f8;\n    padding: 60px 20px;\n    text-align: center;\n  }\n\n  .nitrix-description-block p {\n    font-size: 1.6rem;\n    font-weight: 700;\n    color: #333;\n    line-height: 1.8;\n    max-width: 850px;\n    margin: 0 auto 40px;\n  }\n\n  .nitrix-three-points {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 60px;\n    max-width: 1000px;\n    margin: 0 auto 60px;\n    flex-wrap: wrap;\n  }\n\n  .nitrix-three-points div {\n    flex: 1 1 250px;\n    max-width: 300px;\n  }\n\n  .nitrix-three-points h3 {\n    font-size: 1.5rem;\n    font-weight: 800;\n    color: #111;\n    margin-bottom: 8px;\n    text-transform: uppercase;\n  }\n\n  .nitrix-three-points p {\n    font-size: 1.2rem;\n    font-weight: 600;\n    color: #444;\n    line-height: 1.5;\n    margin-bottom: 10px;\n  }\n\n  .nitrix-flagship {\n    max-width: 900px;\n    margin: 0 auto;\n  }\n\n  .nitrix-flagship h3 {\n    font-size: 2rem;\n    font-weight: 900;\n    color: #111;\n    margin-bottom: 16px;\n    text-transform: uppercase;\n  }\n\n  .nitrix-flagship p {\n    font-size: 1.5rem;\n    font-weight: 700;\n    color: #222;\n    line-height: 1.8;\n  }\n\n  @media (max-width: 768px) {\n    .nitrix-breakdown {\n      padding: 30px 10px;\n    }\n\n    .nitrix-description-block p {\n      font-size: 1.2rem;\n      margin-bottom: 20px;\n      line-height: 1.6;\n    }\n\n    .nitrix-three-points {\n    }\n\n    .nitrix-three-points h3 {\n      font-size: 1.1rem;\n    }\n\n    .nitrix-three-points p {\n      font-size: 1rem;\n    }\n\n    .nitrix-flagship h3 {\n      font-size: 1.4rem;\n\n    }\n\n    .nitrix-flagship p {\n      font-size: 1.1rem;\n      line-height: 1.6;\n    }\n  }\n</style>",
-        "color_scheme": "",
+        "image": "shopify://shop_images/Fourth_L.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R.jpg",
+        "subtitle": "Specialised frame shape that increases sweet spot coverage. Experience cleaner contact and stronger punch",
+        "title": "SWEET SPOT, SHARPENED",
+        "description": "CURVE2 FRAME GEOMETRY",
+        "button_text": "",
+        "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -171,7 +85,7 @@
           "settings": {
             "image": "shopify://shop_images/A_5_6c54b635-c2ec-44ff-b4ab-1d80b6d7042c.jpg",
             "title": "<strong>CNTRL FOAM</strong>",
-            "text": "<p><strong>Refined Touch<br/></strong>Keeps feedback clean and consistent off the stringbed.</p>",
+            "text": "<p><strong>Refined Touch<br/></strong>Precision-placed inside the frame, CNTRL Foam reduces vibration and stabilizes the racket on contact. The result: a clean, connected feel that holds steady under high-impact play</p>",
             "link_label": "",
             "link": ""
           }
@@ -181,7 +95,7 @@
           "settings": {
             "image": "shopify://shop_images/A_1_b785de35-be92-4f43-8d15-1478fd6ea22c.jpg",
             "title": "<strong>T FUSE</strong>",
-            "text": "<p><strong>Steady Through Impact<br/></strong> A seamless joint holds firm during high-speed rallies, keeping the frame stable and composed.</p>",
+            "text": "<p><strong>Steady Through Impact<br/></strong>A unified frame-to-shaft connection that adds stability and reduces torsion during aggressive play. Made to stay solid under pressure.</p>",
             "link_label": "",
             "link": ""
           }
@@ -191,7 +105,7 @@
           "settings": {
             "image": "shopify://shop_images/A_4_8c8482ad-2ee1-4679-8fbe-a88d7bd3df51.jpg",
             "title": "<strong>M46X CARBON FIBRE</strong>",
-            "text": "<p><strong>Strength That Reacts<br/></strong>M46X is the highest-grade carbon fibre. It remains ultra-light to handle, yet withstands impact with unshakable strength.<br/></p>",
+            "text": "<p><strong>Power Transfer Redefined</strong><br/>This high-performance carbon construction enhances power-transfer and responsiveness at impact. M46X ensures superior energy return, making every swing feel efficient, especially during backcourt attacks.<br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -207,12 +121,12 @@
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "center",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -223,13 +137,10 @@
   },
   "order": [
     "main",
-    "hero_video_component_3XJE7q",
-    "custom_liquid_9pbcxY",
     "hero_component_C6wjWj",
-    "custom_liquid_hwjbq8",
-    "multicolumn_944gAN",
-    "collage_RK8CiY",
-    "custom_liquid_pap38x",
+    "hero_component_MaVYaG",
+    "hero_component_LE9qR6",
+    "hero_component_PCUFNt",
     "multicolumn_dXwFQN"
   ]
 }
