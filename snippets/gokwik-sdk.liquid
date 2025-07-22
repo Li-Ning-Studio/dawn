@@ -24,7 +24,7 @@
       serializedForm.id = document.querySelector('[name="id"]')?.value;
     }
     if (!serializedForm.quantity) {
-      serializedForm.quantity = document.querySelector('[name="quantity"')?.value;
+      serializedForm.quantity = document.querySelector('[name="quantity"]')?.value;
     }
 
     serializedForm.form_type = 'product';
@@ -49,14 +49,10 @@
 
   window.addCartBuyNow = () => {
     let products = getProducts();
-    makeXhr('POST', '/cart/clear.js', '', function (statusCode) {
+    makeXhr('POST', '/cart/add.js', products, function (statusCode, response) {
       if (statusCode === 200) {
-        makeXhr('POST', '/cart/add.js', products, function (j) {
-          if (j == 200) {
-            localStorage.setItem('gkbuynow', 'active');
-            initiateLogin();
-          }
-        });
+        localStorage.setItem('gkbuynow', 'active');
+        initiateLogin();
       }
     });
   };
@@ -85,7 +81,7 @@
       </div>
     </center>
     <div class="gk-otp-popup">
-      <iframe class="gk-login" title="description"> </iframe>
+      <iframe class="gk-login" title="Gokwik Login" loading="lazy"> </iframe>
     </div>
     <div class="gk-modal-footer"></div>
   </div>
