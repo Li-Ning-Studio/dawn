@@ -215,6 +215,37 @@
         "padding_bottom": 12
       }
     },
+    "rich_text_Ld3mn8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_L9KkYQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Disclaimer:</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_6fg8bw": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Please note that our standard policies do <strong>not apply</strong> to the following products: <strong>Court Mats, Stringing Machines, Net Poles, and Umpire Chairs</strong>. These items are subject to special terms, and <strong>full payment in advance</strong> is required at the time of order. By placing an order for any of these products, the customer agrees to these specific conditions.</h5>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_L9KkYQ",
+        "text_6fg8bw"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -253,6 +284,7 @@
   },
   "order": [
     "main",
+    "rich_text_Ld3mn8",
     "related-products",
     "1749537046e7aecdbc"
   ]
