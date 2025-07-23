@@ -119,6 +119,37 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "rich_text_waRhCW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GEDECK": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Disclaimer:</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_9deQyR": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Please note that our Business-to-Consumer (B2C) policies do <strong>not apply</strong> to the following product categories: <strong>Court Mats, Stringing Machines, Net Poles, and Umpire Chairs</strong>. All purchases of these items are considered final and are governed by separate terms. Additionally, <strong>100% advance payment</strong> is required at the time of order placement for these products. By proceeding with the purchase, the customer acknowledges and agrees to these specific terms of sale.</h5>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GEDECK",
+        "text_9deQyR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -129,6 +160,7 @@
     "swipeable_products_9H3yen",
     "swipeable_products_C7Vahm",
     "swipeable_products_mkNQHH",
-    "swipeable_products_zM73eX"
+    "swipeable_products_zM73eX",
+    "rich_text_waRhCW"
   ]
 }
