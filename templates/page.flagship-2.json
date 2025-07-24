@@ -32,7 +32,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n    <p>Introducing</p>\n    <h1 style=\" margin: 0; font-weight: 900; letter-spacing: -1px \" class=\"title\">Peak Performance Trio</h1>\n    <p>Pro Rackets Series from HNDRD.</p>\n<p style=\"margin-top: 24px;\">25.07.25</p>\n</section> \n\n<style>\n\n  .title {\n    font-size: 3.2rem;\n   background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);\n    -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; /* Fallback for unsupported browsers */\n  }\n  \n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n  }\n  \n</style>",
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n    <p>Introducing</p>\n    <h1 style=\" margin: 0; font-weight: 900; letter-spacing: -1px \" class=\"title\">Peak Performance Trio</h1>\n    <p>Pro Rackets Series from HNDRD.</p>\n<p style=\"margin-top: 12px;\">25.07.25</p>\n</section> \n\n<style>\n\n  .title {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);\n    -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; /* Fallback for unsupported browsers */\n  }\n  \n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n  }\n  \n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 100
