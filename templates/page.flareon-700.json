@@ -21,8 +21,8 @@
       "type": "hero-video-component",
       "name": "Hero Video Component",
       "settings": {
-        "video": "shopify://files/videos/1920x700.mp4",
-        "mobile_video": "shopify://files/videos/sq.mp4",
+        "video": "shopify://files/videos/yt.mp4",
+        "mobile_video": "shopify://files/videos/sq_f4b1d8c0-7370-4bf5-995b-c10433d34278.mp4",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -37,7 +37,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n    alt=\"Nitrix Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n  <!-- Gradient Button -->\n  <a href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #64c136, #2ca52c);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE  </a>\n</div>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Catch Me If You Can\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/logo_0fc56931-21ab-48bc-8376-9f877a680ec2.png?v=1752833409\" \n    alt=\"Flareon Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 1px 0 15px;\">\n    LEAVE LIGHTNING BEHIND\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"https://in.hndrd.co/products/flareon-700\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #fc4b35, #8c0901);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    SPEED STARTS HERE\n  </a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -251,6 +251,63 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_gzxaHJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yeAhJq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_cdda66e9-5f4c-49ed-a064-73e557ddb076.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7UtXkx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_B6RA7V": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_294a4cd5-90d3-4c26-93d0-341c3f147e9c.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_yeAhJq",
+        "column_7UtXkx",
+        "column_B6RA7V"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<em><strong>More From The Flagship Lineup</strong></em>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_liquid_Vbj6Ji": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -276,6 +333,7 @@
     "custom_liquid_BdUWRL",
     "hero_component_D9T3hA",
     "multicolumn_tAaPGM",
+    "multicolumn_gzxaHJ",
     "custom_liquid_Vbj6Ji"
   ]
 }
