@@ -14,18 +14,26 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_m7wyLe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studio-logo.jpg",
+            "image_width": 140,
+            "alignment": ""
+          }
+        },
         "comm_channel_LtGX8G": {
           "type": "comm_channel",
           "settings": {
             "channel_label": "Mail",
-            "channel_link": "mailto:support@hndrd.co"
+            "channel_link": "mailto:support@lining.studio"
           }
         },
         "comm_channel_kMqUag": {
           "type": "comm_channel",
           "settings": {
             "channel_label": "WhatsApp",
-            "channel_link": "https://wa.me/+91-8707204138"
+            "channel_link": "https://wa.me/+6569292092"
           }
         },
         "footer-0": {
@@ -37,6 +45,7 @@
         },
         "link_list_kc88rV": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Quick links",
             "menu": "quick-links"
@@ -48,14 +57,22 @@
             "heading": "PAYMENT METHODS",
             "menu": "payment-methods"
           }
+        },
+        "brand_information_AUYt88": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
         }
       },
       "block_order": [
+        "image_m7wyLe",
         "comm_channel_LtGX8G",
         "comm_channel_kMqUag",
         "footer-0",
         "link_list_kc88rV",
-        "link_list_9KtELp"
+        "link_list_9KtELp",
+        "brand_information_AUYt88"
       ],
       "settings": {
         "color_scheme": "scheme-1",
