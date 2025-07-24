@@ -28,7 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/nitrix-70-venom",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -37,10 +37,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n    alt=\"Nitrix Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n  <!-- Gradient Button -->\n  <a href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #64c136, #2ca52c);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE  </a>\n</div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n    <p>All Out Attack</p>\n    <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n    alt=\"Nitrix Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0; padding: 0 2.5rem\"\n  />\n  <p>Built for clean, aggressive power</p>\n  <a href=\"/products/nitrix-70-venom\" class=\"cta\">\n    <span>SHOP NITRIX</span>\n  </a>\n</section>\n\n<style>\n    .cta {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #46a706;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n  \n    .title {\n      font-size: 3.2rem;\n      background-image: linear-gradient(\n        -225deg,\n        #a445b2 0%,\n        #d41872 52%,\n        #ff0066 100%\n      );\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; /* Fallback for unsupported browsers */\n    }\n  \n    @media screen and (min-width: 750px) {\n     \n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "hero_component_MaVYaG": {
@@ -63,7 +63,7 @@
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 32px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -73,7 +73,7 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/third_L.jpg",
-        "mobile_image": "shopify://shop_images/Third_R.jpg",
+        "mobile_image": "shopify://shop_images/Third_R_e3060959-a9fb-49ee-8049-b17745c30e48.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -103,7 +103,7 @@
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Curve² Frame Geometry\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    SWEET SPOT, SHARPENED\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Specialised frame shape that increases sweet spot coverage. \n  </h2>",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
