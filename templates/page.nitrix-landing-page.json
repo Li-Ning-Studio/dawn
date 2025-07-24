@@ -62,17 +62,17 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 32px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto;\" class=\"text\">\n    <p>\n      Its thin, lethal and <span style=\"font-style: oblique;\">fast</span>. <br> The <span class=\"vaporshaft\">6.1mm Vaporshaft</span> is engineered to cut drag, load quicker,\n      and generates a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .text {\n      font-size: 2.5rem;\n      font-weight: 500;\n      letter-spacing: -1px;\n      line-height: 140%;\n      padding: 0 2rem\n    }\n  \n    .vaporshaft {\n      margin: 0;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .text {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "hero_component_LE9qR6": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/third_L.jpg",
+        "image": "shopify://shop_images/third_L_04167cd8-8f78-4481-b427-17217af062a5.jpg",
         "mobile_image": "shopify://shop_images/Third_R_e3060959-a9fb-49ee-8049-b17745c30e48.jpg",
         "subtitle": "",
         "title": "",
