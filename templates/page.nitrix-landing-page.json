@@ -102,10 +102,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Curve² Frame Geometry\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    SWEET SPOT, SHARPENED\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Specialised frame shape that increases sweet spot coverage. \n  </h2>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1rem\" >\n    <p>\n      Curve² Frame Geometry \n    </p>\n    <h3 class=\"spot\">Sweet Spot, Sharpened</h3>\n    <p>Specialised frame shape that increases sweet spot coverage by up to 15%. </p>\n  </section>\n  \n  <style>\n    .spot {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .spot {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 100,
+        "padding_bottom": 84
       }
     },
     "multicolumn_dXwFQN": {
@@ -116,7 +116,7 @@
           "settings": {
             "image": "shopify://shop_images/Cntrl_Foam.jpg",
             "title": "",
-            "text": "<p>Inserted in the frame to <strong>dampen vibration</strong> and <strong>stabilize </strong>the racket on contact. </p>",
+            "text": "<p>Inserted in the frame to dampen vibration and stabilize the racket on contact. </p>",
             "link_label": "",
             "link": ""
           }
@@ -126,7 +126,7 @@
           "settings": {
             "image": "shopify://shop_images/T-FUSE.jpg",
             "title": "",
-            "text": "<p>A unified <strong>frame-to-shaft </strong>connection that enhances <strong>stability </strong>and <strong>energy transfer</strong>.</p>",
+            "text": "<p>A unified frame-to-shaft<strong> </strong>connection that enhances stability<strong> </strong>and energy transfer.</p>",
             "link_label": "",
             "link": ""
           }
@@ -136,7 +136,7 @@
           "settings": {
             "image": "shopify://shop_images/M46X.jpg",
             "title": "",
-            "text": "<p>Reinforced <strong>Carbon </strong>structure for a <strong>crisp</strong>, <strong>responsive </strong>feel.</p>",
+            "text": "<p>Reinforced Carbon<strong> </strong>structure for a crisp, responsive<strong> </strong>feel.</p>",
             "link_label": "",
             "link": ""
           }
@@ -158,7 +158,7 @@
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 20,
@@ -235,7 +235,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<strong>Trusted By Champions</strong>",
+        "title": "Trusted By Champions",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "portrait",
@@ -243,12 +243,12 @@
         "button_link": "",
         "columns_desktop": 2,
         "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-5",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "multicolumn_VE8jan": {
@@ -292,7 +292,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<em><strong>More From The Flagship Lineup</strong></em>",
+        "title": "The Pro Series",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "portrait",
@@ -301,7 +301,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
