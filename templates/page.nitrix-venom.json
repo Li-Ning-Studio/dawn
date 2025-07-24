@@ -11,13 +11,167 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_video_component_R6pn9K": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/1920x700.mp4",
+        "mobile_video": "shopify://files/videos/sq.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_MqmWDm": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n    alt=\"Nitrix Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n  <!-- Gradient Button -->\n  <a href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #64c136, #2ca52c);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE  </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_7tJim4": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Second_L.jpg",
+        "mobile_image": "shopify://shop_images/Second_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Qt6dUk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 32px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_4TahnU": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/third_L.jpg",
+        "mobile_image": "shopify://shop_images/Third_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_Kd7WTY": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fourth_L.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Ed6FxM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Curve² Frame Geometry\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    SWEET SPOT, SHARPENED\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Specialised frame shape that increases sweet spot coverage. \n  </h2>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_TGkGDY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Ybphqn": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ptw6B3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WK963R": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Ybphqn",
+        "column_ptw6B3",
+        "column_WK963R"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_video_component_R6pn9K",
+    "custom_liquid_MqmWDm",
+    "hero_component_7tJim4",
+    "custom_liquid_Qt6dUk",
+    "hero_component_4TahnU",
+    "hero_component_Kd7WTY",
+    "custom_liquid_Ed6FxM",
+    "multicolumn_TGkGDY"
   ]
 }
