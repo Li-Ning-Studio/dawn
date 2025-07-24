@@ -92,6 +92,63 @@
         "padding_bottom": 0
       }
     },
+    "multicolumn_7q6pTf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_feYEpX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2.jpg",
+            "title": "",
+            "text": "<p>Reinforced <strong>Carbon </strong>structure for a <strong>crisp</strong>, <strong>responsive </strong>feel</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fqNy3j": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3.jpg",
+            "title": "",
+            "text": "<p>Specialised <strong>frame shape</strong> that increases <strong>sweet-spot</strong> coverage</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_edrwk8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2.jpg",
+            "title": "",
+            "text": "<p><strong>Aerospace </strong>grade <strong>Graphite </strong>for structural integrity</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_feYEpX",
+        "column_fqNy3j",
+        "column_edrwk8"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_RnpHpU": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -113,6 +170,21 @@
       "settings": {
         "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Attack Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #00154f, #2785b5);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REVOLUTIONIZING POWER\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play like a champion with the most powerful racket in your hand \n  </h2>",
         "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_AzMhMC": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_ac898356-8de1-40f0-8d27-2b9727a8c60d.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_7e804d60-f150-4c17-b44c-3b41107fb9ed.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -218,8 +290,10 @@
     "custom_liquid_mhEgDw",
     "hero_component_L67BMi",
     "custom_liquid_CjLXCR",
+    "multicolumn_7q6pTf",
     "hero_component_RnpHpU",
     "custom_liquid_JjiV8a",
+    "hero_component_AzMhMC",
     "multicolumn_KUfrxc",
     "multicolumn_AUrQgt"
   ]
