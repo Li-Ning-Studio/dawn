@@ -41,7 +41,7 @@
     <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
- 
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -146,7 +146,6 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-        /* --page-width: {{ settings.page_width | divided_by: 10 }}rem; */
         --page-width: 157rem;
 
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
@@ -281,7 +280,7 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -317,6 +316,7 @@
       >
     {%- endif -%}
 
+    {% comment %} <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> {% endcomment %}
     <script>
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
@@ -325,6 +325,11 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    {% render 'gokwik' %}
+
+    <link rel="stylesheet" href="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.css">
+    {% render 'gokwik-sdk' %}
+
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -410,4 +415,5 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
+  <script defer="defer" src="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.js"></script>
 </html>
