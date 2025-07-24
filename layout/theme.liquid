@@ -41,14 +41,10 @@
     <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
- 
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    {% render 'gokwik' %}
-
-    <link rel="stylesheet" href="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.css">
 
     {{ content_for_header }}
 
@@ -329,6 +325,9 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    {% render 'gokwik' %}
+
+    <link rel="stylesheet" href="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.css">
     {% render 'gokwik-sdk' %}
 
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">

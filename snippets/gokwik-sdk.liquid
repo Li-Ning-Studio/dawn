@@ -49,10 +49,14 @@
 
   window.addCartBuyNow = () => {
     let products = getProducts();
-    makeXhr('POST', '/cart/add.js', products, function (statusCode, response) {
+    makeXhr('POST', '/cart/clear.js', '', function (statusCode) {
       if (statusCode === 200) {
-        localStorage.setItem('gkbuynow', 'active');
-        initiateLogin();
+        makeXhr('POST', '/cart/add.js', products, function (j) {
+          if (j == 200) {
+            localStorage.setItem('gkbuynow', 'active');
+            initiateLogin();
+          }
+        });
       }
     });
   };
