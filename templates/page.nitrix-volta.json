@@ -1,0 +1,348 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "hero_video_component_mieydb": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt_f840e49b-7fb2-46eb-808e-16426dbd89f0.mp4",
+        "mobile_video": "shopify://files/videos/sq.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_GnFrEP": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Catch Me If You Can\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/logo_0fc56931-21ab-48bc-8376-9f877a680ec2.png?v=1752833409\" \n    alt=\"Flareon Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 1px 0 15px;\">\n    LEAVE LIGHTNING BEHIND\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"https://in.hndrd.co/products/flareon-700\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #fc4b35, #8c0901);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    SPEED STARTS HERE\n  </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_dFmnd7": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Second_L.jpg",
+        "mobile_image": "shopify://shop_images/Second_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_TAcnUM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Torsion Stop System\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   FAST. FIERCE. FLAREON\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Racket-stabilizing tech eliminates twisting for a clear shot path\n  </h2>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_nrUXE6": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/third_L.jpg",
+        "mobile_image": "shopify://shop_images/Third_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_cztEp4": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bNXbDg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2_ead4da23-286f-4d7e-8deb-cfb26bad3408.jpg",
+            "title": "",
+            "text": "<p>Tightly woven <strong>carbon mesh</strong> for <strong>strength </strong>and <strong>structure</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hyHcAD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3.jpg",
+            "title": "",
+            "text": "<p><strong>Aerospace </strong>grade <strong>Graphite </strong>for structural integrity</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AGhPAa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_4.jpg",
+            "title": "",
+            "text": "<p>A unified <strong>frame-to-shaft</strong> connection that enhances <strong>stability </strong>and <strong>energy transfer</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_bNXbDg",
+        "column_hyHcAD",
+        "column_AGhPAa"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_z4JhGU": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fourth_L.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_jWXADT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Speed Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REDEFINING SPEED  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play at a pace that cannot be caught  </h2>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_TziVPq": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_xLwcU7": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_d83a6e4e-6911-40d4-9f93-068c4f63847f.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_NhV9wy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_QEY7Wt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Pl1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TWey7Q": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Pl2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_btFk39": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Pl3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DUdpbM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Pl4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_QEY7Wt",
+        "column_TWey7Q",
+        "column_btFk39",
+        "column_DUdpbM"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Trusted By Champions</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_8xVGgp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MhcHWf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_958d5bed-b55e-4cf4-9900-2052ba8b5bea_1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Td6gPy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_e578f9d6-1504-49c4-bc96-0e25abc4ac49.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6mGeVJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_ab549237-062a-4026-8105-a47ab014588a.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_MhcHWf",
+        "column_Td6gPy",
+        "column_6mGeVJ"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<em><strong>More From The Flagship Lineup</strong></em>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Jj687f": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n  <title>Badminton Rackets</title>\n  <style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    .container {\n      max-width: 1200px;\n      margin: 0 auto;\n      padding: 2rem 1rem;\n    }\n\n    .products-row {\n      display: flex;\n      justify-content: space-between;\n    }\n\n    .product-column {\n      flex: 0 0 23%;\n      padding: 1.5rem;\n      text-align: center;\n      border-left: 1px solid #ccc;\n      margin-bottom: 2rem;\n    }\n\n    .product-column:first-child {\n      border-left: none;\n    }\n\n    .racket-img {\n      width: 40%;\n      height: auto;\n      margin-bottom: 0.5rem;\n    }\n\n    .product-title-text {\n      font-weight: 700;\n      font-size: 1.4rem;\n      margin-bottom: 0.75rem;\n      background-clip: text;\n      -webkit-background-clip: text;\n      color: transparent;\n    }\n\n    .venom-title {\n      background-image: linear-gradient(to right, #3bb537, #1b3822);\n    }\n\n    .volta-title {\n      background-image: linear-gradient(to right, #3ca6f3, #1b1e3f);\n    }\n\n    .flareon-title {\n      background-image: linear-gradient(to right, #f44336, #8e0e00);\n    }\n\n    .hyfonic-title {\n      background-image: linear-gradient(to right, #9f5cf7, #0c0624);\n    }\n\n    .attack-tag {\n      display: inline-block;\n      font-size: 0.75rem;\n      font-weight: 500;\n      background: rgba(0, 0, 0, 0.05);\n      padding: 0.35rem 0.75rem;\n      border-radius: 999px;\n      margin-bottom: 1rem;\n    }\n\n    .specs-section {\n      font-size: 0.85rem;\n      margin-top: 1rem;\n      text-align: center;\n    }\n\n    .spec-block {\n      margin-bottom: 1.1rem;\n    }\n\n    .spec-label {\n      font-weight: 600;\n      color: #1a1a1a;\n      margin-bottom: 0.2rem;\n    }\n\n    .spec-values {\n      color: #444;\n      margin-top: 0.2rem;\n    }\n\n    .feature-list {\n      list-style: none;\n      padding-left: 0;\n      margin: 0.25rem auto 0;\n      display: inline-block;\n      text-align: center;\n      line-height: 1.4;\n    }\n\n    .feature-list li {\n      margin: 0.2rem 0;\n    }\n\n    /* Mobile View - Swipable */\n    @media (max-width: 768px) {\n      .container {\n        padding: 1rem 0;\n        overflow: hidden;\n      }\n\n      .products-row {\n        display: flex;\n        overflow-x: auto;\n        scroll-snap-type: x mandatory;\n        -webkit-overflow-scrolling: touch;\n        scrollbar-width: none;\n        -ms-overflow-style: none;\n        gap: 1rem;\n        padding: 0 1rem;\n      }\n\n      .products-row::-webkit-scrollbar {\n        display: none;\n      }\n\n      .product-column {\n        flex: 0 0 calc(50% - 0.5rem);\n        min-width: calc(50% - 0.5rem);\n        border-left: 1px solid #ccc;\n        border-right: 1px solid #ccc;\n        border-radius: 12px;\n        padding: 1rem;\n        margin-bottom: 1rem;\n        scroll-snap-align: start;\n        background: #fafafa;\n      }\n\n      .product-column:first-child {\n        border-left: 1px solid #ccc;\n      }\n\n      .product-title-text {\n        font-size: 1.1rem;\n      }\n\n      .racket-img {\n        width: 90%;\n        margin: 0 auto 0.5rem;\n      }\n\n      .specs-section {\n        font-size: 0.8rem;\n      }\n\n      .spec-block {\n        margin-bottom: 0.8rem;\n      }\n\n      .attack-tag {\n        font-size: 0.7rem;\n        padding: 0.25rem 0.5rem;\n      }\n    }\n\n    /* Very small screens */\n    @media (max-width: 480px) {\n      .product-column {\n        flex: 0 0 calc(50% - 0.5rem);\n        min-width: calc(50% - 0.5rem);\n        padding: 0.8rem;\n      }\n\n      .product-title-text {\n        font-size: 1rem;\n      }\n\n      .specs-section {\n        font-size: 0.75rem;\n      }\n    }\n\n    /* Scroll indicator for mobile */\n    @media (max-width: 768px) {\n      .container::after {\n        content: \"← Swipe to see more →\";\n        display: block;\n        text-align: center;\n        color: #888;\n        font-size: 0.8rem;\n        margin-top: 1rem;\n        font-style: italic;\n      }\n    }\n\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"products-row\">\n\n      <!-- Nitrix 70 Venom -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Venom.png?v=1753182756\" />\n        <div class=\"product-title-text venom-title\">NITRIX 70 VENOM</div>\n        <div class=\"attack-tag\">⚔️ Attack Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">6.1mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>T-Fuse</li>\n              <li>CNTRLfoam</li>\n              <li>M46x Carbon Fibre</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Nitrix 70 Volta -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Volta.png?v=1753182756\" />\n        <div class=\"product-title-text volta-title\">NITRIX 70 VOLTA</div>\n        <div class=\"attack-tag\">⚔️ Attack Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>Aerodynamic Frame</li>\n              <li>AECG+ Carbon Fiber</li>\n              <li>M46x Carbon Fibre</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Flareon 700 -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Flareon.png?v=1753182756\" />\n        <div class=\"product-title-text flareon-title\">FLAREON 700</div>\n        <div class=\"attack-tag\">💨 Speed Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>TorsionStop Technology</li>\n              <li>CNTRLfoam</li>\n              <li>AECG+ Carbon Fiber</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Hyfonic 7 -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Hyfonic.png?v=1753182756\" />\n        <div class=\"product-title-text hyfonic-title\">HYFONIC 7</div>\n        <div class=\"attack-tag\">🎯 Precision Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>Dual Aerodynamic Frame</li>\n              <li>CNTRLfoam</li>\n              <li>HyperWeave Carbon Fiber</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_video_component_mieydb",
+    "custom_liquid_GnFrEP",
+    "hero_component_dFmnd7",
+    "custom_liquid_TAcnUM",
+    "hero_component_nrUXE6",
+    "multicolumn_cztEp4",
+    "hero_component_z4JhGU",
+    "custom_liquid_jWXADT",
+    "hero_component_TziVPq",
+    "hero_component_xLwcU7",
+    "multicolumn_NhV9wy",
+    "multicolumn_8xVGgp",
+    "custom_liquid_Jj687f"
+  ]
+}
