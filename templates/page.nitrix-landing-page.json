@@ -62,7 +62,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto;\" class=\"text\">\n    <p>\n      Its thin, lethal and <span style=\"font-style: oblique;\">fast</span>. <br> The <span class=\"vaporshaft\">6.1mm Vaporshaft</span> is engineered to cut drag, load quicker,\n      and generates a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .text {\n      font-size: 2.5rem;\n      font-weight: 500;\n      letter-spacing: -1px;\n      line-height: 140%;\n      padding: 0 2rem\n    }\n  \n    .vaporshaft {\n      margin: 0;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .text {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n      Thin, fast & lethal\n    </p>\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 100
@@ -102,7 +102,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1rem\" >\n    <p>\n      Curve² Frame Geometry \n    </p>\n    <h3 class=\"spot\">Sweet Spot, Sharpened</h3>\n    <p>Specialised frame shape that increases sweet spot coverage by up to 15%. </p>\n  </section>\n  \n  <style>\n    .spot {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .spot {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n      Curve² Frame Geometry \n    </p>\n    <h3 class=\"spot\">Sweet Spot, Sharpened</h3>\n    <p style=\"margin: 3px 0;\">Specialised frame shape that increases sweet spot coverage by up to 15%. </p>\n  </section>\n  \n  <style>\n    .spot {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .spot {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 84
@@ -182,6 +182,7 @@
     },
     "custom_liquid_rXxg4N": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Attack Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REVOLUTIONIZING POWER\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play like a champion with the most powerful racket in your hand \n  </h2>",
@@ -192,6 +193,7 @@
     },
     "hero_component_ViHczn": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Banner_2_f53083d3-2380-4b31-b2b7-8c23c1ff1651.jpg",
