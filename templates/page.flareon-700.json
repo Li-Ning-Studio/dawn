@@ -57,12 +57,138 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_TAcnUM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Torsion Stop System\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   FAST. FIERCE. FLAREON\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Racket-stabilizing tech eliminates twisting for a clear shot path\n  </h2>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_nrUXE6": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/third_L.jpg",
+        "mobile_image": "shopify://shop_images/Third_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_cztEp4": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bNXbDg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2_ead4da23-286f-4d7e-8deb-cfb26bad3408.jpg",
+            "title": "",
+            "text": "<p>Tightly woven <strong>carbon mesh</strong> for <strong>strength </strong>and <strong>structure</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hyHcAD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3.jpg",
+            "title": "",
+            "text": "<p><strong>Aerospace </strong>grade <strong>Graphite </strong>for structural integrity</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AGhPAa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_4.jpg",
+            "title": "",
+            "text": "<p>A unified <strong>frame-to-shaft</strong> connection that enhances <strong>stability </strong>and <strong>energy transfer</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_bNXbDg",
+        "column_hyHcAD",
+        "column_AGhPAa"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_z4JhGU": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Fourth_L.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_jWXADT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Speed Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REDEFINING SPEED  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play at a pace that cannot be caught  </h2>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_TziVPq": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_video_component_mieydb",
     "custom_liquid_GnFrEP",
-    "hero_component_dFmnd7"
+    "hero_component_dFmnd7",
+    "custom_liquid_TAcnUM",
+    "hero_component_nrUXE6",
+    "multicolumn_cztEp4",
+    "hero_component_z4JhGU",
+    "custom_liquid_jWXADT",
+    "hero_component_TziVPq"
   ]
 }
