@@ -142,8 +142,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Fourth_L.jpg",
-        "mobile_image": "shopify://shop_images/Fourth_R.jpg",
+        "image": "shopify://shop_images/Fourth_L_82e2972a-5583-4fca-a960-e757c7ddffa1.jpg",
+        "mobile_image": "shopify://shop_images/Fourth_R_e27f431b-d0d1-4efd-868d-259776198aa4.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -157,7 +157,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Curve² Frame Geometry\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    SWEET SPOT, SHARPENED\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Specialised frame shape that increases sweet spot coverage. \n  </h2>",
+        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Speed Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REDEFINING SPEED  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play at a pace that cannot be caught  </h2>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -167,8 +167,6 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Fifth_L.jpg",
-        "mobile_image": "shopify://shop_images/Fifth_R.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -178,22 +176,12 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_BdUWRL": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Attack Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REVOLUTIONIZING POWER\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play like a champion with the most powerful racket in your hand \n  </h2>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_D9T3hA": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R.jpg",
+        "image": "shopify://shop_images/Banner_2_9bc08ddf-df37-4feb-87c7-629f31b50766.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_d6362ce6-45ed-4cb3-b60f-5af54eb0c810.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -209,7 +197,7 @@
         "column_rkaDML": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/1.jpg",
+            "image": "shopify://shop_images/Pl1.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -219,7 +207,27 @@
         "column_EEhYym": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/2.jpg",
+            "image": "shopify://shop_images/Pl2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mBzTB3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Pl3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qeciJT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Pl4.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -229,7 +237,9 @@
       },
       "block_order": [
         "column_rkaDML",
-        "column_EEhYym"
+        "column_EEhYym",
+        "column_mBzTB3",
+        "column_qeciJT"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -328,7 +338,6 @@
     "hero_component_Kd7WTY",
     "custom_liquid_Ed6FxM",
     "hero_component_bgERnM",
-    "custom_liquid_BdUWRL",
     "hero_component_D9T3hA",
     "multicolumn_tAaPGM",
     "multicolumn_gzxaHJ",
