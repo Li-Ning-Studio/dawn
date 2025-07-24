@@ -28,6 +28,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_EjyxCG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title\">\n    Peak Performance Trio\n  </h1>\n  <p style=\"margin-top: 3px\">Pro Rackets Series from HNDRD.</p>\n  <a href=\"/collections/flagship\" class=\"cta\">\n    <span>Explore</span>\n  </a>\n</section>\n\n<style>\n  .cta {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #ff0066;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #a445b2 0%,\n      #d41872 52%,\n      #ff0066 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "hero_component_hdAtTh": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -39,18 +49,18 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
-    "custom_liquid_EjyxCG": {
+    "custom_liquid_YFjfEK": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .animated-gradient {\n    background: linear-gradient(\n      145deg,\n      #67ca51 0%,\n      #67ca51 30%,\n      #b92724 35%,\n      #b92724 65%,\n      #6e32c0 70%,\n      #6e32c0 100%\n    );\n    background-size: 400% 400%;\n\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GradientAnimation 6s ease infinite;\n    -moz-animation: GradientAnimation 6s ease infinite;\n    animation: GradientAnimation 6s ease infinite;\n  }\n\n  @-webkit-keyframes GradientAnimation {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GradientAnimation {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GradientAnimation {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <!-- Countdown Button -->\n    <div style=\"text-align: center; padding: 5px 5px;\">\n      <a id=\"attack-button\" href=\"https://in.hndrd.co/products/nitrix-70-venom\" style=\"\n        display: inline-block;\n        padding: 7px 35px;\n        background-color: black;\n        color: white;\n        border-radius: 9999px;\n        font-size: 14px;\n        text-decoration: none;\n        font-weight: 500;\n        transition: opacity 0.3s ease;\n        text-align: center;\n        margin-bottom: 20px;\n      \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n        ENTER ATTACK MODE\n      </a>\n\n      <script>\n        var countDownDate = new Date(\"Jul 25, 2025 00:00:00\").getTime();\n        var x = setInterval(function () {\n          var now = new Date().getTime();\n          var distance = countDownDate - now;\n          var days = Math.floor(distance / (1000 * 60 * 60 * 24));\n          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n          var seconds = Math.floor((distance % (1000 * 60)) / 1000);\n\n          document.getElementById(\"attack-button\").innerHTML =\n            days + \"D : \" + hours + \"H : \" + minutes + \"M : \" + seconds + \"S\";\n\n          if (distance < 0) {\n            clearInterval(x);\n            document.getElementById(\"attack-button\").innerHTML = \"EXPIRED\";\n          }\n        }, 1000);\n      </script>\n    </div>\n\n    <!-- Title -->\n    <h1 style=\"font-size: 3rem; text-align: center; margin-top: 0rem; font-weight: 700; line-height: 3rem; letter-spacing: -2px;\">\n      <span class=\"animated-gradient large-text\">\n        Championship Trinity\n      </span>\n      <br />Experience The Heart of Performance\n    </h1>\n\n    <!-- Subtitle (smaller) -->\n    <p style=\"text-align: center; font-size: 1.25rem;\">\n      Designed For The Professionals\n    </p>\n  </section>\n</section>",
-        "color_scheme": "",
-        "padding_top": 24,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0.2px\">\n  <p>Three Rackets. Three Flavours.</p>\n  <h2 class=\"second-title\">Attack, Precision and Speed</h2>\n</section>\n\n<style>\n  .second-title {\n    font-size: 3rem;\n    font-weight: 800;\n    margin: 0;\n    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 6rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "image_with_text_jPMiPP": {
@@ -59,14 +69,14 @@
         "heading_FtmEVA": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "Meet Nitrix 70 Venom",
             "heading_size": "h1"
           }
         },
         "text_ETJLgQ": {
           "type": "text",
           "settings": {
-            "text": "<p>The Nitrix series stands at the forefront of raw power, and uncompromising attack on the court. Belonging to the flagship trio alongside Flareon- known for speed, and Hyfonic- defined by control, Nitrix is Hundred’s answer to cementing itself as the unchallenged force born for lethal play.</p>",
+            "text": "<p>Crafted for heavy smashes and offensive play. It loads up each swing with momentum, while its ultra-slim 6.1mm shaft creates a whip-like effect on contact. M46X carbon fiber ensures superior power transfer and responsiveness and CNTRL Foam lines the inner frame to absorb shock and keep each shot stable.<br/><br/></p>",
             "text_style": "body"
           }
         },
@@ -75,7 +85,7 @@
           "settings": {
             "button_label": "Enter Attack Mode →",
             "button_link": "shopify://pages/nitrix",
-            "button_style_secondary": false
+            "button_style_secondary": true
           }
         }
       },
@@ -87,18 +97,18 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/1_958d5bed-b55e-4cf4-9900-2052ba8b5bea.jpg",
-        "height": "large",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-c5a7677a-37ad-48d4-8346-662351ba2e4d",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "image_with_text_gg4dMp": {
@@ -107,14 +117,14 @@
         "heading_hxzzcX": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "Nitrix 70 Volta is Here",
             "heading_size": "h1"
           }
         },
         "text_NkUbX4": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Nitrix 70 Volta</strong> is built for clean, aggressive power. Its head-heavy balance and aerodynamic frame allow you to cut through the air and generate maximum power in every swing. M46X carbon fiber boosts energy transfer, while AECG+ carbon fibre ensures a sharp snap-back and structural rigidity. With T-Fuse technology strengthening the racket’s core, Volta is built to be a smash machine. </p>",
+            "text": "<p>Manufactured for clean, aggressive power. Its aerodynamic frame allows you to cut through the air and generate maximum power in every swing. M46X carbon fiber boosts energy transfer, while AECG+ carbon fibre ensures a sharp snap-back and structural rigidity. With T-Fuse technology strengthening the racket’s core, Volta is built to be a smash machine.</p>",
             "text_style": "body"
           }
         },
@@ -135,18 +145,18 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/2_ab549237-062a-4026-8105-a47ab014588a.jpg",
-        "height": "large",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-a06966ed-7c64-4f36-a8f6-38d7f033d163",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "image_with_text_NwWW6W": {
@@ -155,14 +165,14 @@
         "heading_dEP8YQ": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "Introducing Hyfonic 7",
             "heading_size": "h1"
           }
         },
         "text_QEppzq": {
           "type": "text",
           "settings": {
-            "text": "<p>There’s no margin for error when the game is decided by millimeters. <strong>Hyfonic</strong> is the sniper’s choice; precision that’s surgical. It shares the stage with Hundred’s Nitrix that crushes with raw force and Flareon that burns with speed. Hyfonic calculates angles like none other. </p><p>This is precision in its purest form where it plays the game of fractions and walks away with accuracy so sharp it feels inevitable. </p>",
+            "text": "<p>Hyfonic 7 responds with sharp, deliberate feedback on every stroke. The Dual Aerodynamic Frame keeps the shuttle steady through air, cutting drag both ways to support pinpoint accuracy. Torsion Stop Technology locks the frame from unwanted twists on impact, while CNTRL Foam cushions vibrations for a stable, composed hit. Reinforced with HyperWeave Carbon Fiber, Hyfonic 7 stays poised, even when the game isn’t.</p>",
             "text_style": "body"
           }
         },
@@ -171,7 +181,7 @@
           "settings": {
             "button_label": "Precision Awaits →",
             "button_link": "shopify://pages/hyfonic-7",
-            "button_style_secondary": false
+            "button_style_secondary": true
           }
         }
       },
@@ -183,18 +193,18 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/3_e578f9d6-1504-49c4-bc96-0e25abc4ac49.jpg",
-        "height": "large",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-c57341a8-c5ce-4660-88c9-22b1fddba46a",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "image_with_text_hjKkyD": {
@@ -203,14 +213,14 @@
         "heading_LwgDnw": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "Presenting Flareon 700",
             "heading_size": "h1"
           }
         },
         "text_466kTG": {
           "type": "text",
           "settings": {
-            "text": "<p>Flareon zooms where others hesitate. In Hundred’s flagship trio, where Nitrix brings the storm and Hyfonic dictates the tempo, this series is the speed specialist. Lightning-fast swings, razor-sharp reactions, and seamless mobility make it a force that can never be caught up to. When the difference between winning and losing is a split-second, Flareon serves you victory, every time. </p>",
+            "text": "<p>Experience the true feeling of lightning-fast hands with the Flareon 700.Built for speed, this racket supports rapid reactions and early interceptions. The Torsion Stop System avoids unwanted twisting, while AECG+ carbon fibre ensures structural stability during fast-paced exchanges. With CNTRLFoam absorbing shock and VaporShaft providing precision handling, Flareon 700 is the fastest racket in Hundred’s lineup.</p>",
             "text_style": "body"
           }
         },
@@ -231,18 +241,29 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/4_b0b1f2b3-af1c-4c20-ad1f-db083c6f53f5.jpg",
-        "height": "large",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-20c62ed1-afb2-4f2b-8d0e-6ff0433e48c7",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_tHeNLe": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n  <title>Badminton Rackets</title>\n  <style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    .container {\n      max-width: 1200px;\n      margin: 0 auto;\n      padding: 2rem 1rem;\n    }\n\n    .products-row {\n      display: flex;\n      justify-content: space-between;\n    }\n\n    .product-column {\n      flex: 0 0 23%;\n      padding: 1.5rem;\n      text-align: center;\n      border-left: 1px solid #ccc;\n      margin-bottom: 2rem;\n    }\n\n    .product-column:first-child {\n      border-left: none;\n    }\n\n    .racket-img {\n      width: 40%;\n      height: auto;\n      margin-bottom: 0.5rem;\n    }\n\n    .product-title-text {\n      font-weight: 700;\n      font-size: 1.4rem;\n      margin-bottom: 0.75rem;\n      background-clip: text;\n      -webkit-background-clip: text;\n      color: transparent;\n    }\n\n    .venom-title {\n      background-image: linear-gradient(to right, #3bb537, #1b3822);\n    }\n\n    .volta-title {\n      background-image: linear-gradient(to right, #3ca6f3, #1b1e3f);\n    }\n\n    .flareon-title {\n      background-image: linear-gradient(to right, #f44336, #8e0e00);\n    }\n\n    .hyfonic-title {\n      background-image: linear-gradient(to right, #9f5cf7, #0c0624);\n    }\n\n    .attack-tag {\n      display: inline-block;\n      font-size: 0.75rem;\n      font-weight: 500;\n      background: rgba(0, 0, 0, 0.05);\n      padding: 0.35rem 0.75rem;\n      border-radius: 999px;\n      margin-bottom: 1rem;\n    }\n\n    .specs-section {\n      font-size: 0.85rem;\n      margin-top: 1rem;\n      text-align: center;\n    }\n\n    .spec-block {\n      margin-bottom: 1.1rem;\n    }\n\n    .spec-label {\n      font-weight: 600;\n      color: #1a1a1a;\n      margin-bottom: 0.2rem;\n    }\n\n    .spec-values {\n      color: #444;\n      margin-top: 0.2rem;\n    }\n\n    .feature-list {\n      list-style: none;\n      padding-left: 0;\n      margin: 0.25rem auto 0;\n      display: inline-block;\n      text-align: center;\n      line-height: 1.4;\n    }\n\n    .feature-list li {\n      margin: 0.2rem 0;\n    }\n\n    /* Mobile View - Swipable */\n    @media (max-width: 768px) {\n      .container {\n        padding: 1rem 0;\n        overflow: hidden;\n      }\n\n      .products-row {\n        display: flex;\n        overflow-x: auto;\n        scroll-snap-type: x mandatory;\n        -webkit-overflow-scrolling: touch;\n        scrollbar-width: none;\n        -ms-overflow-style: none;\n        gap: 1rem;\n        padding: 0 1rem;\n      }\n\n      .products-row::-webkit-scrollbar {\n        display: none;\n      }\n\n      .product-column {\n        flex: 0 0 calc(50% - 0.5rem);\n        min-width: calc(50% - 0.5rem);\n        border-left: 1px solid #ccc;\n        border-right: 1px solid #ccc;\n        border-radius: 12px;\n        padding: 1rem;\n        margin-bottom: 1rem;\n        scroll-snap-align: start;\n        background: #fafafa;\n      }\n\n      .product-column:first-child {\n        border-left: 1px solid #ccc;\n      }\n\n      .product-title-text {\n        font-size: 1.1rem;\n      }\n\n      .racket-img {\n        width: 90%;\n        margin: 0 auto 0.5rem;\n      }\n\n      .specs-section {\n        font-size: 0.8rem;\n      }\n\n      .spec-block {\n        margin-bottom: 0.8rem;\n      }\n\n      .attack-tag {\n        font-size: 0.7rem;\n        padding: 0.25rem 0.5rem;\n      }\n    }\n\n    /* Very small screens */\n    @media (max-width: 480px) {\n      .product-column {\n        flex: 0 0 calc(50% - 0.5rem);\n        min-width: calc(50% - 0.5rem);\n        padding: 0.8rem;\n      }\n\n      .product-title-text {\n        font-size: 1rem;\n      }\n\n      .specs-section {\n        font-size: 0.75rem;\n      }\n    }\n\n    /* Scroll indicator for mobile */\n    @media (max-width: 768px) {\n      .container::after {\n        content: \"← Swipe to see more →\";\n        display: block;\n        text-align: center;\n        color: #888;\n        font-size: 0.8rem;\n        margin-top: 1rem;\n        font-style: italic;\n      }\n    }\n\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"products-row\">\n\n      <!-- Nitrix 70 Venom -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Venom.png?v=1753182756\" />\n        <div class=\"product-title-text venom-title\">NITRIX 70 VENOM</div>\n        <div class=\"attack-tag\">⚔️ Attack Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">6.1mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>T-Fuse</li>\n              <li>CNTRLfoam</li>\n              <li>M46x Carbon Fibre</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Nitrix 70 Volta -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Volta.png?v=1753182756\" />\n        <div class=\"product-title-text volta-title\">NITRIX 70 VOLTA</div>\n        <div class=\"attack-tag\">⚔️ Attack Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>Aerodynamic Frame</li>\n              <li>AECG+ Carbon Fiber</li>\n              <li>M46x Carbon Fibre</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Flareon 700 -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Flareon.png?v=1753182756\" />\n        <div class=\"product-title-text flareon-title\">FLAREON 700</div>\n        <div class=\"attack-tag\">💨 Speed Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>TorsionStop Technology</li>\n              <li>CNTRLfoam</li>\n              <li>AECG+ Carbon Fiber</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Hyfonic 7 -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Hyfonic.png?v=1753182756\" />\n        <div class=\"product-title-text hyfonic-title\">HYFONIC 7</div>\n        <div class=\"attack-tag\">🎯 Precision Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>Dual Aerodynamic Frame</li>\n              <li>CNTRLfoam</li>\n              <li>HyperWeave Carbon Fiber</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</body>\n</html>",
+        "color_scheme": "scheme-3",
+        "padding_top": 8,
+        "padding_bottom": 52
       }
     },
     "1752852807f1fb61ba": {
@@ -269,6 +290,7 @@
       "block_order": [
         "forms_inline_bP8nw7"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -277,12 +299,14 @@
   "order": [
     "custom_liquid_kacMde",
     "main",
-    "hero_component_hdAtTh",
     "custom_liquid_EjyxCG",
+    "hero_component_hdAtTh",
+    "custom_liquid_YFjfEK",
     "image_with_text_jPMiPP",
     "image_with_text_gg4dMp",
     "image_with_text_NwWW6W",
     "image_with_text_hjKkyD",
+    "custom_liquid_tHeNLe",
     "1752852807f1fb61ba"
   ]
 }

@@ -224,7 +224,7 @@
         "text_nkrVmL": {
           "type": "text",
           "settings": {
-            "text": "<p>All HNDRD Badminton Court Mats court mats come in a standard sizing of 49.2ft x 23.6ft, with a play area of 44 ft x 20 ft as defined by the BWF Regulations.</p>"
+            "text": "<p>All HNDRD Pickleball Court Mats are designed in a standard size of 44 ft x 20 ft, in alignment with official USA Pickleball guidelines. The mats are engineered for a tournament-like playing experience—indoors</p>"
           }
         }
       },
@@ -246,8 +246,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/cort-01.jpg",
-        "mobile_image": "shopify://shop_images/Equipment_Catalog_2025-2026_5.jpg",
+        "image": "shopify://shop_images/Pik-01.jpg",
+        "mobile_image": "shopify://shop_images/Equipment_Catalog_2025-2026_6.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -286,7 +286,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .table-wrapper {\n    text-align: center;\n    margin-top: 2em;\n  }\n\n  .custom-guidelines-table {\n    display: inline-table;\n    border-collapse: collapse;\n    font-family: Arial, sans-serif;\n    font-size: 14px;\n    width: 100%; /* You can reduce this if you want narrower table */\n  }\n\n  .custom-guidelines-table th,\n  .custom-guidelines-table td {\n    border: 1px solid #ccc;\n    padding: 10px;\n    text-align: left;\n    vertical-align: top;\n  }\n\n  .custom-guidelines-table th {\n    background-color: #f7f7f7;\n    color: #333;\n    font-weight: bold;\n  }\n\n  .custom-guidelines-table tr:nth-child(even) {\n    background-color: #fafafa;\n  }\n</style>\n\n<div class=\"table-wrapper\">\n  <table class=\"custom-guidelines-table\">\n    <thead>\n      <tr>\n        <th>Category</th>\n        <th>Guidelines</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Environment</td>\n        <td>Keep the room clean and dry. Avoid humidity or wet air (AC not mandatory).</td>\n      </tr>\n      <tr>\n        <td>Sunlight</td>\n        <td>Do not expose court mats to direct sunlight.</td>\n      </tr>\n      <tr>\n        <td>Stacking</td>\n        <td>Do not stack mats on top of each other. Prevents deformation and uneven surfaces.</td>\n      </tr>\n      <tr>\n        <td>Weight Impact</td>\n        <td>Bottom mat may get misshaped if overloaded. May result in lumps or uneven spreading.</td>\n      </tr>\n      <tr>\n        <td>Storage Position</td>\n        <td>Do not store mats horizontally. Edges may tear and misalign. Risk of toppling.</td>\n      </tr>\n      <tr>\n        <td>Safety</td>\n        <td>Incorrect storage can cause injury or damage to the mat.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "custom_liquid": "<style>\n  .table-wrapper {\n    text-align: center;\n    margin-top: 2em;\n  }\n\n  .custom-guidelines-table {\n    display: inline-table;\n    border-collapse: collapse;\n    font-family: Arial, sans-serif;\n    font-size: 14px;\n    width: 100%; /* You can reduce this if you want narrower table */\n  }\n\n  .custom-guidelines-table th,\n  .custom-guidelines-table td {\n    border: 1px solid #ccc;\n    padding: 10px;\n    text-align: left;\n    vertical-align: top;\n  }\n\n  .custom-guidelines-table th {\n    background-color: #f7f7f7;\n    color: #333;\n    font-weight: bold;\n  }\n\n  .custom-guidelines-table tr:nth-child(even) {\n    background-color: #fafafa;\n  }\n</style>\n\n<div class=\"table-wrapper\">\n  <table class=\"custom-guidelines-table\">\n    <thead>\n      <tr>\n        <th>Category</th>\n        <th>Guidelines</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Environment</td>\n        <td>Keep the room clean and dry. Avoid humidity or wet air (AC not mandatory).</td>\n      </tr>\n      <tr>\n        <td>Sunlight</td>\n        <td>Do not expose court mats to direct sunlight.</td>\n      </tr>\n      <tr>\n        <td>Stacking</td>\n        <td>Do not stack mats on top of each other. Prevents deformation and uneven surfaces.</td>\n      </tr>\n      <tr>\n        <td>Weight Impact</td>\n        <td>Bottom mat may get misshaped if overloaded. May result in lumps or uneven spreading.</td>\n      </tr>\n      <tr>\n        <td>Storage Position</td>\n        <td>Do not store mats vertically. Edges may tear and misalign. Risk of toppling.</td>\n      </tr>\n      <tr>\n        <td>Safety</td>\n        <td>Incorrect storage can cause injury or damage to the mat.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52

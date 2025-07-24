@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_video_component_agpFBn": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt_b3db05f2-3b91-458d-9b9c-97b56cdc3e9c.mp4",
+        "mobile_video": "shopify://files/videos/sq 1.mp4",
+        "subtitle": "Pro Series",
+        "title": "PROFESSIONAL RACKET SERIES",
+        "description": "HNDRD's Finest Rackets Collection yet",
+        "button_text": "EXPLORE",
+        "link_to": "shopify://pages/flagship",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 68
+      }
+    },
     "hero_component_pmECNB": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -325,6 +341,7 @@
     }
   },
   "order": [
+    "hero_video_component_agpFBn",
     "hero_component_pmECNB",
     "swipeable_products_ak84Mc",
     "hero_component_RKxJeB",
