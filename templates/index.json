@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_video_component_4r8WXU": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt_f51d2ddb-1e10-4e6a-aa2e-57011351ca01.mp4",
+        "mobile_video": "shopify://files/videos/sq 1.mp4",
+        "subtitle": "Hundred's Finest Racket Collection",
+        "title": "PROFESSIONAL RACKET SERIES",
+        "description": "Experience the speed and precision with our latest video showcase",
+        "button_text": "GAME ON",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_nKcbRQ": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -222,6 +238,7 @@
     }
   },
   "order": [
+    "hero_video_component_4r8WXU",
     "hero_component_nKcbRQ",
     "swipeable_products_ptFa6j",
     "hero_component_CE4EqA",
