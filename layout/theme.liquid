@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
+     <script src="https://pdp.gokwik.co/sa-login-ui/gokwik-sso-sdk.js" defer></script>
     {% render 'gokwik' %}
 
-    <link rel="stylesheet" href="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -415,6 +415,6 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
-  <script src="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.js"></script>
+  <!-- <script src="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.js"></script> -->
   <!-- <script defer="defer" src="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.js"></script> -->
 </html>
