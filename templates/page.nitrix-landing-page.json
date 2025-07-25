@@ -253,6 +253,16 @@
         "padding_bottom": 80
       }
     },
+    "custom_liquid_4mBYnk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <p style=\"margin: 3px 0;\">\n     The Ultimate Attacking Racket\n    </p>\n    <h3 class=\"speed\">Revolutionizing Power </h3>\n    <p style=\"margin: 3px 0;\"> \n      Play like a champion with the most powerful racket in your hand \n    </p>\n    <a href=\"/products/nitrix-70-venom\" class=\"cta2\">\n      <span>SHOP NITRIX</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta2 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #00c9ff;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "multicolumn_VE8jan": {
       "type": "multicolumn",
       "blocks": {
@@ -310,16 +320,6 @@
         "padding_bottom": 36
       }
     },
-    "custom_liquid_4mBYnk": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <p style=\"margin: 3px 0;\">\n     The Ultimate Attacking Racket\n    </p>\n    <h3 class=\"speed\">Revolutionizing Power </h3>\n    <p style=\"margin: 3px 0;\"> \n      Play like a champion with the most powerful racket in your hand \n    </p>\n    <a href=\"/products/nitrix-70-venom\" class=\"cta2\">\n      <span>SHOP NITRIX</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta2 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #00c9ff;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
     "custom_liquid_f7fbKy": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -345,8 +345,8 @@
     "custom_liquid_rXxg4N",
     "hero_component_ViHczn",
     "multicolumn_YmTxPe",
-    "multicolumn_VE8jan",
     "custom_liquid_4mBYnk",
+    "multicolumn_VE8jan",
     "custom_liquid_f7fbKy"
   ]
 }
