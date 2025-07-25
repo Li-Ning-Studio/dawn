@@ -155,6 +155,37 @@
         "padding_bottom": 64
       }
     },
+    "image_with_text_pp6AG9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tDnWTh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trusted by the Champions",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tDnWTh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1_a6ff948f-2cb4-4778-95c3-1170ead520a5.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_jmKay8": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -194,37 +225,6 @@
         "link_to": "shopify://products/nitrix-70-volta",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "image_with_text_pp6AG9": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_tDnWTh": {
-          "type": "heading",
-          "settings": {
-            "heading": "Trusted by the Champions",
-            "heading_size": "h0"
-          }
-        }
-      },
-      "block_order": [
-        "heading_tDnWTh"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/1_a6ff948f-2cb4-4778-95c3-1170ead520a5.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn_XdPzLw": {
@@ -340,10 +340,10 @@
     "hero_component_MTWdfj",
     "hero_component_iAYBeq",
     "multicolumn_GWrDmc",
+    "image_with_text_pp6AG9",
     "hero_component_jmKay8",
     "custom_liquid_YgRWtg",
     "hero_component_gYmyYA",
-    "image_with_text_pp6AG9",
     "multicolumn_XdPzLw",
     "multicolumn_6GLqW8",
     "custom_liquid_Vn4CTd"
