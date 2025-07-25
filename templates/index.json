@@ -119,13 +119,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner.jpg",
-        "mobile_image": "shopify://shop_images/Banner_respo1.jpg",
-        "subtitle": "Aero Speed",
-        "title": "FEEL YOUR FEET FLY",
-        "description": "Crafted with High-strength TPU material to help you achieve swift changes in direction, speed and control with comfort.",
-        "button_text": "SPEED UP!",
-        "link_to": "shopify://products/aero-speed",
+        "image": "shopify://shop_images/banner.png",
+        "mobile_image": "shopify://shop_images/banner_responsive.png",
+        "subtitle": "Saga Lite X",
+        "title": "Anchor For Your Feet",
+        "description": "Ultimate Support for your heel for ultimate performnce",
+        "button_text": "Get It Now!",
+        "link_to": "shopify://products/saga-lite-x",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -134,12 +134,9 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "AERO SERIES",
+        "title": "Saga Shoes",
         "products": [
-          "aero-speed",
-          "aero-speed-2-0",
-          "aero-storm",
-          "aero-lite"
+          "saga-lite-x"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -196,21 +193,21 @@
         "column_LNAfXK": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/kitbag_50_50.jpg",
-            "title": "PACK FOR VICTORY",
-            "text": "<p>Supreme functionality and ease for your essentials.</p>",
-            "link_label": "BUY IT HERE!",
+            "image": "shopify://shop_images/kitbag_50_50_d577efec-1972-4183-b627-c00f74d560dd.jpg",
+            "title": "Center Of Attraction",
+            "text": "<p>Sway your coolness with the hot-shots</p>",
+            "link_label": "Buy Now!",
             "link": "shopify://collections/badminton-bags"
           }
         },
         "column_MhkKJy": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/shuttlecock_50_50.jpg",
-            "title": "STRIKE HIGH",
-            "text": "<p>Cut through air like professionals</p>",
-            "link_label": "GET THEM HERE!",
-            "link": "shopify://collections/shuttles"
+            "image": "shopify://shop_images/shuttlecock_50_50_93e3fbdc-7b38-47f9-9a9f-e77337f162b3.jpg",
+            "title": "Make Names!",
+            "text": "<p>Embark your signature not just in your game<br/><br/></p>",
+            "link_label": "Sheathe Now!",
+            "link": "shopify://collections/accessories"
           }
         }
       },
