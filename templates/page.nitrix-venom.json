@@ -28,7 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/nitrix-70-venom-4u",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -37,10 +37,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Built for clean, aggressive power.\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n    alt=\"Nitrix Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 15px; letter-spacing: 0.5px; font-weight: 500; color: #555; margin: 20px 0 30px;\">\n    SPEAKS FLUENT POWER\n  </h2>\n  <!-- Gradient Button -->\n  <a href=\"https://us.hndrd.co/products/nitrix-70-venom-4u\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #64c136, #2ca52c);\n    color: white;\n    border-radius: 9999px;\n    font-size: 14px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    ENTER ATTACK MODE  </a>\n</div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  <p style=\"margin: 6px;\">All Out Attack</p>\n  <img \n  src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n  alt=\"Nitrix Logo\" \n  style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0; padding: 0 2.5rem\"\n/>\n<p style=\"margin: 6px;\">Crafted for heavy smashes and offensive play</p>\n<a href=\"/collections/nitrix-venom\" class=\"cta\">\n  <span>SHOP NITRIX</span>\n</a>\n</section>\n\n<style>\n  .cta {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #46a706;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  \n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 92,
+        "padding_bottom": 92
       }
     },
     "hero_component_dFmnd7": {
@@ -62,10 +62,24 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Vaporshaft 6.1 mm\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 32px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    THIN. FAST. LETHAL.\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Slim-Shaft engineered to cut drag, load quicker, and deliver a powerful whip.\n  </h2>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n      Thin, fast & lethal\n    </p>\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "hero_component_NWxY43": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/third_L-5.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/nitrix-venom",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "hero_component_nrUXE6": {
@@ -323,6 +337,7 @@
     "custom_liquid_GnFrEP",
     "hero_component_dFmnd7",
     "custom_liquid_TAcnUM",
+    "hero_component_NWxY43",
     "hero_component_nrUXE6",
     "custom_liquid_UqaGDr",
     "multicolumn_cztEp4",
