@@ -28,7 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/flareon-700-4u",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -37,10 +37,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 40px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 10px;\">\n    Catch Me If You Can\n  </p>\n\n  <!-- Logo Image -->\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/logo_0fc56931-21ab-48bc-8376-9f877a680ec2.png?v=1752833409\" \n    alt=\"Flareon Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0;\"\n  />\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 1px 0 15px;\">\n    LEAVE LIGHTNING BEHIND\n  </h2>\n\n  <!-- Gradient Button -->\n  <a href=\"https://id.hndrd.co/products/flareon-700-4u\" style=\"\n    display: inline-block;\n    padding: 7px 35px;\n    background-image: linear-gradient(to right, #fc4b35, #8c0901);\n    color: white;\n    border-radius: 9999px;\n    font-size: 13px;\n    text-decoration: none;\n    font-weight: 500;\n    transition: opacity 0.3s ease;\n  \" onmouseover=\"this.style.opacity='0.85'\" onmouseout=\"this.style.opacity='1'\">\n    SPEED STARTS HERE\n  </a>\n</div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n    <p style=\"margin: 5px\">Leave Lightning Behind</p>\n    <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/logo_0fc56931-21ab-48bc-8376-9f877a680ec2.png?v=1752833409\" \n    alt=\"Falreon Logo\" \n    style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0; padding: 0 2.5rem\"\n  />\n  <p style=\"margin: 5px\"> Fastest Racket in HNDRD’s lineup</p>\n  <a href=\"/collections/flareon-700\" class=\"cta\">\n    <span>SHOP FLAREON</span>\n  </a>\n</section>\n\n<style>\n    .cta {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #fd321a;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "hero_component_7tJim4": {
@@ -62,10 +62,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Torsion Stop System\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #4c0101, #d41208);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   FAST. FIERCE. FLAREON\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Racket-stabilizing tech eliminates twisting for a clear shot path\n  </h2>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     Fast. Fierce. Flareon.\n    </p>\n    <h3 class=\"torsion\">Torsion Stop System </h3>\n    <p style=\"margin: 3px 0;\"> \n      Racket-stabilizing tech eliminates twisting for a clear shot path \n    </p>\n  </section>\n  \n  <style>\n    .torsion {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .torsion {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "hero_component_4TahnU": {
@@ -130,8 +130,8 @@
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 20,
