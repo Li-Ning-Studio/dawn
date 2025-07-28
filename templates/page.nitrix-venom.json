@@ -165,19 +165,19 @@
         "padding_bottom": 92
       }
     },
-    "hero_component_z4JhGU": {
+    "hero_component_xLwcU7": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Fifth_L.jpg",
-        "mobile_image": "shopify://shop_images/Fifth_R.jpg",
+        "image": "shopify://shop_images/Banner_2_2988da61-d8f7-4b73-a751-7b4df82804eb.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_2988da61-d8f7-4b73-a751-7b4df82804eb.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/nitrix-70-venom-4u",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 24,
+        "padding_bottom": 28
       }
     },
     "multicolumn_NhV9wy": {
@@ -226,19 +226,29 @@
         "padding_bottom": 36
       }
     },
-    "hero_component_xLwcU7": {
+    "hero_component_z4JhGU": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2_2988da61-d8f7-4b73-a751-7b4df82804eb.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_2988da61-d8f7-4b73-a751-7b4df82804eb.jpg",
+        "image": "shopify://shop_images/Fifth_L.jpg",
+        "mobile_image": "shopify://shop_images/Fifth_R.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/nitrix-70-venom-4u",
-        "padding_top": 24,
-        "padding_bottom": 28
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_9Rbg7M": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <p style=\"margin: 3px 0;\">\n     The Ultimate Attacking Racket\n    </p>\n    <h3 class=\"speed\">Revolutionizing Power </h3>\n    <p style=\"margin: 3px 0;\"> \n      Play like a champion with the most powerful racket in your hand \n    </p>\n    <a href=\"/collections/nitrix-venom\" class=\"cta2\">\n      <span>SHOP NITRIX</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta2 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #00c9ff;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "multicolumn_8xVGgp": {
@@ -291,7 +301,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 16,
@@ -319,9 +329,10 @@
     "hero_component_nrUXE6",
     "custom_liquid_UqaGDr",
     "multicolumn_cztEp4",
-    "hero_component_z4JhGU",
-    "multicolumn_NhV9wy",
     "hero_component_xLwcU7",
+    "multicolumn_NhV9wy",
+    "hero_component_z4JhGU",
+    "custom_liquid_9Rbg7M",
     "multicolumn_8xVGgp",
     "custom_liquid_NfQH6c"
   ]
