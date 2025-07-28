@@ -73,13 +73,14 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/third_L-5.jpg",
+        "mobile_image": "shopify://shop_images/Third_R-4.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://collections/nitrix-venom",
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 64
       }
     },
     "hero_component_nrUXE6": {
@@ -93,18 +94,18 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/nitrix-70-venom-4u",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 68,
+        "padding_bottom": 64
       }
     },
     "custom_liquid_UqaGDr": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    Curve² Frame Geometry\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n    SWEET SPOT, SHARPENED\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Specialised frame shape that increases sweet spot coverage. \n  </h2>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n      Curve² Frame Geometry \n    </p>\n    <h3 class=\"spot\">Sweet Spot, Sharpened</h3>\n    <p style=\"margin: 3px 0;\">Specialised frame shape that increases sweet spot coverage by up to 15%. </p>\n  </section>\n  \n  <style>\n    .spot {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .spot {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 84
       }
     },
     "multicolumn_cztEp4": {
@@ -155,13 +156,13 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "",
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 20,
-        "padding_bottom": 36
+        "padding_top": 92,
+        "padding_bottom": 92
       }
     },
     "hero_component_z4JhGU": {
@@ -170,44 +171,6 @@
       "settings": {
         "image": "shopify://shop_images/Fifth_L.jpg",
         "mobile_image": "shopify://shop_images/Fifth_R.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/nitrix-70-venom-4u",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_jWXADT": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding: 20px 20px;\">\n  <!-- Small Subheading -->\n  <p style=\"font-size: 14px; font-weight: 500; color: #555; margin-bottom: 1px;\">\n    The Ultimate Attack Racket\n  </p>\n\n  <!-- Gradient Text Title -->\n  <h1 style=\"\n    font-size: 35px;\n    font-weight: 1000;\n    margin: 10px 0;\n    background: linear-gradient(to right, #64c136, #2ca52c);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    display: inline-block;\n    letter-spacing: 1px;\n  \">\n   REVOLUTIONIZING POWER\n  </h1>\n\n  <!-- Subtitle -->\n  <h2 style=\"font-size: 13px; letter-spacing: 0.5px; font-weight: 550; color: #555; margin: 10px 0 2px;\">\n    Play like a champion with the most powerful racket in your hand \n  </h2>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "hero_component_TziVPq": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "hero_component_xLwcU7": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_2_8dc2e8d6-803e-4b4e-abbb-d22f7784fad3.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R_2d17798e-cd5a-4f7a-b608-8c01acf324d7.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -256,11 +219,26 @@
         "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "hero_component_xLwcU7": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_2988da61-d8f7-4b73-a751-7b4df82804eb.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_2988da61-d8f7-4b73-a751-7b4df82804eb.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/nitrix-70-venom-4u",
+        "padding_top": 24,
+        "padding_bottom": 28
       }
     },
     "multicolumn_8xVGgp": {
@@ -342,10 +320,8 @@
     "custom_liquid_UqaGDr",
     "multicolumn_cztEp4",
     "hero_component_z4JhGU",
-    "custom_liquid_jWXADT",
-    "hero_component_TziVPq",
-    "hero_component_xLwcU7",
     "multicolumn_NhV9wy",
+    "hero_component_xLwcU7",
     "multicolumn_8xVGgp",
     "custom_liquid_NfQH6c"
   ]
