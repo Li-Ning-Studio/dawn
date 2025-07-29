@@ -19,6 +19,26 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "merchandising_item_n48aCX": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "flagship",
+            "mobile_position": 4,
+            "desktop_position": 2,
+            "image": "shopify://shop_images/1_958d5bed-b55e-4cf4-9900-2052ba8b5bea.jpg",
+            "orientation": "portrait",
+            "title": "",
+            "subtitle": "",
+            "cta_text": "",
+            "cta_url": "shopify://products/nitrix-70-venom",
+            "text_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "merchandising_item_n48aCX"
+      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
@@ -30,6 +50,7 @@
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
+        "should_look_disabled": true,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
@@ -38,5 +59,8 @@
       }
     }
   },
-  "order": ["banner", "product-grid"]
+  "order": [
+    "banner",
+    "product-grid"
+  ]
 }
