@@ -28,6 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -36,10 +37,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"flex justify-center text-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      INDONESIA\n    </span>\n  </h1>\n</section>",
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  .horizontal-center {\n    display: flex;\n    justify-content: center;\n    text-align: center;\n    padding: 2rem 0; /* optional vertical spacing */\n  }\n</style>\n\n<section class=\"horizontal-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      INDONESIA\n    </span>\n  </h1>\n</section>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_7FaXD6": {
@@ -92,10 +93,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"flex justify-center text-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      THAILAND\n    </span>\n  </h1>\n</section>",
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  .horizontal-center {\n    display: flex;\n    justify-content: center;\n    text-align: center;\n    padding: 2rem 0; /* optional vertical spacing */\n  }\n</style>\n\n<section class=\"horizontal-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      THAILAND\n    </span>\n  </h1>\n</section>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_WrY9pC": {
@@ -148,10 +149,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"flex justify-center text-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      SINGAPORE\n    </span>\n  </h1>\n</section>",
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  .horizontal-center {\n    display: flex;\n    justify-content: center;\n    text-align: center;\n    padding: 2rem 0; /* optional vertical spacing */\n  }\n</style>\n\n<section class=\"horizontal-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      SINGAPORE\n    </span>\n  </h1>\n</section>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_WGgjhU": {
@@ -204,10 +205,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"flex justify-center text-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      MYLASIA\n    </span>\n  </h1>\n</section>",
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  .horizontal-center {\n    display: flex;\n    justify-content: center;\n    text-align: center;\n    padding: 2rem 0; /* optional vertical spacing */\n  }\n</style>\n\n<section class=\"horizontal-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      MALAYSIA\n    </span>\n  </h1>\n</section>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_bAHdxp": {
@@ -260,10 +261,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n</style>\n\n<section class=\"flex justify-center text-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      DENMARK\n    </span>\n  </h1>\n</section>",
+        "custom_liquid": "<style>   \n  .animated-gradient {\n    background: linear-gradient(145deg, #ba9c59 0%, #FFEC8B 50%, #ba9c59 100%);\n    background-size: 400% 400%;\n    \n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n\n    -webkit-animation: GoldenShine 4s ease infinite;\n    -moz-animation: GoldenShine 4s ease infinite;\n    animation: GoldenShine 4s ease infinite;\n  }\n\n  @-webkit-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @-moz-keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  @keyframes GoldenShine {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  .horizontal-center {\n    display: flex;\n    justify-content: center;\n    text-align: center;\n    padding: 2rem 0; /* optional vertical spacing */\n  }\n</style>\n\n<section class=\"horizontal-center\">\n  <h1>\n    <span class=\"animated-gradient large-text\">\n      DENMARK\n    </span>\n  </h1>\n</section>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_mjV69L": {
