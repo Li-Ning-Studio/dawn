@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "hero_component_9XHr7Y": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_6369701b-7e58-40a1-a66e-23c9fec6b1b4.jpg",
+        "mobile_image": "shopify://shop_images/responsive_banner.jpg",
+        "subtitle": "",
+        "title": "Swing and Save",
+        "description": "Deals so good, you’ll want to carry everything!",
+        "button_text": "Gear Up!",
+        "link_to": "shopify://collections/badminton",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_QVrR7F": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -257,6 +272,7 @@
     }
   },
   "order": [
+    "hero_component_9XHr7Y",
     "hero_component_QVrR7F",
     "swipeable_products_KU49Ut",
     "hero_component_tndr9R",
