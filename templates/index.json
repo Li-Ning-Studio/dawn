@@ -19,7 +19,7 @@
         "title": "PROFESSIONAL RACKET SERIES",
         "description": "HNDRD's Finest Rackets Collection yet",
         "button_text": "EXPLORE",
-        "link_to": "shopify://pages/flagship",
+        "link_to": "shopify://pages/pro-series-rackets",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 68
@@ -29,13 +29,14 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2_03577e38-0082-4c08-9dee-48b2f169f578.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_2b08fb01-1724-4078-a276-358bf5a23f19.jpg",
-        "subtitle": "Raze Pro Badminton Shoes",
-        "title": "Unmatched Support for Every Step",
-        "description": "Power through the court with Raze Pro's multi-layered sole for ultimate comfort and support.",
+        "image": "shopify://shop_images/Banner2.jpg",
+        "mobile_image": "shopify://shop_images/Responsive2_0329f47d-4ff6-41e6-9241-15fc1a468043.jpg",
+        "subtitle": "Court Flyer Badminton Shoes",
+        "title": "Unleash Mayhem!",
+        "description": "Give your opponent hell with the power of enhanced traction sole.",
         "button_text": "Get It Now!",
-        "link_to": "shopify://products/raze-pro",
+        "link_to": "shopify://products/court-flyer",
+        "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 0
       }
@@ -44,8 +45,8 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Raze Pro Shoes",
-        "products": ["raze-pro"],
+        "title": "Court Flyer Shoes",
+        "products": ["court-flyer"],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 16,
@@ -56,13 +57,14 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/p.jpg",
-        "mobile_image": "shopify://shop_images/R-p.jpg",
-        "subtitle": "Primearmour Badminton Rackets",
-        "title": "Smash harder, win faster",
-        "description": "Rackets built to deliver explosive force on every strike.",
+        "image": "shopify://shop_images/Banner_5_4c1468c9-bcc7-4f5a-adb4-dfe9aa8cb430.jpg",
+        "mobile_image": "shopify://shop_images/Banner_5_responsive_81b4f6dd-ede7-4fd5-aaf4-95e5b8918e16.jpg",
+        "subtitle": "T Fusion Badminton Rackets",
+        "title": "Quirk Of Breaking Defences",
+        "description": "Racket that magnifies your hitting impact and doubles it to the Shuttlecocks",
         "button_text": "Get It Now!",
-        "link_to": "shopify://collections/primearmour-rackets",
+        "link_to": "shopify://collections/t-fusion",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -71,9 +73,19 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Primearmour Series",
-        "products": ["primearmour-800", "primearmour-900-attk"],
-        "show_color_variants": true,
+        "title": "T-Fusion Series",
+        "products": [
+          "t-fusion-300-4u",
+          "t-fusion-300-5u",
+          "t-fusion-500-attk",
+          "t-fusion-500-ctrl",
+          "t-fusion-500-zoom",
+          "t-fusion-800-attk-3u",
+          "t-fusion-800-attk-4u",
+          "t-fusion-800-ctrl",
+          "t-fusion-800-zoom"
+        ],
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 16
@@ -83,13 +95,14 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner_2_05123177-8c82-4781-8457-aac4a8624693.png",
-        "mobile_image": "shopify://shop_images/responsive_1_ecb6eb9e-90ff-4471-815b-c3165d46a4f0.png",
-        "subtitle": "PitchForce Cricket SHoes",
-        "title": "Conquerer Of Pitches",
-        "description": "The ultimate traction and stability for running between wickets to leaping for a catch during fielding.",
-        "button_text": "Make it Yours!",
-        "link_to": "shopify://products/pitchforcee",
+        "image": "shopify://shop_images/Cricket_Shoes_Banner.jpg",
+        "mobile_image": "shopify://shop_images/Cricket_Shoes_Responsive.jpg",
+        "subtitle": "TerraSpiked Cricket Shoes",
+        "title": "Last Longer During Innings",
+        "description": "Light-weight and heavily cushioned to make your movements feels at ease.",
+        "button_text": "Get Now!",
+        "link_to": "shopify://collections/cricket-shoes",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -98,9 +111,16 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Pitch Series",
-        "products": ["pitchforcee", "pitch-force-limited-edition"],
-        "show_color_variants": true,
+        "title": "Cricket Shoes",
+        "products": [
+          "hyper-turf",
+          "hyper-drive",
+          "terralite",
+          "terrafield",
+          "pitchforcee",
+          "pitch-force-limited-edition"
+        ],
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 16
@@ -110,13 +130,14 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/BANNER_1_7767c896-88ab-454a-a1c3-4b43bc1fc1e9.jpg",
-        "mobile_image": "shopify://shop_images/BANNER_1_res.jpg",
-        "subtitle": "Medal Master Limited Edition Rackets",
-        "title": "<!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Power Your Play",
-        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "image": "shopify://shop_images/6_2c14fd1b-9085-4f56-9412-cb6d219f245a.jpg",
+        "mobile_image": "shopify://shop_images/5_354ef8a1-4342-4920-b67a-f247960f9b14.jpg",
+        "subtitle": "Ioniq Rackets",
+        "title": "Crafted for control",
+        "description": "Sleek design for high-speed attacks and superior control so every win is in your hands",
         "button_text": "Get It Now!",
-        "link_to": "shopify://products/medal-master",
+        "link_to": "shopify://collections/ioniq-rackets",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -125,9 +146,17 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Made For Glory",
-        "products": ["medal-master"],
-        "show_color_variants": true,
+        "title": "Ioniq Rackets",
+        "products": [
+          "ioniq-turbo-4u",
+          "ioniq-turbo-5u",
+          "ioniq-80-limited-edition",
+          "ioniq-80",
+          "ioniq-100-limited-edition",
+          "ioniq-100-4u",
+          "ioniq-100-3u"
+        ],
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 16
@@ -144,6 +173,7 @@
         "description": "Launch Offer! Get a free paddle bag when you purchase our cutting-edge paddles and gear",
         "button_text": "PLAY LIKE A PRO",
         "link_to": "shopify://collections/pickleball",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -228,6 +258,7 @@
         "description": "Activewear engineered for performance, built for everyday hustle.",
         "button_text": "Own Your Movement",
         "link_to": "shopify://collections/clothing",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -267,6 +298,7 @@
         "description": "Empower your game with the right tools, designed to elevate every swing and move",
         "button_text": "BEND YOUR OPPONENT",
         "link_to": "shopify://collections/tennis",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -294,6 +326,7 @@
         "description": "Go the distance with a kit bag that matches your ambition and endurance",
         "button_text": "BAG IT!",
         "link_to": "shopify://collections/badminton-kitbags",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
