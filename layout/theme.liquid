@@ -1,9 +1,6 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
-     <script src="https://pdp.gokwik.co/sa-login-ui/gokwik-sso-sdk.js" defer></script>
-    {% render 'gokwik' %}
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -325,6 +322,9 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    <link rel="stylesheet" href="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.css">
+    <script src="https://pdp.gokwik.co/sa-login-ui/gokwik-sso-sdk.js" defer="defer"></script>
+    {% render 'gokwik' %}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -415,4 +415,4 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
- </html>
+</html>
