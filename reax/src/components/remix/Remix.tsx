@@ -48,6 +48,7 @@ const Remix = () => {
     let ambientLight: any = null;
     let directionalLight: any = null;
     let scene: any = null;
+    let logPositionChange: any = null;
 
     if (!threeModelPath) {
       console.error('No 3D model URL provided');
@@ -92,6 +93,18 @@ const Remix = () => {
         controls.screenSpacePanning = true;
         controls.minDistance = 1;
         controls.maxDistance = 100;
+
+        // DEBUG: Log position changes during mouse interaction
+        logPositionChange = () => {
+          console.log('--- Model Position Debug ---');
+          console.log(
+            'Camera position:',
+            camera.position.x.toFixed(2),
+            camera.position.y.toFixed(2),
+            camera.position.z.toFixed(2),
+          );
+        };
+        controls.addEventListener('change', logPositionChange);
 
         // IMPORT THE 3D MODEL 🫰🏻
         let model: any = null;
@@ -180,7 +193,7 @@ const Remix = () => {
                 }
 
                 if (t < 1) {
-                  requestAnimationFrame(updateModel);
+                  //   requestAnimationFrame(updateModel);
                 }
               }
 
@@ -189,11 +202,11 @@ const Remix = () => {
 
             // INITIATE CAMERA MOVEMENTS 🎥
             (() => {
-              const duration = 4500;
+              const duration = 3500;
               const startTime = Date.now();
 
-              const startPosition = new Vector3(0, 0, 10);
-              const endPosition = new Vector3(-2, 1, 0);
+              const startPosition = new Vector3(0, 15, 2);
+              const endPosition = new Vector3(-3, 0, 0);
 
               function updateCamera() {
                 const elapsedTime = Date.now() - startTime;
@@ -250,7 +263,10 @@ const Remix = () => {
 
     return () => {
       console.log('clear');
-      controls?.dispose();
+      if (controls) {
+        controls.removeEventListener('change', logPositionChange);
+        controls.dispose();
+      }
       renderer?.dispose();
       ambientLight?.dispose();
       directionalLight?.dispose();
