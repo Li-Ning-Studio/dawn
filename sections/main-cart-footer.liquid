@@ -104,7 +104,9 @@
                 </small>
               </div>
             {%- else -%}
-              {% render 'gokwik-checkout' %}
+              {% if settings.is_gokwik_enabled == true %}
+                {% render 'gokwik-checkout-button' %}
+              {% endif %}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
                   type="submit"
