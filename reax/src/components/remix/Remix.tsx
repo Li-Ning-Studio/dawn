@@ -24,6 +24,8 @@ window.s3_remix_modal_controller = {
 
 const Remix = () => {
   const threeModelPath = window?.s3_remix_config?.modelPath;
+  const productType = window?.s3_product_type;
+  const shortType = productType === 'Badminton Racket' ? 'Racket' : productType === 'Pickleball Paddle' ? 'Paddle' : '';
   const inputRef = useRef<HTMLInputElement>(null);
   const cursorPositionRef = useRef<number | null>(null);
 
@@ -96,7 +98,6 @@ const Remix = () => {
 
         // DEBUG: Log position changes during mouse interaction
         logPositionChange = () => {
-          console.log('--- Model Position Debug ---');
           console.log(
             'Camera position:',
             camera.position.x.toFixed(2),
@@ -138,7 +139,7 @@ const Remix = () => {
 
                 if (child.name === 'Cylinder003_1') {
                   // HANDLE
-                  const gripColor = new Color(getHexColorByName(window?.s3_remix_config?.racketGripColor as string));
+                  const gripColor = new Color(window?.s3_remix_config?.racketGripColor as string);
                   child.material = new MeshStandardMaterial({
                     color: gripColor,
                     roughness: 0.7,
@@ -148,7 +149,7 @@ const Remix = () => {
 
                 if (child.name === 'Cylinder003_2') {
                   // BOTTOM_LOGO
-                  const logoColor = new Color(getHexColorByName(window?.s3_remix_config?.logoColor as string));
+                  const logoColor = new Color(window?.s3_remix_config?.logoColor as string);
                   child.material = new MeshStandardMaterial({
                     color: logoColor,
                     roughness: 0.5,
@@ -192,8 +193,8 @@ const Remix = () => {
                   model.rotation.z = angle;
                 }
 
-                if (t < 1) {
-                  //   requestAnimationFrame(updateModel);
+                if (t < 1 && productType === 'Badminton Racket') {
+                  requestAnimationFrame(updateModel);
                 }
               }
 
@@ -202,11 +203,26 @@ const Remix = () => {
 
             // INITIATE CAMERA MOVEMENTS 🎥
             (() => {
-              const duration = 3500;
+              const duration = productType === 'Pickleball Paddle' ? 3500 : 4500;
               const startTime = Date.now();
 
-              const startPosition = new Vector3(0, 15, 2);
-              const endPosition = new Vector3(-3, 0, 0);
+              const getCameraPositions = (productType: string | undefined) => {
+                switch (productType) {
+                  case 'Badminton Racket':
+                    return {
+                      start: new Vector3(0, 0, 10),
+                      end: new Vector3(-2, 1, 0),
+                    };
+                  case 'Pickleball Paddle':
+                  default:
+                    return {
+                      start: new Vector3(0, 15, 2),
+                      end: new Vector3(-3, 0, 0),
+                    };
+                }
+              };
+
+              const { start: startPosition, end: endPosition } = getCameraPositions(productType);
 
               function updateCamera() {
                 const elapsedTime = Date.now() - startTime;
@@ -378,7 +394,7 @@ const Remix = () => {
                           }}
                         >
                           <span style="background: linear-gradient(90deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%) padding-box text; color: transparent;">
-                            ✨ Racket Remix
+                            ✨ {shortType} Remix
                           </span>{' '}
                           {` `}
                           by {window.s3_brand}
@@ -409,7 +425,7 @@ const Remix = () => {
                         letterSpacing: '0px',
                       }}
                     >
-                      Add your name, initials or emojis <br /> and show off this uniquely yours racket.
+                      Add your name, initials or emojis <br /> and show off this uniquely yours {shortType}.
                     </p>
                   </div>
 
