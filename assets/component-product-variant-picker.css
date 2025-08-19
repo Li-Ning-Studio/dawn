@@ -1,5 +1,22 @@
-variant-selects {
+variant-selects,
+.horizontally-scrollable {
   display: block;
+  padding: 0px 2px;
+}
+
+/* Custom styles for Swatch display type */
+.product-form__input--swatch {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 749px) {
+  .horizontally-scrollable {
+    flex-wrap: nowrap;
+    padding: 0px 2px;
+    overflow-x: scroll;
+    min-width: 100%;
+  }
 }
 
 .product--no-media .product-form__input--pill,
@@ -64,7 +81,7 @@ variant-selects {
   color: rgb(var(--color-foreground));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1.2rem 2.4rem;
+  padding: 1.4rem 2.4rem;
   font-size: 1.5rem;
   line-height: 1;
   text-align: center;
@@ -137,12 +154,6 @@ variant-selects {
   box-shadow:
     0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
-}
-
-/* Custom styles for Swatch display type */
-.product-form__input--swatch {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .product-form__input--swatch .swatch-input__input + .swatch-input__label {

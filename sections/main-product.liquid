@@ -9,7 +9,8 @@
     data-zoom-on-hover
   {% endif %}
 >
-  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+  {% comment %} extract critical css to a diff file and preload that instead {% endcomment %}
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
@@ -27,7 +28,7 @@
 
   {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: 10px;
+      /* padding-top: 10px; */
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
@@ -121,7 +122,11 @@
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
-                <div style="margin-bottom: 0.5rem" class="product__title" {{ block.shopify_attributes }}>
+                <div
+                  style="margin-bottom: 0.5rem; margin-top: 0.3rem"
+                  class="product__title"
+                  {{ block.shopify_attributes }}
+                >
                   <h1 style="letter-spacing:-1px; font-weight: 700; line-height: 120%">{{ product.title | escape }}</h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
@@ -247,6 +252,8 @@
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
+              {% when 'product_highlight' %}
+                {% render 'product-highlight', block: block.settings, product: product %}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
@@ -276,9 +283,34 @@
                     </details>
                   </div>
 
+                {% elsif block.settings.heading == 'Product Disclosures' %}
+                  <div
+                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
+                    class="product__accordion accordion quick-add-hidden"
+                    {{ block.shopify_attributes }}
+                  >
+                    <details
+                      styls="color: var(--gray-90); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
+                      id="Details-{{ block.id }}-{{ section.id }}"
+                    >
+                      <summary>
+                        <div class="summary__title">
+                          {% render 'icon-accordion', icon: block.settings.icon %}
+                          <h2 class="h4 accordion__title inline-richtext">
+                            {{ block.settings.heading | default: block.settings.page.title | escape }}
+                          </h2>
+                        </div>
+                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        {% render 'product-disclosures' %}
+                      </div>
+                    </details>
+                  </div>
+
                 {% else %}
                   <div
-                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6"
+                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
                     class="product__accordion accordion quick-add-hidden"
                     {{ block.shopify_attributes }}
                   >
@@ -541,6 +573,9 @@
                 %}
 
               {%- when 'variant_picker' -%}
+                {% if product.metafields.custom_but_hidden.combined_products %}
+                  {% render 'combined-products-options', product: product, block: block %}
+                {% endif %}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
                 {% if settings.is_stringing_enabled_globally
                   and product.metafields.custom_but_hidden.studio_pro_stringing
@@ -549,20 +584,31 @@
                 %}
                   {% render 'stringing' %}
                 {% endif %}
-                {% if product.metafields.custom_but_hidden.stickers == true
+                {% if settings.is_remix_enabled_globally
+                  and product.metafields.custom_but_hidden.stickers == true
                   and product.available == true
                   and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model
                 %}
                   {% render 'remix' %}
                 {% endif %}
+                {% if settings.is_tshirt_printing_enabled_globally
+                  and product.available == true
+                  and product.metafields.custom_but_hidden.customise == true
+                %}
+                  {% render 'tshirt-printing' %}
+                {% endif %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+                {% if product.tags contains 'Service' %}
+                  <p>This service cannot be purchased seperately.</p>
+                {% else %}
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    show_pickup_availability: true
+                  -%}
+                {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -819,7 +865,7 @@
   </div>
 
   {% if product.metafields.custom_but_hidden.s_plus_reference.value != blank %}
-    <div style="margin: 12rem 2rem;">
+    <div style="margin: 7rem 2rem;">
       {% render 's-plus' %}
     </div>
   {% endif %}
@@ -1013,6 +1059,36 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "product_highlight",
+      "name": "Product Highlight",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "liquid",
+          "id": "description",
+          "label": "Description",
+          "info": "Supports Liquid code. Available variables: product, shop"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "Icon",
+          "info": "Paste complete SVG code including <svg> tags"
+        },
+        {
+          "type": "collection_list",
+          "id": "collections",
+          "label": "Collections",
+          "info": "Show this highlight only on these collections"
         }
       ]
     },

@@ -4,7 +4,12 @@ declare global {
   interface Window {
     shopUrl: string;
     s3_pat: string;
+    s3_product_name: string | undefined;
+    s3_brand: string | undefined;
     s3_stringing_service_variant_id: string | undefined;
+    s3_bxgy: unknown;
+    s3_bxgy_variants: unknown;
+    s3_product_collections: string[] | undefined;
     s3_remix_modal_controller:
       | {
           openModal: () => void;
@@ -20,6 +25,16 @@ declare global {
           stickerTextColor: string;
           modelPath: string;
         }
+      | undefined;
+    s3_tshirt_printing_controller:
+      | {
+          openModal: () => void;
+          closeModal: () => void;
+          isOpen: boolean;
+        }
+      | undefined;
+    s3_tshirt_printing_config:
+      | { tshirtColor: string; tshirtTextColor: string; texturePath: string | undefined }
       | undefined;
   }
 }

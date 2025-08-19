@@ -80,6 +80,10 @@
   transform: translate(0);
 }
 
+.image-with-text__container {
+  padding: 0 0rem;
+}
+
 .image-with-text__content {
   align-items: flex-start;
   display: flex;
@@ -348,6 +352,7 @@
 .image-with-text__text--caption + .image-with-text__heading,
 .image-with-text__text--caption:first-child {
   margin-top: 0;
+  letter-spacing: 0;
 }
 
 .image-with-text__content :last-child:is(.image-with-text__heading),
@@ -360,7 +365,7 @@
 }
 
 .image-with-text__content .image-with-text__text + .button {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .image-with-text__heading {

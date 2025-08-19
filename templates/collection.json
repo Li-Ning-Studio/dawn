@@ -23,7 +23,7 @@
         ".price,.card__badge {display: none;}"
       ],
       "settings": {
-        "products_per_page": 12,
+        "products_per_page": 24,
         "columns_desktop": 3,
         "columns_mobile": "2",
         "color_scheme": "",
@@ -41,8 +41,5 @@
       }
     }
   },
-  "order": [
-    "banner",
-    "product-grid"
-  ]
+  "order": ["banner", "product-grid"]
 }
