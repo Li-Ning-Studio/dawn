@@ -137,17 +137,42 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Ioniq Rackets",
+        "title": "Predator Pro Rackets",
         "products": [
-          "ioniq-turbo-4u",
-          "ioniq-turbo-5u",
-          "ioniq-80-limited-edition",
-          "ioniq-80",
-          "ioniq-100-limited-edition",
-          "ioniq-100-4u",
-          "ioniq-100-3u"
+          "predator-pro-4u",
+          "predator-pro-5u"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "hero_component_Dd4CVH": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_5e9f79a1-903c-49e6-b9fa-295aa72ff7cc.jpg",
+        "mobile_image": "shopify://shop_images/2_2fec3d1a-0c40-4e85-9f8c-f3f7be147c30.jpg",
+        "subtitle": "Court Zoom Badminton Shoes",
+        "title": "trigger speed with each step",
+        "description": "Every step ignited by unstoppable speed and unmatched power.",
+        "button_text": "Spark Your Step",
+        "link_to": "shopify://products/court-zoom",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_HyzyGP": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Court Zoom Badminton Shoes",
+        "products": [
+          "court-zoom"
+        ],
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 16
@@ -364,6 +389,8 @@
     "swipeable_products_RyJQbU",
     "hero_component_Q8wMtJ",
     "swipeable_products_73DzB9",
+    "hero_component_Dd4CVH",
+    "swipeable_products_HyzyGP",
     "hero_component_Di3AGa",
     "swipeable_products_Cm4fE8",
     "collection_list_PtkHX3",
