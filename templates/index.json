@@ -11,6 +11,7 @@
   "sections": {
     "hero_video_component_agpFBn": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/yt_b3db05f2-3b91-458d-9b9c-97b56cdc3e9c.mp4",
@@ -29,13 +30,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner2.jpg",
-        "mobile_image": "shopify://shop_images/Responsive2_0329f47d-4ff6-41e6-9241-15fc1a468043.jpg",
-        "subtitle": "Court Flyer Badminton Shoes",
-        "title": "Unleash Mayhem!",
-        "description": "Give your opponent hell with the power of enhanced traction sole.",
+        "image": "shopify://shop_images/Banner_1_f049b1a2-7400-4db7-bc22-31adfd0b28e0.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_5f6f4653-0149-4939-b1a1-283161b57735.jpg",
+        "subtitle": "Raze Pro Badminton Shoes",
+        "title": "Every step screams power",
+        "description": "Raze Pro blends cushioning and support for smooth transitions and secure landings.",
         "button_text": "Get It Now!",
-        "link_to": "shopify://products/court-flyer",
+        "link_to": "shopify://products/raze-pro",
         "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 0
@@ -45,8 +46,10 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Court Flyer Shoes",
-        "products": ["court-flyer"],
+        "title": "RAZE PRO",
+        "products": [
+          "raze-pro"
+        ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 16,
@@ -308,7 +311,13 @@
       "name": "Swipeable Products",
       "settings": {
         "title": "TENNIS PRODUCTS",
-        "products": ["courtfuse", "bazook", "galatic", "panzer", "zeta-x"],
+        "products": [
+          "courtfuse",
+          "bazook",
+          "galatic",
+          "panzer",
+          "zeta-x"
+        ],
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 40,
