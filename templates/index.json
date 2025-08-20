@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "hero_component_RKxJeB": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/ba_c8292702-3263-430c-8cff-b37b2492ea7b.jpg",
+        "mobile_image": "shopify://shop_images/respo_61e3d563-f99a-423f-802b-37985b8a6f64.jpg",
+        "subtitle": "Atomic X Black Knight Professional Racket",
+        "title": "Attack In Lightspeed",
+        "description": "Be the King of the Court with seamless built T-joint for faster recovery and great attacking power.",
+        "button_text": "Get It Here!",
+        "link_to": "shopify://products/atomic-x-black-knight",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_kQUykU": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Atomic X Series",
+        "products": [
+          "atomic-x-black-knight",
+          "atomic-x-dark-sword"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "hero_video_component_agpFBn": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -55,68 +86,6 @@
         "padding_bottom": 16
       }
     },
-    "hero_component_RKxJeB": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/ba_c8292702-3263-430c-8cff-b37b2492ea7b.jpg",
-        "mobile_image": "shopify://shop_images/respo_61e3d563-f99a-423f-802b-37985b8a6f64.jpg",
-        "subtitle": "Atomic X Black Knight Professional Racket",
-        "title": "Attack In Lightspeed",
-        "description": "Be the King of the Court with seamless built T-joint for faster recovery and great attacking power.",
-        "button_text": "Get It Here!",
-        "link_to": "shopify://products/atomic-x-black-knight",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_kQUykU": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Atomic X Series",
-        "products": [
-          "atomic-x-black-knight",
-          "atomic-x-dark-sword"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
-    "hero_component_mYeEJ4": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/1_cc151165-34de-4354-a35c-3d23dabd0bcb.jpg",
-        "mobile_image": "shopify://shop_images/2_f1c89f7c-5c8c-4729-9fcc-a27b7e94de87.jpg",
-        "subtitle": "PitchForce Limited Edition Cricket Shoes",
-        "title": "Own every pitch. Dominate every sprint.",
-        "description": "Light fierce and grip ready crafted to keep you explosive and unstoppable from crease to outfield.",
-        "button_text": "Gear Up Today!",
-        "link_to": "shopify://products/pitch-force-limited-edition",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_RyJQbU": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "PitchForce Series",
-        "products": [
-          "pitch-force-limited-edition",
-          "pitchforcee"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "hero_component_Q8wMtJ": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -148,29 +117,30 @@
         "padding_bottom": 16
       }
     },
-    "hero_component_Dd4CVH": {
+    "hero_component_mYeEJ4": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/1_5e9f79a1-903c-49e6-b9fa-295aa72ff7cc.jpg",
-        "mobile_image": "shopify://shop_images/2_2fec3d1a-0c40-4e85-9f8c-f3f7be147c30.jpg",
-        "subtitle": "Court Zoom Badminton Shoes",
-        "title": "trigger speed with each step",
-        "description": "Every step ignited by unstoppable speed and unmatched power.",
-        "button_text": "Spark Your Step",
-        "link_to": "shopify://products/court-zoom",
+        "image": "shopify://shop_images/1_cc151165-34de-4354-a35c-3d23dabd0bcb.jpg",
+        "mobile_image": "shopify://shop_images/2_f1c89f7c-5c8c-4729-9fcc-a27b7e94de87.jpg",
+        "subtitle": "PitchForce Limited Edition Cricket Shoes",
+        "title": "Own every pitch. Dominate every sprint.",
+        "description": "Light fierce and grip ready crafted to keep you explosive and unstoppable from crease to outfield.",
+        "button_text": "Gear Up Today!",
+        "link_to": "shopify://products/pitch-force-limited-edition",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "swipeable_products_HyzyGP": {
+    "swipeable_products_RyJQbU": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Court Zoom Badminton Shoes",
+        "title": "PitchForce Series",
         "products": [
-          "court-zoom"
+          "pitch-force-limited-edition",
+          "pitchforcee"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -211,8 +181,38 @@
         ],
         "show_color_variants": true,
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 72
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "hero_component_Dd4CVH": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_5e9f79a1-903c-49e6-b9fa-295aa72ff7cc.jpg",
+        "mobile_image": "shopify://shop_images/2_2fec3d1a-0c40-4e85-9f8c-f3f7be147c30.jpg",
+        "subtitle": "Court Zoom Badminton Shoes",
+        "title": "trigger speed with each step",
+        "description": "Every step ignited by unstoppable speed and unmatched power.",
+        "button_text": "Spark Your Step",
+        "link_to": "shopify://products/court-zoom",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_HyzyGP": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Court Zoom Badminton Shoes",
+        "products": [
+          "court-zoom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "collection_list_PtkHX3": {
@@ -380,19 +380,19 @@
     }
   },
   "order": [
+    "hero_component_RKxJeB",
+    "swipeable_products_kQUykU",
     "hero_video_component_agpFBn",
     "hero_component_pmECNB",
     "swipeable_products_ak84Mc",
-    "hero_component_RKxJeB",
-    "swipeable_products_kQUykU",
-    "hero_component_mYeEJ4",
-    "swipeable_products_RyJQbU",
     "hero_component_Q8wMtJ",
     "swipeable_products_73DzB9",
-    "hero_component_Dd4CVH",
-    "swipeable_products_HyzyGP",
+    "hero_component_mYeEJ4",
+    "swipeable_products_RyJQbU",
     "hero_component_Di3AGa",
     "swipeable_products_Cm4fE8",
+    "hero_component_Dd4CVH",
+    "swipeable_products_HyzyGP",
     "collection_list_PtkHX3",
     "hero_component_VMm3j4",
     "swipeable_products_HjzUcP",
