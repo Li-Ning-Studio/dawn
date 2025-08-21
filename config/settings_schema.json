@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Dawn",
-    "theme_version": "15.2.0",
+    "theme_version": "15.3.0",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
@@ -30,6 +30,13 @@
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",
         "info": "t:settings_schema.logo.settings.favicon.info"
+      },
+      {
+        "type": "textarea",
+        "id": "logo_svg",
+        "label": "SVG Logo",
+        "info": "This takes precedence over the logo image.",
+        "placeholder": "Paste the SVG logo here"
       }
     ]
   },
@@ -103,6 +110,11 @@
         "type": "color",
         "id": "accent_color",
         "label": "Accent Color"
+      },
+      {
+        "type": "color",
+        "id": "secondary_accent_color",
+        "label": "Secondary Accent Color"
       }
     ]
   },
@@ -1257,7 +1269,7 @@
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 40
+        "default": 6
       },
       {
         "type": "color_scheme",
@@ -1281,6 +1293,18 @@
         "content": "t:settings_schema.brand_information.settings.paragraph.content"
       },
       {
+        "type": "text",
+        "id": "brand_region_name",
+        "label": "Brand Region Name",
+        "default": "Sunlight Sports Global Pvt. Ltd."
+      },
+      {
+        "type": "text",
+        "id": "brand_hq_address",
+        "label": "HQ Address",
+        "placeholder": "Safety lives in the Zoo. Freedom and Growth live in the Jungle."
+      },
+      {
         "type": "inline_richtext",
         "id": "brand_headline",
         "label": "t:settings_schema.brand_information.settings.brand_headline.label"
@@ -1295,6 +1319,7 @@
         "id": "brand_image",
         "label": "t:settings_schema.brand_information.settings.brand_image.label"
       },
+
       {
         "type": "range",
         "id": "brand_image_width",
@@ -1472,11 +1497,11 @@
     ]
   },
   {
-    "name": "Pro Stringing",
+    "name": "Product Customisations",
     "settings": [
       {
         "type": "header",
-        "content": "Pro Stringing Settings"
+        "content": "Product Customisation Settings"
       },
       {
         "type": "checkbox",
@@ -1486,10 +1511,69 @@
         "default": false
       },
       {
+        "type": "checkbox",
+        "id": "is_tshirt_printing_enabled_globally",
+        "label": "Enable T-Shirt Printing",
+        "info": "Control Storewide T-Shirt Printing",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "is_remix_enabled_globally",
+        "label": "Enable Remix",
+        "info": "Control Storewide Remix",
+        "default": false
+      },
+      {
         "type": "text",
         "id": "stringing_collection_id",
         "info": "The collection which contains the strings supported for Pro Stringing",
         "label": "Stringing Collection ID"
+      }
+    ]
+  },
+  {
+    "name": "Gokwik Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Gokwik Integration Settings",
+        "info": "GoKwik is only available in India as of now."
+      },
+      {
+        "type": "checkbox",
+        "id": "is_gokwik_enabled",
+        "label": "Enable Gokwik Integration",
+        "info": "Controls whether Gokwik payment integration is enabled. This only determines the UI elements.",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "gokwik_merchant_id",
+        "label": "Gokwik Merchant ID",
+        "info": "Your unique Gokwik merchant identifier",
+        "default": "196y9ldku7pd"
+      },
+      {
+        "type": "text",
+        "id": "gokwik_shop_domain",
+        "label": "Gokwik Shop Domain",
+        "info": "Your Shopify store domain for Gokwik integration",
+        "default": "hundred-india.myshopify.com"
+      }
+    ]
+  },
+  {
+    "name": "D2C Support Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "D2C Support Settings"
+      },
+      {
+        "type": "text",
+        "id": "support_phone_number",
+        "label": "Support Phone Number"
       }
     ]
   },

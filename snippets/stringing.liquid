@@ -1,12 +1,30 @@
+{{ 'services.css' | asset_url | stylesheet_tag }}
+
+{% assign is_product_factory_strung = false %}
+
+{% if product.metafields.custom_but_hidden.studio_pro_stringing == 'strung' %}
+  {% assign is_product_factory_strung = true %}
+{% endif %}
+
 <section class="frame">
   <legend class="form__label">
     <span>{{ 'studio.stringing.form_labels.frame' | t }}</span>
   </legend>
   <label class="frame-option sheet" for="unstrung">
     <input checked type="radio" name="frame" id="unstrung">
-    <span class="frame-name">{{ 'studio.stringing.form_labels.unstrung' | t }}</span>
+    <span class="frame-name">
+      {% if is_product_factory_strung %}
+        Factory Strung
+      {% else %}
+        {{ 'studio.stringing.form_labels.unstrung' | t }}
+      {% endif %}
+    </span>
     <span class="frame-description">
-      {{ 'studio.stringing.description.unstrung' | t }}
+      {% if is_product_factory_strung %}
+        This racket will be pre-strung with our standard factory stringing. Decent for casual games.
+      {% else %}
+        {{ 'studio.stringing.description.unstrung' | t }}
+      {% endif %}
     </span>
   </label>
   <label class="frame-option sheet" for="pro-stringing">
@@ -14,7 +32,11 @@
     <div class="frame-name" style="display: flex; justify-content: space-between; align-items: center;">
       <span>{{ 'studio.stringing.form_labels.pro_stringing' | t }}</span>
       <span style="color: var(--gray-50); font-size: 1.3rem;">
-        {{- all_products['studio-pro-stringing'].price | money -}}
+        {%- if all_products['studio-pro-stringing'].price == 0 -%}
+          FREE
+        {%- else -%}
+          {{ all_products['studio-pro-stringing'].price | money }}
+        {%- endif -%}
       </span>
     </div>
     <span class="frame-description">
@@ -26,83 +48,67 @@
     id="stringing-root"
     style="display: none;"
     data-stringing-collection-id="{{ settings.stringing_collection_id | default: '' }}"
+    data-max-tension="{{product.metafields.custom.maximum_racket_tension}}"
   ></section>
 </section>
-
-<style>
-  .frame-name {
-    color: black;
-    font-weight: 500;
-    letter-spacing: 0px;
-  }
-
-  .frame-option {
-    border: 2px solid transparent;
-    display: block;
-    width: 100%;
-    padding: 1.3rem 1.3rem;
-    margin-bottom: 1.4rem;
-  }
-
-  .frame-description {
-    display: block;
-    font-size: 1.4rem;
-    letter-spacing: 0.2px;
-    line-height: 1.5;
-    color: var(--gray-50);
-  }
-
-  input[type='radio'] {
-    opacity: 0;
-    position: absolute;
-  }
-
-  .frame-option:has(input[name='frame']:checked) {
-    border: 2px solid var(--accent-color);
-  }
-</style>
 
 <script defer="defer">
   document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('stringing-root');
     const proStringing = document.getElementById('pro-stringing');
     let scriptLoaded = false;
-    let stringingInstance = null;
+    let scriptLoading = false;
 
-    // Handle radio changes
+    // Function to load the script
+    const loadScript = () => {
+      if (scriptLoaded || scriptLoading) return;
+
+      scriptLoading = true;
+      const script = document.createElement('script');
+      script.src = "{{ 'vx-stringing.js' | asset_url }}";
+      script.defer = true;
+      script.type = 'module';
+
+      script.onload = () => {
+        scriptLoaded = true;
+        scriptLoading = false;
+      };
+
+      script.onerror = () => {
+        scriptLoading = false;
+        root.innerHTML = 'Failed to load stringing options. Please refresh the page.';
+      };
+
+      document.body.appendChild(script);
+    };
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => loadScript(), { timeout: 4000 });
+    } else {
+      setTimeout(loadScript, 2000);
+    }
+
     document.querySelector('.frame').addEventListener('change', (e) => {
       if (e.target.name === 'frame') {
         root.style.display = e.target.id === 'pro-stringing' ? 'block' : 'none';
 
-        if (e.target.id === 'pro-stringing' && !scriptLoaded) {
-          loadStringingScript();
+        if (e.target.id === 'pro-stringing') {
+        document.getElementsByClassName('product-form__submit button')[0]?.classList?.add('glowing');
+          loadScript();
+            setTimeout(() => {
+                window.scrollBy({
+                top: 222,
+                left: 0,
+                behavior: 'smooth'
+            });
+          }, 300)
+        } else {
+          document.getElementsByClassName('product-form__submit button')[0]?.classList?.remove('glowing');
         }
       }
     });
-
-    // Load stringing script
-    async function loadStringingScript() {
-      try {
-        const script = document.createElement('script');
-        script.src = "{{ 'vx-stringing.js' | asset_url }}";
-        script.defer = true;
-        script.type = 'module';
-
-        await script.addEventListener('load', () => {
-          scriptLoaded = true;
-        });
-
-        document.body.appendChild(script);
-      } catch (error) {
-        console.error('Stringing script load failed:', error);
-        root.innerHTML = 'Failed to load stringing options. Please refresh the page.';
-      }
-    }
-
-    // Initialize if pro-stringing is checked
-    if (proStringing.checked) {
-      loadStringingScript();
-      root.style.display = 'block';
-    }
   });
+
+    // set the stringing variant id on window
+      window.s3_stringing_service_variant_id = '{{ all_products['studio-pro-stringing'].variants.first.id  }}';
 </script>

@@ -15,7 +15,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "text": "{{ product.metafields.custom.product_type.value }}",
             "text_style": "uppercase"
           }
         },
@@ -75,6 +75,15 @@
             "page": ""
           }
         },
+        "collapsible_tab_UKdtFh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Disclosures",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -93,9 +102,11 @@
         "description",
         "collapsible_tab_McAyVV",
         "collapsible-row-1",
+        "collapsible_tab_UKdtFh",
         "share"
       ],
       "settings": {
+        "display_price_out_of_stock": true,
         "enable_sticky_info": true,
         "color_scheme": "",
         "media_size": "large",
@@ -117,7 +128,7 @@
         "image-with-text-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Change",
             "heading_size": "h1"
           }
         },

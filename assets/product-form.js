@@ -18,11 +18,13 @@ if (!customElements.get('product-form')) {
       }
 
       onSubmitHandler(evt) {
+        let selectedVariantSku = window?.s3_current_variant_sku || null;
+
         evt.preventDefault();
 
         // validate the stringing form too, if the validation fails, highlight it and  return early
         const stringingForm = document.getElementById('stringing-form');
-        if (stringingForm) {
+        if (stringingForm && document.querySelector('input[name="frame"]:checked')?.id === 'pro-stringing') {
           if (!stringingForm.checkValidity()) {
             const radioButtons = stringingForm.querySelectorAll('input[type="radio"]');
             const invalidRadioName = Array.from(radioButtons).find((radio) => radio.validity.valueMissing)?.name;
@@ -70,17 +72,23 @@ if (!customElements.get('product-form')) {
 
         // check if stringing service is selected
         const frameSelected = document.querySelector('input[name="frame"]:checked')?.id;
-        if (frameSelected === 'pro-stringing') {
+        // good trick -  document.querySelector('variant-selects [data-selected-variant]')?.innerHTML)?.sku
+        if (frameSelected === 'pro-stringing' && selectedVariantSku) {
           const variantSelected = document.querySelector('input[name="string-variant"]:checked')?.id;
+          const stringVariantSku = document.querySelector('input[name="string-variant"]:checked')?.dataset.sku;
           const tensionSelected = document.querySelector('input[name="string-tension"]:checked')?.id;
           const stringingServiceVariantId = window.s3_stringing_service_variant_id;
 
-          if (variantSelected && tensionSelected && stringingServiceVariantId) {
+          if (variantSelected && stringVariantSku && tensionSelected && stringingServiceVariantId) {
             items.push(
               {
                 id: stringingServiceVariantId,
                 quantity: 1,
                 properties: {
+                  _racket: selectedVariantSku,
+                  _racketName: window?.s3_product_name || '',
+                  _string: stringVariantSku,
+                  _stringName: document.querySelector('input[name="string-variant"]:checked')?.dataset?.string || '',
                   _tension: `${tensionSelected}lbs`,
                   _bundleId: formData.get('id'),
                 },
@@ -96,8 +104,84 @@ if (!customElements.get('product-form')) {
           }
         }
 
-        // check if remix or printing is selected
+        // check if remix is selected
+        const theSticker = document.getElementById('the-sticker');
 
+        if (theSticker && window.s3_remix_service_variant_id && selectedVariantSku) {
+          const stickerText = theSticker.innerText;
+
+          let textToBeStickered = '';
+
+          for (let element of stickerText) {
+            const isAlphabet = isCharAlphanumeric(element);
+            if (isAlphabet) {
+              textToBeStickered += element;
+            } else {
+              textToBeStickered += `{${convertEmojiToHex(element)}}`;
+            }
+          }
+
+          items.push({
+            id:
+              window.s3_product_type === 'Pickleball Paddle'
+                ? window.s3_paddle_remix_service_variant_id
+                : window.s3_product_type === 'Badminton Racket'
+                  ? window.s3_remix_service_variant_id
+                  : window.s3_remix_service_variant_id,
+            quantity: 1,
+            properties: {
+              _stickerText: textToBeStickered,
+              _textColor: window.s3_remix_config.stickerTextColor || 'UNKNOWN',
+              _productSKU: window?.s3_current_variant_sku || '',
+              _productName: window?.s3_product_name || '',
+              _bundleId: formData.get('id'),
+            },
+          });
+        }
+
+        //  check if printing is selected
+        const theTshirtText = document.getElementById('the-tshirt-text');
+
+        if (theTshirtText && window.s3_tshirt_printing_service_variant_id && selectedVariantSku) {
+          items.push({
+            id: window.s3_tshirt_printing_service_variant_id,
+            quantity: 1,
+            properties: {
+              _tshirtText: theTshirtText.innerText,
+              _textColor: window.s3_tshirt_printing_config.tshirtTextColor || 'UNKNOWN',
+              _productSKU: window?.s3_current_variant_sku || '',
+              _productName: window?.s3_product_name || '',
+              _bundleId: formData.get('id'),
+            },
+          });
+        }
+
+        // check for buy X get Y
+        if (window.s3_bxgy_variants && window.s3_bxgy && window.s3_product_collections) {
+          try {
+            const matchingOffer = window.s3_bxgy.find((offer) =>
+              window.s3_product_collections.includes(offer.trigger_collection),
+            );
+
+            if (matchingOffer) {
+              const productToAdd = matchingOffer.free_product.split('/').pop();
+              const variantToAdd = window.s3_bxgy_variants.find((x) => x?.productId == productToAdd && x.available);
+
+              if (variantToAdd) {
+                items.push({
+                  id: variantToAdd.id,
+                  quantity: 1,
+                  properties: {
+                    _offer: matchingOffer.offer_name,
+                    _bundleId: Math.random().toString(36).slice(2),
+                  },
+                });
+              }
+            }
+          } catch (error) {
+            console.error(error);
+          }
+        }
         // Single combined request with sections
         fetch(`${routes.cart_add_url}`, {
           ...config,
@@ -209,3 +293,10 @@ if (!customElements.get('product-form')) {
     },
   );
 }
+
+const isCharAlphanumeric = (char) => {
+  const alphanumericRegex = /^[a-zA-Z0-9. ]*$/;
+  return alphanumericRegex.test(char);
+};
+
+const convertEmojiToHex = (emoji) => emoji.codePointAt(0)?.toString(16);

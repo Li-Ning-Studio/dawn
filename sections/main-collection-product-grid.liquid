@@ -24,19 +24,46 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top:2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  /* Merchandising grid item styles */
+  .merchandising-grid-item {
+    height: auto;
+  }
+
+
+  /* On mobile, ALL merchandising items take full width */
+  @media screen and (max-width: 989px) {
+    .merchandising-grid-item {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 1.2rem 0 1.2rem 0;
+    }
+
+    /* Hide desktop-only merchandising items on mobile */
+    .merchandising-show-desktop {
+      display: none !important;
+    }
+  }
+
+  /* Hide mobile-only merchandising items on desktop */
+  @media screen and (min-width: 990px) {
+    .merchandising-show-mobile {
+      display: none !important;
     }
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+<div class="gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
@@ -144,6 +171,7 @@
           >
             <div class="loading-overlay gradient"></div>
             <ul
+              style="margin-top: 3rem;"
               id="product-grid"
               data-id="{{ section.id }}"
               class="
@@ -153,18 +181,60 @@
               "
             >
               {% assign skip_card_product_styles = false %}
+
+              {%- assign total_items_rendered = 0 -%}
+
+              {%- comment -%} Pre-filter merchandising blocks for this collection to improve performance {%- endcomment -%}
+              {%- assign collection_merchandising_blocks = blank -%}
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'merchandising_item'
+                  and block.settings.image
+                  and block.settings.target_collection == collection
+                -%}
+                  {%- assign collection_merchandising_blocks = collection_merchandising_blocks
+                    | append: forloop.index0
+                    | append: ','
+                  -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- assign collection_merchandising_indices = collection_merchandising_blocks | split: ',' -%}
+
+              {%- comment -%} Check for merchandising items at position 0 (before any products) {%- endcomment -%}
+              {%- for index_str in collection_merchandising_indices -%}
+                {%- unless index_str == blank -%}
+                  {%- assign block_index = index_str | plus: 0 -%}
+                  {%- assign block = section.blocks[block_index] -%}
+                  {%- if block.settings.mobile_position == 0 or block.settings.desktop_position == 0 -%}
+                    <li
+                      class="grid__item merchandising-grid-item{% if block.settings.mobile_position == 0 %} merchandising-show-mobile{% endif %}{% if block.settings.desktop_position == 0 %} merchandising-show-desktop{% endif %}"
+                    >
+                      {% render 'collection-merchandising-item',
+                        block: block,
+                        section_id: section.id,
+                        lazy_load: false
+                      %}
+                    </li>
+                  {%- endif -%}
+                {%- endunless -%}
+              {%- endfor -%}
+
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li
-                  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  class="grid__item"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
+                  {% if section.settings.should_look_disabled and product.available == false %}
+                    {% assign should_look_disabled = true %}
+                  {% else %}
+                    {% assign should_look_disabled = false %}
+                  {% endif %}
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -175,10 +245,88 @@
                     lazy_load: lazy_load,
                     skip_styles: skip_card_product_styles,
                     quick_add: section.settings.quick_add,
-                    section_id: section.id
+                    section_id: section.id,
+                    should_look_disabled: should_look_disabled
                   %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
+                {%- assign total_items_rendered = total_items_rendered | plus: 1 -%}
+
+                {%- comment -%} Check if we should inject merchandising items after this position {%- endcomment -%}
+                {%- for index_str in collection_merchandising_indices -%}
+                  {%- unless index_str == blank -%}
+                    {%- assign block_index = index_str | plus: 0 -%}
+                    {%- assign block = section.blocks[block_index] -%}
+                    {%- if block.settings.mobile_position == total_items_rendered
+                      or block.settings.desktop_position == total_items_rendered
+                    -%}
+                      <li
+                        class="grid__item merchandising-grid-item{% if block.settings.mobile_position == total_items_rendered %} merchandising-show-mobile{% endif %}{% if block.settings.desktop_position == total_items_rendered %} merchandising-show-desktop{% endif %}"
+                      >
+                        {% render 'collection-merchandising-item',
+                          block: block,
+                          section_id: section.id,
+                          lazy_load: lazy_load
+                        %}
+                      </li>
+                    {%- endif -%}
+                  {%- endunless -%}
+                {%- endfor -%}
+
+                <!-- Now check for variants with the metafield -->
+                {%- for variant in product.variants -%}
+                  {%- if variant.metafields.custom_but_hidden.col_independent_variant == true -%}
+                    <li
+                      class="grid__item"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {% if section.settings.should_look_disabled and variant.available == false %}
+                        {% assign should_look_disabled = true %}
+                      {% else %}
+                        {% assign should_look_disabled = false %}
+                      {% endif %}
+                      {% render 'card-product',
+                        card_product: product,
+                        card_variant: variant,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        image_shape: section.settings.image_shape,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: section.settings.show_vendor,
+                        show_rating: section.settings.show_rating,
+                        lazy_load: lazy_load,
+                        skip_styles: skip_card_product_styles,
+                        quick_add: section.settings.quick_add,
+                        section_id: section.id,
+                        should_look_disabled: should_look_disabled
+                      %}
+                    </li>
+                    {%- assign total_items_rendered = total_items_rendered | plus: 1 -%}
+
+                    {%- comment -%} Check if we should inject merchandising items after this variant position {%- endcomment -%}
+                    {%- for index_str in collection_merchandising_indices -%}
+                      {%- unless index_str == blank -%}
+                        {%- assign block_index = index_str | plus: 0 -%}
+                        {%- assign block = section.blocks[block_index] -%}
+                        {%- if block.settings.mobile_position == total_items_rendered
+                          or block.settings.desktop_position == total_items_rendered
+                        -%}
+                          <li
+                            class="grid__item merchandising-grid-item{% if block.settings.mobile_position == total_items_rendered %} merchandising-show-mobile{% endif %}{% if block.settings.desktop_position == total_items_rendered %} merchandising-show-desktop{% endif %}"
+                          >
+                            {% render 'collection-merchandising-item',
+                              block: block,
+                              section_id: section.id,
+                              lazy_load: lazy_load
+                            %}
+                          </li>
+                        {%- endif -%}
+                      {%- endunless -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                {%- endfor -%}
               {%- endfor -%}
             </ul>
 
@@ -233,7 +381,7 @@
           "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
         }
       ]
-    },    
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
@@ -345,6 +493,12 @@
       ]
     },
     {
+      "type": "checkbox",
+      "id": "should_look_disabled",
+      "default": true,
+      "label": "Grey out if out of stock"
+    },
+    {
       "type": "header",
       "content": "t:sections.main-collection-product-grid.settings.header__1.content"
     },
@@ -404,6 +558,81 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "merchandising_item",
+      "name": "Merchandising Item",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "target_collection",
+          "label": "Target Collection",
+          "info": "Which collection this merchandising element will appear in"
+        },
+        {
+          "type": "number",
+          "id": "mobile_position",
+          "label": "Mobile Position",
+          "default": 4,
+          "info": "After how many products this element should appear on mobile"
+        },
+        {
+          "type": "number",
+          "id": "desktop_position",
+          "label": "Desktop Position",
+          "default": 6,
+          "info": "After how many products this element should appear on desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Text Position",
+          "options": [
+            {
+              "value": "bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "center-center",
+              "label": "Center Center"
+            }
+          ],
+          "default": "bottom-left"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        }
+      ]
     }
   ]
 }

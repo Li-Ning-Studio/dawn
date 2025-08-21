@@ -9,8 +9,11 @@
  */
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify://shop_images/64x64_H.png",
+    "logo_width": 60,
+    "logo_svg": "<svg width=\"55px\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" viewbox=\"0 0 1500 1500\" style=\"enable-background:new 0 0 1500 1500;\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:currentColor;}\n</style>\n<path id=\"Reverse_Lambda_11_\" class=\"st0\" d=\"M1347.62,587.22c0,0-101.04-3.54-155.38,1.77c-45.26,4.42-92.29,21.78-146.07,48.64\n\tc-73.03,36.48-174.86,89.55-174.86,89.55l532.88,263.67h-280.81L733.54,799.04L350.9,990.85H61.86c0,0,680.94-339.96,831.87-413.83\n\tc100.03-48.97,181.76-67.87,291.38-67.87h253.04L1347.62,587.22z\"></path>\n</svg>",
     "accent_color": "#0f59e3",
+    "secondary_accent_color": "#ffa200",
     "type_header_font": "dm_sans_n5",
     "heading_scale": 100,
     "type_body_font": "dm_sans_n4",
@@ -19,6 +22,7 @@
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
+    "animations_reveal_on_scroll": false,
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 12,
@@ -35,7 +39,7 @@
     "variant_pills_shadow_blur": 5,
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 55,
-    "inputs_radius": 0,
+    "inputs_radius": 8,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
@@ -89,7 +93,7 @@
     "media_shadow_blur": 5,
     "popup_border_thickness": 1,
     "popup_border_opacity": 10,
-    "popup_corner_radius": 0,
+    "popup_corner_radius": 6,
     "popup_shadow_opacity": 5,
     "popup_shadow_horizontal_offset": 0,
     "popup_shadow_vertical_offset": 4,
@@ -122,7 +126,10 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "is_stringing_enabled_globally": true,
+    "is_tshirt_printing_enabled_globally": true,
+    "is_remix_enabled_globally": true,
     "stringing_collection_id": "491342692636",
+    "support_phone_number": "+91-8707204138",
     "pat": "2a00d3addea825990b677d88407befe0",
     "sections": {
       "main-password-header": {
@@ -153,18 +160,18 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#f3f3f3",
+          "background": "#fafafa",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
-          "button_label": "#f3f3f3",
+          "button_label": "#fafafa",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#242833",
+          "background": "#494949",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
@@ -186,7 +193,7 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#ff4269",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",

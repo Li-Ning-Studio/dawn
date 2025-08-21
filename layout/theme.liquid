@@ -16,7 +16,12 @@
     {%- endunless -%}
 
     <title>
-      {{ page_title }}
+      {%- if template.name == 'product' -%}
+        {{ product.vendor }}
+        {{ page_title }}
+      {%- else -%}
+        {{ page_title }}
+      {%- endif -%}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
@@ -101,6 +106,7 @@
 
       :root {
         --accent-color: rgb({{ settings.accent_color.rgb }});
+        --secondary-accent-color: rgb({{ settings.secondary_accent_color.rgb }});
         --gray-0: #f2f2f2;
         --gray-10: #d6d6d6;
         --gray-20: #bdbdbd;
@@ -139,7 +145,7 @@
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
         /* --page-width: {{ settings.page_width | divided_by: 10 }}rem; */
-        --page-width: 150rem;
+        --page-width: 157rem;
 
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
@@ -231,7 +237,7 @@
         --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
         --inputs-radius-outset: {% if settings.inputs_radius > 0 %}{{ settings.inputs_radius | plus: settings.inputs_border_thickness }}{% else %}0{% endif %}px;
 
-        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+        --variant-pills-radius: 8px;
         --variant-pills-border-width: {{ settings.variant_pills_border_thickness }}px;
         --variant-pills-border-opacity: {{ settings.variant_pills_border_opacity | divided_by: 100.0 }};
         --variant-pills-shadow-opacity: {{ settings.variant_pills_shadow_opacity | divided_by: 100.0 }};
@@ -259,7 +265,7 @@
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        letter-spacing: 0.06rem;
+        letter-spacing: 0rem;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
@@ -273,7 +279,7 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -314,6 +320,11 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {% if settings.is_gokwik_enabled == true %}
+      <link rel="stylesheet" href="https://pdp.gokwik.co/checkout-enhancer/merchant-sdk/gokwik-sso-sdk.css">
+      <script src="https://pdp.gokwik.co/sa-login-ui/gokwik-sso-sdk.js" defer="defer"></script>
+      {% render 'gokwik' %}
+    {% endif %}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -341,6 +352,16 @@
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.s3_pat = '{{ settings.pat }}';
+
+      {% comment %} for react apps {% endcomment %}
+      {% if request.host contains 'hndrd.co' %}
+        {% assign brand_name = 'Hundred' %}
+      {% else %}
+        {% assign brand_name = 'Studio' %}
+      {% endif %}
+     
+        window.s3_brand = '{{ brand_name }}';
+
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
         cart_change_url: '{{ routes.cart_change_url }}',
@@ -391,5 +412,8 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    {% if settings.is_gokwik_enabled == true %}
+      {% render 'gokwik-sdk' %}
+    {% endif %}
   </body>
 </html>

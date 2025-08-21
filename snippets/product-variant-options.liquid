@@ -20,6 +20,12 @@
   assign product_form_id = 'product-form-' | append: section.id
 -%}
 
+{% assign is_size = false %}
+
+{% if option.name == 'Size' %}
+  {% assign is_size = true %}
+{% endif %}
+
 {%- for value in option.values -%}
   {%- liquid
     assign swatch_focal_point = null
@@ -61,7 +67,7 @@
   {%- if picker_type == 'swatch' -%}
     {% assign hex_from_map = product.metafields.custom_but_hidden.hex_map.value[value] %}
     {% assign color_at_image = product.variants | where: 'option1', value | first %}
-    {% if option.name == 'Colour' and color_at_image.featured_image %}
+    {% if product.metafields.custom_but_hidden.show_image_swatch.value == true and color_at_image.featured_image %}
       {% assign image_src = color_at_image.featured_image %}
     {% endif %}
     {%- capture help_text -%}
@@ -98,7 +104,14 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}">
+    <label
+      style="
+        {% if is_size %}
+          width: 100px;
+        {% endif %}
+      "
+      for="{{ input_id }}"
+    >
       {{ value -}}
       {{ label_unavailable }}
     </label>
@@ -125,3 +138,82 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+
+{% comment %} ! PUT SERVICES DATA ON WINDOW {% endcomment %}
+{% comment %} ! maintain it with product-variant-picker.liquid (thats for products which have only single variant){% endcomment %}
+
+{% comment %} # TSHIRT PRINTING {% endcomment %}
+
+{% assign tshirt_color = '#000000' %}
+{% assign tshirt_text_color = '#ffffff' %}
+{% assign texture_path = 'tshirt-texture.png' | asset_url %}
+
+{% assign selected_variant = product.selected_or_first_available_variant %}
+{% assign selected_color = selected_variant.option1 | downcase %}
+
+{% for variant in product.variants %}
+  {% assign current_color = variant.option1 | downcase %}
+
+  {% if current_color == selected_color and variant.metafields.custom_but_hidden.tpr_text_color.value %}
+    {% assign tshirt_color = variant.metafields.custom_but_hidden.tpr_t_shirt_color.value %}
+    {% assign tshirt_text_color = variant.metafields.custom_but_hidden.tpr_text_color.value %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} # REMIX {% endcomment %}
+
+{% assign remix_model_name = product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model.value.name
+  | json
+%}
+{% assign remix_model_path = product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model.value.name
+  | downcase
+  | prepend: 'rmx-'
+  | append: '.glb'
+  | asset_url
+%}
+{% assign racket_frame_color = product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_racket_frame_color.value
+  | default: '#8348ff'
+%}
+{% assign racket_grip_color = product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_racket_grip_color.value
+  | default: '#ffffff'
+%}
+{% assign logo_color = product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_logo_color.value
+  | default: '#ff0000'
+%}
+{% assign sticker_text_color = product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_sticker_text_color.value
+  | default: '#ffffff'
+%}
+
+<script defer="defer">
+  setTimeout(function() {
+    try {
+        document.getElementById('sku').textContent = '{{ product.selected_or_first_available_variant.sku  }}'
+        Array.from(document.getElementsByTagName('video')).forEach((x) => x?.play())
+    } catch (e) {
+        console.error('coulnt set sku', e)
+    }
+  }, 500)
+
+  window.s3_current_variant_sku = '{{ product.selected_or_first_available_variant.sku | escape }}'
+  window.s3_product_name = '{{ product.title | escape }}'
+  window.s3_product_type= '{{ product.type }}'
+
+  if (typeof {{remix_model_name}} === 'string') {
+    window.s3_remix_config = {
+        racketFrameColor: {{ racket_frame_color | json }},
+        racketGripColor: {{ racket_grip_color | json }},
+        logoColor: {{ logo_color | json }},
+        stickerTextColor: {{ sticker_text_color | json }},
+        modelPath: '{{ remix_model_path }}'
+    };
+  }
+
+
+  // ! TSHIRT PRINTING
+
+  window.s3_tshirt_printing_config = {
+    tshirtColor: {{ tshirt_color | json }},
+    tshirtTextColor: {{ tshirt_text_color | json }},
+    texturePath: {{ texture_path | json }}
+  }
+</script>
