@@ -24,8 +24,39 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": true,
+        "show_collection_image": false,
         "color_scheme": "scheme-1"
+      }
+    },
+    "image_with_text_pMN8DB": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_cW4Ayc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't Settle - Personalize Your Game Collection Choose from our pro-grade pickleball paddles with 100% free personalization - pick your paddle, add your name, and stand out on the court.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_cW4Ayc"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_a3b20398-c885-4b4a-9553-7ea199d38275.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product-grid": {
@@ -53,6 +84,7 @@
   "order": [
     "countdown_timer_txn7pi",
     "banner",
+    "image_with_text_pMN8DB",
     "product-grid"
   ]
 }
