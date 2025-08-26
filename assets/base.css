@@ -3791,7 +3791,7 @@ details-disclosure > details {
 
 
 /* returnprime css */
-.returnprime .customer .btn:after {
+.returnprime .customer .btn:after, .returnprime .customer .btn:before {
       outline: none !important;
     border: none !important;
     box-shadow: none !important;
