@@ -9,30 +9,29 @@
  */
 {
   "sections": {
-    "hero_component_RKxJeB": {
+    "hero_component_pmECNB": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Atomic_X_Black_Knight_banner_753f36d8-ddc7-4065-9145-fc546ebaabac.jpg",
-        "mobile_image": "shopify://shop_images/Atomic_X_Black_Knight_responsive_0f77b9c1-f129-4300-87e4-36ddd0cb8549.jpg",
-        "subtitle": "Atomic X Black Knight Professional Racket",
-        "title": "Attack In Lightspeed",
-        "description": "Be the King of the Court with seamless built T-joint for faster recovery and great attacking power.",
-        "button_text": "Get It Here!",
-        "link_to": "shopify://products/atomic-x-black-knight",
+        "image": "shopify://shop_images/Banner_3_da8bd2e5-b062-4891-bbc8-e466f1bb84f0.jpg",
+        "mobile_image": "shopify://shop_images/Banner_3_Responsive_3f07cca5-67fa-450a-b73e-0367be9fef24.jpg",
+        "subtitle": "Blade Pro Badminton Shoes",
+        "title": "Step Into Supreme Comfort",
+        "description": "Experience the perfect fusion of soft cushioning and responsive support, designed to propel your every move with confidence and ease",
+        "button_text": "Dominate the Court!",
+        "link_to": "shopify://pages/blade-pro",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 12,
         "padding_bottom": 0
       }
     },
-    "swipeable_products_kQUykU": {
+    "swipeable_products_ak84Mc": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Atomic X Series",
+        "title": "Blade Pro Badminton Shoes",
         "products": [
-          "atomic-x-black-knight",
-          "atomic-x-dark-sword"
+          "blade-pro"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -108,6 +107,37 @@
         "padding_bottom": 36
       }
     },
+    "hero_component_RKxJeB": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_1b3380b1-bf5e-4da2-a4a4-61249a022248.png",
+        "mobile_image": "shopify://shop_images/Banner_1_R.png",
+        "subtitle": "Atomic X Black Knight Professional Racket",
+        "title": "Attack In Lightspeed",
+        "description": "Be the King of the Court with seamless built T-joint for faster recovery and great attacking power.",
+        "button_text": "Get It Here!",
+        "link_to": "shopify://products/atomic-x-black-knight",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_kQUykU": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Atomic X Series",
+        "products": [
+          "atomic-x-black-knight",
+          "atomic-x-dark-sword"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "hero_video_component_agpFBn": {
       "type": "hero-video-component",
       "disabled": true,
@@ -123,36 +153,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 68
-      }
-    },
-    "hero_component_pmECNB": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_1_f049b1a2-7400-4db7-bc22-31adfd0b28e0.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_5f6f4653-0149-4939-b1a1-283161b57735.jpg",
-        "subtitle": "Raze Pro Badminton Shoes",
-        "title": "Every step screams power",
-        "description": "Raze Pro blends cushioning and support for smooth transitions and secure landings.",
-        "button_text": "Get It Now!",
-        "link_to": "shopify://products/raze-pro",
-        "color_scheme": "",
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_ak84Mc": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Raze Pro Badminton Shoes",
-        "products": [
-          "raze-pro"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 16
       }
     },
     "hero_component_Q8wMtJ": {
@@ -448,12 +448,12 @@
     }
   },
   "order": [
-    "hero_component_RKxJeB",
-    "swipeable_products_kQUykU",
-    "multicolumn_qhdqCY",
-    "hero_video_component_agpFBn",
     "hero_component_pmECNB",
     "swipeable_products_ak84Mc",
+    "multicolumn_qhdqCY",
+    "hero_component_RKxJeB",
+    "swipeable_products_kQUykU",
+    "hero_video_component_agpFBn",
     "hero_component_Q8wMtJ",
     "swipeable_products_73DzB9",
     "hero_component_mYeEJ4",
