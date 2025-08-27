@@ -9,6 +9,7 @@ class CartRecommendations extends HTMLElement {
     this.loadingElement = this.querySelector('.cart-recommendations__loading');
     this.contentElement = this.querySelector('.cart-recommendations__content');
     this.errorElement = this.querySelector('.cart-recommendations__error');
+    this.headingElement = this.querySelector('.cart-recommendations__heading');
 
     this.recommendations = new Map(); // Cache recommendations
     this.isLoading = false;
@@ -318,6 +319,7 @@ class CartRecommendations extends HTMLElement {
     this.loadingElement.hidden = false;
     this.contentElement.hidden = true;
     this.errorElement.hidden = true;
+    if (this.headingElement) this.headingElement.hidden = true;
   }
 
   showContent() {
@@ -325,6 +327,7 @@ class CartRecommendations extends HTMLElement {
     this.loadingElement.hidden = true;
     this.contentElement.hidden = false;
     this.errorElement.hidden = true;
+    if (this.headingElement) this.headingElement.hidden = false;
   }
 
   showError() {
@@ -332,6 +335,7 @@ class CartRecommendations extends HTMLElement {
     this.loadingElement.hidden = true;
     this.contentElement.hidden = true;
     this.errorElement.hidden = false;
+    if (this.headingElement) this.headingElement.hidden = true;
   }
 
   hideComponent() {

@@ -1,6 +1,7 @@
 .cart-recommendations {
   margin-top: 3.5rem;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .cart-recommendations__container {
@@ -8,7 +9,7 @@
 }
 
 .cart-recommendations__heading {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
   color: var(--color-foreground);
 }
 
@@ -17,7 +18,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .cart-recommendations__loading {
@@ -27,20 +28,12 @@
 
 .cart-recommendations__grid {
   display: flex;
-  gap: 3px;
+  gap: 5px;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 0.5rem;
   scroll-snap-type: x mandatory;
-}
-
-.cart-recommendations__grid::-webkit-scrollbar {
-  height: 6px;
-}
-.cart-recommendations__grid::-webkit-scrollbar-thumb {
-  background: var(--color-foreground-20, rgba(0, 0, 0, 0.2));
-  border-radius: 4px;
 }
 
 .cart-recommendations__item {
@@ -57,7 +50,6 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  padding: 1rem;
   height: 100%;
 }
 
@@ -73,7 +65,7 @@
   margin-bottom: 0.75rem;
   overflow: hidden;
   border-radius: var(--border-radius);
-  background: var(--gradient-background);
+  background: #fafafa;
 }
 
 .cart-recommendations__image {
@@ -163,17 +155,17 @@
 /* Responsive adjustments for very small screens */
 @media screen and (min-width: 480px) {
   .cart-recommendations__item {
-    flex-basis: 60%;
+    flex-basis: 59%;
   }
 }
 @media screen and (min-width: 750px) {
   .cart-recommendations__item {
-    flex-basis: 50%;
+    flex-basis: 49%;
   }
 }
 @media screen and (min-width: 990px) {
   .cart-recommendations__item {
-    flex-basis: 40%;
+    flex-basis: 39%;
   }
 }
 
@@ -182,9 +174,6 @@
   .cart-recommendations__item {
     flex-basis: 40%;
   }
-  .cart-recommendations__link {
-    padding: 0.75rem;
-  }
   .cart-recommendations__title {
     font-size: 1.2rem;
   }
@@ -192,8 +181,6 @@
     margin-bottom: 0.5rem;
     width: 80%;
     max-width: 180px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 

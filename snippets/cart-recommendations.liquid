@@ -31,7 +31,6 @@
 
 {{ 'component-cart-recommendations.css' | asset_url | stylesheet_tag }}
 
-
 <cart-recommendations
   class="cart-recommendations"
   data-limit="{{ limit }}"
@@ -41,7 +40,7 @@
   data-section-id="cart-recommendations"
 >
   <div class="cart-recommendations__container">
-    <h3 class="cart-recommendations__heading h4">{{ heading }}</h3>
+    <h3 class="cart-recommendations__heading h4" hidden>{{ heading }}</h3>
 
     <div class="cart-recommendations__loading">
       {%- render 'loading-spinner' -%}
