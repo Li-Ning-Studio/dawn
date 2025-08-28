@@ -29,8 +29,9 @@
         },
         "custom_liquid_cUzqaN": {
           "type": "custom_liquid",
+          "name": "Remove Margin for Rating",
           "settings": {
-            "custom_liquid": "<style type=\"text/css\">\n.shopify-app-block:has(.jdgm-widget) {\n    /* padding: 0; */\n    margin: 0;\n}\n</style>"
+            "custom_liquid": "<style type=\"text/css\">\n.shopify-app-block:has(.jdgm-widget) {\n    /* padding: 0; */\n    margin: 0;\n}\n.jdgm-widget.jdgm-widget {\n    display: block;\n    font-size: 14px;\n}\n</style>"
           }
         },
         "caption": {
