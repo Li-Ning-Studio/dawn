@@ -1,0 +1,98 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "merchandising_item_n48aCX": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "flagship",
+            "mobile_position": 4,
+            "desktop_position": 3,
+            "image": "shopify://shop_images/01_de5c76cc-19d7-486b-a1af-26f1fcfc51d9.jpg",
+            "title": "Nitrix Venom",
+            "subtitle": "Crafted for heavy smashes and offensive play",
+            "cta_text": "SHOP",
+            "cta_url": "shopify://products/nitrix-70-venom",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
+        },
+        "merchandising_item_MDJwAW": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "badminton-rackets",
+            "mobile_position": 4,
+            "desktop_position": 3,
+            "image": "shopify://shop_images/01_de5c76cc-19d7-486b-a1af-26f1fcfc51d9.jpg",
+            "title": "Nitrix Venom",
+            "subtitle": "Crafted for heavy smashes and offensive play",
+            "cta_text": "SHOP",
+            "cta_url": "shopify://products/nitrix-70-venom",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
+        },
+        "merchandising_item_MKzeWd": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "badminton",
+            "mobile_position": 4,
+            "desktop_position": 2,
+            "image": "shopify://shop_images/01_de5c76cc-19d7-486b-a1af-26f1fcfc51d9.jpg",
+            "title": "Nitrix Venom",
+            "subtitle": "Crafted for heavy smashes and offensive play",
+            "cta_text": "SHOP",
+            "cta_url": "shopify://products/nitrix-70-venom",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "merchandising_item_n48aCX",
+        "merchandising_item_MDJwAW",
+        "merchandising_item_MKzeWd"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "should_look_disabled": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}
