@@ -107,7 +107,7 @@
     "drawer_shadow_blur": 5,
     "badge_position": "bottom left",
     "badge_corner_radius": 6,
-    "sale_badge_color_scheme": "scheme-5",
+    "sale_badge_color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_region_name": "Sunlight Sports Studio LLP",
     "brand_hq_address": "H. No. 3-78, Shamshabad Mandal, Hameedulla Nagar, Bahadurguda, Rangareddy, Telangana, 501218",
@@ -234,13 +234,13 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "rgba(0,0,0,0)",
+          "background": "#f90202",
           "background_gradient": "linear-gradient(204deg, rgba(153, 254, 152, 1), rgba(131, 249, 129, 1) 53%, rgba(255, 255, 255, 1) 69%)",
           "text": "#000000",
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#a40c0c"
         }
       },
       "scheme-d57f7147-03a7-4830-9d7e-f589c4a66e2b": {
@@ -361,6 +361,17 @@
           "button": "#efefef",
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9": {
+        "settings": {
+          "background": "#ed2961",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }
