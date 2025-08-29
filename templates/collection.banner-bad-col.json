@@ -28,35 +28,14 @@
         "color_scheme": "scheme-1"
       }
     },
-    "image_with_text_pMN8DB": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_cW4Ayc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Don't Settle - Personalize Your Game Collection Choose from our pro-grade pickleball paddles with 100% free personalization - pick your paddle, add your name, and stand out on the court.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "text_cW4Ayc"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "custom_liquid_NkYgfY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_09769171-0855-45a5-9aaf-287bdebd5655.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "custom_liquid": "<div class=\"paddle-hero compact\">\n  <!-- Top image -->\n  <img\n    class=\"paddle-hero__img-top\"\n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/1_00f572f1-87a4-47b7-98c3-5b227502ec98.png?v=1756464976\"\n    alt=\"Custom name on paddle handle\"\n    loading=\"lazy\"\n    decoding=\"async\"\n  >\n\n  <!-- Headline -->\n  <h1 class=\"paddle-hero__title\">Paddle Remix</h1>\n  <h2 class=\"paddle-hero__live\">is now live</h2>\n\n  <!-- Bottom image -->\n  <img\n    class=\"paddle-hero__img-bottom\"\n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/2_aa06fdc4-08b2-4d5e-b5e6-927a868f2243.png?v=1756464977\"\n    alt=\"Custom name on paddle face\"\n    loading=\"lazy\"\n    decoding=\"async\"\n  >\n\n  <!-- Tagline under 2nd image -->\n  <p class=\"paddle-hero__tagline\">\n    Don't Settle — Personalize Your Game Collection. Choose from our pro-grade pickleball paddles with 100% free personalization — pick your paddle, add your name, and stand out on the court.\n  </p>\n</div>\n\n<style>\n  .paddle-hero.compact {\n    text-align: center;\n    padding: 0;\n    margin: 0 auto;\n    max-width: 880px;\n  }\n\n  /* Title gradient (purple → pink → blue) */\n  .paddle-hero__title {\n    font-weight: 1000;\n    font-size: clamp(3.5rem, 7.5vw, 4rem); /* big */\n    line-height: 1;\n    margin: 0;\n    background: linear-gradient(\n      90deg,\n      #6D28D9,   /* deep violet */\n      #A21CAF,   /* magenta pink */\n      #EC4899,   /* bright pink */\n      #3B82F6,   /* vibrant blue */\n      #2563EB,   /* strong blue */\n      #6D28D9    /* loop back */\n    );\n    background-size: 300% 100%;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    animation: paddleGradient 3s linear infinite;\n  }\n\n  @keyframes paddleGradient {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n\n  .paddle-hero__live {\n    font-weight: 800;\n    font-size: clamp(1.5rem, 3.3vw, 1.45rem); /* larger */\n    margin: 2px 0 6px;\n    color: #0f172a; /* slate-900 */\n  }\n\n  .paddle-hero__tagline {\n    margin: 6px auto 0;\n    font-size: clamp(1rem, 2.6vw, 1.15rem); /* larger */\n    line-height: 1.28; /* tighter */\n    color: #334155; /* slate-700 */\n    max-width: 640px;\n    padding: 0 8px;\n  }\n\n  /* Desktop image sizing (base) */\n  .paddle-hero__img-top,\n  .paddle-hero__img-bottom {\n    display: block;\n    width: min(440px, 82vw);\n    height: auto;\n    margin: 4px auto;\n  }\n\n  /* Mobile: make images huge and kill blank space (UNCHANGED) */\n  @media (max-width: 800px) {\n    .paddle-hero__img-top {\n      width: 98vw;\n      margin: 0 auto -6px;        /* pull headline up */\n    }\n    .paddle-hero__title {\n      margin: 0;                   /* no extra space above/below */\n    }\n    .paddle-hero__live {\n      margin: -2px 0 2px;          /* sit closer to title and image */\n    }\n    .paddle-hero__img-bottom {\n      width: 99vw;\n      margin: -2px auto 2px;       /* collapse gap above */\n    }\n    .paddle-hero__tagline {\n      margin: 4px auto 0;          /* tight caption feel */\n      padding: 0 10px;\n    }\n    /* Optional micro-trim: remove default line-height gaps around headings on some themes */\n    .paddle-hero h1, .paddle-hero h2, .paddle-hero p { padding: 0; }\n  }\n\n  /* DESKTOP ONLY: two images left/right, text centered between */\n  @media (min-width: 801px) {\n    .paddle-hero.compact {\n      max-width: 1200px;\n      padding: 16px 12px;\n      display: grid;\n      grid-template-columns: 1fr minmax(420px, 560px) 1fr;\n      grid-template-areas:\n        \"left center right\"\n        \"tagline tagline tagline\";\n      column-gap: 32px;\n      row-gap: 8px;\n      align-items: center;\n    }\n\n    .paddle-hero__img-top {\n      grid-area: left;\n      width: 420px;\n      max-width: 100%;\n      margin: 0 auto;\n    }\n\n    .paddle-hero__img-bottom {\n      grid-area: right;\n      width: 420px;\n      max-width: 100%;\n      margin: 0 auto;\n    }\n\n    /* Put both heading lines in the center cell, stacked */\n    .paddle-hero__title,\n    .paddle-hero__live {\n      grid-area: center;\n    }\n\n    .paddle-hero__title {\n      font-size: clamp(3.5rem, 5.5vw, 5rem); /* larger on desktop */\n      margin: 0;\n      line-height: 1.02;\n    }\n\n    .paddle-hero__live {\n      font-size: clamp(1.4rem, 2vw, 2rem);\n      margin: 6px 0 0;\n    }\n\n    .paddle-hero__tagline {\n      grid-area: tagline;\n      margin: 10px auto 0;\n      max-width: 780px;\n      font-size: clamp(1rem, 1.5vw, 1.25rem);\n      line-height: 1.3;\n    }\n  }\n</style>",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "product-grid": {
@@ -84,7 +63,7 @@
   "order": [
     "countdown_timer_txn7pi",
     "banner",
-    "image_with_text_pMN8DB",
+    "custom_liquid_NkYgfY",
     "product-grid"
   ]
 }
