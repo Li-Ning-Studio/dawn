@@ -1,0 +1,587 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "countdown_timer_kxATRA": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Countdown Begins! ⚡",
+        "end_time": "2025-06-09 00:00",
+        "background": "linear-gradient(120deg, rgba(253, 251, 251, 1), rgba(235, 237, 238, 1) 100%)",
+        "text_color": "#8348ff",
+        "padding_top": 16
+      }
+    },
+    "hero_video_component_RdFkwa": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/banner.mp4",
+        "mobile_video": "shopify://files/videos/banner r.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/flash-sale",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_fYXKrh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #57ab76 0%, #1db555 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Sport, Your Style</h1>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_M8qycr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_QTEkyB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Badminton.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Smash Prices Here!",
+            "link": "shopify://collections/sale-badminton"
+          }
+        },
+        "column_p3rQT9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cricket.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Boundary Breaking Offer!",
+            "link": "shopify://collections/sale-cricket"
+          }
+        },
+        "column_BFJ9qq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Tennis.jpg",
+            "title": "",
+            "text": "",
+            "link_label": " Grab it, Smash it!",
+            "link": "shopify://collections/sale-tennis"
+          }
+        }
+      },
+      "block_order": [
+        "column_QTEkyB",
+        "column_p3rQT9",
+        "column_BFJ9qq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_g9bLdF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Favorites, Sorted by Category</h1>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_UWV9KM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TUYcB8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Rackets.jpg",
+            "title": "",
+            "text": "",
+            "link_label": " Serve Savings!",
+            "link": "shopify://collections/sale-rackets-1"
+          }
+        },
+        "column_6MeRGw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Shoes.jpg",
+            "title": "",
+            "text": "",
+            "link_label": " Step It Up!",
+            "link": "shopify://collections/sale-shoes"
+          }
+        },
+        "column_VW6BAw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Bags.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Pack Like a Pro",
+            "link": "shopify://collections/sale-bags"
+          }
+        }
+      },
+      "block_order": [
+        "column_TUYcB8",
+        "column_6MeRGw",
+        "column_VW6BAw"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "collage_chyhjH": {
+      "type": "collage",
+      "blocks": {
+        "image_pUBjYa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Pickleball_531e7607-1add-4f1b-ace1-6c4ba94f50e0.jpg"
+          }
+        },
+        "product_DgchYB": {
+          "type": "product",
+          "settings": {
+            "product": "force-s-essentials-pac",
+            "second_image": false
+          }
+        },
+        "collection_ExQKtC": {
+          "type": "collection",
+          "settings": {
+            "collection": "pickleball"
+          }
+        }
+      },
+      "block_order": [
+        "image_pUBjYa",
+        "product_DgchYB",
+        "collection_ExQKtC"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_cd3F96": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f43b47 0%, #ff0844 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  So Many Freebies, So Little Time!\n</h1>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_NHWedP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Fq6iTU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cricket-shoes"
+          }
+        },
+        "featured_collection_WTFDzc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-rackets"
+          }
+        },
+        "featured_collection_6MeMf7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "topwear"
+          }
+        },
+        "featured_collection_hbQc3N": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "brv2"
+          }
+        },
+        "featured_collection_9kjBni": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-drawstring-bag"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Fq6iTU",
+        "featured_collection_WTFDzc",
+        "featured_collection_6MeMf7",
+        "featured_collection_hbQc3N",
+        "featured_collection_9kjBni"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_h3e4K6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f9d423 0%, #f83600 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Our Favorite Picks, Now on Offer!</h1>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "collage_bcf6tY": {
+      "type": "collage",
+      "blocks": {
+        "image_GCdTar": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_9f60d1d1-7646-4f56-b4f9-149f8167a272.jpg"
+          }
+        },
+        "product_KCH4re": {
+          "type": "product",
+          "settings": {
+            "product": "hyper-turf",
+            "second_image": false
+          }
+        },
+        "image_EdRJNc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Responsive_3_d7352f9f-f764-4fc5-96d0-c02586deeae3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_GCdTar",
+        "product_KCH4re",
+        "image_EdRJNc"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "none",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_iqEeaH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Fk4APc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_9.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/court-star"
+          }
+        },
+        "column_rJ6KbT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_59864be1-7b7a-4bc8-9e08-88d46ac3fde6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/velocity"
+          }
+        }
+      },
+      "block_order": [
+        "column_Fk4APc",
+        "column_rJ6KbT"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_YqaQVD": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_f91fbd0d-6736-4cbe-84fb-c40daeae3812.png",
+        "mobile_image": "shopify://shop_images/responsive.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_UmqqJf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cAbyYP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_12.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/drive-cricket-kit-bag"
+          }
+        },
+        "column_gp6WYe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_c8256d7b-b25d-4f4d-b2ab-ef556030eecd.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/infinity-comfort"
+          }
+        },
+        "column_HwB8bX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_7.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/sale-tennis"
+          }
+        }
+      },
+      "block_order": [
+        "column_cAbyYP",
+        "column_gp6WYe",
+        "column_HwB8bX"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "collage_XaiU67": {
+      "type": "collage",
+      "blocks": {
+        "product_LcP6Gi": {
+          "type": "product",
+          "settings": {
+            "product": "atomic-x-black-knight",
+            "second_image": false
+          }
+        },
+        "image_mpbitR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_b29461f0-b6b3-4702-ac69-6b65310a109f.jpg"
+          }
+        },
+        "image_hAL7LJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_bb3f120a-0fcc-43c9-b9f2-da52af24591c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_LcP6Gi",
+        "image_mpbitR",
+        "image_hAL7LJ"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_Pk8Ebq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Gmi6yy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_9d702769-5974-4d6e-87a9-9bbe1b0c4ed6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/flutter-s-zoom"
+          }
+        },
+        "column_er9pcR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_dc155f24-e245-4c3e-a279-34ccfc91e783.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/blade-lite-ii"
+          }
+        },
+        "column_QLqWmG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_a065bb58-f5f4-4c14-9720-fe2b354971c4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/n-ergy-80"
+          }
+        }
+      },
+      "block_order": [
+        "column_Gmi6yy",
+        "column_er9pcR",
+        "column_QLqWmG"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_fhYexr": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/all_banner.jpg",
+        "mobile_image": "shopify://shop_images/all_banner_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/flash-sale",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "countdown_timer_kxATRA",
+    "hero_video_component_RdFkwa",
+    "custom_liquid_fYXKrh",
+    "multicolumn_M8qycr",
+    "custom_liquid_g9bLdF",
+    "multicolumn_UWV9KM",
+    "collage_chyhjH",
+    "custom_liquid_cd3F96",
+    "collection_list_NHWedP",
+    "custom_liquid_h3e4K6",
+    "collage_bcf6tY",
+    "multicolumn_iqEeaH",
+    "hero_component_YqaQVD",
+    "multicolumn_UmqqJf",
+    "collage_XaiU67",
+    "multicolumn_Pk8Ebq",
+    "hero_component_fhYexr"
+  ]
+}
