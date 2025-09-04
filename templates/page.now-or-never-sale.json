@@ -116,7 +116,7 @@
         "column_QTEkyB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Badminton.png",
+            "image": "shopify://shop_images/4_8c587a7e-11cc-4f8c-b49a-f029846aa244.png",
             "title": "",
             "text": "",
             "link_label": "Smash Prices Here!",
@@ -126,7 +126,7 @@
         "column_p3rQT9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Cricket.png",
+            "image": "shopify://shop_images/3_1b37f7f8-a775-4a1d-bc24-8add5603265c.png",
             "title": "",
             "text": "",
             "link_label": "Boundary Breaking Offer!",
@@ -136,7 +136,7 @@
         "column_BFJ9qq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Pickelball.png",
+            "image": "shopify://shop_images/2_0d1aa9a8-67fc-4f1a-83f4-772865478130.png",
             "title": "",
             "text": "",
             "link_label": " Grab it, Smash it!",
@@ -170,30 +170,28 @@
     "collage_chyhjH": {
       "type": "collage",
       "blocks": {
-        "image_pUBjYa": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_b7c5af1f-27e0-4aaa-9849-fb699c9bb592.png"
-          }
-        },
-        "video_enrkEG": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "description": "Describe the video"
-          }
-        },
         "collection_ExQKtC": {
           "type": "collection",
           "settings": {
             "collection": "pickleball"
           }
+        },
+        "image_pUBjYa": {
+          "type": "image",
+          "settings": {}
+        },
+        "product_Y67UYc": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
         }
       },
       "block_order": [
+        "collection_ExQKtC",
         "image_pUBjYa",
-        "video_enrkEG",
-        "collection_ExQKtC"
+        "product_Y67UYc"
       ],
       "name": "t:sections.collage.presets.name",
       "settings": {
