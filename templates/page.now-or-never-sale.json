@@ -9,22 +9,6 @@
  */
 {
   "sections": {
-    "hero_component_nHKj6t": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Page_banner.png",
-        "mobile_image": "shopify://shop_images/Page_banner_R.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -37,7 +21,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Favorites, Sorted by Category</h1>",
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #6a11cb 0%, #2575fc 90%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Explore by Category</h1>",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 12,
         "padding_bottom": 20
@@ -49,7 +33,7 @@
         "column_TUYcB8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Rackets.png",
+            "image": "shopify://shop_images/Rackets_da9b6fdc-0f6a-41ad-a65f-1ce0a9bbb524.png",
             "title": "",
             "text": "",
             "link_label": " Serve Savings!",
@@ -59,7 +43,7 @@
         "column_6MeRGw": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Shoes.png",
+            "image": "shopify://shop_images/Shoes_a30e7a9f-4a39-4a95-9e52-3fce3d5d448a.png",
             "title": "",
             "text": "",
             "link_label": " Step It Up!",
@@ -69,7 +53,7 @@
         "column_VW6BAw": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Bags.png",
+            "image": "shopify://shop_images/Bags_262f6ae6-6f63-433a-b108-529d1b47e086.png",
             "title": "",
             "text": "",
             "link_label": "Pack Like a Pro",
@@ -87,7 +71,7 @@
         "title": "",
         "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "portrait",
+        "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
@@ -104,7 +88,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #57ab76 0%, #1db555 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Sport, Your Style</h1>",
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(220deg, #7028e4 30%, #e5b2ca 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Shop by Sports</h1>",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 12,
         "padding_bottom": 20
@@ -126,7 +110,7 @@
         "column_p3rQT9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/3_1b37f7f8-a775-4a1d-bc24-8add5603265c.png",
+            "image": "shopify://shop_images/3_1cad95b6-e8c1-464d-94bc-b21d05127b13.png",
             "title": "",
             "text": "",
             "link_label": "Boundary Breaking Offer!",
@@ -167,50 +151,12 @@
         "padding_bottom": 0
       }
     },
-    "collage_chyhjH": {
-      "type": "collage",
-      "blocks": {
-        "collection_ExQKtC": {
-          "type": "collection",
-          "settings": {
-            "collection": "pickleball"
-          }
-        },
-        "image_pUBjYa": {
-          "type": "image",
-          "settings": {}
-        },
-        "product_Y67UYc": {
-          "type": "product",
-          "settings": {
-            "product": "force-s-essentials-pac",
-            "second_image": false
-          }
-        }
-      },
-      "block_order": [
-        "collection_ExQKtC",
-        "image_pUBjYa",
-        "product_Y67UYc"
-      ],
-      "name": "t:sections.collage.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "hero_component_eAgHbh": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Professional_Rackets.jpg",
-        "mobile_image": "shopify://shop_images/Professional_Racket_R.jpg",
+        "image": "shopify://shop_images/pro_rackets.jpg",
+        "mobile_image": "shopify://shop_images/pro_rackets_res.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -219,6 +165,46 @@
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "collage_chyhjH": {
+      "type": "collage",
+      "blocks": {
+        "image_FBhViE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_13AUG.jpg"
+          }
+        },
+        "product_Y67UYc": {
+          "type": "product",
+          "settings": {
+            "product": "court-sonic-pbx",
+            "second_image": false
+          }
+        },
+        "image_HdGwkV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_dcfb597e-9b25-446a-ab19-b3c9572c921b.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_FBhViE",
+        "product_Y67UYc",
+        "image_HdGwkV"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "custom_liquid_cd3F96": {
@@ -581,14 +567,13 @@
     }
   },
   "order": [
-    "hero_component_nHKj6t",
     "main",
     "custom_liquid_g9bLdF",
     "multicolumn_UWV9KM",
     "custom_liquid_fYXKrh",
     "multicolumn_M8qycr",
-    "collage_chyhjH",
     "hero_component_eAgHbh",
+    "collage_chyhjH",
     "custom_liquid_cd3F96",
     "collection_list_NHWedP",
     "hero_component_bFmfQt",
