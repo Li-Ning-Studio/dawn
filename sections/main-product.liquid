@@ -622,7 +622,7 @@
                   {%- if product.available == false -%}
                     <hr style="color: rgba(var(--color-foreground), 0.08); background: rgba(var(--color-foreground), 0.08)">
                     {%- render 'product-oos-recommendations',
-                      limit: 4,
+                      limit: 8,
                       heading: 'You might like these alternatives',
                       intent: 'related'
                     -%}
