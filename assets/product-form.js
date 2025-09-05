@@ -61,12 +61,27 @@ if (!customElements.get('product-form')) {
 
         const formData = new FormData(this.form);
 
+        // Generate a unique, per-submission bundle id. This stays stable
+        // within a single add-to-cart event and avoids collisions across
+        // submissions. Prefer crypto.randomUUID and append a base36 timestamp
+        // for traceability.
+        const __ts = Date.now().toString(36);
+        const __base =
+          window.crypto && typeof window.crypto.randomUUID === 'function'
+            ? window.crypto.randomUUID()
+            : Math.random().toString(36).slice(2, 10);
+        const bundleId = `${__base}-${__ts}`;
+
         const sections = this.cart ? this.cart.getSectionsToRender().map((section) => section.id) : [];
 
         const items = [
           {
             id: formData.get('id'),
             quantity: formData.get('quantity') || 1,
+            properties: {
+              _bundleId: bundleId,
+              _bundleRole: 'main',
+            },
           },
         ];
 
@@ -90,14 +105,16 @@ if (!customElements.get('product-form')) {
                   _string: stringVariantSku,
                   _stringName: document.querySelector('input[name="string-variant"]:checked')?.dataset?.string || '',
                   _tension: `${tensionSelected}lbs`,
-                  _bundleId: formData.get('id'),
+                  _bundleId: bundleId,
+                  _bundleRole: 'component',
                 },
               },
               {
                 id: variantSelected,
                 quantity: 1,
                 properties: {
-                  _bundleId: formData.get('id'),
+                  _bundleId: bundleId,
+                  _bundleRole: 'component',
                 },
               },
             );
@@ -134,7 +151,8 @@ if (!customElements.get('product-form')) {
               _textColor: window.s3_remix_config.stickerTextColor || 'UNKNOWN',
               _productSKU: window?.s3_current_variant_sku || '',
               _productName: window?.s3_product_name || '',
-              _bundleId: formData.get('id'),
+              _bundleId: bundleId,
+              _bundleRole: 'component',
             },
           });
         }
@@ -151,7 +169,8 @@ if (!customElements.get('product-form')) {
               _textColor: window.s3_tshirt_printing_config.tshirtTextColor || 'UNKNOWN',
               _productSKU: window?.s3_current_variant_sku || '',
               _productName: window?.s3_product_name || '',
-              _bundleId: formData.get('id'),
+              _bundleId: bundleId,
+              _bundleRole: 'component',
             },
           });
         }
