@@ -269,7 +269,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_1_5fdf803f-6bdf-4104-97df-48b439670b23.png",
-            "title": "Column",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -278,7 +278,8 @@
         "column_xFP6iX": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "image": "shopify://shop_images/Artboard_4_77c10e99-77c8-4da1-8602-37f35f4ec2e7.png",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -287,7 +288,8 @@
         "column_GtXVNq": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "image": "shopify://shop_images/Untitled_design_2.webp",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -305,71 +307,73 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "collection_list_NHWedP": {
-      "type": "collection-list",
+    "multicolumn_XLy9de": {
+      "type": "multicolumn",
       "blocks": {
-        "featured_collection_Fq6iTU": {
-          "type": "featured_collection",
+        "column_aM9WzP": {
+          "type": "column",
           "settings": {
-            "collection": "cricket-shoes"
+            "image": "shopify://shop_images/Artboard_2_01142b7b-b002-4179-b1ec-bfdbe3543b16.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "featured_collection_WTFDzc": {
-          "type": "featured_collection",
+        "column_9eMyjL": {
+          "type": "column",
           "settings": {
-            "collection": "badminton-rackets"
+            "image": "shopify://shop_images/Artboard_5_bd43f86e-1d27-40af-a296-15842d982d9f.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "featured_collection_6MeMf7": {
-          "type": "featured_collection",
+        "column_wWt49J": {
+          "type": "column",
           "settings": {
-            "collection": "topwear"
-          }
-        },
-        "featured_collection_hbQc3N": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "brv2"
-          }
-        },
-        "featured_collection_9kjBni": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-drawstring-bag"
+            "image": "shopify://shop_images/Artboard_3_de3f5b5b-a912-421d-8c3f-7b1f6ce77617.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "featured_collection_Fq6iTU",
-        "featured_collection_WTFDzc",
-        "featured_collection_6MeMf7",
-        "featured_collection_hbQc3N",
-        "featured_collection_9kjBni"
+        "column_aM9WzP",
+        "column_9eMyjL",
+        "column_wWt49J"
       ],
-      "name": "t:sections.collection-list.presets.name",
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
-        "heading_size": "h2",
-        "image_ratio": "square",
-        "columns_desktop": 5,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "hero_component_bFmfQt": {
@@ -403,14 +407,12 @@
       "blocks": {
         "image_GCdTar": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4_b3ceee8d-841e-4187-876b-84193ce0c36c.png"
-          }
+          "settings": {}
         },
         "product_KCH4re": {
           "type": "product",
           "settings": {
-            "product": "battle-600",
+            "product": "atomic-x-black-knight",
             "second_image": false
           }
         },
@@ -504,7 +506,7 @@
         "column_cAbyYP": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_12.png",
+            "image": "shopify://shop_images/Atomic_series_4f7ad4a8-f4f6-4e45-a9f0-f94b428b1eed.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -514,7 +516,7 @@
         "column_gp6WYe": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_1_c8256d7b-b25d-4f4d-b2ab-ef556030eecd.jpg",
+            "image": "shopify://shop_images/Post3.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -524,6 +526,7 @@
         "column_HwB8bX": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Flutter_series.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -566,7 +569,9 @@
         },
         "image_mpbitR": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/1_a46f4aee-061e-44cf-8a95-5fa7939ab55f.jpg"
+          }
         },
         "image_hAL7LJ": {
           "type": "image",
@@ -678,7 +683,7 @@
     "collage_chyhjH",
     "custom_liquid_cd3F96",
     "multicolumn_Np4z7p",
-    "collection_list_NHWedP",
+    "multicolumn_XLy9de",
     "hero_component_bFmfQt",
     "custom_liquid_h3e4K6",
     "collage_bcf6tY",
