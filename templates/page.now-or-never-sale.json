@@ -407,24 +407,29 @@
       "blocks": {
         "image_GCdTar": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/4_9a604d27-7656-4c97-bbf3-aaa94c85b0d8.jpg"
+          }
         },
         "product_KCH4re": {
           "type": "product",
           "settings": {
-            "product": "atomic-x-black-knight",
+            "product": "court-star-pro",
             "second_image": false
           }
         },
-        "image_EdRJNc": {
-          "type": "image",
-          "settings": {}
+        "product_WbpWUE": {
+          "type": "product",
+          "settings": {
+            "product": "blade-lite-ii",
+            "second_image": false
+          }
         }
       },
       "block_order": [
         "image_GCdTar",
         "product_KCH4re",
-        "image_EdRJNc"
+        "product_WbpWUE"
       ],
       "name": "t:sections.collage.presets.name",
       "settings": {
@@ -441,37 +446,37 @@
     "multicolumn_iqEeaH": {
       "type": "multicolumn",
       "blocks": {
-        "column_Fk4APc": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/T-Fusion_Series.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/court-star"
-          }
-        },
         "column_rJ6KbT": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Blade.png",
+            "image": "shopify://shop_images/Post1.jpg",
             "title": "",
             "text": "",
             "link_label": "",
             "link": "shopify://products/velocity"
           }
+        },
+        "column_Fk4APc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_4016df19-5a47-4ea8-bd66-9b52cd45190c.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/court-star"
+          }
         }
       },
       "block_order": [
-        "column_Fk4APc",
-        "column_rJ6KbT"
+        "column_rJ6KbT",
+        "column_Fk4APc"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
         "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
@@ -506,7 +511,7 @@
         "column_cAbyYP": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Atomic_series_4f7ad4a8-f4f6-4e45-a9f0-f94b428b1eed.png",
+            "image": "shopify://shop_images/Artboard_3_3fd2f8aa-1b2c-4247-a3ee-c5664bd80ef3.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -526,7 +531,7 @@
         "column_HwB8bX": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Flutter_series.png",
+            "image": "shopify://shop_images/Artboard_4_415e581c-3661-4e89-8ef9-f0f85ac12e92.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -544,7 +549,7 @@
         "title": "",
         "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
@@ -613,7 +618,7 @@
         "column_er9pcR": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_dc155f24-e245-4c3e-a279-34ccfc91e783.jpg",
+            "image": "shopify://shop_images/Post2.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -641,7 +646,7 @@
         "title": "",
         "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
@@ -658,16 +663,16 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Shop_all.jpg",
-        "mobile_image": "shopify://shop_images/Shop_all_R.jpg",
+        "image": "shopify://shop_images/Shop_all.png",
+        "mobile_image": "shopify://shop_images/Shop_all_res.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://collections/flash-sale",
-        "color_scheme": "",
-        "padding_top": 8,
-        "padding_bottom": 0
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },
