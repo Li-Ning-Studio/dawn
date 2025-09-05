@@ -147,7 +147,8 @@
                       use_variant: true,
                       show_badges: true,
                       price_class: 'price--large',
-                      show_compare_at_price: true
+                      show_compare_at_price: true,
+                      show_savings_percent: true
                     -%}
                   </div>
                   {%- if product.quantity_price_breaks_configured? -%}
@@ -576,7 +577,13 @@
                 {% if product.metafields.custom_but_hidden.combined_products %}
                   {% render 'combined-products-options', product: product, block: block %}
                 {% endif %}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% if product.available == true %}
+                  {% render 'product-variant-picker',
+                    product: product,
+                    block: block,
+                    product_form_id: product_form_id
+                  %}
+                {% endif %}
                 {% if settings.is_stringing_enabled_globally
                   and product.metafields.custom_but_hidden.studio_pro_stringing
                   and settings.stringing_collection_id != blank
@@ -608,6 +615,18 @@
                     section_id: section.id,
                     show_pickup_availability: true
                   -%}
+                  {%- comment -%}
+                    Show OOS recommendations directly below the Add to Cart area
+                    (kept adjacent to buy buttons but not inside the snippet).
+                  {%- endcomment -%}
+                  {%- if product.available == false -%}
+                    <hr style="color: rgba(var(--color-foreground), 0.08); background: rgba(var(--color-foreground), 0.08)">
+                    {%- render 'product-oos-recommendations',
+                      limit: 8,
+                      heading: 'You might like these alternatives',
+                      intent: 'related'
+                    -%}
+                  {%- endif -%}
                 {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
