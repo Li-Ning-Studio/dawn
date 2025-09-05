@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_video_component_M6JrQP": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt_2df925ec-1c44-453c-adcf-bffa19482af7.mp4",
+        "mobile_video": "shopify://files/videos/reel.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_g9bLdF": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -184,7 +200,7 @@
         "show_view_all": true,
         "view_all_style": "link",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
@@ -244,6 +260,61 @@
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 8,
         "padding_bottom": 8
+      }
+    },
+    "multicolumn_Np4z7p": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AnGRm7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_5fdf803f-6bdf-4104-97df-48b439670b23.png",
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xFP6iX": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GtXVNq": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_AnGRm7",
+        "column_xFP6iX",
+        "column_GtXVNq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collection_list_NHWedP": {
@@ -597,6 +668,7 @@
   },
   "order": [
     "main",
+    "hero_video_component_M6JrQP",
     "custom_liquid_g9bLdF",
     "multicolumn_UWV9KM",
     "custom_liquid_fYXKrh",
@@ -605,6 +677,7 @@
     "featured_collection_TzEckL",
     "collage_chyhjH",
     "custom_liquid_cd3F96",
+    "multicolumn_Np4z7p",
     "collection_list_NHWedP",
     "hero_component_bFmfQt",
     "custom_liquid_h3e4K6",
