@@ -248,8 +248,8 @@
         "mobile_layout": "collage",
         "card_styles": "none",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "custom_liquid_cd3F96": {
@@ -258,8 +258,8 @@
       "settings": {
         "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f43b47 0%, #ff0844 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  So Many Freebies, So Little Time!\n</h1>",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 8,
-        "padding_bottom": 8
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "multicolumn_Np4z7p": {
@@ -285,6 +285,36 @@
             "link": ""
           }
         },
+        "column_kEi9CQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_de3f5b5b-a912-421d-8c3f-7b1f6ce77617.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8tVYaa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_01142b7b-b002-4179-b1ec-bfdbe3543b16.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FU7yHf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_5_bd43f86e-1d27-40af-a296-15842d982d9f.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_GtXVNq": {
           "type": "column",
           "settings": {
@@ -299,6 +329,9 @@
       "block_order": [
         "column_AnGRm7",
         "column_xFP6iX",
+        "column_kEi9CQ",
+        "column_8tVYaa",
+        "column_FU7yHf",
         "column_GtXVNq"
       ],
       "name": "t:sections.multicolumn.presets.name",
@@ -315,65 +348,8 @@
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_XLy9de": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_aM9WzP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_01142b7b-b002-4179-b1ec-bfdbe3543b16.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_9eMyjL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_5_bd43f86e-1d27-40af-a296-15842d982d9f.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_wWt49J": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_de3f5b5b-a912-421d-8c3f-7b1f6ce77617.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_aM9WzP",
-        "column_9eMyjL",
-        "column_wWt49J"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "hero_component_bFmfQt": {
@@ -388,8 +364,8 @@
         "button_text": "",
         "link_to": "/",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "custom_liquid_h3e4K6": {
@@ -398,8 +374,8 @@
       "settings": {
         "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f9d423 0%, #f83600 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Our Favorite Picks, Now on Offer!</h1>",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 8,
-        "padding_bottom": 24
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "collage_bcf6tY": {
@@ -485,8 +461,8 @@
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "hero_component_YqaQVD": {
@@ -500,9 +476,9 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://collections/apparels",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "multicolumn_UmqqJf": {
@@ -558,8 +534,8 @@
         "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 32,
-        "padding_bottom": 0
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "collage_XaiU67": {
@@ -598,8 +574,8 @@
         "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "multicolumn_Pk8Ebq": {
@@ -654,8 +630,8 @@
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "hero_component_fhYexr": {
@@ -687,7 +663,6 @@
     "collage_chyhjH",
     "custom_liquid_cd3F96",
     "multicolumn_Np4z7p",
-    "multicolumn_XLy9de",
     "hero_component_bFmfQt",
     "custom_liquid_h3e4K6",
     "collage_bcf6tY",
