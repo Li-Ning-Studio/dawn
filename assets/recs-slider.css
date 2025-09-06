@@ -18,9 +18,9 @@
     width: calc(33% - var(--grid-desktop-horizontal-spacing) - 3rem);
   }
 
-  /* Slight left padding for first product card across all rec sliders */
-  .recs-slider.grid--peek.slider .grid__item:first-of-type {
-    padding-left: 3rem !important;
+  /* Container-level padding for proper edge spacing without affecting product sizes */
+  .recs-slider.grid--peek.slider {
+    padding-left: 3rem;
   }
 }
 
