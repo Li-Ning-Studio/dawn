@@ -542,6 +542,47 @@
         "padding_bottom": 12
       }
     },
+    "collage_XWbKdN": {
+      "type": "collage",
+      "blocks": {
+        "image_amahc4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Post_1.jpg"
+          }
+        },
+        "product_iqgaWH": {
+          "type": "product",
+          "settings": {
+            "product": "hyper-drive",
+            "second_image": false
+          }
+        },
+        "product_9j76rP": {
+          "type": "product",
+          "settings": {
+            "product": "terrafield",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_amahc4",
+        "product_iqgaWH",
+        "product_9j76rP"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "hero_component_YqaQVD": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -692,6 +733,7 @@
     "multicolumn_iqEeaH",
     "collage_chyhjH",
     "multicolumn_UmqqJf",
+    "collage_XWbKdN",
     "hero_component_YqaQVD",
     "collage_XaiU67",
     "multicolumn_Pk8Ebq",
