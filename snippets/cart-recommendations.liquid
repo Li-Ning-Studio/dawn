@@ -20,8 +20,18 @@
     break
   endif
 
-  # Get unique product IDs from cart items
-  assign cart_product_ids = cart.items | map: 'product_id' | uniq
+  # Get unique product IDs from cart items, prioritizing component IDs when available
+  assign cart_product_ids = ''
+  for item in cart.items
+    if item.item_components.size > 0
+      for component in item.item_components
+        assign cart_product_ids = cart_product_ids | append: component.product_id | append: ','
+      endfor
+    else
+      assign cart_product_ids = cart_product_ids | append: item.product_id | append: ','
+    endif
+  endfor
+  assign cart_product_ids = cart_product_ids | split: ',' | uniq | compact
 
   # Don't show recommendations if no valid products in cart
   if cart_product_ids.size == 0
