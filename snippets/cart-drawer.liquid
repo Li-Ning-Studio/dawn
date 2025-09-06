@@ -138,9 +138,16 @@
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% assign image = item.image %}
                           {% if item.item_components.size > 0 %}
-                            {% assign bundle_id = item.item_components.first.properties._bundleId | plus: 0 %}
-                            {% assign main_product = item.item_components | where: 'variant_id', bundle_id %}
-                            {% assign image = main_product.first.image %}
+                            {% assign main_product = null %}
+                            {% for component in item.item_components %}
+                              {% if component.properties._bundleRole == 'main' %}
+                                {% assign main_product = component %}
+                                {% break %}
+                              {% endif %}
+                            {% endfor %}
+                            {% if main_product %}
+                              {% assign image = main_product.image %}
+                            {% endif %}
                           {% endif %}
                           {% if image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -591,7 +598,7 @@
 
           {%- if cart != empty -%}
             {%- render 'cart-recommendations',
-              limit: 4,
+              limit: 8,
               heading: "We think you'll like these too",
               intent: 'complementary'
             -%}
