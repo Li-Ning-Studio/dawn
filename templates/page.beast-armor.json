@@ -36,11 +36,82 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "featured_product_PfEFaN": {
+      "type": "featured-product",
+      "blocks": {
+        "text_GBhmR7": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_LmbqBq": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_MdnarY": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_jkJ4RN": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_3M6chJ": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_weq4A9": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_64b9PK": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_GBhmR7",
+        "title_LmbqBq",
+        "price_MdnarY",
+        "variant_picker_jkJ4RN",
+        "quantity_selector_3M6chJ",
+        "buy_buttons_weq4A9",
+        "share_64b9PK"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "beast-armor-pbx",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "custom_liquid_kCJHG3",
-    "custom_liquid_KGM8d7"
+    "custom_liquid_KGM8d7",
+    "featured_product_PfEFaN"
   ]
 }
