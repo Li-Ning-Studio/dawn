@@ -33,6 +33,49 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_Wnq4h9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9HTmaM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hundred's Official India Tour is coming to your court!",
+            "heading_size": "h1"
+          }
+        },
+        "text_qP7bmt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get ready to experience the game like never before!<br/>Join us for Hundred's India Tour and be a part of the action.</p>"
+          }
+        },
+        "button_DTBMjN": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9HTmaM",
+        "text_qP7bmt",
+        "button_DTBMjN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
     "1757582427791457ea": {
       "type": "apps",
       "blocks": {
@@ -118,6 +161,7 @@
   "order": [
     "main",
     "hero_component_3mFtqf",
+    "rich_text_Wnq4h9",
     "1757582427791457ea",
     "rich_text_9km999",
     "custom_liquid_ktVR8J"
