@@ -20,6 +20,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
+        "image": "shopify://shop_images/WhatsApp_Image_2025-09-11_at_2.51.19_PM.jpg",
+        "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-09-11_at_2.51.19_PM_1.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -28,16 +30,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "custom_liquid_ktVR8J": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<style>\n  /* Scoped styles */\n  #hundred-terms {\n    font-family: inherit;\n    font-size: 0.875rem; /* small */\n    line-height: 1.7;\n    color: inherit;\n    max-width: 70ch;\n    margin: 0 auto;        /* center block horizontally */\n    text-align: center;    /* center text inside */\n  }\n  #hundred-terms h3 {\n    margin: 0 0 0.5rem 0;\n    font: inherit;\n    font-weight: 600;\n    font-size: 0.95rem;\n  }\n  #hundred-terms p {\n    margin: 0 0 0.5rem 0;\n  }\n  #hundred-terms ul {\n    margin: 0;\n    padding-left: 0;       /* remove default bullet indent */\n    list-style-position: inside; /* keep bullets aligned in center */\n  }\n  #hundred-terms li {\n    margin: 0.25rem 0;\n  }\n</style>\n\n<div id=\"hundred-terms\" class=\"rte\">\n  <h3>Terms and Conditions – Hundred Experience Tour</h3>\n  <p>By attending the Hundred Experience Tour, you agree that:</p>\n  <ul>\n    <li>Your participation was voluntary and you were responsible for your own safety.</li>\n    <li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li>\n    <li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li>\n    <li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li>\n    <li>Event details and activities may have been subject to change at the organizers' discretion.</li>\n    <li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li>\n  </ul>\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "1757582427791457ea": {
@@ -66,6 +58,16 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "custom_liquid_ktVR8J": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  /* Scoped styles */\n  #hundred-terms {\n    font-family: inherit;\n    font-size: 0.875rem; /* small */\n    line-height: 1.7;\n    color: inherit;\n    max-width: 70ch;\n    margin: 0 auto;        /* center block horizontally */\n    text-align: center;    /* center text inside */\n  }\n  #hundred-terms h3 {\n    margin: 0 0 0.5rem 0;\n    font: inherit;\n    font-weight: 600;\n    font-size: 0.95rem;\n  }\n  #hundred-terms p {\n    margin: 0 0 0.5rem 0;\n  }\n  #hundred-terms ul {\n    margin: 0;\n    padding-left: 0;       /* remove default bullet indent */\n    list-style-position: inside; /* keep bullets aligned in center */\n  }\n  #hundred-terms li {\n    margin: 0.25rem 0;\n  }\n</style>\n\n<div id=\"hundred-terms\" class=\"rte\">\n  <h3>Terms and Conditions – Hundred Experience Tour</h3>\n  <p>By attending the Hundred Experience Tour, you agree that:</p>\n  <ul>\n    <li>Your participation was voluntary and you were responsible for your own safety.</li>\n    <li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li>\n    <li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li>\n    <li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li>\n    <li>Event details and activities may have been subject to change at the organizers' discretion.</li>\n    <li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li>\n  </ul>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
