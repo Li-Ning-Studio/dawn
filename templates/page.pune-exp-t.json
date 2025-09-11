@@ -33,18 +33,61 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_9km999": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BQMAf8": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_4qGkTj": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hundred’s Official India Tour Is Coming to Your Court!</strong><br/>Get ready to experience the game like never before! Join us for Hundred's India Tour and get an exclusive chance to:<br/><br/>✅ Test our latest high-performance rackets - for free<br/>🎁 Unlock special offers and limited-time coupon codes<br/>🏆 Participate in exciting on-court challenges and win prizes<br/>🤝 Network with professional players and fellow enthusiasts<br/>💬 Meet the Hundred team and discover what makes our gear elite<br/><br/>🗓️<strong> Event Schedule</strong><br/><br/><strong>*20th September*</strong><br/>📍 Fly 16 Arena, Kaspate Vasti<br/>🕖 9am to 11am<br/><br/>📍 LSBI Badminton, Wadgaon Sheri<br/>🕚 5pm to 7pm<br/><br/><strong>*21st September*</strong><br/>📍Gravity Badminton, Dange Chowk<br/>🕚 8am to 10am<br/><br/>📍LeNoah Sportsplex, Hinjewadi<br/>🕚 5pm to 7pm<br/><br/><br/> Spots are limited! Sign up now through the form to secure your place and be part of the action.</p>"
+          }
+        },
+        "button_BTFzmV": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BQMAf8",
+        "text_4qGkTj",
+        "button_BTFzmV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1757582427791457ea": {
       "type": "apps",
       "blocks": {
         "forms_inline_YgrnmV": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "",
+            "form_id": " 651310",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 0,
@@ -65,7 +108,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  /* Scoped styles */\n  #hundred-terms {\n    font-family: inherit;\n    font-size: 0.875rem; /* small */\n    line-height: 1.7;\n    color: inherit;\n    max-width: 70ch;\n    margin: 0 auto;        /* center block horizontally */\n    text-align: center;    /* center text inside */\n  }\n  #hundred-terms h3 {\n    margin: 0 0 0.5rem 0;\n    font: inherit;\n    font-weight: 600;\n    font-size: 0.95rem;\n  }\n  #hundred-terms p {\n    margin: 0 0 0.5rem 0;\n  }\n  #hundred-terms ul {\n    margin: 0;\n    padding-left: 0;       /* remove default bullet indent */\n    list-style-position: inside; /* keep bullets aligned in center */\n  }\n  #hundred-terms li {\n    margin: 0.25rem 0;\n  }\n</style>\n\n<div id=\"hundred-terms\" class=\"rte\">\n  <h3>Terms and Conditions – Hundred Experience Tour</h3>\n  <p>By attending the Hundred Experience Tour, you agree that:</p>\n  <ul>\n    <li>Your participation was voluntary and you were responsible for your own safety.</li>\n    <li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li>\n    <li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li>\n    <li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li>\n    <li>Event details and activities may have been subject to change at the organizers' discretion.</li>\n    <li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li>\n  </ul>\n</div>",
+        "custom_liquid": "<style>\n  /* Scoped styles */\n  #hundred-terms {\n    font-family: inherit;\n    font-size: 0.875rem; /* small */\n    line-height: 1.7;\n    color: inherit;\n    max-width: 70ch;\n    margin: 0 auto;        /* center block horizontally */\n    text-align: center;    /* center text inside */\n  }\n  #hundred-terms h3 {\n    margin: 0 0 0.5rem 0;\n    font: inherit;\n    font-weight: 600;\n    font-size: 0.95rem;\n  }\n  #hundred-terms p {\n    margin: 0 0 0.5rem 0;\n  }\n  #hundred-terms ul {\n    margin: 0;\n    padding-left: 0;       /* remove default bullet indent */\n    list-style-position: inside; /* keep bullets aligned in center */\n  }\n  #hundred-terms li {\n    margin: 0.25rem 0;\n  }\n</style>\n\n<div id=\"hundred-terms\" class=\"rte\">\n  <h3>Terms and Conditions – Hundred Experience Tour</h3>\n  <p>By attending the Hundred Experience Tour, you agree that:</p>\n  <ul>\n    <li>Your participation was voluntary and you were responsible for your own safety.</li>\n    <li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li>\n    <li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li>\n    <li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li>\n    <li>Event details and activities may have been subject to change at the organizers' discretion.</li>\n    <li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li>\n<li>Non Marking Shoes are not provided by us during the event. Please bring your own.\n  </ul>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -75,6 +118,7 @@
   "order": [
     "main",
     "hero_component_3mFtqf",
+    "rich_text_9km999",
     "1757582427791457ea",
     "custom_liquid_ktVR8J"
   ]
