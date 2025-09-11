@@ -336,17 +336,6 @@
                     </details>
                   </div>
                 {% endif %}
-                {% assign all_sold_out = true %}
-                {% for variant in product.variants %}
-                  {% if variant.available %}
-                    {% assign all_sold_out = false %}
-                    {% break %}
-                  {% endif %}
-                {% endfor %}
-
-                {% if all_sold_out %}
-                  <button id="notify-btn">Notify Me When Available</button>
-                {% endif %}
                 {% comment %}
                   {%- when 'quantity_selector' -%}
                   <div
