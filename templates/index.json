@@ -13,13 +13,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/BladeX_Series_Banner.jpg",
-        "mobile_image": "shopify://shop_images/BladeX_Series_banner_Responsive.jpg",
-        "subtitle": "BladeX Rackets",
-        "title": "Lend Yourself That X-Factor",
-        "description": "Feel the power of the Accele Tech and HDF Shock Absorption with every hit!",
-        "button_text": "Get it Now!",
-        "link_to": "shopify://collections/bladex-rackets",
+        "image": "shopify://shop_images/banner.jpg",
+        "mobile_image": "shopify://shop_images/banner_responsive_0463dc90-db6a-4db8-8d87-554f243245a6.jpg",
+        "subtitle": "Balanced On-Court Aggression",
+        "title": "Balanced On-Court Aggression",
+        "description": "Be a wall that strikes on the court with enhancements such as the Dynamic Optimum Frame and HDF technology.",
+        "button_text": "Buy Now!",
+        "link_to": "shopify://collections/halbertec",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -28,25 +28,21 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "BladeX Rackets",
+        "title": "Halbertec Series",
         "products": [
-          "bladex-200-3u",
-          "bladex-200r",
-          "bladex-500-4u",
-          "bladex-spiral-4u",
-          "bladex-600-5u",
-          "bladex-73",
-          "bladex-900-4u",
-          "bladex-700-4u",
-          "bladex-800-4u",
-          "bladex-800-3u",
-          "bladex-700-5u",
-          "bladex-700-3u",
-          "bladex-600-4u",
-          "bladex-500-3u",
-          "bladex-200-4u"
+          "halbertec-6000-4u-copy",
+          "halbertec-3000-4u-copy",
+          "halbertec-2000-4u",
+          "halbertec-5000-4u",
+          "halbertec-6000-4u",
+          "halbertec-6000-5u",
+          "halbertec-8000-4u",
+          "halbertec-7000-4u",
+          "halbertec-9000-4u",
+          "halbertec-9000-3u",
+          "halbertec-motor-3u"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 56
@@ -56,13 +52,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Blade_Lite_Banner.jpg",
-        "mobile_image": "shopify://shop_images/Blade_Lite_Banner_Responsive.jpg",
-        "subtitle": "Blade Lite Shoes",
-        "title": "Perform Sharp Leaps",
-        "description": "Unleashes your top-tier, swift, reliable, and accurate manoeuvres.",
-        "button_text": "Explore Blade",
-        "link_to": "shopify://products/blade-lite",
+        "image": "shopify://shop_images/banner.png",
+        "mobile_image": "shopify://shop_images/banner_responsive.png",
+        "subtitle": "Aerp Lite Shoes",
+        "title": "Glide Beyond Limits",
+        "description": "Step into unstoppable speed and comfort. Engineered for bold moves, smooth transitions, and all-day performance.",
+        "button_text": "BUY NOW!",
+        "link_to": "shopify://collections/aero-series",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -71,9 +67,11 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Blade Series",
+        "title": "Aero Series",
         "products": [
-          "blade-lite"
+          "aero-lite",
+          "aero-lite-ii",
+          "aero-flow"
         ],
         "show_color_variants": true,
         "color_scheme": "",
