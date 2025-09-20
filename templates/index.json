@@ -13,13 +13,14 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/bladelite.png",
-        "mobile_image": "shopify://shop_images/Responsive_2.png",
-        "subtitle": "Blade Lite",
-        "title": "PHOTON LIKE MOVEMENTS",
-        "description": "Never feel the presence in your feet",
-        "button_text": "GET IT NOW",
-        "link_to": "shopify://products/blade-lite",
+        "image": "shopify://shop_images/Banner_1_482af8f3-1b40-4f7a-a634-f01db5cb60de.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R.jpg",
+        "subtitle": "Raze Pro",
+        "title": "Unmatched Support for Every Step",
+        "description": "Unmatched support and comfort with a multi-layered sole design.",
+        "button_text": "BUY NOW!",
+        "link_to": "shopify://products/raze-pro",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -28,8 +29,10 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "BLADE SERIES",
-        "products": ["blade-lite"],
+        "title": "Raze Pro Series",
+        "products": [
+          "raze-pro"
+        ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 28,
@@ -47,6 +50,7 @@
         "description": "Perform at your peak without letting your court surface impact your style.",
         "button_text": "BUY IT NOW!",
         "link_to": "shopify://products/hyper-drive",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -56,7 +60,10 @@
       "name": "Swipeable Products",
       "settings": {
         "title": "HYPER SERIES",
-        "products": ["hyper-drive", "hyper-turf"],
+        "products": [
+          "hyper-drive",
+          "hyper-turf"
+        ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 48,
@@ -74,6 +81,7 @@
         "description": "Lightweight design meets exceptional precision for total court control.",
         "button_text": "GRAB IT",
         "link_to": "shopify://collections/flutter-s-series",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -83,7 +91,11 @@
       "name": "Swipeable Products",
       "settings": {
         "title": "FLUTTER S SERIES",
-        "products": ["flutter-s-attk", "flutter-s-ctrl", "flutter-s-zoom"],
+        "products": [
+          "flutter-s-attk",
+          "flutter-s-ctrl",
+          "flutter-s-zoom"
+        ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 48,
@@ -101,6 +113,7 @@
         "description": "Go the distance with a kit bag that matches your ambition and endurance.",
         "button_text": "BAG IT!",
         "link_to": "shopify://collections/badminton-kit-bags",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
