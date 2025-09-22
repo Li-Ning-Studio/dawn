@@ -64,12 +64,28 @@
             "text_position": "bottom-left",
             "text_color": "#ffffff"
           }
+        },
+        "merchandising_item_gz3dDJ": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "historic-price-drop-is-here",
+            "mobile_position": 0,
+            "desktop_position": 3,
+            "image": "shopify://shop_images/Square_gst.png",
+            "title": "",
+            "subtitle": "",
+            "cta_text": "",
+            "cta_url": "",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
         "merchandising_item_n48aCX",
         "merchandising_item_MDJwAW",
-        "merchandising_item_MKzeWd"
+        "merchandising_item_MKzeWd",
+        "merchandising_item_gz3dDJ"
       ],
       "settings": {
         "products_per_page": 24,
