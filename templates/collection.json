@@ -19,6 +19,26 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "merchandising_item_jLVpcf": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "historic-price-drop-is-here",
+            "mobile_position": 1,
+            "desktop_position": 6,
+            "image": "shopify://shop_images/Square_gst.png",
+            "title": "",
+            "subtitle": "",
+            "cta_text": "",
+            "cta_url": "",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "merchandising_item_jLVpcf"
+      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
@@ -30,6 +50,7 @@
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
+        "should_look_disabled": true,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
@@ -38,5 +59,8 @@
       }
     }
   },
-  "order": ["banner", "product-grid"]
+  "order": [
+    "banner",
+    "product-grid"
+  ]
 }
