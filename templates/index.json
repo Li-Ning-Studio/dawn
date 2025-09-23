@@ -46,8 +46,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Apparels_Banner_1607abd1-bb46-49b7-9340-89d618c9b348.jpg",
-        "mobile_image": "shopify://shop_images/Apparels_banner_responsive_06ed15ea-2ffc-4317-8373-8bb0ca915985.jpg",
+        "image": "shopify://shop_images/Apparels_banner_adf3a541-1909-4fbe-aacd-beba7385444f.jpg",
+        "mobile_image": "shopify://shop_images/Apparels_banner_responsive_fe59ac81-bec8-4608-b5a9-4dfd1e145665.jpg",
         "subtitle": "Apparels Collection",
         "title": "Wear the Game, Own the Moment",
         "description": "Every piece is built to move with you, combining comfort, style, and performance.",
@@ -89,13 +89,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/home_banner.jpg",
-        "mobile_image": "shopify://shop_images/Responsive_Banner_1.jpg",
-        "subtitle": "Ignite 8",
-        "title": "Accuracy in Every Attack",
-        "description": "Experience Li-Ning's AeroTec Beam system for better accuracy in your shots and smashes!",
-        "button_text": "Buy Now!",
-        "link_to": "shopify://products/ignite-8-unstrung",
+        "image": "shopify://shop_images/Air_Force_G3_77-78_Banner.jpg",
+        "mobile_image": "shopify://shop_images/Air_Force_G3_77-78_Responsive_Banner.jpg",
+        "subtitle": "Air Force G3",
+        "title": "Lightning Fast Personified",
+        "description": "Attacking pro rackets for superlite feel and swing control.",
+        "button_text": "Shop Now!",
+        "link_to": "shopify://products/air-force-g3-77-grams",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -105,11 +105,14 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Ignite Series",
+        "title": "Get Competitive Edge!",
         "products": [
-          "ignite-8-unstrung"
+          "air-force-g3-77-grams",
+          "air-force-g3-78-grams",
+          "air-force-g3-79-grams",
+          "air-force-g3-80-grams"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
