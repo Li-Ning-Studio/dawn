@@ -26,29 +26,31 @@
         "padding_bottom": 0
       }
     },
-    "hero_component_pmECNB": {
+    "hero_component_RKxJeB": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner2_7c0955bc-eeea-4cc9-905f-4a0f707d2cd7.jpg",
-        "mobile_image": "shopify://shop_images/Responsive2_3d27d028-e507-4e0a-974a-52c554465de1.jpg",
-        "subtitle": "Dominate Every Rally",
-        "title": "Speed Meets Precision",
-        "description": "Unleash your speed demon with these ultra-lightweight performance shoes",
-        "button_text": "Fly High!",
-        "link_to": "shopify://products/court-flyer",
+        "image": "shopify://shop_images/Flutter_1.jpg",
+        "mobile_image": "shopify://shop_images/Flutter_2.jpg",
+        "subtitle": "Flutter S ATTK",
+        "title": "Fluttering Smashes",
+        "description": "Light-Weight rackets , Heavy-weight Smashes",
+        "button_text": "Buy It Now!",
+        "link_to": "shopify://products/flutter-s-attk",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "swipeable_products_ak84Mc": {
+    "swipeable_products_kQUykU": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Court Flyer Series",
+        "title": "Flutter Series",
         "products": [
-          "court-flyer"
+          "flutter-s-attk",
+          "flutter-s-zoom",
+          "flutter-s-ctrl"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -124,61 +126,29 @@
         "padding_bottom": 36
       }
     },
-    "hero_component_RKxJeB": {
+    "hero_component_pmECNB": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Flutter_1.jpg",
-        "mobile_image": "shopify://shop_images/Flutter_2.jpg",
-        "subtitle": "Flutter S ATTK",
-        "title": "Fluttering Smashes",
-        "description": "Light-Weight rackets , Heavy-weight Smashes",
-        "button_text": "Buy It Now!",
-        "link_to": "shopify://products/flutter-s-attk",
+        "image": "shopify://shop_images/Banner2_7c0955bc-eeea-4cc9-905f-4a0f707d2cd7.jpg",
+        "mobile_image": "shopify://shop_images/Responsive2_3d27d028-e507-4e0a-974a-52c554465de1.jpg",
+        "subtitle": "Dominate Every Rally",
+        "title": "Speed Meets Precision",
+        "description": "Unleash your speed demon with these ultra-lightweight performance shoes",
+        "button_text": "Fly High!",
+        "link_to": "shopify://products/court-flyer",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "swipeable_products_kQUykU": {
+    "swipeable_products_ak84Mc": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Flutter Series",
+        "title": "Court Flyer Series",
         "products": [
-          "flutter-s-attk",
-          "flutter-s-zoom",
-          "flutter-s-ctrl"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
-    "hero_component_mYeEJ4": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_5_885c5793-4f64-4c87-afbe-9dff923bbcb4.jpg",
-        "mobile_image": "shopify://shop_images/Responsive_6_3e8e8cde-b2ee-4ba7-8550-72fd92124fdd.jpg",
-        "subtitle": "HyperTurf Cricket Shoes",
-        "title": "Nimble Movements, Hyper Impacts",
-        "description": "Perform at your peak without letting your court surface impact your style",
-        "button_text": "Get It Here!",
-        "link_to": "shopify://products/hyper-turf",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_RyJQbU": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Hyper Turf Series",
-        "products": [
-          "hyper-turf"
+          "court-flyer"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -212,6 +182,36 @@
           "predator-pro-4u",
           "predator-84-extreme",
           "predator-82-extreme"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "hero_component_mYeEJ4": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_5_885c5793-4f64-4c87-afbe-9dff923bbcb4.jpg",
+        "mobile_image": "shopify://shop_images/Responsive_6_3e8e8cde-b2ee-4ba7-8550-72fd92124fdd.jpg",
+        "subtitle": "HyperTurf Cricket Shoes",
+        "title": "Nimble Movements, Hyper Impacts",
+        "description": "Perform at your peak without letting your court surface impact your style",
+        "button_text": "Get It Here!",
+        "link_to": "shopify://products/hyper-turf",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_RyJQbU": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Hyper Turf Series",
+        "products": [
+          "hyper-turf"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -260,13 +260,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/1_5e9f79a1-903c-49e6-b9fa-295aa72ff7cc.jpg",
-        "mobile_image": "shopify://shop_images/2_2fec3d1a-0c40-4e85-9f8c-f3f7be147c30.jpg",
-        "subtitle": "Court Zoom Badminton Shoes",
-        "title": "trigger speed with each step",
-        "description": "Every step ignited by unstoppable speed and unmatched power.",
-        "button_text": "Spark Your Step",
-        "link_to": "shopify://products/court-zoom",
+        "image": "shopify://shop_images/Banner_2_6e25c212-f472-474b-93a2-01de707dd791.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_b178d9ea-f35d-4a57-9746-18748e0a14d4.jpg",
+        "subtitle": "Court Sonic PBX Pickleball Shoes",
+        "title": "Grip. Shift. Dominate.",
+        "description": "Built for champions who refuse to settle, these aren't just shoes, they're your secret weapon.",
+        "button_text": "Strike Sonic",
+        "link_to": "shopify://products/court-sonic-pbx",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -276,9 +276,9 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Court Zoom Badminton Shoes",
+        "title": "Pickleball Shoes",
         "products": [
-          "court-zoom"
+          "court-sonic-pbx"
         ],
         "show_color_variants": true,
         "color_scheme": "",
