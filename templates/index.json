@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_component_qX3GY8": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner1.png",
+        "mobile_image": "shopify://shop_images/Banner1_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_pmECNB": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -436,6 +453,7 @@
     }
   },
   "order": [
+    "hero_component_qX3GY8",
     "hero_component_pmECNB",
     "swipeable_products_ak84Mc",
     "multicolumn_qhdqCY",
