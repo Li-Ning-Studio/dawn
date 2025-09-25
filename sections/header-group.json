@@ -14,24 +14,24 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_h68U3w": {
-          "type": "announcement",
-          "settings": {
-            "text": "Introducing Pro Series Rackets.",
-            "link": "shopify://pages/pro-series-rackets"
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
             "text": "Join us on WhatsApp for exclusive discounts and content",
             "link": "https://chat.whatsapp.com/CFOh5uEYOkKGo3G1CD72iC"
           }
+        },
+        "announcement_h68U3w": {
+          "type": "announcement",
+          "settings": {
+            "text": "Introducing Pro Series Rackets.",
+            "link": "shopify://pages/pro-series-rackets"
+          }
         }
       },
       "block_order": [
-        "announcement_h68U3w",
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_h68U3w"
       ],
       "settings": {
         "auto_rotate": true,
