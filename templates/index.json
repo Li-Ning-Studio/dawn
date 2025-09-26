@@ -26,6 +26,33 @@
         "padding_bottom": 0
       }
     },
+    "hero_component_B3mLTg": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_aebac059-f230-4369-b605-fc102bdd5ac9.png",
+        "mobile_image": "shopify://shop_images/banner_r.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "countdown_timer_dzLJqq": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Quantum Boom Drops In:",
+        "end_time": "2025-09-26 18:00",
+        "background": "linear-gradient(0deg, rgba(251, 251, 251, 1) 100%, rgba(254, 6, 6, 1) 100%)",
+        "text_color": "#150505",
+        "padding_top": 52
+      }
+    },
     "hero_component_RKxJeB": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -350,6 +377,31 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_9k7FUW": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "LATEST BADMINTON KITBAGS",
+        "products": [
+          "atomic-x-surge-kit-bag",
+          "bolt-kit-bag",
+          "cosmogear-kit-bag",
+          "court-vertex-kit-bag",
+          "cult-legacy-kit-bag",
+          "flutter-elite-kit-bag",
+          "glacio-pack-kit-bag",
+          "metro-pack-kit-bag",
+          "rock-adventure-kit-bag",
+          "sonic-pack-kit-bag",
+          "pitchblack-kit-bag",
+          "net-master-kit-bag"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 72
+      }
+    },
     "hero_component_VMm3j4": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -423,35 +475,12 @@
         "padding_top": 40,
         "padding_bottom": 72
       }
-    },
-    "swipeable_products_9k7FUW": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "LATEST BADMINTON KITBAGS",
-        "products": [
-          "atomic-x-surge-kit-bag",
-          "bolt-kit-bag",
-          "cosmogear-kit-bag",
-          "court-vertex-kit-bag",
-          "cult-legacy-kit-bag",
-          "flutter-elite-kit-bag",
-          "glacio-pack-kit-bag",
-          "metro-pack-kit-bag",
-          "rock-adventure-kit-bag",
-          "sonic-pack-kit-bag",
-          "pitchblack-kit-bag",
-          "net-master-kit-bag"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 72
-      }
     }
   },
   "order": [
     "hero_component_qX3GY8",
+    "hero_component_B3mLTg",
+    "countdown_timer_dzLJqq",
     "hero_component_RKxJeB",
     "swipeable_products_kQUykU",
     "multicolumn_qhdqCY",
