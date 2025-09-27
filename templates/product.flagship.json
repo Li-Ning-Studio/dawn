@@ -38,6 +38,7 @@
         },
         "custom_liquid_kjMCGr": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<span style=\"font-size: 1.5rem;\">3 easy payments of {{ product.price_min | divided_by: 3 | money_with_currency }} with Simpl. Or</span>"
           }
