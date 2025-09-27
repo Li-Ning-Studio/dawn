@@ -28,6 +28,7 @@
     },
     "hero_component_B3mLTg": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/banner_aebac059-f230-4369-b605-fc102bdd5ac9.png",
@@ -40,17 +41,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "countdown_timer_dzLJqq": {
-      "type": "countdown-timer",
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Quantum Boom Drops In:",
-        "end_time": "2025-09-27 16:00",
-        "background": "linear-gradient(0deg, rgba(251, 251, 251, 1) 100%, rgba(254, 6, 6, 1) 100%)",
-        "text_color": "#150505",
-        "padding_top": 52
       }
     },
     "hero_component_jVyFad": {
@@ -496,7 +486,6 @@
   "order": [
     "hero_component_qX3GY8",
     "hero_component_B3mLTg",
-    "countdown_timer_dzLJqq",
     "hero_component_jVyFad",
     "hero_component_RKxJeB",
     "swipeable_products_kQUykU",
