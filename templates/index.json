@@ -25,6 +25,20 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_wJTh4G": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Quantum Shoes",
+        "products": [
+          "quantum-boom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
     "hero_component_B3mLTg": {
       "type": "hero-component",
       "disabled": true,
@@ -484,6 +498,7 @@
   },
   "order": [
     "hero_component_qX3GY8",
+    "swipeable_products_wJTh4G",
     "hero_component_B3mLTg",
     "hero_component_jVyFad",
     "hero_component_RKxJeB",
