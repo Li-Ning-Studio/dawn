@@ -96,6 +96,7 @@
         },
         "product_highlight_7FTrt3": {
           "type": "product_highlight",
+          "disabled": true,
           "settings": {
             "title": "Zero Interest EMI",
             "description": "Pay in 3 easy interest-free payments of {{ product.price_min | divided_by: 3 | money_with_currency }} with Simpl. Learn\n        more at checkout.",
