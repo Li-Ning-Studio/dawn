@@ -48,13 +48,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner.png",
-        "mobile_image": "shopify://shop_images/banner_responsive.png",
-        "subtitle": "Aerp Lite Shoes",
-        "title": "Glide Beyond Limits",
-        "description": "Step into unstoppable speed and comfort. Engineered for bold moves, smooth transitions, and all-day performance.",
+        "image": "shopify://shop_images/Main_L.jpg",
+        "mobile_image": "shopify://shop_images/Main_R.jpg",
+        "subtitle": "WHEN SILENCE BREAKS",
+        "title": "The Storm Arrives",
+        "description": "Unleash thunder with every step, lightning in every move, the court never saw you coming.",
         "button_text": "BUY NOW!",
-        "link_to": "shopify://collections/aero-series",
+        "link_to": "shopify://products/aero-storm",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -65,9 +65,10 @@
       "settings": {
         "title": "Aero Series",
         "products": [
-          "aero-lite",
+          "aero-storm",
+          "aero-fly-ii",
           "aero-lite-ii",
-          "aero-flow"
+          "aero-speed-2-0"
         ],
         "show_color_variants": true,
         "color_scheme": "",
