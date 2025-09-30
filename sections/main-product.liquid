@@ -591,6 +591,12 @@
                 %}
                   {% render 'stringing' %}
                 {% endif %}
+                {% if settings.is_gripping_enabled_globally
+                  and product.available == true
+                  and settings.gripping_collection_id != blank
+                %}
+                  {% render 'gripping' %}
+                {% endif %}
                 {% if settings.is_remix_enabled_globally
                   and product.metafields.custom_but_hidden.stickers == true
                   and product.available == true
