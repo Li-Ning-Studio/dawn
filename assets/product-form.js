@@ -123,7 +123,9 @@ if (!customElements.get('product-form')) {
           const stringVariantSku = document.querySelector('input[name="string-variant"]:checked')?.dataset.sku;
           const tensionSelected = document.querySelector('input[name="string-tension"]:checked')?.id;
 
-          const selectedKnot = document.querySelector('input[name="knot-config"]:checked')?.dataset?.knotValue;
+          const knotValue = document.querySelector('input[name="knot-config"]:checked')?.dataset?.knotValue;
+
+          const selectedKnot = knotValue === 'four_knot' ? '4_knot' : '2_knot';
 
           const stringingServiceVariantId = window.s3_stringing_service_variant_id;
           const fourKnotsServiceVariantId = window.s3_four_knots_service_variant_id;
@@ -139,7 +141,7 @@ if (!customElements.get('product-form')) {
                   _string: stringVariantSku,
                   _stringName: document.querySelector('input[name="string-variant"]:checked')?.dataset?.string || '',
                   _tension: `${tensionSelected}lbs`,
-                  _knot: selectedKnot ?? 'two_knot',
+                  _knot: selectedKnot ?? '2_knot',
                   _bundleId: bundleId,
                   _bundleRole: 'component',
                 },
@@ -155,7 +157,7 @@ if (!customElements.get('product-form')) {
             );
           }
 
-          if (selectedKnot === 'four_knot' && fourKnotsServiceVariantId) {
+          if (selectedKnot === '4_knot' && fourKnotsServiceVariantId) {
             items.push({
               id: fourKnotsServiceVariantId,
               quantity: 1,
@@ -191,6 +193,7 @@ if (!customElements.get('product-form')) {
                 id: selectedGripVariant,
                 quantity: 1,
                 properties: {
+                  _racket: selectedVariantSku,
                   _bundleId: bundleId,
                   _bundleRole: 'component',
                 },
