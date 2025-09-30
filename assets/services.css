@@ -1,18 +1,21 @@
-.frame-name {
+.frame-name,
+.grip-name {
   color: black;
   font-weight: 500;
   letter-spacing: 0px;
 }
 
-.frame-option {
+.frame-option,
+.grip-option {
   border: 2px solid transparent;
   display: block;
   width: 100%;
-  padding: 1.3rem 1.3rem;
+  padding: 0.9rem 1.3rem;
   margin-bottom: 1.4rem;
 }
 
-.frame-description {
+.frame-description,
+.grip-description {
   display: block;
   font-size: 1.4rem;
   letter-spacing: 0.2px;
@@ -20,7 +23,8 @@
   color: var(--gray-50);
 }
 
-.frame-option:has(input[name='frame']:checked) {
+.frame-option:has(input[name='frame']:checked),
+.frame-option:has(input[name='gripping-option']:checked) {
   border: 2px solid var(--accent-color);
 }
 
@@ -44,4 +48,19 @@
 
 .services-input:focus {
   border-color: var(--accent-color);
+}
+
+.string-variant-name,
+.grip-variant-name {
+  color: var(--gray-70);
+  margin: 0;
+}
+
+.string-variant-description,
+.grip-variant-description {
+  font-size: 1.4rem;
+  opacity: 0.7;
+  line-height: 1.4;
+  display: block;
+  margin: 0;
 }
