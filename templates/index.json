@@ -42,6 +42,74 @@
         "padding_bottom": 28
       }
     },
+    "multicolumn_thtmnP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_eygK9W": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bad.png",
+            "title": "",
+            "text": "",
+            "link_label": "Badminton",
+            "link": "shopify://collections/badminton"
+          }
+        },
+        "column_8qna8E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/crk.png",
+            "title": "",
+            "text": "",
+            "link_label": "Cricket",
+            "link": "shopify://collections/cricket"
+          }
+        },
+        "column_VaTPGT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pik.png",
+            "title": "",
+            "text": "",
+            "link_label": "Pickleball",
+            "link": "shopify://collections/pickleball"
+          }
+        },
+        "column_CXYaR9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ten.png",
+            "title": "",
+            "text": "",
+            "link_label": "Tennis",
+            "link": "shopify://collections/tennis"
+          }
+        }
+      },
+      "block_order": [
+        "column_eygK9W",
+        "column_8qna8E",
+        "column_VaTPGT",
+        "column_CXYaR9"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>SHOP BY SPORTS</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_RKxJeB": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -469,6 +537,7 @@
   "order": [
     "hero_component_B3mLTg",
     "hero_component_jVyFad",
+    "multicolumn_thtmnP",
     "hero_component_RKxJeB",
     "swipeable_products_kQUykU",
     "multicolumn_qhdqCY",
