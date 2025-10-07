@@ -50,20 +50,20 @@
             "link": ""
           }
         },
-        "column_iai3VH": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_UyU4AG": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/5_a69df42d-ec3a-42b4-b802-34d0154e5992.png",
             "title": "<strong>Leo Rossi</strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iai3VH": {
+          "type": "column",
+          "settings": {
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -164,8 +164,8 @@
         "column_CL7GAK",
         "column_MAXNdW",
         "column_MD6AWf",
-        "column_iai3VH",
         "column_UyU4AG",
+        "column_iai3VH",
         "column_bRGbgk",
         "column_d3AkWQ",
         "column_MCGzWd",
@@ -179,20 +179,20 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
