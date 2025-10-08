@@ -17,39 +17,14 @@
         "padding_bottom": 28
       }
     },
-    "multicolumn_KJfDRV": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_yF4rfb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/5_c0b70ff2-206b-4401-bda2-7d829c543757.png",
-            "title": "<strong>Srikanth Kidambi</strong>",
-            "text": "<p>🇮🇳</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_yF4rfb"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
+    "custom_liquid_NxTXT7": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "title": "Our Champions",
-        "heading_size": "hxl",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 1,
-        "column_alignment": "center",
-        "background_style": "primary",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Club Hundred Hero</title>\n  <style>\n    .ch-hero-section {\n      background-color: #ffffff;\n      padding: 80px 20px;\n      box-sizing: border-box;\n    }\n\n    .ch-hero-container {\n      max-width: 1400px;\n      margin: 0 auto;\n      display: grid;\n      grid-template-columns: 1fr 1fr;\n      gap: 80px;\n      align-items: center;\n    }\n\n    .ch-hero-content {\n      display: flex;\n      flex-direction: column;\n      gap: 40px;\n    }\n\n    .ch-hero-logo {\n      max-width: 450px;\n      width: 100%;\n      height: auto;\n      display: block;\n    }\n\n    .ch-hero-text {\n      font-size: 18px;\n      line-height: 1.8;\n      color: #000000;\n      max-width: 550px;\n    }\n\n    .ch-hero-text p {\n      margin: 0 0 20px 0;\n    }\n\n    .ch-hero-text p:last-child {\n      margin-bottom: 0;\n    }\n\n    .ch-hero-image-wrapper {\n      position: relative;\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 20px;\n    }\n\n    .ch-hero-athlete-image {\n      width: 100%;\n      max-width: 600px;\n      height: auto;\n      object-fit: cover;\n      display: block;\n      filter: grayscale(100%);\n    }\n\n    .ch-hero-athlete-name {\n      font-size: 20px;\n      font-weight: 400;\n      color: #000000;\n      margin: 0;\n      text-align: center;\n    }\n\n    .ch-hero-athlete-flag {\n      font-size: 24px;\n      text-align: center;\n    }\n\n\n\n    @media screen and (max-width: 989px) {\n      .ch-hero-section {\n        padding: 60px 20px;\n      }\n\n      .ch-hero-container {\n        grid-template-columns: 1fr;\n        gap: 50px;\n      }\n\n      .ch-hero-content {\n        order: 1;\n        align-items: center;\n        text-align: center;\n      }\n\n      .ch-hero-logo {\n        max-width: 350px;\n      }\n\n      .ch-hero-text {\n        max-width: 100%;\n      }\n\n      .ch-hero-image-wrapper {\n        order: 2;\n      }\n\n      .ch-hero-athlete-name {\n        font-size: 24px;\n      }\n    }\n  </style>\n</head>\n<body>\n\n  <div class=\"ch-hero-section\">\n    <div class=\"ch-hero-container\">\n      \n      <!-- Left Side: Logo & Content -->\n      <div class=\"ch-hero-content\">\n        <img \n          src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/club_hundred_logo.png?v=1759896855\" \n          alt=\"Club Hundred Logo\"\n          class=\"ch-hero-logo\"\n        >\n        \n        <div class=\"ch-hero-text\">\n          <p>At Club Hundred, we become part of our athletes' journey. Every champion we support represents the relentless pursuit of excellence, the dedication to push boundaries, and the courage to stand tall on the world stage.</p>\n          \n          <p>Our athletes aren't just wearing our brand; they're carrying our values, our passion, and our commitment to greatness. Together, we celebrate every victory, learn from every challenge, and inspire the next generation to dream bigger.</p>\n        </div>\n      </div>\n\n      <!-- Right Side: Featured Athlete -->\n      <div class=\"ch-hero-image-wrapper\">\n        <img \n          src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/1_d40a3eb3-0b9c-468c-af73-b15c15d9dec4.png?v=1759896956\" \n          alt=\"Srikanth Kidambi\"\n          class=\"ch-hero-athlete-image\"\n        >\n        <h3 class=\"ch-hero-athlete-name\">Srikanth Kidambi</h3>\n        <div class=\"ch-hero-athlete-flag\">🇮🇳</div>\n      </div>\n\n    </div>\n  </div>\n\n</body>\n</html>",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 0
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "multicolumn_4RqEfa": {
@@ -211,7 +186,7 @@
   },
   "order": [
     "main",
-    "multicolumn_KJfDRV",
+    "custom_liquid_NxTXT7",
     "multicolumn_4RqEfa"
   ]
 }
