@@ -47,6 +47,30 @@ if (!customElements.get('product-form')) {
         }
         // validation finsihed
 
+        const grippingForm = document.getElementById('grip-form');
+        const selectedGripOption = document.querySelector('input[name="gripping-option"]:checked')?.id;
+
+        if (grippingForm && selectedGripOption === 'grip-service') {
+          if (!grippingForm.checkValidity()) {
+            const radioButtons = grippingForm.querySelectorAll('input[type="radio"]');
+            const invalidRadioName = Array.from(radioButtons).find((radio) => radio.validity.valueMissing)?.name;
+
+            const grippingRoot = document.getElementById('gripping-root');
+
+            const errorMessage =
+              invalidRadioName === 'grip-product'
+                ? grippingRoot?.dataset?.errorMissingProduct || 'Please select a grip option.'
+                : invalidRadioName === 'grip-variant'
+                  ? grippingRoot?.dataset?.errorMissingVariant || 'Please select a grip color.'
+                  : 'Please select all required options';
+            this.handleErrorMessage(errorMessage);
+
+            return grippingForm.reportValidity();
+          } else {
+            this.handleErrorMessage('');
+          }
+        }
+
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
         this.handleErrorMessage();
@@ -65,12 +89,18 @@ if (!customElements.get('product-form')) {
         // within a single add-to-cart event and avoids collisions across
         // submissions. Prefer crypto.randomUUID and append a base36 timestamp
         // for traceability.
-        const __ts = Date.now().toString(36);
-        const __base =
-          window.crypto && typeof window.crypto.randomUUID === 'function'
-            ? window.crypto.randomUUID()
-            : Math.random().toString(36).slice(2, 10);
-        const bundleId = `${__base}-${__ts}`;
+        let bundleId;
+        try {
+          const __ts = Date.now().toString(36);
+          const __base =
+            window.crypto && typeof window.crypto.randomUUID === 'function'
+              ? window.crypto.randomUUID()
+              : Math.random().toString(36).slice(2, 10);
+          bundleId = `${__base}-${__ts}`;
+        } catch (error) {
+          console.error('Bundle ID generation failed:', error);
+          bundleId = `fallback-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        }
 
         const sections = this.cart ? this.cart.getSectionsToRender().map((section) => section.id) : [];
 
@@ -92,7 +122,13 @@ if (!customElements.get('product-form')) {
           const variantSelected = document.querySelector('input[name="string-variant"]:checked')?.id;
           const stringVariantSku = document.querySelector('input[name="string-variant"]:checked')?.dataset.sku;
           const tensionSelected = document.querySelector('input[name="string-tension"]:checked')?.id;
+
+          const knotValue = document.querySelector('input[name="knot-config"]:checked')?.dataset?.knotValue;
+
+          const selectedKnot = knotValue === 'four_knot' ? '4_knot' : '2_knot';
+
           const stringingServiceVariantId = window.s3_stringing_service_variant_id;
+          const fourKnotsServiceVariantId = window.s3_four_knots_service_variant_id;
 
           if (variantSelected && stringVariantSku && tensionSelected && stringingServiceVariantId) {
             items.push(
@@ -105,6 +141,7 @@ if (!customElements.get('product-form')) {
                   _string: stringVariantSku,
                   _stringName: document.querySelector('input[name="string-variant"]:checked')?.dataset?.string || '',
                   _tension: `${tensionSelected}lbs`,
+                  _knot: selectedKnot ?? '2_knot',
                   _bundleId: bundleId,
                   _bundleRole: 'component',
                 },
@@ -113,6 +150,50 @@ if (!customElements.get('product-form')) {
                 id: variantSelected,
                 quantity: 1,
                 properties: {
+                  _bundleId: bundleId,
+                  _bundleRole: 'component',
+                },
+              },
+            );
+          }
+
+          if (selectedKnot === '4_knot' && fourKnotsServiceVariantId) {
+            items.push({
+              id: fourKnotsServiceVariantId,
+              quantity: 1,
+              properties: {
+                _knot: selectedKnot,
+                _racket: selectedVariantSku,
+                _string: stringVariantSku,
+                _bundleId: bundleId,
+                _bundleRole: 'component',
+              },
+            });
+          }
+        }
+
+        // check if gripping is selected
+        if (window.s3_gripping_service_variant_id && selectedVariantSku) {
+          const selectedGripVariant =
+            document.getElementById('selected-grip-variant-id')?.dataset?.currentGripSelection;
+
+          if (selectedGripVariant) {
+            items.push(
+              {
+                id: window.s3_gripping_service_variant_id,
+                quantity: 1,
+                properties: {
+                  _racket: selectedVariantSku,
+                  _grip: document.getElementById('selected-grip-variant-id')?.dataset?.currentGripSku,
+                  _bundleId: bundleId,
+                  _bundleRole: 'component',
+                },
+              },
+              {
+                id: selectedGripVariant,
+                quantity: 1,
+                properties: {
+                  _racket: selectedVariantSku,
                   _bundleId: bundleId,
                   _bundleRole: 'component',
                 },
@@ -210,7 +291,7 @@ if (!customElements.get('product-form')) {
             ...config.headers,
           },
           body: JSON.stringify({
-            items,
+            items: items?.reverse(),
             sections: sections,
             sections_url: window.location.pathname,
           }),
