@@ -11,13 +11,148 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_VHUn6n": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_J.png",
+        "mobile_image": "shopify://shop_images/Banner_R_J.png",
+        "subtitle": "Shuttle Up!",
+        "title": "Lend Yourself That X-Factor",
+        "description": "Feel the power of the Technology with every hit!",
+        "button_text": "BUY NOW!",
+        "link_to": "shopify://collections/badminton",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_L8jRzP": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Badminton Gear",
+        "products": [
+          "windstorm-78-s",
+          "halbertec-motor-pro-4u",
+          "axforce-80-4u-84-grams",
+          "3d-calibar-900-instinct",
+          "aeronaut-9000-4u",
+          "aero-speed-2-0",
+          "aero-fly-ii",
+          "hypersonic-iii",
+          "hypersonic-iv",
+          "endura-kit-bag",
+          "monarch-kit-bag",
+          "stealth-backpack",
+          "windstorm-72",
+          "halbertec-8000-4u",
+          "axforce-cannon-5u"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_U69fKH": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Racket_Banner.png",
+        "mobile_image": "shopify://shop_images/Racket_Banner_R.png",
+        "subtitle": "Badminton Rackets",
+        "title": "Unleash your smash!",
+        "description": "Master the game with Li-Ning rackets, where precision meets power.",
+        "button_text": "Smash UP!",
+        "link_to": "shopify://collections/rackets-above-89",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_Q9ibBq": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Racket Collection",
+        "products": [
+          "halbertec-6000-5u",
+          "axforce-big-bang-4u-1",
+          "axforce-cannon-pro-5u",
+          "windstorm-700-special-edition",
+          "windstorm-78-plus",
+          "windstorm-79-h",
+          "axforce-100-3u",
+          "axforce-30-5u",
+          "tectonic-3r-5u",
+          "tectonic-6-5u",
+          "tectonic-9-4u",
+          "3d-calibar-900-instinct",
+          "3d-calibar-600-combat",
+          "aeronaut-9000",
+          "aeronaut-6000-combat"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_UfQHrr": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Shoe_Banner.png",
+        "mobile_image": "shopify://shop_images/Shoe_Banner_R.png",
+        "subtitle": "Badminton Shoe",
+        "title": "Step up your game",
+        "description": "When the game demands everything, answer with the shoe that does it all",
+        "button_text": "Get it Now!",
+        "link_to": "shopify://collections/shoes-above-69",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_cm3LxH": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Shoe Collection",
+        "products": [
+          "aero-fly-ii",
+          "aero-lite-ii",
+          "aero-speed",
+          "aero-speed-2-0",
+          "aero-storm",
+          "hypersonic-iii",
+          "hypersonic-iv",
+          "saga-lite-9",
+          "saga-lite-s1",
+          "saga-lite-x",
+          "blade-lite"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_VHUn6n",
+    "swipeable_products_L8jRzP",
+    "hero_component_U69fKH",
+    "swipeable_products_Q9ibBq",
+    "hero_component_UfQHrr",
+    "swipeable_products_cm3LxH"
   ]
 }
