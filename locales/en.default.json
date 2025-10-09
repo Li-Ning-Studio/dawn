@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "studio": {
     "stringing": {
@@ -14,6 +23,44 @@
         "unstrung": "This racket will come without any strings. You will need to get it strung from a sports shop.",
         "pro_stringing": "Customise this racket with a custom string and tension. Recommended for optimal performance.",
         "strung": "This racket will come strung with the default string and tension."
+      }
+    },
+    "gripping": {
+      "form_labels": {
+        "frame": "Grip",
+        "grip_service": "Studio Grip Service",
+        "no_grip": "Factory Grip"
+      },
+      "description": {
+        "grip_service": "Let our Studio Pros install the grip of your choice before shipment.",
+        "no_grip": "Ships with a factory grip, which varies by model. We recommend upgrading to a grip."
+      },
+      "labels": {
+        "free": "FREE",
+        "service_cost": "Service Cost",
+        "variant_price": "Grip"
+      },
+      "headings": {
+        "choose_grip": "Choose Grip",
+        "select_color": "Select Grip Color",
+        "summary": "Grip Summary"
+      },
+      "messages": {
+        "loading": "Loading grip options...",
+        "empty": "We couldn't find any grip options right now."
+      },
+      "errors": {
+        "load_failed": "Failed to load grip options. Please refresh the page.",
+        "missing_product": "Please select a grip option.",
+        "missing_variant": "Please select a grip color."
+      }
+    }
+  },
+  "settings_schema": {
+    "product_customisations": {
+      "factory_grip_image": {
+        "label": "Factory grip image",
+        "info": "Displayed beside the Factory Grip option."
       }
     }
   },
@@ -206,7 +253,7 @@
       "clear": "Clear",
       "clear_all": "Remove all",
       "from": "From",
-      "filter_and_sort": "Filter and sort",
+      "filter_and_sort": "Filters",
       "filter_by_label": "Filter:",
       "filter_button": "Filter",
       "filters_selected": {

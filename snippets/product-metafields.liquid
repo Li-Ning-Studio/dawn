@@ -1,5 +1,6 @@
 {% if product.metafields.custom %}
-  {% if product.metafields.custom.size != blank and product.metafields.custom.size > 0 %}
+  {% assign custom_size = product.metafields.custom.size | plus: 0 %}
+  {% if product.metafields.custom.size != blank and custom_size > 0 %}
     {% for field in product.metafields.custom %}
       {% assign field_name = field[0] | replace: '_', ' ' %}
       {% unless field_name == 'product type' %}
@@ -22,6 +23,24 @@
       <p style="grid-column: span 7/span 7;">
         <span>{{ product.metafields.custom.product_type }}</span>
         <span id="sku">{{ product.selected_or_first_available_variant.sku }}</span>
+      </p>
+    </div>
+    <hr style="margin: 0; background: #e4e4e4">
+    {% liquid
+      assign variant = product.selected_or_first_available_variant
+      assign mrp_price = variant.price
+      if variant.compare_at_price and variant.compare_at_price > variant.price
+        assign mrp_price = variant.compare_at_price
+      endif
+    %}
+    <div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
+      <p style="grid-column: span 5/span 5;">MRP (incl taxes)</p>
+      <p style="grid-column: span 7/span 7;">
+        {% if settings.currency_code_enabled %}
+          {{ mrp_price | money_with_currency }}
+        {% else %}
+          {{ mrp_price | money }}
+        {% endif %}
       </p>
     </div>
   {% endif %}

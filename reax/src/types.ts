@@ -5,8 +5,11 @@ declare global {
     shopUrl: string;
     s3_pat: string;
     s3_product_name: string | undefined;
+    s3_product_type: TRemixProductType | undefined;
     s3_brand: string | undefined;
     s3_stringing_service_variant_id: string | undefined;
+    s3_four_knots_service_variant_id: string | undefined;
+    s3_gripping_service_variant_id: string | undefined;
     s3_bxgy: unknown;
     s3_bxgy_variants: unknown;
     s3_product_collections: string[] | undefined;
@@ -39,6 +42,8 @@ declare global {
   }
 }
 
+export type TRemixProductType = 'Badminton Racket' | 'Pickleball Paddle';
+
 // First, get the type from your GetCollectionByIdQuery
 export type CollectionType = GetCollectionByIdQuery['collection'];
 
@@ -52,4 +57,10 @@ export type TConfig = {
   stringProduct: SingleProductNode | null;
   stringVariant: NonNullable<SingleProductNode>['variants']['nodes'][number] | null;
   tension: number | null;
+  knot: 'two_knot' | 'four_knot' | null;
+};
+
+export type TGripConfig = {
+  grippingProduct: SingleProductNode | null;
+  grippingVariant: NonNullable<SingleProductNode>['variants']['nodes'][number] | null;
 };

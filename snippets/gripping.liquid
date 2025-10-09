@@ -1,0 +1,94 @@
+{{ 'services.css' | asset_url | stylesheet_tag }}
+
+<section class="frame" id="gripping-frame">
+  <legend class="form__label">
+    <span>{{ 'studio.gripping.form_labels.frame' | t }}</span>
+  </legend>
+
+  <label class="frame-option sheet" for="grip-service">
+    <input type="radio" name="gripping-option" id="grip-service">
+    <div class="grip-name" style="display: flex; justify-content: space-between; align-items: center;">
+      <span>{{ 'studio.gripping.form_labels.grip_service' | t }}</span>
+      <span style="color: var(--gray-50); font-size: 1.3rem;">
+        {%- if all_products['studio-gripping-service'].price == 0 -%}
+          {{ 'studio.gripping.labels.free' | t }}
+        {%- else -%}
+          {{ all_products['studio-gripping-service'].price | money }}
+        {%- endif -%}
+      </span>
+    </div>
+    <span class="grip-description">{{ 'studio.gripping.description.grip_service' | t }}</span>
+  </label>
+
+  <section
+    id="gripping-root"
+    style="display: none;"
+    data-gripping-collection-id="{{ settings.gripping_collection_id | default: '' }}"
+    data-gripping-cost="{{ all_products['studio-gripping-service'].price | money }}"
+    data-label-choose-grip="{{ 'studio.gripping.headings.choose_grip' | t }}"
+    data-label-select-color="{{ 'studio.gripping.headings.select_color' | t }}"
+    data-label-summary="{{ 'studio.gripping.headings.summary' | t }}"
+    data-label-service-cost="{{ 'studio.gripping.labels.service_cost' | t }}"
+    data-label-variant-price="{{ 'studio.gripping.labels.variant_price' | t }}"
+    data-label-no-grip="{{ 'studio.gripping.form_labels.no_grip' | t }}"
+    data-label-free="{{ 'studio.gripping.labels.free' | t }}"
+    data-description-no-grip="{{ 'studio.gripping.description.no_grip' | t }}"
+    data-factory-grip-image="{% if settings.factory_grip_image != blank %}{{ settings.factory_grip_image | image_url: width: 140 }}{% endif %}"
+    data-message-empty="{{ 'studio.gripping.messages.empty' | t }}"
+    data-message-loading="{{ 'studio.gripping.messages.loading' | t }}"
+    data-message-error="{{ 'studio.gripping.errors.load_failed' | t }}"
+    data-error-missing-product="{{ 'studio.gripping.errors.missing_product' | t }}"
+    data-error-missing-variant="{{ 'studio.gripping.errors.missing_variant' | t }}"
+  >
+    <p class="frame-description">{{ 'studio.gripping.messages.loading' | t }}</p>
+  </section>
+</section>
+
+<script defer="defer">
+  document.addEventListener('DOMContentLoaded', () => {
+    const root = document.getElementById('gripping-root');
+    const frameContainer = document.getElementById('gripping-frame');
+    let scriptLoaded = false;
+    let scriptLoading = false;
+
+    const loadScript = () => {
+      if (scriptLoaded || scriptLoading) return;
+      scriptLoading = true;
+
+      const script = document.createElement('script');
+      script.src = "{{ 'vx-gripping.js' | asset_url }}";
+      script.defer = true;
+      script.type = 'module';
+
+      script.onload = () => {
+        scriptLoaded = true;
+        scriptLoading = false;
+      };
+
+      script.onerror = () => {
+        scriptLoading = false;
+        root.innerHTML = '{{ 'studio.gripping.errors.load_failed' | t }}';
+      };
+
+      document.body.appendChild(script);
+    };
+
+    frameContainer?.addEventListener('change', (event) => {
+      const target = event.target;
+      if (target && target.id === 'grip-service') {
+        if (!root) return;
+        root.style.display = 'block';
+        loadScript();
+        setTimeout(() => {
+          window.scrollBy({
+            top: 222,
+            left: 0,
+            behavior: 'smooth',
+          });
+        }, 300);
+      }
+    });
+  });
+
+  window.s3_gripping_service_variant_id = '{{ all_products['studio-gripping-service'].variants.first.id }}';
+</script>

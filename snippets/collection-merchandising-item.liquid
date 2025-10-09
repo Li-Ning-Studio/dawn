@@ -1,0 +1,219 @@
+{% comment %}
+  Collection Merchandising Item Snippet
+
+  Renders a single merchandising item within the collection product grid.
+
+  Accepts:
+  - block: {Object} The merchandising block containing all settings
+  - section_id: {String} The ID of the parent section for unique styling
+  - lazy_load: {Boolean} Whether to lazy load the image (default: true)
+{% endcomment %}
+
+{%- unless lazy_load == false -%}
+  {%- assign lazy_load = true -%}
+{%- endunless -%}
+
+{%- liquid
+  assign ratio = 1
+-%}
+
+<div class="merchandising-item " style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+  <div class="merchandising-item__inner ratio" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+    {%- if block.settings.image != blank -%}
+      <div class="merchandising-item__media">
+        <div class="media media--transparent">
+          {{
+            block.settings.image
+            | image_url: width: 800
+            | image_tag:
+              class: 'motion-reduce',
+              sizes: '(min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)',
+              widths: '300, 450, 600, 800',
+              loading: lazy_load,
+              width: block.settings.image.width,
+              height: block.settings.image.height
+          }}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if block.settings.title != blank or block.settings.subtitle != blank or block.settings.cta_text != blank -%}
+      <div class="merchandising-item__content merchandising-item__content--{{ block.settings.text_position }}">
+        <div class="merchandising-item__text">
+          {%- if block.settings.title != blank -%}
+            <h3 class="merchandising-item__title">{{ block.settings.title }}</h3>
+          {%- endif -%}
+
+          {%- if block.settings.subtitle != blank -%}
+            <p class="merchandising-item__subtitle">{{ block.settings.subtitle }}</p>
+          {%- endif -%}
+
+          {%- if block.settings.cta_text != blank and block.settings.cta_url != blank -%}
+            <a href="{{ block.settings.cta_url }}" class="merchandising-item__cta">
+              {{ block.settings.cta_text }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} If there's a URL, make the entire item clickable {%- endcomment -%}
+    {%- if block.settings.cta_url != blank -%}
+      <a
+        href="{{ block.settings.cta_url }}"
+        class="merchandising-item__link-overlay"
+        aria-label="{{ block.settings.title | default: 'View featured content' }}"
+        >&nbsp;</a
+      >
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  .merchandising-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    height: 100%;
+    filter: brightness(0.9);
+  }
+
+  .merchandising-item__inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .merchandising-item__inner::before {
+    content: '';
+    width: 0;
+    height: 0;
+    padding-bottom: var(--ratio-percent);
+  }
+
+  .merchandising-item__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .merchandising-item__media .media {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .merchandising-item__media .media img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+
+  .merchandising-item__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    padding: 2.6rem;
+    display: flex;
+    pointer-events: none;
+  }
+
+  .merchandising-item__content--bottom-left {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .merchandising-item__content--center-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .merchandising-item__text {
+    text-align: left;
+    pointer-events: auto;
+  }
+
+  .merchandising-item__content--center-center .merchandising-item__text {
+    text-align: center;
+  }
+
+  .merchandising-item__subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+    color: {{ block.settings.text_color | default: 'rgba(255, 255, 255, 0.9)' }};
+  }
+
+  .merchandising-item__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 0 0 0.3rem 0;
+    color: {{ block.settings.text_color | default: 'rgb(255, 255, 255)' }};
+  }
+
+  .merchandising-item__cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2.7rem;
+    border-radius: 50rem;
+    background: transparent;
+    border: 0.15rem solid {{ block.settings.text_color | default: '#ffffff' }};
+    color: {{ block.settings.text_color | default: '#ffffff' }};
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+
+  .merchandising-item__link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    text-decoration: none;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 749px) {
+    .merchandising-item__content {
+      padding: 2.2rem;
+    }
+
+    .merchandising-item__title {
+      font-size: 2.8rem;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .merchandising-item__title {
+      font-size: 3rem;
+    }
+  }
+
+  /* Hover effects */
+  .merchandising-item:hover .merchandising-item__media .media img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  .merchandising-item__media .media img {
+    transition: transform 0.3s ease;
+  }
+</style>
