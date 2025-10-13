@@ -20,11 +20,11 @@
       "type": "custom-liquid",
       "disabled": true,
       "custom_css": [
-        ".message {text-align:center;}"
+        ".message {text-align: center;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<meta http-equiv=\"refresh\" content=\"5;url=http://trials.machaxi.com\">\n<title>Redirecting to Machaxi...</title>\n\n<div class=\"message\">\n    Redirecting you to Machaxi...\n  </div>\n\n  <script>\n    // Optional: JS fallback for browsers that ignore meta refresh\n    setTimeout(function() {\n      window.location.href = \"http://trials.machaxi.com\";\n    }, 5000);\n  </script>",
+        "custom_liquid": "<meta http-equiv=\"refresh\" content=\"2;url=http://trials.machaxi.com\">\n<title>Redirecting to Machaxi...</title>\n\n<div class=\"message\">\n    Redirecting you to your free trial with Machaxi...\n  </div>\n\n  <script>\n    // Optional: JS fallback for browsers that ignore meta refresh\n    setTimeout(function() {\n      window.location.href = \"http://trials.machaxi.com\";\n    }, 2000);\n  </script>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
