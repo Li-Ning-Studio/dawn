@@ -11,13 +11,28 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "custom_css": [],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_yjxR8a": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "iframe#target-iframe {width: 100%; height: 200px;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<script type=\"text/javascript\">\n  function resizeIframe(iframe) {\n    iframe.height = iframe.contentWindow.document.body.scrollHeight + \"px\";\n  }\nalert(iframe.height);\n</script>  \n\n<iframe id=\"target-iframe\" src=\"https://trials.machaxi.com/\" onload=\"resizeIframe(this)\"></iframe>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_yjxR8a"
   ]
 }
