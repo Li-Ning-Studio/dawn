@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_component_drUrwn": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_6c1468ae-3c0f-48aa-bd5d-bfd2c4826ce5.png",
+        "mobile_image": "shopify://shop_images/Banner_R_663e43d9-33ef-41ac-9080-6c772ed29d3f.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/diwali-sale",
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 28
+      }
+    },
     "hero_component_Nd47g8": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -261,6 +278,7 @@
     }
   },
   "order": [
+    "hero_component_drUrwn",
     "hero_component_Nd47g8",
     "swipeable_products_h9aq4L",
     "hero_component_iq8qEP",
