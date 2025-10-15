@@ -31,6 +31,63 @@
         "column_eygK9W": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/bad_b4470e90-d155-456e-9c4b-8e5937ca196c.png",
+            "title": "",
+            "text": "",
+            "link_label": "Badminton",
+            "link": "shopify://collections/diwali-sale-badminton"
+          }
+        },
+        "column_8qna8E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/crk_a8ddb816-ca8b-45ed-babe-ed095a877c9b.png",
+            "title": "",
+            "text": "",
+            "link_label": "Cricket",
+            "link": "shopify://collections/diwali-sale-cricket"
+          }
+        },
+        "column_VaTPGT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pik_a315e04d-2064-4115-9956-d3c1448572fe.png",
+            "title": "",
+            "text": "",
+            "link_label": "Pickleball",
+            "link": "shopify://collections/diwali-sale-pickleball"
+          }
+        }
+      },
+      "block_order": [
+        "column_eygK9W",
+        "column_8qna8E",
+        "column_VaTPGT"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>SHOP BY SPORTS</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_g43TFV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bk6c4L": {
+          "type": "column",
+          "settings": {
             "image": "shopify://shop_images/bad.png",
             "title": "",
             "text": "",
@@ -38,7 +95,7 @@
             "link": "shopify://collections/badminton"
           }
         },
-        "column_8qna8E": {
+        "column_gckM6D": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/crk.png",
@@ -48,7 +105,7 @@
             "link": "shopify://collections/cricket"
           }
         },
-        "column_VaTPGT": {
+        "column_GRfnWJ": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/pik.png",
@@ -58,7 +115,7 @@
             "link": "shopify://collections/pickleball"
           }
         },
-        "column_CXYaR9": {
+        "column_bY39th": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/ten.png",
@@ -70,11 +127,12 @@
         }
       },
       "block_order": [
-        "column_eygK9W",
-        "column_8qna8E",
-        "column_VaTPGT",
-        "column_CXYaR9"
+        "column_bk6c4L",
+        "column_gckM6D",
+        "column_GRfnWJ",
+        "column_bY39th"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "<strong>SHOP BY SPORTS</strong>",
@@ -520,6 +578,7 @@
   "order": [
     "hero_video_component_JEwKMi",
     "multicolumn_thtmnP",
+    "multicolumn_g43TFV",
     "hero_component_RKxJeB",
     "swipeable_products_kQUykU",
     "multicolumn_qhdqCY",
