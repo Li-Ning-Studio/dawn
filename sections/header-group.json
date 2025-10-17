@@ -69,10 +69,21 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "custom_liquid_wg4iMP": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{%- comment -%}\nOne-off popup (single image).\n- Triggers after 13s of inactivity on all devices.\n- Once per browser session (sessionStorage)\n- Updated session key for Diwali.\n{%- endcomment -%}\n\n<style>\n  .oneoff-popup[hidden] { display: none !important; }\n  .oneoff-popup {\n    position: fixed;\n    inset: 0;\n    z-index: 9999;\n    display: grid;\n    place-items: center;\n    padding: 24px;\n    background: rgba(0,0,0,0.6);\n    opacity: 0;\n    transition: opacity .2s ease;\n  }\n  .oneoff-popup.is-open { opacity: 1; }\n  .oneoff-dialog {\n    position: relative;\n    max-width: min(90vw, 720px);\n    width: 450px;\n  }\n  .oneoff-dialog img {\n    display: block;\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    box-shadow: 0 10px 30px rgba(0,0,0,.35);\n  }\n  .oneoff-close {\n    position: absolute;\n    top: 8px;\n    right: 8px;\n    border: 0;\n    background: rgba(255,255,255,.9);\n    color: #111;\n    width: 36px;\n    height: 36px;\n    border-radius: 50%;\n    font-size: 22px;\n    text-align: center;\n    cursor: pointer;\n  }\n  .oneoff-close:hover { background: #fff; }\n  @media (prefers-reduced-motion: reduce) {\n    .oneoff-popup { transition: none; }\n  }\n</style>\n\n<div\n  id=\"exit-popup\"\n  class=\"oneoff-popup\"\n  role=\"dialog\"\n  aria-modal=\"true\"\n  hidden\n  data-session-key=\"oneoff_diwali_exit_popup_shown\"\n>\n  <div class=\"oneoff-dialog\" role=\"document\">\n    <button\n      type=\"button\"\n      class=\"oneoff-close\"\n      aria-label=\"{{ 'accessibility.close' | t }}\"\n      data-close\n    >×</button>\n\n    <img\n      src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Web_Pop-Up_R_1.png?v=1760680029\"\n      alt=\"\"\n      loading=\"lazy\"\n      width=\"1000\"\n      height=\"1000\"\n    />\n  </div>\n</div>\n\n<script>\n  (function () {\n    try {\n      var root = document.getElementById('exit-popup');\n      if",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "custom_liquid_wg4iMP"
   ]
 }
