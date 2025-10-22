@@ -35,6 +35,7 @@
     },
     "custom_liquid_RVrDyD": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<style>\n  /* Headline text style */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n    margin: 0;\n  }\n\n  /* Logo image styling */\n  .logo-image {\n    max-width: 400px;   /* Adjust as needed */\n    width: 100%;\n    height: auto;\n    display: block;\n    margin: 0 auto;\n  }\n\n  /* Section layout */\n  .section-container {\n    text-align: center;\n    padding: 1rem 0;\n  }\n\n  p {\n    margin: 0.5rem 0;\n  }\n</style>\n\n<section class=\"section-container\">\n  <p>Play Like a Legend with</p>\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Comp_1.gif?v=1761112059\" \n    alt=\"Play Like a Legend Logo Animation\"\n    class=\"logo-image\"\n  >\n  <p>Superior Grip, Unbeatable Speed, and Unstoppable Style. Because Winners Don’t Compromise.</p>\n</section>",
