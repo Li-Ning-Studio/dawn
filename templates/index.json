@@ -57,13 +57,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner_edbf7c74-0d8d-40b0-825a-d8fcd81b62cb.png",
-        "mobile_image": "shopify://shop_images/banner_responsive.png",
-        "subtitle": "G-Force Superlite",
-        "title": "Force by your side",
-        "description": "You gain an invisible force with Li-Ning's superlight rackets.",
-        "button_text": "BUY NOW!",
-        "link_to": "shopify://products/g-force-5900-superlite",
+        "image": "shopify://shop_images/AxForce_Cannon_Banner.jpg",
+        "mobile_image": "shopify://shop_images/AxForce_Cannon_Responsive_Banner.jpg",
+        "subtitle": "Axforce Cannon",
+        "title": "Extra-Terrestrial Force Unleashed",
+        "description": "Head heavy rackets with a flexible shaft to ensure seamless gameplay and extra smash impact.",
+        "button_text": "Get The Force Now!",
+        "link_to": "shopify://products/axforce-cannon-4u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -73,12 +73,16 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "G-Force Series",
+        "title": "Axforce Series",
         "products": [
-          "g-force-5900-superlite",
-          "g-force-5800-superlite"
+          "axforce-cannon-4u",
+          "axforce-cannon-5u",
+          "axforce-cannon-6u",
+          "axforce-cannon-pro-4u",
+          "axforce-cannon-pro-5u",
+          "axforce-cannon-5u-light"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 64
