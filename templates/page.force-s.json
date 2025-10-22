@@ -33,6 +33,16 @@
         "padding_bottom": 52
       }
     },
+    "custom_liquid_RVrDyD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  /* Same size as \"Before They're History!\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  /* Style for the image */\n  .logo-image {\n    max-width: 400px;  /* Adjust the width as needed */\n    height: auto;\n    display: block;\n    margin: 0 auto;  /* Center the image horizontally */\n    margin-bottom: 0; /* Remove extra space below the image */\n  }\n\n  /* Remove margin from h1 */\n  h1 {\n    margin: 0;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <p style=\"text-align: center;\">Play Like a Legend with</p>\n    <!-- Image placed outside of h1 -->\n    <img src=https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Comp_1.gif?v=1761112059\" class=\"logo-image\">\n    <!-- Removed h1 element -->\n    <p style=\"text-align: center;\">Superior Grip, Unbeatable Speed, and Unstoppable Style, Because Winners Don’t Compromise.</p>\n  </section>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "swipeable_products_8Mgcd8": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
@@ -58,6 +68,7 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -121,6 +132,7 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -184,6 +196,7 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -247,6 +260,7 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -310,6 +324,7 @@
         "description": "Step up your pickleball game with the Force S Essential Pack. Designed for players who want it all in one powerful bundle.",
         "button_text": "Get Yours Today!",
         "link_to": "shopify://products/force-s-essentials-pack",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -388,6 +403,7 @@
   "order": [
     "main",
     "hero_video_component_q4LLam",
+    "custom_liquid_RVrDyD",
     "swipeable_products_8Mgcd8",
     "hero_component_qzJ8rU",
     "image_with_text_G46TMW",
