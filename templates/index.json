@@ -11,7 +11,6 @@
   "sections": {
     "image_banner_FRPiaA": {
       "type": "image-banner",
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/A_2_c6da660f84.jpg",
         "image_2": "shopify://shop_images/respo_16aa10a169.jpg",
@@ -27,6 +26,16 @@
         "show_text_below": true
       }
     },
+    "custom_liquid_jDcQR6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Values Header</title>\n    <style>\n        .values-header-wrapper {\n            width: 100%;\n            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);\n            font-family: inherit;\n            padding: 80px 20px;\n            text-align: center;\n        }\n\n        .values-header-container {\n            max-width: 900px;\n            margin: 0 auto;\n        }\n\n        .values-header-subtitle {\n            font-size: 16px;\n            font-weight: 600;\n            text-transform: uppercase;\n            letter-spacing: 3px;\n            color: #E8A656;\n            margin: 0 0 20px 0;\n        }\n\n        .values-header-title {\n            font-size: 52px;\n            font-weight: 900;\n            line-height: 1.2;\n            color: #ffffff;\n            margin: 0;\n            text-transform: none;\n        }\n\n        .values-header-title .highlight {\n            color: #E8A656;\n        }\n\n        @media (max-width: 768px) {\n            .values-header-wrapper {\n                padding: 60px 20px;\n            }\n\n            .values-header-subtitle {\n                font-size: 14px;\n                letter-spacing: 2px;\n            }\n\n            .values-header-title {\n                font-size: 32px;\n            }\n        }\n\n        @media (max-width: 480px) {\n            .values-header-wrapper {\n                padding: 50px 15px;\n            }\n\n            .values-header-title {\n                font-size: 26px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"values-header-wrapper\">\n        <div class=\"values-header-container\">\n            <p class=\"values-header-subtitle\">Our Values</p>\n            <h1 class=\"values-header-title\">\n                Our values define who we are. They're the foundation of every decision, every product, and every relationship we build. At <span class=\"highlight\">HNDRD</span>, we don't just talk about excellence—we live it, breathe it, and deliver it at every level.\n            </h1>\n        </div>\n    </div>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_TbgMHa": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -40,6 +49,7 @@
   },
   "order": [
     "image_banner_FRPiaA",
+    "custom_liquid_jDcQR6",
     "custom_liquid_TbgMHa"
   ]
 }
