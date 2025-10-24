@@ -26,10 +26,27 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "hero_component_4NTVjw": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/c_banner.png",
+        "mobile_image": "shopify://shop_images/c_banner_responsive.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_7nKybJ"
+    "custom_liquid_7nKybJ",
+    "hero_component_4NTVjw"
   ]
 }
