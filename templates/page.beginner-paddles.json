@@ -61,17 +61,17 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Beginner Paddle Features</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n            background: #f5f5f5;\n            padding: 20px;\n        }\n\n        .features-section {\n            background: transparent;\n            max-width: 100%;\n            margin: 0 auto;\n            padding: 0;\n        }\n\n        .features-grid {\n            display: grid;\n            gap: 32px;\n            max-width: 800px;\n            margin: 0 auto;\n            padding: 40px 20px;\n        }\n\n        .feature-card {\n            background: rgba(255, 255, 255, 0.6);\n            backdrop-filter: blur(10px);\n            padding: 36px 28px;\n            border-radius: 20px;\n            border: 2px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .feature-title {\n            font-size: clamp(1.5rem, 5vw, 1.6rem);\n            font-weight: 700;\n            margin-bottom: 14px;\n            color: #1a1a1a;\n            display: flex;\n            align-items: center;\n            gap: 14px;\n        }\n\n        .feature-icon {\n            font-size: 2.2rem;\n            flex-shrink: 0;\n            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));\n        }\n\n        .feature-description {\n            font-size: clamp(1.25rem, 3.5vw, 1.25rem);\n            line-height: 1.65;\n            color: #2a2a2a;\n            opacity: 1;\n        }\n\n        @media (min-width: 768px) {\n            .features-grid {\n                grid-template-columns: repeat(3, 1fr);\n                max-width: 1200px;\n                gap: 40px;\n                padding: 60px 40px;\n            }\n        }\n\n        @media (min-width: 1024px) {\n            .features-grid {\n                padding: 60px 80px;\n                gap: 48px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"features-section\">\n        <div class=\"features-grid\">\n            <div class=\"feature-card\">\n                <div class=\"feature-title\">\n                    <span class=\"feature-icon\">🪶</span>\n                    <span>Actually lightweight</span>\n                </div>\n                <div class=\"feature-description\">\n                    Your arm won't hate you after three games\n                </div>\n            </div>\n\n            <div class=\"feature-card\">\n                <div class=\"feature-title\">\n                    <span class=\"feature-icon\">🎯</span>\n                    <span>Bigger sweet spot</span>\n                </div>\n                <div class=\"feature-description\">\n                    Because let's be real, you're gonna miss the center. A lot.\n                </div>\n            </div>\n\n            <div class=\"feature-card\">\n                <div class=\"feature-title\">\n                    <span class=\"feature-icon\">🎮</span>\n                    <span>Won't send the ball flying</span>\n                </div>\n                <div class=\"feature-description\">\n                    Controlled power means fewer awkward \"sorry!\" moments\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Beginner Paddle Features</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n        body {\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n            background: #f5f5f5;\n            padding: 20px;\n        }\n        .features-section {\n            background: transparent;\n            max-width: 100%;\n            margin: 0 auto;\n            padding: 0;\n        }\n        .features-container {\n            padding: 40px 20px;\n        }\n        .features-grid {\n            display: flex;\n            gap: 32px;\n            overflow-x: auto;\n            scroll-snap-type: x mandatory;\n            -webkit-overflow-scrolling: touch;\n            scrollbar-width: none;\n            padding-bottom: 20px;\n        }\n        .features-grid::-webkit-scrollbar {\n            display: none;\n        }\n        .feature-card {\n            flex: 0 0 85%;\n            background: rgba(255, 255, 255, 0.6);\n            backdrop-filter: blur(10px);\n            padding: 36px 28px;\n            border-radius: 20px;\n            border: 2px solid rgba(0, 0, 0, 0.1);\n            scroll-snap-align: center;\n        }\n        .feature-title {\n            font-size: clamp(1.5rem, 5vw, 1.6rem);\n            font-weight: 700;\n            margin-bottom: 14px;\n            color: #1a1a1a;\n            display: flex;\n            align-items: center;\n            gap: 14px;\n        }\n        .feature-icon {\n            font-size: 2.2rem;\n            flex-shrink: 0;\n            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));\n        }\n        .feature-description {\n            font-size: clamp(1.25rem, 3.5vw, 1.25rem);\n            line-height: 1.65;\n            color: #2a2a2a;\n            opacity: 1;\n        }\n        .scroll-hint {\n            text-align: center;\n            margin-top: 12px;\n            font-size: 0.9rem;\n            color: #666;\n            opacity: 0.7;\n        }\n        @media (min-width: 768px) {\n            .features-grid {\n                display: grid;\n                grid-template-columns: repeat(3, 1fr);\n                gap: 40px;\n                overflow-x: visible;\n                scroll-snap-type: none;\n            }\n            .feature-card {\n                flex: none;\n            }\n            .features-container {\n                padding: 60px 40px;\n            }\n            .scroll-hint {\n                display: none;\n            }\n        }\n        @media (min-width: 1024px) {\n            .features-container {\n                padding: 60px 80px;\n            }\n            .features-grid {\n                gap: 48px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"features-section\">\n        <div class=\"features-container\">\n            <div class=\"features-grid\">\n                <div class=\"feature-card\">\n                    <div class=\"feature-title\">\n                        <span class=\"feature-icon\">🪶</span>\n                        <span>Actually lightweight</span>\n                    </div>\n                    <div class=\"feature-description\">\n                        Your arm won't hate you after three games\n                    </div>\n                </div>\n                <div class=\"feature-card\">\n                    <div class=\"feature-title\">\n                        <span class=\"feature-icon\">🎯</span>\n                        <span>Bigger sweet spot</span>\n                    </div>\n                    <div class=\"feature-description\">\n                        Because let's be real, you're gonna miss the center. A lot.\n                    </div>\n                </div>\n                <div class=\"feature-card\">\n                    <div class=\"feature-title\">\n                        <span class=\"feature-icon\">🎮</span>\n                        <span>Won't send the ball flying</span>\n                    </div>\n                    <div class=\"feature-description\">\n                        Controlled power means fewer awkward \"sorry!\" moments\n                    </div>\n                </div>\n            </div>\n            <div class=\"scroll-hint\">← Swipe to explore →</div>\n        </div>\n    </div>\n</body>\n</html>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_rtey6X": {
+    "custom_liquid_Q6ApYk": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Beginner Paddle Features</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n            background: #f5f5f5;\n            padding: 20px;\n        }\n\n        .features-section {\n            background: transparent;\n            max-width: 100%;\n            margin: 0 auto;\n            padding: 0;\n        }\n\n        .features-grid {\n            display: grid;\n            gap: 32px;\n            max-width: 100%;\n            margin: 0 auto;\n            padding: 40px 20px;\n        }\n\n        .feature-card {\n            background: rgba(255, 255, 255, 0.6);\n            backdrop-filter: blur(10px);\n            padding: 48px 36px;\n            border-radius: 20px;\n            border: 2px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .feature-title {\n            font-size: clamp(1.5rem, 5vw, 1.8rem);\n            font-weight: 700;\n            margin-bottom: 16px;\n            color: #1a1a1a;\n            display: flex;\n            align-items: center;\n            gap: 16px;\n        }\n\n        .feature-icon {\n            font-size: 2.5rem;\n            flex-shrink: 0;\n            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));\n        }\n\n        .feature-description {\n            font-size: clamp(1.25rem, 3.5vw, 1.35rem);\n            line-height: 1.65;\n            color: #2a2a2a;\n            opacity: 1;\n        }\n\n        @media (min-width: 768px) {\n            .features-grid {\n                grid-template-columns: repeat(3, 1fr);\n                max-width: 100%;\n                gap: 48px;\n                padding: 60px 60px;\n            }\n            \n            .feature-card {\n                padding: 56px 40px;\n            }\n        }\n\n        @media (min-width: 1024px) {\n            .features-grid {\n                padding: 80px 100px;\n                gap: 60px;\n            }\n            \n            .feature-card {\n                padding: 64px 48px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"features-section\">\n        <div class=\"features-grid\">\n            <div class=\"feature-card\">\n                <div class=\"feature-title\">\n                    <span class=\"feature-icon\">🛡️</span>\n                    <span>Forgiving on mishits</span>\n                </div>\n                <div class=\"feature-description\">\n                    That weird side spin? The paddle's got your back\n                </div>\n            </div>\n\n            <div class=\"feature-card\">\n                <div class=\"feature-title\">\n                    <span class=\"feature-icon\">👌</span>\n                    <span>Feels good in your hand</span>\n                </div>\n                <div class=\"feature-description\">\n                    Comfortable enough that you'll forget you're still learning\n                </div>\n            </div>\n\n            <div class=\"feature-card\">\n                <div class=\"feature-title\">\n                    <span class=\"feature-icon\">🇺🇸</span>\n                    <span>USA Pickleball approved</span>\n                </div>\n                <div class=\"feature-description\">\n                    Legit equipment, beginner-friendly price\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "custom_liquid": "<div style=\"background: transparent; padding: 60px 20px 40px; text-align: center; max-width: 1200px; margin: 0 auto;\">\n  <h2 style=\"font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.01em;\">\n    Here's Our Paddle Lineup <span style=\"display: inline-block; animation: bounce 2s ease-in-out infinite;\">🏓</span>\n  </h2>\n  <p style=\"font-size: clamp(1.15rem, 3vw, 1.35rem); line-height: 1.5; max-width: 700px; margin: 0 auto; opacity: 0.9; font-weight: 500;\">\n    Your next favorite paddle is right here. <span style=\"font-weight: 600;\">Light, powerful, or built-to-last?</span> Take your pick.\n  </p>\n</div>\n\n<style>\n@keyframes bounce {\n  0%, 100% { \n    transform: translateY(0) rotate(0deg); \n  }\n  25% { \n    transform: translateY(-8px) rotate(-10deg); \n  }\n  50% { \n    transform: translateY(-12px) rotate(0deg); \n  }\n  75% { \n    transform: translateY(-8px) rotate(10deg); \n  }\n}\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -80,6 +80,17 @@
     "multirow_b3qwx9": {
       "type": "multirow",
       "blocks": {
+        "row_UNYLm9": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_b5755e62-f016-43d2-9217-f97841e2c9f5.jpg",
+            "caption": "",
+            "heading": "Force S",
+            "text": "<p>Power That Lasts ⚡. At 200 grams 🪶, the Force S is lightweight but mighty 💪. Instant response, satisfying pop 💥, protected edges 🛡️. Wide-shape means a forgiving sweet spot 🎯—because perfection is overrated 😎.<br/></p>",
+            "button_label": "Bring the Power 💥",
+            "button_link": "shopify://products/force-s-wide"
+          }
+        },
         "row_6DQx3U": {
           "type": "row",
           "settings": {
@@ -115,6 +126,7 @@
         }
       },
       "block_order": [
+        "row_UNYLm9",
         "row_6DQx3U",
         "row_iUtEUy",
         "row_mrEqBY"
@@ -132,92 +144,15 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "row_color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multirow_XRyBKF": {
-      "type": "multirow",
-      "blocks": {
-        "row_fQLEpB": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_b5755e62-f016-43d2-9217-f97841e2c9f5.jpg",
-            "caption": "",
-            "heading": "",
-            "text": "<p><strong>Actually lightweight</strong> : Your arm won't hate you after three games</p><p><strong>Bigger sweet spot</strong> : Because let's be real, you're gonna miss the center. A lot.</p><p><strong>Won't send the ball flying</strong> : Controlled power means fewer awkward \"sorry!\" moments<br/></p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_qLHdBa": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_6.jpg",
-            "caption": "",
-            "heading": "",
-            "text": "<p><strong>Forgiving on mishits</strong> : That weird side spin? The paddle's got your back</p><p><strong>Feels good in your hand</strong> : Comfortable enough that you'll forget you're still learning</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_fQLEpB",
-        "row_qLHdBa"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "collage_ekdKVN": {
-      "type": "collage",
-      "blocks": {
-        "image_A9PNQm": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_19e88ade-0a5f-41d5-b331-562e648d8775.jpg"
-          }
-        },
-        "product_E9rHUT": {
-          "type": "product",
-          "settings": {
-            "product": "n-force-40-extend",
-            "second_image": false
-          }
-        },
-        "image_3TRHTN": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_22a0537f-53bc-41ad-a5c5-e30793c40f9f.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_A9PNQm",
-        "product_E9rHUT",
-        "image_3TRHTN"
-      ],
-      "name": "t:sections.collage.presets.name",
+    "custom_liquid_rtey6X": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "none",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Beginner Paddle Features</title>\n  <style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    body {\n      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n      background: #f5f5f5;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      min-height: 100vh;\n      padding: 20px;\n    }\n\n    .features-section {\n      width: 100%;\n      max-width: 1200px;\n    }\n\n    .features-container {\n      position: relative;\n      overflow: hidden;\n    }\n\n    /* --- Mobile Swipe Layout --- */\n    .features-grid {\n      display: flex;\n      gap: 20px;\n      overflow-x: auto;\n      scroll-snap-type: x mandatory;\n      -webkit-overflow-scrolling: touch;\n      scroll-behavior: smooth;\n      padding: 40px 16px;\n      justify-content: center;\n    }\n\n    .features-grid::-webkit-scrollbar {\n      display: none;\n    }\n\n    .feature-card {\n      flex: 0 0 90%;\n      max-width: 320px;\n      background: rgba(255, 255, 255, 0.7);\n      backdrop-filter: blur(10px);\n      border: 1px solid rgba(0, 0, 0, 0.1);\n      border-radius: 20px;\n      padding: 40px 28px;\n      scroll-snap-align: center;\n      text-align: center;\n      box-shadow: 0 4px 10px rgba(0,0,0,0.05);\n    }\n\n    .feature-title {\n      font-size: 1.3rem;\n      font-weight: 700;\n      margin-bottom: 12px;\n      color: #1a1a1a;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 8px;\n    }\n\n    .feature-icon {\n      font-size: 2.4rem;\n      line-height: 1;\n      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));\n    }\n\n    .feature-description {\n      font-size: 1rem;\n      line-height: 1.6;\n      color: #333;\n      opacity: 0.9;\n      margin-top: 10px;\n    }\n\n    /* --- Buttons and hint --- */\n    .nav-buttons {\n      display: flex;\n      justify-content: center;\n      margin-top: 10px;\n      gap: 10px;\n    }\n\n    .nav-buttons button {\n      padding: 8px 14px;\n      font-size: 1.1rem;\n      border-radius: 10px;\n      border: none;\n      background: #e0e0e0;\n      cursor: pointer;\n      transition: background 0.2s ease;\n    }\n\n    .nav-buttons button:hover {\n      background: #ccc;\n    }\n\n    .scroll-hint {\n      text-align: center;\n      margin-top: 8px;\n      font-size: 0.85rem;\n      color: #666;\n      opacity: 0.7;\n    }\n\n    /* --- Desktop Grid --- */\n    @media (min-width: 768px) {\n      .features-grid {\n        display: grid;\n        grid-template-columns: repeat(3, 1fr);\n        gap: 40px;\n        overflow: visible;\n        scroll-snap-type: none;\n        justify-content: normal;\n        padding: 60px 60px;\n      }\n\n      .feature-card {\n        flex: none;\n        max-width: none;\n        text-align: left;\n        padding: 56px 40px;\n      }\n\n      .feature-title {\n        flex-direction: row;\n        justify-content: flex-start;\n        gap: 16px;\n      }\n\n      .feature-icon {\n        font-size: 2.2rem;\n      }\n\n      .feature-description {\n        font-size: 1.1rem;\n      }\n\n      .nav-buttons,\n      .scroll-hint {\n        display: none;\n      }\n    }\n\n    @media (min-width: 1024px) {\n      .features-grid {\n        gap: 60px;\n        padding: 80px 100px;\n      }\n\n      .feature-card {\n        padding: 64px 48px;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"features-section\">\n    <div class=\"features-container\">\n      <div class=\"features-grid\">\n        <div class=\"feature-card\">\n          <div class=\"feature-title\">\n            <span class=\"feature-icon\">🛡️</span>\n            <span>Forgiving on mishits</span>\n          </div>\n          <div class=\"feature-description\">\n            That weird side spin? The paddle's got your back.\n          </div>\n        </div>\n\n        <div class=\"feature-card\">\n          <div class=\"feature-title\">\n            <span class=\"feature-icon\">👌</span>\n            <span>Feels good in your hand</span>\n          </div>\n          <div class=\"feature-description\">\n            Comfortable enough that you'll forget you're still learning.\n          </div>\n        </div>\n\n        <div class=\"feature-card\">\n          <div class=\"feature-title\">\n            <span class=\"feature-icon\">🇺🇸</span>\n            <span>USA Pickleball approved</span>\n          </div>\n          <div class=\"feature-description\">\n            Legit equipment, beginner-friendly price.\n          </div>\n        </div>\n      </div>\n\n      <div class=\"nav-buttons\">\n        <button id=\"prev\">←</button>\n        <button id=\"next\">→</button>\n      </div>\n\n      <div class=\"scroll-hint\">← Swipe to explore →</div>\n    </div>\n  </div>\n\n  <script>\n    const grid = document.querySelector('.features-grid');\n    const next = document.getElementById('next');\n    const prev = document.getElementById('prev');\n\n    next.addEventListener('click', () => {\n      grid.scrollBy({ left: grid.offsetWidth * 0.9, behavior: 'smooth' });\n    });\n\n    prev.addEventListener('click', () => {\n      grid.scrollBy({ left: -grid.offsetWidth * 0.9, behavior: 'smooth' });\n    });\n  </script>\n</body>\n</html>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -230,9 +165,8 @@
     "custom_liquid_L9H4rM",
     "hero_component_XFpKtg",
     "custom_liquid_3RyrKt",
-    "custom_liquid_rtey6X",
+    "custom_liquid_Q6ApYk",
     "multirow_b3qwx9",
-    "multirow_XRyBKF",
-    "collage_ekdKVN"
+    "custom_liquid_rtey6X"
   ]
 }
