@@ -17,22 +17,38 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_7nKybJ": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Halberd Strike — Minimal Classic Aesthetic -->\n<section class=\"hs\" aria-label=\"Halberd Strike\">\n  <style>\n    /* Base */\n    .hs, .hs * { box-sizing: border-box; }\n    .hs {\n      --bg: #ffffff;\n      --bg-subtle: #fafafa;\n      --ink: #1a1a1a;\n      --ink-2: #4a4a4a;\n      --muted: #8a8a8a;\n      --line: #e8e8e8;\n      --accent: #2563eb;\n      --radius: 8px;\n      --shadow: 0 1px 3px rgba(0,0,0,.04);\n      font-family: inherit;\n      color: var(--ink);\n      background: var(--bg);\n    }\n    .hs .container {\n      max-width: 1200px;\n      margin: 0 auto;\n      padding: 0 24px;\n    }\n\n    /* Hero */\n    .hs-hero {\n      display: grid;\n      grid-template-columns: 1fr 1fr;\n      grid-template-areas: \"text visual\";\n      gap: 60px;\n      align-items: center;\n      min-height: 70vh;\n      padding: 40px 0;\n    }\n    .hs-brand  { grid-area: text; }\n    .hs-visual { grid-area: visual; display: grid; place-items: center; }\n\n    @media (max-width: 900px) {\n      .hs-hero {\n        grid-template-columns: 1fr;\n        grid-template-areas:\n          \"visual\"\n          \"text\";\n        gap: 32px;\n        min-height: auto;\n        padding: 32px 0;\n      }\n    }\n\n    .hs-subtitle {\n      font-size: 0.875rem;\n      font-weight: 500;\n      color: var(--muted);\n      text-transform: uppercase;\n      letter-spacing: 0.15em;\n      margin-bottom: 12px;\n    }\n    .hs-logo { \n      font-size: clamp(2.75rem, 5.5vw, 4rem);\n      font-weight: 400;\n      color: var(--ink);\n      margin-bottom: 20px;\n      letter-spacing: -0.01em;\n      line-height: 1.1;\n    }\n    .hs-copy {\n      font-size: 1.125rem; \n      line-height: 1.7;\n      color: var(--ink-2); \n      max-width: 520px;\n      margin: 0 0 32px;\n      font-weight: 400;\n    }\n\n    /* CTAs */\n    .hs-actions { \n      display: flex; \n      gap: 16px; \n      margin-bottom: 40px;\n    }\n    .hs-btn {\n      padding: 14px 32px;\n      font-size: 0.9375rem; \n      font-weight: 500;\n      text-align: center; \n      border-radius: 2px;\n      border: 1px solid var(--ink);\n      text-decoration: none;\n      transition: all .25s ease;\n      letter-spacing: 0.02em;\n    }\n    .hs-btn--primary { \n      background: var(--ink); \n      color: #fff; \n    }\n    .hs-btn--primary:hover { \n      background: #000;\n      border-color: #000;\n    }\n    .hs-btn--secondary { \n      background: transparent; \n      color: var(--ink); \n    }\n    .hs-btn--secondary:hover { \n      background: var(--bg-subtle);\n    }\n\n    /* Stats */\n    .hs-stats {\n      display: flex; \n      gap: 48px;\n    }\n    .hs-stat { }\n    .hs-stat__num { \n      font-size: 1.75rem; \n      font-weight: 400;\n      color: var(--ink);\n      margin-bottom: 6px;\n    }\n    .hs-stat__label { \n      font-size: 0.8125rem; \n      text-transform: uppercase; \n      color: var(--muted);\n      letter-spacing: 0.1em;\n      font-weight: 500;\n    }\n\n    /* Visual */\n    .hs-shoe-wrap {\n      position: relative; \n      width: 100%;\n      height: clamp(380px, 55vh, 550px);\n      display: grid; \n      place-items: center;\n      overflow: visible;\n    }\n    .hs-ring {\n      position: absolute; \n      width: clamp(280px, 48vw, 420px);\n      height: clamp(280px, 48vw, 420px);\n      border: 1px solid var(--line);\n      border-radius: 50%;\n      animation: spin 40s linear infinite;\n    }\n    .hs-glow {\n      position: absolute;\n      width: clamp(500px, 70vw, 700px);\n      height: clamp(500px, 70vw, 700px);\n      background: radial-gradient(circle, rgba(17, 125, 235, 0.9) 0%, rgba(17, 125, 235, 0.6) 25%, rgba(17, 125, 235, 0.3) 50%, transparent 70%);\n      border-radius: 50%;\n      animation: pulse 2s ease-in-out infinite;\n      filter: blur(60px);\n      z-index: 0;\n    }\n    .hs-glow-2 {\n      position: absolute;\n      width: clamp(450px, 65vw, 650px);\n      height: clamp(450px, 65vw, 650px);\n      background: radial-gradient(circle, rgba(17, 125, 235, 0.7) 0%, rgba(17, 125, 235, 0.4) 35%, transparent 65%);\n      border-radius: 50%;\n      animation: pulse 2s ease-in-out infinite reverse;\n      filter: blur(80px);\n      z-index: 0;\n    }\n    .hs-shoe { \n      position: relative; \n      z-index: 1; \n      width: min(700px, 110%);\n      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.08));\n      transition: all 0.3s ease;\n      transform: rotate(-15deg);\n    }\n    .hs-shoe:hover {\n      filter: drop-shadow(0 20px 60px rgba(17, 125, 235, 0.6)) drop-shadow(0 0 40px rgba(17, 125, 235, 0.4));\n      transform: rotate(-15deg) scale(1.02);\n    }\n    @keyframes spin { \n      from { transform: rotate(0deg) } \n      to { transform: rotate(360deg) } \n    }\n    @keyframes pulse {\n      0%, 100% {\n        transform: scale(0.9);\n        opacity: 1;\n      }\n      50% {\n        transform: scale(1.2);\n        opacity: 0.8;\n      }\n    }\n\n    /* Performance */\n    .hs-perf {\n      background: var(--bg-subtle);\n      padding: 60px 0 70px;\n      border-top: 1px solid var(--line);\n    }\n    .hs-h2 {\n      font-size: clamp(2rem, 3.5vw, 2.75rem);\n      font-weight: 400;\n      text-align: center;\n      margin-bottom: 20px;\n      color: var(--ink);\n      letter-spacing: -0.01em;\n    }\n    .hs-sub {\n      max-width: 680px; \n      margin: 0 auto 48px;\n      text-align: center; \n      font-size: 1.0625rem; \n      line-height: 1.7; \n      color: var(--ink-2);\n      font-weight: 400;\n    }\n    .hs-grid {\n      display: grid;\n      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n      gap: 28px;\n    }\n    .hs-card {\n      background: var(--bg);\n      border: 1px solid var(--line);\n      border-radius: var(--radius);\n      padding: 36px;\n      transition: all .3s ease;\n    }\n    .hs-card:hover { \n      box-shadow: 0 4px 20px rgba(0,0,0,0.06);\n      transform: translateY(-2px);\n    }\n    .hs-card h3 { \n      font-size: 1.25rem; \n      font-weight: 500; \n      margin: 0 0 14px 0;\n      color: var(--ink);\n      letter-spacing: -0.01em;\n    }\n    .hs-card p { \n      font-size: 1rem; \n      color: var(--ink-2); \n      line-height: 1.65;\n      font-weight: 400;\n      margin: 0;\n    }\n  </style>\n\n  <!-- Hero -->\n  <div class=\"container\">\n    <div class=\"hs-hero\">\n      <!-- Text -->\n      <div class=\"hs-brand\">\n        <div class=\"hs-subtitle\">Li-Ning</div>\n        <h1 class=\"hs-logo\">Halberd Strike</h1>\n        <p class=\"hs-copy\">\n          Precision engineering meets effortless performance. Designed for athletes who value clarity of movement and uncompromising quality on court.\n        </p>\n        <div class=\"hs-actions\">\n          <a href=\"#\" class=\"hs-btn hs-btn--primary\">Shop Collection</a>\n          <a href=\"#performance-features\" class=\"hs-btn hs-btn--secondary\">Learn More</a>\n        </div>\n        <div class=\"hs-stats\">\n          <div class=\"hs-stat\">\n            <div class=\"hs-stat__num\">Five</div>\n            <div class=\"hs-stat__label\">Colorways</div>\n          </div>\n          <div class=\"hs-stat\">\n            <div class=\"hs-stat__num\">360°</div>\n            <div class=\"hs-stat__label\">Ventilation</div>\n          </div>\n          <div class=\"hs-stat\">\n            <div class=\"hs-stat__num\">Pro</div>\n            <div class=\"hs-stat__label\">Grade</div>\n          </div>\n        </div>\n      </div>\n      <!-- Visual -->\n      <div class=\"hs-visual\">\n        <div class=\"hs-shoe-wrap\">\n          <div class=\"hs-glow\"></div>\n          <div class=\"hs-glow-2\"></div>\n          <div class=\"hs-ring\"></div>\n          <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template-01-removebg-preview.png?v=1761282674\"\n               alt=\"Halberd Strike badminton shoe\" class=\"hs-shoe\" loading=\"eager\">\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n\n  <script>\n    (function () {\n      'use strict';\n      var mediaFine = window.matchMedia && window.matchMedia('(pointer: fine)').matches;\n      var motionOK = !window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n      if (!mediaFine || !motionOK) return;\n      var shoe = document.querySelector('.hs .hs-shoe');\n      if (!shoe) return;\n      document.addEventListener('mousemove', function (e) {\n        var r = shoe.getBoundingClientRect();\n        var cx = r.left + r.width / 2, cy = r.top + r.height / 2;\n        var dx = (e.clientX - cx) / 35, dy = (e.clientY - cy) / 35;\n        shoe.style.transform = 'translate3d(' + dx + 'px,' + dy + 'px,0)';\n      }, { passive: true });\n    })();\n  </script>\n</section>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_4NTVjw": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/c_banner.png",
         "mobile_image": "shopify://shop_images/c_banner_responsive.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_37tWNM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n\n        .img-carousel-container {\n            width: 100%;\n            position: relative;\n            margin: 0 auto;\n        }\n\n        .img-carousel-wrapper {\n            overflow: hidden;\n        }\n\n        .img-carousel {\n            display: flex;\n            transition: transform 0.3s ease-out;\n        }\n\n        .img-carousel-item {\n            flex-shrink: 0;\n            width: 100%;\n        }\n\n        .img-carousel-item img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Hide dots and arrows on mobile */\n        .img-carousel-dots,\n        .img-carousel-nav-button {\n            display: none;\n        }\n\n        /* Swipe indicator for mobile */\n        .swipe-indicator {\n            display: none;\n            position: absolute;\n            bottom: 20px;\n            left: 50%;\n            transform: translateX(-50%);\n            background: rgba(0, 0, 0, 0.6);\n            color: white;\n            padding: 8px 16px;\n            border-radius: 20px;\n            font-size: 14px;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n            pointer-events: none;\n            animation: fadeInOut 3s ease-in-out;\n            z-index: 10;\n        }\n\n        @keyframes fadeInOut {\n            0%, 100% { opacity: 0; }\n            10%, 90% { opacity: 1; }\n        }\n\n        @media (max-width: 768px) {\n            .swipe-indicator {\n                display: block;\n            }\n        }\n\n        /* Desktop styles */\n        @media (min-width: 769px) {\n            .img-carousel-container {\n                max-width: 100%;\n            }\n\n            .img-carousel {\n                flex-wrap: nowrap;\n                gap: 20px;\n                padding: 0 20px;\n            }\n\n            .img-carousel-item {\n                width: calc(33.333% - 14px);\n            }\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .img-carousel-wrapper {\n                touch-action: pan-y;\n                -webkit-overflow-scrolling: touch;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"img-carousel-container\">\n        <div class=\"img-carousel-wrapper\">\n            <div class=\"img-carousel\" id=\"imgCarousel\">\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2_7ea0def0-5db3-4e9f-9a67-7dc735c23809.png?v=1761560331\" alt=\"Image 1\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/3_c92e3e64-17ca-4456-8b31-f1ab242ecb17.png?v=1761560331\" alt=\"Image 2\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/4_8b5e76c3-9b30-4f98-bbc9-5d4153a1ca63.png?v=1761560330\" alt=\"Image 3\">\n                </div>\n            </div>\n        </div>\n        <div class=\"swipe-indicator\" id=\"swipeIndicator\">← Swipe →</div>\n    </div>\n\n    <script>\n        (function() {\n            let currentSlide = 0;\n            const carousel = document.getElementById('imgCarousel');\n            const totalSlides = 3;\n            let startX = 0;\n            let currentX = 0;\n            let isDragging = false;\n\n            function updateCarousel() {\n                if (window.innerWidth <= 768) {\n                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;\n                } else {\n                    carousel.style.transform = 'translateX(0)';\n                }\n            }\n\n            function next() {\n                if (currentSlide < totalSlides - 1) {\n                    currentSlide++;\n                    updateCarousel();\n                }\n            }\n\n            function prev() {\n                if (currentSlide > 0) {\n                    currentSlide--;\n                    updateCarousel();\n                }\n            }\n\n            // Touch events for swipe on mobile\n            carousel.addEventListener('touchstart', (e) => {\n                if (window.innerWidth > 768) return;\n                startX = e.touches[0].clientX;\n                isDragging = true;\n                \n                // Hide indicator on first interaction\n                const indicator = document.getElementById('swipeIndicator');\n                if (indicator) {\n                    indicator.style.display = 'none';\n                }\n            });\n\n            carousel.addEventListener('touchmove', (e) => {\n                if (!isDragging || window.innerWidth > 768) return;\n                currentX = e.touches[0].clientX;\n            });\n\n            carousel.addEventListener('touchend', () => {\n                if (!isDragging || window.innerWidth > 768) return;\n                const diff = startX - currentX;\n                \n                if (Math.abs(diff) > 50) {\n                    if (diff > 0) {\n                        next();\n                    } else {\n                        prev();\n                    }\n                }\n                \n                isDragging = false;\n            });\n\n            // Update on window resize\n            window.addEventListener('resize', updateCarousel);\n            \n            // Initial update\n            updateCarousel();\n        })();\n    </script>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_qcze89": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/h_banner.png",
+        "mobile_image": "shopify://shop_images/h_banner_responsive.png",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -50,10 +66,10 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/A_1.png",
-            "caption": "Caption",
+            "caption": "\\",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -61,10 +77,10 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/A_2.png",
-            "caption": "Caption",
+            "caption": "",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -72,10 +88,10 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/A_3.png",
-            "caption": "Caption",
+            "caption": "",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": ""
           }
         }
@@ -102,22 +118,6 @@
         "padding_bottom": 36
       }
     },
-    "hero_component_qcze89": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/h_banner.png",
-        "mobile_image": "shopify://shop_images/h_banner_responsive.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_a4X4qw": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -137,10 +137,10 @@
   },
   "order": [
     "main",
-    "custom_liquid_7nKybJ",
     "hero_component_4NTVjw",
-    "multirow_GdRJkm",
+    "custom_liquid_37tWNM",
     "hero_component_qcze89",
+    "multirow_GdRJkm",
     "hero_component_a4X4qw"
   ]
 }
