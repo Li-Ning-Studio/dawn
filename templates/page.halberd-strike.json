@@ -17,16 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_8AmK6R": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n\n        .img-carousel-container {\n            width: 100%;\n            position: relative;\n            margin: 0 auto;\n        }\n\n        .img-carousel-wrapper {\n            overflow: hidden;\n        }\n\n        .img-carousel {\n            display: flex;\n            transition: transform 0.3s ease-out;\n        }\n\n        .img-carousel-item {\n            flex-shrink: 0;\n            width: 100%;\n        }\n\n        .img-carousel-item img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Hide dots and arrows on mobile */\n        .img-carousel-dots,\n        .img-carousel-nav-button {\n            display: none;\n        }\n\n        /* Swipe indicator for mobile - Glassmorphism */\n        .swipe-indicator {\n            display: none;\n            position: absolute;\n            bottom: 16px;\n            left: 50%;\n            transform: translateX(-50%);\n            background: rgba(255, 255, 255, 0.08);\n            backdrop-filter: blur(12px);\n            -webkit-backdrop-filter: blur(12px);\n            border: 0.5px solid rgba(255, 255, 255, 0.15);\n            color: rgba(255, 255, 255, 0.9);\n            padding: 6px 14px;\n            border-radius: 20px;\n            font-size: 11px;\n            font-weight: 400;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n            letter-spacing: 0.3px;\n            pointer-events: none;\n            animation: fadeInOut 3s ease-in-out;\n            z-index: 10;\n            box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);\n        }\n\n        @keyframes fadeInOut {\n            0%, 100% { opacity: 0; }\n            10%, 90% { opacity: 1; }\n        }\n\n        @media (max-width: 768px) {\n            .swipe-indicator {\n                display: block;\n            }\n        }\n\n        /* Desktop styles */\n        @media (min-width: 769px) {\n            .img-carousel-container {\n                max-width: 100%;\n            }\n\n            .img-carousel {\n                flex-wrap: nowrap;\n                gap: 20px;\n                padding: 0 20px;\n            }\n\n            .img-carousel-item {\n                width: calc(33.333% - 14px);\n            }\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .img-carousel-wrapper {\n                touch-action: pan-y;\n                -webkit-overflow-scrolling: touch;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"img-carousel-container\">\n        <div class=\"img-carousel-wrapper\">\n            <div class=\"img-carousel\" id=\"imgCarousel\">\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/1_b6cdd284-54cb-4c66-a3c9-fbdb8eab9fc9.png?v=1761560992\" alt=\"Image 1\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2_28653e1e-6501-45e8-91bf-230495fed649.png?v=1761560992\" alt=\"Image 2\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/3_9bf27c9d-f541-4baa-a4a7-3e59a9998631.png?v=1761560992\" alt=\"Image 3\">\n                </div>\n            </div>\n        </div>\n        <div class=\"swipe-indicator\" id=\"swipeIndicator\">← Swipe →</div>\n    </div>\n\n    <script>\n        (function() {\n            let currentSlide = 0;\n            const carousel = document.getElementById('imgCarousel');\n            const totalSlides = 3;\n            let startX = 0;\n            let currentX = 0;\n            let isDragging = false;\n\n            function updateCarousel() {\n                if (window.innerWidth <= 768) {\n                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;\n                } else {\n                    carousel.style.transform = 'translateX(0)';\n                }\n            }\n\n            function next() {\n                if (currentSlide < totalSlides - 1) {\n                    currentSlide++;\n                    updateCarousel();\n                }\n            }\n\n            function prev() {\n                if (currentSlide > 0) {\n                    currentSlide--;\n                    updateCarousel();\n                }\n            }\n\n            // Touch events for swipe on mobile\n            carousel.addEventListener('touchstart', (e) => {\n                if (window.innerWidth > 768) return;\n                startX = e.touches[0].clientX;\n                isDragging = true;\n                \n                // Hide indicator on first interaction\n                const indicator = document.getElementById('swipeIndicator');\n                if (indicator) {\n                    indicator.style.display = 'none';\n                }\n            });\n\n            carousel.addEventListener('touchmove', (e) => {\n                if (!isDragging || window.innerWidth > 768) return;\n                currentX = e.touches[0].clientX;\n            });\n\n            carousel.addEventListener('touchend', () => {\n                if (!isDragging || window.innerWidth > 768) return;\n                const diff = startX - currentX;\n                \n                if (Math.abs(diff) > 50) {\n                    if (diff > 0) {\n                        next();\n                    } else {\n                        prev();\n                    }\n                }\n                \n                isDragging = false;\n            });\n\n            // Update on window resize\n            window.addEventListener('resize', updateCarousel);\n            \n            // Initial update\n            updateCarousel();\n        })();\n    </script>\n</body>\n</html>",
-        "color_scheme": "",
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
     "hero_component_4NTVjw": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -49,24 +39,46 @@
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n\n        .img-carousel-container {\n            width: 100%;\n            position: relative;\n            margin: 0 auto;\n        }\n\n        .img-carousel-wrapper {\n            overflow: hidden;\n        }\n\n        .img-carousel {\n            display: flex;\n            transition: transform 0.3s ease-out;\n        }\n\n        .img-carousel-item {\n            flex-shrink: 0;\n            width: 100%;\n        }\n\n        .img-carousel-item img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Hide dots and arrows on mobile */\n        .img-carousel-dots,\n        .img-carousel-nav-button {\n            display: none;\n        }\n\n        /* Swipe indicator for mobile */\n        .swipe-indicator {\n            display: none;\n            position: absolute;\n            bottom: 20px;\n            left: 50%;\n            transform: translateX(-50%);\n            background: rgba(0, 0, 0, 0.6);\n            color: white;\n            padding: 8px 16px;\n            border-radius: 20px;\n            font-size: 14px;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n            pointer-events: none;\n            animation: fadeInOut 3s ease-in-out;\n            z-index: 10;\n        }\n\n        @keyframes fadeInOut {\n            0%, 100% { opacity: 0; }\n            10%, 90% { opacity: 1; }\n        }\n\n        @media (max-width: 768px) {\n            .swipe-indicator {\n                display: block;\n            }\n        }\n\n        /* Desktop styles */\n        @media (min-width: 769px) {\n            .img-carousel-container {\n                max-width: 100%;\n            }\n\n            .img-carousel {\n                flex-wrap: nowrap;\n                gap: 20px;\n                padding: 0 20px;\n            }\n\n            .img-carousel-item {\n                width: calc(33.333% - 14px);\n            }\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .img-carousel-wrapper {\n                touch-action: pan-y;\n                -webkit-overflow-scrolling: touch;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"img-carousel-container\">\n        <div class=\"img-carousel-wrapper\">\n            <div class=\"img-carousel\" id=\"imgCarousel\">\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2_7ea0def0-5db3-4e9f-9a67-7dc735c23809.png?v=1761560331\" alt=\"Image 1\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/3_c92e3e64-17ca-4456-8b31-f1ab242ecb17.png?v=1761560331\" alt=\"Image 2\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/4_8b5e76c3-9b30-4f98-bbc9-5d4153a1ca63.png?v=1761560330\" alt=\"Image 3\">\n                </div>\n            </div>\n        </div>\n        <div class=\"swipe-indicator\" id=\"swipeIndicator\">← Swipe →</div>\n    </div>\n\n    <script>\n        (function() {\n            let currentSlide = 0;\n            const carousel = document.getElementById('imgCarousel');\n            const totalSlides = 3;\n            let startX = 0;\n            let currentX = 0;\n            let isDragging = false;\n\n            function updateCarousel() {\n                if (window.innerWidth <= 768) {\n                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;\n                } else {\n                    carousel.style.transform = 'translateX(0)';\n                }\n            }\n\n            function next() {\n                if (currentSlide < totalSlides - 1) {\n                    currentSlide++;\n                    updateCarousel();\n                }\n            }\n\n            function prev() {\n                if (currentSlide > 0) {\n                    currentSlide--;\n                    updateCarousel();\n                }\n            }\n\n            // Touch events for swipe on mobile\n            carousel.addEventListener('touchstart', (e) => {\n                if (window.innerWidth > 768) return;\n                startX = e.touches[0].clientX;\n                isDragging = true;\n                \n                // Hide indicator on first interaction\n                const indicator = document.getElementById('swipeIndicator');\n                if (indicator) {\n                    indicator.style.display = 'none';\n                }\n            });\n\n            carousel.addEventListener('touchmove', (e) => {\n                if (!isDragging || window.innerWidth > 768) return;\n                currentX = e.touches[0].clientX;\n            });\n\n            carousel.addEventListener('touchend', () => {\n                if (!isDragging || window.innerWidth > 768) return;\n                const diff = startX - currentX;\n                \n                if (Math.abs(diff) > 50) {\n                    if (diff > 0) {\n                        next();\n                    } else {\n                        prev();\n                    }\n                }\n                \n                isDragging = false;\n            });\n\n            // Update on window resize\n            window.addEventListener('resize', updateCarousel);\n            \n            // Initial update\n            updateCarousel();\n        })();\n    </script>\n</body>\n</html>",
         "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_8AmK6R": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Halberd Strike - Coming Soon</title>\n    <style>\n        .halberd-countdown-wrapper {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        .halberd-countdown-wrapper * {\n            box-sizing: border-box;\n        }\n\n        .halberd-container {\n            text-align: center;\n            max-width: 600px;\n            width: 100%;\n            margin: 0 auto;\n            padding: 40px 20px;\n        }\n\n        .halberd-logo {\n            width: 100%;\n            max-width: 320px;\n            height: auto;\n            margin-bottom: 30px;\n            opacity: 0;\n            animation: halberdFadeIn 1s ease-out forwards;\n        }\n\n        .halberd-launch-text {\n            color: rgba(0, 0, 0, 0.6);\n            font-size: 12px;\n            letter-spacing: 2px;\n            text-transform: uppercase;\n            margin-bottom: 24px;\n            opacity: 0;\n            animation: halberdFadeIn 1s ease-out 0.3s forwards;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        .halberd-countdown {\n            display: flex;\n            justify-content: center;\n            gap: 16px;\n            flex-wrap: wrap;\n            opacity: 0;\n            animation: halberdFadeIn 1s ease-out 0.6s forwards;\n        }\n\n        .halberd-time-unit {\n            background: rgba(0, 0, 0, 0.03);\n            backdrop-filter: blur(10px);\n            border: 1px solid rgba(0, 0, 0, 0.08);\n            border-radius: 10px;\n            padding: 16px 24px;\n            min-width: 85px;\n        }\n\n        .halberd-time-value {\n            font-size: 40px;\n            font-weight: 700;\n            color: #000;\n            line-height: 1;\n            margin-bottom: 6px;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        .halberd-time-label {\n            font-size: 11px;\n            color: rgba(0, 0, 0, 0.5);\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        @keyframes halberdFadeIn {\n            to {\n                opacity: 1;\n            }\n        }\n\n        @media (max-width: 480px) {\n            .halberd-time-unit {\n                padding: 12px 18px;\n                min-width: 70px;\n            }\n\n            .halberd-time-value {\n                font-size: 32px;\n            }\n\n            .halberd-logo {\n                max-width: 240px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"halberd-countdown-wrapper\">\n        <div class=\"halberd-container\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/image_6.png?v=1761564007\" alt=\"Halberd Strike\" class=\"halberd-logo\">\n            \n            <div class=\"halberd-launch-text\">Launching Soon</div>\n            \n            <div class=\"halberd-countdown\">\n                <div class=\"halberd-time-unit\">\n                    <div class=\"halberd-time-value\" id=\"halberdDays\">00</div>\n                    <div class=\"halberd-time-label\">Days</div>\n                </div>\n                <div class=\"halberd-time-unit\">\n                    <div class=\"halberd-time-value\" id=\"halberdHours\">00</div>\n                    <div class=\"halberd-time-label\">Hours</div>\n                </div>\n                <div class=\"halberd-time-unit\">\n                    <div class=\"halberd-time-value\" id=\"halberdMinutes\">00</div>\n                    <div class=\"halberd-time-label\">Minutes</div>\n                </div>\n                <div class=\"halberd-time-unit\">\n                    <div class=\"halberd-time-value\" id=\"halberdSeconds\">00</div>\n                    <div class=\"halberd-time-label\">Seconds</div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <script>\n        (function() {\n            const launchDate = new Date('November 2, 2025 00:00:00').getTime();\n\n            function updateHalberdCountdown() {\n                const now = new Date().getTime();\n                const distance = launchDate - now;\n\n                if (distance < 0) {\n                    document.getElementById('halberdDays').textContent = '00';\n                    document.getElementById('halberdHours').textContent = '00';\n                    document.getElementById('halberdMinutes').textContent = '00';\n                    document.getElementById('halberdSeconds').textContent = '00';\n                    document.querySelector('.halberd-launch-text').textContent = 'LAUNCHED!';\n                    return;\n                }\n\n                const days = Math.floor(distance / (1000 * 60 * 60 * 24));\n                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n                const seconds = Math.floor((distance % (1000 * 60)) / 1000);\n\n                document.getElementById('halberdDays').textContent = String(days).padStart(2, '0');\n                document.getElementById('halberdHours').textContent = String(hours).padStart(2, '0');\n                document.getElementById('halberdMinutes').textContent = String(minutes).padStart(2, '0');\n                document.getElementById('halberdSeconds').textContent = String(seconds).padStart(2, '0');\n            }\n\n            updateHalberdCountdown();\n            setInterval(updateHalberdCountdown, 1000);\n        })();\n    </script>\n</body>\n</html>",
+        "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 12
       }
     },
-    "hero_component_qcze89": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "17615601770881d59e": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_JGCJ7L": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "717896",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_JGCJ7L"
+      ],
       "settings": {
-        "image": "shopify://shop_images/h_banner.png",
-        "mobile_image": "shopify://shop_images/h_banner_responsive.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "include_margins": true
       }
     },
     "multirow_GdRJkm": {
@@ -127,14 +139,31 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "hero_component_qcze89": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/h_banner.png",
+        "mobile_image": "shopify://shop_images/h_banner_responsive.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_8AmK6R",
-    "custom_liquid_37tWNM",
     "hero_component_4NTVjw",
-    "hero_component_qcze89",
-    "multirow_GdRJkm"
+    "custom_liquid_37tWNM",
+    "custom_liquid_8AmK6R",
+    "17615601770881d59e",
+    "multirow_GdRJkm",
+    "hero_component_qcze89"
   ]
 }
