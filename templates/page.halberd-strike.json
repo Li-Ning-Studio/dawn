@@ -23,8 +23,8 @@
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n\n        .img-carousel-container {\n            width: 100%;\n            position: relative;\n            margin: 0 auto;\n        }\n\n        .img-carousel-wrapper {\n            overflow: hidden;\n        }\n\n        .img-carousel {\n            display: flex;\n            transition: transform 0.3s ease-out;\n        }\n\n        .img-carousel-item {\n            flex-shrink: 0;\n            width: 100%;\n        }\n\n        .img-carousel-item img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Hide dots and arrows on mobile */\n        .img-carousel-dots,\n        .img-carousel-nav-button {\n            display: none;\n        }\n\n        /* Swipe indicator for mobile - Glassmorphism */\n        .swipe-indicator {\n            display: none;\n            position: absolute;\n            bottom: 16px;\n            left: 50%;\n            transform: translateX(-50%);\n            background: rgba(255, 255, 255, 0.08);\n            backdrop-filter: blur(12px);\n            -webkit-backdrop-filter: blur(12px);\n            border: 0.5px solid rgba(255, 255, 255, 0.15);\n            color: rgba(255, 255, 255, 0.9);\n            padding: 6px 14px;\n            border-radius: 20px;\n            font-size: 11px;\n            font-weight: 400;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n            letter-spacing: 0.3px;\n            pointer-events: none;\n            animation: fadeInOut 3s ease-in-out;\n            z-index: 10;\n            box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);\n        }\n\n        @keyframes fadeInOut {\n            0%, 100% { opacity: 0; }\n            10%, 90% { opacity: 1; }\n        }\n\n        @media (max-width: 768px) {\n            .swipe-indicator {\n                display: block;\n            }\n        }\n\n        /* Desktop styles */\n        @media (min-width: 769px) {\n            .img-carousel-container {\n                max-width: 100%;\n            }\n\n            .img-carousel {\n                flex-wrap: nowrap;\n                gap: 20px;\n                padding: 0 20px;\n            }\n\n            .img-carousel-item {\n                width: calc(33.333% - 14px);\n            }\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .img-carousel-wrapper {\n                touch-action: pan-y;\n                -webkit-overflow-scrolling: touch;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"img-carousel-container\">\n        <div class=\"img-carousel-wrapper\">\n            <div class=\"img-carousel\" id=\"imgCarousel\">\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/1_b6cdd284-54cb-4c66-a3c9-fbdb8eab9fc9.png?v=1761560992\" alt=\"Image 1\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2_28653e1e-6501-45e8-91bf-230495fed649.png?v=1761560992\" alt=\"Image 2\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/3_9bf27c9d-f541-4baa-a4a7-3e59a9998631.png?v=1761560992\" alt=\"Image 3\">\n                </div>\n            </div>\n        </div>\n        <div class=\"swipe-indicator\" id=\"swipeIndicator\">← Swipe →</div>\n    </div>\n\n    <script>\n        (function() {\n            let currentSlide = 0;\n            const carousel = document.getElementById('imgCarousel');\n            const totalSlides = 3;\n            let startX = 0;\n            let currentX = 0;\n            let isDragging = false;\n\n            function updateCarousel() {\n                if (window.innerWidth <= 768) {\n                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;\n                } else {\n                    carousel.style.transform = 'translateX(0)';\n                }\n            }\n\n            function next() {\n                if (currentSlide < totalSlides - 1) {\n                    currentSlide++;\n                    updateCarousel();\n                }\n            }\n\n            function prev() {\n                if (currentSlide > 0) {\n                    currentSlide--;\n                    updateCarousel();\n                }\n            }\n\n            // Touch events for swipe on mobile\n            carousel.addEventListener('touchstart', (e) => {\n                if (window.innerWidth > 768) return;\n                startX = e.touches[0].clientX;\n                isDragging = true;\n                \n                // Hide indicator on first interaction\n                const indicator = document.getElementById('swipeIndicator');\n                if (indicator) {\n                    indicator.style.display = 'none';\n                }\n            });\n\n            carousel.addEventListener('touchmove', (e) => {\n                if (!isDragging || window.innerWidth > 768) return;\n                currentX = e.touches[0].clientX;\n            });\n\n            carousel.addEventListener('touchend', () => {\n                if (!isDragging || window.innerWidth > 768) return;\n                const diff = startX - currentX;\n                \n                if (Math.abs(diff) > 50) {\n                    if (diff > 0) {\n                        next();\n                    } else {\n                        prev();\n                    }\n                }\n                \n                isDragging = false;\n            });\n\n            // Update on window resize\n            window.addEventListener('resize', updateCarousel);\n            \n            // Initial update\n            updateCarousel();\n        })();\n    </script>\n</body>\n</html>",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "hero_component_4NTVjw": {
@@ -49,8 +49,8 @@
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n\n        .img-carousel-container {\n            width: 100%;\n            position: relative;\n            margin: 0 auto;\n        }\n\n        .img-carousel-wrapper {\n            overflow: hidden;\n        }\n\n        .img-carousel {\n            display: flex;\n            transition: transform 0.3s ease-out;\n        }\n\n        .img-carousel-item {\n            flex-shrink: 0;\n            width: 100%;\n        }\n\n        .img-carousel-item img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Hide dots and arrows on mobile */\n        .img-carousel-dots,\n        .img-carousel-nav-button {\n            display: none;\n        }\n\n        /* Swipe indicator for mobile */\n        .swipe-indicator {\n            display: none;\n            position: absolute;\n            bottom: 20px;\n            left: 50%;\n            transform: translateX(-50%);\n            background: rgba(0, 0, 0, 0.6);\n            color: white;\n            padding: 8px 16px;\n            border-radius: 20px;\n            font-size: 14px;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n            pointer-events: none;\n            animation: fadeInOut 3s ease-in-out;\n            z-index: 10;\n        }\n\n        @keyframes fadeInOut {\n            0%, 100% { opacity: 0; }\n            10%, 90% { opacity: 1; }\n        }\n\n        @media (max-width: 768px) {\n            .swipe-indicator {\n                display: block;\n            }\n        }\n\n        /* Desktop styles */\n        @media (min-width: 769px) {\n            .img-carousel-container {\n                max-width: 100%;\n            }\n\n            .img-carousel {\n                flex-wrap: nowrap;\n                gap: 20px;\n                padding: 0 20px;\n            }\n\n            .img-carousel-item {\n                width: calc(33.333% - 14px);\n            }\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .img-carousel-wrapper {\n                touch-action: pan-y;\n                -webkit-overflow-scrolling: touch;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"img-carousel-container\">\n        <div class=\"img-carousel-wrapper\">\n            <div class=\"img-carousel\" id=\"imgCarousel\">\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2_7ea0def0-5db3-4e9f-9a67-7dc735c23809.png?v=1761560331\" alt=\"Image 1\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/3_c92e3e64-17ca-4456-8b31-f1ab242ecb17.png?v=1761560331\" alt=\"Image 2\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/4_8b5e76c3-9b30-4f98-bbc9-5d4153a1ca63.png?v=1761560330\" alt=\"Image 3\">\n                </div>\n            </div>\n        </div>\n        <div class=\"swipe-indicator\" id=\"swipeIndicator\">← Swipe →</div>\n    </div>\n\n    <script>\n        (function() {\n            let currentSlide = 0;\n            const carousel = document.getElementById('imgCarousel');\n            const totalSlides = 3;\n            let startX = 0;\n            let currentX = 0;\n            let isDragging = false;\n\n            function updateCarousel() {\n                if (window.innerWidth <= 768) {\n                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;\n                } else {\n                    carousel.style.transform = 'translateX(0)';\n                }\n            }\n\n            function next() {\n                if (currentSlide < totalSlides - 1) {\n                    currentSlide++;\n                    updateCarousel();\n                }\n            }\n\n            function prev() {\n                if (currentSlide > 0) {\n                    currentSlide--;\n                    updateCarousel();\n                }\n            }\n\n            // Touch events for swipe on mobile\n            carousel.addEventListener('touchstart', (e) => {\n                if (window.innerWidth > 768) return;\n                startX = e.touches[0].clientX;\n                isDragging = true;\n                \n                // Hide indicator on first interaction\n                const indicator = document.getElementById('swipeIndicator');\n                if (indicator) {\n                    indicator.style.display = 'none';\n                }\n            });\n\n            carousel.addEventListener('touchmove', (e) => {\n                if (!isDragging || window.innerWidth > 768) return;\n                currentX = e.touches[0].clientX;\n            });\n\n            carousel.addEventListener('touchend', () => {\n                if (!isDragging || window.innerWidth > 768) return;\n                const diff = startX - currentX;\n                \n                if (Math.abs(diff) > 50) {\n                    if (diff > 0) {\n                        next();\n                    } else {\n                        prev();\n                    }\n                }\n                \n                isDragging = false;\n            });\n\n            // Update on window resize\n            window.addEventListener('resize', updateCarousel);\n            \n            // Initial update\n            updateCarousel();\n        })();\n    </script>\n</body>\n</html>",
         "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 0
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "hero_component_qcze89": {
@@ -76,9 +76,9 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/A_1.png",
-            "caption": "\\",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "caption": "",
+            "heading": "Probarloc Stability Plate",
+            "text": "<p>A midsole arch stability technology placed underfoot that provides a strong support and stability to the arch of the foot.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -88,8 +88,8 @@
           "settings": {
             "image": "shopify://shop_images/A_2.png",
             "caption": "",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "heading": "Breathable Mesh Upper",
+            "text": "<p>Adapts closely to the shape of the foot for a balanced, natural fit. Light and ventilated, it maintains comfort through extended play.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -99,8 +99,8 @@
           "settings": {
             "image": "shopify://shop_images/A_3.png",
             "caption": "",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "heading": "LN Cloud Midsole",
+            "text": "<p>Takes the sting out of landings, lunges, and long rallies. It eases pressure on joints while keeping your steps responsive and consistent.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -127,31 +127,14 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "hero_component_a4X4qw": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/banner_8f6bab68-fc36-4bdc-8629-94c2ec5a40fd.png",
-        "mobile_image": "shopify://shop_images/banner_responsive_fb8fe612-26b3-4253-bb48-1490e9bd6bb8.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "main",
     "custom_liquid_8AmK6R",
-    "hero_component_4NTVjw",
     "custom_liquid_37tWNM",
+    "hero_component_4NTVjw",
     "hero_component_qcze89",
-    "multirow_GdRJkm",
-    "hero_component_a4X4qw"
+    "multirow_GdRJkm"
   ]
 }
