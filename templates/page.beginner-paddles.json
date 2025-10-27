@@ -47,10 +47,10 @@
         "row_fQLEpB": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_dde85644-533b-48d6-87ef-aff9da62b4a6.png",
+            "image": "shopify://shop_images/Artboard_1_b5755e62-f016-43d2-9217-f97841e2c9f5.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p><strong>Lightweight design</strong> : Easy to swing and maneuver, perfect when you're still developing your technique</p><p><strong>Forgiving sweet spot</strong> : More room for error as you're learning shot placement and consistency</p>",
+            "text": "<p><strong>Actually lightweight</strong> : Your arm won't hate you after three games</p><p><strong>Bigger sweet spot</strong> : Because let's be real, you're gonna miss the center. A lot.</p><p><strong>Won't send the ball flying</strong> : Controlled power means fewer awkward \"sorry!\" moments<br/></p>",
             "button_label": "",
             "button_link": ""
           }
@@ -58,10 +58,10 @@
         "row_qLHdBa": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/Artboard_1_9bc46ea8-ffe5-4f97-ace1-b4dea832b623.png",
+            "image": "shopify://shop_images/Artboard_6.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p><strong>Controlled power</strong> : Won't overpower your shots, giving you better feel and accuracy as a beginner</p><p><strong>Comfortable for extended play</strong> : Less arm fatigue during those long practice sessions</p><p><strong>Smooth, responsive feel</strong> : Helps you develop proper touch and ball control from day one</p>",
+            "text": "<p><strong>Forgiving on mishits</strong> : That weird side spin? The paddle's got your back</p><p><strong>Feels good in your hand</strong> : Comfortable enough that you'll forget you're still learning</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -84,6 +84,22 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "row_color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_gfj6DJ": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_5.1.png",
+        "mobile_image": "shopify://shop_images/banner_responsive_5.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -127,6 +143,64 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multirow_b3qwx9": {
+      "type": "multirow",
+      "blocks": {
+        "row_6DQx3U": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_9bc46ea8-ffe5-4f97-ace1-b4dea832b623.png",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_mrEqBY": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_57aac8b0-7814-425e-a5f3-981b5f9e0782.png",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_nUBYWH": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_6DQx3U",
+        "row_mrEqBY",
+        "row_nUBYWH"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -134,6 +208,8 @@
     "hero_component_V9E83n",
     "custom_liquid_L9H4rM",
     "multirow_XRyBKF",
-    "collage_ekdKVN"
+    "hero_component_gfj6DJ",
+    "collage_ekdKVN",
+    "multirow_b3qwx9"
   ]
 }
