@@ -416,48 +416,5 @@
     {% if settings.is_gokwik_enabled == true %}
       {% render 'gokwik-sdk' %}
     {% endif %}
-
-    <script>
-      (function () {
-        if (!window.location.pathname.includes('/thank_you')) return;
-
-        const estimatedDelivery = new Date();
-        estimatedDelivery.setDate(estimatedDelivery.getDate() + 7);
-        const estimatedDeliveryDate = estimatedDelivery.toISOString().split('T')[0];
-
-        document.addEventListener('DOMContentLoaded', function () {
-          if (!window.Shopify || !Shopify.checkout) return;
-          const order = Shopify.checkout;
-
-          window.renderOptIn = function () {
-            console.log('Google Survey Opt-in initialized', {
-              order_id: order.order_id,
-              email: order.email,
-              country: order.shipping_address.country_code,
-              estimated_delivery_date: estimatedDeliveryDate,
-            });
-
-            window.gapi.load('surveyoptin', function () {
-              window.gapi.surveyoptin.render({
-                merchant_id: '5087141268',
-                order_id: order.order_id,
-                email: order.email,
-                delivery_country: order.shipping_address.country_code,
-                estimated_delivery_date: estimatedDeliveryDate,
-              });
-            });
-          };
-
-          // load Google script with a small delay
-          setTimeout(() => {
-            const script = document.createElement('script');
-            script.src = 'https://apis.google.com/js/platform.js?onload=renderOptIn';
-            script.async = true;
-            script.defer = true;
-            document.head.appendChild(script);
-          }, 1000);
-        });
-      })();
-    </script>
   </body>
 </html>
