@@ -33,6 +33,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_WWNJmR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .pickleball-button-wrapper {\n    padding: 30px 20px;\n    text-align: center;\n  }\n  \n  .pickleball-button {\n    display: inline-block;\n    padding: 14px 32px;\n    background-color: #25D366;\n    color: #FFFFFF;\n    text-decoration: none;\n    border-radius: 50px;\n    font-weight: 600;\n    font-size: 16px;\n    transition: all 0.3s ease;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n  }\n  \n  .pickleball-button:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);\n    opacity: 0.95;\n  }\n</style>\n\n<div class=\"pickleball-button-wrapper\">\n  <a href=\"https://chat.whatsapp.com/Ik3MMRVYW7611f9Arub2bh\" class=\"pickleball-button\" target=\"_blank\" rel=\"noopener\">\n    Join Our Pickleball Community\n  </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_Q7eCAc": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -117,6 +127,7 @@
   "order": [
     "main",
     "hero_component_HqF6mm",
+    "custom_liquid_WWNJmR",
     "hero_component_Q7eCAc",
     "hero_component_99ikf3",
     "hero_component_dMVQW7",
