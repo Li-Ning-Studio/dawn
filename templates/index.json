@@ -9,25 +9,24 @@
  */
 {
   "sections": {
-    "image_banner_eRDTmn": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
+    "hero_component_TKJFEy": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Players_Collage.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "mobile_image": "shopify://shop_images/Players_Collage.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
         "color_scheme": "",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "image_banner_eRDTmn"
+    "hero_component_TKJFEy"
   ]
 }
