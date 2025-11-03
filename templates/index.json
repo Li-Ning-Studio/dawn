@@ -9,6 +9,20 @@
  */
 {
   "sections": {
+    "custom_liquid_Hte7NK": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "p {margin: 0;}",
+        "div {padding: 3rem 2rem; font-size: 8rem; font-weight: 800; line-height: 1.1; letter-spacing: -3px;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div>\n  <p>LIVE</p><p>HUNDRED</p><p>PERCENT</p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "hero_component_TKJFEy": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -27,6 +41,7 @@
     }
   },
   "order": [
+    "custom_liquid_Hte7NK",
     "hero_component_TKJFEy"
   ]
 }
