@@ -9,113 +9,6 @@
  */
 {
   "sections": {
-    "hero_video_component_JEwKMi": {
-      "type": "hero-video-component",
-      "disabled": true,
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/banner_2c5be54d-4b9a-45f0-8f56-3acb50ac3923.mp4",
-        "mobile_video": "shopify://files/videos/banner r_5b5a6de9-b531-4547-ab6a-bffb1d35e94c.mp4",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/diwali-sale",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "multicolumn_thtmnP": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_eygK9W": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/bad_b4470e90-d155-456e-9c4b-8e5937ca196c.png",
-            "title": "",
-            "text": "",
-            "link_label": "Badminton",
-            "link": "shopify://collections/diwali-sale-badminton"
-          }
-        },
-        "column_8qna8E": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/crk_a8ddb816-ca8b-45ed-babe-ed095a877c9b.png",
-            "title": "",
-            "text": "",
-            "link_label": "Cricket",
-            "link": "shopify://collections/diwali-sale-cricket"
-          }
-        },
-        "column_VaTPGT": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/pik_a315e04d-2064-4115-9956-d3c1448572fe.png",
-            "title": "",
-            "text": "",
-            "link_label": "Pickleball",
-            "link": "shopify://collections/diwali-sale-pickleball"
-          }
-        }
-      },
-      "block_order": [
-        "column_eygK9W",
-        "column_8qna8E",
-        "column_VaTPGT"
-      ],
-      "disabled": true,
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Light Up Your Game This Diwali",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "hero_component_6YBDYV": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Main_L_f2f5de91-e728-4fc0-a616-20294cdbcd8b.png",
-        "mobile_image": "shopify://shop_images/Main_R_4c5b03ef-0642-4b6c-93a3-256046a73ce6.png",
-        "subtitle": "Newly Launched: Quantum Pro",
-        "title": "Master Every Move, Comfortably.",
-        "description": "Redefine endurance with a shoe that turns every rally into effortless control and lasting comfort.",
-        "button_text": "BUY NOW!",
-        "link_to": "shopify://products/quantum-pro",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_97gnNw": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Quantum Series",
-        "products": [
-          "quantum-pro"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "hero_component_RKxJeB": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -615,10 +508,6 @@
     }
   },
   "order": [
-    "hero_video_component_JEwKMi",
-    "multicolumn_thtmnP",
-    "hero_component_6YBDYV",
-    "swipeable_products_97gnNw",
     "hero_component_RKxJeB",
     "swipeable_products_kQUykU",
     "multicolumn_g43TFV",
