@@ -168,6 +168,16 @@
         "padding_bottom": 64
       }
     },
+    "custom_liquid_4mBYnk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem;\">\n  <p style=\"margin: 3px 0;\">\n    Cushioned to Compete\n  </p>\n\n  <h3 class=\"spot\">CNTRL Foam</h3>\n\n  <p style=\"margin: 3px 0;\">\n    Shock-absorbing core enhances comfort and control during high-speed rallies.\n  </p>\n</section>\n\n<style>\n  .spot {\n    letter-spacing: -1px;\n    margin: 0;\n    font-weight: 800;\n    font-size: 3rem;\n    background-image: linear-gradient(-225deg, #00e6b8 0%, #00c3ff 50%, #0099ff 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  @media screen and (min-width: 750px) {\n    .spot {\n      font-size: 4rem;\n      padding: 0 8rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "hero_component_6Ji8wn": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -182,16 +192,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "custom_liquid_4mBYnk": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem;\">\n  <p style=\"margin: 3px 0;\">\n    Cushioned to Compete\n  </p>\n\n  <h3 class=\"spot\">CNTRL Foam</h3>\n\n  <p style=\"margin: 3px 0;\">\n    Shock-absorbing core enhances comfort and control during high-speed rallies.\n  </p>\n</section>\n\n<style>\n  .spot {\n    letter-spacing: -1px;\n    margin: 0;\n    font-weight: 800;\n    font-size: 3rem;\n    background-image: linear-gradient(-225deg, #00e6b8 0%, #00c3ff 50%, #0099ff 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  @media screen and (min-width: 750px) {\n    .spot {\n      font-size: 4rem;\n      padding: 0 8rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 100,
-        "padding_bottom": 100
       }
     },
     "multicolumn_VE8jan": {
@@ -261,6 +261,52 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_DbKAHR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_J7tPfH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_13.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QDpeex": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_16.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_J7tPfH",
+        "column_QDpeex"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -273,9 +319,10 @@
     "custom_liquid_iBQWCi",
     "multicolumn_dXwFQN",
     "hero_component_PCUFNt",
-    "hero_component_6Ji8wn",
     "custom_liquid_4mBYnk",
+    "hero_component_6Ji8wn",
     "multicolumn_VE8jan",
-    "custom_liquid_f7fbKy"
+    "custom_liquid_f7fbKy",
+    "multicolumn_DbKAHR"
   ]
 }
