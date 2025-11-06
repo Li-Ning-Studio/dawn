@@ -89,7 +89,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n      Curve² Frame Geometry \n    </p>\n    <h3 class=\"spot\">Sweet Spot, Sharpened</h3>\n    <p style=\"margin: 3px 0;\">Specialised frame shape that increases sweet spot coverage by up to 15%. </p>\n  </section>\n  \n  <style>\n    .spot {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .spot {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem;\">\n  <p style=\"margin: 3px 0;\">\n    Faster Frame, Quicker Hands\n  </p>\n\n  <h3 class=\"spot\">Superlight Carbon Fibre</h3>\n\n  <p style=\"margin: 3px 0;\">\n    Lightweight carbon design accelerates your swing for rapid, effortless attacks.\n  </p>\n</section>\n\n<style>\n  .spot {\n    letter-spacing: -1px;\n    margin: 0;\n    font-weight: 800;\n    font-size: 3rem;\n    background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .spot {\n      font-size: 4rem;\n      padding: 0 8rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 100,
         "padding_bottom": 84
@@ -232,6 +232,7 @@
         "column_GqXRGn",
         "column_Uf3Lnw"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "The Pro Series",
