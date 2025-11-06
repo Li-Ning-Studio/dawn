@@ -168,6 +168,16 @@
         "padding_bottom": 64
       }
     },
+    "custom_liquid_4mBYnk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  <p style=\"margin: 3px 0;\">\n    Light. Stable. Snappy.\n  </p>\n\n  <h3 class=\"speed\">AECG+ Carbon Construction</h3>\n\n  <p style=\"margin: 3px 0;\">\n    Aerospace-grade carbon delivers quick snapback, lasting strength, and ultra-light handling.\n  </p>\n\n  <a href=\"https://in.hndrd.co/products/hyfonic-lazer-4u\" class=\"cta2\">\n    <span>SHOP LAZER</span>\n  </a>\n</section>\n\n<style>\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #00c9ff;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .speed {\n    letter-spacing: -1px;\n    margin: 0;\n    font-weight: 800;\n    font-size: 3rem;\n    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .speed {\n      font-size: 4rem;\n      padding: 0 8rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "hero_component_6Ji8wn": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -184,14 +194,50 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_4mBYnk": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "multicolumn_ryDwFJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_C68HFV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_13.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Nitrix Thunder",
+            "link": "shopify://pages/nitrix-thunder"
+          }
+        },
+        "column_pbiMAM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Flareon Typhoon",
+            "link": "shopify://pages/flareon-typhoon"
+          }
+        }
+      },
+      "block_order": [
+        "column_C68HFV",
+        "column_pbiMAM"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  <p style=\"margin: 3px 0;\">\n    Light. Stable. Snappy.\n  </p>\n\n  <h3 class=\"speed\">AECG+ Carbon Construction</h3>\n\n  <p style=\"margin: 3px 0;\">\n    Aerospace-grade carbon delivers quick snapback, lasting strength, and ultra-light handling.\n  </p>\n\n  <a href=\"https://in.hndrd.co/products/hyfonic-lazer-4u\" class=\"cta2\">\n    <span>SHOP LAZER</span>\n  </a>\n</section>\n\n<style>\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #00c9ff;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .speed {\n    letter-spacing: -1px;\n    margin: 0;\n    font-weight: 800;\n    font-size: 3rem;\n    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .speed {\n      font-size: 4rem;\n      padding: 0 8rem;\n    }\n  }\n</style>",
+        "title": "New Arrivals Await",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 36
       }
     },
     "multicolumn_VE8jan": {
@@ -273,8 +319,9 @@
     "custom_liquid_iBQWCi",
     "multicolumn_dXwFQN",
     "hero_component_PCUFNt",
-    "hero_component_6Ji8wn",
     "custom_liquid_4mBYnk",
+    "hero_component_6Ji8wn",
+    "multicolumn_ryDwFJ",
     "multicolumn_VE8jan",
     "custom_liquid_f7fbKy"
   ]
