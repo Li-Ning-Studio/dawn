@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_component_ziHNCm": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_4_aa9253d7-a240-4a2e-9de2-f0bb17bc2012.jpg",
+        "mobile_image": "shopify://shop_images/Banner_R_2_83357dc7-02e6-4c2d-b6cb-e42b63e0aee4.jpg",
+        "subtitle": "Pro DNA. Made More Accessible.",
+        "title": "The Evolution Series",
+        "description": "Crafted for the new era of players, this series blends speed, control, and power in perfect sync.",
+        "button_text": "View the Lineup",
+        "link_to": "shopify://pages/pro-series",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_RKxJeB": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -508,6 +524,7 @@
     }
   },
   "order": [
+    "hero_component_ziHNCm",
     "hero_component_RKxJeB",
     "swipeable_products_kQUykU",
     "multicolumn_g43TFV",
