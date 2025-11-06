@@ -207,6 +207,24 @@
     "multicolumn_ghNpEi": {
       "type": "multicolumn",
       "blocks": {
+        "column_aTRcmA": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_W9feaR": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_db9Y39": {
           "type": "column",
           "settings": {
@@ -225,21 +243,13 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_qwLzdi": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "column_aTRcmA",
+        "column_W9feaR",
         "column_db9Y39",
-        "column_ApLmMR",
-        "column_qwLzdi"
+        "column_ApLmMR"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -249,7 +259,7 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
