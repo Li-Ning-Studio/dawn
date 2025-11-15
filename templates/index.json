@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_component_bryecW": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/d_banner.png",
+        "mobile_image": "shopify://shop_images/d_banner_responsive.png",
+        "subtitle": "Your Next Step Starts Here",
+        "title": "Worth the Wait",
+        "description": "The comeback you've been waiting for is almost here",
+        "button_text": "Be the First to Know",
+        "link_to": "shopify://pages/li-ning-halberd-strike-pre-launch",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_drUrwn": {
       "type": "hero-component",
       "disabled": true,
@@ -311,6 +327,7 @@
     }
   },
   "order": [
+    "hero_component_bryecW",
     "hero_component_drUrwn",
     "swipeable_products_AMbUKL",
     "hero_component_Nd47g8",
