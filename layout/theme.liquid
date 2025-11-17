@@ -349,6 +349,13 @@
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
+    <!-- Begin Shopify–payment-cart JavaScript -->
+    <script type="text/javascript">
+      var mid = '6909';
+    </script>
+    <script src="https://checkout-merchant.snapmint.com/js/v1/6909" defer></script>
+    <!-- End Shopify-payment JavaScript -->
+
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.s3_pat = '{{ settings.pat }}';
