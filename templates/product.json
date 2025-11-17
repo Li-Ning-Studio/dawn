@@ -52,6 +52,15 @@
             "show_gift_card_recipient": true
           }
         },
+        "product_highlight_yNwwcf": {
+          "type": "product_highlight",
+          "settings": {
+            "title": "0% EMI On UPI",
+            "description": "Pay <strong>{{ product.price_min | divided_by: 3 | money_with_currency }}</strong> now, rest later via HNDRD Pay later, Powered by Snapmint <a style=\"color:black\" href=\"javascript:startPop();\">View Plans</a>",
+            "icon": "",
+            "collections": []
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -99,6 +108,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "product_highlight_yNwwcf",
         "description",
         "collapsible_tab_McAyVV",
         "collapsible-row-1",
@@ -247,6 +257,11 @@
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
