@@ -9,22 +9,9 @@
  */
 {
   "sections": {
-    "hero_component_tjNiDc": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "subtitle": "Halberd Strike Is Here",
-        "title": "Play Harder. Land Softer.",
-        "description": "LN Cloud midsole absorbs impact. ProbarLoc plate locks you in. Breathable mesh keeps you cool. Non-marking outsole grips without scuffing.",
-        "button_text": "Get Yours",
-        "link_to": "shopify://pages/halberd-strike",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_video_component_rjR7UX": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "subtitle": "Halberd Strike Is Here",
@@ -324,7 +311,6 @@
     }
   },
   "order": [
-    "hero_component_tjNiDc",
     "hero_video_component_rjR7UX",
     "swipeable_products_qfYdBf",
     "hero_component_bryecW",
