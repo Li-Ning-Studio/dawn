@@ -11,7 +11,6 @@
   "sections": {
     "hero_component_tjNiDc": {
       "type": "hero-component",
-      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "subtitle": "Halberd Strike Is Here",
@@ -19,6 +18,20 @@
         "description": "LN Cloud midsole absorbs impact. ProbarLoc plate locks you in. Breathable mesh keeps you cool. Non-marking outsole grips without scuffing.",
         "button_text": "Get Yours",
         "link_to": "shopify://pages/halberd-strike",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_video_component_rjR7UX": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "subtitle": "Halberd Strike Is Here",
+        "title": "Play Harder. Land Softer.",
+        "description": "LN Cloud midsole absorbs impact. ProbarLoc plate locks you in. Breathable mesh keeps you cool. Non-marking outsole grips without scuffing.",
+        "button_text": "Get Yours",
+        "link_to": "shopify://products/halberd-strike",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -53,52 +66,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 32
-      }
-    },
-    "hero_component_drUrwn": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_6c1468ae-3c0f-48aa-bd5d-bfd2c4826ce5.png",
-        "mobile_image": "shopify://shop_images/Banner_R_663e43d9-33ef-41ac-9080-6c772ed29d3f.png",
-        "subtitle": "Seal the Deal and Set the game !",
-        "title": " Court Carnival is now LIVE.",
-        "description": "With prices slashed on our best Rackets, the Festive sale has now begun!",
-        "button_text": "Find Yours Today!",
-        "link_to": "shopify://collections/diwali-sale",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 40
-      }
-    },
-    "swipeable_products_AMbUKL": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Deals You Can’t Miss",
-        "products": [
-          "3d-calibar-900-combat",
-          "aeronaut-9000-3u",
-          "air-force-g3-77-grams",
-          "axforce-10-4u",
-          "axforce-40-3u",
-          "axforce-80-3u",
-          "axforce-90-dragon-max-4u",
-          "axforce-blast-4u",
-          "axforce-cannon-4u",
-          "axforce-cannon-pro-4u",
-          "bladex-100-4u",
-          "bladex-900-3u",
-          "blaze-100-78-grams",
-          "g-force-3900-superlite-ii",
-          "g-force-5800-superlite"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "hero_component_Nd47g8": {
@@ -358,10 +325,9 @@
   },
   "order": [
     "hero_component_tjNiDc",
+    "hero_video_component_rjR7UX",
     "swipeable_products_qfYdBf",
     "hero_component_bryecW",
-    "hero_component_drUrwn",
-    "swipeable_products_AMbUKL",
     "hero_component_Nd47g8",
     "swipeable_products_h9aq4L",
     "hero_component_iq8qEP",
