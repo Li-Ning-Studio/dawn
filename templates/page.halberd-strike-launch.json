@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "hero_component_4NTVjw": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/c_banner.png",
+        "mobile_image": "shopify://shop_images/c_banner_responsive.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_37tWNM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n\n        .img-carousel-container {\n            width: 100%;\n            position: relative;\n            margin: 0 auto;\n        }\n\n        .img-carousel-wrapper {\n            overflow: hidden;\n        }\n\n        .img-carousel {\n            display: flex;\n            transition: transform 0.3s ease-out;\n        }\n\n        .img-carousel-item {\n            flex-shrink: 0;\n            width: 100%;\n        }\n\n        .img-carousel-item img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Hide dots and arrows on mobile */\n        .img-carousel-dots,\n        .img-carousel-nav-button {\n            display: none;\n        }\n\n        /* Swipe text below images */\n        .swipe-text {\n            display: none;\n            text-align: center;\n            font-size: 12px;\n            color: #666;\n            padding: 10px 0;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        @media (max-width: 768px) {\n            .swipe-text {\n                display: block;\n            }\n        }\n\n        /* Desktop styles */\n        @media (min-width: 769px) {\n            .img-carousel-container {\n                max-width: 100%;\n            }\n\n            .img-carousel {\n                flex-wrap: nowrap;\n                gap: 20px;\n                padding: 0 20px;\n            }\n\n            .img-carousel-item {\n                width: calc(33.333% - 14px);\n            }\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .img-carousel-wrapper {\n                touch-action: pan-y;\n                -webkit-overflow-scrolling: touch;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"img-carousel-container\">\n        <div class=\"img-carousel-wrapper\">\n            <div class=\"img-carousel\" id=\"imgCarousel\">\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2_7ea0def0-5db3-4e9f-9a67-7dc735c23809.png?v=1761560331\" alt=\"Image 1\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/3_c92e3e64-17ca-4456-8b31-f1ab242ecb17.png?v=1761560331\" alt=\"Image 2\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/4_8b5e76c3-9b30-4f98-bbc9-5d4153a1ca63.png?v=1761560330\" alt=\"Image 3\">\n                </div>\n            </div>\n        </div>\n        <div class=\"swipe-text\">Swipe to see more >></div>\n    </div>\n\n    <script>\n        (function() {\n            let currentSlide = 0;\n            const carousel = document.getElementById('imgCarousel');\n            const totalSlides = 3;\n            let startX = 0;\n            let currentX = 0;\n            let isDragging = false;\n\n            function updateCarousel() {\n                if (window.innerWidth <= 768) {\n                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;\n                } else {\n                    carousel.style.transform = 'translateX(0)';\n                }\n            }\n\n            function next() {\n                if (currentSlide < totalSlides - 1) {\n                    currentSlide++;\n                    updateCarousel();\n                }\n            }\n\n            function prev() {\n                if (currentSlide > 0) {\n                    currentSlide--;\n                    updateCarousel();\n                }\n            }\n\n            // Touch events for swipe on mobile\n            carousel.addEventListener('touchstart', (e) => {\n                if (window.innerWidth > 768) return;\n                startX = e.touches[0].clientX;\n                isDragging = true;\n            });\n\n            carousel.addEventListener('touchmove', (e) => {\n                if (!isDragging || window.innerWidth > 768) return;\n                currentX = e.touches[0].clientX;\n            });\n\n            carousel.addEventListener('touchend', () => {\n                if (!isDragging || window.innerWidth > 768) return;\n                const diff = startX - currentX;\n                \n                if (Math.abs(diff) > 50) {\n                    if (diff > 0) {\n                        next();\n                    } else {\n                        prev();\n                    }\n                }\n                \n                isDragging = false;\n            });\n\n            // Update on window resize\n            window.addEventListener('resize', updateCarousel);\n            \n            // Initial update\n            updateCarousel();\n        })();\n    </script>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_8AmK6R": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Halberd Strike - Coming Soon</title>\n    <style>\n        .halberd-countdown-wrapper {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        .halberd-countdown-wrapper * {\n            box-sizing: border-box;\n        }\n\n        .halberd-container {\n            text-align: center;\n            max-width: 600px;\n            width: 100%;\n            margin: 0 auto;\n            padding: 40px 20px;\n        }\n\n        .halberd-logo {\n            width: 100%;\n            max-width: 320px;\n            height: auto;\n            margin-bottom: 30px;\n            opacity: 0;\n            animation: halberdFadeIn 1s ease-out forwards;\n        }\n\n        .halberd-launch-text {\n            color: rgba(0, 0, 0, 0.6);\n            font-size: 12px;\n            letter-spacing: 2px;\n            text-transform: uppercase;\n            margin-bottom: 24px;\n            opacity: 0;\n            animation: halberdFadeIn 1s ease-out 0.3s forwards;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        @keyframes halberdFadeIn {\n            to {\n                opacity: 1;\n            }\n        }\n\n        @media (max-width: 480px) {\n            .halberd-logo {\n                max-width: 240px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"halberd-countdown-wrapper\">\n        <div class=\"halberd-container\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/image_6.png?v=1761564007\" alt=\"Halberd Strike\" class=\"halberd-logo\">\n            \n            <div class=\"halberd-launch-text\">Launching Soon</div>\n        </div>\n    </div>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "17615601770881d59e": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_JGCJ7L": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "717896",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 11,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_JGCJ7L"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multirow_GdRJkm": {
+      "type": "multirow",
+      "blocks": {
+        "row_xxH8Wd": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_1.png",
+            "caption": "",
+            "heading": "Probarloc Stability Plate",
+            "text": "<p>A midsole arch stability technology placed underfoot that provides a strong support and stability to the arch of the foot.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_qd6TpW": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_2.png",
+            "caption": "",
+            "heading": "Breathable Mesh Upper",
+            "text": "<p>Adapts closely to the shape of the foot for a balanced, natural fit. Light and ventilated, it maintains comfort through extended play.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Y6ijwx": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_3.png",
+            "caption": "",
+            "heading": "LN Cloud Midsole",
+            "text": "<p>Takes the sting out of landings, lunges, and long rallies. It eases pressure on joints while keeping your steps responsive and consistent.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_xxH8Wd",
+        "row_qd6TpW",
+        "row_Y6ijwx"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_qcze89": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/h_banner.png",
+        "mobile_image": "shopify://shop_images/h_banner_responsive.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_component_4NTVjw",
+    "custom_liquid_37tWNM",
+    "custom_liquid_8AmK6R",
+    "17615601770881d59e",
+    "multirow_GdRJkm",
+    "hero_component_qcze89"
+  ]
+}
