@@ -37,8 +37,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Halberd Strike - Coming Soon</title>\n    <style>\n        .halberd-countdown-wrapper {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n            background: #FFFFFF;\n        }\n        .halberd-countdown-wrapper * {\n            box-sizing: border-box;\n        }\n        .halberd-container {\n            text-align: center;\n            max-width: 600px;\n            width: 100%;\n            margin: 0 auto;\n            padding: 60px 20px;\n        }\n        .halberd-subheading {\n            font-size: 14px;\n            letter-spacing: 2px;\n            color: #1A3F7A;\n            margin-bottom: 22px;\n        }\n        .halberd-logo {\n            width: 100%;\n            max-width: 320px;\n            height: auto;\n            margin-bottom: 16px;\n        }\n        .halberd-subtitle {\n            font-size: 16px;\n            letter-spacing: 1px;\n            color: #1A3F7A;\n            margin-top: 12px;\n        }\n        @media (max-width: 480px) {\n            .halberd-logo {\n                max-width: 240px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"halberd-countdown-wrapper\">\n        <div class=\"halberd-container\">\n            <div class=\"halberd-subheading\">Engineered For Court Dominance</div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/image_6.png?v=1761564007\" \n                 alt=\"Halberd Strike\" \n                 class=\"halberd-logo\">\n            <div class=\"halberd-subtitle\">Lightweight Cushioning. Unstoppable Grip. Supreme Stability.</div>\n        </div>\n    </div>\n</body>\n</html>",
-        "color_scheme": "",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Halberd Strike - Coming Soon</title>\n    <style>\n        .halberd-countdown-wrapper {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n            background: transparent;\n        }\n        .halberd-countdown-wrapper * {\n            box-sizing: border-box;\n        }\n        .halberd-container {\n            text-align: center;\n            max-width: 600px;\n            width: 100%;\n            margin: 0 auto;\n            padding: 60px 20px;\n        }\n        .halberd-subheading {\n            font-size: 14px;\n            letter-spacing: 2px;\n            color: #1A3F7A;\n            margin-bottom: 22px;\n        }\n        .halberd-logo {\n            width: 100%;\n            max-width: 320px;\n            height: auto;\n            margin-bottom: 16px;\n        }\n        .halberd-subtitle {\n            font-size: 16px;\n            letter-spacing: 1px;\n            color: #1A3F7A;\n            margin-top: 12px;\n        }\n        @media (max-width: 480px) {\n            .halberd-logo {\n                max-width: 240px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"halberd-countdown-wrapper\">\n        <div class=\"halberd-container\">\n            <div class=\"halberd-subheading\">Engineered For Court Dominance</div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/image_6.png?v=1761564007\" \n                 alt=\"Halberd Strike\" \n                 class=\"halberd-logo\">\n            <div class=\"halberd-subtitle\">Lightweight Cushioning. Unstoppable Grip. Supreme Stability.</div>\n        </div>\n    </div>\n</body>\n</html>",
+        "color_scheme": "scheme-1",
         "padding_top": 12,
         "padding_bottom": 0
       }
@@ -50,8 +50,8 @@
       "settings": {
         "title": "",
         "products": [],
-        "show_color_variants": false,
-        "color_scheme": "scheme-2d582be9-3b40-4a98-8fbd-96df91004b4d",
+        "show_color_variants": true,
+        "color_scheme": "scheme-1",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -131,7 +131,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
+        "section_color_scheme": "scheme-1",
         "row_color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
