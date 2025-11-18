@@ -47,12 +47,14 @@
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
-  {% comment %} <!-- Begin Shopify–snapmint-payment-cart JavaScript -->
-  <script type="text/javascript">
-    var mid = '6909';
-  </script>
-  <script src="https://checkout-merchant.snapmint.com/js/v1/6909" defer></script>
-  <!-- End Shopify-snapmint-payment JavaScript --> {% endcomment %}
+  {% comment %}
+    <!-- Begin Shopify–snapmint-payment-cart JavaScript -->
+    <script type="text/javascript">
+      var mid = '6909';
+    </script>
+    <script src="https://checkout-merchant.snapmint.com/js/v1/6909" defer></script>
+    <!-- End Shopify-snapmint-payment JavaScript -->
+  {% endcomment %}
 
   {% if section.settings.image_zoom == 'hover' %}
     <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
