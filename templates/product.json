@@ -54,6 +54,7 @@
         },
         "product_highlight_yNwwcf": {
           "type": "product_highlight",
+          "disabled": true,
           "settings": {
             "title": "0% EMI On UPI",
             "description": "Pay <strong>{{ product.price_min | divided_by: 3 | money_with_currency }}</strong> now, rest later via HNDRD Pay later, Powered by Snapmint <a style=\"color:black\" href=\"javascript:startPop();\">View Plans</a>",
