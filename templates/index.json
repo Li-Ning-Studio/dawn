@@ -23,8 +23,25 @@
         "padding_bottom": 0
       }
     },
+    "hero_video_component_brw6tn": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Made by Hundred (Youtube Shot, Final).mp4",
+        "mobile_video": "shopify://files/videos/Made by Hundred (Youtube Shot, Final).mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_TKJFEy": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Players_Collage.jpg",
@@ -72,6 +89,7 @@
   },
   "order": [
     "custom_liquid_Hte7NK",
+    "hero_video_component_brw6tn",
     "hero_component_TKJFEy",
     "custom_liquid_tGjXJw",
     "custom_liquid_ENLmaY",
