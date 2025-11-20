@@ -1,99 +1,203 @@
-# Dawn
+# Studio Theme README
 
-[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)
+This document gives new teammates a map of the theme with a focus on the custom services we ship (stringing, knotting, gripping, remix, and T-shirt printing). Keep it close when you are onboarding a new store or chasing a regression in one of the services.
 
-[Getting started](#getting-started) |
-[Staying up to date with Dawn changes](#staying-up-to-date-with-dawn-changes) |
-[Developer tools](#developer-tools) |
-[Contributing](#contributing) |
-[Code of conduct](#code-of-conduct) |
-[Theme Store submission](#theme-store-submission) |
-[License](#license)
+## Getting Started
 
-Dawn represents a HTML-first, JavaScript-only-as-needed approach to theme development. It's Shopify's first source available theme with performance, flexibility, and [Online Store 2.0 features](https://www.shopify.com/partners/blog/shopify-online-store) built-in and acts as a reference for building Shopify themes.
+- Install Node 18+ and pnpm. Log in with `shopify login` before running any CLI commands.
+- Pull the latest theme files with `pnpm run pull` (wrap it with the correct `SHOPIFY_FLAG_STORE=<store>.myshopify.com`).
+- Start local development via `pnpm dev` or `npm run dev`. Both proxy to `shopify theme dev` and honour `SHOPIFY_FLAG_STORE`.
+- Run `npx shopify theme check` before you ship to keep Liquid lint clean.
+- Format with `npx prettier --write .` (the repo has `@shopify/prettier-plugin-liquid` configured).
+- Preact bundles are built in `reax/`. Run `cd reax && pnpm install && pnpm build` after you touch anything under `reax/src/**`.
 
-* **Web-native in its purest form:** Themes run on the [evergreen web](https://www.w3.org/2001/tag/doc/evergreen-web/). We leverage the latest web browsers to their fullest, while maintaining support for the older ones through progressive enhancement—not polyfills.
-* **Lean, fast, and reliable:** Functionality and design defaults to “no” until it meets this requirement. Code ships on quality. Themes must be built with purpose. They shouldn’t support each and every feature in Shopify.
-* **Server-rendered:** HTML must be rendered by Shopify servers using Liquid. Business logic and platform primitives such as translations and money formatting don’t belong on the client. Async and on-demand rendering of parts of the page is OK, but we do it sparingly as a progressive enhancement.
-* **Functional, not pixel-perfect:** The Web doesn’t require each page to be rendered pixel-perfect by each browser engine. Using semantic markup, progressive enhancement, and clever design, we ensure that themes remain functional regardless of the browser.
+## Architecture Crash Course
 
-You can find a more detailed version of our theme code principles in the [contribution guide](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md#theme-code-principles).
+- Theme assets live where Dawn expects them: global layouts in `layout/`, sections in `sections/`, reusable snippets in `snippets/`, translations in `locales/`, and settings in `config/`.
+- Service UI is server-rendered by snippets in `snippets/` and hydrated by the matching Preact bundles compiled into `assets/vx-*.js` from `reax/src/components/**`.
+- All services write configuration onto `window.s3_*`. `assets/product-form.js` reads those flags when a shopper clicks "Add to cart" and adds the right mix of main product, service variants, and accessory SKUs in one bundle.
+- Shared styles for service cards live in `assets/services.css`. Tweak in there rather than touching base Dawn CSS.
 
-## Getting started
-We recommend using Dawn as a starting point for theme development. [Learn more on Shopify.dev](https://shopify.dev/themes/getting-started/create).
+## Services Deep Dive
 
-> If you're building a theme for the Shopify Theme Store, then you can use Dawn as a starting point. However, the theme that you submit needs to be [substantively different from Dawn](https://shopify.dev/themes/store/requirements#uniqueness) so that it provides added value for merchants. Learn about the [ways that you can use Dawn](https://shopify.dev/themes/tools/dawn#ways-to-use-dawn).
+### Stringing and Knotting
 
-Please note that the main branch may include code for features not yet released. The "stable" version of Dawn is available in the theme store.
+**What shoppers see**
 
-## Staying up to date with Dawn changes
+Customers pick "Pro Stringing" on eligible rackets, choose a string, colour, tension, and optionally upgrade to four-knot stringing. The UI is rendered by `snippets/stringing.liquid` and hydrated by `reax/src/components/stringing` (compiled to `assets/vx-stringing.js`).
 
-Say you're building a new theme off Dawn but you still want to be able to pull in the latest changes, you can add a remote `upstream` pointing to this Dawn repository.
+**Toggle switches**
 
-1. Navigate to your local theme folder.
-2. Verify the list of remotes and validate that you have both an `origin` and `upstream`:
-```sh
-git remote -v
-```
-3. If you don't see an `upstream`, you can add one that points to Shopify's Dawn repository:
-```sh
-git remote add upstream https://github.com/Shopify/dawn.git
-```
-4. Pull in the latest Dawn changes into your repository:
-```sh
-git fetch upstream
-git pull upstream main
-```
+- `settings.is_stringing_enabled_globally` must be true.
+- The product needs metafield `custom_but_hidden.studio_pro_stringing` (boolean or enum). Value `strung` makes the "factory strung" copy render.
+- Set `settings.stringing_collection_id` to the numeric Shopify collection id that holds string SKUs (the code wraps it in `gid://shopify/Collection/<id>` before querying). Optional: `settings.tennis_stringing_collection_id` if you mirror the feature for tennis.
+- Enable `settings.is_knotting_enabled_globally` to surface the 2-knot vs 4-knot choice.
 
-## Developer tools
+**Shopify data to create**
 
-There are a number of really useful tools that the Shopify Themes team uses during development. Dawn is already set up to work with these tools.
+- Hidden service products:
+  - Handle `studio-pro-stringing` (contains the paid service variant).
+  - Handle `studio-four-knots-service` (upsell when a customer selects four knots).
+- Collection of string products linked to `settings.stringing_collection_id`.
+- Each string product needs:
+  - `Metafields > custom > durability | control | repulsion_power | hitting_sound | shock_absorption` with numeric values (out of 10) used for filtering and charts.
+  - `Metafield custom_but_hidden.short_description` (displayed under the title).
+  - `Metafield custom_but_hidden.product_tag` (optional badge).
+  - Option 1 colour values with swatches enabled so the UI pulls the hex from `optionValues[].swatch.color`.
+- On the racket itself, set `Metafield custom.maximum_racket_tension` so the tension picker hides options above the safe limit.
 
-### Shopify CLI
+**How it adds to cart**
 
-[Shopify CLI](https://github.com/Shopify/shopify-cli) helps you build Shopify themes faster and is used to automate and enhance your local development workflow. It comes bundled with a suite of commands for developing Shopify themes—everything from working with themes on a Shopify store (e.g. creating, publishing, deleting themes) or launching a development server for local theme development.
+1. `snippets/stringing.liquid` exposes the service variant ids via `window.s3_stringing_service_variant_id` and `window.s3_four_knots_service_variant_id`.
+2. When the shopper submits the form, `assets/product-form.js` looks for checked inputs named `string-variant`, `string-tension`, and `knot-config` and adds:
+   - the stringing service variant,
+   - the selected string variant,
+   - and (if four knots selected) the four-knot service variant.
+   All line items share a `_bundleId` so they stay grouped.
 
-You can follow this [quick start guide for theme developers](https://shopify.dev/docs/themes/tools/cli) to get started.
+**New store checklist**
 
-### Theme Check
+- Create the two hidden service products with the exact handles listed above.
+- Ensure every racket that should offer stringing has the `studio_pro_stringing` metafield populated and a `maximum_racket_tension` value.
+- Populate the string collection and map its numeric id into theme settings.
+- Flip on the stringing and knotting checkboxes in theme settings once products, collections, and metafields are in place.
+- Translate copy under `locales/en.default.json > studio.stringing.*` (duplicate keys were intentional; keep them synced if you localise).
 
-We recommend using [Theme Check](https://github.com/shopify/theme-check) as a way to validate and lint your Shopify themes.
+### Gripping
 
-We've added Theme Check to Dawn's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Dawn.
+**What shoppers see**
 
-You can also run it from a terminal with the following Shopify CLI command:
+Eligible rackets surface a "Gripping Service" card. Customers can keep the factory grip or pick from curated aftermarket grips. Hydration comes from `reax/src/components/gripping` compiled to `assets/vx-gripping.js`.
 
-```bash
-shopify theme check
-```
+**Toggle switches**
 
-### Continuous Integration
+- `settings.is_gripping_enabled_globally` must be true.
+- Product metafield `custom_but_hidden.studio_grip_service` must be set.
+- `settings.gripping_collection_id` points to the collection of grip SKUs.
+- Optional `settings.factory_grip_image` adds the marketing image for the "no grip" option.
 
-Dawn uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/Shopify/dawn/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
+**Shopify data to create**
 
-#### Shopify/lighthouse-ci-action
+- Hidden service product with handle `studio-gripping-service`.
+- Collection of grip products referenced by `settings.gripping_collection_id`.
+- Each grip product uses:
+  - `custom_but_hidden.short_description` for the UI blurb.
+  - Colour swatches on option values so the picker can render circles.
 
-We love fast websites! Which is why we created [Shopify/lighthouse-ci-action](https://github.com/Shopify/lighthouse-ci-action). This runs a series of [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) audits for the home, product and collections pages on a store to ensure code that gets added doesn't degrade storefront performance over time.
+**How it adds to cart**
 
-#### Shopify/theme-check-action
+- `snippets/gripping.liquid` emits `window.s3_gripping_service_variant_id` and a hidden input `#selected-grip-variant-id` that keeps the chosen variant id and sku.
+- `assets/product-form.js` checks that hidden field and adds both the service variant and the selected grip variant (again tagged with `_bundleId`).
 
-Dawn runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+**New store checklist**
 
-## Contributing
+- Build the grip collection, note its numeric id, and drop it into theme settings.
+- Create the `studio-gripping-service` product and lock it from storefront visibility.
+- Confirm product metafields and translations `studio.gripping.*` exist.
 
-Want to make commerce better for everyone by contributing to Dawn? We'd love your help! Please read our [contributing guide](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build for Dawn.
+### Remix (3D Customisation)
 
-## Code of conduct
+**What shoppers see**
 
-All developers who wish to contribute through code or issues, please first read our [Code of Conduct](https://github.com/Shopify/dawn/blob/main/.github/CODE_OF_CONDUCT.md).
+Racket or paddle products with the Remix flag render a "Personalise" line item. Clicking loads a Radix modal powered by `reax/src/components/remix` (`assets/vx-remix.js`) that overlays a 3D model with editable decals.
 
-## Theme Store submission
+**Toggle switches**
 
-The [Shopify Theme Store](https://themes.shopify.com/) is the place where Shopify merchants find the themes that they'll use to showcase and support their business. As a theme partner, you can create themes for the Shopify Theme Store and reach an international audience of an ever-growing number of entrepreneurs.
+- `settings.is_remix_enabled_globally` must be true.
+- Product metafield `custom_but_hidden.stickers` must be truthy.
+- The selected variant needs metafield `custom_but_hidden.rmx_3d_model` pointing to a media item or metaobject whose `name` matches an asset `assets/rmx-<name>.glb`.
 
-Ensure that you follow the list of [theme store requirements](https://shopify.dev/themes/store/requirements) if you're interested in becoming a [Shopify Theme Partner](https://themes.shopify.com/services/themes/guidelines) and building themes for the Shopify platform.
+**Shopify data to create**
 
-## License
+- Hidden service products:
+  - Handle `remix` for rackets.
+  - Handle `paddle-remix` for pickleball paddles.
+- Variant-level metafields used to skin the configurator:
+  - `rmx_racket_frame_color`
+  - `rmx_racket_grip_color`
+  - `rmx_logo_color`
+  - `rmx_sticker_text_color`
+- Optional: upload matching `mono3.ttf` and `SpaceMono-Regular.ttf` (already in assets) if you replicate on a new store.
 
-Copyright (c) 2021-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
+**How it adds to cart**
+
+- `snippets/remix.liquid` writes `window.s3_remix_service_variant_id` and `window.s3_paddle_remix_service_variant_id`.
+- The Preact app exposes `window.s3_remix_modal_controller.openModal()` so the Liquid label can open the modal.
+- `assets/product-form.js` looks for the rendered `#the-sticker` element and adds the correct remix service variant with encoded sticker text.
+
+**New store checklist**
+
+- Upload the `.glb` models to `assets/` with the `rmx-<name>.glb` naming scheme.
+- Populate the remix service products and hide them from the storefront.
+- Configure variant metafields for colours and set the `stickers` metafield on eligible products.
+- Translate copy under `locales/en.default.json > studio.remix.*` if you localise.
+
+### T-Shirt Printing
+
+**What shoppers see**
+
+Apparel flagged for personalisation shows a "Make this T-Shirt yours" option. The modal (from `reax/src/components/tshirt-printing`, compiled to `assets/vx-tshirt-printing.js`) lets customers preview up to 12 alphanumeric characters on a render of the product colourway.
+
+**Toggle switches**
+
+- `settings.is_tshirt_printing_enabled_globally` must be true.
+- Product metafield `custom_but_hidden.customise` must be truthy.
+
+**Shopify data to create**
+
+- Hidden service product handle `t-shirt-printing`.
+- Variant metafields to drive the preview:
+  - `tpr_t_shirt_color` (hex) for the garment fill.
+  - `tpr_text_color` (hex) for the printed text.
+- Optional texture asset `tshirt-texture.png` already lives in `assets/`; swap if the illustration changes.
+
+**How it adds to cart**
+
+- `snippets/tshirt-printing.liquid` sets `window.s3_tshirt_printing_service_variant_id` and loads the module lazily.
+- The Preact modal sets `#the-tshirt-text`. `assets/product-form.js` reads that value and adds the printing service variant with text metadata when the shopper checks out.
+
+**New store checklist**
+
+- Create the `t-shirt-printing` product and hide it from sales channels.
+- Populate variant metafields for every colourway.
+- Confirm the product carries the `customise` metafield toggle.
+- Update translations under `locales/en.default.json > studio.tshirt_printing.*` when localising.
+
+## New Store Launch Checklist
+
+1. Create all hidden service products with handles:
+   - `studio-pro-stringing`
+   - `studio-four-knots-service`
+   - `studio-gripping-service`
+   - `remix`
+   - `paddle-remix`
+   - `t-shirt-printing`
+   Keep them in the "Services" product type and hide from all channels.
+2. Build the collections referenced by theme settings and capture their numeric ids (Shopify Admin -> open the collection -> copy the number at the end of the URL).
+3. Configure theme settings under "Product Customisations" (toggle checkboxes, paste collection ids, upload optional factory grip image).
+4. Create and assign product metafields:
+   - Booleans for `studio_pro_stringing`, `studio_grip_service`, `stickers`, `customise`.
+   - Numbers for `maximum_racket_tension`.
+   - Variant-level colour metafields listed above.
+   - String product metric metafields under `custom` namespace.
+5. Upload supporting assets (`rmx-*.glb`, optional textures) into `assets/`.
+6. Verify translations exist in `locales/en.default.json` for the `studio.*` namespaces. Duplicated English strings are placeholders-replace them with store-specific copy or locales.
+7. Run through the CX journey in `shopify theme dev`: select each service, add to cart, and confirm `cart.js` shows bundled line items with `_bundleId` properties.
+
+## Key Paths Reference
+
+- Theme snippets: `snippets/stringing.liquid`, `snippets/gripping.liquid`, `snippets/remix.liquid`, `snippets/tshirt-printing.liquid`.
+- Service scripts: `assets/vx-stringing.js`, `assets/vx-gripping.js`, `assets/vx-remix.js`, `assets/vx-tshirt-printing.js` (source in `reax/src/components/**`).
+- Cart orchestration: `assets/product-form.js`.
+- Shared styles: `assets/services.css`.
+- Theme settings: `config/settings_schema.json` ("Product Customisations" group) and defaults in `config/settings_data.json`.
+- Translation keys: `locales/en.default.json` under the `studio.*` namespace buckets.
+
+## Validation Tips
+
+- Always rebuild the Preact bundles (`cd reax && pnpm build`) before you push service changes, otherwise Shopify will still serve the previous `assets/vx-*.js` files.
+- Use the browser console to inspect `window.s3_*` coverage if a bundle fails-missing values usually point to misconfigured handles or metafields.
+- If a collection id is wrong, the Preact fetch falls back to the "empty" translation and logs to console; keep DevTools open while testing.
+- Theme Check will not catch missing metafields, so keep this README's checklist handy when onboarding a new store.
+
+Welcome aboard-reach out in #dev-themes if any of these flows diverge from what you see locally.

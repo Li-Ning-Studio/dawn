@@ -12,6 +12,7 @@
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow:
     0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  --scollbar-width: 4px;
 }
 
 .product-card-wrapper .card,
@@ -937,7 +938,7 @@ summary::-webkit-details-marker {
 
 .grid__item {
   width: calc(25% - var(--grid-mobile-horizontal-spacing) * 3 / 4);
-  max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+  max-width: calc(70% - var(--grid-mobile-horizontal-spacing) / 2);
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -2415,7 +2416,8 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: #ffffffa0 !important;
+  color: rgb(var(--color-foreground));
+  background-color: rgba(var(--color-background), 0.9);
   backdrop-filter: blur(6px);
 }
 
@@ -2597,7 +2599,7 @@ input[type='checkbox'] {
 }
 
 .header__icon {
-  color: var(--gray-90);
+  color: rgba(var(--color-foreground), 0.8);
 }
 
 .header__icon span {
@@ -2869,7 +2871,7 @@ details[open] > .mega-menu__content {
 .header__menu-item {
   padding: 1.5rem;
   text-decoration: none;
-  color: var(--gray-80);
+  color: rgba(var(--color-foreground), 0.78);
   border-top: 2.7px solid transparent;
   border-bottom: 2.7px solid transparent;
   transition: border-color 0.2s ease;
@@ -3248,6 +3250,37 @@ details-disclosure > details {
   .localization-form__select:focus {
     outline: transparent solid 1px;
   }
+}
+
+/* Global lean scrollbar styling */
+/* Applies across the site for a subtle, visible scrollbar */
+/* Firefox */
+html,
+body,
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--color-foreground), 0.45) rgba(var(--color-foreground), 0.08);
+}
+
+/* WebKit (Chrome, Safari, Edge Chromium) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-foreground), 0.45);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(var(--color-foreground), 0.08);
+  border-radius: 8px;
+}
+
+/* Ensure sliders show the lean scrollbar (override component default) */
+.slider::-webkit-scrollbar {
+  display: block !important;
 }
 
 .rte:after {

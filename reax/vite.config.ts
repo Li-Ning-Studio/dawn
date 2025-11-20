@@ -12,6 +12,7 @@ export default defineConfig({
         remix: 'src/components/remix/index.tsx',
         track: 'src/components/track/index.tsx',
         'tshirt-printing': 'src/components/tshirt-printing/index.tsx',
+        gripping: 'src/components/gripping/index.tsx',
       },
       output: {
         dir: '../assets/',
