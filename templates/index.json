@@ -42,6 +42,7 @@
     },
     "custom_liquid_tGjXJw": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section style=\"background: black; color: #999; font-size: 4rem; font-weight: 800; letter-spacing: -1px; text-align: center; line-height: 1.3; padding: 12rem 2rem 6rem 2rem;\">\n  <p style=\"font-size: 1.2rem; letter-spacing: 0.5px; font-weight: 500;\">GLOBAL ENGINEERING. LOCAL FIT. REAL PERFORMANCE.</p>\n  <p>HNDRD pairs <span style=\"color: white\">global engineering</span> with <span style=\"color: white\">local culture</span> to deliver <span style=\"color: white\">authentic performance</span> gear that fits how <span style=\"color: white\">athletes</span> actually play.</p>\n</section>",
@@ -55,7 +56,7 @@
       "custom_css": [
         ".hero {background: black; color: #999; text-align: center; padding: 9rem 2rem 4rem;}",
         ".hero .tagline {font-size: 1rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 2rem;}",
-        ".hero .headline {max-width: 800px; margin: 0 auto; font-size: 2rem; font-weight: 800; line-height: 1.3; letter-spacing: -1px;}",
+        ".hero .headline {max-width: 800px; margin: 0 auto; font-size: 2.5rem; font-weight: 800; line-height: 1.3; letter-spacing: -1px;}",
         ".hero .headline span {color: white;}",
         "@media (min-width: 600px) {.hero {padding: 10rem 2rem 5rem; } .hero .headline {font-size: 3rem; }}",
         "@media (min-width: 1024px) {.hero {padding: 12rem 2rem 6rem; } .hero .headline {font-size: 4rem; }}"
@@ -65,7 +66,7 @@
         "custom_liquid": "<section class=\"hero\">\n  <p class=\"tagline\">GLOBAL ENGINEERING. LOCAL FIT. REAL PERFORMANCE.</p>\n  <p class=\"headline\">\n    HNDRD pairs <span>global engineering</span> with <span>local culture</span> to deliver \n    <span>authentic performance</span> gear that fits how <span>athletes</span> actually play.\n  </p>\n</section>",
         "color_scheme": "scheme-4",
         "padding_top": 0,
-        "padding_bottom": 28
+        "padding_bottom": 0
       }
     },
     "hero_video_component_brw6tn": {
