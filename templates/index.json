@@ -95,6 +95,23 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_idjarF": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".hero {background: black; color: #999; text-align: center; padding: 11rem 2rem 3rem 2rem;}",
+        ".hero .tagline {font-size: 1rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 2rem;}",
+        ".hero .headline {max-width: 800px; margin: 0 auto; font-size: 2.5rem; font-weight: 800; line-height: 1.3; letter-spacing: -1px;}",
+        ".hero .headline span {color: white;}",
+        "@media (min-width: 600px) {.hero {padding: 12rem 2rem 2rem 2rem; } .hero .headline {font-size: 4rem; }}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"tagline\">OUR GUIDING PRINCIPLES</p>\n  <p class=\"headline\">\n    Become the most trusted <span style=\"color: white\">multi‑sport performance brand</span> in our focus markets, known for gear that turns effort into output and is easy to get wherever <span style=\"color: white\">athletes</span> shop\n  </p>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_Jpe9ri": {
       "type": "custom-liquid",
       "custom_css": [
@@ -105,7 +122,7 @@
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"background:#000;color:#999;text-align:center;padding:10rem 2rem;\">\n \n\n  <ul style=\"list-style:none;padding:0;margin-top:5rem;max-width:1200px;margin:auto;\">\n\n    <li style=\"margin:5rem 0;\">\n      <div class=\"v-row\" style=\"display:flex;gap:2rem;align-items:center;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/4_4fafa76b-b693-441d-b32a-c53018a537e8.jpg?v=1763549853\"\n             style=\"max-width:400px;width:100%;object-fit:cover;\">\n        <div style=\"text-align:left;\">\n          <h3 style=\"color:#fff\">Athletic Performance</h3>\n          <p>Athletic Performance remains at the core of HNDRD’s mission. We co-design products with athletes and test in real conditions. We focus on quality and craftsmanship.</p>\n        </div>\n      </div>\n    </li>\n\n    <li style=\"margin:5rem 0;\">\n      <div class=\"v-row rev-desktop\" style=\"display:flex;gap:2rem;align-items:center;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/2_7563e8fe-a95d-424b-bc42-fd95d3763353.jpg?v=1763547569\"\n             style=\"max-width:400px;width:100%;object-fit:cover;\">\n        <div style=\"text-align:left;\">\n          <h3 style=\"color:#fff\">Community Engagement</h3>\n          <p>We invest where we play. We support grassroots programs and partner with local clubs to stay connected to athletes who use our gear.</p>\n        </div>\n      </div>\n    </li>\n\n    <li style=\"margin:5rem 0;\">\n      <div class=\"v-row\" style=\"display:flex;gap:2rem;align-items:center;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/1-Responsive.jpg?v=1763549430\"\n             style=\"max-width:400px;width:100%;object-fit:cover;\">\n        <div style=\"text-align:left;\">\n          <h3 style=\"color:#fff\">Global Design // Local Craftsmanship</h3>\n          <p>We design in Singapore and manufacture across Asia, building a strong supply chain while keeping products accessible.</p>\n        </div>\n      </div>\n    </li>\n\n  </ul>\n</section>",
+        "custom_liquid": "<section style=\"background:#000;color:#999;text-align:center;padding:4rem 2rem;\">\n \n\n  <ul style=\"list-style:none;padding:0;margin-top:5rem;max-width:1200px;margin:auto;\">\n\n    <li style=\"margin:5rem 0;\">\n      <div class=\"v-row\" style=\"display:flex;gap:2rem;align-items:center;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/4_4fafa76b-b693-441d-b32a-c53018a537e8.jpg?v=1763549853\"\n             style=\"max-width:400px;width:100%;object-fit:cover;\">\n        <div style=\"text-align:left;\">\n          <h3 style=\"color:#fff\">Athletic Performance</h3>\n          <p>Athletic Performance remains at the core of HNDRD’s mission. We co-design products with athletes and test in real conditions. We focus on quality and craftsmanship.</p>\n        </div>\n      </div>\n    </li>\n\n    <li style=\"margin:5rem 0;\">\n      <div class=\"v-row rev-desktop\" style=\"display:flex;gap:2rem;align-items:center;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/2_7563e8fe-a95d-424b-bc42-fd95d3763353.jpg?v=1763547569\"\n             style=\"max-width:400px;width:100%;object-fit:cover;\">\n        <div style=\"text-align:left;\">\n          <h3 style=\"color:#fff\">Community Engagement</h3>\n          <p>We invest where we play. We support grassroots programs and partner with local clubs to stay connected to athletes who use our gear.</p>\n        </div>\n      </div>\n    </li>\n\n    <li style=\"margin:5rem 0;\">\n      <div class=\"v-row\" style=\"display:flex;gap:2rem;align-items:center;\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/1-Responsive.jpg?v=1763549430\"\n             style=\"max-width:400px;width:100%;object-fit:cover;\">\n        <div style=\"text-align:left;\">\n          <h3 style=\"color:#fff\">Global Design // Local Craftsmanship</h3>\n          <p>We design in Singapore and manufacture across Asia, building a strong supply chain while keeping products accessible.</p>\n        </div>\n      </div>\n    </li>\n\n  </ul>\n</section>",
         "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 52
@@ -130,6 +147,7 @@
     "custom_liquid_kNrnVK",
     "hero_video_component_brw6tn",
     "custom_liquid_ENLmaY",
+    "custom_liquid_idjarF",
     "custom_liquid_Jpe9ri",
     "custom_liquid_BxU3iK"
   ]
