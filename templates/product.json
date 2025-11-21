@@ -54,6 +54,7 @@
         },
         "product_highlight_cVhjEb": {
           "type": "product_highlight",
+          "disabled": true,
           "settings": {
             "title": "0% EMI on UPI",
             "description": "Pay <strong>{{ product.price_min | divided_by: 4 | money_with_currency }}</strong> now, rest later via Li-Ning Pay Later Powered by Snapmint.",
