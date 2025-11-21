@@ -116,8 +116,8 @@
       "type": "custom-liquid",
       "custom_css": [
         ".v-row {flex-direction: column !important;}",
-        "p {font-size: 1.7rem;}",
-        "@media (min-width: 700px) {.v-row {flex-direction: row !important; } .rev-desktop {flex-direction: row-reverse !important; } }"
+        "p, h3 {font-size: 1.9rem;}",
+        "@media (min-width: 700px) {.v-row {flex-direction: row !important; } .rev-desktop {flex-direction: row-reverse !important; }}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
