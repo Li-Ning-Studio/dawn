@@ -12,8 +12,10 @@
     "custom_liquid_Hte7NK": {
       "type": "custom-liquid",
       "custom_css": [
-        "p {margin: 0;}",
-        "div {padding: 3.5rem 2rem; font-size: 9.2rem; font-weight: 800; line-height: 1.1; letter-spacing: -8px; text-align: center; color: #f2f2f2;}"
+        "/* Base Styles for large screens (Desktop) */p {margin: 0;}",
+        "div {/* Desktop Styles */ padding: 3.5rem 2rem; font-size: 9.2rem; font-weight: 800; line-height: 1.1; letter-spacing: -8px; text-align: center; color: #f2f2f2; width: 100%; box-sizing: border-box;}",
+        "@media (max-width: 1024px) {div {padding: 3rem 1.5rem; font-size: 7rem; letter-spacing: -6px; }}",
+        "@media (max-width: 640px) {div {padding: 2rem 1rem; font-size: 3.5rem; line-height: 1.2; letter-spacing: -2px; } p br {display: none; }}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -46,6 +48,24 @@
         "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_kNrnVK": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".hero {background: black; color: #999; text-align: center; padding: 9rem 2rem 4rem;}",
+        ".hero .tagline {font-size: 1rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 2rem;}",
+        ".hero .headline {max-width: 800px; margin: 0 auto; font-size: 2rem; font-weight: 800; line-height: 1.3; letter-spacing: -1px;}",
+        ".hero .headline span {color: white;}",
+        "@media (min-width: 600px) {.hero {padding: 10rem 2rem 5rem; } .hero .headline {font-size: 3rem; }}",
+        "@media (min-width: 1024px) {.hero {padding: 12rem 2rem 6rem; } .hero .headline {font-size: 4rem; }}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"tagline\">GLOBAL ENGINEERING. LOCAL FIT. REAL PERFORMANCE.</p>\n  <p class=\"headline\">\n    HNDRD pairs <span>global engineering</span> with <span>local culture</span> to deliver \n    <span>authentic performance</span> gear that fits how <span>athletes</span> actually play.\n  </p>\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 28
       }
     },
     "hero_video_component_brw6tn": {
@@ -90,6 +110,7 @@
     "custom_liquid_Hte7NK",
     "hero_component_LPP9xd",
     "custom_liquid_tGjXJw",
+    "custom_liquid_kNrnVK",
     "hero_video_component_brw6tn",
     "custom_liquid_ENLmaY",
     "custom_liquid_BxU3iK"
