@@ -48,6 +48,7 @@
         "column_P8bnNN",
         "column_Tiq6MY"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Revolution Series",
@@ -65,6 +66,51 @@
         "padding_top": 36,
         "padding_bottom": 20
       }
+    },
+    "responsive_slideshow_Ma699H": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_ezTjGQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_93a015de-7c7d-4c56-9cfa-60de16effebf.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_35ad5c71-f103-41ee-b2db-6944c0aabdc4.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://pages/nitrix-thunder"
+          }
+        },
+        "slide_cGzkAA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_53406b24-6e55-4c92-9cff-d8c32c0094e3.jpg",
+            "mobile_image": "shopify://shop_images/Banner_R_4aeab019-486e-4297-aca6-b98e81f27493.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://pages/flareon-typhoon"
+          }
+        },
+        "slide_8cxXbB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_20db9f80-2904-48ec-9c17-1e3631e52560.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_f30f37aa-c31a-4561-8a3b-57ae1b9adde7.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://pages/hyfonic-lazer"
+          }
+        }
+      },
+      "block_order": [
+        "slide_ezTjGQ",
+        "slide_cGzkAA",
+        "slide_8cxXbB"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
     },
     "hero_component_ziHNCm": {
       "type": "hero-component",
@@ -87,7 +133,7 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "",
+        "title": "Revolution Series",
         "products": [
           "nitrix-thunder",
           "nitrix-thunder-5u",
@@ -602,6 +648,7 @@
   },
   "order": [
     "multicolumn_kDj9KB",
+    "responsive_slideshow_Ma699H",
     "hero_component_ziHNCm",
     "swipeable_products_Y8n63R",
     "hero_component_RKxJeB",
