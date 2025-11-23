@@ -9,6 +9,36 @@
  */
 {
   "sections": {
+    "hero_component_CE4EqA": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Main_93a015de-7c7d-4c56-9cfa-60de16effebf.webp",
+        "mobile_image": "shopify://shop_images/Main_R_35ad5c71-f103-41ee-b2db-6944c0aabdc4.webp",
+        "subtitle": "Nitrix Thunder",
+        "title": "All Out Attack",
+        "description": "Turn every rally into a statement of power and precision.",
+        "button_text": "SHOP THUNDER",
+        "link_to": "shopify://products/nitrix-thunder-4u",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_BbzVyD": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "NITRIX THUNDER",
+        "products": [
+          "nitrix-thunder-4u",
+          "nitrix-thunder-5u"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    },
     "hero_video_component_4r8WXU": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -52,35 +82,6 @@
         "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 36
-      }
-    },
-    "hero_component_CE4EqA": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Atomic_X_Black_Knight_banner.jpg",
-        "mobile_image": "shopify://shop_images/2_7.jpg",
-        "subtitle": "Strike with Silent Power using",
-        "title": "ATOMIC X BLACK KNIGHT BADMINTON RACKET",
-        "description": "Stealth Speed Meets Explosive Control",
-        "button_text": "SWING LIKE A SHADOW",
-        "link_to": "shopify://products/atomic-x-black-knight",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_BbzVyD": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "PRECISION IN THE DARK",
-        "products": [
-          "atomic-x-black-knight"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 40
       }
     },
     "hero_component_nKcbRQ": {
@@ -238,11 +239,11 @@
     }
   },
   "order": [
+    "hero_component_CE4EqA",
+    "swipeable_products_BbzVyD",
     "hero_video_component_4r8WXU",
     "hero_component_n9R8Ji",
     "swipeable_products_qF6iTW",
-    "hero_component_CE4EqA",
-    "swipeable_products_BbzVyD",
     "hero_component_nKcbRQ",
     "swipeable_products_ptFa6j",
     "hero_component_eFU6Jy",
