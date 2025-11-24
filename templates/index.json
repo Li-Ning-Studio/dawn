@@ -13,9 +13,9 @@
       "type": "custom-liquid",
       "custom_css": [
         "/* Base Styles for large screens (Desktop) */p {margin: 0;}",
-        "div {/* Desktop Styles */ padding: 3.5rem 2rem; font-size: 7rem; font-weight: 800; line-height: 1.1; letter-spacing: -5px; text-align: center; color: #f2f2f2; width: 100%; box-sizing: border-box;}",
-        "@media (max-width: 1024px) {div {padding: 3rem 1.5rem; font-size: 7rem; letter-spacing: -6px; }}",
-        "@media (max-width: 640px) {div {padding: 2rem 1rem; font-size: 3.5rem; line-height: 1.2; letter-spacing: -2px; } p br {display: none; }}"
+        "div {/* Desktop Styles */ padding: 3rem 2rem; font-size: 6rem; font-weight: 800; line-height: 1.1; letter-spacing: -4px; text-align: center; color: #f2f2f2; width: 100%; box-sizing: border-box;}",
+        "@media (max-width: 1024px) {div {padding: 3rem 1.5rem; font-size: 6rem; letter-spacing: -6px; }}",
+        "@media (max-width: 640px) {div {padding: 2rem 1rem; font-size: 3rem; line-height: 1.2; letter-spacing: -2px; } p br {display: none; }}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
