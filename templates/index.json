@@ -353,13 +353,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/01_b2362a1b-4b08-4e6b-b6f7-c6d4c7cacceb.jpg",
-        "mobile_image": "shopify://shop_images/02_f690b8d0-1bc0-424f-964d-aa6de8bb1c98.jpg",
-        "subtitle": "Battle Series",
-        "title": "Unleash the Power Within",
-        "description": "With advanced technology for enhanced stability and explosive power in every shot",
-        "button_text": "SMASH NOW!",
-        "link_to": "shopify://products/battle-600",
+        "image": "shopify://shop_images/BANNER_1_80899559-611f-44b5-b6a7-c5a5293993e9.jpg",
+        "mobile_image": "shopify://shop_images/BANNER_1_res_9a16b2f4-fdcc-4ab0-afa0-e77160858bc5.jpg",
+        "subtitle": "Lightweight speed and power crafted for every level",
+        "title": "Made for Badminton Brilliance",
+        "description": "Designed to unlock effortless power and fluid control in every game.",
+        "button_text": "Shop Now!",
+        "link_to": "shopify://products/medal-master",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -369,16 +369,11 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Battle Series",
+        "title": "Medal Series",
         "products": [
-          "battle-600",
-          "battle-700",
-          "battle-900-3u",
-          "battle-900-4u",
-          "battle-1000-3u",
-          "battle-1000-4u"
+          "medal-master"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 16
