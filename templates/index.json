@@ -152,13 +152,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_6c3783a4-b7d0-4c9c-99d3-4b5b11f7385f.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_4539c319-b986-462d-9c1e-db86787690ab.jpg",
-        "subtitle": "Predator Pro",
-        "title": "every game is a hunt",
-        "description": "Launch and attack fiercely with the predator series",
-        "button_text": "Buy It Now!",
-        "link_to": "shopify://products/predator-pro-4u",
+        "image": "shopify://shop_images/Banner_1_c6c7a278-8884-4547-84ea-41f4e82b83fc.png",
+        "mobile_image": "shopify://shop_images/Banner_1_R_f9302420-c0e9-4af2-8489-4dec89d09025.png",
+        "subtitle": "Atomic X Black Knight",
+        "title": "Weaponize Your Smash",
+        "description": "Bring the intensity of battle with a racket designed for peak attack and crushing impact.",
+        "button_text": "Get It Now!",
+        "link_to": "shopify://products/atomic-x-black-knight",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -168,14 +168,16 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Predator Series",
+        "title": "Atomic X Series",
         "products": [
-          "predator-pro-4u",
-          "predator-pro-5u",
-          "predator-82-extreme",
-          "predator-82-extra-strong"
+          "atomic-x-black-knight",
+          "atomic-x-dark-sword",
+          "atomic-x-100-pro",
+          "atomic-x-35-spd",
+          "atomic-x-38-ctrl",
+          "atomic-x-38-pwr"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 16
