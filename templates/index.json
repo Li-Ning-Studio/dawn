@@ -11,6 +11,7 @@
   "sections": {
     "custom_liquid_Hte7NK": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         "/* Base Styles for large screens (Desktop) */p {margin: 0;}",
         "div {/* Desktop Styles */ padding: 2.8rem 2rem; font-size: 6.2rem; font-weight: 800; line-height: 1.1; letter-spacing: -4px; text-align: center; color: #f2f2f2; width: 100%; box-sizing: border-box;}",
@@ -62,7 +63,7 @@
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hero\">\n  <p class=\"tagline\">GLOBAL ENGINEERING. LOCAL FIT. REAL PERFORMANCE.</p>\n  <p class=\"headline\">\n    HNDRD pairs <span>global engineering</span> with <span>local culture</span> to deliver \n    <span>authentic performance</span> gear that fits how <span>athletes</span> actually play.\n  </p>\n</section>",
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"tagline\">WELCOME TO HUNDRED</p>\n  <p class=\"headline\">\n    HNDRD pairs <span>global engineering</span> with <span>local culture</span> to deliver \n    <span>authentic performance</span> gear that fits how <span>athletes</span> actually play.\n  </p>\n</section>",
         "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
