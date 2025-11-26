@@ -57,81 +57,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Paddle Lineup Section -->\n<div class=\"paddle-lineup\">\n  <h2>\n    Here's Our Paddle Lineup \n    <span class=\"paddle-icon\">🥒🌕</span>\n  </h2>\n  <p>\n    Your next favorite paddle is right here. \n    <span class=\"highlight\">Light, powerful, or built-to-last?</span> \n    Take your pick.\n  </p>\n</div>\n\n<!-- Scoped Styles -->\n<style>\n.paddle-lineup {\n  background: transparent;\n  padding: 60px 20px 40px;\n  text-align: center;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n\n.paddle-lineup h2 {\n  font-size: clamp(2rem, 5vw, 3rem);\n  line-height: 1.2;\n  margin-bottom: 16px;\n  font-weight: 800;\n  letter-spacing: -0.01em;\n}\n\n.paddle-lineup .paddle-icon {\n  display: inline-block;\n  animation: bounce 2s ease-in-out infinite;\n}\n\n.paddle-lineup p {\n  font-size: clamp(1.15rem, 3vw, 1.35rem);\n  line-height: 1.5;\n  max-width: 700px;\n  margin: 0 auto;\n  opacity: 0.9;\n  font-weight: 500;\n}\n\n.paddle-lineup .highlight {\n  font-weight: 600;\n}\n\n@keyframes bounce {\n  0%, 100% {\n    transform: translateY(0) rotate(0deg);\n  }\n  25% {\n    transform: translateY(-8px) rotate(-10deg);\n  }\n  50% {\n    transform: translateY(-12px) rotate(0deg);\n  }\n  75% {\n    transform: translateY(-8px) rotate(10deg);\n  }\n}\n</style>",
+        "custom_liquid": "<!-- Zephyr Series Section -->\n<div class=\"paddles-section zephyr-section\">\n  <div class=\"tournament-badge zephyr-badge\">ATTACK SERIES</div>\n\n  <h1>\n    <span class=\"paddles-highlight\">Zephyr Series</span><br>\n    Paddles\n  </h1>\n\n  <p>\n    Built for players who take control early. Fast hands, explosive power, \n    and the confidence to put points away on your terms.\n  </p>\n</div>\n\n<style>\n/* Container (inherits your main style) */\n.zephyr-section {\n  background: transparent;\n  padding: 60px 20px;\n  text-align: center;\n  max-width: 1200px;\n  margin: 0 auto;\n  font-family: inherit;\n}\n\n/* Red badge + shine, matching your style */\n.zephyr-badge {\n  display: inline-block;\n  padding: 8px 22px;\n  font-size: 0.75rem;\n  font-weight: 700;\n  letter-spacing: 0.13em;\n  border-radius: 999px;\n  background: linear-gradient(90deg, #7a0a0a 0%, #c21f1f 50%, #e8563f 100%);\n  color: #fff;\n  position: relative;\n  overflow: hidden;\n}\n\n/* Shine effect (contained to badge only) */\n.zephyr-badge::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: -100%;\n  width: 80%;\n  height: 100%;\n  background: linear-gradient(\n    120deg,\n    rgba(255, 255, 255, 0) 0%,\n    rgba(255, 255, 255, 0.5) 50%,\n    rgba(255, 255, 255, 0) 100%\n  );\n  animation: zephyr-shine 2.8s ease-in-out infinite;\n}\n\n@keyframes zephyr-shine {\n  0% { left: -80%; }\n  45% { left: 120%; }\n  100% { left: 120%; }\n}\n\n/* Heading */\n.zephyr-section h1 {\n  font-size: clamp(3rem, 10vw, 6rem);\n  line-height: 1.05;\n  margin-bottom: 12px;\n  font-weight: 700;\n  color: #1b1b1b;\n  font-family: inherit;\n}\n\n/* Red gradient for \"Zephyr Series\" */\n.zephyr-section .paddles-highlight {\n  display: inline-block;\n  background: linear-gradient(90deg, #7a0a0a 0%, #c21f1f 50%, #e8563f 100%);\n  -webkit-background-clip: text;\n  color: transparent;\n  font-weight: 700;\n}\n\n/* Description text */\n.zephyr-section p {\n  font-size: clamp(1.125rem, 3vw, 1.35rem);\n  line-height: 1.7;\n  max-width: 700px;\n  margin: 0 auto 40px;\n  color: #333;\n  font-family: inherit;\n}\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 40
-      }
-    },
-    "multirow_b3qwx9": {
-      "type": "multirow",
-      "blocks": {
-        "row_UNYLm9": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_6.jpg",
-            "caption": "",
-            "heading": "<strong>Force S</strong>",
-            "text": "<p>Power That Lasts ⚡. At 200 grams 🪶, the Force S is lightweight but mighty 💪. Instant response, satisfying pop 💥, protected edges 🛡️. Wide-shape means a forgiving sweet spot 🎯 because perfection is overrated 😎.<br/></p>",
-            "button_label": "Bring the Power 💥",
-            "button_link": "shopify://products/force-s-wide"
-          }
-        },
-        "row_6DQx3U": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Page_47.jpg",
-            "caption": "",
-            "heading": "<strong>Spirit X</strong>",
-            "text": "<p>Spirit X ⚡ makes casual games a breeze 🏓. Designed for smooth, controlled play ✨, it's your ideal companion on the court for endless hours of fun 🔥<br/></p>",
-            "button_label": "Shop Spirit X 🪶",
-            "button_link": "shopify://products/spirit-x-wide"
-          }
-        },
-        "row_iUtEUy": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_dde85644-533b-48d6-87ef-aff9da62b4a6.png",
-            "caption": "",
-            "heading": "<strong>N Force 40</strong>",
-            "text": "<p>Built for everyday fun 🎉, the N Force delivers reliable performance 💯 with lasting durability 🔨. It keeps up with your game, offering consistent hits 🎯 and a sturdy design 💪. N Force combines strength ⚡ and ease of use</p>",
-            "button_label": "Find Your Force 💪",
-            "button_link": "shopify://products/n-force-40-wide"
-          }
-        },
-        "row_mrEqBY": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Page_44.jpg",
-            "caption": "",
-            "heading": "<strong>Vigor 100</strong>",
-            "text": "<p>Energize all quick games 💥 with the Vigor 100, designed for performance 🎯. A dependable paddle with the right balance of power and control 🔥 for casual play. Play with confidence 💪 using the durable and versatile Vigor 100 ✨</p>",
-            "button_label": "Get Energized 🔥",
-            "button_link": "shopify://products/vigor-100-wide"
-          }
-        }
-      },
-      "block_order": [
-        "row_UNYLm9",
-        "row_6DQx3U",
-        "row_iUtEUy",
-        "row_mrEqBY"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "custom_liquid_iVanRk": {
@@ -151,7 +80,6 @@
     "custom_liquid_APDRtM",
     "hero_component_XFpKtg",
     "custom_liquid_Q6ApYk",
-    "multirow_b3qwx9",
     "custom_liquid_iVanRk"
   ]
 }
