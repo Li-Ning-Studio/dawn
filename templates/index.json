@@ -138,6 +138,24 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_CAttPj": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Clothing",
+        "products": [
+          "rally-point-t-shirt",
+          "court-king-t-shirt",
+          "bladefire-t-shirt",
+          "celestial-t-shirt",
+          "skyline-motion-t-shirt"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "hero_component_xCa6Uj": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -186,24 +204,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "swipeable_products_CAttPj": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Clothing",
-        "products": [
-          "rally-point-t-shirt",
-          "court-king-t-shirt",
-          "bladefire-t-shirt",
-          "celestial-t-shirt",
-          "skyline-motion-t-shirt"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
     }
   },
   "order": [
@@ -212,9 +212,9 @@
     "hero_component_KwnPtD",
     "swipeable_products_RQ3tHx",
     "hero_component_Vj4bP9",
-    "hero_component_xCa6Uj",
-    "swipeable_products_8GphAx",
     "hero_video_component_DPPrrk",
-    "swipeable_products_CAttPj"
+    "swipeable_products_CAttPj",
+    "hero_component_xCa6Uj",
+    "swipeable_products_8GphAx"
   ]
 }
