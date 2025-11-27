@@ -1,188 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "responsive_slideshow_fB8Wfk": {
+      "type": "responsive-slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_h69qBQ": {
+          "type": "slide",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "image": "shopify://shop_images/Main_L_84ccbfa3-14bd-41d6-9f54-e5588d99e004.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_049d8c0f-b900-4799-b464-1c3fa5c0c872.jpg",
+            "heading": "NITRIX 70 VOLTA",
+            "subheading": "Play like a champion with the most powerful racket in your hand",
+            "button_label": "See More",
+            "link": "shopify://products/nitrix-70-volta"
           }
         },
-        "text": {
-          "type": "text",
+        "slide_HjJpwr": {
+          "type": "slide",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "image": "shopify://shop_images/Main_L_75282731-398d-4c5d-a519-7a8c257ecef1.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_84527e55-c3e0-41ec-a069-bbe9004c5be4.jpg",
+            "heading": "HYFONIC 7",
+            "subheading": "Sharp, deliberate feedback on every stroke",
+            "button_label": "Explore Now",
+            "link": "shopify://products/hyfonic-7-4u"
           }
         },
-        "button": {
-          "type": "buttons",
+        "slide_yyVJtc": {
+          "type": "slide",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify://shop_images/Main_L_5e493aec-e61d-40d3-81df-105ec8fff279.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_cbd9d0c4-1725-4066-b8fd-4ac5ae39f751.jpg",
+            "heading": "FLAREON 700",
+            "subheading": "Fastest Racket in HNDRD’s lineup",
+            "button_label": "Check It Out",
+            "link": "shopify://products/flareon-700"
+          }
+        },
+        "slide_W4TjcE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_L_0b05ba08-6e85-4a4a-ae00-32a73e79705a.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_e6e24cc0-3fc5-4f50-acd1-e0ce5991b59a.jpg",
+            "heading": "NITRIX 70 VENOM",
+            "subheading": "Crafted for heavy smashes and offensive play",
+            "button_label": "Explore Now",
+            "link": "shopify://products/nitrix-70-venom"
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": ["heading", "text"],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": ["collection-0", "product", "collection-1"],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": ["column1", "column2", "column3"],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+      "block_order": [
+        "slide_h69qBQ",
+        "slide_HjJpwr",
+        "slide_yyVJtc",
+        "slide_W4TjcE"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
     }
   },
-  "order": ["image_banner", "rich_text", "featured_collection", "collage", "video", "multicolumn"]
+  "order": [
+    "responsive_slideshow_fB8Wfk"
+  ]
 }
