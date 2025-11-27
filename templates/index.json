@@ -65,9 +65,68 @@
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
+    },
+    "swipeable_products_L3mpAD": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Professional Rackets",
+        "products": [
+          "nitrix-70-venom",
+          "nitrix-70-venom-3u",
+          "nitrix-70-volta",
+          "nitrix-70-volta-3u",
+          "flareon-700",
+          "flareon-700-3u",
+          "hyfonic-7-4u",
+          "hyfonic-7"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_KwnPtD": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_cfc1101b-d8f0-4ebb-9dce-6817a67e9191.jpg",
+        "mobile_image": "shopify://shop_images/Responsive_banner.jpg",
+        "subtitle": "Battle 1000",
+        "title": "Bring Out The Champion In You",
+        "description": "Lightweight rackets that obey you every swing and delivers max power output in every stroke",
+        "button_text": "Explore More",
+        "link_to": "shopify://products/battle-1000-4u",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_RQ3tHx": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Battle Series",
+        "products": [
+          "battle-1000-4u",
+          "battle-1000-3u",
+          "battle-900-4u",
+          "battle-900-3u",
+          "battle-700",
+          "battle-600"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
-    "responsive_slideshow_fB8Wfk"
+    "responsive_slideshow_fB8Wfk",
+    "swipeable_products_L3mpAD",
+    "hero_component_KwnPtD",
+    "swipeable_products_RQ3tHx"
   ]
 }
