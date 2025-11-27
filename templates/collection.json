@@ -20,6 +20,21 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
+        "merchandising_item_ELgTYw": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "insoles",
+            "mobile_position": 2,
+            "desktop_position": 3,
+            "image": "shopify://shop_images/insoles.png",
+            "title": "",
+            "subtitle": "",
+            "cta_text": "",
+            "cta_url": "",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
+        },
         "merchandising_item_6nGFrG": {
           "type": "merchandising_item",
           "settings": {
@@ -142,6 +157,7 @@
         }
       },
       "block_order": [
+        "merchandising_item_ELgTYw",
         "merchandising_item_6nGFrG",
         "merchandising_item_dxTXDq",
         "merchandising_item_BLmDbr",
