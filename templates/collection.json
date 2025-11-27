@@ -20,6 +20,21 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
+        "merchandising_item_xjyzBi": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "pickleball",
+            "mobile_position": 4,
+            "desktop_position": 2,
+            "image": "shopify://shop_images/1_68520916-d039-426c-bb5a-c7006cfbdd6c.jpg",
+            "title": "",
+            "subtitle": "",
+            "cta_text": "",
+            "cta_url": "",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
+        },
         "merchandising_item_LVDf4n": {
           "type": "merchandising_item",
           "settings": {
@@ -82,6 +97,7 @@
         }
       },
       "block_order": [
+        "merchandising_item_xjyzBi",
         "merchandising_item_LVDf4n",
         "merchandising_item_n48aCX",
         "merchandising_item_MDJwAW",
