@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_component_DXfR7X": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01_M_Banner.jpg",
+        "mobile_image": "shopify://shop_images/01_R_Banner.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_REw7BB": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -26,10 +42,43 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "hero_component_fjF8Ut": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/02_M_Banner.jpg",
+        "mobile_image": "shopify://shop_images/02_R_Banner.jpg",
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_rfQT4Q": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_REw7BB"
+    "hero_component_DXfR7X",
+    "custom_liquid_REw7BB",
+    "hero_component_fjF8Ut",
+    "hero_component_rfQT4Q"
   ]
 }
