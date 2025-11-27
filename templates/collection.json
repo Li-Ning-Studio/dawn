@@ -20,6 +20,21 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
+        "merchandising_item_dxTXDq": {
+          "type": "merchandising_item",
+          "settings": {
+            "target_collection": "cricket-kit-bags",
+            "mobile_position": 2,
+            "desktop_position": 1,
+            "image": "shopify://shop_images/crk_kitbags.png",
+            "title": "",
+            "subtitle": "",
+            "cta_text": "",
+            "cta_url": "",
+            "text_position": "bottom-left",
+            "text_color": "#ffffff"
+          }
+        },
         "merchandising_item_BLmDbr": {
           "type": "merchandising_item",
           "settings": {
@@ -112,6 +127,7 @@
         }
       },
       "block_order": [
+        "merchandising_item_dxTXDq",
         "merchandising_item_BLmDbr",
         "merchandising_item_xjyzBi",
         "merchandising_item_LVDf4n",
