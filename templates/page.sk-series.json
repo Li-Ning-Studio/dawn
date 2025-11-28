@@ -63,7 +63,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"attack-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Attack.png?v=1764245037\" \n    alt=\"Attack Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n</div>",
+        "custom_liquid": "<div class=\"attack-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Attack.png?v=1764245037\" \n    alt=\"Attack Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:600; color:#666;\">\n    This is one of badminton’s fiercest attackers, a racket built to play bold.\n  </p>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -98,6 +98,16 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Yqjmpj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"pro-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Pro.png?v=1764227453\" \n    alt=\"Pro Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:550; color:#666;\">\n    Trusted by Srikanth Kidambi himself, a choice for players who thrive on attacking opportunities.\n  </p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "swipeable_products_6XUmtV": {
@@ -145,7 +155,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"qb-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Quantum_Boom.png?v=1764321746\" \n    alt=\"Quantum Boom Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n</div>",
+        "custom_liquid": "<div class=\"qb-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Quantum_Boom.png?v=1764321746\" \n    alt=\"Quantum Boom Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:600; color:#666;\">\n    Built on legacy, tailored to your standards.\n  </p>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -181,6 +191,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_qViB8L": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"quantum-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Quantum.png?v=1764245036\" \n    alt=\"Quantum Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:600; color:#666;\">\n    This is not just the champion's choice but also what's behind his winning streak.\n  </p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "swipeable_products_cEUfVj": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
@@ -201,8 +221,8 @@
       "settings": {
         "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      GEAR BAGS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection includes a wide range of kitbags and backpacks, built for players who need space, durability and smart storage.\n  </p>\n\n</div>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 24,
+        "padding_bottom": 20
       }
     },
     "hero_component_xtgg4C": {
@@ -254,12 +274,14 @@
     "custom_liquid_9BwbWd",
     "swipeable_products_yjzDXt",
     "hero_component_DXfR7X",
+    "custom_liquid_Yqjmpj",
     "swipeable_products_6XUmtV",
     "custom_liquid_Ta9NTP",
     "hero_component_rfQT4Q",
     "custom_liquid_anVzbL",
     "swipeable_products_yXCDRr",
     "hero_component_AC3rGD",
+    "custom_liquid_qViB8L",
     "swipeable_products_cEUfVj",
     "custom_liquid_BX8yaV",
     "hero_component_xtgg4C",
