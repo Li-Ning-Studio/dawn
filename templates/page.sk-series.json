@@ -28,7 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://collections/sk-collection",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -95,6 +95,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_Ta9NTP": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      SHOES\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection features two shoes:\n    <strong>Quantum</strong> and\n    <strong>Quantum Boom</strong>.\n  </p>\n\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "hero_component_rfQT4Q": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -125,7 +135,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"hndrd-product-section-v3\"> \n\n  <!-- TEXT LEFT -->\n  <div class=\"hndrd-text-side-v3\">\n    <div class=\"hndrd-text-inner-v3\">\n      <img \n        class=\"hndrd-logo-v3\"\n        src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Quantum_Boom.png?v=1764321746\"\n        alt=\"Logo\">\n\n      <p class=\"hndrd-subtitle-v3\">\n        Built on legacy, tailored to your standards.\n      </p>\n\n      <a href=\"#\" class=\"hndrd-cta-btn-v3\">\n        Discover the difference\n      </a>\n\n      <div class=\"hndrd-hint-v3\">\n        <span>Tap the image to reveal more</span>\n        <svg class=\"hndrd-arrow-v3 hndrd-arrow-right-v3\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\">\n          <path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n        <svg class=\"hndrd-arrow-v3 hndrd-arrow-down-v3\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\">\n          <path d=\"M12 5V19M12 19L5 12M12 19L19 12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </div>\n\n    </div>\n  </div>\n\n  <!-- IMAGE RIGHT -->\n  <div class=\"hndrd-image-side-v3\">\n    <div class=\"hndrd-flip-card-v3 hndrd-teaser-v3 hndrd-show-back-v3\" onclick=\"this.classList.toggle('hndrd-flipped-v3')\">\n\n      <!-- BACK IMAGE (shown first) -->\n      <div class=\"hndrd-flip-front-v3\">\n        <img \n          src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/3_9795f0db-8131-4751-b2d8-51b0bd945eb8.png?v=1764321659\" \n          alt=\"Back Image\">\n      </div>\n\n      <!-- FRONT IMAGE (shown on flip) -->\n      <div class=\"hndrd-flip-back-v3\">\n        <img \n          src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/2_90c12c23-c20c-49c1-8a26-0b92d8c80638.png?v=1764321660\" \n          alt=\"Front Image\">\n      </div>\n\n    </div>\n  </div>\n\n</div>\n\n\n<style>\n/* WRAPPER */\n.hndrd-product-section-v3 {\n  display: flex;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n/* TEXT + IMAGE SPLIT */\n.hndrd-text-side-v3,\n.hndrd-image-side-v3 {\n  width: 50%;\n  flex-shrink: 0;\n}\n\n/* TEXT SIDE */\n.hndrd-text-side-v3 {\n  display: flex;\n  align-items: center;\n}\n\n.hndrd-text-inner-v3 {\n  padding: 60px;\n  width: 100%;\n}\n\n.hndrd-logo-v3 {\n  width: 300px;\n  max-width: 100%;\n  margin-bottom: 20px;\n}\n\n.hndrd-subtitle-v3 {\n  font-size: 20px;\n  line-height: 1.5;\n  margin-bottom: 30px;\n}\n\n/* CTA BUTTON — UPDATED COLOR (#ce0a2a) */\n.hndrd-cta-btn-v3 {\n  display: inline-block;\n  padding: 14px 40px;\n  font-size: 16px;\n  font-weight: 700;\n  letter-spacing: 0.5px;\n  background: transparent;\n  border: 2px solid #ce0a2a;\n  border-radius: 40px;\n  color: #ce0a2a;\n  text-decoration: none;\n  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;\n}\n\n.hndrd-cta-btn-v3:hover {\n  background: rgba(206, 10, 42, 0.15);\n  color: #ce0a2a;\n}\n\n/* HINT TEXT + ARROWS */\n.hndrd-hint-v3 {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  margin-top: 24px;\n  font-size: 14px;\n  opacity: 0.8;\n}\n\n.hndrd-arrow-v3 {\n  color: #000;\n}\n\n/* Desktop shows right arrow */\n.hndrd-arrow-right-v3 {\n  display: block;\n  animation: hndrd-bounce-right-v3 2s ease-in-out infinite;\n}\n\n.hndrd-arrow-down-v3 {\n  display: none;\n}\n\n@keyframes hndrd-bounce-right-v3 {\n  0%, 100% { transform: translateX(0); }\n  50% { transform: translateX(4px); }\n}\n\n/* IMAGE SIDE */\n.hndrd-image-side-v3 {\n  perspective: 1000px;\n  position: relative;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.hndrd-flip-card-v3 {\n  width: 100%;\n  aspect-ratio: 1 / 1;\n  transform-style: preserve-3d;\n  cursor: pointer;\n  position: relative;\n  transform: rotateY(180deg);\n}\n\n.hndrd-flip-front-v3,\n.hndrd-flip-back-v3 {\n  width: 100%;\n  height: 100%;\n  backface-visibility: hidden;\n  position: relative;\n}\n\n.hndrd-flip-back-v3 {\n  position: absolute;\n  top: 0;\n  left: 0;\n  transform: rotateY(180deg);\n}\n\n/* Start by showing the BACK */\n.hndrd-show-back-v3 {\n  transform: rotateY(180deg) !important;\n}\n\n.hndrd-ready-v3 {\n  transition: transform 0.6s;\n}\n\n/* User flips to FRONT */\n.hndrd-flipped-v3 {\n  transform: rotateY(0deg) !important;\n}\n\n/* Idle wiggle */\n@keyframes hndrd-wiggle-v3 {\n  0% { transform: rotateY(180deg); }\n  50% { transform: rotateY(182deg); }\n  100% { transform: rotateY(180deg); }\n}\n\n.hndrd-teaser-v3.hndrd-show-back-v3:not(.hndrd-flipped-v3) {\n  animation: hndrd-wiggle-v3 2s ease-in-out 3s infinite;\n}\n\n.hndrd-teaser-v3.hndrd-flipped-v3 {\n  animation: none !important;\n}\n\n/* MOBILE */\n@media(max-width: 768px) {\n  .hndrd-product-section-v3 {\n    flex-direction: column;\n  }\n\n  .hndrd-text-inner-v3 {\n    padding: 30px;\n    text-align: center;\n  }\n\n  .hndrd-logo-v3 {\n    margin: 0 auto 15px auto;\n  }\n\n  .hndrd-hint-v3 {\n    justify-content: center;\n  }\n\n  .hndrd-arrow-right-v3 {\n    display: none;\n  }\n\n  .hndrd-arrow-down-v3 {\n    display: block;\n    animation: hndrd-bounce-down-v3 2s ease-in-out infinite;\n  }\n\n  @keyframes hndrd-bounce-down-v3 {\n    0%, 100% { transform: translateY(0); }\n    50% { transform: translateY(4px); }\n  }\n}\n</style>\n\n<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n  const flipCard = document.querySelector('.hndrd-flip-card-v3');\n  if (flipCard) {\n    void flipCard.offsetWidth;\n\n    flipCard.classList.add('hndrd-show-back-v3');\n    flipCard.classList.remove('hndrd-flipped-v3');\n\n    setTimeout(function() {\n      flipCard.classList.add('hndrd-ready-v3');\n    }, 50);\n  }\n});\n</script>",
+        "custom_liquid": "<div class=\"hndrd-product-section-v3\"> \n\n  <!-- TEXT LEFT -->\n  <div class=\"hndrd-text-side-v3\">\n    <div class=\"hndrd-text-inner-v3\">\n      <img \n        class=\"hndrd-logo-v3\"\n        src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Quantum_Boom.png?v=1764321746\"\n        alt=\"Logo\">\n\n      <p class=\"hndrd-subtitle-v3\">\n        Built on legacy, tailored to your standards.\n      </p>\n\n      <a href=\"#\" class=\"hndrd-cta-btn-v3\">\n        Discover the difference\n      </a>\n\n      <div class=\"hndrd-hint-v3\">\n        <span>Tap the image to reveal more</span>\n        <svg class=\"hndrd-arrow-v3 hndrd-arrow-right-v3\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\">\n          <path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n        <svg class=\"hndrd-arrow-v3 hndrd-arrow-down-v3\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\">\n          <path d=\"M12 5V19M12 19L5 12M12 19L19 12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </div>\n\n    </div>\n  </div>\n\n  <!-- IMAGE RIGHT -->\n  <div class=\"hndrd-image-side-v3\">\n    <div class=\"hndrd-flip-card-v3 hndrd-teaser-v3 hndrd-show-back-v3\" onclick=\"this.classList.toggle('hndrd-flipped-v3')\">\n\n      <!-- BACK IMAGE (shown first) -->\n      <div class=\"hndrd-flip-front-v3\">\n        <img \n          src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/3_9795f0db-8131-4751-b2d8-51b0bd945eb8.png?v=1764321659\" \n          alt=\"Back Image\">\n      </div>\n\n      <!-- FRONT IMAGE (shown on flip) -->\n      <div class=\"hndrd-flip-back-v3\">\n        <img \n          src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/2_90c12c23-c20c-49c1-8a26-0b92d8c80638.png?v=1764321660\" \n          alt=\"Front Image\">\n      </div>\n\n    </div>\n  </div>\n\n</div>\n\n\n<style>\n/* WRAPPER */\n.hndrd-product-section-v3 {\n  display: flex;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n/* TEXT + IMAGE SPLIT */\n.hndrd-text-side-v3,\n.hndrd-image-side-v3 {\n  width: 50%;\n  flex-shrink: 0;\n}\n\n/* TEXT SIDE */\n.hndrd-text-side-v3 {\n  display: flex;\n  align-items: center;\n}\n\n.hndrd-text-inner-v3 {\n  padding: 60px;\n  width: 100%;\n}\n\n.hndrd-logo-v3 {\n  width: 300px;\n  max-width: 100%;\n  margin-bottom: 20px;\n}\n\n.hndrd-subtitle-v3 {\n  font-size: 20px;\n  line-height: 1.5;\n  margin-bottom: 30px;\n}\n\n/* CTA BUTTON — COLOR #ce0a2a */\n.hndrd-cta-btn-v3 {\n  display: inline-block;\n  padding: 14px 40px;\n  font-size: 16px;\n  font-weight: 700;\n  letter-spacing: 0.5px;\n  background: transparent;\n  border: 2px solid #ce0a2a;\n  border-radius: 40px;\n  color: #ce0a2a;\n  text-decoration: none;\n  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;\n}\n\n.hndrd-cta-btn-v3:hover {\n  background: rgba(206, 10, 42, 0.15);\n  color: #ce0a2a;\n}\n\n/* HINT TEXT + ARROWS */\n.hndrd-hint-v3 {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  margin-top: 24px;\n  font-size: 14px;\n  opacity: 0.8;\n}\n\n.hndrd-arrow-v3 {\n  color: #000;\n}\n\n/* Desktop shows right arrow */\n.hndrd-arrow-right-v3 {\n  display: block;\n  animation: hndrd-bounce-right-v3 2s ease-in-out infinite;\n}\n\n.hndrd-arrow-down-v3 {\n  display: none;\n}\n\n@keyframes hndrd-bounce-right-v3 {\n  0%, 100% { transform: translateX(0); }\n  50% { transform: translateX(4px); }\n}\n\n/* IMAGE SIDE */\n.hndrd-image-side-v3 {\n  display: flex;\n  align-items: stretch;\n  justify-content: center;\n  perspective: 1000px;\n  overflow: hidden;\n}\n\n/* FIXED: no forced 1:1 ratio */\n.hndrd-flip-card-v3 {\n  width: 100%;\n  height: auto;\n  transform-style: preserve-3d;\n  cursor: pointer;\n  position: relative;\n}\n\n.hndrd-flip-front-v3,\n.hndrd-flip-back-v3 {\n  width: 100%;\n  height: auto;\n  backface-visibility: hidden;\n  -webkit-backface-visibility: hidden;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n\n/* Make images follow natural proportions */\n.hndrd-flip-front-v3 img,\n.hndrd-flip-back-v3 img {\n  width: 100%;\n  height: auto;\n  object-fit: contain;\n}\n\n/* Start by showing BACK */\n.hndrd-show-back-v3 {\n  transform: rotateY(180deg) !important;\n}\n\n.hndrd-ready-v3 {\n  transition: transform 0.6s;\n}\n\n/* User flips to FRONT */\n.hndrd-flipped-v3 {\n  transform: rotateY(0deg) !important;\n}\n\n/* Idle wiggle */\n@keyframes hndrd-wiggle-v3",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -145,6 +155,16 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_BX8yaV": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      GEAR BAGS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection includes a wide range of kitbags and backpacks, built for players who need space, durability and smart storage.\n  </p>\n\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "hero_component_xtgg4C": {
@@ -176,6 +196,16 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_thhWYE": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      APPARELS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection offers a full range of apparels designed for comfort, performance and everyday training.\n  </p>\n\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -186,11 +216,14 @@
     "custom_liquid_WUbqdj",
     "hero_component_DXfR7X",
     "custom_liquid_REw7BB",
+    "custom_liquid_Ta9NTP",
     "hero_component_rfQT4Q",
     "custom_liquid_VLk9Y3",
     "custom_liquid_6rMejV",
     "hero_component_AC3rGD",
+    "custom_liquid_BX8yaV",
     "hero_component_xtgg4C",
-    "hero_component_3tfAzt"
+    "hero_component_3tfAzt",
+    "custom_liquid_thhWYE"
   ]
 }
