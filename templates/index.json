@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_component_x9cbVj": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/08_M_Banner.jpg",
+        "mobile_image": "shopify://shop_images/09_R_Banner.jpg",
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "shopify://pages/sk-series",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "responsive_slideshow_Ma699H": {
       "type": "responsive-slideshow",
       "blocks": {
@@ -585,6 +602,7 @@
     }
   },
   "order": [
+    "hero_component_x9cbVj",
     "responsive_slideshow_Ma699H",
     "swipeable_products_Y8n63R",
     "hero_component_ww4FfV",
