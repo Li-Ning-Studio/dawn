@@ -37,7 +37,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .sk-block-rackets-clean * { font: inherit; }\n  .sk-block-rackets-clean { \n    text-align:center; \n    padding:20px 10px; \n    background:transparent; \n  }\n\n  .sk-rw-clean {\n    display:inline-flex;\n    align-items:center;\n    gap:28px; /* balanced spacing */\n  }\n\n  .sk-logo-clean {\n    height:50px;\n    display:block;\n  }\n\n  .sk-line-clean {\n    width:2px;\n    height:50px;\n    background:#000;\n    display:block;\n  }\n\n  .sk-title-clean {\n    font-size:28px;\n    font-weight:700;\n    color:#000;\n    margin:0 !important;   /* removes theme margin */\n    padding:0 !important;  /* removes theme padding */\n  }\n\n  .sk-text-clean {\n    margin-top:16px;\n    color:#333;\n  }\n</style>\n\n<div class=\"sk-block-rackets-clean\">\n  <div class=\"sk-rw-clean\">\n    <img class=\"sk-logo-clean\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\">\n    <div class=\"sk-line-clean\"></div>\n\n    <!-- Title with theme padding removed -->\n    <div class=\"sk-title-clean\">RACKETS</div>\n  </div>\n\n  <p class=\"sk-text-clean\">\n    The SK Collection features two rackets: <strong>Nitrix Pro</strong> and <strong>Nitrix Attack</strong>.\n  </p>\n</div>",
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line (forced height, always visible) -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      RACKETS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection features two rackets:\n    <strong>Nitrix Pro</strong> and\n    <strong>Nitrix Attack</strong>.\n  </p>\n\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -99,7 +99,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .sk-block-shoes * { font: inherit; }\n  .sk-block-shoes { text-align:center; padding:20px 10px; background:transparent; }\n  .sk-srw { display:inline-flex; align-items:center; gap:20px; }\n  .sk-slogo { height:50px; display:block; }\n  .sk-sline { width:2px; height:40px; background:black; }\n  .sk-stitle { font-size:26px; font-weight:700; color:black; }\n  .sk-stext { margin-top:12px; color:#333; }\n</style>\n\n<div class=\"sk-block-shoes\">\n  <div class=\"sk-srw\">\n    <img class=\"sk-slogo\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\">\n    <div class=\"sk-sline\"></div>\n    <div class=\"sk-stitle\">SHOES</div>\n  </div>\n  <p class=\"sk-stext\">The SK Collection features two shoes: <strong>Quantum</strong> and <strong>Quantum Boom</strong>.</p>\n</div>",
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      SHOES\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection features two shoes:\n    <strong>Quantum</strong> and\n    <strong>Quantum Boom</strong>.\n  </p>\n\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -131,16 +131,6 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_VLk9Y3": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_AC3rGD": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -161,7 +151,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .sk-block-bags * { font: inherit; }\n  .sk-block-bags {\n    text-align:center;\n    padding:20px 10px;\n    background:transparent;\n  }\n  .sk-brw {\n    display:inline-flex;\n    align-items:center;\n    gap:14px;\n  }\n  .sk-blogo {\n    height:50px;\n    display:block;\n  }\n  .sk-btitle {\n    font-size:28px;\n    font-weight:700;\n    color:black;\n  }\n  .sk-btext {\n    margin-top:16px;\n    color:#333;\n  }\n</style>\n\n<div class=\"sk-block-bags\">\n  <div class=\"sk-brw\">\n    <img class=\"sk-blogo\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\">\n    <div class=\"sk-btitle\">GEAR BAGS</div>\n  </div>\n  <p class=\"sk-btext\">\n    The SK Collection includes a wide range of kitbags and backpacks built for durability, space and smart storage.\n  </p>\n</div>",
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      GEAR BAGS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection includes a wide range of kitbags and backpacks, built for players who need space, durability and smart storage.\n  </p>\n\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -219,7 +209,6 @@
     "custom_liquid_Ta9NTP",
     "hero_component_rfQT4Q",
     "custom_liquid_6rMejV",
-    "custom_liquid_VLk9Y3",
     "hero_component_AC3rGD",
     "custom_liquid_BX8yaV",
     "hero_component_xtgg4C",
