@@ -59,6 +59,31 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_Yqjmpj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"pro-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Pro.png?v=1764227453\" \n    alt=\"Pro Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:550; color:#666;\">\n    Trusted by Srikanth Kidambi himself, a choice for players who thrive on attacking opportunities.\n  </p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "swipeable_products_6XUmtV": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "nitrix-pro-4u",
+          "nitrix-pro-3u"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "hero_component_fjF8Ut": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -93,31 +118,6 @@
         "products": [
           "nitrix-attack-4u",
           "nitrix-attack-5u"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "custom_liquid_Yqjmpj": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"pro-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Pro.png?v=1764227453\" \n    alt=\"Pro Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:550; color:#666;\">\n    Trusted by Srikanth Kidambi himself, a choice for players who thrive on attacking opportunities.\n  </p>\n</div>",
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "swipeable_products_6XUmtV": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "",
-        "products": [
-          "nitrix-pro-4u",
-          "nitrix-pro-3u"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -292,7 +292,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/sk-apparels",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
