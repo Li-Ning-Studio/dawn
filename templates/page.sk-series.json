@@ -79,7 +79,7 @@
           "nitrix-attack-4u",
           "nitrix-attack-5u"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
@@ -107,9 +107,10 @@
       "settings": {
         "title": "",
         "products": [
-          "nitrix-pro-4u"
+          "nitrix-pro-4u",
+          "nitrix-pro-3u"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
@@ -193,6 +194,20 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_cEUfVj": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "quantum"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "custom_liquid_BX8yaV": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -259,6 +274,7 @@
     "custom_liquid_6rMejV",
     "swipeable_products_yXCDRr",
     "hero_component_AC3rGD",
+    "swipeable_products_cEUfVj",
     "custom_liquid_BX8yaV",
     "hero_component_xtgg4C",
     "hero_component_3tfAzt",
