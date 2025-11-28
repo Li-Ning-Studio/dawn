@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_video_component_Na9mxm": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/SK Banner pre launch.mp4",
+        "mobile_video": "shopify://files/videos/SK - Responsive pre launch.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_fjF8Ut": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -144,6 +160,7 @@
   },
   "order": [
     "main",
+    "hero_video_component_Na9mxm",
     "hero_component_fjF8Ut",
     "custom_liquid_WUbqdj",
     "hero_component_DXfR7X",
