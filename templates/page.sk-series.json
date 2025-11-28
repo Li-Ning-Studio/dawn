@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_component_dKYM7L": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/08_M_Banner.jpg",
+        "mobile_image": "shopify://shop_images/09_R_Banner.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_w6X489": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -78,7 +94,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://products/nitrix-pro-4u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -129,7 +145,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://products/quantum-boom",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -169,7 +185,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://products/quantum",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -219,7 +235,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/sk-series-bags",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -239,6 +255,23 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_dNzaaM": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "magnum-kit-bag",
+          "the-titan-kit-bag",
+          "matrix-kit-bag",
+          "kidambi-shoe-bag"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "custom_liquid_thhWYE": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -252,6 +285,7 @@
   },
   "order": [
     "main",
+    "hero_component_dKYM7L",
     "custom_liquid_w6X489",
     "hero_component_fjF8Ut",
     "custom_liquid_9BwbWd",
@@ -269,6 +303,7 @@
     "custom_liquid_BX8yaV",
     "hero_component_xtgg4C",
     "hero_component_3tfAzt",
+    "swipeable_products_dNzaaM",
     "custom_liquid_thhWYE"
   ]
 }
