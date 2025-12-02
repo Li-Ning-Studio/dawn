@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_video_component_rcxAff": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt.mp4",
+        "mobile_video": "shopify://files/videos/sq.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "image_banner_7MVCni": {
       "type": "image-banner",
       "blocks": {
@@ -31,6 +47,7 @@
       "block_order": [
         "heading_NpaRyp"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/ChatGPT_Image_Dec_1_2025_12_03_06_PM.png",
@@ -56,20 +73,6 @@
         "full_width": true,
         "padding_top": 4,
         "padding_bottom": 0
-      }
-    },
-    "hero_component_cgG8pX": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "scheme-1",
-        "padding_top": 28,
-        "padding_bottom": 32
       }
     },
     "rich_text_3BmcwA": {
@@ -261,9 +264,9 @@
   },
   "order": [
     "main",
+    "hero_video_component_rcxAff",
     "image_banner_7MVCni",
     "rich_text_cL9yQE",
-    "hero_component_cgG8pX",
     "rich_text_3BmcwA",
     "multirow_9DVmjp",
     "rich_text_yYibri",
