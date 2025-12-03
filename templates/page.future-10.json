@@ -27,7 +27,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://products/future-10-extra-durable",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 0,
         "padding_bottom": 0
@@ -81,7 +81,7 @@
         "heading_PdPkMh": {
           "type": "heading",
           "settings": {
-            "heading": "Why Players Choose Future-10",
+            "heading": "Why <strong>Future-10?</strong>",
             "heading_size": "h0"
           }
         }
@@ -89,14 +89,56 @@
       "block_order": [
         "heading_PdPkMh"
       ],
+      "custom_css": [
+        "strong{color:red;}"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
+        "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 0
+      }
+    },
+    "collage_tH4qcQ": {
+      "type": "collage",
+      "blocks": {
+        "image_4NYTYa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8.jpg"
+          }
+        },
+        "image_NjGecD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_4a93c470-c9f3-4bdd-8401-027fcfa1cc00.jpg"
+          }
+        },
+        "image_AiaV86": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_87e3b313-946c-4dd2-a4a1-fbfeff8a8fa1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_4NYTYa",
+        "image_NjGecD",
+        "image_AiaV86"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 16,
+        "padding_bottom": 36
       }
     },
     "multirow_9DVmjp": {
@@ -153,6 +195,7 @@
         "row_mqKiWt",
         "row_3rMdik"
       ],
+      "disabled": true,
       "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "adapt",
@@ -207,7 +250,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
+        "color_scheme": "scheme-4",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -268,6 +311,7 @@
     "image_banner_7MVCni",
     "rich_text_cL9yQE",
     "rich_text_3BmcwA",
+    "collage_tH4qcQ",
     "multirow_9DVmjp",
     "rich_text_yYibri",
     "image_with_text_UXVrdq"
