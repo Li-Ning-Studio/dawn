@@ -33,73 +33,65 @@
         "padding_bottom": 0
       }
     },
-    "image_banner_7MVCni": {
-      "type": "image-banner",
+    "image_with_text_UXVrdq": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_NpaRyp": {
+        "heading_TXhQWr": {
           "type": "heading",
           "settings": {
-            "heading": "Durability Meets Speed.",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_NpaRyp"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Dec_1_2025_12_03_06_PM.png",
-        "image_overlay_opacity": 30,
-        "image_height": "small",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "right",
-        "show_text_box": false,
-        "color_scheme": "scheme-4",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "right",
-        "show_text_below": false
-      }
-    },
-    "rich_text_cL9yQE": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-5",
-        "full_width": true,
-        "padding_top": 4,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_3BmcwA": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_PdPkMh": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why <strong>Future-10?</strong>",
+            "heading": "<strong>Li-Ning Future 10 – </strong><em><strong>Extra Durable</strong></em>",
             "heading_size": "h0"
           }
+        },
+        "caption_jYLbMn": {
+          "type": "caption",
+          "settings": {
+            "caption": "Premium goose feather shuttlecock engineered for serious players who demand consistency & durability.",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text_3nenyn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>✓ Official Li-Ning<br/>✓ BWF Approved<br/>✓ Fast Delivery<br/>✓ 100% Authentic</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_tqDFBT": {
+          "type": "button",
+          "settings": {
+            "button_label": "START PLAYING BETTER TODAY",
+            "button_link": "shopify://products/future-10-extra-durable",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
-        "heading_PdPkMh"
+        "heading_TXhQWr",
+        "caption_jYLbMn",
+        "text_3nenyn",
+        "button_tqDFBT"
       ],
       "custom_css": [
-        "strong{color:red;}"
+        "@media screen and (max-width: 768px) {.image-with-text__media {display: none; }}",
+        "em > strong {color: red;}"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collage_tH4qcQ": {
@@ -129,6 +121,7 @@
         "image_NjGecD",
         "image_AiaV86"
       ],
+      "disabled": true,
       "name": "t:sections.collage.presets.name",
       "settings": {
         "heading": "",
@@ -138,6 +131,221 @@
         "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
         "padding_top": 16,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_FtLfTQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_4MLYPD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/E_Commerce_03_663b0daaef.jpg",
+            "title": "<strong>Premium Goose Feather</strong>",
+            "text": "<p>16 hand-selected, natural goose feathers arranged for optimal aerodynamics. Delivers consistent flight path and professional feel every rally.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KqNJDj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/E_Commerce_04_178c938e15.jpg",
+            "title": "<strong>Tournament-Grade Cork</strong>",
+            "text": "<p>Precision-crafted cork base provides perfect weight distribution and superior impact resistance. Maintains shape and performance across multiple games.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4Rqg8e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6_87e3b313-946c-4dd2-a4a1-fbfeff8a8fa1.jpg",
+            "title": "<strong>Consistent Flight Stability</strong>",
+            "text": "<p>Advanced feather alignment technology ensures predictable trajectory. No wobbling, no surprises - just pure, accurate shots.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8TX9NA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5_4a93c470-c9f3-4bdd-8401-027fcfa1cc00.jpg",
+            "title": "<strong>Optimal Speed Rating - 77</strong>",
+            "text": "<p>Calibrated for competitive play in all conditions. Fast, responsive flight that meets international standards.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EXqfYh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/7_881122e0-ed65-4047-a040-7809d010a0e7.jpg",
+            "title": "<strong>Extra Durable Construction</strong>",
+            "text": "<p>Built with reinforced goose feathers and high-density cork base. Withstands powerful smashes and lasts significantly longer than standard shuttlecocks.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YTgTAx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/8.jpg",
+            "title": "<strong>Professional Quality Control</strong>",
+            "text": "<p>Each shuttlecock undergoes rigorous inspection. Only perfect pieces make it into the tube - guaranteed.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_4MLYPD",
+        "column_KqNJDj",
+        "column_4Rqg8e",
+        "column_8TX9NA",
+        "column_EXqfYh",
+        "column_YTgTAx"
+      ],
+      "custom_css": [
+        "strong {color: red;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Engineered for <strong>Performance</strong>",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "GET PREMIUM PERFORMANCE NOW",
+        "button_link": "shopify://products/future-10-extra-durable",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_rpRBHy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wyHbTK": {
+          "type": "column",
+          "settings": {
+            "title": "Competitive Players",
+            "text": "<p>Tournament-level performance and durability you can rely on during crucial matches.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7r8W48": {
+          "type": "column",
+          "settings": {
+            "title": "Club Players",
+            "text": "<p>Quality shuttlecocks that last longer, reducing costs while maintaining high standards.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hwCe6j": {
+          "type": "column",
+          "settings": {
+            "title": "Serious Enthusiasts",
+            "text": "<p>For players who take their game seriously and want professional-grade equipment.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eUeg8F": {
+          "type": "column",
+          "settings": {
+            "title": "Coaching Academies",
+            "text": "<p>Bulk-friendly pricing and durability make it ideal for training sessions and practice matches.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EwLFqD": {
+          "type": "column",
+          "settings": {
+            "title": "Weekend Warriors",
+            "text": "<p>Get the most out of every game without constantly replacing shuttlecocks.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wyHbTK",
+        "column_7r8W48",
+        "column_hwCe6j",
+        "column_eUeg8F",
+        "column_EwLFqD"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Perfect For</strong>",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "FIND YOUR PERFECT PACK",
+        "button_link": "shopify://products/future-10-extra-durable",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_UDMJgz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ggVgRJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Li-Ning Future 10?</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_ckzbKA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Superior Durability</strong><br/>Extra durable construction means more games per shuttlecock. Play more, replace less, and get better value from every tube.</p><p><strong>Trusted Brand</strong><br/>Li-Ning is the official equipment sponsor of major badminton tournaments worldwide. Used and trusted by professional players.</p><p><strong>Consistent Performance</strong><br/>Every shuttlecock delivers the same high-quality performance. Practice and play with confidence knowing your equipment won't let you down.</p><p><strong>Cost-Effective</strong><br/>Premium quality at a competitive price. Better durability means lower cost per game compared to cheaper alternatives.</p><p><strong>BWF Specifications</strong><br/>Meets Badminton World Federation standards for speed, weight, and flight characteristics. Tournament-ready right out of the tube.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_A8jQaF": {
+          "type": "button",
+          "settings": {
+            "button_label": "EXPERIENCE THE DIFFERENCE",
+            "button_link": "shopify://products/future-10-extra-durable",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_ggVgRJ",
+        "text_ckzbKA",
+        "button_A8jQaF"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/E_Commerce_0_1_cbbb0b533c.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -219,21 +427,21 @@
         "heading_DR6BtN": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "<strong>Elevate Your Game Today</strong>",
             "heading_size": "h1"
           }
         },
         "text_gXc4ht": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Experience tournament-grade performance with Li-Ning Future 10. Order now and play with the shuttlecock trusted by champions.</p>"
           }
         },
         "button_tcmmV8": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "UPGRADE YOUR GAME NOW",
+            "button_link": "shopify://products/future-10-extra-durable",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -256,50 +464,54 @@
         "padding_bottom": 52
       }
     },
-    "image_with_text_UXVrdq": {
-      "type": "image-with-text",
+    "collapsible_content_j39AhM": {
+      "type": "collapsible-content",
       "blocks": {
-        "heading_TXhQWr": {
-          "type": "heading",
+        "collapsible_row_FFcCMn": {
+          "type": "collapsible_row",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
+            "heading": "What makes Future 10 \"extra durable\"?",
+            "icon": "question_mark",
+            "row_content": "<p>Reinforced feather construction and high-density cork base that withstands intense play.</p>",
+            "page": ""
           }
         },
-        "text_3nenyn": {
-          "type": "text",
+        "collapsible_row_7NcQNG": {
+          "type": "collapsible_row",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "heading": "Is this suitable for tournaments?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, Future 10 meets BWF specifications and is approved for competitive play.</p>",
+            "page": ""
           }
         },
-        "button_tqDFBT": {
-          "type": "button",
+        "collapsible_row_FGNNUN": {
+          "type": "collapsible_row",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "heading": "How many games per shuttlecock?",
+            "icon": "question_mark",
+            "row_content": "<p>Typically 6-8 games with proper use, depending on play intensity.</p>",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "heading_TXhQWr",
-        "text_3nenyn",
-        "button_tqDFBT"
+        "collapsible_row_FFcCMn",
+        "collapsible_row_7NcQNG",
+        "collapsible_row_FGNNUN"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
+        "caption": "",
+        "heading": "<strong>QUICK FAQ</strong>",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
         "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -308,12 +520,13 @@
   "order": [
     "main",
     "hero_video_component_rcxAff",
-    "image_banner_7MVCni",
-    "rich_text_cL9yQE",
-    "rich_text_3BmcwA",
+    "image_with_text_UXVrdq",
     "collage_tH4qcQ",
+    "multicolumn_FtLfTQ",
+    "multicolumn_rpRBHy",
+    "image_with_text_UDMJgz",
     "multirow_9DVmjp",
     "rich_text_yYibri",
-    "image_with_text_UXVrdq"
+    "collapsible_content_j39AhM"
   ]
 }
