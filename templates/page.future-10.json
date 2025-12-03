@@ -28,7 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/future-10-extra-durable",
-        "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
+        "color_scheme": "scheme-5",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -61,7 +61,7 @@
         "button_tqDFBT": {
           "type": "button",
           "settings": {
-            "button_label": "START PLAYING BETTER TODAY",
+            "button_label": "SHOP NOW",
             "button_link": "shopify://products/future-10-extra-durable",
             "button_style_secondary": false
           }
@@ -220,7 +220,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -283,9 +283,12 @@
         "column_eUeg8F",
         "column_EwLFqD"
       ],
+      "custom_css": [
+        "strong {color: red;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<strong>Perfect For</strong>",
+        "title": "<strong>Perfect</strong> For",
         "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -307,7 +310,7 @@
         "heading_ggVgRJ": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Why Choose Li-Ning Future 10?</strong>",
+            "heading": "Why Choose<strong> Li-Ning Future 10</strong>?",
             "heading_size": "h1"
           }
         },
@@ -332,6 +335,9 @@
         "text_ckzbKA",
         "button_A8jQaF"
       ],
+      "custom_css": [
+        ".image-with-text__heading > strong {color: Red;}"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/E_Commerce_0_1_cbbb0b533c.jpg",
@@ -349,85 +355,13 @@
         "padding_bottom": 36
       }
     },
-    "multirow_9DVmjp": {
-      "type": "multirow",
-      "blocks": {
-        "row_kY9qLx": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/7_881122e0-ed65-4047-a040-7809d010a0e7.jpg",
-            "caption": "",
-            "heading": "Ultra-Durable Build",
-            "text": "<p>Crafted with reinforced materials that withstand aggressive rallies, powerful smashes, and long training sessions without losing shape or consistency.</p>",
-            "button_label": "Explore Durability",
-            "button_link": ""
-          }
-        },
-        "row_AqzADr": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/5_4a93c470-c9f3-4bdd-8401-027fcfa1cc00.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "row_mqKiWt": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/6_87e3b313-946c-4dd2-a4a1-fbfeff8a8fa1.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "row_3rMdik": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/8.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_kY9qLx",
-        "row_AqzADr",
-        "row_mqKiWt",
-        "row_3rMdik"
-      ],
-      "disabled": true,
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h0",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-2",
-        "row_color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_yYibri": {
       "type": "rich-text",
       "blocks": {
         "heading_DR6BtN": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Elevate Your Game Today</strong>",
+            "heading": "Elevate Your Game<strong> Today</strong>",
             "heading_size": "h1"
           }
         },
@@ -453,6 +387,9 @@
         "heading_DR6BtN",
         "text_gXc4ht",
         "button_tcmmV8"
+      ],
+      "custom_css": [
+        "strong {color: red;}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -525,7 +462,6 @@
     "multicolumn_FtLfTQ",
     "multicolumn_rpRBHy",
     "image_with_text_UDMJgz",
-    "multirow_9DVmjp",
     "rich_text_yYibri",
     "collapsible_content_j39AhM"
   ]
