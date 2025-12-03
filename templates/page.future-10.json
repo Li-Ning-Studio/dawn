@@ -39,23 +39,16 @@
         "heading_TXhQWr": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Li-Ning Future 10 – </strong><em><strong>Extra Durable</strong></em>",
+            "heading": "Future 10<strong> </strong>-<strong> Extra Durable</strong>",
             "heading_size": "h0"
           }
         },
         "caption_jYLbMn": {
           "type": "caption",
           "settings": {
-            "caption": "Premium goose feather shuttlecock engineered for serious players who demand consistency & durability.",
+            "caption": "Premium nylon shuttlecock engineered for serious players who demand consistency and durability.",
             "text_style": "subtitle",
-            "text_size": "medium"
-          }
-        },
-        "text_3nenyn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>✓ Official Li-Ning<br/>✓ BWF Approved<br/>✓ Fast Delivery<br/>✓ 100% Authentic</p>",
-            "text_style": "subtitle"
+            "text_size": "small"
           }
         },
         "button_tqDFBT": {
@@ -70,16 +63,14 @@
       "block_order": [
         "heading_TXhQWr",
         "caption_jYLbMn",
-        "text_3nenyn",
         "button_tqDFBT"
       ],
       "custom_css": [
-        "@media screen and (max-width: 768px) {.image-with-text__media {display: none; }}",
-        "em > strong {color: red;}"
+        ".image-with-text__media-item {display: none;}",
+        "strong {color: red;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -87,140 +78,104 @@
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 4
       }
     },
-    "collage_tH4qcQ": {
+    "collage_ggmqVq": {
       "type": "collage",
       "blocks": {
-        "image_4NYTYa": {
+        "image_idWVgP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/8.jpg"
+            "image": "shopify://shop_images/Artboard_3.jpg"
           }
         },
-        "image_NjGecD": {
+        "image_zejyPz": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/5_4a93c470-c9f3-4bdd-8401-027fcfa1cc00.jpg"
           }
         },
-        "image_AiaV86": {
+        "image_CW99Tp": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/6_87e3b313-946c-4dd2-a4a1-fbfeff8a8fa1.jpg"
+            "image": "shopify://shop_images/8.jpg"
           }
         }
       },
       "block_order": [
-        "image_4NYTYa",
-        "image_NjGecD",
-        "image_AiaV86"
+        "image_idWVgP",
+        "image_zejyPz",
+        "image_CW99Tp"
       ],
-      "disabled": true,
+      "custom_css": [],
       "name": "t:sections.collage.presets.name",
       "settings": {
         "heading": "",
         "heading_size": "h1",
         "desktop_layout": "left",
-        "mobile_layout": "column",
+        "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 16,
+        "color_scheme": "",
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
-    "multicolumn_FtLfTQ": {
+    "multicolumn_BtgfYA": {
       "type": "multicolumn",
       "blocks": {
-        "column_4MLYPD": {
+        "column_KzedJM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/E_Commerce_02_d07ab31e67.jpg",
+            "title": "Extra Durable Build",
+            "text": "<p>Built with high-grade nylon and reinforced cork base. Withstands powerful smashes and lasts significantly longer than standard shuttlecocks.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_m4Rrme": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/E_Commerce_03_663b0daaef.jpg",
-            "title": "<strong>Premium Goose Feather</strong>",
-            "text": "<p>16 hand-selected, natural goose feathers arranged for optimal aerodynamics. Delivers consistent flight path and professional feel every rally.</p>",
+            "title": "Premium Nylon Material",
+            "text": "<p>Advanced nylon construction designed for optimal aerodynamics. Delivers consistent flight path and professional feel every rally.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_KqNJDj": {
+        "column_K7xYQc": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/E_Commerce_04_178c938e15.jpg",
-            "title": "<strong>Tournament-Grade Cork</strong>",
+            "title": "Professional-Grade Cork",
             "text": "<p>Precision-crafted cork base provides perfect weight distribution and superior impact resistance. Maintains shape and performance across multiple games.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_4Rqg8e": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/6_87e3b313-946c-4dd2-a4a1-fbfeff8a8fa1.jpg",
-            "title": "<strong>Consistent Flight Stability</strong>",
-            "text": "<p>Advanced feather alignment technology ensures predictable trajectory. No wobbling, no surprises - just pure, accurate shots.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_8TX9NA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/5_4a93c470-c9f3-4bdd-8401-027fcfa1cc00.jpg",
-            "title": "<strong>Optimal Speed Rating - 77</strong>",
-            "text": "<p>Calibrated for competitive play in all conditions. Fast, responsive flight that meets international standards.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_EXqfYh": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/7_881122e0-ed65-4047-a040-7809d010a0e7.jpg",
-            "title": "<strong>Extra Durable Construction</strong>",
-            "text": "<p>Built with reinforced goose feathers and high-density cork base. Withstands powerful smashes and lasts significantly longer than standard shuttlecocks.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_YTgTAx": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/8.jpg",
-            "title": "<strong>Professional Quality Control</strong>",
-            "text": "<p>Each shuttlecock undergoes rigorous inspection. Only perfect pieces make it into the tube - guaranteed.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_4MLYPD",
-        "column_KqNJDj",
-        "column_4Rqg8e",
-        "column_8TX9NA",
-        "column_EXqfYh",
-        "column_YTgTAx"
-      ],
-      "custom_css": [
-        "strong {color: red;}"
+        "column_KzedJM",
+        "column_m4Rrme",
+        "column_K7xYQc"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Engineered for <strong>Performance</strong>",
+        "title": "",
         "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "GET PREMIUM PERFORMANCE NOW",
+        "button_label": "GET NOW",
         "button_link": "shopify://products/future-10-extra-durable",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -234,7 +189,7 @@
           "type": "column",
           "settings": {
             "title": "Competitive Players",
-            "text": "<p>Tournament-level performance and durability you can rely on during crucial matches.</p>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -243,7 +198,7 @@
           "type": "column",
           "settings": {
             "title": "Club Players",
-            "text": "<p>Quality shuttlecocks that last longer, reducing costs while maintaining high standards.</p>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -252,7 +207,7 @@
           "type": "column",
           "settings": {
             "title": "Serious Enthusiasts",
-            "text": "<p>For players who take their game seriously and want professional-grade equipment.</p>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -261,7 +216,7 @@
           "type": "column",
           "settings": {
             "title": "Coaching Academies",
-            "text": "<p>Bulk-friendly pricing and durability make it ideal for training sessions and practice matches.</p>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -270,7 +225,7 @@
           "type": "column",
           "settings": {
             "title": "Weekend Warriors",
-            "text": "<p>Get the most out of every game without constantly replacing shuttlecocks.</p>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -297,11 +252,11 @@
         "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 20
       }
     },
     "image_with_text_UDMJgz": {
@@ -317,7 +272,7 @@
         "text_ckzbKA": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Superior Durability</strong><br/>Extra durable construction means more games per shuttlecock. Play more, replace less, and get better value from every tube.</p><p><strong>Trusted Brand</strong><br/>Li-Ning is the official equipment sponsor of major badminton tournaments worldwide. Used and trusted by professional players.</p><p><strong>Consistent Performance</strong><br/>Every shuttlecock delivers the same high-quality performance. Practice and play with confidence knowing your equipment won't let you down.</p><p><strong>Cost-Effective</strong><br/>Premium quality at a competitive price. Better durability means lower cost per game compared to cheaper alternatives.</p><p><strong>BWF Specifications</strong><br/>Meets Badminton World Federation standards for speed, weight, and flight characteristics. Tournament-ready right out of the tube.</p>",
+            "text": "<ul><li>Extra Durable Nylon Construction</li><li>Consistent Flight Stability</li><li>Professional-Grade Cork Base</li><li>Trusted Li-Ning Brand</li><li>Cost-Effective Value</li><li>All-Weather Performance</li><li>Ideal for All Skill Levels<br/></li></ul>",
             "text_style": "body"
           }
         },
@@ -458,8 +413,8 @@
     "main",
     "hero_video_component_rcxAff",
     "image_with_text_UXVrdq",
-    "collage_tH4qcQ",
-    "multicolumn_FtLfTQ",
+    "collage_ggmqVq",
+    "multicolumn_BtgfYA",
     "multicolumn_rpRBHy",
     "image_with_text_UDMJgz",
     "rich_text_yYibri",
