@@ -34,6 +34,13 @@
           "type": "price",
           "settings": {}
         },
+        "variant_picker_QMTREK": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
         "inventory_TRQbr4": {
           "type": "inventory",
           "settings": {
@@ -98,6 +105,7 @@
         "title",
         "caption",
         "price",
+        "variant_picker_QMTREK",
         "inventory_TRQbr4",
         "quantity_selector",
         "buy_buttons",
