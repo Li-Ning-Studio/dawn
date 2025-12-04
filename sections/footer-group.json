@@ -14,48 +14,41 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_yMcbkD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hundred-logo_1_e2d127b5-30ef-435a-8b07-1b3ab632ad81.png",
+            "image_width": 155,
+            "alignment": ""
+          }
+        },
         "comm_channel_LtGX8G": {
           "type": "comm_channel",
           "settings": {
             "channel_label": "Mail",
-            "channel_link": "mailto:support@hndrd.co"
+            "channel_link": "mailto:jakob@sportbiz.dk"
           }
         },
         "comm_channel_kMqUag": {
           "type": "comm_channel",
           "settings": {
             "channel_label": "WhatsApp",
-            "channel_link": "https://wa.me/+91-8707204138"
+            "channel_link": "https://wa.me/+4531310449"
           }
         },
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "heading": "Collections",
+            "menu": "main-menu"
           }
         }
       },
       "block_order": [
+        "image_yMcbkD",
         "comm_channel_LtGX8G",
         "comm_channel_kMqUag",
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer-0"
       ],
       "settings": {
         "color_scheme": "scheme-1",
