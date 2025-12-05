@@ -28,7 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/future-10-extra-durable",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -112,6 +112,7 @@
         "image_zejyPz",
         "image_CW99Tp"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.collage.presets.name",
       "settings": {
@@ -164,6 +165,9 @@
         "column_m4Rrme",
         "column_K7xYQc"
       ],
+      "custom_css": [
+        "div {background: white;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -175,138 +179,96 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "multicolumn_rpRBHy": {
-      "type": "multicolumn",
+    "rich_text_AVzNyr": {
+      "type": "rich-text",
       "blocks": {
-        "column_wyHbTK": {
-          "type": "column",
-          "settings": {
-            "title": "Competitive Players",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_7r8W48": {
-          "type": "column",
-          "settings": {
-            "title": "Club Players",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_hwCe6j": {
-          "type": "column",
-          "settings": {
-            "title": "Serious Enthusiasts",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_eUeg8F": {
-          "type": "column",
-          "settings": {
-            "title": "Coaching Academies",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_EwLFqD": {
-          "type": "column",
-          "settings": {
-            "title": "Weekend Warriors",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_wyHbTK",
-        "column_7r8W48",
-        "column_hwCe6j",
-        "column_eUeg8F",
-        "column_EwLFqD"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "strong {color: red;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<strong>Perfect</strong> For",
-        "heading_size": "h0",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "FIND YOUR PERFECT PACK",
-        "button_link": "shopify://products/future-10-extra-durable",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 20
-      }
-    },
-    "image_with_text_UDMJgz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_ggVgRJ": {
+        "heading_jdUGBX": {
           "type": "heading",
           "settings": {
             "heading": "Why Choose<strong> Li-Ning Future 10</strong>?",
             "heading_size": "h1"
           }
-        },
-        "text_ckzbKA": {
-          "type": "text",
+        }
+      },
+      "block_order": [
+        "heading_jdUGBX"
+      ],
+      "custom_css": [
+        "strong {color: red;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_E4Lxxw": {
+      "type": "multirow",
+      "blocks": {
+        "row_JmCyJr": {
+          "type": "row",
           "settings": {
-            "text": "<ul><li>Extra Durable Nylon Construction</li><li>Consistent Flight Stability</li><li>Professional-Grade Cork Base</li><li>Trusted Li-Ning Brand</li><li>Cost-Effective Value</li><li>All-Weather Performance</li><li>Ideal for All Skill Levels<br/></li></ul>",
-            "text_style": "body"
+            "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
+            "caption": "",
+            "heading": "Ideal for All Skill Levels",
+            "text": "<p>Perfect for everyone from competitive players to weekend enthusiasts. Professional-grade quality that's accessible for club players, academies, and serious recreational players.</p>",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "button_A8jQaF": {
-          "type": "button",
+        "row_MgThUH": {
+          "type": "row",
           "settings": {
-            "button_label": "EXPERIENCE THE DIFFERENCE",
-            "button_link": "shopify://products/future-10-extra-durable",
-            "button_style_secondary": true
+            "image": "shopify://shop_images/E_Commerce_06_7e8da25c82.jpg",
+            "caption": "",
+            "heading": "Consistent Flight Stability",
+            "text": "<p>Engineered for predictable trajectory every single rally. No wobbling, no unpredictable movements - just accurate, reliable flight that helps you play your best game.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_AGHEEw": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/E_Commerce_02_d07ab31e67.jpg",
+            "caption": "",
+            "heading": "Cost-Effective Value",
+            "text": "<p>Premium quality at a competitive price point. Longer durability means lower cost per game, saving you money in the long run.</p>",
+            "button_label": "GRAB NOW",
+            "button_link": "shopify://products/future-10-extra-durable"
           }
         }
       },
       "block_order": [
-        "heading_ggVgRJ",
-        "text_ckzbKA",
-        "button_A8jQaF"
+        "row_JmCyJr",
+        "row_MgThUH",
+        "row_AGHEEw"
       ],
-      "custom_css": [
-        ".image-with-text__heading > strong {color: Red;}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+      "custom_css": [],
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image": "shopify://shop_images/E_Commerce_0_1_cbbb0b533c.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "section_color_scheme": "",
-        "color_scheme": "",
+        "row_color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -416,8 +378,8 @@
     "image_with_text_UXVrdq",
     "collage_ggmqVq",
     "multicolumn_BtgfYA",
-    "multicolumn_rpRBHy",
-    "image_with_text_UDMJgz",
+    "rich_text_AVzNyr",
+    "multirow_E4Lxxw",
     "rich_text_yYibri",
     "collapsible_content_j39AhM"
   ]
