@@ -54,7 +54,6 @@
         },
         "product_highlight_cVhjEb": {
           "type": "product_highlight",
-          "disabled": true,
           "settings": {
             "title": "0% EMI on UPI",
             "description": "Pay <strong>{{ product.price_min | divided_by: 4 | money_with_currency }}</strong> now, rest later via Li-Ning Pay Later Powered by Snapmint. <a style=\"color:black\" href=\"javascript:startPop()\">View Plans</a>",
@@ -199,6 +198,7 @@
     },
     "custom_liquid_U8Jbjw": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<!-- Begin Shopify–snapmint-payment-cart JavaScript -->\n  <script type=\"text/javascript\">\n    var mid = '6909';\n  </script>\n  <script src=\"https://checkout-merchant.snapmint.com/js/v1/6909\" defer></script>\n  <!-- End Shopify-snapmint-payment JavaScript -->",
