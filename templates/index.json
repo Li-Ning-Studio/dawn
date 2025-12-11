@@ -143,6 +143,39 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "hero_component_9RUPpR": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_107e09d9-cc06-4d49-8fde-43602d9affad_1.png",
+        "mobile_image": "shopify://shop_images/Banner_R_64c453c6-cc22-4232-ac0c-9644214cd930_1.png",
+        "subtitle": "Kitbags",
+        "title": "PACK AND PLAY",
+        "description": "Go the distance with a kit bag that matches your ambition and endurance",
+        "button_text": "Explore More",
+        "link_to": "shopify://collections/badminton-kit-bag",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_TVKJVB": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Badminton Kit Bags",
+        "products": [
+          "trailblazer-badminton-kit-bag",
+          "utilitarian-kitbag",
+          "monolith-kit-bag",
+          "gravity-kit-bag"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -151,6 +184,8 @@
     "hero_component_V6wmjA",
     "swipeable_products_Qm683j",
     "hero_component_6BL9me",
-    "swipeable_products_fnPPyV"
+    "swipeable_products_fnPPyV",
+    "hero_component_9RUPpR",
+    "swipeable_products_TVKJVB"
   ]
 }
