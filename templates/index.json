@@ -113,12 +113,44 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "hero_component_6BL9me": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01.png",
+        "mobile_image": "shopify://shop_images/02.png",
+        "subtitle": "Phenom",
+        "title": "AHEAD OF IT'S TIME",
+        "description": "Our philosophy is to build beyond typical performance standards, delivering a feel that is advanced, refined, and distinctly ahead of its time.",
+        "button_text": "See More",
+        "link_to": "shopify://products/phenom",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_fnPPyV": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Phenom",
+        "products": [
+          "phenom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "responsive_slideshow_nrECad",
     "swipeable_products_9bRFtY",
     "hero_component_V6wmjA",
-    "swipeable_products_Qm683j"
+    "swipeable_products_Qm683j",
+    "hero_component_6BL9me",
+    "swipeable_products_fnPPyV"
   ]
 }
