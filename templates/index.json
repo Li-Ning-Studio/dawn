@@ -9,25 +9,116 @@
  */
 {
   "sections": {
-    "image_banner_PRpQch": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
+    "responsive_slideshow_nrECad": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_T3BzCy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_L_e0bd5e8f-54ef-49c2-ba3c-39230b5e8485.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_6b6a9d35-f42b-4e0e-bfb6-b77c27a91b79.jpg",
+            "heading": "FLAREON 700",
+            "subheading": "Fastest Racket in HNDRD’s lineup",
+            "button_label": "Check It Out",
+            "link": "shopify://products/flareon-700"
+          }
+        },
+        "slide_prgFF6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_L_81898631-9b30-48a6-875f-58a7e463f1a9.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_cbb4730e-fdec-4a41-a215-818b7d3eef77.jpg",
+            "heading": "HYFONIC 7",
+            "subheading": "Sharp, deliberate feedback on every stroke",
+            "button_label": "Explore Now",
+            "link": "shopify://products/hyfonic-7-4u"
+          }
+        },
+        "slide_brRnxY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_L_a023c1ac-74fe-4fcc-b4b4-d4ec9ad62209.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_ee48556b-64b9-48d7-a8b1-b13cbdebd890.jpg",
+            "heading": "NITRIX 70 VOLTA",
+            "subheading": "Play like a champion with the most powerful racket in your hand",
+            "button_label": "See More",
+            "link": "shopify://products/nitrix-70-volta"
+          }
+        },
+        "slide_Wwht7b": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_L_b62cb7aa-15d0-48d2-8aae-59b3d71e1f66.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_8a7620a9-5a55-4d22-aed2-35e8beb79071.jpg",
+            "heading": "NITRIX 70 VENOM",
+            "subheading": "Crafted for heavy smashes and offensive play",
+            "button_label": "Explore Now",
+            "link": "shopify://products/nitrix-70-venom"
+          }
+        }
+      },
+      "block_order": [
+        "slide_T3BzCy",
+        "slide_prgFF6",
+        "slide_brRnxY",
+        "slide_Wwht7b"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
+    },
+    "swipeable_products_9bRFtY": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_hj4i3jhj4i3jhj4i_1_e630baa1-7d03-492f-9402-1c97dbbb4da0.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "title": "Professional Rackets",
+        "products": [
+          "nitrix-70-venom",
+          "nitrix-70-volta",
+          "hyfonic-7-4u",
+          "flareon-700"
+        ],
+        "show_color_variants": false,
         "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_V6wmjA": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/ba_a5069c2c-81d5-4ac2-89b6-362ab76b9b1d.jpg",
+        "mobile_image": "shopify://shop_images/respo_11aa7fd0-2e2a-47d5-93be-5b6ccbc2cb67.jpg",
+        "subtitle": "Battle 900",
+        "title": "Competitive Dominance",
+        "description": "Slender, aerodynamic racket recommended by professionals.",
+        "button_text": "Explore More",
+        "link_to": "shopify://products/battle-900-4u",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_Qm683j": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Battle Series",
+        "products": [
+          "battle-900-4u",
+          "battle-900-3u"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
   "order": [
-    "image_banner_PRpQch"
+    "responsive_slideshow_nrECad",
+    "swipeable_products_9bRFtY",
+    "hero_component_V6wmjA",
+    "swipeable_products_Qm683j"
   ]
 }
