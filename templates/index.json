@@ -12,6 +12,17 @@
     "responsive_slideshow_nrECad": {
       "type": "responsive-slideshow",
       "blocks": {
+        "slide_Wwht7b": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_L_b62cb7aa-15d0-48d2-8aae-59b3d71e1f66.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_8a7620a9-5a55-4d22-aed2-35e8beb79071.jpg",
+            "heading": "NITRIX 70 VENOM",
+            "subheading": "Crafted for heavy smashes and offensive play",
+            "button_label": "Explore Now",
+            "link": "shopify://products/nitrix-70-venom"
+          }
+        },
         "slide_T3BzCy": {
           "type": "slide",
           "settings": {
@@ -44,24 +55,13 @@
             "button_label": "See More",
             "link": "shopify://products/nitrix-70-volta"
           }
-        },
-        "slide_Wwht7b": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Main_L_b62cb7aa-15d0-48d2-8aae-59b3d71e1f66.jpg",
-            "mobile_image": "shopify://shop_images/Main_R_8a7620a9-5a55-4d22-aed2-35e8beb79071.jpg",
-            "heading": "NITRIX 70 VENOM",
-            "subheading": "Crafted for heavy smashes and offensive play",
-            "button_label": "Explore Now",
-            "link": "shopify://products/nitrix-70-venom"
-          }
         }
       },
       "block_order": [
+        "slide_Wwht7b",
         "slide_T3BzCy",
         "slide_prgFF6",
-        "slide_brRnxY",
-        "slide_Wwht7b"
+        "slide_brRnxY"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
