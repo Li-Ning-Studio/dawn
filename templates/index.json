@@ -218,6 +218,42 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "hero_video_component_CqCaht": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Banner_2481964b-5a30-4200-b380-6777a5cad584 (1).mp4",
+        "mobile_video": "shopify://files/videos/Banner R_3115ff01-7519-4e78-b408-03342e796bf8 (1) (1).mp4",
+        "subtitle": "Hundred Essentials",
+        "title": "Move Like You Mean It",
+        "description": "Activewear engineered for performance, built for everyday hustle.",
+        "button_text": "Get Started",
+        "link_to": "shopify://collections/apparels",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_JgM9iX": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Apparels",
+        "products": [
+          "bladefire-t-shirt",
+          "burnout-womens-t-shirt",
+          "court-king-t-shirt",
+          "mens-shorts-1",
+          "women-shorts",
+          "skirts",
+          "skirt"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -230,6 +266,8 @@
     "hero_component_9RUPpR",
     "swipeable_products_TVKJVB",
     "hero_component_DhTXqp",
-    "swipeable_products_mfPUHG"
+    "swipeable_products_mfPUHG",
+    "hero_video_component_CqCaht",
+    "swipeable_products_JgM9iX"
   ]
 }
