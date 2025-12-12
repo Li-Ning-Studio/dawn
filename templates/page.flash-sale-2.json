@@ -30,6 +30,7 @@
     },
     "hero_video_component_RdFkwa": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/banner.mp4",
@@ -44,11 +45,27 @@
         "padding_bottom": 0
       }
     },
+    "hero_component_AFhdP9": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Main_Banner.png",
+        "mobile_image": "shopify://shop_images/Main_Banner_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_fYXKrh": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #57ab76 0%, #1db555 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Sport, Your Style</h1>",
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #57ab76 0%, #1db555 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Sport, Your Steal!</h1>",
         "color_scheme": "",
         "padding_top": 8,
         "padding_bottom": 0
@@ -57,13 +74,23 @@
     "multicolumn_M8qycr": {
       "type": "multicolumn",
       "blocks": {
+        "column_tdanAK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/resp.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Badminton",
+            "link": ""
+          }
+        },
         "column_QTEkyB": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Badminton.jpg",
             "title": "",
             "text": "",
-            "link_label": "Smash Prices Here!",
+            "link_label": "Cricket",
             "link": "shopify://collections/sale-badminton"
           }
         },
@@ -73,7 +100,7 @@
             "image": "shopify://shop_images/Cricket.jpg",
             "title": "",
             "text": "",
-            "link_label": "Boundary Breaking Offer!",
+            "link_label": "Pickleball",
             "link": "shopify://collections/sale-cricket"
           }
         },
@@ -83,12 +110,13 @@
             "image": "shopify://shop_images/Tennis.jpg",
             "title": "",
             "text": "",
-            "link_label": " Grab it, Smash it!",
+            "link_label": "Tennis",
             "link": "shopify://collections/sale-tennis"
           }
         }
       },
       "block_order": [
+        "column_tdanAK",
         "column_QTEkyB",
         "column_p3rQT9",
         "column_BFJ9qq"
@@ -101,7 +129,7 @@
         "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-1",
@@ -115,7 +143,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Favorites, Sorted by Category</h1>",
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  All Categories, Fresh Deals Category</h1>",
         "color_scheme": "",
         "padding_top": 8,
         "padding_bottom": 0
@@ -127,30 +155,30 @@
         "column_TUYcB8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Rackets.jpg",
+            "image": "shopify://shop_images/1_29a49192-a705-4d31-a7a3-fa1dc07b6612.png",
             "title": "",
             "text": "",
-            "link_label": " Serve Savings!",
+            "link_label": "Racket",
             "link": "shopify://collections/sale-rackets-1"
           }
         },
         "column_6MeRGw": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Shoes.jpg",
+            "image": "shopify://shop_images/2_df2628ad-12c8-49b9-bf4f-03eaad50826b.png",
             "title": "",
             "text": "",
-            "link_label": " Step It Up!",
+            "link_label": "Shoes",
             "link": "shopify://collections/sale-shoes"
           }
         },
         "column_VW6BAw": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Bags.jpg",
+            "image": "shopify://shop_images/3_ad8fd7b9-1c99-4e00-95b5-ab556add5462.png",
             "title": "",
             "text": "",
-            "link_label": "Pack Like a Pro",
+            "link_label": "Bags",
             "link": "shopify://collections/sale-bags"
           }
         }
@@ -165,7 +193,7 @@
         "title": "",
         "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
@@ -184,7 +212,7 @@
         "image_pUBjYa": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Pickleball_531e7607-1add-4f1b-ace1-6c4ba94f50e0.jpg"
+            "image": "shopify://shop_images/post_4.1.jpg"
           }
         },
         "product_DgchYB": {
@@ -421,7 +449,6 @@
         "column_HwB8bX": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_7.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -616,6 +643,7 @@
     "main",
     "countdown_timer_kxATRA",
     "hero_video_component_RdFkwa",
+    "hero_component_AFhdP9",
     "custom_liquid_fYXKrh",
     "multicolumn_M8qycr",
     "custom_liquid_g9bLdF",
