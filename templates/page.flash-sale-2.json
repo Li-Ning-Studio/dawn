@@ -217,44 +217,43 @@
         "padding_bottom": 0
       }
     },
-    "collage_chyhjH": {
+    "collage_XaiU67": {
       "type": "collage",
       "blocks": {
-        "image_pUBjYa": {
+        "image_hAL7LJ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/post_4.1.jpg"
+            "image": "shopify://shop_images/1_bb3f120a-0fcc-43c9-b9f2-da52af24591c.jpg"
           }
         },
-        "product_DgchYB": {
+        "product_LcP6Gi": {
           "type": "product",
           "settings": {
-            "product": "force-s-essentials-pack",
+            "product": "atomic-x-black-knight",
             "second_image": false
           }
         },
-        "collection_ExQKtC": {
-          "type": "collection",
+        "image_mpbitR": {
+          "type": "image",
           "settings": {
-            "collection": "pickleball"
+            "image": "shopify://shop_images/2_b29461f0-b6b3-4702-ac69-6b65310a109f.jpg"
           }
         }
       },
       "block_order": [
-        "image_pUBjYa",
-        "product_DgchYB",
-        "collection_ExQKtC"
+        "image_hAL7LJ",
+        "product_LcP6Gi",
+        "image_mpbitR"
       ],
-      "custom_css": [],
       "name": "t:sections.collage.presets.name",
       "settings": {
         "heading": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 12,
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -298,124 +297,45 @@
         "padding_bottom": 0
       }
     },
-    "collage_XaiU67": {
+    "collage_chyhjH": {
       "type": "collage",
       "blocks": {
-        "image_hAL7LJ": {
+        "image_pUBjYa": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1_bb3f120a-0fcc-43c9-b9f2-da52af24591c.jpg"
+            "image": "shopify://shop_images/post_4.1.jpg"
           }
         },
-        "product_LcP6Gi": {
+        "product_DgchYB": {
           "type": "product",
           "settings": {
-            "product": "atomic-x-black-knight",
+            "product": "force-s-essentials-pack",
             "second_image": false
           }
         },
-        "image_mpbitR": {
-          "type": "image",
+        "collection_ExQKtC": {
+          "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/2_b29461f0-b6b3-4702-ac69-6b65310a109f.jpg"
+            "collection": "pickleball"
           }
         }
       },
       "block_order": [
-        "image_hAL7LJ",
-        "product_LcP6Gi",
-        "image_mpbitR"
+        "image_pUBjYa",
+        "product_DgchYB",
+        "collection_ExQKtC"
       ],
+      "custom_css": [],
       "name": "t:sections.collage.presets.name",
       "settings": {
         "heading": "",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "desktop_layout": "left",
         "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 36,
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
         "padding_bottom": 36
-      }
-    },
-    "hero_component_YqaQVD": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/pro_rackets.png",
-        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/apparels",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_iLkcGi": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Champions Choice",
-        "products": [
-          "nuclear-60",
-          "z-tronic-100",
-          "t-fusion-800-attk-3u",
-          "t-fusion-800-attk-4u",
-          "t-fusion-800-ctrl",
-          "t-fusion-800-zoom",
-          "nuclear-72",
-          "ioniq-100-limited-edition",
-          "nuclear-78",
-          "ioniq-80",
-          "ioniq-80-limited-edition"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_ihqe7q": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/pro_rackets.png",
-        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/apparels",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_9jPGh3": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Swipeable Products",
-        "products": [
-          "t-fusion-tornado-5u",
-          "t-fusion-tornado",
-          "rock-sk-10",
-          "rock-sk-10-5u",
-          "t-fusion-assault",
-          "t-fusion-assault-5u",
-          "nitrix-pro-3u",
-          "nitrix-pro-4u",
-          "flutter-s-attk",
-          "flutter-s-ctrl",
-          "flutter-s-zoom"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "custom_liquid_cd3F96": {
@@ -481,6 +401,86 @@
         "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "hero_component_YqaQVD": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/pro_rackets.png",
+        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_iLkcGi": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Champions Choice",
+        "products": [
+          "nuclear-60",
+          "z-tronic-100",
+          "t-fusion-800-attk-3u",
+          "t-fusion-800-attk-4u",
+          "t-fusion-800-ctrl",
+          "t-fusion-800-zoom",
+          "nuclear-72",
+          "ioniq-100-limited-edition",
+          "nuclear-78",
+          "ioniq-80",
+          "ioniq-80-limited-edition"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_ihqe7q": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/pro_rackets.png",
+        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_9jPGh3": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "New Launch",
+        "products": [
+          "t-fusion-tornado-5u",
+          "t-fusion-tornado",
+          "rock-sk-10",
+          "rock-sk-10-5u",
+          "t-fusion-assault",
+          "t-fusion-assault-5u",
+          "nitrix-pro-3u",
+          "nitrix-pro-4u",
+          "flutter-s-attk",
+          "flutter-s-ctrl",
+          "flutter-s-zoom"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "custom_liquid_h3e4K6": {
@@ -725,15 +725,15 @@
     "custom_liquid_g9bLdF",
     "multicolumn_UWV9KM",
     "custom_liquid_bRbYdj",
-    "collage_chyhjH",
-    "collage_bcf6tY",
     "collage_XaiU67",
-    "hero_component_YqaQVD",
-    "swipeable_products_iLkcGi",
-    "hero_component_ihqe7q",
-    "swipeable_products_9jPGh3",
+    "collage_bcf6tY",
+    "collage_chyhjH",
     "custom_liquid_cd3F96",
     "collection_list_NHWedP",
+    "hero_component_YqaQVD",
+    "swipeable_products_9jPGh3",
+    "hero_component_ihqe7q",
+    "swipeable_products_iLkcGi",
     "custom_liquid_h3e4K6",
     "multicolumn_iqEeaH",
     "multicolumn_UmqqJf",
