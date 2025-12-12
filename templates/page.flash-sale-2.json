@@ -65,7 +65,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #57ab76 0%, #1db555 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Your Sport, Your Steal!</h1>",
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Your Sport, Your Steal!</h1>",
         "color_scheme": "",
         "padding_top": 8,
         "padding_bottom": 0
@@ -77,7 +77,7 @@
         "column_tdanAK": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/resp.jpg",
+            "image": "shopify://shop_images/1_a83d38b7-0e19-407f-b5a2-8a17c20e28ce.png",
             "title": "",
             "text": "",
             "link_label": "Badminton",
@@ -87,7 +87,7 @@
         "column_QTEkyB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Badminton.jpg",
+            "image": "shopify://shop_images/4_be92df18-3a6c-4ac7-b9c2-bc31bb750fde.png",
             "title": "",
             "text": "",
             "link_label": "Cricket",
@@ -97,7 +97,7 @@
         "column_p3rQT9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Cricket.jpg",
+            "image": "shopify://shop_images/2_62c015b2-9b9c-4f7a-b60b-c176a5e05754.png",
             "title": "",
             "text": "",
             "link_label": "Pickleball",
@@ -107,7 +107,7 @@
         "column_BFJ9qq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Tennis.jpg",
+            "image": "shopify://shop_images/3_eb435955-d465-45e0-8394-a6019f0217ca.png",
             "title": "",
             "text": "",
             "link_label": "Tennis",
@@ -135,7 +135,7 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 12,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -423,6 +423,18 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_iLkcGi": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Swipeable Products",
+        "products": [],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "multicolumn_UmqqJf": {
       "type": "multicolumn",
       "blocks": {
@@ -655,6 +667,7 @@
     "collage_bcf6tY",
     "multicolumn_iqEeaH",
     "hero_component_YqaQVD",
+    "swipeable_products_iLkcGi",
     "multicolumn_UmqqJf",
     "collage_XaiU67",
     "multicolumn_Pk8Ebq",
