@@ -419,46 +419,6 @@
         "padding_bottom": 0
       }
     },
-    "swipeable_products_iLkcGi": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Champions Choice",
-        "products": [
-          "nuclear-60",
-          "z-tronic-100",
-          "t-fusion-800-attk-3u",
-          "t-fusion-800-attk-4u",
-          "t-fusion-800-ctrl",
-          "t-fusion-800-zoom",
-          "nuclear-72",
-          "ioniq-100-limited-edition",
-          "nuclear-78",
-          "ioniq-80",
-          "ioniq-80-limited-edition"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_ihqe7q": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/pro_rackets.png",
-        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/apparels",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "swipeable_products_9jPGh3": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
@@ -483,8 +443,49 @@
         "padding_bottom": 20
       }
     },
+    "hero_component_ihqe7q": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/pro_rackets.png",
+        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_iLkcGi": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Champions Choice",
+        "products": [
+          "nuclear-60",
+          "z-tronic-100",
+          "t-fusion-800-attk-3u",
+          "t-fusion-800-attk-4u",
+          "t-fusion-800-ctrl",
+          "t-fusion-800-zoom",
+          "nuclear-72",
+          "ioniq-100-limited-edition",
+          "nuclear-78",
+          "ioniq-80",
+          "ioniq-80-limited-edition"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "custom_liquid_h3e4K6": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f9d423 0%, #f83600 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Our Favorite Picks, Now on Offer!</h1>",
@@ -521,6 +522,7 @@
         "column_Fk4APc",
         "column_rJ6KbT"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -577,6 +579,7 @@
         "column_gp6WYe",
         "column_HwB8bX"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -634,6 +637,7 @@
         "column_er9pcR",
         "column_QLqWmG"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -691,7 +695,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "",
+            "button_link": "shopify://collections/dec-flash-sale",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -710,7 +714,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 52
       }
     }
