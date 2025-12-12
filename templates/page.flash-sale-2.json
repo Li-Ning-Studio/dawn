@@ -188,6 +188,7 @@
         "column_6MeRGw",
         "column_VW6BAw"
       ],
+      "custom_css": [],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -202,7 +203,17 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 32,
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_bRbYdj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #f43b47 30%, #673fe7 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Best Sellers!</h1>",
+        "color_scheme": "scheme-1",
+        "padding_top": 8,
         "padding_bottom": 0
       }
     },
@@ -234,6 +245,7 @@
         "product_DgchYB",
         "collection_ExQKtC"
       ],
+      "custom_css": [],
       "name": "t:sections.collage.presets.name",
       "settings": {
         "heading": "",
@@ -241,9 +253,169 @@
         "desktop_layout": "left",
         "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "collage_bcf6tY": {
+      "type": "collage",
+      "blocks": {
+        "product_KCH4re": {
+          "type": "product",
+          "settings": {
+            "product": "hyper-turf",
+            "second_image": false
+          }
+        },
+        "image_EdRJNc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Responsive_3_d7352f9f-f764-4fc5-96d0-c02586deeae3.jpg"
+          }
+        },
+        "image_GCdTar": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_9f60d1d1-7646-4f56-b4f9-149f8167a272.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_KCH4re",
+        "image_EdRJNc",
+        "image_GCdTar"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "none",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collage_XaiU67": {
+      "type": "collage",
+      "blocks": {
+        "image_hAL7LJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_bb3f120a-0fcc-43c9-b9f2-da52af24591c.jpg"
+          }
+        },
+        "product_LcP6Gi": {
+          "type": "product",
+          "settings": {
+            "product": "atomic-x-black-knight",
+            "second_image": false
+          }
+        },
+        "image_mpbitR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_b29461f0-b6b3-4702-ac69-6b65310a109f.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_hAL7LJ",
+        "product_LcP6Gi",
+        "image_mpbitR"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "hero_component_YqaQVD": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/pro_rackets.png",
+        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_iLkcGi": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Champions Choice",
+        "products": [
+          "nuclear-60",
+          "z-tronic-100",
+          "t-fusion-800-attk-3u",
+          "t-fusion-800-attk-4u",
+          "t-fusion-800-ctrl",
+          "t-fusion-800-zoom",
+          "nuclear-72",
+          "ioniq-100-limited-edition",
+          "nuclear-78",
+          "ioniq-80",
+          "ioniq-80-limited-edition"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_ihqe7q": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/pro_rackets.png",
+        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_9jPGh3": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Swipeable Products",
+        "products": [
+          "t-fusion-tornado-5u",
+          "t-fusion-tornado",
+          "rock-sk-10",
+          "rock-sk-10-5u",
+          "t-fusion-assault",
+          "t-fusion-assault-5u",
+          "nitrix-pro-3u",
+          "nitrix-pro-4u",
+          "flutter-s-attk",
+          "flutter-s-ctrl",
+          "flutter-s-zoom"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "custom_liquid_cd3F96": {
@@ -321,46 +493,6 @@
         "padding_bottom": 0
       }
     },
-    "collage_bcf6tY": {
-      "type": "collage",
-      "blocks": {
-        "image_GCdTar": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_9f60d1d1-7646-4f56-b4f9-149f8167a272.jpg"
-          }
-        },
-        "product_KCH4re": {
-          "type": "product",
-          "settings": {
-            "product": "hyper-turf",
-            "second_image": false
-          }
-        },
-        "image_EdRJNc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Responsive_3_d7352f9f-f764-4fc5-96d0-c02586deeae3.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_GCdTar",
-        "product_KCH4re",
-        "image_EdRJNc"
-      ],
-      "name": "t:sections.collage.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "none",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn_iqEeaH": {
       "type": "multicolumn",
       "blocks": {
@@ -405,34 +537,6 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "hero_component_YqaQVD": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/pro_rackets.png",
-        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/apparels",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_iLkcGi": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Swipeable Products",
-        "products": [],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "multicolumn_UmqqJf": {
@@ -489,46 +593,6 @@
         "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 0
-      }
-    },
-    "collage_XaiU67": {
-      "type": "collage",
-      "blocks": {
-        "product_LcP6Gi": {
-          "type": "product",
-          "settings": {
-            "product": "atomic-x-black-knight",
-            "second_image": false
-          }
-        },
-        "image_mpbitR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_b29461f0-b6b3-4702-ac69-6b65310a109f.jpg"
-          }
-        },
-        "image_hAL7LJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/1_bb3f120a-0fcc-43c9-b9f2-da52af24591c.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "product_LcP6Gi",
-        "image_mpbitR",
-        "image_hAL7LJ"
-      ],
-      "name": "t:sections.collage.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "right",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn_Pk8Ebq": {
@@ -660,16 +724,19 @@
     "multicolumn_M8qycr",
     "custom_liquid_g9bLdF",
     "multicolumn_UWV9KM",
+    "custom_liquid_bRbYdj",
     "collage_chyhjH",
+    "collage_bcf6tY",
+    "collage_XaiU67",
+    "hero_component_YqaQVD",
+    "swipeable_products_iLkcGi",
+    "hero_component_ihqe7q",
+    "swipeable_products_9jPGh3",
     "custom_liquid_cd3F96",
     "collection_list_NHWedP",
     "custom_liquid_h3e4K6",
-    "collage_bcf6tY",
     "multicolumn_iqEeaH",
-    "hero_component_YqaQVD",
-    "swipeable_products_iLkcGi",
     "multicolumn_UmqqJf",
-    "collage_XaiU67",
     "multicolumn_Pk8Ebq",
     "hero_component_fhYexr",
     "rich_text_7RQYxR"
