@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_component_6E6fBf": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Home_Banner_9d7d4fd3-a3cb-4eb4-95e5-e9084dd91306.png",
+        "mobile_image": "shopify://shop_images/Home_Banner_R_9242c604-79f7-4f8a-8fd3-5b971ee36704.png",
+        "subtitle": "  Live for 24 Hours only!",
+        "title": "Define the Culture",
+        "description": "With the HNDRD steal of the Season",
+        "button_text": "Check out Now!",
+        "link_to": "shopify://pages/flash-sale",
+        "color_scheme": "scheme-b7e439ba-31a9-4c3f-af23-2041822a8f4a",
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
     "hero_video_component_MnJ8yg": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -573,6 +589,7 @@
     }
   },
   "order": [
+    "hero_component_6E6fBf",
     "hero_video_component_MnJ8yg",
     "responsive_slideshow_Ma699H",
     "swipeable_products_Y8n63R",
