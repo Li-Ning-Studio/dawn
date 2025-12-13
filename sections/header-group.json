@@ -43,18 +43,6 @@
         "enable_language_selector": false
       }
     },
-    "countdown_timer_YRTqgi": {
-      "type": "countdown-timer",
-      "disabled": true,
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Flash Sale Ends Soon!",
-        "end_time": "2025-12-15 00:00",
-        "background": "linear-gradient(0deg, rgba(105, 56, 244, 1), rgba(60, 40, 118, 1) 100%)",
-        "text_color": "#ffffff",
-        "padding_top": 16
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -77,7 +65,6 @@
   },
   "order": [
     "announcement-bar",
-    "countdown_timer_YRTqgi",
     "header"
   ]
 }
