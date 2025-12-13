@@ -43,6 +43,18 @@
         "enable_language_selector": false
       }
     },
+    "countdown_timer_6zkjxL": {
+      "type": "countdown-timer",
+      "disabled": true,
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Flash Sale Ends Soon!",
+        "end_time": "2025-12-15 00:00",
+        "background": "linear-gradient(359deg, rgba(106, 55, 243, 1), rgba(68, 49, 116, 1) 100%)",
+        "text_color": "#ffffff",
+        "padding_top": 16
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -65,6 +77,7 @@
   },
   "order": [
     "announcement-bar",
+    "countdown_timer_6zkjxL",
     "header"
   ]
 }
