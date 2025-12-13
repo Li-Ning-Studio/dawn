@@ -315,14 +315,12 @@
         },
         "image_EdRJNc": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Responsive_3_d7352f9f-f764-4fc5-96d0-c02586deeae3.jpg"
-          }
+          "settings": {}
         },
         "image_GCdTar": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_9f60d1d1-7646-4f56-b4f9-149f8167a272.jpg"
+            "image": "shopify://shop_images/Post_01.jpg"
           }
         }
       },
@@ -406,7 +404,14 @@
         "image_pUBjYa": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/post_4.1.jpg"
+            "image": "shopify://shop_images/banner_responsive_4_1abf24ff-3763-44bb-9647-1085d5103ee3.png"
+          }
+        },
+        "product_7tUntP": {
+          "type": "product",
+          "settings": {
+            "product": "force-s-wide",
+            "second_image": false
           }
         },
         "product_DgchYB": {
@@ -415,18 +420,12 @@
             "product": "force-s-essentials-pack",
             "second_image": false
           }
-        },
-        "collection_ExQKtC": {
-          "type": "collection",
-          "settings": {
-            "collection": "pickleball"
-          }
         }
       },
       "block_order": [
         "image_pUBjYa",
-        "product_DgchYB",
-        "collection_ExQKtC"
+        "product_7tUntP",
+        "product_DgchYB"
       ],
       "custom_css": [],
       "name": "t:sections.collage.presets.name",
