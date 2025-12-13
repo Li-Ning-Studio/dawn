@@ -17,17 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "countdown_timer_kxATRA": {
-      "type": "countdown-timer",
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Countdown Begins! ⚡",
-        "end_time": "2025-06-09 00:00",
-        "background": "linear-gradient(120deg, rgba(253, 251, 251, 1), rgba(235, 237, 238, 1) 100%)",
-        "text_color": "#8348ff",
-        "padding_top": 16
-      }
-    },
     "hero_video_component_RdFkwa": {
       "type": "hero-video-component",
       "disabled": true,
@@ -55,7 +44,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/dec-flash-sale",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -706,7 +695,6 @@
   },
   "order": [
     "main",
-    "countdown_timer_kxATRA",
     "hero_video_component_RdFkwa",
     "hero_component_AFhdP9",
     "custom_liquid_fYXKrh",
