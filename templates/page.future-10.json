@@ -23,8 +23,8 @@
       "settings": {
         "video": "shopify://files/videos/yt.mp4",
         "mobile_video": "shopify://files/videos/sq.mp4",
-        "subtitle": "",
-        "title": "",
+        "subtitle": "Superior Flight. Precise Control. Unmatched Durability.",
+        "title": "Future 10 Shuttlecock",
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/future-10-extra-durable",
@@ -33,56 +33,43 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_UXVrdq": {
+    "image_with_text_YT4fqT": {
       "type": "image-with-text",
       "blocks": {
-        "heading_TXhQWr": {
+        "heading_JHqTcT": {
           "type": "heading",
           "settings": {
-            "heading": "Future 10<strong> </strong>-<strong> Extra Durable</strong>",
-            "heading_size": "h0"
+            "heading": "Perfect Flight, Longer Rallies, Every Single Game.",
+            "heading_size": "h1"
           }
         },
-        "caption_jYLbMn": {
-          "type": "caption",
-          "settings": {
-            "caption": "Premium nylon shuttlecock engineered for serious players who demand consistency and durability.",
-            "text_style": "subtitle",
-            "text_size": "small"
-          }
-        },
-        "button_tqDFBT": {
+        "button_zT6NPf": {
           "type": "button",
           "settings": {
-            "button_label": "SHOP NOW",
+            "button_label": "Shop Now",
             "button_link": "shopify://products/future-10-extra-durable",
             "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "heading_TXhQWr",
-        "caption_jYLbMn",
-        "button_tqDFBT"
-      ],
-      "custom_css": [
-        ".image-with-text__media-item {display: none;}",
-        "strong {color: red;}"
+        "heading_JHqTcT",
+        "button_zT6NPf"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "height": "adapt",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 4
+        "padding_bottom": 36
       }
     },
     "multicolumn_BtgfYA": {
@@ -238,20 +225,14 @@
         "heading_DR6BtN": {
           "type": "heading",
           "settings": {
-            "heading": "Elevate Your Game<strong> Today</strong>",
+            "heading": "Ready to <strong>Elevate </strong>Your Game?",
             "heading_size": "h1"
-          }
-        },
-        "text_gXc4ht": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Experience tournament-grade performance with Li-Ning Future 10. Order now and play with the shuttlecock trusted by champions.</p>"
           }
         },
         "button_tcmmV8": {
           "type": "button",
           "settings": {
-            "button_label": "UPGRADE YOUR GAME NOW",
+            "button_label": "Shop Future 10",
             "button_link": "shopify://products/future-10-extra-durable",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -262,7 +243,6 @@
       },
       "block_order": [
         "heading_DR6BtN",
-        "text_gXc4ht",
         "button_tcmmV8"
       ],
       "custom_css": [
@@ -334,7 +314,7 @@
   "order": [
     "main",
     "hero_video_component_rcxAff",
-    "image_with_text_UXVrdq",
+    "image_with_text_YT4fqT",
     "multicolumn_BtgfYA",
     "rich_text_AVzNyr",
     "multirow_E4Lxxw",
