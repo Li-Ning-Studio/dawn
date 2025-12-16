@@ -1,0 +1,719 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "hero_video_component_RdFkwa": {
+      "type": "hero-video-component",
+      "disabled": true,
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/banner.mp4",
+        "mobile_video": "shopify://files/videos/banner r.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/flash-sale",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_AFhdP9": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Main_Banner.png",
+        "mobile_image": "shopify://shop_images/Main_Banner_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/dec-flash-sale",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_fYXKrh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Your Sport, Your Steal!</h1>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_M8qycr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_tdanAK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_a83d38b7-0e19-407f-b5a2-8a17c20e28ce.png",
+            "title": "",
+            "text": "",
+            "link_label": "Badminton",
+            "link": "shopify://collections/badminton-dec-flash-sale"
+          }
+        },
+        "column_QTEkyB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_be92df18-3a6c-4ac7-b9c2-bc31bb750fde.png",
+            "title": "",
+            "text": "",
+            "link_label": "Cricket",
+            "link": "shopify://collections/cricket-shoe-dec-flash-sale"
+          }
+        },
+        "column_p3rQT9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_62c015b2-9b9c-4f7a-b60b-c176a5e05754.png",
+            "title": "",
+            "text": "",
+            "link_label": "Pickleball",
+            "link": "shopify://collections/pickleball"
+          }
+        },
+        "column_BFJ9qq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_eb435955-d465-45e0-8394-a6019f0217ca.png",
+            "title": "",
+            "text": "",
+            "link_label": "Tennis",
+            "link": "shopify://collections/tennis-racket-and-shoes"
+          }
+        }
+      },
+      "block_order": [
+        "column_tdanAK",
+        "column_QTEkyB",
+        "column_p3rQT9",
+        "column_BFJ9qq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_g9bLdF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  All Categories, Fresh Deals Category</h1>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_UWV9KM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TUYcB8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_29a49192-a705-4d31-a7a3-fa1dc07b6612.png",
+            "title": "",
+            "text": "",
+            "link_label": "Racket",
+            "link": "shopify://collections/badminton-rackets-dec-flash-sale"
+          }
+        },
+        "column_6MeRGw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_df2628ad-12c8-49b9-bf4f-03eaad50826b.png",
+            "title": "",
+            "text": "",
+            "link_label": "Shoes",
+            "link": "shopify://collections/badminton-shoes-dec-flash-sale"
+          }
+        },
+        "column_VW6BAw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_ad8fd7b9-1c99-4e00-95b5-ab556add5462.png",
+            "title": "",
+            "text": "",
+            "link_label": "Bags",
+            "link": "shopify://collections/badminton-bags-dec-flash-sale"
+          }
+        }
+      },
+      "block_order": [
+        "column_TUYcB8",
+        "column_6MeRGw",
+        "column_VW6BAw"
+      ],
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_bRbYdj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #f43b47 30%, #673fe7 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Best Sellers!</h1>",
+        "color_scheme": "scheme-1",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "collage_XaiU67": {
+      "type": "collage",
+      "blocks": {
+        "image_hAL7LJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_db4273a8-3895-4a6b-a48e-0ef6dc69630c.jpg"
+          }
+        },
+        "product_LcP6Gi": {
+          "type": "product",
+          "settings": {
+            "product": "atomic-x-black-knight",
+            "second_image": false
+          }
+        },
+        "image_mpbitR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_b29461f0-b6b3-4702-ac69-6b65310a109f.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_hAL7LJ",
+        "product_LcP6Gi",
+        "image_mpbitR"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_UmqqJf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cAbyYP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_884ae4ef-b77b-401d-bdbf-9c7471ed495f.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/predator-series-2"
+          }
+        },
+        "column_gp6WYe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/t-rex-800"
+          }
+        }
+      },
+      "block_order": [
+        "column_cAbyYP",
+        "column_gp6WYe"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 28
+      }
+    },
+    "collage_bcf6tY": {
+      "type": "collage",
+      "blocks": {
+        "product_KCH4re": {
+          "type": "product",
+          "settings": {
+            "product": "hyper-turf",
+            "second_image": false
+          }
+        },
+        "image_EdRJNc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Post_2.jpg"
+          }
+        },
+        "image_GCdTar": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Post_01.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_KCH4re",
+        "image_EdRJNc",
+        "image_GCdTar"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "none",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_Pk8Ebq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Gmi6yy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/raze"
+          }
+        },
+        "column_er9pcR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/blade-pro"
+          }
+        },
+        "column_QLqWmG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/7_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/court-shield"
+          }
+        }
+      },
+      "block_order": [
+        "column_Gmi6yy",
+        "column_er9pcR",
+        "column_QLqWmG"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_chyhjH": {
+      "type": "collage",
+      "blocks": {
+        "image_pUBjYa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_responsive_4_1abf24ff-3763-44bb-9647-1085d5103ee3.png"
+          }
+        },
+        "product_7tUntP": {
+          "type": "product",
+          "settings": {
+            "product": "force-s-wide",
+            "second_image": false
+          }
+        },
+        "product_DgchYB": {
+          "type": "product",
+          "settings": {
+            "product": "force-s-essentials-pack",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_pUBjYa",
+        "product_7tUntP",
+        "product_DgchYB"
+      ],
+      "custom_css": [],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_QC9cry": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_x79VCd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/10_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/rock-adventure-kit-bag"
+          }
+        },
+        "column_DanKUU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/9_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/monolith-kit-bag"
+          }
+        },
+        "column_XfYptK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/8_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/cosmogear-kit-bag"
+          }
+        },
+        "column_p6Jndq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/11_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/victory-vault-kit-bag"
+          }
+        }
+      },
+      "block_order": [
+        "column_x79VCd",
+        "column_DanKUU",
+        "column_XfYptK",
+        "column_p6Jndq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_cd3F96": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f43b47 0%, #ff0844 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  So Many Freebies, So Little Time!\n</h1>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_NHWedP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Fq6iTU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cricket-shoes"
+          }
+        },
+        "featured_collection_WTFDzc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-rackets"
+          }
+        },
+        "featured_collection_6MeMf7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "topwear"
+          }
+        },
+        "featured_collection_hbQc3N": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "brv2"
+          }
+        },
+        "featured_collection_9kjBni": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-drawstring-bag"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Fq6iTU",
+        "featured_collection_WTFDzc",
+        "featured_collection_6MeMf7",
+        "featured_collection_hbQc3N",
+        "featured_collection_9kjBni"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_YqaQVD": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/New_R.png",
+        "mobile_image": "shopify://shop_images/New.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/new-launch-dec-sale",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_9jPGh3": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "New Launch",
+        "products": [
+          "t-fusion-tornado-5u",
+          "t-fusion-tornado",
+          "rock-sk-10",
+          "rock-sk-10-5u",
+          "t-fusion-assault",
+          "t-fusion-assault-5u",
+          "nitrix-pro-3u",
+          "nitrix-pro-4u",
+          "flutter-s-attk",
+          "flutter-s-ctrl",
+          "flutter-s-zoom"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_ihqe7q": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/pro_rackets.png",
+        "mobile_image": "shopify://shop_images/pro_rackets_res.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/campions-bundle-dec-sale",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_iLkcGi": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Champions Choice",
+        "products": [
+          "nuclear-60",
+          "z-tronic-100",
+          "t-fusion-800-attk-3u",
+          "t-fusion-800-attk-4u",
+          "t-fusion-800-ctrl",
+          "t-fusion-800-zoom",
+          "nuclear-72",
+          "ioniq-100-limited-edition",
+          "nuclear-78",
+          "ioniq-80",
+          "ioniq-80-limited-edition"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_7RQYxR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TGxmtC": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_hUpCDK": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_mGPfDT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "shopify://collections/dec-flash-sale",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TGxmtC",
+        "text_hUpCDK",
+        "button_mGPfDT"
+      ],
+      "custom_css": [
+        "a {width: 70%; font-size: 150%; background: #6a37f3;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_video_component_RdFkwa",
+    "hero_component_AFhdP9",
+    "custom_liquid_fYXKrh",
+    "multicolumn_M8qycr",
+    "custom_liquid_g9bLdF",
+    "multicolumn_UWV9KM",
+    "custom_liquid_bRbYdj",
+    "collage_XaiU67",
+    "multicolumn_UmqqJf",
+    "collage_bcf6tY",
+    "multicolumn_Pk8Ebq",
+    "collage_chyhjH",
+    "multicolumn_QC9cry",
+    "custom_liquid_cd3F96",
+    "collection_list_NHWedP",
+    "hero_component_YqaQVD",
+    "swipeable_products_9jPGh3",
+    "hero_component_ihqe7q",
+    "swipeable_products_iLkcGi",
+    "rich_text_7RQYxR"
+  ]
+}
