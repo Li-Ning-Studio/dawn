@@ -107,30 +107,60 @@
         "padding_bottom": 20
       }
     },
-    "hero_component_RKxJeB": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/01_120f4f1a-0244-495f-bf3a-749c3b66f718.jpg",
-        "mobile_image": "shopify://shop_images/Predator_Racket_Poster.jpg",
-        "subtitle": "Predator Extra Strong Series",
-        "title": "Whip Like a Stingray",
-        "description": "Head-Heavy rackets with flexible shaft  for explosive smash power",
-        "button_text": "Get It Now!",
-        "link_to": "shopify://products/predator-82-extra-strong",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
+    "responsive_slideshow_EyqbQY": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_dLkD47": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ba_ca277f8d-d52e-489a-8019-60e950a36614.jpg",
+            "mobile_image": "shopify://shop_images/respo_8f47b2c4-faca-4608-bb31-f725723759a2.jpg",
+            "heading": "Light And Lethal",
+            "subheading": "Make your competitors face the light and lethal flutter, like a Monarch Butterfly!",
+            "button_label": "Get CTRL",
+            "link": "shopify://products/flutter-s-ctrl"
+          }
+        },
+        "slide_AyCNUG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ba_6d6351df-c986-4c6b-86d6-bd8117161f32.jpg",
+            "mobile_image": "shopify://shop_images/respo_ef7ba8c1-8bf5-427d-98d2-43a3712138d8.jpg",
+            "heading": "Lethal X Lightweight",
+            "subheading": "Take your victories to a new level with powerful shots and an enhanced aerodynamics.",
+            "button_label": "Shop ATTK",
+            "link": "shopify://products/flutter-s-attk"
+          }
+        },
+        "slide_cUQYAG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ba_93441423-453d-4b95-a4d9-476c8b203db6.jpg",
+            "mobile_image": "shopify://shop_images/respo_991095eb-93bd-41bf-bbb6-791f81666cc8.jpg",
+            "heading": "Fluttering Smashes",
+            "subheading": "Light-Weight rackets , Heavy-weight Smashes",
+            "button_label": "Shop ZOOM",
+            "link": "shopify://products/flutter-s-zoom"
+          }
+        }
+      },
+      "block_order": [
+        "slide_dLkD47",
+        "slide_AyCNUG",
+        "slide_cUQYAG"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
     },
     "swipeable_products_kQUykU": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Predator Series",
+        "title": "Flutter S Series",
         "products": [
-          "predator-82-extra-strong",
-          "predator-79-extra-strong"
+          "flutter-s-ctrl",
+          "flutter-s-attk",
+          "flutter-s-zoom"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -278,13 +308,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_613e196b-0835-4c8d-85d6-ddf6dc0a8378.jpg",
-        "mobile_image": "shopify://shop_images/Banner_responsive_3401f072-ccf7-4b69-9662-6cef71cc8e7f.jpg",
-        "subtitle": "Court Star Pro",
-        "title": "Let Your Game Speak For You",
-        "description": "Ultra stability to let you sway cross the court in ease",
-        "button_text": "Get It Now!",
-        "link_to": "shopify://products/court-star-pro",
+        "image": "shopify://shop_images/Banner_972d8086-27a7-4e8a-b712-65c6937a2244.jpg",
+        "mobile_image": "shopify://shop_images/Banner_R_12570c57-30a0-4f0f-867b-d6418aa13bc9.jpg",
+        "subtitle": "Court Champions",
+        "title": "Sole-ly For Champions",
+        "description": "Stand out in the court like a champion",
+        "button_text": "Reach For The Stars",
+        "link_to": "shopify://products/court-champions",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -294,9 +324,9 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Court Star Series",
+        "title": "Court Champions",
         "products": [
-          "court-star-pro"
+          "court-champions"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -308,13 +338,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner_7fdf5efe-7254-4817-aeb1-5c7bfd7577db.jpg",
-        "mobile_image": "shopify://shop_images/resp.jpg",
-        "subtitle": "T-Rex 800",
-        "title": "Rumbling Of High-Volt Smashes",
-        "description": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
-        "button_text": "Shop Now!",
-        "link_to": "shopify://products/t-rex-800",
+        "image": "shopify://shop_images/ba_f8e569ca-84d4-462e-afa9-00859ff26e58.jpg",
+        "mobile_image": "shopify://shop_images/ba_RESPONSIVE_fde946c2-7861-4754-9385-f1d06bb857a0.jpg",
+        "subtitle": "N-ERGY 80",
+        "title": "Turbocharge Your Attack",
+        "description": "Japanese carbon-fiber for swift strikes",
+        "button_text": "N-ergize Your Wins",
+        "link_to": "shopify://products/n-ergy-80",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -326,7 +356,7 @@
       "settings": {
         "title": "T-Rex 800",
         "products": [
-          "t-rex-800"
+          "n-ergy-80"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -356,13 +386,14 @@
       "settings": {
         "title": "Shop the Drop",
         "products": [
-          "celestial-t-shirt",
-          "burnout-t-shirt",
           "frostbite-tee",
+          "phantom-t-shirt",
+          "sprint-jacket",
           "stroller-shorts",
+          "celestial-t-shirt",
           "neoflex-shorts",
           "stride-trackpant",
-          "sprint-jacket"
+          "burnout-t-shirt"
         ],
         "show_color_variants": false,
         "color_scheme": "",
@@ -374,13 +405,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_5_78412f67-34bb-4c97-8da3-a9b86c245de4.jpg",
-        "mobile_image": "shopify://shop_images/Responsive_6_64233c9f-5c71-47c1-81b3-df547f732a46.jpg",
-        "subtitle": "HyperTurf Cricket Shoes",
-        "title": "Be The Master Of The Game",
-        "description": "Ultimate traction and breathability for an enhanced playing experience.",
+        "image": "shopify://shop_images/Banner_2_0d1405d1-ceab-43dc-8f38-703dc67cfdc5.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_responsive_1f351d0c-63ca-4490-af94-17215fb633a2.jpg",
+        "subtitle": "Terra Series",
+        "title": "Conqueror Of Pitches",
+        "description": "The ultimate traction and stability for running between wickets to leaping for a catch during fielding.",
         "button_text": "Get It Here!",
-        "link_to": "shopify://products/hyper-turf",
+        "link_to": "shopify://products/terrafield",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -392,7 +423,8 @@
       "settings": {
         "title": "HyperTurf Cricket Shoes",
         "products": [
-          "hyper-turf"
+          "terrafield",
+          "terralite"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -441,13 +473,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_883b26c5-fa5d-43f5-835d-bd7198012538.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_5db22780-a319-4de2-a89a-bd87bfcdc98e.jpg",
-        "subtitle": "Court Step PBX",
-        "title": "Sharp Steps. Total Control.",
-        "description": "Court Step PBX delivers light, stable, explosive movement for intense pickleball play.",
+        "image": "shopify://shop_images/8_ed8381f4-d36d-4689-9d87-ee3b4f98ba99.jpg",
+        "mobile_image": "shopify://shop_images/10_989a35e3-c8b2-4867-ba46-63603180ea54.jpg",
+        "subtitle": "Court Sonic PBX",
+        "title": "Grip you can trust",
+        "description": "Every moment starts with force. Court Sonic PBX turns it into flight. It loads when you stand. Sprint when you push. You do more than just move, you launch.",
         "button_text": "Get Yours Now!",
-        "link_to": "shopify://products/court-step-pbx",
+        "link_to": "shopify://products/court-sonic-pbx",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -459,7 +491,7 @@
       "settings": {
         "title": "Pickleball Shoes",
         "products": [
-          "court-step-pbx"
+          "court-sonic-pbx"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -537,14 +569,14 @@
       "settings": {
         "title": "LATEST BADMINTON KITBAGS",
         "products": [
+          "monolith-kit-bag",
+          "cosmogear-kit-bag",
+          "atomic-x-surge-kit-bag",
+          "urban-pod-kit-bag",
           "gravity-kit-bag",
           "trailblazer-badminton-kit-bag",
           "novus-backpack",
-          "monolith-kit-bag",
-          "atomic-x-surge-kit-bag",
-          "cosmogear-kit-bag",
           "switch-backpac",
-          "urban-pod-kit-bag",
           "zest-kit-bag",
           "victory-vault-kit-bag",
           "glacio-pack-kit-bag"
@@ -595,7 +627,7 @@
     "hero_video_component_MnJ8yg",
     "responsive_slideshow_Ma699H",
     "swipeable_products_Y8n63R",
-    "hero_component_RKxJeB",
+    "responsive_slideshow_EyqbQY",
     "swipeable_products_kQUykU",
     "multicolumn_g43TFV",
     "multicolumn_qhdqCY",
