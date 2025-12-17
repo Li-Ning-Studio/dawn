@@ -436,22 +436,22 @@
         "padding_bottom": 20
       }
     },
-    "rich_text_mb6xXM": {
-      "type": "rich-text",
+    "image_banner_mRUcKU": {
+      "type": "image-banner",
       "blocks": {
-        "heading_X99YiH": {
+        "heading_h94mLV": {
           "type": "heading",
           "settings": {
             "heading": "Explore Collection",
             "heading_size": "h0"
           }
         },
-        "button_F7QbYa": {
-          "type": "button",
+        "buttons_db7k4H": {
+          "type": "buttons",
           "settings": {
-            "button_label": "Shop All",
-            "button_link": "",
-            "button_style_secondary": false,
+            "button_label_1": "Shop Now",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -459,17 +459,22 @@
         }
       },
       "block_order": [
-        "heading_X99YiH",
-        "button_F7QbYa"
+        "heading_h94mLV",
+        "buttons_db7k4H"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image": "shopify://shop_images/Gemini_Generated_Image_wfmfrbwfmfrbwfmf.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
     }
   },
@@ -492,6 +497,6 @@
     "swipeable_products_4fxbje",
     "hero_component_QtQY4E",
     "swipeable_products_tVezQP",
-    "rich_text_mb6xXM"
+    "image_banner_mRUcKU"
   ]
 }
