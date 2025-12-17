@@ -72,33 +72,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_TKkWBp": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Urf9k4": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Premium </strong>grade nylon selected for optimal uniformity. Delivers <strong>stable </strong>and <strong>accurate </strong>flight at all speeds.",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Urf9k4"
-      ],
-      "custom_css": [
-        "strong {color: red;}"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "multicolumn_LfBymg": {
       "type": "multicolumn",
       "blocks": {
@@ -106,7 +79,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/1_71a72420-8304-4686-a281-7a3ee85391b5.png",
-            "title": "",
+            "title": "<strong>Premium </strong>grade nylon selected for optimal uniformity. Delivers <strong>stable </strong>and <strong>accurate </strong>flight at all speeds.",
             "text": "<p> </p>",
             "link_label": "",
             "link": "shopify://products/future-10-extra-durable"
@@ -116,7 +89,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/2_3641aa2a-2d5c-4292-bccf-98e49d4d7262.png",
-            "title": "",
+            "title": "<strong>Balanced </strong>cork and <strong>Aerodynamic </strong>cone ensures consistent trajectory, even under intense rallies.",
             "text": "<p> </p>",
             "link_label": "",
             "link": "shopify://products/future-10-extra-durable"
@@ -127,7 +100,10 @@
         "column_GTcbhU",
         "column_LKj9QR"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "div{text-align: center;}",
+        "strong{color:red;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -144,45 +120,6 @@
         "swipe_on_mobile": false,
         "padding_top": 4,
         "padding_bottom": 36
-      }
-    },
-    "rich_text_AVzNyr": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_jdUGBX": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Balanced </strong>cork and <strong>Aerodynamic </strong>cone ensures consistent trajectory, even under intense rallies.",
-            "heading_size": "h1"
-          }
-        },
-        "button_nitrwF": {
-          "type": "button",
-          "settings": {
-            "button_label": "Grab Now",
-            "button_link": "shopify://products/future-10-extra-durable",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_jdUGBX",
-        "button_nitrwF"
-      ],
-      "custom_css": [
-        "strong {color: red;}"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 48
       }
     },
     "image_banner_b79hnW": {
@@ -425,9 +362,7 @@
     "main",
     "hero_video_component_rcxAff",
     "image_with_text_YT4fqT",
-    "rich_text_TKkWBp",
     "multicolumn_LfBymg",
-    "rich_text_AVzNyr",
     "image_banner_b79hnW",
     "multirow_E4Lxxw",
     "image_banner_x9UPz7",
