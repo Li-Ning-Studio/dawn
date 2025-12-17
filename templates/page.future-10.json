@@ -72,79 +72,19 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_BtgfYA": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_KzedJM": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/7_881122e0-ed65-4047-a040-7809d010a0e7.jpg",
-            "title": "Extra Durable Build",
-            "text": "<p>Built with high-grade nylon and reinforced cork base. Withstands powerful smashes and lasts significantly longer than standard shuttlecocks.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_m4Rrme": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/E_Commerce_03_663b0daaef.jpg",
-            "title": "Premium Nylon Material",
-            "text": "<p>Advanced nylon construction designed for optimal aerodynamics. Delivers consistent flight path and professional feel every rally.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_K7xYQc": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/E_Commerce_04_178c938e15.jpg",
-            "title": "Professional-Grade Cork",
-            "text": "<p>Precision-crafted cork base provides perfect weight distribution and superior impact resistance. Maintains shape and performance across multiple games.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_KzedJM",
-        "column_m4Rrme",
-        "column_K7xYQc"
-      ],
-      "custom_css": [
-        "div {background: white;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "GET NOW",
-        "button_link": "shopify://products/future-10-extra-durable",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_AVzNyr": {
+    "rich_text_TKkWBp": {
       "type": "rich-text",
       "blocks": {
-        "heading_jdUGBX": {
+        "heading_Urf9k4": {
           "type": "heading",
           "settings": {
-            "heading": "Why Choose<strong> Li-Ning Future 10</strong>?",
+            "heading": "<strong>Premium </strong>grade nylon selected for optimal uniformity. Delivers <strong>stable </strong>and <strong>accurate </strong>flight at all speeds.",
             "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "heading_jdUGBX"
+        "heading_Urf9k4"
       ],
       "custom_css": [
         "strong {color: red;}"
@@ -155,8 +95,112 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 56,
+        "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "multicolumn_LfBymg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_GTcbhU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/future-10-extra-durable"
+          }
+        },
+        "column_LKj9QR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/future-10-extra-durable"
+          }
+        }
+      },
+      "block_order": [
+        "column_GTcbhU",
+        "column_LKj9QR"
+      ],
+      "custom_css": [
+        "div {background: white;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "shopify://products/future-10-extra-durable",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_AVzNyr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jdUGBX": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Balanced </strong>cork and <strong>Aerodynamic </strong>cone ensures consistent trajectory, even under intense rallies.",
+            "heading_size": "h1"
+          }
+        },
+        "button_nitrwF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Grab Now",
+            "button_link": "shopify://products/future-10-extra-durable",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jdUGBX",
+        "button_nitrwF"
+      ],
+      "custom_css": [
+        "strong {color: red;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "image_banner_b79hnW": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "multirow_E4Lxxw": {
@@ -167,39 +211,15 @@
           "settings": {
             "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
             "caption": "",
-            "heading": "Ideal for All Skill Levels",
-            "text": "<p>Perfect for everyone from competitive players to weekend enthusiasts. Professional-grade quality that's accessible for club players, academies, and serious recreational players.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_MgThUH": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/E_Commerce_06_7e8da25c82.jpg",
-            "caption": "",
-            "heading": "Consistent Flight Stability",
-            "text": "<p>Engineered for predictable trajectory every single rally. No wobbling, no unpredictable movements - just accurate, reliable flight that helps you play your best game.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_AGHEEw": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/E_Commerce_02_d07ab31e67.jpg",
-            "caption": "",
-            "heading": "Cost-Effective Value",
-            "text": "<p>Premium quality at a competitive price point. Longer durability means lower cost per game, saving you money in the long run.</p>",
-            "button_label": "GRAB NOW",
+            "heading": "",
+            "text": "<p><strong>Built for Every Smash, Drop, and Rally.</strong></p><p><strong>Whether you're rallying under stadium lights or practicing in your local club, Future 10 delivers a match-grade experience every time. </strong></p><p><strong>Its meticulous construction ensures unmatched control, steady flight, and minimal breakage. </strong></p><p><strong>Rated 10/10 for Durability, Flight, Hitting Sound and Net play</strong> </p>",
+            "button_label": "Smash Now",
             "button_link": "shopify://products/future-10-extra-durable"
           }
         }
       },
       "block_order": [
-        "row_JmCyJr",
-        "row_MgThUH",
-        "row_AGHEEw"
+        "row_JmCyJr"
       ],
       "custom_css": [],
       "name": "t:sections.multirow.presets.name",
@@ -217,6 +237,98 @@
         "row_color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_x9UPz7": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "multicolumn_JYd48h": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_zYTXLJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/E_Commerce_04_178c938e15.jpg",
+            "title": "",
+            "text": "<p><strong>Nylon skirt </strong></p><p><strong>High Quality Synthetic cork base</strong></p><p><strong>Yellow Skirt</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YjBXfP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/E_Commerce_03_663b0daaef.jpg",
+            "title": "",
+            "text": "<p><strong>Green Cap (Slow) </strong></p><p><strong>6 shuttles in a box </strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6W7wBc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/E_Commerce_02_d07ab31e67.jpg",
+            "title": "",
+            "text": "<p><strong>Player level: suitable for professional or serious players. </strong></p><p><strong>Recovers to shape in 0.02 seconds</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zYTXLJ",
+        "column_YjBXfP",
+        "column_6W7wBc"
+      ],
+      "custom_css": [
+        "div {background: white; text-align: center;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_TfCXYr": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "rich_text_yYibri": {
@@ -315,9 +427,14 @@
     "main",
     "hero_video_component_rcxAff",
     "image_with_text_YT4fqT",
-    "multicolumn_BtgfYA",
+    "rich_text_TKkWBp",
+    "multicolumn_LfBymg",
     "rich_text_AVzNyr",
+    "image_banner_b79hnW",
     "multirow_E4Lxxw",
+    "image_banner_x9UPz7",
+    "multicolumn_JYd48h",
+    "image_banner_TfCXYr",
     "rich_text_yYibri",
     "collapsible_content_j39AhM"
   ]
