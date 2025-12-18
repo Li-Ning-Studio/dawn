@@ -40,7 +40,7 @@
         "custom_liquid": "<style>\n  .christmas-subheadline {\n    text-align: center;\n    padding: 16px 12px;\n  }\n\n  .christmas-subheadline h2 {\n    font-size: clamp(18px, 3.5vw, 28px);\n    font-weight: 600;\n    letter-spacing: 0.3px;\n    margin: 0;\n    color: #f32635; /* single color */\n    display: inline-block;\n    line-height: 1.3;\n  }\n\n  .emoji {\n    font-size: 16px;\n    vertical-align: middle;\n    margin: 0 4px;\n  }\n\n  @media (max-width: 640px) {\n    .christmas-subheadline h2 {\n      font-size: 20px;\n    }\n    .emoji {\n      display: block;\n      margin: 4px auto;\n      font-size: 16px;\n    }\n  }\n</style>\n\n<div class=\"christmas-subheadline\">\n  <h2>\n    <span class=\"emoji\">🎄</span>\n    Grab 2025’s Best Selling Rackets at Special Prices\n    <span class=\"emoji\">❄️</span>\n  </h2>\n</div>",
         "color_scheme": "",
         "padding_top": 32,
-        "padding_bottom": 20
+        "padding_bottom": 0
       }
     },
     "swipeable_products_GWaxmg": {
@@ -65,12 +65,108 @@
         "padding_top": 0,
         "padding_bottom": 20
       }
+    },
+    "hero_component_CfXcQQ": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Hal.png",
+        "mobile_image": "shopify://shop_images/Hal_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_4jkfd7": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "strong {color: #f32635;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Strike Season. <strong>Free</strong> Socks.",
+        "products": [
+          "halberd-strike"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_ARpY8V": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cpdMDx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Racket_9a5cfd1d-4cfd-46e4-a4ec-a578ff712563.jpg",
+            "title": "Start Right. Grip on Us.",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Eq8rzf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stringing_free_69282161-3f57-4a9e-be19-09b94d3c3b23.jpg",
+            "title": "Level Up. We Set the Rest.",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GfWB4B": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Shield_cover_free_e046385c-6ec5-4747-822a-54137e77b3ad.jpg",
+            "title": "Go All In. We Cover the Rest.",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_cpdMDx",
+        "column_Eq8rzf",
+        "column_GfWB4B"
+      ],
+      "custom_css": [
+        "strong {color: #f32635;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Naughty</strong> or nice, <strong>Santa</strong>’s gifting every budget.",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_component_pzhwAd",
     "custom_liquid_maUJf6",
-    "swipeable_products_GWaxmg"
+    "swipeable_products_GWaxmg",
+    "hero_component_CfXcQQ",
+    "swipeable_products_4jkfd7",
+    "multicolumn_ARpY8V"
   ]
 }
