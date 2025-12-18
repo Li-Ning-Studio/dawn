@@ -11,13 +11,66 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_pzhwAd": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Mani_Banner.png",
+        "mobile_image": "shopify://shop_images/Main_Banner_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_maUJf6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .christmas-subheadline {\n    text-align: center;\n    padding: 16px 12px;\n  }\n\n  .christmas-subheadline h2 {\n    font-size: clamp(18px, 3.5vw, 28px);\n    font-weight: 600;\n    letter-spacing: 0.3px;\n    margin: 0;\n    color: #f32635; /* single color */\n    display: inline-block;\n    line-height: 1.3;\n  }\n\n  .emoji {\n    font-size: 16px;\n    vertical-align: middle;\n    margin: 0 4px;\n  }\n\n  @media (max-width: 640px) {\n    .christmas-subheadline h2 {\n      font-size: 20px;\n    }\n    .emoji {\n      display: block;\n      margin: 4px auto;\n      font-size: 16px;\n    }\n  }\n</style>\n\n<div class=\"christmas-subheadline\">\n  <h2>\n    <span class=\"emoji\">🎄</span>\n    Grab 2025’s Best Selling Rackets at Special Prices\n    <span class=\"emoji\">❄️</span>\n  </h2>\n</div>",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 20
+      }
+    },
+    "swipeable_products_GWaxmg": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "axforce-cannon-4u",
+          "ignite-8-unstrung",
+          "g-force-5900-superlite",
+          "axforce-blast-4u",
+          "air-force-g3-77-grams",
+          "wind-lite-stealth",
+          "halbertec-motor-4u",
+          "g-force-superlite-ma-10",
+          "axforce-cannon-pro-4u",
+          "g-force-3900-superlite-ii"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_pzhwAd",
+    "custom_liquid_maUJf6",
+    "swipeable_products_GWaxmg"
   ]
 }
