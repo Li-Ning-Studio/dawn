@@ -33,43 +33,20 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_YT4fqT": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JHqTcT": {
-          "type": "heading",
-          "settings": {
-            "heading": "Perfect Flight, Longer Rallies, Every Single Game.",
-            "heading_size": "h1"
-          }
-        },
-        "button_zT6NPf": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://products/future-10-extra-durable",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_JHqTcT",
-        "button_zT6NPf"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "hero_component_iypyjw": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
+        "image": "shopify://shop_images/Banner_L.png",
+        "mobile_image": "shopify://shop_images/Banner_1_1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "Perfect Flight, Longer Rallies, Every Single Game.",
+        "button_text": "Shop now",
+        "link_to": "/",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 16,
+        "padding_bottom": 12
       }
     },
     "multicolumn_LfBymg": {
@@ -101,8 +78,8 @@
         "column_LKj9QR"
       ],
       "custom_css": [
-        "div{text-align: center;}",
-        "strong{color:red;}"
+        "div {text-align: center;}",
+        "strong {color: red;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -122,20 +99,20 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_b79hnW": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
+    "hero_component_EyW4EW": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
+        "image": "shopify://shop_images/Banner_L_2.png",
+        "mobile_image": "shopify://shop_images/Banner_2.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multirow_E4Lxxw": {
@@ -174,20 +151,20 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_x9UPz7": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
+    "hero_component_zagBQf": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
+        "image": "shopify://shop_images/Banner_L_3.png",
+        "mobile_image": "shopify://shop_images/Banner_3_5996fcb5-9e30-42d7-937a-76a2fffa9c4c.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_JYd48h": {
@@ -361,11 +338,11 @@
   "order": [
     "main",
     "hero_video_component_rcxAff",
-    "image_with_text_YT4fqT",
+    "hero_component_iypyjw",
     "multicolumn_LfBymg",
-    "image_banner_b79hnW",
+    "hero_component_EyW4EW",
     "multirow_E4Lxxw",
-    "image_banner_x9UPz7",
+    "hero_component_zagBQf",
     "multicolumn_JYd48h",
     "image_banner_TfCXYr",
     "rich_text_yYibri",
