@@ -104,12 +104,12 @@
         "title": "",
         "heading_size": "h2",
         "image_width": "full",
-        "image_ratio": "portrait",
+        "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "center",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -142,51 +142,80 @@
       "settings": {
         "title": "Fan <strong>Favourites</strong>",
         "products": [
-          "atomic-x-black-knight",
           "ioniq-turbo-4u",
-          "ioniq-turbo-5u"
+          "aeroflash-x-ctrl",
+          "t-rex-800",
+          "predator-pro-4u",
+          "ioniq-turbo-5u",
+          "atomic-x-black-knight",
+          "aeroflash-x-attk",
+          "battle-1000-3u",
+          "battle-1000-4u",
+          "predator-pro-5u",
+          "aeroflash-x-zoom"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 4
       }
     },
-    "collage_UNnGPm": {
-      "type": "collage",
+    "multicolumn_YC8hTF": {
+      "type": "multicolumn",
       "blocks": {
-        "image_kzgRzG": {
-          "type": "image",
+        "column_F8iEtN": {
+          "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_5_57d28c5c-a271-48a0-a55a-01939b24791d.jpg"
+            "image": "shopify://shop_images/Artboard_5_57d28c5c-a271-48a0-a55a-01939b24791d.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/ioniq-turbo-5u"
           }
         },
-        "image_W7HcM6": {
-          "type": "image",
+        "column_bQLxRw": {
+          "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_3_e5c4e2c2-39ea-4ddc-8ef6-4e7c1410344e.jpg"
+            "image": "shopify://shop_images/Artboard_3_e5c4e2c2-39ea-4ddc-8ef6-4e7c1410344e.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/predator-pro-5u"
           }
         },
-        "image_pbGgU8": {
-          "type": "image",
+        "column_nYCmUg": {
+          "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_4_53c0aaba-4b05-4ddd-b2f9-bccb76d44721.jpg"
+            "image": "shopify://shop_images/Artboard_4_53c0aaba-4b05-4ddd-b2f9-bccb76d44721.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/atomic-x-black-knight"
           }
         }
       },
       "block_order": [
-        "image_kzgRzG",
-        "image_W7HcM6",
-        "image_pbGgU8"
+        "column_F8iEtN",
+        "column_bQLxRw",
+        "column_nYCmUg"
       ],
-      "name": "t:sections.collage.presets.name",
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "heading": "",
+        "title": "This Week <strong>Only</strong>",
         "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
         "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -200,13 +229,46 @@
       "settings": {
         "title": "<strong>Fresh </strong>off the Rack",
         "products": [
-          "ioniq-turbo-4u",
-          "ioniq-turbo-5u"
+          "t-fusion-tornado-5u",
+          "rock-sk-10-5u",
+          "t-fusion-assault-5u",
+          "nitrix-pro-4u",
+          "flutter-s-attk",
+          "flutter-s-ctrl",
+          "flutter-s-zoom"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 20
+      }
+    },
+    "rich_text_9EFwCf": {
+      "type": "rich-text",
+      "blocks": {
+        "button_qF48CG": {
+          "type": "button",
+          "settings": {
+            "button_label": "See the Full Collection",
+            "button_link": "shopify://collections/new-launch",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_qF48CG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     },
     "hero_component_h4TLEr": {
@@ -552,15 +614,16 @@
     "hero_component_AFhdP9",
     "custom_liquid_fYXKrh",
     "multicolumn_M8qycr",
+    "hero_component_DNFPJe",
+    "collage_zDTF7X",
     "hero_component_nTMFLY",
     "swipeable_products_Kype3E",
-    "collage_UNnGPm",
+    "multicolumn_YC8hTF",
     "swipeable_products_KFfb3c",
+    "rich_text_9EFwCf",
     "hero_component_h4TLEr",
     "multicolumn_GpMBzC",
     "swipeable_products_tLbEhG",
-    "hero_component_DNFPJe",
-    "collage_zDTF7X",
     "hero_component_JwzyqL",
     "swipeable_products_wxJxL6",
     "hero_component_QtQY4E",
