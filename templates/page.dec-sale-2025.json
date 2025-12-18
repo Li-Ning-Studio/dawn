@@ -135,9 +135,12 @@
     },
     "swipeable_products_Kype3E": {
       "type": "swipeable-products",
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
-        "title": "Fan Favourites",
+        "title": "Fan <strong>Favourites</strong>",
         "products": [
           "atomic-x-black-knight",
           "ioniq-turbo-4u",
@@ -146,14 +149,56 @@
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 20
+        "padding_bottom": 4
+      }
+    },
+    "collage_UNnGPm": {
+      "type": "collage",
+      "blocks": {
+        "image_kzgRzG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_5_57d28c5c-a271-48a0-a55a-01939b24791d.jpg"
+          }
+        },
+        "image_W7HcM6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_e5c4e2c2-39ea-4ddc-8ef6-4e7c1410344e.jpg"
+          }
+        },
+        "image_pbGgU8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_53c0aaba-4b05-4ddd-b2f9-bccb76d44721.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_kzgRzG",
+        "image_W7HcM6",
+        "image_pbGgU8"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "swipeable_products_KFfb3c": {
       "type": "swipeable-products",
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
-        "title": "Fresh off the Rack",
+        "title": "<strong>Fresh </strong>off the Rack",
         "products": [
           "ioniq-turbo-4u",
           "ioniq-turbo-5u"
@@ -242,9 +287,12 @@
     },
     "swipeable_products_tLbEhG": {
       "type": "swipeable-products",
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
-        "title": "Best Picks",
+        "title": "Best <strong>Picks</strong>",
         "products": [
           "blade-lite-ii",
           "court-sonic-pbx",
@@ -302,6 +350,9 @@
         "image_ptmnma",
         "image_zV87GB"
       ],
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
       "name": "t:sections.collage.presets.name",
       "settings": {
         "heading": "On the <strong>House</strong>",
@@ -312,6 +363,82 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 0
+      }
+    },
+    "hero_component_JwzyqL": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/03.png",
+        "mobile_image": "shopify://shop_images/03_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/bags-winter-wish-list",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_wxJxL6": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Top <strong>Tier </strong>Picks",
+        "products": [
+          "metro-pack-kit-bag",
+          "atomic-x-surge-kit-bag",
+          "cosmogear-kit-bag",
+          "utilitarian-kitbag"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_QtQY4E": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/06.png",
+        "mobile_image": "shopify://shop_images/06_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/paddles-winter-wish-list",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 24
+      }
+    },
+    "swipeable_products_tVezQP": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "<strong>First Rate</strong> Options",
+        "products": [
+          "phantom-20-extend",
+          "zephyr-20-extend",
+          "phantom-20-wide",
+          "phantom-60-extend",
+          "phantom-80-wide",
+          "zephyr-20-wide",
+          "phantom-60-wide",
+          "phantom-80-extend"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "multicolumn_ExVeaA": {
@@ -353,7 +480,9 @@
         "column_LWpHCt",
         "column_k3tyGR"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "<strong>Discount </strong>Zone",
@@ -370,76 +499,6 @@
         "swipe_on_mobile": true,
         "padding_top": 28,
         "padding_bottom": 48
-      }
-    },
-    "hero_component_JwzyqL": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/03.png",
-        "mobile_image": "shopify://shop_images/03_R.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/bags-winter-wish-list",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_wxJxL6": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Top Tier Picks",
-        "products": [
-          "metro-pack-kit-bag",
-          "atomic-x-surge-kit-bag",
-          "cosmogear-kit-bag",
-          "utilitarian-kitbag"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_QtQY4E": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/06.png",
-        "mobile_image": "shopify://shop_images/06_R.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/paddles-winter-wish-list",
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 24
-      }
-    },
-    "swipeable_products_tVezQP": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "First Rate Options",
-        "products": [
-          "phantom-20-extend",
-          "zephyr-20-extend",
-          "phantom-20-wide",
-          "phantom-60-extend",
-          "phantom-80-wide",
-          "zephyr-20-wide",
-          "phantom-60-wide",
-          "phantom-80-extend"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "image_banner_mRUcKU": {
@@ -468,6 +527,9 @@
         "heading_h94mLV",
         "buttons_db7k4H"
       ],
+      "custom_css": [
+        "h2 {color: #0d1896;}"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Gemini_Generated_Image_wfmfrbwfmfrbwfmf.png",
@@ -477,7 +539,7 @@
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "color_scheme": "scheme-4",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false
@@ -492,17 +554,18 @@
     "multicolumn_M8qycr",
     "hero_component_nTMFLY",
     "swipeable_products_Kype3E",
+    "collage_UNnGPm",
     "swipeable_products_KFfb3c",
     "hero_component_h4TLEr",
     "multicolumn_GpMBzC",
     "swipeable_products_tLbEhG",
     "hero_component_DNFPJe",
     "collage_zDTF7X",
-    "multicolumn_ExVeaA",
     "hero_component_JwzyqL",
     "swipeable_products_wxJxL6",
     "hero_component_QtQY4E",
     "swipeable_products_tVezQP",
+    "multicolumn_ExVeaA",
     "image_banner_mRUcKU"
   ]
 }
