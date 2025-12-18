@@ -158,6 +158,51 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "hero_component_waCfEx": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/apparels_5099bbfa-2be5-47ef-b5b9-cec55b4ada30.jpg",
+        "mobile_image": "shopify://shop_images/apparels_ba4c0556-fa4c-4f5e-90ec-4a4f54e3fe05.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pMLyrY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  Subheadline – Cart Growing Discount Growing\n{% endcomment %}\n\n<style>\n  .christmas-subheadline {\n    text-align: center;\n    padding: 16px 12px;\n  }\n\n  .christmas-subheadline h2 {\n    font-size: clamp(18px, 3.5vw, 28px);\n    font-weight: 600;\n    letter-spacing: 0.3px;\n    margin: 0;\n    color: #f32635;\n    display: inline-block;\n    line-height: 1.3;\n  }\n\n  @media (max-width: 640px) {\n    .christmas-subheadline h2 {\n      font-size: 20px;\n    }\n  }\n</style>\n\n<div class=\"christmas-subheadline\">\n  <h2>\n    Cart growing? Discounts growing too.\n  </h2>\n</div>",
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_EXpWYr": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "kynetic-t-shirt",
+          "luminex-t-shirt",
+          "lunar-t-shirt",
+          "eliteflex-training-shorts",
+          "line-shorts",
+          "eclipse-t-shirt"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -167,6 +212,9 @@
     "swipeable_products_GWaxmg",
     "hero_component_CfXcQQ",
     "swipeable_products_4jkfd7",
-    "multicolumn_ARpY8V"
+    "multicolumn_ARpY8V",
+    "hero_component_waCfEx",
+    "custom_liquid_pMLyrY",
+    "swipeable_products_EXpWYr"
   ]
 }
