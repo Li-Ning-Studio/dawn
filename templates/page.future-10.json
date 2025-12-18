@@ -33,20 +33,44 @@
         "padding_bottom": 0
       }
     },
-    "hero_component_iypyjw": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "image_with_text_YT4fqT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JHqTcT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Perfect Flight, Longer Rallies, Every Single Game.",
+            "heading_size": "h1"
+          }
+        },
+        "button_zT6NPf": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/future-10-extra-durable",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JHqTcT",
+        "button_zT6NPf"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Banner_L.png",
-        "mobile_image": "shopify://shop_images/Banner_1_1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "Perfect Flight, Longer Rallies, Every Single Game.",
-        "button_text": "Shop now",
-        "link_to": "/",
+        "image": "shopify://shop_images/Banner_1_1.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
         "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 12
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn_LfBymg": {
@@ -338,9 +362,9 @@
   "order": [
     "main",
     "hero_video_component_rcxAff",
-    "hero_component_iypyjw",
-    "multicolumn_LfBymg",
+    "image_with_text_YT4fqT",
     "hero_component_EyW4EW",
+    "multicolumn_LfBymg",
     "multirow_E4Lxxw",
     "hero_component_zagBQf",
     "multicolumn_JYd48h",
