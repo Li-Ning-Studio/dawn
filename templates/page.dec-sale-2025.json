@@ -117,6 +117,64 @@
         "padding_bottom": 0
       }
     },
+    "hero_component_DNFPJe": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/07.png",
+        "mobile_image": "shopify://shop_images/07_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/winter-wish-list-all-products",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "collage_zDTF7X": {
+      "type": "collage",
+      "blocks": {
+        "image_RDixYM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/04_a96beb10-749b-4bbe-b657-ebbea57cdf54.png"
+          }
+        },
+        "image_ptmnma": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_d407f1a2-bf47-40e1-aaf0-d3f4a0c6215f.jpg"
+          }
+        },
+        "image_zV87GB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_f454f5bf-e437-4b1e-88c7-12495fd0e77a.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_RDixYM",
+        "image_ptmnma",
+        "image_zV87GB"
+      ],
+      "custom_css": [
+        "strong {color: #0d1896;}"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "On the <strong>House</strong>",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_nTMFLY": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -215,7 +273,7 @@
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -369,64 +427,6 @@
         "padding_bottom": 20
       }
     },
-    "hero_component_DNFPJe": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/07.png",
-        "mobile_image": "shopify://shop_images/07_R.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://collections/winter-wish-list-all-products",
-        "color_scheme": "",
-        "padding_top": 24,
-        "padding_bottom": 20
-      }
-    },
-    "collage_zDTF7X": {
-      "type": "collage",
-      "blocks": {
-        "image_RDixYM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/04_a96beb10-749b-4bbe-b657-ebbea57cdf54.png"
-          }
-        },
-        "image_ptmnma": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_d407f1a2-bf47-40e1-aaf0-d3f4a0c6215f.jpg"
-          }
-        },
-        "image_zV87GB": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_f454f5bf-e437-4b1e-88c7-12495fd0e77a.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_RDixYM",
-        "image_ptmnma",
-        "image_zV87GB"
-      ],
-      "custom_css": [
-        "strong {color: #0d1896;}"
-      ],
-      "name": "t:sections.collage.presets.name",
-      "settings": {
-        "heading": "On the <strong>House</strong>",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_JwzyqL": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -503,6 +503,22 @@
         "padding_bottom": 20
       }
     },
+    "hero_component_YTG3xf": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/05_cdb7e3f0-6049-4bbb-93ce-fd8e9a710038.png",
+        "mobile_image": "shopify://shop_images/05_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "multicolumn_ExVeaA": {
       "type": "multicolumn",
       "blocks": {
@@ -513,7 +529,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/apparels"
           }
         },
         "column_LWpHCt": {
@@ -523,7 +539,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/winter-wish-list-all-products"
           }
         },
         "column_k3tyGR": {
@@ -533,7 +549,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/badminton-winter-wish-list"
           }
         }
       },
@@ -628,6 +644,7 @@
     "swipeable_products_wxJxL6",
     "hero_component_QtQY4E",
     "swipeable_products_tVezQP",
+    "hero_component_YTG3xf",
     "multicolumn_ExVeaA",
     "image_banner_mRUcKU"
   ]
