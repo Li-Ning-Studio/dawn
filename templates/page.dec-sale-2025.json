@@ -244,7 +244,7 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Best Sellers",
+        "title": "Best Picks",
         "products": [
           "blade-lite-ii",
           "court-sonic-pbx",
@@ -255,7 +255,7 @@
         ],
         "show_color_variants": false,
         "color_scheme": "",
-        "padding_top": 20,
+        "padding_top": 12,
         "padding_bottom": 20
       }
     },
@@ -269,7 +269,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/winter-wish-list-all-products",
         "color_scheme": "",
         "padding_top": 24,
         "padding_bottom": 20
@@ -382,23 +382,24 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/bags-winter-wish-list",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "swipeable_products_4fxbje": {
+    "swipeable_products_wxJxL6": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Fan Favourites",
+        "title": "Top Tier Picks",
         "products": [
-          "atomic-x-black-knight",
-          "ioniq-turbo-4u",
-          "ioniq-turbo-5u"
+          "metro-pack-kit-bag",
+          "atomic-x-surge-kit-bag",
+          "cosmogear-kit-bag",
+          "utilitarian-kitbag"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
@@ -414,7 +415,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/paddles-winter-wish-list",
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 24
@@ -424,13 +425,18 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Fan Favourites",
+        "title": "First Rate Options",
         "products": [
-          "atomic-x-black-knight",
-          "ioniq-turbo-4u",
-          "ioniq-turbo-5u"
+          "phantom-20-extend",
+          "zephyr-20-extend",
+          "phantom-20-wide",
+          "phantom-60-extend",
+          "phantom-80-wide",
+          "zephyr-20-wide",
+          "phantom-60-wide",
+          "phantom-80-extend"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
@@ -450,7 +456,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "",
+            "button_link_1": "shopify://collections/winter-wish-list-all-products",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -494,7 +500,7 @@
     "collage_zDTF7X",
     "multicolumn_ExVeaA",
     "hero_component_JwzyqL",
-    "swipeable_products_4fxbje",
+    "swipeable_products_wxJxL6",
     "hero_component_QtQY4E",
     "swipeable_products_tVezQP",
     "image_banner_mRUcKU"
