@@ -129,7 +129,7 @@
         "button_link": "",
         "columns_desktop": 2,
         "column_alignment": "left",
-        "background_style": "none",
+        "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -332,6 +332,66 @@
         "padding_top": 0,
         "padding_bottom": 20
       }
+    },
+    "multicolumn_EJrkUG": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_UKd9LV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_c4a4ab2f-1dc2-48cc-9764-a3138db0ead0.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rpp8YA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_e1bcd3c1-e13d-402e-b55a-5fff328bda6a.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zG8HyH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_d8d57fba-6221-4bfd-934f-72404173f105.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UKd9LV",
+        "column_rpp8YA",
+        "column_zG8HyH"
+      ],
+      "custom_css": [
+        "strong {color: #f32635;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Weekly</strong> Drops on Kit Bags.",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -349,6 +409,7 @@
     "swipeable_products_EXpWYr",
     "hero_component_ACnNQ4",
     "custom_liquid_xgH3Ej",
-    "swipeable_products_iqfVnr"
+    "swipeable_products_iqfVnr",
+    "multicolumn_EJrkUG"
   ]
 }
