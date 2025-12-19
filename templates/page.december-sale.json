@@ -66,6 +66,77 @@
         "padding_bottom": 20
       }
     },
+    "multicolumn_jEEkzF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nUtpBr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/CW1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tRkMyP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kcHxXD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_3121817e-e900-4415-8384-1470859ce8ca.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tnQXYk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nUtpBr",
+        "column_tRkMyP",
+        "column_kcHxXD",
+        "column_tnQXYk"
+      ],
+      "custom_css": [
+        "strong {color: #f32635;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Rackets, This Week <strong>Only</strong>.",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    },
     "hero_component_CfXcQQ": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -260,74 +331,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 20
-      }
-    },
-    "multicolumn_jEEkzF": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_nUtpBr": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/CW1.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_tRkMyP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_kcHxXD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_3121817e-e900-4415-8384-1470859ce8ca.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_tnQXYk": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_4.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_nUtpBr",
-        "column_tRkMyP",
-        "column_kcHxXD",
-        "column_tnQXYk"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Rackets, This Week Only",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
