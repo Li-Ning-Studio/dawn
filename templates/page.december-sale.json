@@ -203,6 +203,64 @@
         "padding_top": 20,
         "padding_bottom": 24
       }
+    },
+    "hero_component_ACnNQ4": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Kitbag.png",
+        "mobile_image": "shopify://shop_images/Kitbag_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_xgH3Ej": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  Subheadline – Festive Line\n{% endcomment %}\n\n<style>\n  .christmas-subheadline {\n    text-align: center;\n    padding: 16px 12px;\n  }\n\n  .christmas-subheadline h2 {\n    font-size: clamp(18px, 3.5vw, 28px);\n    font-weight: 600;\n    letter-spacing: 0.3px;\n    margin: 0;\n    color: #f32635;\n    display: inline-block;\n    line-height: 1.3;\n  }\n\n  @media (max-width: 640px) {\n    .christmas-subheadline h2 {\n      font-size: 20px;\n    }\n  }\n</style>\n\n<div class=\"christmas-subheadline\">\n  <h2>\n    🎅 Ho Ho Hold My Racket. And Shoes. And More.\n  </h2>\n</div>",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 28
+      }
+    },
+    "swipeable_products_iqfVnr": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "parallel-kit-bag-1",
+          "monarch-kit-bag",
+          "birdie-kit-bag",
+          "velocity-backpack",
+          "nimbus-square-bag",
+          "dolph-kit-bag",
+          "stealth-backpack",
+          "holster-gear-kit-bag",
+          "aero-glide-kit-bag"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_QBtBzG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  Christmas Promo – Tee Personalisation (50:50)\n{% endcomment %}\n\n<section class=\"christmas-printing-section\">\n  <div class=\"christmas-printing-wrapper\">\n\n    <!-- Left Content -->\n    <div class=\"christmas-printing-content\">\n      <h2>Made Personal. Made for Christmas.</h2>\n      <p>\n        Some gifts hit different when they carry your name.\n        This season, every tee gets the personal touch.\n      </p>\n\n      <a href=\"{{ routes.all_products_collection_url }}\" class=\"christmas-printing-cta\">\n        Customize Your Tee\n      </a>\n    </div>\n\n    <!-- Right Image -->\n    <div class=\"christmas-printing-image\">\n      <img\n        src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Buy_2_tees.png?v=1766118945\"\n        alt=\"Custom name printed t-shirt\"\n        loading=\"lazy\"\n      >\n    </div>\n\n  </div>\n</section>\n\n<style>\n  .christmas-printing-section {\n    background: #ffffff;\n    padding: 60px 20px;\n  }\n\n  .christmas-printing-wrapper {\n    max-width: 1200px;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 40px;\n    align-items: center;\n  }\n\n  .christmas-printing-content h2 {\n    color: #f32635;\n    font-size: clamp(26px, 4vw, 42px);\n    font-weight: 700;\n    margin-bottom: 16px;\n    line-height: 1.2;\n  }\n\n  .christmas-printing-content p {\n    color: #222;\n    font-size: 16px;\n    line-height: 1.6;\n    margin-bottom: 24px;\n    max-width: 420px;\n  }\n\n  .christmas-printing-cta {\n    display: inline-block;\n    background: #f32635;\n    color: #ffffff;\n    padding: 12px 22px;\n    border-radius: 8px;\n    font-size: 15px;\n    font-weight: 700;\n    text-decoration: none;\n    transition: opacity 0.2s ease;\n  }\n\n  .christmas-printing-cta:hover {\n    opacity: 0.9;\n  }\n\n  .christmas-printing-image img {\n    width: 100%;\n    height: auto;\n    display: block;\n    border-radius: 12px;\n  }\n\n  @media (max-width: 768px) {\n    .christmas-printing-wrapper {\n      grid-template-columns: 1fr;\n      text-align: center;\n    }\n\n    .christmas-printing-content p {\n      margin-left: auto;\n      margin-right: auto;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -215,6 +273,10 @@
     "multicolumn_ARpY8V",
     "hero_component_waCfEx",
     "custom_liquid_pMLyrY",
-    "swipeable_products_EXpWYr"
+    "swipeable_products_EXpWYr",
+    "hero_component_ACnNQ4",
+    "custom_liquid_xgH3Ej",
+    "swipeable_products_iqfVnr",
+    "custom_liquid_QBtBzG"
   ]
 }
