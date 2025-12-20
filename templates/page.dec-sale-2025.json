@@ -139,11 +139,11 @@
         "column_pf4F96": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/04_a96beb10-749b-4bbe-b657-ebbea57cdf54.png",
-            "title": "Shoe above Rs 1500",
+            "image": "shopify://shop_images/Artboard.jpg",
+            "title": "On Rackets Rs 2500 to 5000",
             "text": "",
             "link_label": "",
-            "link": "shopify://collections/free-socks-product"
+            "link": "shopify://collections/freebie-rackets-between-2-5k-to-5k"
           }
         },
         "column_4WkfXc": {
@@ -409,6 +409,16 @@
     "multicolumn_GpMBzC": {
       "type": "multicolumn",
       "blocks": {
+        "column_jqL8Tk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/04_a96beb10-749b-4bbe-b657-ebbea57cdf54.png",
+            "title": "On shoes above Rs 1500",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/free-socks-product"
+          }
+        },
         "column_BCRbQd": {
           "type": "column",
           "settings": {
@@ -441,6 +451,7 @@
         }
       },
       "block_order": [
+        "column_jqL8Tk",
         "column_BCRbQd",
         "column_cHWdP9",
         "column_UFy4FR"
@@ -456,7 +467,7 @@
         "image_ratio": "square",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "",
