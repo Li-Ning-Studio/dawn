@@ -13,13 +13,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_482af8f3-1b40-4f7a-a634-f01db5cb60de.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R.jpg",
-        "subtitle": "Raze Pro",
-        "title": "Unmatched Support for Every Step",
-        "description": "Unmatched support and comfort with a multi-layered sole design.",
-        "button_text": "BUY NOW!",
-        "link_to": "shopify://products/raze-pro",
+        "image": "shopify://shop_images/Banner_V1.png",
+        "mobile_image": "shopify://shop_images/Banner_V1_R.png",
+        "subtitle": "RAZOR",
+        "title": "Dominate Every Rally with Razor Precision",
+        "description": "Lightning-fast footwork meets unshakeable stability. The Razor delivers explosive court movement and pro-level grip",
+        "button_text": "Shop Razor Now",
+        "link_to": "shopify://products/razor",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -29,9 +29,9 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Raze Pro Series",
+        "title": "RAZOR",
         "products": [
-          "raze-pro"
+          "razor"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -74,13 +74,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/ba.jpg",
-        "mobile_image": "shopify://shop_images/respo.jpg",
-        "subtitle": "Flutter Rackets",
-        "title": "Performace that leaves a mark",
-        "description": "Lightning-fast reactions and superior control with a lightweight frame that accelerates every swing.",
-        "button_text": "Make it Yours!",
-        "link_to": "shopify://products/nuclear-72",
+        "image": "shopify://shop_images/Main.jpg",
+        "mobile_image": "shopify://shop_images/Main_R.jpg",
+        "subtitle": "Hyfonic Lazer Rackets",
+        "title": "Power Meets Precision with Hyfonic Lazer",
+        "description": "Engineered for lightning-fast smashes and surgical control. The Hyfonic Lazer delivers explosive power, featherlight maneuverability, and razor-sharp accuracy",
+        "button_text": "Shop Hyfonic Lazer",
+        "link_to": "shopify://products/hyfonic-lazer-4u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -90,10 +90,10 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Nuclear Series",
+        "title": "Hyfonic Lazer Series",
         "products": [
-          "nuclear-72",
-          "nuclear-78"
+          "hyfonic-lazer-4u",
+          "hyfonic-lazer-5u"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -139,6 +139,36 @@
         "padding_top": 24,
         "padding_bottom": 24
       }
+    },
+    "hero_component_KghhTT": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/3_5a484f78-9aaf-4c9b-b643-f4bd7bfcc7ee.jpg",
+        "mobile_image": "shopify://shop_images/Responsive_3.jpg",
+        "subtitle": "CourtFuse",
+        "title": "Own the Court with Court fuse",
+        "description": "Built for relentless rallies and explosive lateral movement. Court fuse fuses superior traction, responsive cushioning, and all-day durability—keeping you locked in from first serve to match point.",
+        "button_text": "Get CourtFuse Now",
+        "link_to": "shopify://products/courtfuse",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_XinwU8": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "CourtFuse",
+        "products": [
+          "courtfuse"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
     }
   },
   "order": [
@@ -149,6 +179,8 @@
     "hero_component_B7cdAV",
     "swipeable_products_yicPW7",
     "hero_component_Rf6YAH",
-    "swipeable_products_cdmPwV"
+    "swipeable_products_cdmPwV",
+    "hero_component_KghhTT",
+    "swipeable_products_XinwU8"
   ]
 }
