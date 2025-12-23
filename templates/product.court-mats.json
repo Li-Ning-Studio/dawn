@@ -40,6 +40,13 @@
           "type": "price",
           "settings": {}
         },
+        "text_xHCcQH": {
+          "type": "text",
+          "settings": {
+            "text": "(Inclusive of all taxes)",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -176,6 +183,7 @@
         "custom_liquid_a7NXWH",
         "caption",
         "price",
+        "text_xHCcQH",
         "variant_picker",
         "forms_inline_mqTNGV",
         "product_highlight_eLDrRi",
@@ -192,7 +200,9 @@
         "share"
       ],
       "custom_css": [
-        "#form-container-ref {letter-spacing: 0px;}"
+        "#form-container-ref {letter-spacing: 0px;}",
+        ".product__text {margin-top: -30px;}",
+        ".caption-with-letter-spacing {margin-top: 0px;}"
       ],
       "settings": {
         "display_price_out_of_stock": true,
@@ -527,7 +537,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
-            "max_width": 1200
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
           }
         }
       },

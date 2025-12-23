@@ -40,6 +40,13 @@
           "type": "price",
           "settings": {}
         },
+        "text_PbQ7qq": {
+          "type": "text",
+          "settings": {
+            "text": "(Inclusive of all taxes)",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -125,6 +132,7 @@
         "custom_liquid_a7NXWH",
         "caption",
         "price",
+        "text_PbQ7qq",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -135,6 +143,10 @@
         "collapsible-row-1",
         "collapsible_tab_nCtKFG",
         "share"
+      ],
+      "custom_css": [
+        ".product__text {margin-top: -30px;}",
+        ".caption-with-letter-spacing {margin-top: 0px;}"
       ],
       "settings": {
         "display_price_out_of_stock": true,
@@ -176,7 +188,12 @@
       "blocks": {
         "judge_me_reviews_review_widget_tcF3Va": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
         }
       },
       "block_order": [
