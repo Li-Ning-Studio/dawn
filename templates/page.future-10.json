@@ -50,7 +50,7 @@
         "row_h73NtA": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/future_10.jpg",
+            "image": "shopify://shop_images/04_a8fcc9fb-9e87-4f36-8598-391a6ffd435b.jpg",
             "caption": "",
             "heading": "Premium grade nylon selected for optimal uniformity. Delivers stable and accurate flight at all speeds.",
             "text": "",
@@ -75,9 +75,9 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
-        "row_color_scheme": "",
+        "row_color_scheme": "scheme-4",
         "padding_top": 36,
-        "padding_bottom": 4
+        "padding_bottom": 20
       }
     },
     "rich_text_DgiFTX": {
@@ -177,22 +177,63 @@
     "multicolumn_JYd48h": {
       "type": "multicolumn",
       "blocks": {
+        "column_gNcmGg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/eb30514a-9084-4ed1-be34-9bd9fd48dab0-md.jpg",
+            "title": "<strong>Nylon skirt </strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hJKdHm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/56427c28-aaa2-4717-9968-f05c62f662be-md.jpg",
+            "title": "<strong>High Quality Synthetic cork base</strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BCW6A9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ab80bfd0-ad4c-497d-9da7-6efd1de3d4e6-md.jpg",
+            "title": "<strong>Yellow Skirt</strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3WQfcq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/b7f1a1ba-341e-4d31-a40a-a6d5a1bd3259-md.jpg",
+            "title": "<strong>Green Cap (Slow) </strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_zYTXLJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/E_Commerce_04_178c938e15.jpg",
-            "title": "",
-            "text": "<p><strong>Nylon skirt </strong></p><p><strong>High Quality Synthetic cork base</strong></p><p><strong>Yellow Skirt</strong></p>",
+            "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
+            "title": "<strong>6 shuttles in a box </strong>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
         "column_YjBXfP": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/E_Commerce_03_663b0daaef.jpg",
-            "title": "",
-            "text": "<p><strong>Green Cap (Slow) </strong></p><p><strong>6 shuttles in a box </strong></p>",
+            "title": "<strong>Player level: suitable for professional or serious players. </strong>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -200,15 +241,19 @@
         "column_6W7wBc": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/E_Commerce_02_d07ab31e67.jpg",
-            "title": "",
-            "text": "<p><strong>Player level: suitable for professional or serious players. </strong></p><p><strong>Recovers to shape in 0.02 seconds</strong></p>",
+            "image": "shopify://shop_images/18301c09-c136-42c0-8dcd-12803f886bab-md.jpg",
+            "title": "<strong>Recovers to shape in 0.02 seconds</strong>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
+        "column_gNcmGg",
+        "column_hJKdHm",
+        "column_BCW6A9",
+        "column_3WQfcq",
         "column_zYTXLJ",
         "column_YjBXfP",
         "column_6W7wBc"
@@ -221,7 +266,7 @@
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "circle",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
