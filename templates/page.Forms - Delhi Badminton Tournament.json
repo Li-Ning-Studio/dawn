@@ -22,7 +22,7 @@
       "name": "Hero Component",
       "settings": {
         "subtitle": "",
-        "title": "HNDRD EXPERIENCE TOUR - Noida",
+        "title": "Hundred EXPERIENCE TOUR - Noida",
         "description": "",
         "button_text": "",
         "link_to": "",
@@ -58,11 +58,75 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "rich_text_J3RCRr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cL3xRK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Tour Benefits At a Glance",
+            "heading_size": "h1"
+          }
+        },
+        "text_YfcNgJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By attending the Hundred Experience Tour, you agree that:</p><ul><li>Your participation was voluntary and you were responsible for your own safety.</li><li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li><li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li><li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li><li>Event details and activities may have been subject to change at the organizers' discretion.</li><li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li><li>Non Marking Shoes are not provided by us during the event. Please bring your own.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cL3xRK",
+        "text_YfcNgJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_xJPcXQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Ube3wL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Terms and Conitions - Hundred Experience Tour",
+            "heading_size": "h1"
+          }
+        },
+        "text_jEdMz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By attending the Hundred Experience Tour, you agree that:</p><ul><li>Your participation was voluntary and you were responsible for your own safety.</li><li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li><li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li><li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li><li>Event details and activities may have been subject to change at the organizers' discretion.</li><li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li><li>Non Marking Shoes are not provided by us during the event. Please bring your own.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ube3wL",
+        "text_jEdMz9"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "005492e1-0107-4ca0-9d5c-78531b1c52f7",
     "hero_component_L8JHJw",
-    "forms"
+    "forms",
+    "rich_text_J3RCRr",
+    "rich_text_xJPcXQ"
   ]
 }
