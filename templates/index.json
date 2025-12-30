@@ -9,23 +9,6 @@
  */
 {
   "sections": {
-    "hero_component_UwXqQE": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/01_3b5584b5-d966-4db0-8d56-13cb1cd1e27f.png",
-        "mobile_image": "shopify://shop_images/01_R_d546b7da-4440-4b33-a00e-45e9f61d6947.png",
-        "subtitle": "The Biggest Price Drop",
-        "title": "Only today",
-        "description": "",
-        "button_text": "Grab Now",
-        "link_to": "shopify://collections/sunday-drop",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 40
-      }
-    },
     "hero_component_6E6fBf": {
       "type": "hero-component",
       "custom_css": [],
@@ -515,6 +498,54 @@
         "padding_bottom": 16
       }
     },
+    "collection_list_7JkihE": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_c9RUyB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cricket-kit-bags"
+          }
+        },
+        "featured_collection_XKPimG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "insoles"
+          }
+        },
+        "featured_collection_wA7wV3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-shuttlecocks"
+          }
+        },
+        "featured_collection_3VcG6M": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_c9RUyB",
+        "featured_collection_XKPimG",
+        "featured_collection_wA7wV3",
+        "featured_collection_3VcG6M"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Power Your Play",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_NJbR8D": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -591,7 +622,6 @@
     }
   },
   "order": [
-    "hero_component_UwXqQE",
     "hero_component_6E6fBf",
     "hero_video_component_MnJ8yg",
     "responsive_slideshow_Ma699H",
@@ -612,6 +642,7 @@
     "swipeable_products_Cm4fE8",
     "hero_component_Dd4CVH",
     "swipeable_products_HyzyGP",
+    "collection_list_7JkihE",
     "hero_component_NJbR8D",
     "swipeable_products_9k7FUW",
     "hero_component_aTVWXK",
