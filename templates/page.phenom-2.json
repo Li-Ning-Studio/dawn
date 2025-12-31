@@ -33,48 +33,14 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_cA6Fnx": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_jLYE9y": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>EVERYTHING </strong>YOU IMAGINED",
-            "heading_size": "h0"
-          }
-        },
-        "text_LwYjN7": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>THIS <strong>PROFESSIONAL SHOE</strong> IS WHAT YOU'VE BEEN WAITING FOR</h3>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_jLYE9y",
-        "text_LwYjN7"
-      ],
-      "custom_css": [
-        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "full_width": true,
-        "padding_top": 28,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_DQEyNA": {
+    "custom_liquid_WtQGqp": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n<a href=\"#\" class=\"cta\">\n  <span>Claim It!</span>\n</a>\n</section>\n\n<style>\n  .cta {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 15px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\ntransition:0.5s ease;\n  }\n.cta:hover{\n  background:#d29700;\ncolor:black;\n}\n</style>",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 12,
-        "padding_bottom": 0
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <h3 class=\"speed2\">EVERYTHING YOU IMAGINED </h3>\n    <p style=\"margin: 3px 0;\"> \n    THIS PROFESSIONAL SHOE IS WHAT YOU'VE BEEN WAITING FOR\n    </p>\n    <a href=\"#\" class=\"cta2\">\n      <span>CLAIM IT!</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta2 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #00c9ff;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 20px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed2 {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 40,
+        "padding_bottom": 16
       }
     },
     "hero_component_LE9qR6": {
@@ -144,7 +110,7 @@
         "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  \n\n<a href=\"#\" class=\"cta\">\n  <span>TIME TO PLAY!</span>\n</a>\n</section>\n\n<style>\n section{\n  background:black;\n  color:white;\n} \n.cta {\n    margin-top: 1rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  transition:0.5s ease-out;\n  }\n.cta:hover{\n  background:#d29700;\n}\np,h1{\ntext-align:center;\n}\n  strong{\nletter-spacing: -1px;\n  margin: 0;\n  font-weight: 800;\n  background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; \n}\n</style>",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 16,
-        "padding_bottom": 20
+        "padding_bottom": 40
       }
     },
     "hero_component_PCUFNt": {
@@ -163,48 +129,14 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_hDbwLb": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_7dfxMa": {
-          "type": "heading",
-          "settings": {
-            "heading": "THE <strong>EVERYTHING SHOE</strong>",
-            "heading_size": "h0"
-          }
-        },
-        "text_aqnYRG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_7dfxMa",
-        "text_aqnYRG"
-      ],
-      "custom_css": [
-        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_nb7rEQ": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  \n\n<a href=\"#\" class=\"cta\">\n  <span>BUY NOW!</span>\n</a>\n</section>\n\n<style>\n section{\n  background:black;\n  color:white;\n} \n.cta {\n    margin-top: 1rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  transition:0.5s ease-out;\n  }\n.cta:hover{\n  background:#d29700;\n}\np,h1{\ntext-align:center;\n}\n  strong{\nletter-spacing: -1px;\n  margin: 0;\n  font-weight: 800;\n  background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; \n}\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <h3 class=\"speed\">THE EVERYTHING SHOE </h3>\n    <p style=\"margin: 3px 0;\"> \n   OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY AHEAD OF ITS TIME.\n    </p>\n    <a href=\"#\" class=\"cta1\">\n      <span>CLAIM IT!</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta1 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #FF719A;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed {\n      letter-spacing: -1px;\n      margin: 10px 0px;\n      font-weight: 800;\n      font-size: 3rem;\n  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 0,
-        "padding_bottom": 20
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_R8N7pw": {
@@ -642,14 +574,12 @@
   "order": [
     "main",
     "hero_component_MaVYaG",
-    "rich_text_cA6Fnx",
-    "custom_liquid_DQEyNA",
+    "custom_liquid_WtQGqp",
     "hero_component_LE9qR6",
     "custom_liquid_rD6cU3",
     "rich_text_yyDK9a",
     "custom_liquid_Lm9mhn",
     "hero_component_PCUFNt",
-    "rich_text_hDbwLb",
     "custom_liquid_nb7rEQ",
     "rich_text_R8N7pw",
     "multirow_BUkqJM",
