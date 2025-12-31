@@ -17,98 +17,598 @@
         "padding_bottom": 28
       }
     },
-    "hero_video_component_Ei6eD6": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/1920x700.mp4",
-        "mobile_video": "shopify://files/videos/sq.mp4",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/nitrix-70-venom",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_3wrLyj": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  <p style=\"margin: 6px;\">All Out Attack</p>\n  <img \n  src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitix_Logo.png?v=1752827931\" \n  alt=\"Nitrix Logo\" \n  style=\"max-width: 500px; width: 100%; height: auto; margin: 10px 0; padding: 0 2.5rem\"\n/>\n<p style=\"margin: 6px;\">Crafted for heavy smashes and offensive play</p>\n<a href=\"/products/nitrix-70-venom\" class=\"cta\">\n  <span>SHOP NITRIX</span>\n</a>\n</section>\n\n<style>\n  .cta {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #46a706;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  \n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 92,
-        "padding_bottom": 92
-      }
-    },
     "hero_component_MaVYaG": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Second_L.jpg",
-        "mobile_image": "shopify://shop_images/Second_R.jpg",
+        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
+        "mobile_image": "shopify://shop_images/Banner_3.1.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/nitrix-70-venom",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_bDVVH6": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "rich_text_cA6Fnx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jLYE9y": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_LwYjN7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
+          }
+        },
+        "button_D7pjHX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jLYE9y",
+        "text_LwYjN7",
+        "button_D7pjHX"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n      Thin, fast & lethal\n    </p>\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 52
       }
     },
     "hero_component_LE9qR6": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/third_L-5.jpg",
-        "mobile_image": "shopify://shop_images/Third_R-4.jpg",
+        "image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
+        "mobile_image": "shopify://shop_images/Banner_2.1.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/nitrix-70-venom",
+        "link_to": "",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 60,
         "padding_bottom": 64
+      }
+    },
+    "rich_text_FgxdaE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LAVJ8d": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_RPJcg6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
+          }
+        },
+        "button_BEjETk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LAVJ8d",
+        "text_RPJcg6",
+        "button_BEjETk"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 52
       }
     },
     "hero_component_PCUFNt": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Fourth_L.jpg",
-        "mobile_image": "shopify://shop_images/Fourth_R.jpg",
+        "image": "shopify://shop_images/Banner_9.png",
+        "mobile_image": "shopify://shop_images/Banner_4.1.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/nitrix-70-venom",
+        "link_to": "",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 68,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_hDbwLb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7dfxMa": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_aqnYRG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
+          }
+        },
+        "button_f7EgpR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7dfxMa",
+        "text_aqnYRG",
+        "button_f7EgpR"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 52
+      }
+    },
+    "multirow_BUkqJM": {
+      "type": "multirow",
+      "blocks": {
+        "row_paYQP6": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Banner_5.1_9ace0529-c8f4-4854-a37e-c26869dcf004.png",
+            "caption": "",
+            "heading": "<strong>THRUST </strong>FOAM",
+            "text": "<p>A SUPER CRITICAL FOAM THAT SITS AT THE HEEL TO ABNSORB HEAVY LANDINGS AND RETURN ENERGY INSTANTLY. IT GIVES A SUBTLE AIR-BUBBLE FEEL UNDERFOOT.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_MCtVKN": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Banner_8.1.png",
+            "caption": "",
+            "heading": "<strong>CARBON-KNETIC </strong>SUPPORT PLATE",
+            "text": "<p>INTEGRATED AT THE BASE. IT IMPROVES MIDFOOT STABILITY, FURTHER LIMITING TORSION. IT MAINTAINS ALIGNMENT, EVEN DURING MULTIDIRECTIONAL PLAY.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_tn6YR9": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Banner_6.1.png",
+            "caption": "",
+            "heading": "<strong>ARMORMESH  </strong>DURACORE",
+            "text": "<p>ARMOR MESH CREATES A BREATHABLE, LIGHTWEIGHT UPPER, WHILE DURACORE IMPROVES ABRASION RESISTANCE. THE RESULT IS AN AIRY YET RESIIENT SHELL THAT HOLDS UP TO HEAVY SESSIONS</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_WhHB7r": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Banner_7.1.png",
+            "caption": "",
+            "heading": "THE <strong>Z-LOCK</strong>",
+            "text": "<p>A SPECIALLY STIFFENED FOAM AT THE BASE OF THE FOOT TO INCREASE TORSIONAL RESISTANCE. THE RESULT IS A FIRM, ANCHORED FEEL DURING LATERAL SHIFTS.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_3wBwe3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Banner_8.2.png",
+            "caption": "",
+            "heading": "SKELETAL <strong>INSOLE</strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_paYQP6",
+        "row_MCtVKN",
+        "row_tn6YR9",
+        "row_WhHB7r",
+        "row_3wBwe3"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h0",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "row_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_WQLKV3": {
+      "type": "rich-text",
+      "custom_css": [
+        "div {background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(210, 151, 0, 1) 100% );}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "multicolumn_zieGnW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_n7FRgW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_7.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AatUqt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_95f2e95b-eb57-4f13-a306-2f41d5412dfc.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6QDLmL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2_0a00ee0d-9c33-4766-85ab-e5adfd0ae6d4.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H98z3q": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_4_45c36765-9058-44ff-a718-158b7ee021f9.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_N3g4Gz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_5_91415f2f-2a90-4692-8e2c-7c41998b3075.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MxgJat": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_6_474f3a6d-9ce0-4d6b-a769-8e68d4bae484.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_n7FRgW",
+        "column_AatUqt",
+        "column_6QDLmL",
+        "column_H98z3q",
+        "column_N3g4Gz",
+        "column_MxgJat"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "TRUSTED BY <strong>PROS</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_yHBKGY": {
+      "type": "rich-text",
+      "custom_css": [
+        "div {background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(210, 151, 0, 1) 100% );}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "rich_text_R8N7pw": {
+      "type": "rich-text",
+      "custom_css": [
+        "div {background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(210, 151, 0, 1) 100% );}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "hero_component_enbrUX": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_10.png",
+        "mobile_image": "shopify://shop_images/Banner_10.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 68,
         "padding_bottom": 64
       }
     },
-    "custom_liquid_iBQWCi": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "rich_text_c3cyPK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FhrK6A": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_DHG97K": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
+          }
+        },
+        "button_Q888JT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FhrK6A",
+        "text_DHG97K",
+        "button_Q888JT"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n      Curve² Frame Geometry \n    </p>\n    <h3 class=\"spot\">Sweet Spot, Sharpened</h3>\n    <p style=\"margin: 3px 0;\">Specialised frame shape that increases sweet spot coverage by up to 15%. </p>\n  </section>\n  \n  <style>\n    .spot {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .spot {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_N9tz7z": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_11.png",
+        "mobile_image": "shopify://shop_images/Banner_11.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 100,
-        "padding_bottom": 84
+        "padding_top": 68,
+        "padding_bottom": 64
+      }
+    },
+    "rich_text_3d3gL3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_f9kEnV": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_eVRtxY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
+          }
+        },
+        "button_AH4Lp6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_f9kEnV",
+        "text_eVRtxY",
+        "button_AH4Lp6"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_ihcW4x": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bMtqYy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_14.1.png",
+            "title": "DURAGRIP <strong>OUTSOLE</strong>",
+            "text": "<p>A DURABLE RUBBER OUTSOLE WITH DEPENDABLE TRACTION. THE PATTERNED GRIP SUPPORTS QUICLK DIRECTIONAL CHANGES WHILE RESISTING ABRASION OVER EXTENDED USE.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HXFwx4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_12.1.png",
+            "title": "<strong>GOOD YEAR</strong>",
+            "text": "<p>DEVELOPED WITH GOODYEAR. THE DURAGRIP OUTSOLE FEATURES A SPECIALISED RUBBER BLEND UNLIKE ANY OTHER, IT IS BOTH DURABLE YET GRIPPY, BALANCING HARDNESS TO TRACTION.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_bMtqYy",
+        "column_HXFwx4"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "media_QE4AML": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_15_710ebbe0-e2b7-43ea-a170-b80467003c85.png",
+        "mobile_image": "shopify://shop_images/Banner_15.1_c234eebe-1117-44a1-9581-30aea0675c97.png",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 24,
+        "padding_bottom": 28
       }
     },
     "multicolumn_dXwFQN": {
@@ -117,9 +617,9 @@
         "column_HGdYa4": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Cntrl_Foam_4a63b770-88f9-48f9-9532-7e8adb6f73f3.jpg",
-            "title": "",
-            "text": "<p>Inserted in the frame to dampen vibration and stabilize the racket on contact. </p>",
+            "image": "shopify://shop_images/Banner_16.png",
+            "title": "THE <strong>GAP</strong>",
+            "text": "<p>WHEN WE LOOKED AT THE PROFFESSIONAL MARKET, ONE THING BECAME OBVIOUS, EVERY SHOE EXCELLED AT SOMETHING, BUT <strong>NONE EXCELLED AT EVERYTHING</strong>.</p>",
             "link_label": "",
             "link": ""
           }
@@ -127,9 +627,9 @@
         "column_qFbg9y": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/T-FUSE.jpg",
-            "title": "",
-            "text": "<p>A unified frame-to-shaft<strong> </strong>connection that enhances stability<strong> </strong>and energy transfer.</p>",
+            "image": "shopify://shop_images/Banner_16.1.png",
+            "title": "THE <strong>ANSWER</strong>",
+            "text": "<p><strong>PHENOM </strong>WAS OUR ANSWER.</p>",
             "link_label": "",
             "link": ""
           }
@@ -137,9 +637,19 @@
         "column_4NA4YM": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/M46X_6670d02b-5b24-435e-b902-738a3551682a.jpg",
-            "title": "",
-            "text": "<p>Reinforced Carbon<strong> </strong>structure for a crisp, responsive<strong> </strong>feel.</p>",
+            "image": "shopify://shop_images/Banner_16.2.png",
+            "title": "THE <strong>GOAL</strong>",
+            "text": "<p>THE GOAL WASN'T TO CREATE THE LIGHTEST SHOE, OR THE SOFTEST OR THE MOST RIGID.<br/><br/>THE GOAL WAS TO CREATE<strong> THE MOST COMPLETE SHOE</strong>. OUR EVERYTHING SHOE.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YyHcKX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_16-3.png",
+            "title": "THE <strong>RESULT</strong>",
+            "text": "<p>PHENOM REPRESENTS OUR STEP INTO THE PROFESSIONAL CATEGORY. THIS IS A SHOE DESIGNED NOT AROUND A SINGLE STRENGTH, BUT AROUND THE <strong>FULL SPECTRUM</strong> OF WHAT PROFFESIONAL PLAYERS NEED.</p>",
             "link_label": "",
             "link": ""
           }
@@ -148,192 +658,67 @@
       "block_order": [
         "column_HGdYa4",
         "column_qFbg9y",
-        "column_4NA4YM"
+        "column_4NA4YM",
+        "column_YyHcKX"
+      ],
+      "custom_css": [
+        "strong {color: #d29700;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "",
+        "title": "THE ORIGIN OF <strong>THE PHENOM</strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 92,
         "padding_bottom": 92
-      }
-    },
-    "media_QE4AML": {
-      "type": "media",
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_2_2988da61-d8f7-4b73-a751-7b4df82804eb.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R_d20d2059-1b7f-4da0-a163-4275dcbd2641.jpg",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 24,
-        "padding_bottom": 28
-      }
-    },
-    "multicolumn_YmTxPe": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_Kdhaf7": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/2_76524d06-9738-4e2c-ae15-0afebe188a94.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rTY4kR": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/1_16a813d4-df77-4017-994b-ad800e254469.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Kdhaf7",
-        "column_rTY4kR"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Trusted By Champions",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 84
       }
     },
     "hero_component_6Ji8wn": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Fifth_L.jpg",
-        "mobile_image": "shopify://shop_images/Fifth_R.jpg",
+        "image": "shopify://shop_images/Banner_15.png",
+        "mobile_image": "shopify://shop_images/Banner_15.1.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/nitrix-70-venom",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "custom_liquid_4mBYnk": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <p style=\"margin: 3px 0;\">\n     The Ultimate Attacking Racket\n    </p>\n    <h3 class=\"speed\">Revolutionizing Power </h3>\n    <p style=\"margin: 3px 0;\"> \n      Play like a champion with the most powerful racket in your hand \n    </p>\n    <a href=\"/products/nitrix-70-venom\" class=\"cta2\">\n      <span>SHOP NITRIX</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta2 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #00c9ff;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "multicolumn_VE8jan": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_pBFn6a": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/2_ab549237-062a-4026-8105-a47ab014588a.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://pages/nitrix-70-volta"
-          }
-        },
-        "column_GqXRGn": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/3_e578f9d6-1504-49c4-bc96-0e25abc4ac49.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://pages/hyfonic-7"
-          }
-        },
-        "column_Uf3Lnw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/4_b0b1f2b3-af1c-4c20-ad1f-db083c6f53f5.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://pages/flareon-700"
-          }
-        }
-      },
-      "block_order": [
-        "column_pBFn6a",
-        "column_GqXRGn",
-        "column_Uf3Lnw"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "The Pro Series",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 68,
-        "padding_bottom": 60
-      }
-    },
-    "custom_liquid_f7fbKy": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n  <title>Badminton Rackets</title>\n  <style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    body {\n      background-color: #000;\n      color: white;\n    }\n\n    .container {\n      max-width: 1200px;\n      margin: 0 auto;\n      padding: 2rem 1rem;\n    }\n\n    .products-row {\n      display: flex;\n      justify-content: space-between;\n    }\n\n    .product-column {\n      flex: 0 0 23%;\n      padding: 1.5rem;\n      text-align: center;\n      border-left: 1px solid #ccc;\n      margin-bottom: 2rem;\n    }\n\n    .product-column:first-child {\n      border-left: none;\n    }\n\n    .racket-img {\n      width: 40%;\n      height: auto;\n      margin-bottom: 0.5rem;\n    }\n\n    .product-title-text {\n      font-weight: 700;\n      font-size: 1.4rem;\n      margin-bottom: 0.75rem;\n      background-clip: text;\n      -webkit-background-clip: text;\n      color: transparent;\n    }\n\n    .venom-title {\n      background-image: linear-gradient(to right, #3bb537, #1b3822);\n    }\n\n    .volta-title {\n      background-image: linear-gradient(to right, #3ca6f3, #1b1e3f);\n    }\n\n    .flareon-title {\n      background-image: linear-gradient(to right, #f44336, #8e0e00);\n    }\n\n    .hyfonic-title {\n      background-image: linear-gradient(to right, #9f5cf7, #0c0624);\n    }\n\n    .attack-tag {\n      display: inline-block;\n      font-size: 0.75rem;\n      font-weight: 500;\n      background: rgba(255, 255, 255, 0.1);\n      padding: 0.35rem 0.75rem;\n      border-radius: 999px;\n      margin-bottom: 1rem;\n      color: white;\n    }\n\n    .specs-section {\n      font-size: 0.85rem;\n      margin-top: 1rem;\n      text-align: center;\n      color: white;\n    }\n\n    .spec-block {\n      margin-bottom: 1.1rem;\n    }\n\n    .spec-label {\n      font-weight: 600;\n      color: white;\n      margin-bottom: 0.2rem;\n    }\n\n    .spec-values {\n      color: white;\n      margin-top: 0.2rem;\n    }\n\n    .feature-list {\n      list-style: none;\n      padding-left: 0;\n      margin: 0.25rem auto 0;\n      display: inline-block;\n      text-align: center;\n      line-height: 1.4;\n      color: white;\n    }\n\n    .feature-list li {\n      margin: 0.2rem 0;\n    }\n\n    /* Mobile View - Swipable */\n    @media (max-width: 768px) {\n      .container {\n        padding: 1rem 0;\n        overflow: hidden;\n      }\n\n      .products-row {\n        display: flex;\n        overflow-x: auto;\n        scroll-snap-type: x mandatory;\n        -webkit-overflow-scrolling: touch;\n        scrollbar-width: none;\n        -ms-overflow-style: none;\n        gap: 1rem;\n        padding: 0 1rem;\n      }\n\n      .products-row::-webkit-scrollbar {\n        display: none;\n      }\n\n      .product-column {\n        flex: 0 0 calc(50% - 0.5rem);\n        min-width: calc(50% - 0.5rem);\n        border-left: 1px solid #ccc;\n        border-right: 1px solid #ccc;\n        border-radius: 12px;\n        padding: 1rem;\n        margin-bottom: 1rem;\n        scroll-snap-align: start;\n        background: #111;\n      }\n\n      .product-column:first-child {\n        border-left: 1px solid #ccc;\n      }\n\n      .product-title-text {\n        font-size: 1.1rem;\n      }\n\n      .racket-img {\n        width: 90%;\n        margin: 0 auto 0.5rem;\n      }\n\n      .specs-section {\n        font-size: 0.8rem;\n      }\n\n      .spec-block {\n        margin-bottom: 0.8rem;\n      }\n\n      .attack-tag {\n        font-size: 0.7rem;\n        padding: 0.25rem 0.5rem;\n      }\n    }\n\n    /* Very small screens */\n    @media (max-width: 480px) {\n      .product-column {\n        flex: 0 0 calc(50% - 0.5rem);\n        min-width: calc(50% - 0.5rem);\n        padding: 0.8rem;\n      }\n\n      .product-title-text {\n        font-size: 1rem;\n      }\n\n      .specs-section {\n        font-size: 0.75rem;\n      }\n    }\n\n    /* Scroll indicator for mobile */\n    @media (max-width: 768px) {\n      .container::after {\n        content: \"← Swipe to see more →\";\n        display: block;\n        text-align: center;\n        color: #ccc;\n        font-size: 0.8rem;\n        margin-top: 1rem;\n        font-style: italic;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"products-row\">\n\n      <!-- Nitrix 70 Venom -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Venom.png?v=1753182756\" />\n        <div class=\"product-title-text venom-title\">NITRIX 70 VENOM</div>\n        <div class=\"attack-tag\">⚔️ Attack Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">6.1mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>T-Fuse</li>\n              <li>CNTRLfoam</li>\n              <li>M46x Carbon Fibre</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Nitrix 70 Volta -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Volta.png?v=1753182756\" />\n        <div class=\"product-title-text volta-title\">NITRIX 70 VOLTA</div>\n        <div class=\"attack-tag\">⚔️ Attack Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>Aerodynamic Frame</li>\n              <li>AECG+ Carbon Fiber</li>\n              <li>M46x Carbon Fibre</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Flareon 700 -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Flareon.png?v=1753182756\" />\n        <div class=\"product-title-text flareon-title\">FLAREON 700</div>\n        <div class=\"attack-tag\">💨 Speed Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>TorsionStop Technology</li>\n              <li>CNTRLfoam</li>\n              <li>AECG+ Carbon Fiber</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n      <!-- Hyfonic 7 -->\n      <div class=\"product-column\">\n        <img class=\"racket-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Hyfonic.png?v=1753182756\" />\n        <div class=\"product-title-text hyfonic-title\">HYFONIC 7</div>\n        <div class=\"attack-tag\">🎯 Precision Oriented</div>\n        <div class=\"specs-section\">\n          <div class=\"spec-block\"><div class=\"spec-label\">Weight</div><div class=\"spec-values\">3U<br>4U</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Tension</div><div class=\"spec-values\">≤ 32 Lbs</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Shaft Diameter</div><div class=\"spec-values\">7.0mm</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Handle Size</div><div class=\"spec-values\">G6</div></div>\n          <div class=\"spec-block\"><div class=\"spec-label\">Player Level</div><div class=\"spec-values\">Professional</div></div>\n          <div class=\"spec-block\">\n            <div class=\"spec-label\">Key Technologies</div>\n            <ul class=\"feature-list\">\n              <li>Dual Aerodynamic Frame</li>\n              <li>CNTRLfoam</li>\n              <li>HyperWeave Carbon Fiber</li>\n              <li>Curve²</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</body>\n</html>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "hero_video_component_Ei6eD6",
-    "custom_liquid_3wrLyj",
     "hero_component_MaVYaG",
-    "custom_liquid_bDVVH6",
+    "rich_text_cA6Fnx",
     "hero_component_LE9qR6",
+    "rich_text_FgxdaE",
     "hero_component_PCUFNt",
-    "custom_liquid_iBQWCi",
-    "multicolumn_dXwFQN",
+    "rich_text_hDbwLb",
+    "rich_text_R8N7pw",
+    "multirow_BUkqJM",
+    "rich_text_WQLKV3",
+    "multicolumn_zieGnW",
+    "rich_text_yHBKGY",
+    "hero_component_enbrUX",
+    "rich_text_c3cyPK",
+    "hero_component_N9tz7z",
+    "rich_text_3d3gL3",
+    "multicolumn_ihcW4x",
     "media_QE4AML",
-    "multicolumn_YmTxPe",
-    "hero_component_6Ji8wn",
-    "custom_liquid_4mBYnk",
-    "multicolumn_VE8jan",
-    "custom_liquid_f7fbKy"
+    "multicolumn_dXwFQN",
+    "hero_component_6Ji8wn"
   ]
 }
