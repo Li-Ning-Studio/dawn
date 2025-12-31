@@ -39,35 +39,23 @@
         "heading_jLYE9y": {
           "type": "heading",
           "settings": {
-            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading": "<strong>EVERYTHING </strong>YOU IMAGINED",
             "heading_size": "h0"
           }
         },
         "text_LwYjN7": {
           "type": "text",
           "settings": {
-            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
-          }
-        },
-        "button_D7pjHX": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<h3>THIS <strong>PROFESSIONAL SHOE</strong> IS WHAT YOU'VE BEEN WAITING FOR</h3>"
           }
         }
       },
       "block_order": [
         "heading_jLYE9y",
-        "text_LwYjN7",
-        "button_D7pjHX"
+        "text_LwYjN7"
       ],
       "custom_css": [
-        "strong {color: #d29700;}"
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -75,8 +63,18 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "full_width": true,
-        "padding_top": 12,
-        "padding_bottom": 52
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_DQEyNA": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n<a href=\"#\" class=\"cta\">\n  <span>Claim It!</span>\n</a>\n</section>\n\n<style>\n  .cta {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 15px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\ntransition:0.5s ease;\n  }\n.cta:hover{\n  background:#d29700;\ncolor:black;\n}\n</style>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "hero_component_LE9qR6": {
@@ -91,8 +89,62 @@
         "button_text": "",
         "link_to": "",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 60,
-        "padding_bottom": 64
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_rD6cU3": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center;\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/good_year_logo.png?v=1767176726&width=750\" \n  alt=\"Nitrix Logo\" \n  style=\"min-width: 150px; width: 20%; height: auto; margin: 10px 0; padding: 0 2.5rem\"\n/><img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/hndrd_logo.png?v=1767176137&width=1000\"\n  alt=\"Nitrix Logo\" \n  style=\"min-width: 150px; width: 20%; height: auto; margin: 10px 0; padding: 0 2.5rem\"\n/>\n    \n  </div>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 40,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_yyDK9a": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zf8BJb": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHERE <strong>RUBBER INTELLIGENCE</strong> MEETS BADMINTON",
+            "heading_size": "h1"
+          }
+        },
+        "text_GfjQK7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>EXPERIENCE THE HIGHEST TRACTION AS HNDRD BRINGS GOODYEARS RUBBER TO PHENOM</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zf8BJb",
+        "text_GfjQK7"
+      ],
+      "custom_css": [
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Lm9mhn": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  \n\n<a href=\"#\" class=\"cta\">\n  <span>TIME TO PLAY!</span>\n</a>\n</section>\n\n<style>\n section{\n  background:black;\n  color:white;\n} \n.cta {\n    margin-top: 1rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  transition:0.5s ease-out;\n  }\n.cta:hover{\n  background:#d29700;\n}\np,h1{\ntext-align:center;\n}\n  strong{\nletter-spacing: -1px;\n  margin: 0;\n  font-weight: 800;\n  background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; \n}\n</style>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 16,
+        "padding_bottom": 20
       }
     },
     "rich_text_FgxdaE": {
@@ -101,20 +153,20 @@
         "heading_LAVJ8d": {
           "type": "heading",
           "settings": {
-            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading": "Where rubber <strong>intelligence </strong>meets <strong>badminton </strong>",
             "heading_size": "h0"
           }
         },
         "text_RPJcg6": {
           "type": "text",
           "settings": {
-            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
+            "text": "<h3>Experience the highest traction as Hndrd brings <strong>Goodyears rubber</strong> to phenom </h3>"
           }
         },
         "button_BEjETk": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Time to play",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -128,6 +180,7 @@
         "text_RPJcg6",
         "button_BEjETk"
       ],
+      "disabled": true,
       "custom_css": [
         "strong {color: #d29700;}"
       ],
@@ -153,8 +206,8 @@
         "button_text": "",
         "link_to": "",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 68,
-        "padding_bottom": 20
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_hDbwLb": {
@@ -199,8 +252,23 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "full_width": true,
-        "padding_top": 12,
-        "padding_bottom": 52
+        "padding_top": 20,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_R8N7pw": {
+      "type": "rich-text",
+      "custom_css": [
+        "div {background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(210, 151, 0, 1) 100% );}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 4
       }
     },
     "multirow_BUkqJM": {
@@ -382,7 +450,7 @@
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "TRUSTED BY <strong>PROS</strong>",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
@@ -412,23 +480,9 @@
         "padding_bottom": 4
       }
     },
-    "rich_text_R8N7pw": {
-      "type": "rich-text",
-      "custom_css": [
-        "div {background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(210, 151, 0, 1) 100% );}"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 4
-      }
-    },
     "hero_component_enbrUX": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Banner_10.png",
@@ -476,6 +530,7 @@
         "text_DHG97K",
         "button_Q888JT"
       ],
+      "disabled": true,
       "custom_css": [
         "strong {color: #d29700;}"
       ],
@@ -501,8 +556,8 @@
         "button_text": "",
         "link_to": "",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 68,
-        "padding_bottom": 64
+        "padding_top": 24,
+        "padding_bottom": 12
       }
     },
     "rich_text_3d3gL3": {
@@ -511,20 +566,20 @@
         "heading_f9kEnV": {
           "type": "heading",
           "settings": {
-            "heading": "THE <strong>EVERYTHING SHOE</strong>",
+            "heading": "ADAPTIVE <strong>FIT</strong>",
             "heading_size": "h0"
           }
         },
         "text_eVRtxY": {
           "type": "text",
           "settings": {
-            "text": "<p>OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY<strong> AHEAD OF ITS TIME.</strong></p>"
+            "text": "<p>THE FIT IS INTENTIONALLY SNUG. NOT CONSTRICTIVE, GIVING YOUR FOOT A LOCK-DOWN FEEL THE ELEVATED HEEL-TO-TOE PROFILE SHIFTS YOUR STANCE FORWARD, PLACING YOU IN SPEED'S FAVOR.</p>"
           }
         },
         "button_AH4Lp6": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Buy Now!",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -678,8 +733,8 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 92,
-        "padding_bottom": 92
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "hero_component_6Ji8wn": {
@@ -703,7 +758,11 @@
     "main",
     "hero_component_MaVYaG",
     "rich_text_cA6Fnx",
+    "custom_liquid_DQEyNA",
     "hero_component_LE9qR6",
+    "custom_liquid_rD6cU3",
+    "rich_text_yyDK9a",
+    "custom_liquid_Lm9mhn",
     "rich_text_FgxdaE",
     "hero_component_PCUFNt",
     "rich_text_hDbwLb",
