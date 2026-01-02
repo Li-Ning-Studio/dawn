@@ -614,7 +614,7 @@
               {%- when 'buy_buttons' -%}
                 {% if product.tags contains 'Service' %}
                   <p>This service cannot be purchased seperately.</p>
-                {% else %}
+                {% elsif settings.catalog_mode_enabled != true %}
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,

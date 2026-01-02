@@ -321,6 +321,10 @@
     "cart": {
       "name": "Cart",
       "settings": {
+        "catalog_mode_enabled": {
+          "label": "Catalog mode",
+          "info": "Hide customer account and cart navigation links for showcase-only stores"
+        },
         "cart_type": {
           "label": "Type",
           "drawer": {
