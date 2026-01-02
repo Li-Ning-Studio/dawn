@@ -17,14 +17,24 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_GEtK3V": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\nstrong{\ncolor:red;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_video_component_rcxAff": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/yt.mp4",
         "mobile_video": "shopify://files/videos/sq.mp4",
-        "subtitle": "Superior Flight. Precise Control. Unmatched Durability.",
-        "title": "Future 10 Shuttlecock",
+        "subtitle": "",
+        "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/future-10-extra-durable",
@@ -33,93 +43,48 @@
         "padding_bottom": 0
       }
     },
-    "multirow_ttyWBT": {
-      "type": "multirow",
+    "rich_text_HhMWbF": {
+      "type": "rich-text",
       "blocks": {
-        "row_ydNzVy": {
-          "type": "row",
+        "heading_dYiVjw": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/Banner_1_1.png",
-            "caption": "",
-            "heading": "Advanced nylon construction with reinforced binding delivers superior durability versus standard tournament shuttles.",
-            "text": "",
-            "button_label": "Get Now!",
-            "button_link": "shopify://products/future-10-extra-durable"
+            "heading": "<strong>Future 10</strong> Shuttlecock",
+            "heading_size": "h0"
           }
         },
-        "row_h73NtA": {
-          "type": "row",
+        "text_qNEXkc": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/04_a8fcc9fb-9e87-4f36-8598-391a6ffd435b.jpg",
-            "caption": "",
-            "heading": "Premium grade nylon selected for optimal uniformity. Delivers stable and accurate flight at all speeds.",
-            "text": "",
-            "button_label": "Buy Now",
-            "button_link": "shopify://products/future-10-extra-durable"
+            "text": "<h4>Superior Flight. <strong>Precise Control</strong>. Unmatched Durability.</h4>"
+          }
+        },
+        "button_4TAHUL": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Smash Now",
+            "button_link": "shopify://products/future-10-extra-durable",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "row_ydNzVy",
-        "row_h73NtA"
+        "heading_dYiVjw",
+        "text_qNEXkc",
+        "button_4TAHUL"
       ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "scheme-d57f7147-03a7-4830-9d7e-f589c4a66e2b",
-        "padding_top": 36,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_DgiFTX": {
-      "type": "rich-text",
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 4,
-        "padding_bottom": 0
-      }
-    },
-    "hero_component_CdQAHH": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "subtitle": "",
-        "title": "High-Performance Shuttlecock",
-        "description": "Balanced cork and aerodynamic cone ensures consistent trajectory, even under intense rallies.",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "",
-        "padding_top": 24,
-        "padding_bottom": 0
-      }
-    },
-    "hero_component_EyW4EW": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_L_2.png",
-        "mobile_image": "shopify://shop_images/Banner_2.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 16,
+        "padding_bottom": 12
       }
     },
     "multirow_E4Lxxw": {
@@ -130,7 +95,7 @@
           "settings": {
             "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
             "caption": "",
-            "heading": "Built for Every Smash, Drop, and Rally.",
+            "heading": "Built for Every <strong>Smash</strong>, <strong>Drop</strong>, and <strong>Rally</strong>.",
             "text": "<p>Its meticulous construction ensures unmatched control, steady flight, and minimal breakage. </p><p>Rated 10/10 for Durability, Flight, Hitting Sound and Net play </p>",
             "button_label": "Smash Now",
             "button_link": "shopify://products/future-10-extra-durable"
@@ -154,8 +119,199 @@
         "mobile_content_alignment": "center",
         "section_color_scheme": "",
         "row_color_scheme": "",
-        "padding_top": 36,
+        "padding_top": 16,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_YMinhX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fAfhzw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why It <strong>Wins</strong>?",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fAfhzw"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
+    "multirow_ttyWBT": {
+      "type": "multirow",
+      "blocks": {
+        "row_h73NtA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1_ae8eb4e2-fe46-4144-8191-29735724bf31.png",
+            "caption": "",
+            "heading": "<strong>Superior</strong>",
+            "text": "<h4>Premium grade nylon selected for optimal uniformity. Delivers stable and accurate flight at all speeds.</h4>",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/future-10-extra-durable"
+          }
+        },
+        "row_6eH9ir": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/2_c1d8fe3c-052f-4f17-ab06-b4ea1a32b0ce.png",
+            "caption": "",
+            "heading": "<strong>Precise</strong>",
+            "text": "<h2>Balanced cork and aerodynamic cone ensures <strong>consistent trajectory</strong>, even under intense rallies.</h2>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/future-10-extra-durable"
+          }
+        }
+      },
+      "block_order": [
+        "row_h73NtA",
+        "row_6eH9ir"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "row_color_scheme": "scheme-1",
+        "padding_top": 16,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_rKFMVh": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_L.png",
+        "mobile_image": "shopify://shop_images/Banner_1_1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_daW8xj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7BkF88": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Precise</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_WXjBek": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Balanced cork and aerodynamic cone ensures <strong>consistent trajectory</strong>, even under intense rallies.</h2>"
+          }
+        },
+        "button_fUjQBm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/future-10-extra-durable",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7BkF88",
+        "text_WXjBek",
+        "button_fUjQBm"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_EyW4EW": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_L_2_5b715cf0-b312-4ec1-a53a-cad7db01ac92.png",
+        "mobile_image": "shopify://shop_images/Banner_2_034d883e-a392-43ee-8e62-a3aac519d318.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_hAPdDN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NYJkre": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Durable</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_MqbYbx": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Advanced nylon construction with reinforced binding delivers superior durability versus standard tournament shuttles.</h2>"
+          }
+        },
+        "button_KLQqg9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Smash Now",
+            "button_link": "shopify://products/future-10-extra-durable",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NYJkre",
+        "text_MqbYbx",
+        "button_KLQqg9"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 28
       }
     },
     "hero_component_zagBQf": {
@@ -174,6 +330,30 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_r3ek3b": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KbMGPQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Every Point <strong>Demands </strong>Precision",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KbMGPQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 28
+      }
+    },
     "multicolumn_JYd48h": {
       "type": "multicolumn",
       "blocks": {
@@ -181,7 +361,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/eb30514a-9084-4ed1-be34-9bd9fd48dab0-md.jpg",
-            "title": "<strong>Nylon skirt </strong>",
+            "title": "Nylon skirt ",
             "text": "",
             "link_label": "",
             "link": ""
@@ -191,7 +371,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/56427c28-aaa2-4717-9968-f05c62f662be-md.jpg",
-            "title": "<strong>High Quality Synthetic cork base</strong>",
+            "title": "High Quality Synthetic cork base",
             "text": "",
             "link_label": "",
             "link": ""
@@ -201,7 +381,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/ab80bfd0-ad4c-497d-9da7-6efd1de3d4e6-md.jpg",
-            "title": "<strong>Yellow Skirt</strong>",
+            "title": "Yellow Skirt",
             "text": "",
             "link_label": "",
             "link": ""
@@ -211,7 +391,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/b7f1a1ba-341e-4d31-a40a-a6d5a1bd3259-md.jpg",
-            "title": "<strong>Green Cap (Slow) </strong>",
+            "title": "Green Cap (Slow) ",
             "text": "",
             "link_label": "",
             "link": ""
@@ -221,7 +401,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
-            "title": "<strong>6 shuttles in a box </strong>",
+            "title": "6 shuttles in a box ",
             "text": "",
             "link_label": "",
             "link": ""
@@ -242,7 +422,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/18301c09-c136-42c0-8dcd-12803f886bab-md.jpg",
-            "title": "<strong>Recovers to shape in 0.02 seconds</strong>",
+            "title": "Recovers to shape in 0.02 seconds",
             "text": "",
             "link_label": "",
             "link": ""
@@ -263,7 +443,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "",
+        "title": "The <strong>Science </strong>Behind It",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "circle",
@@ -282,6 +462,12 @@
     "rich_text_yYibri": {
       "type": "rich-text",
       "blocks": {
+        "text_AzfNDn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Player level: suitable for<strong> Professional</strong> or <strong>Serious </strong>players. </p>"
+          }
+        },
         "heading_DR6BtN": {
           "type": "heading",
           "settings": {
@@ -302,6 +488,7 @@
         }
       },
       "block_order": [
+        "text_AzfNDn",
         "heading_DR6BtN",
         "button_tcmmV8"
       ],
@@ -373,13 +560,18 @@
   },
   "order": [
     "main",
+    "custom_liquid_GEtK3V",
     "hero_video_component_rcxAff",
-    "multirow_ttyWBT",
-    "rich_text_DgiFTX",
-    "hero_component_CdQAHH",
-    "hero_component_EyW4EW",
+    "rich_text_HhMWbF",
     "multirow_E4Lxxw",
+    "rich_text_YMinhX",
+    "multirow_ttyWBT",
+    "hero_component_rKFMVh",
+    "rich_text_daW8xj",
+    "hero_component_EyW4EW",
+    "rich_text_hAPdDN",
     "hero_component_zagBQf",
+    "rich_text_r3ek3b",
     "multicolumn_JYd48h",
     "rich_text_yYibri",
     "collapsible_content_j39AhM"
