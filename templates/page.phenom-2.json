@@ -139,29 +139,14 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_R8N7pw": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_4tbxAx": {
-          "type": "heading",
-          "settings": {
-            "heading": "Technology & <strong>Feature</strong>",
-            "heading_size": "h0"
-          }
-        }
-      },
-      "block_order": [
-        "heading_4tbxAx"
-      ],
-      "custom_css": [],
-      "name": "t:sections.rich-text.presets.name",
+    "custom_liquid_jkFeW6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "custom_liquid": "<div class=\"eight\">\n<div> </div>\n  <h1>Technology & <strong>Features</strong></h1>\n<div> </div>\n</div>\n<style>\n.eight{\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.eight div{\n\n  height:2px;\n  padding: 2px 12%;\n  background:#e3be5f;\n}\n.eight h1 {\n  text-align:center;\n\n  font-size:3rem; letter-spacing:1px;\n  margin: 0px 5px;\n}\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 4
+        "padding_top": 40,
+        "padding_bottom": 36
       }
     },
     "multirow_BUkqJM": {
@@ -247,7 +232,7 @@
         "mobile_content_alignment": "center",
         "section_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "row_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 16
       }
     },
@@ -605,7 +590,7 @@
     "custom_liquid_Lm9mhn",
     "hero_component_PCUFNt",
     "custom_liquid_nb7rEQ",
-    "rich_text_R8N7pw",
+    "custom_liquid_jkFeW6",
     "multirow_BUkqJM",
     "rich_text_WQLKV3",
     "multicolumn_zieGnW",
