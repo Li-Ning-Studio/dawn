@@ -59,6 +59,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_nb7rEQ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <h3 class=\"speed\">THE EVERYTHING SHOE </h3>\n    <p style=\"margin: 3px 0;\"> \n   OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY AHEAD OF ITS TIME.\n    </p>\n    <a href=\"#\" class=\"cta1\">\n      <span>CLAIM IT!</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta1 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #FF719A;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed {\n      letter-spacing: -1px;\n      margin: 10px 0px;\n      font-weight: 800;\n      font-size: 3rem;\n  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "hero_component_LE9qR6": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -127,16 +137,6 @@
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 16,
         "padding_bottom": 40
-      }
-    },
-    "custom_liquid_nb7rEQ": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;\" >\n    <h3 class=\"speed\">THE EVERYTHING SHOE </h3>\n    <p style=\"margin: 3px 0;\"> \n   OUR PHISOPHY OF BUILFING BEYOND TYPICAL PERFORMANCE STANDARDS. THE FEEL IS ADVANCED, REFINED AND DISTINCTLY AHEAD OF ITS TIME.\n    </p>\n    <a href=\"#\" class=\"cta1\">\n      <span>CLAIM IT!</span>\n    </a>\n  </section>\n  \n  <style>\n     .cta1 {\n      margin-top: 2rem;\n      background: transparent;\n      border: 1.5px solid #FF719A;\n      font-weight: 700;\n      padding: 1.6rem 3.1rem;\n      border-radius: 500px;\n      cursor: pointer;\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      color: white;\n      text-decoration: none;\n      font-size: 1.5rem;\n    }\n\n    .speed {\n      letter-spacing: -1px;\n      margin: 10px 0px;\n      font-weight: 800;\n      font-size: 3rem;\n  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .speed {\n        font-size: 4rem;\n        padding: 0 8rem; \n      }\n    }\n  </style>",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "rich_text_R8N7pw": {
@@ -221,7 +221,7 @@
         "row_3wBwe3"
       ],
       "custom_css": [
-        "strong {color: #d29700;}"
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
@@ -328,7 +328,7 @@
         "column_MxgJat"
       ],
       "custom_css": [
-        "strong {color: #d29700;}"
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -401,7 +401,7 @@
         "text_eVRtxY"
       ],
       "custom_css": [
-        "strong {color: #d29700;}"
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -452,7 +452,7 @@
         "column_HXFwx4"
       ],
       "custom_css": [
-        "strong {color: #d29700;}"
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -534,7 +534,7 @@
         "column_YyHcKX"
       ],
       "custom_css": [
-        "strong {color: #d29700;}"
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -569,6 +569,16 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_h8ckcD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  \n\n<a href=\"#\" class=\"cta\">\n  <span>SHOP NOW!</span>\n</a>\n</section>\n\n<style>\n section{\n  background:black;\n  color:white;\n} \n.cta {\n    margin-top: 1rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  transition:0.5s ease-out;\n  }\n.cta:hover{\n  background:#d29700;\n}\np,h1{\ntext-align:center;\n}\n  strong{\nletter-spacing: -1px;\n  margin: 0;\n  font-weight: 800;\n  background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; \n}\n</style>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 32,
+        "padding_bottom": 48
+      }
     }
   },
   "order": [
@@ -592,6 +602,7 @@
     "multicolumn_ihcW4x",
     "media_QE4AML",
     "multicolumn_dXwFQN",
-    "hero_component_6Ji8wn"
+    "hero_component_6Ji8wn",
+    "custom_liquid_h8ckcD"
   ]
 }
