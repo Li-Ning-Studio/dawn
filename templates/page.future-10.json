@@ -141,9 +141,9 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 24,
         "padding_bottom": 16
       }
     },
@@ -188,71 +188,10 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
+        "section_color_scheme": "scheme-2",
         "row_color_scheme": "scheme-1",
         "padding_top": 16,
         "padding_bottom": 36
-      }
-    },
-    "hero_component_rKFMVh": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_L.png",
-        "mobile_image": "shopify://shop_images/Banner_1_1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_daW8xj": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_7BkF88": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Precise</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_WXjBek": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Balanced cork and aerodynamic cone ensures <strong>consistent trajectory</strong>, even under intense rallies.</h2>"
-          }
-        },
-        "button_fUjQBm": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://products/future-10-extra-durable",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_7BkF88",
-        "text_WXjBek",
-        "button_fUjQBm"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-4",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "hero_component_EyW4EW": {
@@ -566,8 +505,6 @@
     "multirow_E4Lxxw",
     "rich_text_YMinhX",
     "multirow_ttyWBT",
-    "hero_component_rKFMVh",
-    "rich_text_daW8xj",
     "hero_component_EyW4EW",
     "rich_text_hAPdDN",
     "hero_component_zagBQf",
