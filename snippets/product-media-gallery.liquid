@@ -69,6 +69,7 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+  # Key highlights start
 
   assign key_highlights_metafield = product.metafields.custom_but_hidden.key_highlights
   if key_highlights_metafield and key_highlights_metafield.value != blank
@@ -93,6 +94,7 @@
     assign should_render_highlights_slide = true
   endif
 -%}
+{% comment %} Key highlights end {% endcomment %}
 
 <media-gallery
   id="MediaGallery-{{ section.id }}"
@@ -174,6 +176,8 @@
         {%- endunless -%}
       {% endfor %}
 
+      {% comment %}  KEy highlights start 2 {% endcomment %}
+
       {% comment %} Mobile-only slide that repeats the first image with key highlight metafields layered on top {% endcomment %}
       {%- if should_render_highlights_slide -%}
         {%- liquid
@@ -230,6 +234,8 @@
           </div>
         </li>
       {%- endif -%}
+
+      {% comment %}  KEy highlights end 2 {% endcomment %}
     </ul>
     <div class="slider-buttons quick-add-hidden">
       <button

@@ -419,6 +419,7 @@ a.product__text {
     width: calc(50% - 1.5rem - var(--grid-mobile-horizontal-spacing));
   }
 }
+/* product media highlights start */
 
 .product__media-item--highlights {
   position: relative;
@@ -485,6 +486,7 @@ a.product__text {
   background-color: white;
   width: 50%;
 }
+/* product media highlights end */
 
 @media screen and (min-width: 750px) {
   .product__media-item--highlights {
