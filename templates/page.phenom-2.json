@@ -24,7 +24,23 @@
         "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Phenom</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    The Everything Shoe\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>explore</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #B49424;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient( -202deg, #946a00 0%,  #97751d 52%, #ebd132 100% );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 56
+      }
+    },
+    "hero_component_MaVYaG": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
+        "mobile_image": "shopify://shop_images/Banner_3.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "hero_component_6Ji8wn": {
@@ -51,22 +67,6 @@
         "color_scheme": "scheme-4",
         "padding_top": 72,
         "padding_bottom": 44
-      }
-    },
-    "hero_component_MaVYaG": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
-        "mobile_image": "shopify://shop_images/Banner_3.1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "custom_liquid_pX3CYh": {
@@ -104,16 +104,6 @@
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 40,
         "padding_bottom": 12
-      }
-    },
-    "custom_liquid_Lm9mhn": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  \n\n<a href=\"#\" class=\"cta\">\n  <span>TIME TO PLAY!</span>\n</a>\n</section>\n\n<style>\n section{\n  background:black;\n  color:white;\n} \n.cta {\n    margin-top: 1rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  transition:0.5s ease-out;\n  }\n.cta:hover{\n  background:#d29700;\n}\np,h1{\ntext-align:center;\n}\n  strong{\nletter-spacing: -1px;\n  margin: 0;\n  font-weight: 800;\n  background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; \n}\n</style>",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 16,
-        "padding_bottom": 40
       }
     },
     "hero_component_PCUFNt": {
@@ -561,13 +551,12 @@
   "order": [
     "main",
     "custom_liquid_LW3CjH",
+    "hero_component_MaVYaG",
     "hero_component_6Ji8wn",
     "custom_liquid_whHTcA",
-    "hero_component_MaVYaG",
     "custom_liquid_pX3CYh",
     "hero_component_LE9qR6",
     "custom_liquid_rD6cU3",
-    "custom_liquid_Lm9mhn",
     "hero_component_PCUFNt",
     "custom_liquid_jkFeW6",
     "multirow_BUkqJM",
