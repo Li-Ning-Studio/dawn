@@ -171,11 +171,23 @@
             "button_label": "",
             "button_link": "shopify://products/future-10-extra-durable"
           }
+        },
+        "row_bGRpPd": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/future_10_durable.png",
+            "caption": "",
+            "heading": "<strong>Durable</strong>",
+            "text": "<h2>Advanced nylon construction with reinforced binding delivers superior durability versus standard tournament shuttles.</h2>",
+            "button_label": "",
+            "button_link": "shopify://products/future-10-extra-durable"
+          }
         }
       },
       "block_order": [
         "row_h73NtA",
-        "row_6eH9ir"
+        "row_6eH9ir",
+        "row_bGRpPd"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
@@ -228,6 +240,7 @@
         "text_MqbYbx",
         "button_KLQqg9"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
