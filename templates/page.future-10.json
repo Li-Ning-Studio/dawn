@@ -117,7 +117,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "section_color_scheme": "scheme-2",
         "row_color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 36
@@ -156,7 +156,7 @@
             "image": "shopify://shop_images/1_ae8eb4e2-fe46-4144-8191-29735724bf31.png",
             "caption": "",
             "heading": "<strong>Superior</strong>",
-            "text": "<h2>Premium grade nylon selected for optimal uniformity. Delivers <strong>stable </strong>and <strong>accurate </strong>flight at all speeds.</h2>",
+            "text": "<h3>Premium grade nylon selected for optimal uniformity. Delivers <strong>stable </strong>and <strong>accurate </strong>flight at all speeds.</h3>",
             "button_label": "",
             "button_link": "shopify://products/future-10-extra-durable"
           }
@@ -167,7 +167,7 @@
             "image": "shopify://shop_images/2_c1d8fe3c-052f-4f17-ab06-b4ea1a32b0ce.png",
             "caption": "",
             "heading": "<strong>Precise</strong>",
-            "text": "<h2>Balanced cork and aerodynamic cone ensures <strong>consistent trajectory</strong>, even under intense rallies.</h2>",
+            "text": "<h3>Balanced cork and aerodynamic cone ensures <strong>consistent trajectory</strong>, even under intense rallies.</h3>",
             "button_label": "",
             "button_link": "shopify://products/future-10-extra-durable"
           }
@@ -178,7 +178,7 @@
             "image": "shopify://shop_images/future_10_durable.png",
             "caption": "",
             "heading": "<strong>Durable</strong>",
-            "text": "<h2>Advanced nylon construction with reinforced binding delivers superior durability versus standard tournament shuttles.</h2>",
+            "text": "<h3>Advanced nylon construction with reinforced binding delivers superior durability versus standard tournament shuttles.</h3>",
             "button_label": "",
             "button_link": "shopify://products/future-10-extra-durable"
           }
@@ -199,56 +199,11 @@
         "button_style": "secondary",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "section_color_scheme": "scheme-2",
         "row_color_scheme": "scheme-1",
         "padding_top": 16,
         "padding_bottom": 36
-      }
-    },
-    "rich_text_hAPdDN": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_NYJkre": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Durable</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_MqbYbx": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Advanced nylon construction with reinforced binding delivers superior durability versus standard tournament shuttles.</h2>"
-          }
-        },
-        "button_KLQqg9": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Smash Now",
-            "button_link": "shopify://products/future-10-extra-durable",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_NYJkre",
-        "text_MqbYbx",
-        "button_KLQqg9"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-4",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 28
       }
     },
     "hero_component_EyW4EW": {
@@ -267,47 +222,6 @@
         "padding_bottom": 0
       }
     },
-    "hero_component_zagBQf": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_L_3.png",
-        "mobile_image": "shopify://shop_images/Banner_3_5996fcb5-9e30-42d7-937a-76a2fffa9c4c.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/future-10-extra-durable",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_r3ek3b": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_KbMGPQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Every Point <strong>Demands </strong>Precision",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_KbMGPQ"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 24,
-        "padding_bottom": 28
-      }
-    },
     "multicolumn_JYd48h": {
       "type": "multicolumn",
       "blocks": {
@@ -316,7 +230,7 @@
           "settings": {
             "image": "shopify://shop_images/Comp_1.gif",
             "title": "",
-            "text": "",
+            "text": "<p> </p>",
             "link_label": "",
             "link": ""
           }
@@ -326,7 +240,7 @@
           "settings": {
             "image": "shopify://shop_images/Comp_3.gif",
             "title": "",
-            "text": "",
+            "text": "<p> </p>",
             "link_label": "",
             "link": ""
           }
@@ -336,7 +250,7 @@
           "settings": {
             "image": "shopify://shop_images/Comp_4.gif",
             "title": "",
-            "text": "",
+            "text": "<p> </p>",
             "link_label": "",
             "link": ""
           }
@@ -346,7 +260,7 @@
           "settings": {
             "image": "shopify://shop_images/Comp_5.gif",
             "title": "",
-            "text": "",
+            "text": "<p> </p>",
             "link_label": "",
             "link": ""
           }
@@ -356,7 +270,7 @@
           "settings": {
             "image": "shopify://shop_images/Comp_2.gif",
             "title": "",
-            "text": "",
+            "text": "<p> </p>",
             "link_label": "",
             "link": ""
           }
@@ -381,7 +295,7 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 5,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-4",
         "columns_mobile": "1",
@@ -390,18 +304,18 @@
         "padding_bottom": 44
       }
     },
-    "hero_video_component_XC9EXr": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
+    "hero_component_zagBQf": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "video": "shopify://files/videos/yt.mp4",
-        "mobile_video": "shopify://files/videos/sq.mp4",
+        "image": "shopify://shop_images/Banner_L_3.png",
+        "mobile_image": "shopify://shop_images/Banner_3_5996fcb5-9e30-42d7-937a-76a2fffa9c4c.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/future-10-extra-durable",
-        "color_scheme": "scheme-4",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -452,6 +366,22 @@
         "padding_bottom": 52
       }
     },
+    "hero_video_component_XC9EXr": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt.mp4",
+        "mobile_video": "shopify://files/videos/sq.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/future-10-extra-durable",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "collapsible_content_j39AhM": {
       "type": "collapsible-content",
       "blocks": {
@@ -492,7 +422,7 @@
       "settings": {
         "caption": "",
         "heading": "QUICK FAQ",
-        "heading_size": "h0",
+        "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
         "container_color_scheme": "",
@@ -513,13 +443,11 @@
     "multirow_E4Lxxw",
     "rich_text_YMinhX",
     "multirow_ttyWBT",
-    "rich_text_hAPdDN",
     "hero_component_EyW4EW",
-    "hero_component_zagBQf",
-    "rich_text_r3ek3b",
     "multicolumn_JYd48h",
-    "hero_video_component_XC9EXr",
+    "hero_component_zagBQf",
     "rich_text_yYibri",
+    "hero_video_component_XC9EXr",
     "collapsible_content_j39AhM"
   ]
 }
