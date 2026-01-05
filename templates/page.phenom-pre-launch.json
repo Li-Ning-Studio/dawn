@@ -82,8 +82,12 @@
     },
     "hero_video_component_KpAibb": {
       "type": "hero-video-component",
+      "custom_css": [
+        ".video-container {display: none;}"
+      ],
       "name": "Hero Video Component",
       "settings": {
+        "video": "shopify://files/videos/1920x700_2.mp4",
         "mobile_video": "shopify://files/videos/1080x1350_1.mp4",
         "subtitle": "",
         "title": "",
