@@ -50,33 +50,7 @@
         "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> Goodyear x HNDRD </p>\n  <h2 class=\"second-title\">Grip Born on the Track,</h2>\n  <h2 class=\"second-title\"> Made for the Court</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3rem;\n    font-weight: 800;\n    margin: 0;\n    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "hero_component_LE9qR6": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
-        "mobile_image": "shopify://shop_images/Banner_2.1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_pX3CYh": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 800px; margin: 0 auto;\">\n<p style=\"font-size: 1.4rem\">Goodyear x HNDRD</p>\n<p style=\"font-size: 3rem; font-weight: 800; letter-spacing: -1px; line-height: 150%\">We partnered with <span style=\"color: white;\">Goodyear</span>, the world leader in tire technology, to bring <span style=\"color: white;\">racing-grade rubber</span> to the badminton court. This makes Phenom both <span style=\"color: white;\">extremely durable and relentlessly grippy</span>. </p>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_bottom": 44
       }
     },
     "hero_component_MaVYaG": {
@@ -95,6 +69,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_pX3CYh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 800px; margin: 0 auto;\">\n<p style=\"font-size: 1.4rem\">Goodyear x HNDRD</p>\n<p style=\"font-size: 3rem; font-weight: 800; letter-spacing: -1px; line-height: 150%\">We partnered with <span style=\"color: white;\">Goodyear</span>, the world leader in tire technology, to bring <span style=\"color: white;\">racing-grade rubber</span> to the badminton court. This makes Phenom both <span style=\"color: white;\">extremely durable and relentlessly grippy</span>. </p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "custom_liquid_WtQGqp": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -103,6 +87,22 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 40,
         "padding_bottom": 16
+      }
+    },
+    "hero_component_LE9qR6": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
+        "mobile_image": "shopify://shop_images/Banner_2.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_rD6cU3": {
@@ -616,10 +616,10 @@
     "custom_liquid_LW3CjH",
     "hero_component_6Ji8wn",
     "custom_liquid_whHTcA",
-    "hero_component_LE9qR6",
-    "custom_liquid_pX3CYh",
     "hero_component_MaVYaG",
+    "custom_liquid_pX3CYh",
     "custom_liquid_WtQGqp",
+    "hero_component_LE9qR6",
     "custom_liquid_rD6cU3",
     "rich_text_yyDK9a",
     "custom_liquid_Lm9mhn",
