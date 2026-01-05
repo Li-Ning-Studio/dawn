@@ -194,22 +194,6 @@
         "padding_bottom": 36
       }
     },
-    "hero_component_EyW4EW": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_L_2_5b715cf0-b312-4ec1-a53a-cad7db01ac92.png",
-        "mobile_image": "shopify://shop_images/Banner_2_034d883e-a392-43ee-8e62-a3aac519d318.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/future-10-extra-durable",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "rich_text_hAPdDN": {
       "type": "rich-text",
       "blocks": {
@@ -228,6 +212,7 @@
         },
         "button_KLQqg9": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Smash Now",
             "button_link": "shopify://products/future-10-extra-durable",
@@ -246,11 +231,27 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
         "full_width": true,
         "padding_top": 20,
         "padding_bottom": 28
+      }
+    },
+    "hero_component_EyW4EW": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_L_2_5b715cf0-b312-4ec1-a53a-cad7db01ac92.png",
+        "mobile_image": "shopify://shop_images/Banner_2_034d883e-a392-43ee-8e62-a3aac519d318.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/future-10-extra-durable",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "hero_component_zagBQf": {
@@ -283,6 +284,7 @@
       "block_order": [
         "heading_KbMGPQ"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -299,8 +301,8 @@
         "column_gNcmGg": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/unnamed_c1eb8af1-df99-443c-9534-b0f392088785.webp",
-            "title": "Nylon skirt ",
+            "image": "shopify://shop_images/Comp_1.gif",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -309,8 +311,8 @@
         "column_hJKdHm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/unnamed_799ff543-9d9f-4229-94f0-98d313db3cfa.webp",
-            "title": "High Quality Synthetic cork base",
+            "image": "shopify://shop_images/Comp_3.gif",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -319,8 +321,8 @@
         "column_BCW6A9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/unnamed_768bf381-bfeb-4e41-b422-0145bb7bee38.webp",
-            "title": "Yellow Skirt",
+            "image": "shopify://shop_images/Comp_4.gif",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -329,8 +331,8 @@
         "column_3WQfcq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/unnamed_f25f1e44-24f6-4d6e-a867-42eb62026983.webp",
-            "title": "Green Cap (Slow) ",
+            "image": "shopify://shop_images/Comp_5.gif",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -339,29 +341,8 @@
         "column_zYTXLJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
-            "title": "6 shuttles in a box ",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_YjBXfP": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/E_Commerce_03_663b0daaef.jpg",
-            "title": "<strong>Player level: suitable for professional or serious players. </strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6W7wBc": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/unnamed.webp",
-            "title": "Recovers to shape in 0.02 seconds",
+            "image": "shopify://shop_images/Comp_2.gif",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -373,9 +354,7 @@
         "column_hJKdHm",
         "column_BCW6A9",
         "column_3WQfcq",
-        "column_zYTXLJ",
-        "column_YjBXfP",
-        "column_6W7wBc"
+        "column_zYTXLJ"
       ],
       "custom_css": [
         "div {text-align: center;}"
@@ -383,17 +362,17 @@
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "The <strong>Science </strong>Behind It",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 6,
+        "columns_desktop": 5,
         "column_alignment": "left",
         "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 28
       }
@@ -404,7 +383,7 @@
         "text_AzfNDn": {
           "type": "text",
           "settings": {
-            "text": "<p>Player level: suitable for<strong> Professional</strong> or <strong>Serious </strong>players.</p>"
+            "text": "<p>Player level: Suitable for<strong> Professional</strong> or <strong>Serious </strong>players.</p>"
           }
         },
         "heading_DR6BtN": {
@@ -505,8 +484,8 @@
     "multirow_E4Lxxw",
     "rich_text_YMinhX",
     "multirow_ttyWBT",
-    "hero_component_EyW4EW",
     "rich_text_hAPdDN",
+    "hero_component_EyW4EW",
     "hero_component_zagBQf",
     "rich_text_r3ek3b",
     "multicolumn_JYd48h",
