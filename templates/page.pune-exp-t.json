@@ -39,7 +39,7 @@
         "heading_9HTmaM": {
           "type": "heading",
           "settings": {
-            "heading": "Hundred's Official India Tour is coming to Pune!",
+            "heading": "Hundred's Official India Tour is coming to Bangalore!",
             "heading_size": "h1"
           }
         },
@@ -117,7 +117,7 @@
         "text_4qGkTj": {
           "type": "text",
           "settings": {
-            "text": "<h2>Your Tour Benefits At a Glance</h2><h3>🎯 <strong>What's in Store for You</strong></h3><p>✅ <strong>Free Equipment Trials</strong> - Experience our latest high-performance rackets at no cost<br/><br/>🎁 <strong>Exclusive Rewards</strong> - Unlock special offers and limited-time coupon codes<br/><br/>🏆 <strong>Competitive Fun</strong> - Participate in on-court challenges and win exciting prizes<br/><br/>🤝 <strong>Network & Connect</strong> - Meet professional players and fellow badminton enthusiasts<br/><br/>💬 <strong>Meet the Team</strong> - Connect with Hundred experts and discover what makes our gear elite</p><h2>📅 <strong>Event Schedule</strong></h2><h3><strong>Saturday, 20th September 2025</strong></h3><p><strong>Morning Session</strong><br/><br/>📍 <strong>Fly 16 Arena, Kaspate Vasti, Pune</strong><br/><br/>🕘 <strong>9:00 AM - 11:00 AM</strong></p><p><strong>Evening Session</strong><br/><br/>📍 <strong>LSBI Badminton, Wadgaon Sheri, Pune</strong><br/><br/>🕔 <strong>5:00 PM - 7:00 PM</strong></p><h3><strong>Sunday , 21st September 2025</strong></h3><p><strong>Morning Session</strong><br/><br/>📍 <strong>Gravity Badminton, Dange Chowk, Pune</strong><br/><br/>🕗 <strong>8:00 AM - 10:00 AM</strong></p><p><strong>Evening Session</strong><br/><br/>📍 <strong>LeNoah Sportsplex, Hinjewadi, Pune</strong><br/><br/>🕔 <strong>5:00 PM - 7:00 PM</strong></p>"
+            "text": "<p></p><h2>📅 <strong>Event Schedule</strong></h2><h3><strong>Saturday, 10th January 2026</strong></h3><p><strong>Morning Session</strong><br/><br/>📍 <strong>Machaxi Play9, Whitefeild</strong><br/><br/>🕘 <strong>9:00 AM - 11:00 AM</strong></p><p><strong>Evening Session</strong><br/><br/>📍 <strong>Playzone Indiranagar, Bangalore</strong><br/><br/>🕔 <strong>4:00 PM - 7:00 PM</strong></p><h3><strong>Sunday , 11th January 2026</strong></h3><p><br/>📍 <strong>Spectra Sports Arena, Hulimavu</strong><br/>🕔 <strong>5:30 PM - 7:30 PM</strong></p>"
           }
         },
         "button_BTFzmV": {
@@ -149,12 +149,57 @@
     },
     "custom_liquid_ktVR8J": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<style>\n  /* Scoped styles */\n  #hundred-terms {\n    font-family: inherit;\n    font-size: 0.875rem; /* small */\n    line-height: 1.7;\n    color: inherit;\n    max-width: 70ch;\n    margin: 0 auto;        /* center block horizontally */\n    text-align: center;    /* center text inside */\n  }\n  #hundred-terms h3 {\n    margin: 0 0 0.5rem 0;\n    font: inherit;\n    font-weight: 600;\n    font-size: 0.95rem;\n  }\n  #hundred-terms p {\n    margin: 0 0 0.5rem 0;\n  }\n  #hundred-terms ul {\n    margin: 0;\n    padding-left: 0;       /* remove default bullet indent */\n    list-style-position: inside; /* keep bullets aligned in center */\n  }\n  #hundred-terms li {\n    margin: 0.25rem 0;\n  }\n</style>\n\n<div id=\"hundred-terms\" class=\"rte\">\n  <h3>Terms and Conditions – Hundred Experience Tour</h3>\n  <p>By attending the Hundred Experience Tour, you agree that:</p>\n  <ul>\n    <li>Your participation was voluntary and you were responsible for your own safety.</li>\n    <li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li>\n    <li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li>\n    <li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li>\n    <li>Event details and activities may have been subject to change at the organizers' discretion.</li>\n    <li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li>\n<li>Non Marking Shoes are not provided by us during the event. Please bring your own.\n  </ul>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "multicolumn_x6tDr7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_giUp8E": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Your Tour Benefits At a Glance</strong>",
+            "text": "<p>🎯 What's in Store for You</p><p>-</p><p>✅ Free Equipment Trials - Experience our latest high-performance rackets at no cost</p><p>🎁 Exclusive Rewards - Unlock special offers and limited-time coupon codes</p><p>🏆 Competitive Fun - Participate in on-court challenges and win exciting prizes</p><p>🤝 Network & Connect - Meet professional players and fellow badminton enthusiasts</p><p>💬 Meet the Team - Connect with Hundred experts and discover what makes our gear elite</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Vbb4kx": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Terms and Conitions - Hundred Experience Tour</strong>",
+            "text": "<p>By attending the Hundred Experience Tour, you agree that:</p><ul><li>Your participation was voluntary and you were responsible for your own safety.</li><li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li><li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li><li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li><li>Event details and activities may have been subject to change at the organizers' discretion.</li><li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li><li>Non Marking Shoes are not provided by us during the event. Please bring your own.</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_giUp8E",
+        "column_Vbb4kx"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -164,6 +209,7 @@
     "rich_text_Wnq4h9",
     "1757582427791457ea",
     "rich_text_9km999",
-    "custom_liquid_ktVR8J"
+    "custom_liquid_ktVR8J",
+    "multicolumn_x6tDr7"
   ]
 }
