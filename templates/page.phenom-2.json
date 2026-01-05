@@ -144,6 +144,45 @@
         "padding_bottom": 72
       }
     },
+    "image_with_text_YGQ3Pa": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jBfRN7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Duragrip Outsole",
+            "heading_size": "h1"
+          }
+        },
+        "text_gTP4VP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Developed with GOODYEAR, The duragrip outsole features a specialised rubber blend unlike any other. It is both durable yet grippy, balancing harness to traction.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jBfRN7",
+        "text_gTP4VP"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_12.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_AAWtCq": {
       "type": "image-with-text",
       "blocks": {
@@ -426,6 +465,7 @@
         "column_N3g4Gz",
         "column_MxgJat"
       ],
+      "disabled": true,
       "custom_css": [
         "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
         "img {border-radius: 30px;}"
@@ -644,6 +684,7 @@
     "hero_component_PCUFNt",
     "custom_liquid_jkFeW6",
     "custom_liquid_kcf9aP",
+    "image_with_text_YGQ3Pa",
     "image_with_text_AAWtCq",
     "image_with_text_Kxdy9z",
     "image_with_text_7dYiHP",
