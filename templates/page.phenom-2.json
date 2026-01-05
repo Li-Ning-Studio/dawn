@@ -167,96 +167,165 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-a06966ed-7c64-4f36-a8f6-38d7f033d163",
+        "color_scheme": "scheme-4",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "multirow_BUkqJM": {
-      "type": "multirow",
+    "image_with_text_Kxdy9z": {
+      "type": "image-with-text",
       "blocks": {
-        "row_paYQP6": {
-          "type": "row",
+        "heading_JqxLWT": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/Banner_5.1_9ace0529-c8f4-4854-a37e-c26869dcf004.png",
-            "caption": "",
-            "heading": "<strong>Thrust </strong>Foam",
-            "text": "<p>A super critical foam that sits at the heel to absorb heavy landings and return energy instantly. It gives a subtle air-bubble feel underfoot.</p>",
-            "button_label": "",
-            "button_link": ""
+            "heading": "Carbon-Kinetic Support Plate",
+            "heading_size": "h1"
           }
         },
-        "row_MCtVKN": {
-          "type": "row",
+        "text_e6Kqxq": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Banner_8.1.png",
-            "caption": "",
-            "heading": "<strong>Carbon-Kinetic </strong>Support Plate",
-            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting torsion. It maintains alignment, even during multidirectional play.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_tn6YR9": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Banner_6.1.png",
-            "caption": "",
-            "heading": "<strong>Armormesh </strong>Duracore",
-            "text": "<p>Armor mesh creates a breathable, lightweight upper, while Duracore improves abrasion resistance. The result is an airy yet resilient shell that holds to heavy sessions.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_WhHB7r": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Banner_7.1.png",
-            "caption": "",
-            "heading": "The <strong>Z-Lock</strong>",
-            "text": "<p>A specially stiffened foam at the base of the foot to increase torsional resistance. The result is a firm, anchored feel during lateral shifts.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_3wBwe3": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Banner_8.2.png",
-            "caption": "",
-            "heading": "Skeletal <strong>Insole</strong>",
-            "text": "<p>This is a sculpted insole shaped to the natural contours of the foot with built-in arch support. Foam-padded forefoot ridges prevent sliding internally.</p>",
-            "button_label": "",
-            "button_link": ""
+            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting <br/>torsion. It maintains alignment, even during multidirectional play.</p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "row_paYQP6",
-        "row_MCtVKN",
-        "row_tn6YR9",
-        "row_WhHB7r",
-        "row_3wBwe3"
+        "heading_JqxLWT",
+        "text_e6Kqxq"
       ],
-      "custom_css": [
-        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "img {border-radius: 30px;}"
-      ],
-      "name": "t:sections.multirow.presets.name",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image_height": "adapt",
+        "image": "shopify://shop_images/Banner_8.1.png",
+        "height": "adapt",
         "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h0",
-        "text_style": "body",
-        "button_style": "secondary",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "row_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_7dYiHP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_djyQAw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Armormesh Duracore",
+            "heading_size": "h1"
+          }
+        },
+        "text_8DwhUp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Armor mesh creates a breathable, lightweight upper, while Duracore improves abrasion resistance. The result is an airy yet resilient shell that holds to heavy sessions.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_djyQAw",
+        "text_8DwhUp"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_6.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
-        "padding_bottom": 16
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_Ybrgkt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Fqt8nY": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Z-Lock",
+            "heading_size": "h1"
+          }
+        },
+        "text_7prTpU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A specially stiffened foam at the base of the foot to increase torsional resistance. The result is a firm, anchored feel during lateral shifts.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fqt8nY",
+        "text_7prTpU"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_7.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_c6RhH7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YGkTfC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Skeletal Insole",
+            "heading_size": "h1"
+          }
+        },
+        "text_dftkKY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This is a sculpted insole shaped to the natural contours of the foot with built-in arch support. Foam-padded forefoot ridges prevent sliding internally.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YGkTfC",
+        "text_dftkKY"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_8.2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_WQLKV3": {
@@ -590,7 +659,10 @@
     "hero_component_PCUFNt",
     "custom_liquid_jkFeW6",
     "image_with_text_AAWtCq",
-    "multirow_BUkqJM",
+    "image_with_text_Kxdy9z",
+    "image_with_text_7dYiHP",
+    "image_with_text_Ybrgkt",
+    "image_with_text_c6RhH7",
     "rich_text_WQLKV3",
     "multicolumn_zieGnW",
     "rich_text_yHBKGY",
