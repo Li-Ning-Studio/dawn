@@ -124,6 +124,7 @@
     },
     "custom_liquid_jkFeW6": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"eight\">\n<div> </div>\n  <h1>Technology & <strong>Features</strong></h1>\n<div> </div>\n</div>\n<style>\n.eight{\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.eight div{\n\n  height:2px;\n  padding: 2px 12%;\n  background:#e3be5f;\n}\n.eight h1 {\n  text-align:center;\n\n  font-size:3rem; letter-spacing:1px;\n  margin: 0px 5px;\n}\n</style>",
@@ -166,7 +167,7 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-c5a7677a-37ad-48d4-8346-662351ba2e4d",
+        "color_scheme": "scheme-a06966ed-7c64-4f36-a8f6-38d7f033d163",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -432,16 +433,6 @@
         "padding_bottom": 12
       }
     },
-    "custom_liquid_e4GbeG": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  \n\n<a href=\"#\" class=\"cta\">\n  <span>BUY NOW!</span>\n</a>\n</section>\n\n<style>\n section{\n  background:black;\n  color:white;\n} \n.cta {\n    margin-top: 1rem;\n    background: transparent;\n    border: 1.5px solid #d29700;\n    font-weight: 700;\n    padding: 1.1rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  transition:0.5s ease-out;\n  }\n.cta:hover{\n  background:#d29700;\n}\np,h1{\ntext-align:center;\n}\n  strong{\nletter-spacing: -1px;\n  margin: 0;\n  font-weight: 800;\n  background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 40%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent; \n}\n</style>",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "padding_top": 0,
-        "padding_bottom": 20
-      }
-    },
     "multicolumn_ihcW4x": {
       "type": "multicolumn",
       "blocks": {
@@ -605,7 +596,6 @@
     "rich_text_yHBKGY",
     "hero_component_N9tz7z",
     "rich_text_3d3gL3",
-    "custom_liquid_e4GbeG",
     "multicolumn_ihcW4x",
     "media_QE4AML",
     "multicolumn_dXwFQN",
