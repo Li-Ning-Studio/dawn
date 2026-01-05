@@ -31,8 +31,8 @@
       "type": "hero-video-component",
       "name": "Hero Video Component",
       "settings": {
-        "video": "shopify://files/videos/yt.mp4",
-        "mobile_video": "shopify://files/videos/sq.mp4",
+        "video": "shopify://files/videos/Main.mp4",
+        "mobile_video": "shopify://files/videos/sq_dcfceda6-f310-4174-a951-f6fc99798a08.mp4",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -387,7 +387,23 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 44
+      }
+    },
+    "hero_video_component_XC9EXr": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt.mp4",
+        "mobile_video": "shopify://files/videos/sq.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/future-10-extra-durable",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_yYibri": {
@@ -432,7 +448,7 @@
         "content_alignment": "center",
         "color_scheme": "scheme-4",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 24,
         "padding_bottom": 52
       }
     },
@@ -502,6 +518,7 @@
     "hero_component_zagBQf",
     "rich_text_r3ek3b",
     "multicolumn_JYd48h",
+    "hero_video_component_XC9EXr",
     "rich_text_yYibri",
     "collapsible_content_j39AhM"
   ]
