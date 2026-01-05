@@ -49,8 +49,24 @@
       "settings": {
         "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> Goodyear x HNDRD </p>\n  <h2 class=\"second-title\">Grip Born on the Track,</h2>\n  <h2 class=\"second-title\"> Made for the Court</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3rem;\n    font-weight: 800;\n    margin: 0;\n    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "hero_component_LE9qR6": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
+        "mobile_image": "shopify://shop_images/Banner_2.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "hero_component_MaVYaG": {
@@ -77,22 +93,6 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 40,
         "padding_bottom": 16
-      }
-    },
-    "hero_component_LE9qR6": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
-        "mobile_image": "shopify://shop_images/Banner_2.1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "custom_liquid_rD6cU3": {
