@@ -9,23 +9,6 @@
  */
 {
   "sections": {
-    "hero_component_m663gh": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_b329fea3-d983-42fd-b282-99e580b5e2e8.png",
-        "mobile_image": "shopify://shop_images/Banner_R_364ecbbf-5f96-4cd2-9fe5-55ba3dea8e87.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://pages/december-drop",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "hero_video_component_rjR7UX": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -77,13 +60,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner_68e413aa-a362-427b-91e7-f23edf4edf37.png",
-        "mobile_image": "shopify://shop_images/banner_responsive_ad602185-6cbc-4b77-9fb2-e4b54dc0ee77.png",
-        "subtitle": "G-Force Series",
-        "title": "Grip the Game, Rule the Rally",
-        "description": "Built for the bold—where instinct meets impact, and every shot speaks for itself.",
-        "button_text": "Swing. Strike. Win.",
-        "link_to": "shopify://products/g-force-5900-superlite",
+        "image": "shopify://shop_images/Air_Force_G3_77-78_Banner_75f07c28-77f4-4183-872b-769fd1343b55.jpg",
+        "mobile_image": "shopify://shop_images/Air_Force_G3_77-78_Responsive_Banner_98e8c3ec-7d45-4883-b865-e8f705d619d3.jpg",
+        "subtitle": "Air Force Series",
+        "title": "Lightning Fast Personified",
+        "description": "Attacking pro rackets for superlite feel and swing control.",
+        "button_text": "Shop Now!",
+        "link_to": "shopify://products/air-force-g3-78-grams",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -93,10 +76,11 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "G-Force Series",
+        "title": "Air Force Series",
         "products": [
-          "g-force-5800-superlite",
-          "g-force-5900-superlite"
+          "air-force-g3-78-grams",
+          "air-force-g3-79-grams",
+          "air-force-g3-80-grams"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -126,9 +110,11 @@
       "settings": {
         "title": "SHOP THE LOOK!",
         "products": [
+          "luminex-t-shirt",
+          "titan-t-shirt",
+          "eclipse-t-shirt",
           "twilight-t-shirt",
           "freestyle-ln-tee",
-          "luminex-t-shirt",
           "kynetic-t-shirt",
           "classic-shorts",
           "line-shorts",
@@ -146,13 +132,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Air_Force_Banner_df432ad0-e170-42d5-9819-ff6cc0ca7df8.jpg",
-        "mobile_image": "shopify://shop_images/Air_Force_Responsive_Banner_072b2380-d6b4-4305-85dd-4810714b94ac.jpg",
-        "subtitle": "Air Force Series",
-        "title": "Lightning Fast Personified",
-        "description": "Attacking pro rackets for superlite feel and swing control.",
-        "button_text": "Shop Now!",
-        "link_to": "shopify://products/air-force-g3-80-grams",
+        "image": "shopify://shop_images/AxForce_Cannon_Banner_c4a995ad-5906-4ead-b780-3a522495cb89.jpg",
+        "mobile_image": "shopify://shop_images/AxForce_Cannon_Responsive_Banner_8470b4f9-2050-40be-aa97-ab9b42f53973.jpg",
+        "subtitle": "AxForce Series",
+        "title": "Rigorous Swing Control",
+        "description": "Constructed using high-grade carbon materials, the sleek shaft aids in superior defense against powerful smashes.",
+        "button_text": "Smash Now",
+        "link_to": "shopify://products/axforce-cannon-4u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -162,11 +148,12 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Air Force Series",
+        "title": "AxForce Series",
         "products": [
-          "air-force-g3-80-grams",
-          "air-force-g3-78-grams",
-          "air-force-g3-77-grams"
+          "axforce-cannon-4u",
+          "axforce-cannon-5u",
+          "axforce-cannon-6u",
+          "axforce-cannon-5u-light"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -196,7 +183,10 @@
       "settings": {
         "title": "KitBag Collections",
         "products": [
+          "parallel-kit-bag",
           "monarch-kit-bag",
+          "panther-badminton-kit-bag",
+          "raider-max-badminton-kit-bag",
           "birdie-kit-bag",
           "motion-pro-backpack",
           "sportshift-backpack",
@@ -205,7 +195,8 @@
           "velocity-backpack",
           "holster-gear-kit-bag",
           "blaze-kit-bag",
-          "stripe-kit-bag"
+          "stripe-kit-bag",
+          "kit-bag-6-in-1"
         ],
         "show_color_variants": false,
         "color_scheme": "",
@@ -323,7 +314,6 @@
     }
   },
   "order": [
-    "hero_component_m663gh",
     "hero_video_component_rjR7UX",
     "swipeable_products_qfYdBf",
     "hero_component_bryecW",
