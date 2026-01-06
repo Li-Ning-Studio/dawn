@@ -171,7 +171,7 @@
         "image": "shopify://shop_images/Banner_12.1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
@@ -210,7 +210,7 @@
         "image": "shopify://shop_images/Banner_5.1_9ace0529-c8f4-4854-a37e-c26869dcf004.png",
         "height": "large",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "image_behavior": "zoom-in",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
@@ -218,45 +218,6 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_Kxdy9z": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JqxLWT": {
-          "type": "heading",
-          "settings": {
-            "heading": "Carbon-Kinetic Support Plate",
-            "heading_size": "h1"
-          }
-        },
-        "text_e6Kqxq": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting torsion. It maintains alignment, even during multidirectional play.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JqxLWT",
-        "text_e6Kqxq"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_8.1.png",
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -300,6 +261,45 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_Kxdy9z": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JqxLWT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Carbon-Kinetic Support Plate",
+            "heading_size": "h1"
+          }
+        },
+        "text_e6Kqxq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting torsion. It maintains alignment, even during multidirectional play.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JqxLWT",
+        "text_e6Kqxq"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_8.1.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_Ybrgkt": {
       "type": "image-with-text",
       "blocks": {
@@ -327,7 +327,7 @@
         "image": "shopify://shop_images/Banner_7.1.png",
         "height": "large",
         "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
@@ -366,7 +366,7 @@
         "image": "shopify://shop_images/Banner_8.2.png",
         "height": "large",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
@@ -688,8 +688,8 @@
     "custom_liquid_kcf9aP",
     "image_with_text_YGQ3Pa",
     "image_with_text_AAWtCq",
-    "image_with_text_Kxdy9z",
     "image_with_text_7dYiHP",
+    "image_with_text_Kxdy9z",
     "image_with_text_Ybrgkt",
     "image_with_text_c6RhH7",
     "rich_text_WQLKV3",
