@@ -340,54 +340,6 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_Ybrgkt": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_Fqt8nY": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Z-Lock",
-            "heading_size": "h1"
-          }
-        },
-        "text_7prTpU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A Z-Shaped, specially stiffened foam at the base of the foot to increase torsional resistance. It acts similar to the support plate but double-downs on the anti-torsion value. The result is a firm, anchored feel during lateral shifts.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_Fnwf6p": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Phenom",
-            "button_link": "https://in.hndrd.co/products/phenom",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_Fqt8nY",
-        "text_7prTpU",
-        "button_Fnwf6p"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_7.1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_c6RhH7": {
       "type": "image-with-text",
       "blocks": {
@@ -436,25 +388,73 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_Ybrgkt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Fqt8nY": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Z-Lock",
+            "heading_size": "h1"
+          }
+        },
+        "text_7prTpU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A Z-Shaped, specially stiffened foam at the base of the foot to increase torsional resistance. It acts similar to the support plate but double-downs on the anti-torsion value. The result is a firm, anchored feel during lateral shifts.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Fnwf6p": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Phenom",
+            "button_link": "https://in.hndrd.co/products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fqt8nY",
+        "text_7prTpU",
+        "button_Fnwf6p"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_7.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_KKwXjx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n<p style=\"font-size: 1.4rem\"> Champion's Choice</p>\n  <h2 class=\"second-title\">The Pros Prefer Phenom</h2>\n\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_zieGnW": {
       "type": "multicolumn",
       "blocks": {
-        "column_n7FRgW": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Banner_7.png",
-            "title": "",
-            "text": "<p> </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_AatUqt": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Banner_1_95f2e95b-eb57-4f13-a306-2f41d5412dfc.png",
             "title": "",
-            "text": "<p> </p>",
+            "text": "<p> \"I found exactly the performance I was looking for, and more\" - Alexandra Boje</p>",
             "link_label": "",
             "link": ""
           }
@@ -464,7 +464,17 @@
           "settings": {
             "image": "shopify://shop_images/Banner_2_0a00ee0d-9c33-4766-85ab-e5adfd0ae6d4.png",
             "title": "",
-            "text": "<p> </p>",
+            "text": "<p> \"Most shoes start peeling quickly, Phenom did not\" - Mathias Christiansen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_n7FRgW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_7.png",
+            "title": "",
+            "text": "<p> \"The first thing I look for in a shoe is trust and I found it in Phenom\" - Armaan Bhatia</p>",
             "link_label": "",
             "link": ""
           }
@@ -474,13 +484,14 @@
           "settings": {
             "image": "shopify://shop_images/Banner_4_45c36765-9058-44ff-a718-158b7ee021f9.png",
             "title": "",
-            "text": "<p> </p>",
+            "text": "<p> \"It made the hard days feel a little easier\" - Estelle Van Leeuwen</p>",
             "link_label": "",
             "link": ""
           }
         },
         "column_N3g4Gz": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Banner_5_91415f2f-2a90-4692-8e2c-7c41998b3075.png",
             "title": "",
@@ -491,6 +502,7 @@
         },
         "column_MxgJat": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Banner_6_474f3a6d-9ce0-4d6b-a769-8e68d4bae484.png",
             "title": "",
@@ -501,27 +513,23 @@
         }
       },
       "block_order": [
-        "column_n7FRgW",
         "column_AatUqt",
         "column_6QDLmL",
+        "column_n7FRgW",
         "column_H98z3q",
         "column_N3g4Gz",
         "column_MxgJat"
       ],
-      "disabled": true,
-      "custom_css": [
-        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "img {border-radius: 30px;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "TRUSTED BY <strong>PROS</strong>",
+        "title": "",
         "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
@@ -597,6 +605,7 @@
     "image_with_text_Kxdy9z",
     "image_with_text_c6RhH7",
     "image_with_text_Ybrgkt",
+    "custom_liquid_KKwXjx",
     "multicolumn_zieGnW",
     "rich_text_3d3gL3",
     "media_QE4AML"
