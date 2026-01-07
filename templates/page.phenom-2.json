@@ -576,13 +576,33 @@
     },
     "media_QE4AML": {
       "type": "media",
+      "disabled": true,
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/Banner_15_710ebbe0-e2b7-43ea-a170-b80467003c85.png",
         "mobile_image": "shopify://shop_images/Banner_15.1_c234eebe-1117-44a1-9581-30aea0675c97.png",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 24,
-        "padding_bottom": 28
+        "padding_bottom": 92
+      }
+    },
+    "media_ag6DY6": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_NypUWg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">The Everything Shoe</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Overbuilt. Overpowered.\n  </h1>\n  <p style=\"margin-top: 3px\">Leave No Stones Unturned with HNDRD Phenom</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>Shop Phenom</span>\n  </a>\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
@@ -608,6 +628,8 @@
     "custom_liquid_KKwXjx",
     "multicolumn_zieGnW",
     "rich_text_3d3gL3",
-    "media_QE4AML"
+    "media_QE4AML",
+    "media_ag6DY6",
+    "custom_liquid_NypUWg"
   ]
 }
