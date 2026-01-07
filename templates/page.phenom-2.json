@@ -24,15 +24,20 @@
         "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Phenom</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    The Perfectionist's Shoe\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>shop</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
-        "padding_bottom": 56
+        "padding_bottom": 24
       }
     },
-    "media_pXzJ7f": {
-      "type": "media",
-      "name": "Media",
+    "hero_component_MaVYaG": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "desktop_image": "shopify://shop_images/Banner_15.png",
-        "mobile_image": "shopify://shop_images/Banner_15.1.png",
+        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
+        "mobile_image": "shopify://shop_images/Banner_3.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -90,17 +95,12 @@
         "padding_bottom": 36
       }
     },
-    "hero_component_MaVYaG": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "media_pXzJ7f": {
+      "type": "media",
+      "name": "Media",
       "settings": {
-        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
-        "mobile_image": "shopify://shop_images/Banner_3.1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
+        "desktop_image": "shopify://shop_images/Banner_15.png",
+        "mobile_image": "shopify://shop_images/Banner_15.1.png",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -599,13 +599,13 @@
   "order": [
     "main",
     "custom_liquid_LW3CjH",
-    "media_pXzJ7f",
+    "hero_component_MaVYaG",
     "custom_liquid_whHTcA",
     "media_hiBFN9",
     "custom_liquid_pX3CYh",
     "media_gxHEbG",
     "custom_liquid_rhUah4",
-    "hero_component_MaVYaG",
+    "media_pXzJ7f",
     "custom_liquid_pMCXET",
     "media_Fp4xqn",
     "custom_liquid_kcf9aP",
