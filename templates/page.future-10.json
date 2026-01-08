@@ -27,16 +27,6 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_GEtK3V": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<style>\nstrong{\ncolor:red;\n}\n</style>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_video_component_rcxAff": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -53,166 +43,183 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_HhMWbF": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_dYiVjw": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Future 10</strong> Shuttlecock",
-            "heading_size": "h0"
-          }
-        },
-        "text_qNEXkc": {
-          "type": "text",
-          "settings": {
-            "text": "<h4>Superior Flight. <strong>Precise Control</strong>. Unmatched Durability.</h4>"
-          }
-        },
-        "button_4TAHUL": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Smash Now",
-            "button_link": "shopify://products/future-10-extra-durable",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_dYiVjw",
-        "text_qNEXkc",
-        "button_4TAHUL"
-      ],
-      "name": "t:sections.rich-text.presets.name",
+    "custom_liquid_MHr89c": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 16,
-        "padding_bottom": 12
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> Future 10 </p>\n  <h2 class=\"second-title\">Built to take hits,</h2>\n  <h2 class=\"second-title\"> and Keep Going</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(220deg, #f00 0%, #ed8989 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 76,
+        "padding_bottom": 76
       }
     },
-    "multirow_E4Lxxw": {
-      "type": "multirow",
+    "hero_component_zagBQf": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_L_3.png",
+        "mobile_image": "shopify://shop_images/Banner_3_5996fcb5-9e30-42d7-937a-76a2fffa9c4c.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/future-10-extra-durable",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_LGd6xp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center;\">\n  <p style=\"font-size: 1.4rem; color: black;\">Future 10</p>\n  <p class=\"longcopy\">\n    The Future 10 is designed to <span class=\"highlight\">hold up</span> through <span class=\"highlight\">continuous impact</span>, rally after rally, without giving up early.\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(0, 0, 0, 0.5); \n}\n\n.highlight {\n  color: rgba(0, 0, 0, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_4EcVi7": {
+      "type": "image-with-text",
       "blocks": {
-        "row_JmCyJr": {
-          "type": "row",
+        "heading_f6bDTP": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/1_07d604bf-6ac4-4fc5-a68d-2acd9376e2d7.jpg",
-            "caption": "",
-            "heading": "Built to take <strong>hits</strong>. And keep going.",
-            "text": "<p>This shuttle is designed to hold up through continuous impact, rally after rally, without giving in early.</p>",
-            "button_label": "Smash Now",
-            "button_link": "shopify://products/future-10-extra-durable"
+            "heading": "Superior Build",
+            "heading_size": "h1"
+          }
+        },
+        "text_zn3TxP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made with carefully selected premium nylon for consistency that lasts. Built to hold up through repeated, high-intensity play.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_DqTDDa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "https://in.lining.studio/products/future-10",
+            "button_style_secondary": true
           }
         }
       },
       "block_order": [
-        "row_JmCyJr"
+        "heading_f6bDTP",
+        "text_zn3TxP",
+        "button_DqTDDa"
       ],
-      "custom_css": [],
-      "name": "t:sections.multirow.presets.name",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image_height": "adapt",
+        "image": "shopify://shop_images/1_4ebbccee-b637-4301-a4cd-1424ded0eb5d.jpg",
+        "height": "adapt",
         "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-2",
-        "row_color_scheme": "",
-        "padding_top": 16,
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "rich_text_YMinhX": {
-      "type": "rich-text",
+    "image_with_text_n9KWfN": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_fAfhzw": {
+        "heading_nTAY7r": {
           "type": "heading",
           "settings": {
-            "heading": "Why It <strong>Wins</strong>?",
-            "heading_size": "h0"
+            "heading": "Precise Control",
+            "heading_size": "h1"
+          }
+        },
+        "text_gpeDLY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made with carefully selected premium nylon for consistency that lasts. Built to hold up through repeated, high-intensity play.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_AMLywJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "https://in.lining.studio/products/future-10",
+            "button_style_secondary": true
           }
         }
       },
       "block_order": [
-        "heading_fAfhzw"
+        "heading_nTAY7r",
+        "text_gpeDLY",
+        "button_AMLywJ"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 24,
-        "padding_bottom": 16
-      }
-    },
-    "multirow_ttyWBT": {
-      "type": "multirow",
-      "blocks": {
-        "row_h73NtA": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/1_4ebbccee-b637-4301-a4cd-1424ded0eb5d.jpg",
-            "caption": "",
-            "heading": "<strong>Superior</strong>",
-            "text": "<h4>Made with carefully selected premium nylon for consistency that lasts. Built to hold up through repeated, high-intensity play.</h4>",
-            "button_label": "",
-            "button_link": "shopify://products/future-10-extra-durable"
-          }
-        },
-        "row_6eH9ir": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/2_a086bef7-01a2-4faf-a904-74337321646c.jpg",
-            "caption": "",
-            "heading": "<strong>Precise</strong>",
-            "text": "<h4>Its aerodynamic profile is designed to maintain a stable, predictable trajectory without unwanted wobble.</h4>",
-            "button_label": "",
-            "button_link": "shopify://products/future-10-extra-durable"
-          }
-        },
-        "row_bGRpPd": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/7_6976e004-0720-4bbd-b363-4c78282269c2.jpg",
-            "caption": "",
-            "heading": "<strong>Durable</strong>",
-            "text": "<h4>Advanced nylon construction with reinforced binding delivers superior durability, replicating tournament grade shuttle standards.</h4>",
-            "button_label": "",
-            "button_link": "shopify://products/future-10-extra-durable"
-          }
-        }
-      },
-      "block_order": [
-        "row_h73NtA",
-        "row_6eH9ir",
-        "row_bGRpPd"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "adapt",
+        "image": "shopify://shop_images/2_a086bef7-01a2-4faf-a904-74337321646c.jpg",
+        "height": "adapt",
         "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-2",
-        "row_color_scheme": "scheme-1",
-        "padding_top": 16,
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_MADVtA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fLMycD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unmatched Durability",
+            "heading_size": "h1"
+          }
+        },
+        "text_43TTDK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Advanced nylon construction with reinforced binding delivers superior durability, replicating tournament grade shuttle standards.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_GzqMcN": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "https://in.lining.studio/products/future-10",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_fLMycD",
+        "text_43TTDK",
+        "button_GzqMcN"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/7_6976e004-0720-4bbd-b363-4c78282269c2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -312,22 +319,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 44
-      }
-    },
-    "hero_component_zagBQf": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_L_3.png",
-        "mobile_image": "shopify://shop_images/Banner_3_5996fcb5-9e30-42d7-937a-76a2fffa9c4c.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/future-10-extra-durable",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "rich_text_yYibri": {
@@ -448,15 +439,15 @@
   "order": [
     "main",
     "custom_liquid_4PXMeL",
-    "custom_liquid_GEtK3V",
     "hero_video_component_rcxAff",
-    "rich_text_HhMWbF",
-    "multirow_E4Lxxw",
-    "rich_text_YMinhX",
-    "multirow_ttyWBT",
+    "custom_liquid_MHr89c",
+    "hero_component_zagBQf",
+    "custom_liquid_LGd6xp",
+    "image_with_text_4EcVi7",
+    "image_with_text_n9KWfN",
+    "image_with_text_MADVtA",
     "hero_component_EyW4EW",
     "multicolumn_JYd48h",
-    "hero_component_zagBQf",
     "rich_text_yYibri",
     "hero_video_component_XC9EXr",
     "collapsible_content_j39AhM"
