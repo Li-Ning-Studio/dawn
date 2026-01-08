@@ -223,22 +223,6 @@
         "padding_bottom": 36
       }
     },
-    "hero_component_EyW4EW": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_L_2.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_5fb4a545-1426-4e2a-87f9-a4a85b79eb7a.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/future-10-extra-durable",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "multicolumn_JYd48h": {
       "type": "multicolumn",
       "blocks": {
@@ -305,8 +289,8 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<strong>Tech </strong>Highlights",
-        "heading_size": "h1",
+        "title": "Key Highlights",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
@@ -314,56 +298,36 @@
         "columns_desktop": 5,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 44
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
-    "rich_text_yYibri": {
-      "type": "rich-text",
-      "blocks": {
-        "text_AzfNDn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Player level: Suitable for<strong> Professional</strong> or <strong>Serious </strong>players.</p>"
-          }
-        },
-        "heading_DR6BtN": {
-          "type": "heading",
-          "settings": {
-            "heading": "Ready for a <strong>Higher </strong>Standard of play?",
-            "heading_size": "h1"
-          }
-        },
-        "button_tcmmV8": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Future 10",
-            "button_link": "shopify://products/future-10-extra-durable",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "text_AzfNDn",
-        "heading_DR6BtN",
-        "button_tcmmV8"
-      ],
-      "custom_css": [
-        "strong {color: red;}"
-      ],
-      "name": "t:sections.rich-text.presets.name",
+    "hero_component_EyW4EW": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 44,
+        "image": "shopify://shop_images/Banner_L_2.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_5fb4a545-1426-4e2a-87f9-a4a85b79eb7a.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/future-10-extra-durable",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 100
+      }
+    },
+    "custom_liquid_M4FV8D": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Future 10</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Designed for Professional Plays\n  </h1>\n  <p style=\"margin-top: 3px\">Are you ready for higher standard for plays?</p>\n  <a href=\"/products/future-10\" class=\"ctax\">\n    <span>shop now</span>\n  </a>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
         "padding_bottom": 52
       }
     },
@@ -446,9 +410,9 @@
     "image_with_text_4EcVi7",
     "image_with_text_n9KWfN",
     "image_with_text_MADVtA",
-    "hero_component_EyW4EW",
     "multicolumn_JYd48h",
-    "rich_text_yYibri",
+    "hero_component_EyW4EW",
+    "custom_liquid_M4FV8D",
     "hero_video_component_XC9EXr",
     "collapsible_content_j39AhM"
   ]
