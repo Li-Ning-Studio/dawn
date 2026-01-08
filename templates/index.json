@@ -22,7 +22,21 @@
         "link_to": "shopify://pages/phenom",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 28
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_q8JBYr": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "The Over Engineered Shoe",
+        "products": [
+          "phenom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "hero_video_component_MnJ8yg": {
@@ -315,21 +329,7 @@
         "link_to": "shopify://products/court-champions",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_ak84Mc": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Court Champions",
-        "products": [
-          "court-champions"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_bottom": 32
       }
     },
     "hero_component_Q8wMtJ": {
@@ -622,6 +622,7 @@
   },
   "order": [
     "hero_component_pbVYdY",
+    "swipeable_products_q8JBYr",
     "hero_video_component_MnJ8yg",
     "responsive_slideshow_Ma699H",
     "swipeable_products_Y8n63R",
@@ -630,7 +631,6 @@
     "multicolumn_g43TFV",
     "multicolumn_qhdqCY",
     "hero_component_pmECNB",
-    "swipeable_products_ak84Mc",
     "hero_component_Q8wMtJ",
     "swipeable_products_73DzB9",
     "hero_video_component_6gwBpL",
