@@ -9,22 +9,6 @@
  */
 {
   "sections": {
-    "hero_video_component_3J3JYF": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/launch.mp4",
-        "mobile_video": "shopify://files/videos/launch.mp4",
-        "subtitle": "Prnx",
-        "title": "MOTION IN ACTION",
-        "description": "Experience the speed and precision with our latest video showcase",
-        "button_text": "EXPLORE MORE",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -238,7 +222,6 @@
     }
   },
   "order": [
-    "hero_video_component_3J3JYF",
     "image_banner",
     "rich_text",
     "featured_collection",
