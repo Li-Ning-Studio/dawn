@@ -58,6 +58,52 @@
       {% endif %}
     </div>
   </div>
+
+  <script>
+    (() => {
+      try {
+        const script = document.currentScript;
+        const sectionEl = script?.closest('.hero-video-component');
+        const videos = sectionEl?.querySelectorAll('video');
+
+        if (!videos || !videos.length) return;
+
+        const autoplayVideo = (video) => {
+          if (!video) return;
+
+          // Mobile Safari sometimes ignores the muted/inline attrs unless they are reinforced before play.
+          video.muted = true;
+          video.playsInline = true;
+          video.setAttribute('muted', 'muted');
+          video.setAttribute('playsinline', 'playsinline');
+
+          const playback = video.play();
+          if (playback && typeof playback.catch === 'function') {
+            playback.catch(() => {});
+          }
+        };
+
+        videos.forEach((video) => {
+          if (video.readyState >= 2) {
+            autoplayVideo(video);
+            return;
+          }
+
+          video.addEventListener('loadeddata', () => autoplayVideo(video), { once: true });
+        });
+
+        document.addEventListener(
+          'touchstart',
+          () => {
+            videos.forEach(autoplayVideo);
+          },
+          { once: true }
+        );
+      } catch (error) {
+        console.error('Hero video autoplay error', error);
+      }
+    })();
+  </script>
 </section>
 
 <style>
