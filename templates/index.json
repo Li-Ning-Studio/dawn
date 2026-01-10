@@ -9,6 +9,36 @@
  */
 {
   "sections": {
+    "hero_video_component_EYYPMR": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/0e133f2a5fe94b11a5f23e650ca41307.HD-1080p-7.2Mbps-66571274.mp4",
+        "mobile_video": "shopify://files/videos/MOBILE.mp4",
+        "subtitle": "Phenom",
+        "title": "THE MOST AWAITED SHOE",
+        "description": "What every professional player dreams of is now ready to be yours.",
+        "button_text": "SHOP THE PHENOM",
+        "link_to": "shopify://products/phenom",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 68
+      }
+    },
+    "swipeable_products_Xr6TG7": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "The Over Engineered Shoe",
+        "products": [
+          "phenom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    },
     "hero_component_CE4EqA": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -239,6 +269,8 @@
     }
   },
   "order": [
+    "hero_video_component_EYYPMR",
+    "swipeable_products_Xr6TG7",
     "hero_component_CE4EqA",
     "swipeable_products_BbzVyD",
     "hero_video_component_4r8WXU",
