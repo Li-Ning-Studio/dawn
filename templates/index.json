@@ -9,148 +9,21 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Hundred shoes, bags, rackets have landed in the USA!",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+    "hero_video_component_BwJCQi": {
+      "type": "hero-video-component",
       "disabled": true,
+      "name": "Hero Video Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_3_1.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "image_behavior": "ambient",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
-    "slideshow_g8rW7A": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_ng8fEC": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/2_1fed3ea3-1bfd-46ec-8a60-bbba8835c238.png",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify://collections/badminton",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "bottom-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
-        "slide_aQkY96": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/6.png",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-1"
-          }
-        },
-        "slide_rJ9bAC": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/2_41f867e0-42ed-40d0-bb10-2881c2afe51f.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-1"
-          }
-        }
-      },
-      "block_order": [
-        "slide_ng8fEC",
-        "slide_aQkY96",
-        "slide_rJ9bAC"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "slideshow_a4djVE": {
-      "type": "slideshow",
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "hero_component_GYiFKe": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/WhatsApp_Image_2025-09-29_at_11.20.08.jpg",
-        "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-09-29_at_11.20.09.jpg",
-        "subtitle": "Comfortable. Durable. Professional.",
-        "title": "THE ART OF PERFORMANCE",
-        "description": "Built for competitive athletes who want agility, comfort, and control on every court. Engineered for peak performance with a clean, confident look.",
-        "button_text": "SHOP NOW",
-        "link_to": "shopify://collections/pickleball-shoes",
+        "video": "shopify://files/videos/Main.mp4",
+        "mobile_video": "shopify://files/videos/Main 2.mp4",
+        "subtitle": "Phenom",
+        "title": "THE MOST AWAITED SHOE",
+        "description": "What every professional player dreams of is now ready to be yours.",
+        "button_text": "EXPLORE MORE",
+        "link_to": "/",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 20
+        "padding_bottom": 0
       }
     },
     "hero_video_component_hNztTF": {
@@ -165,7 +38,7 @@
         "button_text": "BUY NOW",
         "link_to": "shopify://collections/pickleball-shoes",
         "color_scheme": "",
-        "padding_top": 20,
+        "padding_top": 0,
         "padding_bottom": 28
       }
     },
@@ -321,10 +194,7 @@
     }
   },
   "order": [
-    "image_banner",
-    "slideshow_g8rW7A",
-    "slideshow_a4djVE",
-    "hero_component_GYiFKe",
+    "hero_video_component_BwJCQi",
     "hero_video_component_hNztTF",
     "swipeable_products_ekha9p",
     "hero_component_kR89Gr",
