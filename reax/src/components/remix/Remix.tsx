@@ -24,6 +24,9 @@ window.s3_remix_modal_controller = {
 
 const Remix = () => {
   const threeModelPath = window?.s3_remix_config?.modelPath;
+  const productType = window?.s3_product_type;
+  const shortType = productType === 'Badminton Racket' ? 'Racket' : productType === 'Pickleball Paddle' ? 'Paddle' : '';
+  const maxStickerLength = productType === 'Pickleball Paddle' ? 12 : 8;
   const inputRef = useRef<HTMLInputElement>(null);
   const cursorPositionRef = useRef<number | null>(null);
 
@@ -48,6 +51,7 @@ const Remix = () => {
     let ambientLight: any = null;
     let directionalLight: any = null;
     let scene: any = null;
+    let logPositionChange: any = null;
 
     if (!threeModelPath) {
       console.error('No 3D model URL provided');
@@ -77,11 +81,13 @@ const Remix = () => {
         renderer = new WebGLRenderer({ antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.shadowMap.enabled = true;
-        renderer.setSize(window.innerWidth, window.innerHeight);
 
         const rootElement = document.getElementById('model');
         if (rootElement) {
           rootElement.innerHTML = ''; // Clear previous renderers
+          rootElement.style.height = '100vh';
+          rootElement.style.width = '100vw';
+          renderer.setSize(window.innerWidth, window.innerHeight);
           rootElement.appendChild(renderer.domElement);
         }
 
@@ -92,6 +98,17 @@ const Remix = () => {
         controls.screenSpacePanning = true;
         controls.minDistance = 1;
         controls.maxDistance = 100;
+
+        // DEBUG: Log position changes during mouse interaction
+        logPositionChange = () => {
+          console.log(
+            'Camera position:',
+            camera.position.x.toFixed(2),
+            camera.position.y.toFixed(2),
+            camera.position.z.toFixed(2),
+          );
+        };
+        controls.addEventListener('change', logPositionChange);
 
         // IMPORT THE 3D MODEL 🫰🏻
         let model: any = null;
@@ -125,7 +142,7 @@ const Remix = () => {
 
                 if (child.name === 'Cylinder003_1') {
                   // HANDLE
-                  const gripColor = new Color(getHexColorByName(window?.s3_remix_config?.racketGripColor as string));
+                  const gripColor = new Color(window?.s3_remix_config?.racketGripColor as string);
                   child.material = new MeshStandardMaterial({
                     color: gripColor,
                     roughness: 0.7,
@@ -135,7 +152,7 @@ const Remix = () => {
 
                 if (child.name === 'Cylinder003_2') {
                   // BOTTOM_LOGO
-                  const logoColor = new Color(getHexColorByName(window?.s3_remix_config?.logoColor as string));
+                  const logoColor = new Color(window?.s3_remix_config?.logoColor as string);
                   child.material = new MeshStandardMaterial({
                     color: logoColor,
                     roughness: 0.5,
@@ -179,7 +196,7 @@ const Remix = () => {
                   model.rotation.z = angle;
                 }
 
-                if (t < 1) {
+                if (t < 1 && productType === 'Badminton Racket') {
                   requestAnimationFrame(updateModel);
                 }
               }
@@ -189,11 +206,26 @@ const Remix = () => {
 
             // INITIATE CAMERA MOVEMENTS 🎥
             (() => {
-              const duration = 4500;
+              const duration = productType === 'Pickleball Paddle' ? 3500 : 4500;
               const startTime = Date.now();
 
-              const startPosition = new Vector3(0, 0, 10);
-              const endPosition = new Vector3(-2, 1, 0);
+              const getCameraPositions = (productType: string | undefined) => {
+                switch (productType) {
+                  case 'Badminton Racket':
+                    return {
+                      start: new Vector3(0, 0, 10),
+                      end: new Vector3(-2, 1, 0),
+                    };
+                  case 'Pickleball Paddle':
+                  default:
+                    return {
+                      start: new Vector3(0, 15, 2),
+                      end: new Vector3(-1.35, 0, 2.5),
+                    };
+                }
+              };
+
+              const { start: startPosition, end: endPosition } = getCameraPositions(productType);
 
               function updateCamera() {
                 const elapsedTime = Date.now() - startTime;
@@ -250,7 +282,10 @@ const Remix = () => {
 
     return () => {
       console.log('clear');
-      controls?.dispose();
+      if (controls) {
+        controls.removeEventListener('change', logPositionChange);
+        controls.dispose();
+      }
       renderer?.dispose();
       ambientLight?.dispose();
       directionalLight?.dispose();
@@ -362,7 +397,7 @@ const Remix = () => {
                           }}
                         >
                           <span style="background: linear-gradient(90deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%) padding-box text; color: transparent;">
-                            ✨ Racket Remix
+                            ✨ {shortType} Remix
                           </span>{' '}
                           {` `}
                           by {window.s3_brand}
@@ -393,7 +428,7 @@ const Remix = () => {
                         letterSpacing: '0px',
                       }}
                     >
-                      Add your name, initials or emojis <br /> and show off this uniquely yours racket.
+                      Add your name, initials or emojis <br /> and show off this uniquely yours {shortType}.
                     </p>
                   </div>
 
@@ -401,9 +436,10 @@ const Remix = () => {
                     style={{
                       color: window.s3_remix_config?.stickerTextColor || '#fff',
                       position: 'absolute',
-                      width: '100%',
-                      inset: 0,
-                      height: '100%',
+                      width: '100vw',
+                      height: '100vh',
+                      top: 0,
+                      left: 0,
                       margin: 0,
                       display: 'flex',
                       justifyContent: 'center',
@@ -432,7 +468,8 @@ const Remix = () => {
                       justifyContent: 'center',
                       alignItems: 'center',
                       position: 'absolute',
-                      bottom: '10rem',
+                      bottom: '9rem',
+                      padding: '0 3px',
                       width: '100%',
                       transition: 'opacity 0.5s ease',
                       opacity: isAnimating ? 0 : 1,
@@ -460,6 +497,7 @@ const Remix = () => {
                               border: 'none',
                               fontSize: '2.5rem',
                               margin: '0 0.4rem',
+                              cursor: 'pointer',
                             }}
                             key={emoji}
                             onClick={() => {
@@ -477,7 +515,7 @@ const Remix = () => {
                                   emoji,
                                   ...graphemes.slice(inputRef.current?.selectionStart!),
                                 ]
-                                  .slice(0, 8)
+                                  .slice(0, maxStickerLength)
                                   .join('');
 
                                 cursorPositionRef.current = inputRef.current?.selectionStart! + 2;
@@ -559,7 +597,7 @@ const Remix = () => {
                           const filteredValue = splitter
                             .splitGraphemes(inputValue)
                             .filter((grapheme) => validEmojis.includes(grapheme) || isCharAlphanumeric(grapheme))
-                            .slice(0, 8)
+                            .slice(0, maxStickerLength)
                             .join('')
                             .toUpperCase();
 

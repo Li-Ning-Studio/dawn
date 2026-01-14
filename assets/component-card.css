@@ -634,9 +634,10 @@
 }
 
 .bundle-items.expanded {
-  max-height: 200px; /* Adjust based on your content */
+  max-height: 400px; /* Adjust based on your content */
   opacity: 1;
   margin-top: 8px;
+  width: 150%;
 }
 
 .bundle-items--empty {

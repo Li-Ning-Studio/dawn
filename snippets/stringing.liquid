@@ -6,7 +6,7 @@
   {% assign is_product_factory_strung = true %}
 {% endif %}
 
-<section class="frame">
+<section class="frame" id="stringing-frame">
   <legend class="form__label">
     <span>{{ 'studio.stringing.form_labels.frame' | t }}</span>
   </legend>
@@ -48,6 +48,10 @@
     id="stringing-root"
     style="display: none;"
     data-stringing-collection-id="{{ settings.stringing_collection_id | default: '' }}"
+    data-tennis-stringing-collection-id="{{ settings.tennis_stringing_collection_id | default: '' }}"
+    data-is-knotting-enabled="{{ settings.is_knotting_enabled_globally | default: false }}"
+    data-stringing-cost="{{ all_products['studio-pro-stringing'].price | money }}"
+    data-knotting-cost="{{ all_products['studio-four-knots-service'].price | money }}"
     data-max-tension="{{product.metafields.custom.maximum_racket_tension}}"
   ></section>
 </section>
@@ -88,7 +92,8 @@
       setTimeout(loadScript, 2000);
     }
 
-    document.querySelector('.frame').addEventListener('change', (e) => {
+    const frameContainer = document.getElementById('stringing-frame');
+    frameContainer?.addEventListener('change', (e) => {
       if (e.target.name === 'frame') {
         root.style.display = e.target.id === 'pro-stringing' ? 'block' : 'none';
 
@@ -109,6 +114,7 @@
     });
   });
 
-    // set the stringing variant id on window
+    // set the services variant id on window
       window.s3_stringing_service_variant_id = '{{ all_products['studio-pro-stringing'].variants.first.id  }}';
+      window.s3_four_knots_service_variant_id = '{{ all_products['studio-four-knots-service'].variants.first.id  }}';
 </script>

@@ -76,7 +76,7 @@
           {%- endif -%}
         </div>
       {%- endif -%}
-      <div class="drawer__header">
+      <div style="margin: 1rem 2rem;" class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
         <button
           class="drawer__close"
@@ -95,6 +95,7 @@
         {% endif %}
       >
         <form
+          style="padding: 1rem 2rem;"
           action="{{ routes.cart_url }}"
           id="CartDrawer-Form"
           class="cart__contents cart-drawer__form"
@@ -137,9 +138,16 @@
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% assign image = item.image %}
                           {% if item.item_components.size > 0 %}
-                            {% assign bundle_id = item.item_components.first.properties._bundleId | plus: 0 %}
-                            {% assign main_product = item.item_components | where: 'variant_id', bundle_id %}
-                            {% assign image = main_product.first.image %}
+                            {% assign main_product = null %}
+                            {% for component in item.item_components %}
+                              {% if component.properties._bundleRole == 'main' %}
+                                {% assign main_product = component %}
+                                {% break %}
+                              {% endif %}
+                            {% endfor %}
+                            {% if main_product %}
+                              {% assign image = main_product.image %}
+                            {% endif %}
                           {% endif %}
                           {% if image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -586,9 +594,18 @@
             </p>
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
+          <!-- Cart Recommendations -->
+
+          {%- if cart != empty -%}
+            {%- render 'cart-recommendations',
+              limit: 8,
+              heading: "We think you'll like these too",
+              intent: 'complementary'
+            -%}
+          {%- endif -%}
         </form>
       </cart-drawer-items>
-      <div class="drawer__footer">
+      <div style="padding: 2rem;" class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
             <summary>
@@ -676,6 +693,9 @@
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
+          {% if settings.is_gokwik_enabled == true %}
+            {% render 'gokwik-checkout-button' %}
+          {% endif %}
           <button
             style="padding: 2.5rem 0"
             type="submit"

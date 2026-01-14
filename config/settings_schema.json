@@ -1447,6 +1447,13 @@
     "name": "t:settings_schema.cart.name",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "catalog_mode_enabled",
+        "label": "t:settings_schema.cart.settings.catalog_mode_enabled.label",
+        "info": "t:settings_schema.cart.settings.catalog_mode_enabled.info",
+        "default": false
+      },
+      {
         "type": "select",
         "id": "cart_type",
         "options": [
@@ -1525,10 +1532,73 @@
         "default": false
       },
       {
+        "type": "checkbox",
+        "id": "is_gripping_enabled_globally",
+        "label": "Enable Gripping Service",
+        "info": "Control Storewide Gripping",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "is_knotting_enabled_globally",
+        "label": "Enable Knots Selection",
+        "info": "Control Storewide Knotting",
+        "default": false
+      },
+      {
         "type": "text",
         "id": "stringing_collection_id",
         "info": "The collection which contains the strings supported for Pro Stringing",
         "label": "Stringing Collection ID"
+      },
+      {
+        "type": "text",
+        "id": "gripping_collection_id",
+        "info": "The collection which contains the grips available for Studio Grip Service",
+        "label": "Gripping Collection ID"
+      },
+      {
+        "type": "image_picker",
+        "id": "factory_grip_image",
+        "label": "t:settings_schema.product_customisations.factory_grip_image.label",
+        "info": "t:settings_schema.product_customisations.factory_grip_image.info"
+      },
+      {
+        "type": "text",
+        "id": "tennis_stringing_collection_id",
+        "info": "The collection which contains the tennis strings supported for Tennis Pro Stringing",
+        "label": "Tennis Stringing Collection ID"
+      }
+    ]
+  },
+  {
+    "name": "Gokwik Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Gokwik Integration Settings",
+        "info": "GoKwik is only available in India as of now."
+      },
+      {
+        "type": "checkbox",
+        "id": "is_gokwik_enabled",
+        "label": "Enable Gokwik Integration",
+        "info": "Controls whether Gokwik payment integration is enabled. This only determines the UI elements.",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "gokwik_merchant_id",
+        "label": "Gokwik Merchant ID",
+        "info": "Your unique Gokwik merchant identifier",
+        "default": "196y9ldku7pd"
+      },
+      {
+        "type": "text",
+        "id": "gokwik_shop_domain",
+        "label": "Gokwik Shop Domain",
+        "info": "Your Shopify store domain for Gokwik integration",
+        "default": "hundred-india.myshopify.com"
       }
     ]
   },

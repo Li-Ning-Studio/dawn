@@ -14,26 +14,21 @@
 {%- endunless -%}
 
 {%- liquid
-  assign orientation_class = ''
-  if block.settings.orientation == 'landscape'
-    assign orientation_class = 'merchandising-item--landscape'
-  else
-    assign orientation_class = 'merchandising-item--portrait'
-  endif
+  assign ratio = 1
 -%}
 
-<div class="merchandising-item {{ orientation_class }} color-{{ block.settings.color_scheme }} gradient">
-  <div class="merchandising-item__inner">
+<div class="merchandising-item " style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+  <div class="merchandising-item__inner ratio" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
     {%- if block.settings.image != blank -%}
       <div class="merchandising-item__media">
-        <div class="merchandising-item__image-container">
+        <div class="media media--transparent">
           {{
             block.settings.image
-            | image_url: width: 1200
+            | image_url: width: 800
             | image_tag:
-              class: 'merchandising-item__image',
-              sizes: '(min-width: 990px) 50vw, 100vw',
-              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000',
+              class: 'motion-reduce',
+              sizes: '(min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)',
+              widths: '300, 450, 600, 800',
               loading: lazy_load,
               width: block.settings.image.width,
               height: block.settings.image.height
@@ -45,16 +40,16 @@
     {%- if block.settings.title != blank or block.settings.subtitle != blank or block.settings.cta_text != blank -%}
       <div class="merchandising-item__content merchandising-item__content--{{ block.settings.text_position }}">
         <div class="merchandising-item__text">
-          {%- if block.settings.subtitle != blank -%}
-            <p class="merchandising-item__subtitle">{{ block.settings.subtitle }}</p>
-          {%- endif -%}
-
           {%- if block.settings.title != blank -%}
             <h3 class="merchandising-item__title">{{ block.settings.title }}</h3>
           {%- endif -%}
 
+          {%- if block.settings.subtitle != blank -%}
+            <p class="merchandising-item__subtitle">{{ block.settings.subtitle }}</p>
+          {%- endif -%}
+
           {%- if block.settings.cta_text != blank and block.settings.cta_url != blank -%}
-            <a href="{{ block.settings.cta_url }}" class="merchandising-item__cta button button--primary">
+            <a href="{{ block.settings.cta_url }}" class="merchandising-item__cta">
               {{ block.settings.cta_text }}
             </a>
           {%- endif -%}
@@ -62,13 +57,14 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} If no CTA button but there's a URL, make the entire item clickable {%- endcomment -%}
-    {%- if block.settings.cta_text == blank and block.settings.cta_url != blank -%}
+    {%- comment -%} If there's a URL, make the entire item clickable {%- endcomment -%}
+    {%- if block.settings.cta_url != blank -%}
       <a
         href="{{ block.settings.cta_url }}"
         class="merchandising-item__link-overlay"
         aria-label="{{ block.settings.title | default: 'View featured content' }}"
-      ></a>
+        >&nbsp;</a
+      >
     {%- endif -%}
   </div>
 </div>
@@ -77,17 +73,23 @@
   .merchandising-item {
     position: relative;
     overflow: hidden;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
     height: 100%;
-    min-height: 300px;
     filter: brightness(0.9);
   }
 
   .merchandising-item__inner {
     position: relative;
-    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .merchandising-item__inner::before {
+    content: '';
+    width: 0;
+    height: 0;
+    padding-bottom: var(--ratio-percent);
   }
 
   .merchandising-item__media {
@@ -99,63 +101,39 @@
     z-index: 1;
   }
 
-  .merchandising-item__image-container {
-    position: relative;
+  .merchandising-item__media .media {
+    bottom: 0;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100%;
   }
 
-  .merchandising-item__image {
-    width: 100%;
+  .merchandising-item__media .media img {
     height: 100%;
     object-fit: cover;
-    display: block;
+    object-position: center center;
+    width: 100%;
   }
 
   .merchandising-item__content {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 3;
-    padding: 2rem;
-    height: 100%;
+    padding: 2.6rem;
     display: flex;
     pointer-events: none;
   }
 
-  .merchandising-item__content--top-left {
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .merchandising-item__content--top-center {
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .merchandising-item__content--top-right {
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-  .merchandising-item__content--center-left {
-    align-items: center;
+  .merchandising-item__content--bottom-left {
+    align-items: flex-end;
     justify-content: flex-start;
   }
   .merchandising-item__content--center-center {
     align-items: center;
     justify-content: center;
-  }
-  .merchandising-item__content--center-right {
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .merchandising-item__content--bottom-left {
-    align-items: flex-end;
-    justify-content: flex-start;
-  }
-  .merchandising-item__content--bottom-center {
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .merchandising-item__content--bottom-right {
-    align-items: flex-end;
-    justify-content: flex-end;
   }
 
   .merchandising-item__text {
@@ -163,39 +141,44 @@
     pointer-events: auto;
   }
 
-  .merchandising-item__content--top-center .merchandising-item__text,
-  .merchandising-item__content--center-center .merchandising-item__text,
-  .merchandising-item__content--bottom-center .merchandising-item__text {
+  .merchandising-item__content--center-center .merchandising-item__text {
     text-align: center;
   }
 
-  .merchandising-item__content--top-right .merchandising-item__text,
-  .merchandising-item__content--center-right .merchandising-item__text,
-  .merchandising-item__content--bottom-right .merchandising-item__text {
-    text-align: right;
-  }
-
   .merchandising-item__subtitle {
-    font-size: 0.875rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     margin: 0 0 0.5rem 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: {{ block.settings.text_color | default: 'rgba(255, 255, 255, 0.9)' }};
   }
 
   .merchandising-item__title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
-    margin: 0 0 1rem 0;
-    color: rgb(255, 255, 255);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 0 0 0.3rem 0;
+    color: {{ block.settings.text_color | default: 'rgb(255, 255, 255)' }};
   }
 
   .merchandising-item__cta {
+    display: inline-block;
     margin-top: 1rem;
+    padding: 1rem 2.7rem;
+    border-radius: 50rem;
+    background: transparent;
+    border: 0.15rem solid {{ block.settings.text_color | default: '#ffffff' }};
+    color: {{ block.settings.text_color | default: '#ffffff' }};
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     pointer-events: auto;
+    cursor: pointer;
   }
+
 
   .merchandising-item__link-overlay {
     position: absolute;
@@ -203,35 +186,34 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 4;
+    z-index: 10;
     text-decoration: none;
   }
 
-  /* Larger title for landscape orientation */
-  @media screen and (min-width: 750px) {
-    .merchandising-item--landscape .merchandising-item__title {
-      font-size: 2rem;
-    }
-  }
-
-  /* On mobile, all items take full width */
+  /* Responsive adjustments */
   @media screen and (max-width: 749px) {
     .merchandising-item__content {
-      padding: 1.5rem;
+      padding: 2.2rem;
     }
 
     .merchandising-item__title {
-      font-size: 1.25rem;
+      font-size: 2.8rem;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .merchandising-item__title {
+      font-size: 3rem;
     }
   }
 
   /* Hover effects */
-  .merchandising-item:hover .merchandising-item__image {
+  .merchandising-item:hover .merchandising-item__media .media img {
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
 
-  .merchandising-item__image {
+  .merchandising-item__media .media img {
     transition: transform 0.3s ease;
   }
 </style>
