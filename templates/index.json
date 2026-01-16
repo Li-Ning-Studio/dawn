@@ -11,7 +11,6 @@
   "sections": {
     "hero_video_component_BwJCQi": {
       "type": "hero-video-component",
-      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/Main.mp4",
@@ -26,8 +25,23 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_VGrBGw": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "The Over Engineered Shoe",
+        "products": [
+          "phenom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 16
+      }
+    },
     "hero_video_component_hNztTF": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/Comp 1.mp4",
@@ -44,6 +58,7 @@
     },
     "swipeable_products_ekha9p": {
       "type": "swipeable-products",
+      "disabled": true,
       "name": "Swipeable Products",
       "settings": {
         "title": "Beast Armor PBX",
@@ -56,17 +71,330 @@
         "padding_bottom": 28
       }
     },
+    "responsive_slideshow_9mYhFN": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_KffCBB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_53406b24-6e55-4c92-9cff-d8c32c0094e3.jpg",
+            "mobile_image": "shopify://shop_images/Banner_R_4aeab019-486e-4297-aca6-b98e81f27493.jpg",
+            "heading": "Speed in Every Swing",
+            "subheading": "Built for quick reflexes and lightning-fast plays with aerodynamic precision.",
+            "button_label": "Shop Typhoon",
+            "link": "shopify://products/flareon-typhoon-4u"
+          }
+        },
+        "slide_tK6zcD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_93a015de-7c7d-4c56-9cfa-60de16effebf_1.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_35ad5c71-f103-41ee-b2db-6944c0aabdc4_1.jpg",
+            "heading": "All Out Attack",
+            "subheading": "Turn every rally into a statement of power and precision.",
+            "button_label": "Shop Thunder",
+            "link": "shopify://products/nitrix-thunder-4u"
+          }
+        },
+        "slide_tnNnCa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Main_20db9f80-2904-48ec-9c17-1e3631e52560.jpg",
+            "mobile_image": "shopify://shop_images/Main_R_f30f37aa-c31a-4561-8a3b-57ae1b9adde7.jpg",
+            "heading": "Accuracy in Motion",
+            "subheading": "Crafted for precise strikes and seamless control across every rally.",
+            "button_label": "Shop Lazer",
+            "link": "shopify://products/hyfonic-lazer-4u"
+          }
+        }
+      },
+      "block_order": [
+        "slide_KffCBB",
+        "slide_tK6zcD",
+        "slide_tnNnCa"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
+    },
+    "swipeable_products_eG7XyV": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "nitrix-thunder-4u",
+          "flareon-typhoon-4u",
+          "flareon-typhoon-5u",
+          "hyfonic-lazer-4u",
+          "hyfonic-lazer-5u"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "responsive_slideshow_qEytbW": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_MNxCKU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ba_ccae84e7-85ec-42cc-9300-2ea424a4e433.jpg",
+            "mobile_image": "shopify://shop_images/respo_396658c5-d6ba-4cc9-b7ee-3f3dff519629.jpg",
+            "heading": "Weaponize Your Smash",
+            "subheading": "Bring the intensity of battle with a racket designed for peak attack and crushing impact.",
+            "button_label": "Buy Now",
+            "link": "shopify://products/atomic-x-35-spd"
+          }
+        },
+        "slide_xUM9AX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/atomicx38_banner.png",
+            "mobile_image": "shopify://shop_images/atomicx38_banner_r.png",
+            "heading": "Rumbling Of High-Volt Smashes",
+            "subheading": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
+            "button_label": "Buy Now",
+            "link": "shopify://products/atomic-x-38-pwr"
+          }
+        },
+        "slide_Je3rWV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ba_f587bac3-3d1e-4cce-ae84-c999618a75d5.jpg",
+            "mobile_image": "shopify://shop_images/respo_a29cc95b-9934-4a45-aefd-fc059148c4c6.jpg",
+            "heading": "Attack In Light Speed",
+            "subheading": "Be the King of the Court with seamless built T-joint for faster recovery and great attacking power.",
+            "button_label": "Buy Now",
+            "link": "shopify://products/atomic-x-38-ctrl"
+          }
+        }
+      },
+      "block_order": [
+        "slide_MNxCKU",
+        "slide_xUM9AX",
+        "slide_Je3rWV"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
+    },
+    "swipeable_products_tGr6T4": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Atomic X Series",
+        "products": [
+          "atomic-x-38-pwr",
+          "atomic-x-38-ctrl",
+          "atomic-x-35-spd"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_8UWbwF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bzEdKk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bad.png",
+            "title": "",
+            "text": "",
+            "link_label": "Badminton",
+            "link": "shopify://collections/badminton"
+          }
+        },
+        "column_ba97bi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pik.png",
+            "title": "",
+            "text": "",
+            "link_label": "Pickleball",
+            "link": "shopify://collections/pickleball-1"
+          }
+        },
+        "column_bP8j89": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/crk.png",
+            "title": "",
+            "text": "",
+            "link_label": "Cricket",
+            "link": "shopify://collections/cricket"
+          }
+        }
+      },
+      "block_order": [
+        "column_bzEdKk",
+        "column_ba97bi",
+        "column_bP8j89"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Shop By Sports",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_jDkRrY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hNKVUn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02_4eb3effb-90b5-4913-adc2-74cf0ebc4a1e.jpg",
+            "title": "<strong>Nitrix 70 Venom</strong>",
+            "text": "<p>Built for heavy smashes and offensive play with an ultra-slim 6.1 mm shaft, delivering raw power and unstoppable dominance on court.<br/></p>",
+            "link_label": "Unleash Your Power",
+            "link": "shopify://products/nitrix-70-venom-4u"
+          }
+        },
+        "column_YFgcKN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02_890512f1-88f0-46d9-9ddb-3ce5d50003b9.jpg",
+            "title": "<strong>Flareon 700</strong>",
+            "text": "<p>Experience lightning-fast hands and blistering speed with a Torsion Stop System that keeps every shot stable, the fastest racket in Hundred’s lineup.</p>",
+            "link_label": "Play Without Limits",
+            "link": "shopify://products/flareon-700-4u"
+          }
+        },
+        "column_zpRa4D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02_24f86582-447f-4c64-a325-f7f1ab856f6f.jpg",
+            "title": "<strong>Nitrix 70 Volta</strong>",
+            "text": "<p>Engineered for clean, aggressive power with an aerodynamic frame for faster swings, built to unleash unstoppable smashes and dominate every rally.<br/></p>",
+            "link_label": "Own the Court",
+            "link": "shopify://products/nitrix-70-volta-4u"
+          }
+        },
+        "column_Uk4h7Q": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02-min_1.png",
+            "title": "<strong>Hyfonic 7</strong>",
+            "text": "<p>Built for ultimate precision and stability, featuring a dual aerodynamic frame that delivers sharp feedback and control on every shot.<br/></p>",
+            "link_label": "Get Yours Now",
+            "link": "shopify://products/hyfonic-7-4u"
+          }
+        }
+      },
+      "block_order": [
+        "column_hNKVUn",
+        "column_YFgcKN",
+        "column_zpRa4D",
+        "column_Uk4h7Q"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Professional Badminton Rackets",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_video_component_7wjHEH": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Banner_2481964b-5a30-4200-b380-6777a5cad584 (2).mp4",
+        "mobile_video": "shopify://files/videos/Banner R_3115ff01-7519-4e78-b408-03342e796bf8 (2).mp4",
+        "subtitle": "Hundred Essentials",
+        "title": "Move Like You Mean It",
+        "description": "Activewear engineered for performance, built for everyday hustle.",
+        "button_text": "Own Your Movement",
+        "link_to": "shopify://collections/clothing",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "swipeable_products_dGRcLM": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Shop the Drop",
+        "products": [
+          "air-crush-t-shirt",
+          "frostbite-tee",
+          "smash-volt-t-shirt",
+          "zig-flow-t-shirt"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_zcJXfr": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_0d1405d1-ceab-43dc-8f38-703dc67cfdc5.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_responsive_1f351d0c-63ca-4490-af94-17215fb633a2.jpg",
+        "subtitle": "Terra Series",
+        "title": "Conqueror Of Pitches",
+        "description": "The ultimate traction and stability for running between wickets to leaping for a catch during fielding.",
+        "button_text": "Get It Here!",
+        "link_to": "shopify://products/terrafield",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_gXmjQV": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Terra Series",
+        "products": [
+          "terrafield",
+          "terralite"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 20
+      }
+    },
     "hero_component_kR89Gr": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/zephyr_banner_441ec7d0-67fa-488d-8d54-45875275958b.jpg",
-        "mobile_image": "shopify://shop_images/zephyr_banner_responsive.jpg",
-        "subtitle": "Engineered for Champions",
-        "title": "POWER ERASES LIMITS",
-        "description": "Experience superior offense and speed with this professional paddle packed with high-tech that delivers pure power.",
+        "image": "shopify://shop_images/2_27_1.jpg",
+        "mobile_image": "shopify://shop_images/1_32_1.jpg",
+        "subtitle": "Pickleball, Perfected.",
+        "title": "PLAY FASTER. HIT HARDER. WIN MORE.",
+        "description": "Launch Offer! Get a free paddle bag when you purchase our cutting-edge paddles and gear",
         "button_text": "GRAB IT NOW",
-        "link_to": "shopify://collections/zephyr-series",
+        "link_to": "shopify://collections/pickleball-1",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 28
@@ -76,53 +404,22 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Zephyr Series",
+        "title": "Play Like a Pro",
         "products": [
           "zephyr-20-extend",
           "zephyr-20-wide",
           "zephyr-70-extend",
           "zephyr-70-wide",
           "zephyr-80-extend",
-          "zephyr-80-wide"
+          "zephyr-80-wide",
+          "cosmopack-pickleball-bag",
+          "delta-p500-pro-pack-of-6",
+          "delta-s400-pack-of-4",
+          "instinct-90-wide",
+          "instinct-90-extend",
+          "nexagear-pickleball-bag"
         ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 28
-      }
-    },
-    "hero_video_component_bfgMDw": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/yt_06845e22-7d9a-4be0-a73c-f6dae4dab332.mp4",
-        "mobile_video": "shopify://files/videos/sq 1.mp4",
-        "subtitle": "Hundred's Finest Racket Collection",
-        "title": "PROFESSIONAL RACKET SERIES",
-        "description": "",
-        "button_text": "GAME ON",
-        "link_to": "shopify://pages/pro-series-rackets",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 28
-      }
-    },
-    "swipeable_products_th9ndJ": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Pro Series",
-        "products": [
-          "nitrix-70-venom-4u",
-          "nitrix-70-venom-3u",
-          "nitrix-70-volta-3u",
-          "nitrix-70-volta-4u",
-          "flareon-700-3u",
-          "flareon-700-4u",
-          "hyfonic-7-4u",
-          "hyfonic-7"
-        ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 28
@@ -132,25 +429,25 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/velocity_banner_32b61872-8396-4dae-a076-9d1cc7d84959.png",
-        "mobile_image": "shopify://shop_images/velocity_banner_responsive.png",
-        "subtitle": "Move Like Never Before",
-        "title": "ENGINEERED FOR INTENSITY",
-        "description": "Shock melts away underfoot while energy bounces back so you're ready to finish every rally in style.",
-        "button_text": "LEVEL UP",
-        "link_to": "shopify://products/velocity-elite",
+        "image": "shopify://shop_images/Banner_R_3.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_3_c12b7356-1d07-441e-8600-d08aa59f35ed.jpg",
+        "subtitle": "Velocity Z PBX",
+        "title": "Built for fast moves and sharp control.",
+        "description": "Engineered to keep up with fast footwork, sharp pivots, and explosive moves.",
+        "button_text": "Shop Now!",
+        "link_to": "shopify://products/velocity-z-pbx",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 28
+        "padding_bottom": 12
       }
     },
     "swipeable_products_gHfNxP": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Velocity Series",
+        "title": "Velocity Z PBX",
         "products": [
-          "velocity-elite"
+          "velocity-z-pbx"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -158,52 +455,134 @@
         "padding_bottom": 28
       }
     },
-    "hero_component_CgQxwD": {
+    "multicolumn_fP74gw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YbwwY7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/03.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Cricket Kit Bag",
+            "link": "shopify://collections/cricket-kit-bags"
+          }
+        },
+        "column_Aphm4R": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_1.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Insoles",
+            "link": "shopify://collections/insoles"
+          }
+        },
+        "column_T9ekwf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Accessories",
+            "link": "shopify://collections/accessories"
+          }
+        },
+        "column_faHCL4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_d74875d5-5af2-4e36-91f3-852bebac595c.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Shuttlecocks",
+            "link": "shopify://collections/shuttlecock"
+          }
+        }
+      },
+      "block_order": [
+        "column_YbwwY7",
+        "column_Aphm4R",
+        "column_T9ekwf",
+        "column_faHCL4"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Power Your Play",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_Eda4nY": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner_f0ff8f18-6965-4b66-aacd-372337814922.png",
-        "mobile_image": "shopify://shop_images/banner_responsive.png",
-        "subtitle": "Unleash the Sound of Precision",
-        "title": "SPEED THAT ECHOES",
-        "description": "High-repulsion string that launches shuttles off your racket with the most satisfying, clean sound.",
-        "button_text": "LET IT FLY",
-        "link_to": "shopify://collections/strings",
+        "image": "shopify://shop_images/Banner_107e09d9-cc06-4d49-8fde-43602d9affad_2.png",
+        "mobile_image": "shopify://shop_images/Banner_R_64c453c6-cc22-4232-ac0c-9644214cd930_2.png",
+        "subtitle": "Kitbags",
+        "title": "PACK AND PLAY",
+        "description": "Go the distance with a kit bag that matches your ambition and endurance",
+        "button_text": "Buy Now!",
+        "link_to": "shopify://collections/badminton-kit-bags",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 32
+        "padding_bottom": 0
       }
     },
-    "swipeable_products_Tqw38a": {
+    "swipeable_products_DqfCFr": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Badminton Strings",
+        "title": "Kit Bags",
         "products": [
-          "jp65-magnite",
-          "jp58-magnite",
-          "jp-70-power",
-          "jp-70",
-          "jp-66"
+          "pitchblack-kit-bag",
+          "metro-pack-kit-bag",
+          "nuclear-edge-kit-bag",
+          "rock-adventure-kit-bag",
+          "two-step-kit-bag",
+          "urban-pod-kit-bag",
+          "utilitarian-kitbag",
+          "victory-vault-kit-bag",
+          "zest-kit-bag"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 28
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
   "order": [
     "hero_video_component_BwJCQi",
+    "swipeable_products_VGrBGw",
     "hero_video_component_hNztTF",
     "swipeable_products_ekha9p",
+    "responsive_slideshow_9mYhFN",
+    "swipeable_products_eG7XyV",
+    "responsive_slideshow_qEytbW",
+    "swipeable_products_tGr6T4",
+    "multicolumn_8UWbwF",
+    "multicolumn_jDkRrY",
+    "hero_video_component_7wjHEH",
+    "swipeable_products_dGRcLM",
+    "hero_component_zcJXfr",
+    "swipeable_products_gXmjQV",
     "hero_component_kR89Gr",
     "swipeable_products_UQnnX3",
-    "hero_video_component_bfgMDw",
-    "swipeable_products_th9ndJ",
     "hero_component_CciL6e",
     "swipeable_products_gHfNxP",
-    "hero_component_CgQxwD",
-    "swipeable_products_Tqw38a"
+    "multicolumn_fP74gw",
+    "hero_component_Eda4nY",
+    "swipeable_products_DqfCFr"
   ]
 }
