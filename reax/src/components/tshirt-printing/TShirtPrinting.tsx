@@ -15,49 +15,42 @@ const TShirtPrinting = () => {
   const [isInputInvalid, setIsInputInvalid] = useState(false);
   const [name, setName] = useState('');
 
+  const [shouldAddSecondLine, setShouldAddSecondLine] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('');
+  const [includeLogo, setIncludeLogo] = useState(true);
+
   const closeModal = () => setIsModalOpen(false);
 
-  const calculateStyles = (name: string) => {
-    const length = name?.length;
-    if (width && width < 640) {
-      const top = '25%';
+  const getNameStyles = (text: string) => {
+    const length = text?.length;
+    const isMobile = width && width < 640;
+
+    if (isMobile) {
       const letterSpacing = '0.01px';
       if (length <= 6) {
-        return {
-          fontSize: '37px',
-          letterSpacing,
-          top,
-        };
+        return { fontSize: '32px', letterSpacing };
       } else if (length <= 9) {
-        return {
-          fontSize: '27px',
-          letterSpacing,
-          top,
-        };
-      } else
-        return {
-          fontSize: '20px',
-          letterSpacing,
-          top,
-        };
+        return { fontSize: '24px', letterSpacing };
+      } else {
+        return { fontSize: '18px', letterSpacing };
+      }
     } else {
-      const top = '23%';
       if (length <= 6) {
-        return {
-          fontSize: '37px',
-          top,
-        };
+        return { fontSize: '38px' };
       } else if (length <= 9) {
-        return {
-          fontSize: '26px',
-          top,
-        };
-      } else
-        return {
-          fontSize: '21px',
-          top,
-        };
+        return { fontSize: '28px' };
+      } else {
+        return { fontSize: '22px' };
+      }
     }
+  };
+
+  const getCountryStyles = () => {
+    const isMobile = width && width < 640;
+    return {
+      fontSize: isMobile ? '16px' : '18px',
+      letterSpacing: '0.01px',
+    };
   };
 
   useEffect(() => {
@@ -70,14 +63,20 @@ const TShirtPrinting = () => {
 
   useEffect(() => {
     if (name) {
-      document.getElementById('tshirt-printing-description')!.innerHTML =
-        `Uniquely Yours — You are making this ${window.s3_product_name} truly yours by personalising with <span id="the-tshirt-text">${name}</span>`;
+      let description = `Uniquely Yours — You are making this ${window.s3_product_name} truly yours by personalising with <span id="the-tshirt-text">${name}</span>`;
+      if (selectedCountry) {
+        description += ` from ${selectedCountry}`;
+      }
+      if (includeLogo) {
+        description += ` with logo`;
+      }
+      document.getElementById('tshirt-printing-description')!.innerHTML = description;
       document.getElementsByClassName('product-form__submit button')[0]?.classList?.add('glowing');
     } else {
       document.getElementById('tshirt-printing-description')!.innerHTML = defaultCopy;
       document.getElementsByClassName('product-form__submit button')[0]?.classList?.remove('glowing');
     }
-  }, [name]);
+  }, [name, selectedCountry, includeLogo]);
 
   return (
     <Dialog.Root open={isModalOpen} onOpenChange={setIsModalOpen}>
@@ -161,24 +160,93 @@ const TShirtPrinting = () => {
               </svg>
             </div>
 
-            <div style={{ width: '100%', padding: '4rem 2rem', background: '#f5f5f5' }}>
-              <h4
-                className="tshirt-printing-font"
-                style={{
-                  position: 'relative',
-                  bottom: '-85px',
-                  height: '24px',
-                  color: window.s3_tshirt_printing_config?.tshirtTextColor || '#fff',
-                  zIndex: 9999,
-                  margin: 0,
-                  //   fontSize: '3rem',
-                  ...calculateStyles(name),
-                }}
-              >
-                {name}
-              </h4>
+            <div style={{ width: '100%', padding: '4rem 2rem', background: '#f5f5f5', position: 'relative' }}>
+              <div style={{ position: 'relative', width: 'max-content', margin: '0 auto' }}>
+                <Tshirt tshirtColor={window.s3_tshirt_printing_config?.tshirtColor} />
 
-              <Tshirt tshirtColor={window.s3_tshirt_printing_config?.tshirtColor} />
+                {/* Text overlay container */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    pointerEvents: 'none',
+                  }}
+                >
+                  {/* Name - Fixed position */}
+                  <h4
+                    className="tshirt-printing-font"
+                    style={{
+                      position: 'absolute',
+                      top: width < 640 ? '65px' : '75px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      color: window.s3_tshirt_printing_config?.tshirtTextColor || '#fff',
+                      margin: 0,
+                      textAlign: 'center',
+                      opacity: name.length > 0 ? 1 : 0,
+                      ...getNameStyles(name),
+                    }}
+                  >
+                    {name}
+                  </h4>
+
+                  {/* Country - Fixed position */}
+                  <h4
+                    className="tshirt-printing-font"
+                    style={{
+                      position: 'absolute',
+                      top: width < 640 ? '105px' : '125px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      color: window.s3_tshirt_printing_config?.tshirtTextColor || '#fff',
+                      margin: 0,
+                      textAlign: 'center',
+                      opacity: selectedCountry && name.length > 0 ? 1 : 0,
+                      ...getCountryStyles(),
+                    }}
+                  >
+                    {selectedCountry}
+                  </h4>
+
+                  {/* Logo - Fixed position */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: width < 640 ? '150px' : '180px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      opacity: includeLogo && name.length > 0 ? 1 : 0,
+                    }}
+                  >
+                    <svg
+                      width="40px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 1500 1500"
+                      style="enable-background:new 0 0 1500 1500;"
+                      xml:space="preserve"
+                    >
+                      <path
+                        id="Reverse_Lambda_11_"
+                        fill={window.s3_tshirt_printing_config?.tshirtTextColor || '#fff'}
+                        stroke={window.s3_tshirt_printing_config?.tshirtTextColor || '#fff'}
+                        d="M1347.62,587.22c0,0-101.04-3.54-155.38,1.77c-45.26,4.42-92.29,21.78-146.07,48.64
+      c-73.03,36.48-174.86,89.55-174.86,89.55l532.88,263.67h-280.81L733.54,799.04L350.9,990.85H61.86c0,0,680.94-339.96,831.87-413.83
+      c100.03-48.97,181.76-67.87,291.38-67.87h253.04L1347.62,587.22z"
+                        style={{
+                          fill: window.s3_tshirt_printing_config?.tshirtTextColor || '#fff',
+                        }}
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <input
@@ -204,6 +272,55 @@ const TShirtPrinting = () => {
               type="text"
               placeholder={'Your Personalisation'}
             />
+
+            {name.length > 0 && (
+              <div style={{ margin: '1rem' }}>
+                {shouldAddSecondLine ? (
+                  <select
+                    className="services-input"
+                    style={{ width: '100%', marginTop: '1rem' }}
+                    value={selectedCountry}
+                    onChange={(e: Event) => {
+                      const target = e.target as HTMLSelectElement;
+                      setSelectedCountry(target.value);
+                    }}
+                  >
+                    <option value="">Select Country</option>
+                    <option value="INDIA">India</option>
+                    <option value="JAPAN">Japan</option>
+                    <option value="INDONESIA">Indonesia</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="GERMANY">Germany</option>
+                    <option value="FRANCE">France</option>
+                    <option value="CANADA">Canada</option>
+                    <option value="AUSTRALIA">Australia</option>
+                    <option value="BRAZIL">Brazil</option>
+                    <option value="CHINA">China</option>
+                    <option value="SOUTH KOREA">South Korea</option>
+                  </select>
+                ) : (
+                  <p onClick={() => setShouldAddSecondLine(true)}>Add another line</p>
+                )}
+              </div>
+            )}
+
+            {shouldAddSecondLine && name.length > 0 && (
+              <div style={{ margin: '1rem' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    checked={includeLogo}
+                    onChange={(e: Event) => {
+                      const target = e.target as HTMLInputElement;
+                      setIncludeLogo(target.checked);
+                    }}
+                  />
+                  <span>Include logo</span>
+                </label>
+              </div>
+            )}
+
             <div>
               {isInputInvalid && (
                 <p
@@ -228,6 +345,9 @@ const TShirtPrinting = () => {
                 className="button button--secondary"
                 onClick={() => {
                   setName('');
+                  setSelectedCountry('');
+                  setIncludeLogo(false);
+                  setShouldAddSecondLine(false);
                   closeModal();
                 }}
               >
@@ -237,7 +357,7 @@ const TShirtPrinting = () => {
                 style={{
                   padding: '1.8rem 2.2rem',
                 }}
-                disabled={name.length === 0}
+                disabled={name.length === 0 || (shouldAddSecondLine && !selectedCountry)}
                 className="button"
                 onClick={closeModal}
               >
