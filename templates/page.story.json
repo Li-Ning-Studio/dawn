@@ -11,13 +11,36 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_KxBBLi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n    Born in <span>Singapore</span>, we (HNDRD) are a team spread out all over the <span>world</span> focused on <span>design,  manufacturing and availability</span> of high performance sports footwear, equipment,  apparel and accessories for <span>Athletes</span> of every level. \n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 5rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 2rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 6rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_UCmg7b": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n    HNDRD is a <span>performance brand</span> born from deep industry <span>expertise</span> and a <span>passion</span>\n    for the sport. <br />\n    <br />\n    Our journey began in 2009 with the founding of <span>Sunlight Sports</span> in Singapore,\n    where we established a legacy of excellence managing distribution for\n    premier global brands.<br />\n    <br />\n    In 2020, we registered the HNDRD trademark, turning our focus to <span>\n      engineering\n      our own identity\n    </span>. This vision became reality in 2022 with our debut in\n    <span>Indonesia</span>, headlined by the launch of the Beast Max shoe series and the\n    Flutter racket line. <br />\n    <br />\n    Since then, HNDRD has evolved into a <span>multi-sport powerhouse</span>.<br />\n    <br />\n    We expanded rapidly across Asia, the Middle East, and into the USA, while\n    simultaneously diversifying our portfolio to include <span>\n      Pickleball, Padel,\n      Football, and Running\n    </span>. <br />\n    <br />\n    Our growth is defined by the athletes who trust us. What started with\n    signing Danish star <span>Line Kjaersfeldt</span> in 2023 has grown into a global roster\n    of over 70 athletes. From badminton icons like <span>Srikanth Kidambi</span> and <span>\n      Rasmus\n      Gemke\n    </span> to pickleball pros <span> Armaan Bhatia</span> and <span>Harsh Mehta</span>, we are dedicated to\n    empowering every player to give their 100%.\n  </p>\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_KxBBLi",
+    "custom_liquid_UCmg7b"
   ]
 }
