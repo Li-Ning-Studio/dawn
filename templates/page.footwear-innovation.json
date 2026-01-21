@@ -1,0 +1,299 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_QYdpnB": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Outsole Technologies Banner</title>\n  <style>\n    * { margin: 0; padding: 0; box-sizing: border-box; }\n\n    .tech-banner {\n      position: relative;\n      width: 100%;\n      height: 0;\n      padding-bottom: 40%;\n      overflow: hidden;\n      background-color: #f5f5f5;\n      cursor: pointer;\n    }\n\n    .tech-banner img {\n      position: absolute;\n      inset: 0;\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n    }\n\n    .tech-banner .mobile-image { display: none; }\n\n    .tech-overlay {\n      position: absolute;\n      top: 50%;\n      left: 8%;\n      transform: translateY(-50%);\n      z-index: 10;\n    }\n\n    .tech-overlay h2 {\n      color: #ffa201;\n      font-size: 6rem;\n      font-weight: 900;\n      text-transform: uppercase;\n      letter-spacing: 2px;\n      margin: 0 0 8px 0;\n      line-height: 1.1;\n    }\n\n    .tech-subtitle {\n      color: #ffa201;\n      font-size: 1.2rem;\n      font-weight: 400;\n      letter-spacing: 0.5px;\n      padding-left: 4px;\n    }\n\n    .show-more-btn {\n      position: absolute;\n      bottom: 30px;\n      left: 50%;\n      transform: translateX(-50%);\n      background: transparent;\n      border: none;\n      padding: 20px;\n      cursor: pointer;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 8px;\n      transition: all 0.3s ease;\n      z-index: 20;\n    }\n\n    .down-arrow {\n      width: 0; height: 0;\n      border-left: 12px solid transparent;\n      border-right: 12px solid transparent;\n      border-top: 16px solid #ffa201;\n      transition: all 0.3s ease;\n    }\n\n    .tech-banner:hover .down-arrow { border-top-color: #ff8c00; transform: translateY(3px); }\n    .show-more-btn.active .down-arrow { transform: rotate(180deg); }\n\n    .show-more-text {\n      color: #ffa201;\n      font-size: 0.85rem;\n      font-weight: 600;\n      letter-spacing: 1px;\n      text-transform: uppercase;\n    }\n\n    .tech-details {\n      max-height: 0;                 /* JS sets this to content height */\n      overflow: hidden;\n      transition: max-height 0.5s ease;\n      background: #000;\n      color: #fff;\n    }\n\n    /* Only the active slide should be visible */\n    .tech-slide { display: none !important; }\n    .tech-slide.active { display: block !important; width: 100%; }\n\n    .tech-details-content {\n      /* wraps slides */\n      display: block;\n      height: auto;\n      overflow: visible;\n    }\n\n    /* ===== 2-column layout: text left, logo right ===== */\n    .tech-text-side {\n      display: grid;\n      grid-template-columns: minmax(0, 1fr) clamp(180px, 22vw, 260px);\n      align-items: center;\n      gap: clamp(24px, 6vw, 80px);\n      padding: 48px 8%;              /* align with banner overlay left: 8% */\n      text-align: left !important;   /* prevent theme centering */\n    }\n\n    .tech-content {\n      max-width: 720px;\n      display: flex;\n      flex-direction: column;\n      align-items: flex-start;\n    }\n\n    .tech-logo {\n      justify-self: end;             /* lock the logo to the right edge */\n      width: clamp(180px, 22vw, 260px);\n      height: clamp(180px, 22vw, 260px);\n      display: flex;\n      align-items: center;\n      justify-content: center;\n    }\n\n    .tech-logo img {\n      width: 100%;\n      height: 100%;\n      object-fit: contain;\n      display: block;\n    }\n\n    .tech-text-side h4 {\n      font-size: 1.8rem;\n      font-weight: 700;\n      color: #ffa201;\n      margin-bottom: 15px;\n      text-transform: uppercase;\n    }\n\n    .tech-text-side p {\n      font-size: 0.95rem;\n      line-height: 1.6;\n      color: #e0e0e0;\n      font-weight: 300;\n      margin-bottom: 30px;\n    }\n\n    .tech-navigation {\n      display: flex;\n      gap: 20px;\n      justify-content: flex-start;   /* keep arrows under the copy */\n    }\n\n    .nav-arrow {\n      width: 50px;\n      height: 50px;\n      background: transparent;\n      border: 2px solid #ffa201;\n      border-radius: 50%;\n      cursor: pointer;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      transition: all 0.3s ease;\n      position: relative;\n    }\n\n    .nav-arrow:hover { background: #ffa201; transform: scale(1.1); }\n\n    .nav-arrow.prev::after,\n    .nav-arrow.next::after {\n      content: '';\n      width: 10px; height: 10px;\n      border-bottom: 2px solid #ffa201;\n      transition: all 0.3s ease;\n    }\n    .nav-arrow.prev::after  { border-left: 2px solid #ffa201;  transform: rotate(45deg) translate(1px, -1px); }\n    .nav-arrow.next::after  { border-right: 2px solid #ffa201; transform: rotate(-45deg) translate(-1px, -1px); }\n    .nav-arrow:hover::after { border-color: #000; }\n\n    @media (max-width: 768px) {\n      .tech-banner { padding-bottom: 120%; }\n      .tech-banner .desktop-image { display: none; }\n      .tech-banner .mobile-image  { display: block; }\n      .tech-overlay { left: 6%; }\n      .tech-overlay h2 { font-size: 3rem; }\n      .tech-subtitle { font-size: 0.9rem; }\n      .show-more-btn { bottom: 20px; }\n      .down-arrow {\n        border-left: 10px solid transparent;\n        border-right: 10px solid transparent;\n        border-top: 14px solid #ffa201;\n      }\n\n      .tech-text-side {\n        grid-template-columns: 1fr;   /* stack */\n        gap: 24px;\n        padding: 32px 6%;\n      }\n      .tech-logo {\n        justify-self: start;          /* logo under the text on mobile */\n        width: 180px;\n        height: 180px;\n      }\n    }\n\n    @media (max-width: 480px) {\n      .tech-overlay h2 { font-size: 2rem; }\n      .tech-subtitle  { font-size: 0.75rem; }\n      .show-more-btn  { bottom: 15px; }\n      .down-arrow {\n        border-left: 8px solid transparent;\n        border-right: 8px solid transparent;\n        border-top: 12px solid #ffa201;\n      }\n      .show-more-text { font-size: 0.65rem; }\n    }\n\n    @media (prefers-reduced-motion: reduce) {\n      .tech-details, .show-more-btn, .nav-arrow { transition: none; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"tech-banner\">\n    <img \n      src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/outsole_tech.png?v=1759745908\" \n      alt=\"Outsole Technologies - Desktop\" \n      class=\"desktop-image\"\n    >\n    <img \n      src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/outsole_tech_r.png?v=1759745908\" \n      alt=\"Outsole Technologies - Mobile\" \n      class=\"mobile-image\"\n    >\n    <div class=\"tech-overlay\">\n      <h2>Outsole<br>Technologies</h2>\n      <p class=\"tech-subtitle\">Grip and traction</p>\n    </div>\n    <button class=\"show-more-btn\" id=\"showMoreBtn\" type=\"button\" aria-controls=\"techDetails\" aria-expanded=\"false\">\n      <div class=\"down-arrow\"></div>\n      <span class=\"show-more-text\">Show me more</span>\n    </button>\n  </div>\n\n  <div class=\"tech-details\" id=\"techDetails\">\n    <div class=\"tech-details-content\">\n      <div class=\"tech-slide active\" data-slide=\"0\">\n        <div class=\"tech-text-side\">\n          <div class=\"tech-content\">\n            <h4>Active Grip</h4>\n            <p>A non-marking rubber outsole engineered with a multidirectional traction pattern. It enhances grip on court surfaces, supporting quick cuts and directional changes with consistency.</p>\n            <div class=\"tech-navigation\">\n              <button class=\"nav-arrow prev\" aria-label=\"Previous\"></button>\n              <button class=\"nav-arrow next\" aria-label=\"Next\"></button>\n            </div>\n          </div>\n          <div class=\"tech-logo\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Asset_63_2x_817628e7-a3d0-4335-a836-b88b76c2a024.png?v=1759901059\" alt=\"Active Grip\">\n          </div>\n        </div>\n      </div>\n\n      <div class=\"tech-slide\" data-slide=\"1\">\n        <div class=\"tech-text-side\">\n          <div class=\"tech-content\">\n            <h4>Duragrip</h4>\n            <p>A premium outsole compound that builds on Active Grip with reinforced durability. It offers superior traction and extended resistance to wear, ensuring long-lasting performance under intense play.</p>\n            <div class=\"tech-navigation\">\n              <button class=\"nav-arrow prev\" aria-label=\"Previous\"></button>\n              <button class=\"nav-arrow next\" aria-label=\"Next\"></button>\n            </div>\n          </div>\n          <div class=\"tech-logo\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Asset_63_2x_817628e7-a3d0-4335-a836-b88b76c2a024.png?v=1759901059\" alt=\"Duragrip\">\n          </div>\n        </div>\n      </div>\n\n      <div class=\"tech-slide\" data-slide=\"2\">\n        <div class=\"tech-text-side\">\n          <div class=\"tech-content\">\n            <h4>TerraSpike Outsole</h4>\n            <p>A rugged outsole system designed to perform across varied surfaces. Its spike-inspired traction pattern penetrates the ground for superior grip, ensuring stability and control.</p>\n            <div class=\"tech-navigation\">\n              <button class=\"nav-arrow prev\" aria-label=\"Previous\"></button>\n              <button class=\"nav-arrow next\" aria-label=\"Next\"></button>\n            </div>\n          </div>\n          <div class=\"tech-logo\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Asset_63_2x_817628e7-a3d0-4335-a836-b88b76c2a024.png?v=1759901059\" alt=\"TerraSpike Outsole\">\n          </div>\n        </div>\n      </div>\n\n      <div class=\"tech-slide\" data-slide=\"3\">\n        <div class=\"tech-text-side\">\n          <div class=\"tech-content\">\n            <h4>TerraStrike Outsole</h4>\n            <p>An outsole with a scientifically optimized stud layout. Multi-directional patterns of varying heights maximize traction for acceleration, braking, and lateral cuts. High-durability rubber compounds ensure reliable grip on both natural and artificial surfaces.</p>\n            <div class=\"tech-navigation\">\n              <button class=\"nav-arrow prev\" aria-label=\"Previous\"></button>\n              <button class=\"nav-arrow next\" aria-label=\"Next\"></button>\n            </div>\n          </div>\n          <div class=\"tech-logo\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Asset_63_2x_817628e7-a3d0-4335-a836-b88b76c2a024.png?v=1759901059\" alt=\"TerraStrike Outsole\">\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <script>\n    const showMoreBtn   = document.getElementById('showMoreBtn');\n    const techBanner    = document.querySelector('.tech-banner');\n    const techDetails   = document.getElementById('techDetails');\n    const detailsInner  = techDetails.querySelector('.tech-details-content');\n    const btnText       = document.querySelector('.show-more-text');\n\n    let currentSlide = 0;\n    const slides = Array.from(document.querySelectorAll('.tech-slide'));\n    const totalSlides = slides.length;\n\n    // Expand/collapse with exact height (no big blank space)\n    function setDetailsHeight() {\n      techDetails.style.maxHeight = techDetails.classList.contains('active')\n        ? detailsInner.scrollHeight + 'px'\n        : '0px';\n    }\n    function openDetails() {\n      techDetails.classList.add('active');\n      showMoreBtn.classList.add('active');\n      showMoreBtn.setAttribute('aria-expanded', 'true');\n      btnText.textContent = 'Show me less';\n      setDetailsHeight();\n    }\n    function closeDetails() {\n      techDetails.classList.remove('active');\n      showMoreBtn.classList.remove('active');\n      showMoreBtn.setAttribute('aria-expanded', 'false');\n      btnText.textContent = 'Show me more';\n      setDetailsHeight();\n    }\n    function toggleDetails() {\n      if (techDetails.classList.contains('active')) closeDetails();\n      else openDetails();\n    }\n\n    // Clicking the banner toggles; stop bubbling from the button so it doesn't double-trigger\n    showMoreBtn.addEventListener('click', e => { e.stopPropagation(); toggleDetails(); });\n    techBanner.addEventListener('click', toggleDetails);\n\n    function changeSlide(direction) {\n      slides[currentSlide].classList.remove('active');\n      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;\n      slides[currentSlide].classList.add('active');\n      if (techDetails.classList.contains('active')) setDetailsHeight();\n    }\n\n    document.addEventListener('DOMContentLoaded', function() {\n      document.querySelectorAll('.nav-arrow.prev').forEach(btn => btn.addEventListener('click', e => {\n        e.stopPropagation(); changeSlide(-1);\n      }));\n      document.querySelectorAll('.nav-arrow.next').forEach(btn => btn.addEventListener('click', e => {\n        e.stopPropagation(); changeSlide(1);\n      }));\n    });\n\n    window.addEventListener('resize', () => {\n      if (techDetails.classList.contains('active')) setDetailsHeight();\n    });\n  </script>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_7GgNYz": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Upper Technologies Banner</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        .tech-banner {\n            position: relative;\n            width: 100%;\n            height: 0;\n            padding-bottom: 40%; /* Aspect ratio for desktop image */\n            overflow: hidden;\n            background-color: #f5f5f5;\n            cursor: pointer;\n        }\n\n        .tech-banner img {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n            display: block;\n        }\n\n        .tech-banner .mobile-image {\n            display: none;\n        }\n\n        .tech-overlay {\n            position: absolute;\n            top: 50%;\n            left: 8%;\n            transform: translateY(-50%);\n            z-index: 10;\n        }\n\n        .tech-overlay h2 {\n            color: #ffa201;\n            font-size: 6rem;\n            font-weight: 900;\n            text-transform: uppercase;\n            letter-spacing: 2px;\n            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n            margin: 0 0 8px 0;\n            line-height: 1.1;\n        }\n\n        .tech-subtitle {\n            color: #ffa201;\n            font-size: 1.2rem;\n            font-weight: 400;\n            margin: 0;\n            letter-spacing: 0.5px;\n            padding-left: 4px;\n        }\n\n        .show-more-btn {\n            position: absolute;\n            bottom: 30px;\n            left: 50%;\n            transform: translateX(-50%);\n            background: transparent;\n            border: none;\n            padding: 20px;\n            cursor: pointer;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            gap: 8px;\n            transition: all 0.3s ease;\n            z-index: 20;\n        }\n\n        .down-arrow {\n            width: 0;\n            height: 0;\n            border-left: 12px solid transparent;\n            border-right: 12px solid transparent;\n            border-top: 16px solid #ffa201;\n            transition: all 0.3s ease;\n        }\n\n        .tech-banner:hover .down-arrow {\n            border-top-color: #ff8c00;\n            transform: translateY(3px);\n        }\n\n        .show-more-btn.active .down-arrow {\n            transform: rotate(180deg);\n        }\n\n        .show-more-text {\n            color: #ffa201;\n            font-size: 0.85rem;\n            font-weight: 600;\n            letter-spacing: 1px;\n            text-transform: uppercase;\n            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);\n        }\n\n        .tech-details {\n            max-height: 0;\n            overflow: hidden;\n            transition: max-height 0.5s ease;\n            background: #000;\n            color: #fff;\n        }\n\n        .tech-details.active {\n            max-height: 2000px;\n        }\n\n        .tech-details-content {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            min-height: 350px;\n            width: 100%;\n        }\n\n        .tech-text-side {\n            background: #000;\n            padding: 60px 20px;\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n            text-align: center;\n            width: 100%;\n            margin: 0 auto;\n        }\n\n        .tech-logo {\n            width: 150px;\n            height: 150px;\n            margin-bottom: 30px;\n        }\n\n        .tech-logo img {\n            width: 100%;\n            height: 100%;\n            object-fit: contain;\n        }\n\n        .tech-text-side h4 {\n            font-size: 1.8rem;\n            font-weight: 700;\n            color: #ffa201;\n            margin-bottom: 15px;\n            text-transform: uppercase;\n            text-align: center;\n        }\n\n        .tech-text-side p {\n            font-size: 0.95rem;\n            line-height: 1.6;\n            color: #e0e0e0;\n            font-weight: 300;\n            margin: 0 auto 30px auto;\n            text-align: center;\n            max-width: 700px;\n        }\n\n        .tech-navigation {\n            display: flex;\n            gap: 20px;\n            margin-top: auto;\n            justify-content: center;\n        }\n\n        .nav-arrow {\n            width: 50px;\n            height: 50px;\n            background: transparent;\n            border: 2px solid #ffa201;\n            border-radius: 50%;\n            cursor: pointer;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            transition: all 0.3s ease;\n            position: relative;\n        }\n\n        .nav-arrow:hover {\n            background: #ffa201;\n            transform: scale(1.1);\n        }\n\n        .nav-arrow.prev::after {\n            content: '';\n            width: 10px;\n            height: 10px;\n            border-left: 2px solid #ffa201;\n            border-bottom: 2px solid #ffa201;\n            transform: rotate(45deg) translate(1px, -1px);\n            transition: all 0.3s ease;\n        }\n\n        .nav-arrow.next::after {\n            content: '';\n            width: 10px;\n            height: 10px;\n            border-right: 2px solid #ffa201;\n            border-bottom: 2px solid #ffa201;\n            transform: rotate(-45deg) translate(-1px, -1px);\n            transition: all 0.3s ease;\n        }\n\n        .nav-arrow:hover::after {\n            border-color: #000;\n        }\n\n        .tech-slide {\n            display: none;\n            width: 100%;\n        }\n\n        .tech-slide.active {\n            display: flex;\n            justify-content: center;\n            width: 100%;\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .tech-banner {\n                padding-bottom: 120%; /* Aspect ratio for mobile image */\n            }\n\n            .tech-banner .desktop-image {\n                display: none;\n            }\n\n            .tech-banner .mobile-image {\n                display: block;\n            }\n\n            .tech-overlay h2 {\n                font-size: 3rem;\n            }\n\n            .tech-subtitle {\n                font-size: 0.9rem;\n            }\n\n            .tech-overlay {\n                left: 6%;\n            }\n\n            .show-more-btn {\n                bottom: 20px;\n            }\n\n            .down-arrow {\n                border-left: 10px solid transparent;\n                border-right: 10px solid transparent;\n                border-top: 14px solid #ffa201;\n            }\n\n            .tech-text-side {\n                padding: 50px 30px;\n            }\n\n            .tech-logo {\n                width: 120px;\n                height: 120px;\n            }\n\n            .tech-text-side h4 {\n                font-size: 2rem;\n            }\n\n            .tech-text-side p {\n                font-size: 1rem;\n                margin-bottom: 40px;\n            }\n        }\n\n        @media (max-width: 480px) {\n            .tech-overlay h2 {\n                font-size: 2rem;\n            }\n\n            .tech-subtitle {\n                font-size: 0.75rem;\n            }\n\n            .show-more-btn {\n                bottom: 15px;\n            }\n\n            .down-arrow {\n                border-left: 8px solid transparent;\n                border-right: 8px solid transparent;\n                border-top: 12px solid #ffa201;\n            }\n\n            .show-more-text {\n                font-size: 0.65rem;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"tech-banner\">\n        <img \n            src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/upper_tech.png?v=1759744113\" \n            alt=\"Shoe Upper Technologies - Desktop\" \n            class=\"desktop-image\"\n        >\n        <img \n            src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/upper_tech_r.png?v=1759744113\" \n            alt=\"Shoe Upper Technologies - Mobile\" \n            class=\"mobile-image\"\n        >\n        <div class=\"tech-overlay\">\n            <h2>Upper<br>Technologies</h2>\n            <p class=\"tech-subtitle\">Agile support</p>\n        </div>\n        <button class=\"show-more-btn\" id=\"showMoreBtn\">\n            <div class=\"down-arrow\"></div>\n            <span class=\"show-more-text\">Show me more</span>\n        </button>\n    </div>\n\n    <div class=\"tech-details\" id=\"techDetails\">\n        <div class=\"tech-details-content\">\n            <div class=\"tech-slide active\" data-slide=\"0\">\n                <div class=\"tech-text-side\">\n                    <div class=\"tech-logo\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"Armor Mesh\">\n                    </div>\n                    <h4>Armor Mesh</h4>\n                    <p>A super-reinforced mesh construction designed to enhance the durability of the upper. It offers increased resistance to wear and tear, ensuring long-term performance.</p>\n                    <div class=\"tech-navigation\">\n                        <button class=\"nav-arrow prev\"></button>\n                        <button class=\"nav-arrow next\"></button>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"tech-slide\" data-slide=\"1\">\n                <div class=\"tech-text-side\">\n                    <div class=\"tech-logo\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"DuraCore\">\n                    </div>\n                    <h4>DuraCore</h4>\n                    <p>Abrasion-resistant material integrated into the toe area of the shoe formulated to withstand continuous scraping and contact with the court surface and high-friction zones.</p>\n                    <div class=\"tech-navigation\">\n                        <button class=\"nav-arrow prev\"></button>\n                        <button class=\"nav-arrow next\"></button>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"tech-slide\" data-slide=\"2\">\n                <div class=\"tech-text-side\">\n                    <div class=\"tech-logo\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"FirstTouch Pro\">\n                    </div>\n                    <h4>FirstTouch Pro</h4>\n                    <p>A dual-layer upper that blends natural leather texture with synthetic reinforcement zones. This design enhances tactile feedback while adding structural support and moisture control, ensuring consistent touch and reduced material stretch over time.</p>\n                    <div class=\"tech-navigation\">\n                        <button class=\"nav-arrow prev\"></button>\n                        <button class=\"nav-arrow next\"></button>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"tech-slide\" data-slide=\"3\">\n                <div class=\"tech-text-side\">\n                    <div class=\"tech-logo\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"ControlSkin\">\n                    </div>\n                    <h4>ControlSkin</h4>\n                    <p>A lightweight polymer upper reinforced with microfibers for strength-to-weight balance. Variable thickness zones provide flexibility where needed and stability at stress points, while maintaining a uniform fit.</p>\n                    <div class=\"tech-navigation\">\n                        <button class=\"nav-arrow prev\"></button>\n                        <button class=\"nav-arrow next\"></button>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"tech-slide\" data-slide=\"4\">\n                <div class=\"tech-text-side\">\n                    <div class=\"tech-logo\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"SkinTouch\">\n                    </div>\n                    <h4>SkinTouch</h4>\n                    <p>An advanced synthetic upper with specialised surface textures for superior grip and control. Its thin zones enhance ball feel and thicker areas offer protection alongside its moisture-wicking properties.</p>\n                    <div class=\"tech-navigation\">\n                        <button class=\"nav-arrow prev\"></button>\n                        <button class=\"nav-arrow next\"></button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <script>\n        const showMoreBtn = document.getElementById('showMoreBtn');\n        const techBanner = document.querySelector('.tech-banner');\n        const techDetails = document.getElementById('techDetails');\n        const btnText = document.querySelector('.show-more-text');\n        let currentSlide = 0;\n        const totalSlides = 5;\n\n        // Make entire banner clickable\n        techBanner.addEventListener('click', function() {\n            techDetails.classList.toggle('active');\n            showMoreBtn.classList.toggle('active');\n            \n            if (techDetails.classList.contains('active')) {\n                btnText.textContent = 'Show me less';\n            } else {\n                btnText.textContent = 'Show me more';\n            }\n        });\n\n        function changeSlide(direction) {\n            const slides = document.querySelectorAll('.tech-slide');\n            slides[currentSlide].classList.remove('active');\n            \n            currentSlide += direction;\n            \n            if (currentSlide >= totalSlides) {\n                currentSlide = 0;\n            } else if (currentSlide < 0) {\n                currentSlide = totalSlides - 1;\n            }\n            \n            slides[currentSlide].classList.add('active');\n        }\n\n        // Add event listeners to all navigation arrows\n        document.addEventListener('DOMContentLoaded', function() {\n            const prevButtons = document.querySelectorAll('.nav-arrow.prev');\n            const nextButtons = document.querySelectorAll('.nav-arrow.next');\n            \n            prevButtons.forEach(btn => {\n                btn.addEventListener('click', (e) => {\n                    e.stopPropagation();\n                    changeSlide(-1);\n                });\n            });\n            \n            nextButtons.forEach(btn => {\n                btn.addEventListener('click', (e) => {\n                    e.stopPropagation();\n                    changeSlide(1);\n                });\n            });\n        });\n    </script>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_nQqhCp": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Midsole Technologies Banner</title>\n  <style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    .tech-banner {\n      position: relative;\n      width: 100%;\n      height: 0;\n      padding-bottom: 40%; /* Aspect ratio for desktop image */\n      overflow: hidden;\n      background-color: #f5f5f5;\n      cursor: pointer;\n    }\n\n    .tech-banner img {\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n    }\n\n    .tech-banner .mobile-image {\n      display: none;\n    }\n\n    .tech-overlay {\n      position: absolute;\n      top: 50%;\n      left: 8%;\n      transform: translateY(-50%);\n      z-index: 10;\n    }\n\n    .tech-overlay h2 {\n      color: #ffa201;\n      font-size: 6rem;\n      font-weight: 900;\n      text-transform: uppercase;\n      letter-spacing: 2px;\n      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n      margin: 0 0 8px 0;\n      line-height: 1.1;\n    }\n\n    .tech-subtitle {\n      color: #ffa201;\n      font-size: 1.2rem;\n      font-weight: 400;\n      margin: 0;\n      letter-spacing: 0.5px;\n      padding-left: 4px;\n    }\n\n    .show-more-btn {\n      position: absolute;\n      bottom: 30px;\n      left: 50%;\n      transform: translateX(-50%);\n      background: transparent;\n      border: none;\n      padding: 20px;\n      cursor: pointer;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 8px;\n      transition: all 0.3s ease;\n      z-index: 20;\n    }\n\n    .down-arrow {\n      width: 0;\n      height: 0;\n      border-left: 12px solid transparent;\n      border-right: 12px solid transparent;\n      border-top: 16px solid #ffa201;\n      transition: all 0.3s ease;\n    }\n\n    .tech-banner:hover .down-arrow {\n      border-top-color: #ff8c00;\n      transform: translateY(3px);\n    }\n\n    .show-more-btn.active .down-arrow {\n      transform: rotate(180deg);\n    }\n\n    .show-more-text {\n      color: #ffa201;\n      font-size: 0.85rem;\n      font-weight: 600;\n      letter-spacing: 1px;\n      text-transform: uppercase;\n      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);\n    }\n\n    .tech-details {\n      max-height: 0;\n      overflow: hidden;\n      transition: max-height 0.5s ease;\n      background: #000;\n      color: #fff;\n    }\n\n    .tech-details.active {\n      max-height: 2000px;\n    }\n\n    .tech-details-content {\n      display: grid;\n      grid-template-columns: 1fr 1fr;\n      height: 350px;\n      overflow: hidden;\n    }\n\n    .tech-text-side {\n      background: #000;\n      padding: 40px 40px;\n      display: flex;\n      flex-direction: column;\n      justify-content: center;\n      position: relative;\n    }\n\n    .tech-logo {\n      width: 70px;\n      height: 70px;\n      margin-bottom: 20px;\n    }\n\n    .tech-logo img {\n      width: 100%;\n      height: 100%;\n      object-fit: contain;\n    }\n\n    .tech-text-side h4 {\n      font-size: 1.8rem;\n      font-weight: 700;\n      color: #ffa201;\n      margin-bottom: 15px;\n      text-transform: uppercase;\n    }\n\n    .tech-text-side p {\n      font-size: 0.95rem;\n      line-height: 1.6;\n      color: #e0e0e0;\n      font-weight: 300;\n      margin-bottom: 30px;\n    }\n\n    .tech-navigation {\n      display: flex;\n      gap: 20px;\n      margin-top: auto;\n      justify-content: center;\n    }\n\n    .nav-arrow {\n      width: 50px;\n      height: 50px;\n      background: transparent;\n      border: 2px solid #ffa201;\n      border-radius: 50%;\n      cursor: pointer;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      transition: all 0.3s ease;\n      position: relative;\n    }\n\n    .nav-arrow:hover {\n      background: #ffa201;\n      transform: scale(1.1);\n    }\n\n    .nav-arrow.prev::after {\n      content: '';\n      width: 10px;\n      height: 10px;\n      border-left: 2px solid #ffa201;\n      border-bottom: 2px solid #ffa201;\n      transform: rotate(45deg) translate(1px, -1px);\n      transition: all 0.3s ease;\n    }\n\n    .nav-arrow.next::after {\n      content: '';\n      width: 10px;\n      height: 10px;\n      border-right: 2px solid #ffa201;\n      border-bottom: 2px solid #ffa201;\n      transform: rotate(-45deg) translate(-1px, -1px);\n      transition: all 0.3s ease;\n    }\n\n    .nav-arrow:hover::after {\n      border-color: #000;\n    }\n\n    .tech-image-side {\n      background: #fff;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      overflow: hidden;\n      padding: 0;\n    }\n\n    .tech-image-side img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      object-position: center center;\n    }\n\n    .tech-slide {\n      display: none;\n    }\n\n    .tech-slide.active {\n      display: contents;\n    }\n\n    /* Mobile styles */\n    @media (max-width: 768px) {\n      .tech-banner {\n        padding-bottom: 120%; /* Aspect ratio for mobile image */\n      }\n\n      .tech-banner .desktop-image {\n        display: none;\n      }\n\n      .tech-banner .mobile-image {\n        display: block;\n      }\n\n      .tech-overlay h2 {\n        font-size: 3rem;\n      }\n\n      .tech-subtitle {\n        font-size: 0.9rem;\n      }\n\n      .tech-overlay {\n        left: 6%;\n      }\n\n      .show-more-btn {\n        bottom: 20px;\n      }\n\n      .down-arrow {\n        border-left: 10px solid transparent;\n        border-right: 10px solid transparent;\n        border-top: 14px solid #ffa201;\n      }\n\n      .tech-details-content {\n        grid-template-columns: 1fr;\n        min-height: auto;\n        height: auto;\n      }\n\n      .tech-text-side {\n        padding: 50px 30px;\n      }\n\n      .tech-logo {\n        width: 100px;\n        height: 100px;\n      }\n\n      .tech-text-side h4 {\n        font-size: 2rem;\n      }\n\n      .tech-text-side p {\n        font-size: 1rem;\n        margin-bottom: 40px;\n      }\n\n      .tech-image-side {\n        display: none;\n      }\n\n      .tech-text-side {\n        order: 0;\n      }\n    }\n\n    @media (max-width: 480px) {\n      .tech-overlay h2 {\n        font-size: 2rem;\n      }\n\n      .tech-subtitle {\n        font-size: 0.75rem;\n      }\n\n      .show-more-btn {\n        bottom: 15px;\n      }\n\n      .down-arrow {\n        border-left: 8px solid transparent;\n        border-right: 8px solid transparent;\n        border-top: 12px solid #ffa201;\n      }\n\n      .show-more-text {\n        font-size: 0.65rem;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"tech-banner\">\n    <img \n      src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/1_midsole_tech.png?v=1759745699\" \n      alt=\"Midsole Technologies - Desktop\" \n      class=\"desktop-image\"\n    >\n    <img \n      src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/1_midsole_tech_r.png?v=1759745699\" \n      alt=\"Midsole Technologies - Mobile\" \n      class=\"mobile-image\"\n    >\n    <div class=\"tech-overlay\">\n      <h2>Midsole<br>Technologies</h2>\n      <p class=\"tech-subtitle\">Performance cushioning</p>\n    </div>\n    <button class=\"show-more-btn\" id=\"showMoreBtn\">\n      <div class=\"down-arrow\"></div>\n      <span class=\"show-more-text\">Show me more</span>\n    </button>\n  </div>\n\n  <div class=\"tech-details\" id=\"techDetails\">\n    <div class=\"tech-details-content\">\n      <div class=\"tech-slide active\" data-slide=\"0\">\n        <div class=\"tech-text-side\">\n          <div class=\"tech-logo\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"HexaFoam\">\n          </div>\n          <h4>HexaFoam</h4>\n          <p>A phylon-based cushioning system designed to absorb impact during landings and return energy. It delivers consistent comfort while reducing stress on the joints, ensuring responsive movement.</p>\n          <div class=\"tech-navigation\">\n            <button class=\"nav-arrow prev\"></button>\n            <button class=\"nav-arrow next\"></button>\n          </div>\n        </div>\n        <div class=\"tech-image-side\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/A_1.jpg?v=1759569135\" alt=\"HexaFoam Technology\">\n        </div>\n      </div>\n\n      <div class=\"tech-slide\" data-slide=\"1\">\n        <div class=\"tech-text-side\">\n          <div class=\"tech-logo\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"BounceCore Midsole\">\n          </div>\n          <h4>BounceCore Midsole</h4>\n          <p>A high-resilience foam engineered for sink-in comfort and powerful rebound. It compresses smoothly on impact to soften landings, then springs back with energy return that propels every step forward.</p>\n          <div class=\"tech-navigation\">\n            <button class=\"nav-arrow prev\"></button>\n            <button class=\"nav-arrow next\"></button>\n          </div>\n        </div>\n        <div class=\"tech-image-side\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/A_2.jpg?v=1759569279\" alt=\"BounceCore Midsole Technology\">\n        </div>\n      </div>\n\n      <div class=\"tech-slide\" data-slide=\"2\">\n        <div class=\"tech-text-side\">\n          <div class=\"tech-logo\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/Coolcast.png?v=1759295905\" alt=\"ThrustFoam\">\n          </div>\n          <h4>ThrustFoam</h4>\n          <p>A supercritical foam compound created through a high-pressure nitrogen infusion process. It compresses deeply under load and rebounds instantly, delivering exceptional energy return.</p>\n          <div class=\"tech-navigation\">\n            <button class=\"nav-arrow prev\"></button>\n            <button class=\"nav-arrow next\"></button>\n          </div>\n        </div>\n        <div class=\"tech-image-side\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0742/6336/3817/files/A_3.jpg?v=1759569280\" alt=\"ThrustFoam Technology\">\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <script>\n    const showMoreBtn = document.getElementById('showMoreBtn');\n    const techBanner = document.querySelector('.tech-banner');\n    const techDetails = document.getElementById('techDetails');\n    const btnText = document.querySelector('.show-more-text');\n    let currentSlide = 0;\n    const totalSlides = 3;\n\n    // Make entire banner clickable\n    techBanner.addEventListener('click', function() {\n      techDetails.classList.toggle('active');\n      showMoreBtn.classList.toggle('active');\n      \n      if (techDetails.classList.contains('active')) {\n        btnText.textContent = 'Show me less';\n      } else {\n        btnText.textContent = 'Show me more';\n      }\n    });\n\n    function changeSlide(direction) {\n      const slides = document.querySelectorAll('.tech-slide');\n      slides[currentSlide].classList.remove('active');\n      \n      currentSlide += direction;\n      \n      if (currentSlide >= totalSlides) {\n        currentSlide = 0;\n      } else if (currentSlide < 0) {\n        currentSlide = totalSlides - 1;\n      }\n      \n      slides[currentSlide].classList.add('active');\n    }\n\n    document.addEventListener('DOMContentLoaded', function() {\n      const prevButtons = document.querySelectorAll('.nav-arrow.prev');\n      const nextButtons = document.querySelectorAll('.nav-arrow.next');\n      \n      prevButtons.forEach(btn => {\n        btn.addEventListener('click', () => changeSlide(-1));\n      });\n      \n      nextButtons.forEach(btn => {\n        btn.addEventListener('click', () => changeSlide(1));\n      });\n    });\n  </script>\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_JFJCpF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hero\">\n  <h1 class=\"headline\">Badminton Rackets Technology</h1>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 4
+      }
+    },
+    "custom_liquid_mAWGYy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n   In a high-performance <span>badminton racket</span>, the technical details dictate the outcome. At <span style=\"color: #ffa300\">HNDRD</span>, we analyze the subtle variables—<span>torsional stability</span>, <span>frame geometry</span>, and <span>carbon fiber density</span>—to optimize on-court response. This ensures the racket <span>maintains structural integrity</span> under extreme load while providing consistent tactile feedback.\n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 0rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.9rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 0rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_video_component_wUHCPj": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Comp 1_1.mp4",
+        "mobile_video": "shopify://files/videos/Comp 1_1.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_NUGKgT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UmeUpK": {
+          "type": "heading",
+          "settings": {
+            "heading": "VAPORSHAFT 6.1MM",
+            "heading_size": "h1"
+          }
+        },
+        "text_BwkBPP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shaft engineering at its finest. It cuts drag, loads quicker, and delivers a powerful whip.<br/><br/>Used in Nitrix, Flareon Series</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UmeUpK",
+        "text_BwkBPP"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/vaporshaft.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_rVptja": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QgqpaD": {
+          "type": "heading",
+          "settings": {
+            "heading": "CNTRL FOAM",
+            "heading_size": "h1"
+          }
+        },
+        "text_LDVwtU": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>A layer of foam inserted in the frame that absorbs shock and neutralises vibration, giving your shots a cleaner feel and sharper control.<br/><br/>Used in Nitrix, Flareon Series</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QgqpaD",
+        "text_LDVwtU"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/cntrlfoam.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_mjmraw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JQywUk": {
+          "type": "heading",
+          "settings": {
+            "heading": "M46X CARBON FIBER",
+            "heading_size": "h1"
+          }
+        },
+        "text_hCUFgz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Used in aerospace-grade applications, this carbon material delivers superior repulsion and structural strength on high-intensity shots.<br/><br/>Used in Nitrix, Flareon Series</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JQywUk",
+        "text_hCUFgz"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/m46x.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_fNzb7W": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dkTTpp": {
+          "type": "heading",
+          "settings": {
+            "heading": "CURVE² FRAME GEOMETRY",
+            "heading_size": "h1"
+          }
+        },
+        "text_tpQ9Ua": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An advanced frame geometry designed to enlarge the sweet spot. It enhances forgiveness on off-center hits while maintaining stability and shot precision.<br/><br/>Used in Nitrix, Flareon Series</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dkTTpp",
+        "text_tpQ9Ua"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/curve.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_EDQWB3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fHVbbe": {
+          "type": "heading",
+          "settings": {
+            "heading": "AECG+",
+            "heading_size": "h1"
+          }
+        },
+        "text_tJx7BX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The frame’s core is strengthened with carbon graphite, giving it high structural integrity and a sharp recoil ability.<br/><br/>Used in Nitrix, Flareon Series</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fHVbbe",
+        "text_tJx7BX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/aecg.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_QYdpnB",
+    "custom_liquid_7GgNYz",
+    "custom_liquid_nQqhCp",
+    "custom_liquid_JFJCpF",
+    "custom_liquid_mAWGYy",
+    "hero_video_component_wUHCPj",
+    "image_with_text_NUGKgT",
+    "image_with_text_rVptja",
+    "image_with_text_mjmraw",
+    "image_with_text_fNzb7W",
+    "image_with_text_EDQWB3"
+  ]
+}
