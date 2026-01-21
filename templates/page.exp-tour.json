@@ -63,6 +63,47 @@
         "padding_bottom": 44
       }
     },
+    "multirow_RFTCVa": {
+      "type": "multirow",
+      "blocks": {
+        "row_jgyg4n": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Comp_1_1.gif",
+            "caption": "",
+            "heading": "<strong>Event </strong>Schedule",
+            "text": "<h4><strong>Saturday, 31st January 2026</strong><br/><br/>Set Point Badminton Academy<br/>(10:00 AM - 12:00 PM) - <a href=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\" target=\"_blank\" title=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\">View Location↗️</a><br/><br/>Smashbounce Korattur Badminton Academy<br/>(6:00 PM - 8:00PM) - <a href=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\" title=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\">View Location↗️</a><br/><br/><strong>Sunday , 1st February 2026</strong><br/><br/>Blaze Badminton Academy,<br/>(10:00 AM - 12:00 PM) <a href=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\" target=\"_blank\" title=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\">View Location↗️</a></h4>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_jgyg4n"
+      ],
+      "custom_css": [
+        "a {color: orange;}",
+        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "strong {color: #fd524e;}",
+        "@media screen and (min-width: 750px) {h2 {font-size: 5rem; } h4 {font-size: 2rem; }}"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "row_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
     "image_with_text_UxtnK3": {
       "type": "image-with-text",
       "blocks": {
@@ -85,12 +126,13 @@
         "heading_D6QCdV",
         "text_DTVHwA"
       ],
+      "disabled": true,
       "custom_css": [
         "a {color: orange;}",
         "img {padding: 0 20px;}",
         "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
         "strong {color: #fd524e;}",
-        "@media screen and (min-width: 750px) {h2 {font-size: 5rem; } h4{font-size: 2rem; }}"
+        "@media screen and (min-width: 750px) {h2 {font-size: 5rem; } h4 {font-size: 2rem; }}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -296,6 +338,7 @@
     "hero_component_3mFtqf",
     "custom_liquid_LqDdTM",
     "custom_liquid_wEr9EG",
+    "multirow_RFTCVa",
     "image_with_text_UxtnK3",
     "rich_text_YUaPWT",
     "1757582427791457ea",
