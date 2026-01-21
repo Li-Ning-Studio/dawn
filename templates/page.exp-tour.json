@@ -17,6 +17,16 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_dF4Kan": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_3mFtqf": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -33,20 +43,41 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_LqDdTM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\">Hundred's Official India Tour</h2>\n  <h2 class=\"second-title\"> is coming to Chennai!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.5rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_wEr9EG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n  <p class=\"longcopy\">\n   Get ready to experience our <span class=\"highlight\">Professional Rackets</span> like never before! <br> Join us for <span class=\"highlight\">Hundred's India Tour</span> and be a part of the action.\n  </p>\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 12,
+        "padding_bottom": 44
+      }
+    },
     "rich_text_Wnq4h9": {
       "type": "rich-text",
       "blocks": {
         "heading_9HTmaM": {
           "type": "heading",
+          "disabled": true,
           "settings": {
-            "heading": "Hundred's Official India Tour is coming to Chennai!",
+            "heading": "Hundred's <strong>Official India Tour</strong> is coming to <strong>Chennai!</strong>",
             "heading_size": "h1"
           }
         },
         "text_qP7bmt": {
           "type": "text",
           "settings": {
-            "text": "<p>Get ready to experience our Professional Rackets like never before!<br/>Join us for Hundred's India Tour and be a part of the action.</p>"
+            "text": "<p>Get ready to experience our <strong>Professional Rackets</strong> like never before!<br/>Join us for<strong> Hundred's India Tour</strong> and be a part of the action.</p>"
           }
         },
         "button_DTBMjN": {
@@ -66,13 +97,68 @@
         "text_qP7bmt",
         "button_DTBMjN"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "full_width": true,
-        "padding_top": 24,
+        "padding_top": 32,
+        "padding_bottom": 48
+      }
+    },
+    "image_with_text_UxtnK3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D6QCdV": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Event </strong>Schedule",
+            "heading_size": "h1"
+          }
+        },
+        "text_DTVHwA": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Saturday, 31st January 2026</strong></h3><p><strong>📍Set Point Badminton Academy - </strong><a href=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\" target=\"_blank\" title=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\"><strong>View Location </strong>↗️</a></p><p><strong>🕘 10:00 AM - 12:00 PM</strong></p><p><strong>📍Smashbounce Korattur Badminton Academy - </strong><a href=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\" target=\"_blank\" title=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\"><strong>View Location</strong>↗️</a></p><p><strong>🕔 6:00 PM - 8:00 PM</strong></p><h3><strong>Sunday , 1st Febraury 2026</strong></h3><p><strong>📍 Blaze Badminton Academy, </strong><a href=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\" target=\"_blank\" title=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\"><strong>View Location</strong>↗️</a></p><p><strong>🕔 10:00 AM - 12:00 PM</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_D6QCdV",
+        "text_DTVHwA"
+      ],
+      "custom_css": [
+        "a {color: orange;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Artboard_2_05a69494-985e-4e9f-868d-5423b550f98f.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_YUaPWT": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-d27ab943-fb87-45cd-880f-d5fa2e3a3ca4",
+        "full_width": true,
+        "padding_top": 4,
         "padding_bottom": 0
       }
     },
@@ -109,11 +195,12 @@
         "text_4qGkTj",
         "button_BTFzmV"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -126,9 +213,9 @@
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
             "form_id": "836035",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background_color": "#ffa300",
+            "button_label_color": "#000000",
             "links_color": "#1878b9",
             "errors_color": "#e02229",
             "text_alignment": "center",
@@ -143,6 +230,7 @@
       "block_order": [
         "forms_inline_YgrnmV"
       ],
+      "custom_css": [],
       "settings": {
         "include_margins": true
       }
@@ -184,6 +272,7 @@
         "column_giUp8E",
         "column_Vbb4kx"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -201,15 +290,64 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_ywGM93": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bKfjRY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Your Tour Benefits At a Glance",
+            "icon": "star",
+            "row_content": "<p>🎯 What's in Store for You</p><p>✅ Free Equipment Trials - Experience our latest high-performance rackets at no cost</p><p>🎁 Exclusive Rewards - Unlock special offers and limited-time coupon codes</p><p>🏆 Competitive Fun - Participate in on-court challenges and win exciting prizes</p><p>🤝 Network & Connect - Meet professional players and fellow badminton enthusiasts</p><p>💬 Meet the Team - Connect with Hundred experts and discover what makes our gear elite</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HhrpyN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Terms and Conditions",
+            "icon": "clipboard",
+            "row_content": "<p>By attending the Hundred Experience Tour, you agree that:</p><ul><li>Your participation was voluntary and you were responsible for your own safety.</li><li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li><li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li><li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li><li>Event details and activities may have been subject to change at the organizers' discretion.</li><li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li><li>Non Marking Shoes are not provided by us during the event. Please bring your own.</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bKfjRY",
+        "collapsible_row_HhrpyN"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-3",
+        "color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/HNDRD_2_2.png",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
+    "custom_liquid_dF4Kan",
     "hero_component_3mFtqf",
+    "custom_liquid_LqDdTM",
+    "custom_liquid_wEr9EG",
     "rich_text_Wnq4h9",
+    "image_with_text_UxtnK3",
+    "rich_text_YUaPWT",
     "rich_text_9km999",
     "1757582427791457ea",
     "custom_liquid_ktVR8J",
-    "multicolumn_x6tDr7"
+    "multicolumn_x6tDr7",
+    "collapsible_content_ywGM93"
   ]
 }
