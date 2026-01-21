@@ -21,7 +21,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n</style>",
+        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -57,9 +57,9 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n  <p class=\"longcopy\">\n   Get ready to experience our <span class=\"highlight\">Professional Rackets</span> like never before! <br> Join us for <span class=\"highlight\">Hundred's India Tour</span> and be a part of the action.\n  </p>\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n  <p class=\"longcopy\">\n   Get ready to experience our <span class=\"highlight\">Professional Rackets</span> like never before! <br> Join us for <span class=\"highlight\">Hundred's India Tour</span> and be a part of the action.\n  </p>\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 30px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 12,
+        "padding_top": 28,
         "padding_bottom": 44
       }
     },
@@ -76,7 +76,7 @@
         "text_DTVHwA": {
           "type": "text",
           "settings": {
-            "text": "<h2><strong>Saturday, 31st January 2026</strong></h2><h4><strong>📍Set Point Badminton Academy - </strong><a href=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\" target=\"_blank\" title=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\"><strong>View Location ↗️</strong></a></h4><h4><strong>🕘 10:00 AM - 12:00 PM</strong></h4><h4><strong>📍Smashbounce Korattur Badminton Academy - </strong><a href=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\" target=\"_blank\" title=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\"><strong>View Location↗️</strong></a></h4><h4><strong>🕔 6:00 PM - 8:00 PM</strong></h4><h3><strong>Sunday , 1st Febraury 2026</strong></h3><h4><strong>📍 Blaze Badminton Academy, </strong><a href=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\" target=\"_blank\" title=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\"><strong>View Location↗️</strong></a></h4><h4><strong>🕔 10:00 AM - 12:00 PM</strong></h4>",
+            "text": "<h3><strong>Saturday, 31st January 2026</strong></h3><h4><strong>📍Set Point Badminton Academy - </strong><a href=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\" target=\"_blank\" title=\"https://maps.app.goo.gl/Ej9GgbdT2RsgSVRBA\"><strong>View Location ↗️</strong></a></h4><h4><strong>🕘 10:00 AM - 12:00 PM</strong></h4><h4><strong>📍Smashbounce Korattur Badminton Academy - </strong><a href=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\" target=\"_blank\" title=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\"><strong>View Location↗️</strong></a></h4><h4><strong>🕔 6:00 PM - 8:00 PM</strong></h4><h3><strong>Sunday , 1st February 2026</strong></h3><h4><strong>📍 Blaze Badminton Academy, </strong><a href=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\" target=\"_blank\" title=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\"><strong>View Location↗️</strong></a></h4><h4><strong>🕔 10:00 AM - 12:00 PM</strong></h4>",
             "text_style": "body"
           }
         }
@@ -86,13 +86,15 @@
         "text_DTVHwA"
       ],
       "custom_css": [
-        "a {color: orange;}"
+        "a {color: orange;}",
+        "img {padding: 0 20px;}",
+        "h2 {letter-spacing: -1px; font-size: 3rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Artboard_2_05a69494-985e-4e9f-868d-5423b550f98f.jpg",
+        "image": "shopify://shop_images/Comp_1_1.gif",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
@@ -217,7 +219,7 @@
           "settings": {
             "heading": "Can I purchase rackets at the venue?",
             "icon": "price_tag",
-            "row_content": "<p>Selected products may be available for <strong>exclusive event offers</strong>.<br/><br/>Our team will also guide you on <strong>where to purchase online or in-store</strong>.</p>",
+            "row_content": "<p>Selected products may be available for <strong>exclusive event offers</strong>.<br/>Our team will also guide you on <strong>where to purchase online or in-store</strong>.</p>",
             "page": ""
           }
         },
@@ -262,14 +264,27 @@
     "media_ntbC3h": {
       "type": "media",
       "custom_css": [
-        "img {width: 60%; margin: 0 auto;}"
+        "img {width: 80%; margin: 0 auto;}",
+        "@media screen and (min-width: 750px) {img {width: 50%; margin: 0 auto; }}"
       ],
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/HNDRD_2_2.png",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 36,
-        "padding_bottom": 44
+        "padding_bottom": 84
+      }
+    },
+    "rich_text_HD493f": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 0
       }
     }
   },
@@ -283,6 +298,7 @@
     "rich_text_YUaPWT",
     "1757582427791457ea",
     "collapsible_content_ywGM93",
-    "media_ntbC3h"
+    "media_ntbC3h",
+    "rich_text_HD493f"
   ]
 }
