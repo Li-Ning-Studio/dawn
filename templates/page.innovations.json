@@ -54,10 +54,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n    Get to know the  <span>technologies</span> that power <span style=\"color: #ffa300\">HNDRD</span> Performance Badminton Rackets\n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 5rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.9rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 6rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n   In a high-performance <span>badminton racket</span>, the technical details dictate the outcome. At <span style=\"color: #ffa300\">HNDRD</span>, we analyze the subtle variables—<span>torsional stability</span>, <span>frame geometry</span>, and <span>carbon fiber density</span>—to optimize on-court response. This ensures the racket <span>maintains structural integrity</span> under extreme load while providing consistent tactile feedback.\n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 5rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.9rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 6rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 32,
+        "padding_bottom": 28
       }
     },
     "hero_video_component_wUHCPj": {
@@ -115,31 +115,31 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_fNzb7W": {
+    "image_with_text_rVptja": {
       "type": "image-with-text",
       "blocks": {
-        "heading_dkTTpp": {
+        "heading_QgqpaD": {
           "type": "heading",
           "settings": {
-            "heading": "CURVE² FRAME GEOMETRY",
+            "heading": "CNTRL FOAM",
             "heading_size": "h1"
           }
         },
-        "text_tpQ9Ua": {
+        "text_LDVwtU": {
           "type": "text",
           "settings": {
-            "text": "<p>An advanced frame geometry designed to enlarge the sweet spot. It enhances forgiveness on off-center hits while maintaining stability and shot precision.<br/><br/>Used in Nitrix, Flareon Series</p>",
+            "text": "<p><br/>A layer of foam inserted in the frame that absorbs shock and neutralises vibration, giving your shots a cleaner feel and sharper control.<br/><br/>Used in Nitrix, Flareon Series</p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_dkTTpp",
-        "text_tpQ9Ua"
+        "heading_QgqpaD",
+        "text_LDVwtU"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/curve.webp",
+        "image": "shopify://shop_images/cntrlfoam.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -193,31 +193,31 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_rVptja": {
+    "image_with_text_fNzb7W": {
       "type": "image-with-text",
       "blocks": {
-        "heading_QgqpaD": {
+        "heading_dkTTpp": {
           "type": "heading",
           "settings": {
-            "heading": "CNTRL FOAM",
+            "heading": "CURVE² FRAME GEOMETRY",
             "heading_size": "h1"
           }
         },
-        "text_LDVwtU": {
+        "text_tpQ9Ua": {
           "type": "text",
           "settings": {
-            "text": "<p><br/>A layer of foam inserted in the frame that absorbs shock and neutralises vibration, giving your shots a cleaner feel and sharper control.<br/><br/>Used in Nitrix, Flareon Series</p>",
+            "text": "<p>An advanced frame geometry designed to enlarge the sweet spot. It enhances forgiveness on off-center hits while maintaining stability and shot precision.<br/><br/>Used in Nitrix, Flareon Series</p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_QgqpaD",
-        "text_LDVwtU"
+        "heading_dkTTpp",
+        "text_tpQ9Ua"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/cntrlfoam.webp",
+        "image": "shopify://shop_images/curve.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
