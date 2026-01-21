@@ -17,14 +17,24 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_daJXwB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hero\">\n  <h1 class=\"headline\">About HNDRD</h1>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_KxBBLi": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n    Born in <span>Singapore</span>, <span style=\"color: #ffa300\">HNDRD</span> is a team spread out all over the <span>world</span> focused on <span>design,  manufacturing and availability</span> of <span>high performance</span> sports footwear, equipment,  apparel and accessories for <span>Athletes</span> of every level. \n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 5rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.9rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 6rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n    Born in <span>Singapore</span>, <span style=\"color: #ffa300\">HNDRD</span> is a team spread out all over the <span>world</span> focused on <span>design,  manufacturing and availability</span> of <span>high performance</span> sports footwear, equipment,  apparel and accessories for <span>Athletes</span> of every level. \n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 0rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.9rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 0rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 40,
-        "padding_bottom": 20
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "hero_video_component_LzQQHy": {
@@ -98,6 +108,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_daJXwB",
     "custom_liquid_KxBBLi",
     "hero_video_component_LzQQHy",
     "custom_liquid_UCmg7b",
