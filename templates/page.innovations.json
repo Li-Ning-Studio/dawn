@@ -50,14 +50,24 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_JFJCpF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hero\">\n  <h1 class=\"headline\">Racket Technology</h1>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 60,
+        "padding_bottom": 4
+      }
+    },
     "custom_liquid_mAWGYy": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n   In a high-performance <span>badminton racket</span>, the technical details dictate the outcome. At <span style=\"color: #ffa300\">HNDRD</span>, we analyze the subtle variables—<span>torsional stability</span>, <span>frame geometry</span>, and <span>carbon fiber density</span>—to optimize on-court response. This ensures the racket <span>maintains structural integrity</span> under extreme load while providing consistent tactile feedback.\n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 5rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.9rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 6rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n   In a high-performance <span>badminton racket</span>, the technical details dictate the outcome. At <span style=\"color: #ffa300\">HNDRD</span>, we analyze the subtle variables—<span>torsional stability</span>, <span>frame geometry</span>, and <span>carbon fiber density</span>—to optimize on-court response. This ensures the racket <span>maintains structural integrity</span> under extreme load while providing consistent tactile feedback.\n  </p>\n\n</section>\n\n<style>\n.hero {\n  background: black;\n  color: #888;\n  text-align: left;\n  padding: 0rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.9rem;\n  font-weight: 800;\n  line-height: 1.45;\n  letter-spacing: -0.7px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 0rem 2rem;\n  }\n  .hero .headline {\n    font-size: 2.3rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 32,
-        "padding_bottom": 28
+        "padding_top": 44,
+        "padding_bottom": 52
       }
     },
     "hero_video_component_wUHCPj": {
@@ -277,6 +287,7 @@
     "custom_liquid_QYdpnB",
     "custom_liquid_7GgNYz",
     "custom_liquid_nQqhCp",
+    "custom_liquid_JFJCpF",
     "custom_liquid_mAWGYy",
     "hero_video_component_wUHCPj",
     "image_with_text_NUGKgT",
