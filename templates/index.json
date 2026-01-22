@@ -186,16 +186,6 @@
             "link": "shopify://collections/badminton"
           }
         },
-        "column_LRg4XV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/2_732355bc-d9ff-4da7-ae47-1c82fcdb3d0d.png",
-            "title": "",
-            "text": "",
-            "link_label": "Pickle Ball",
-            "link": "shopify://collections/pickleball"
-          }
-        },
         "column_G9P7AL": {
           "type": "column",
           "settings": {
@@ -215,13 +205,23 @@
             "link_label": "Tennis",
             "link": "shopify://collections/tennis"
           }
+        },
+        "column_LRg4XV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_732355bc-d9ff-4da7-ae47-1c82fcdb3d0d.png",
+            "title": "",
+            "text": "",
+            "link_label": "Pickle Ball",
+            "link": "shopify://collections/pickleball"
+          }
         }
       },
       "block_order": [
         "column_KCbqgd",
-        "column_LRg4XV",
         "column_G9P7AL",
-        "column_p4C4JV"
+        "column_p4C4JV",
+        "column_LRg4XV"
       ],
       "disabled": true,
       "custom_css": [
