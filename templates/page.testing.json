@@ -15,9 +15,88 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_ERRmUz": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HyXpP7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_8913ab5b-0fe1-4bc9-a55b-4f1a83149295.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Badminton",
+            "link": ""
+          }
+        },
+        "column_MEL9xP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_732355bc-d9ff-4da7-ae47-1c82fcdb3d0d.png",
+            "title": "",
+            "text": "",
+            "link_label": "Pickle Ball",
+            "link": ""
+          }
+        },
+        "column_ctmpq3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_9347f179-06f3-4327-9513-2cacf9566305.png",
+            "title": "",
+            "text": "",
+            "link_label": "Cricket",
+            "link": ""
+          }
+        },
+        "column_f8XbDq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_bbe833b1-25d9-4444-9d75-c49de596375c.png",
+            "title": "",
+            "text": "",
+            "link_label": "Tennis",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HyXpP7",
+        "column_MEL9xP",
+        "column_ctmpq3",
+        "column_f8XbDq"
+      ],
+      "custom_css": [
+        ".multicolumn-card__image-wrapper {margin: 0; padding: 0;}",
+        ".multicolumn-card__info {position: absolute; z-index: 3; bottom: 10px; left: 40px;}",
+        "p,h3,span {color: white;}",
+        "span {background: white; color: black; border-radius: 30px; padding: 5px 20px;}",
+        ".svg-wrapper {display: none;}",
+        ".page-width {margin: 0px; padding: 0px; width: 97vw;}",
+        "ul {width: 100vw; row-gap: 0px; column-gap: 0px; border-radius: 0px; padding: 0px;}",
+        ".media,ul > li {border-radius: 0px !important;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multicolumn_ERRmUz"
   ]
 }
