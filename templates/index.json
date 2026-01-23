@@ -170,7 +170,7 @@
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 16,
-        "padding_bottom": 16
+        "padding_bottom": 36
       }
     },
     "multicolumn_AmKzdE": {
@@ -189,7 +189,7 @@
         "column_G9P7AL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/3_9347f179-06f3-4327-9513-2cacf9566305.png",
+            "image": "shopify://shop_images/5_68fb8ec7-e47f-4142-a315-39d116ba5bf2.jpg",
             "title": "",
             "text": "",
             "link_label": "Cricket",
@@ -212,7 +212,7 @@
             "image": "shopify://shop_images/2_732355bc-d9ff-4da7-ae47-1c82fcdb3d0d.png",
             "title": "",
             "text": "",
-            "link_label": "Pickle Ball",
+            "link_label": "Pickleball",
             "link": "shopify://collections/pickleball"
           }
         }
@@ -223,10 +223,9 @@
         "column_p4C4JV",
         "column_LRg4XV"
       ],
-      "disabled": true,
       "custom_css": [
         ".multicolumn-card__image-wrapper {margin: 0; padding: 0;}",
-        ".multicolumn-card__info {position: absolute; z-index: 3; bottom: 5px; left: 20px;}",
+        ".multicolumn-card__info {position: absolute; z-index: 3; bottom: 5px; left: 10%;}",
         "p,h3,span {color: white;}",
         "span {background: white; color: black; border-radius: 30px; padding: 5px 20px; font-weight: 500; font-size: 20px;}",
         ".svg-wrapper {display: none;}",
@@ -249,8 +248,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 68,
+        "padding_bottom": 64
       }
     },
     "multicolumn_g43TFV": {
@@ -303,6 +302,7 @@
         "column_GRfnWJ",
         "column_bY39th"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "<strong>SHOP BY SPORTS</strong>",
@@ -385,7 +385,7 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
+        "padding_top": 56,
         "padding_bottom": 36
       }
     },
