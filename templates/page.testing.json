@@ -22,27 +22,17 @@
         "column_HyXpP7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/1_8913ab5b-0fe1-4bc9-a55b-4f1a83149295.jpg",
+            "image": "shopify://shop_images/1_9fdd6a7f-99fa-42ab-b54a-fb2e393cba5f.jpg",
             "title": "",
             "text": "",
             "link_label": "Badminton",
             "link": ""
           }
         },
-        "column_MEL9xP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/2_732355bc-d9ff-4da7-ae47-1c82fcdb3d0d.png",
-            "title": "",
-            "text": "",
-            "link_label": "Pickle Ball",
-            "link": ""
-          }
-        },
         "column_ctmpq3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/3_9347f179-06f3-4327-9513-2cacf9566305.png",
+            "image": "shopify://shop_images/5_b632e034-9515-4e5d-982d-fdf1007e956b.jpg",
             "title": "",
             "text": "",
             "link_label": "Cricket",
@@ -52,19 +42,29 @@
         "column_f8XbDq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/4_bbe833b1-25d9-4444-9d75-c49de596375c.png",
+            "image": "shopify://shop_images/4_fa676a01-864b-41a3-8f45-972959159e60.jpg",
             "title": "",
             "text": "",
             "link_label": "Tennis",
+            "link": ""
+          }
+        },
+        "column_MEL9xP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_03dde1dc-7fcc-435a-8d53-1dc3d9092029.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Pickle Ball",
             "link": ""
           }
         }
       },
       "block_order": [
         "column_HyXpP7",
-        "column_MEL9xP",
         "column_ctmpq3",
-        "column_f8XbDq"
+        "column_f8XbDq",
+        "column_MEL9xP"
       ],
       "custom_css": [
         ".multicolumn-card__image-wrapper {margin: 0; padding: 0;}",
@@ -81,7 +81,7 @@
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
