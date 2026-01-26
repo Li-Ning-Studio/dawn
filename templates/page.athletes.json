@@ -60,6 +60,63 @@
         "padding_bottom": 60
       }
     },
+    "multicolumn_nVVMj4": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9VbMmc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5-5.png",
+            "title": "Alexandra Boje",
+            "text": "<p>A prominent Danish badminton player who specializes in doubles and has reached a career-high world ranking in the top ten for mixed doubles. Known for her tactical skill at the net, she has secured multiple BWF <br/>World Tour titles and represented Denmark at the Tokyo 2020 and Paris 2024 Olympic Games.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3Trtr4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6-6.png",
+            "title": "Srikanth Kidambi",
+            "text": "<p>He is a renowned Indian badminton player who made history in 2018 by becoming the first Indian male to achieve the world number one ranking. His career highlights include winning a silver medal at the 2021 BWF World Championships and leading India to its first-ever Thomas Cup title in 2022.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fqki37": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/60-6.png",
+            "title": "Line Kjærsfeldt",
+            "text": "<p>She is a top-ranked Danish badminton player who won the gold medal in women's singles at the 2015 European Games and more recently claimed the title at the 2025 European Championships. A key figure in European badminton, she has represented Denmark at the Olympic Games and reached a career-high world ranking within the top 20.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9VbMmc",
+        "column_3Trtr4",
+        "column_fqki37"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_KiE6Lb": {
       "type": "image-with-text",
       "blocks": {
@@ -586,6 +643,7 @@
     "custom_liquid_YiDMDb",
     "custom_liquid_jVNxhm",
     "custom_liquid_rkTYKh",
+    "multicolumn_nVVMj4",
     "image_with_text_KiE6Lb",
     "image_with_text_TApBDd",
     "image_with_text_8xBdab",
