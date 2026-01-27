@@ -14,6 +14,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_mrQeK3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HNDRD_500X500_1.png",
+            "image_width": 280,
+            "alignment": ""
+          }
+        },
         "comm_channel_LtGX8G": {
           "type": "comm_channel",
           "settings": {
@@ -43,6 +51,7 @@
         }
       },
       "block_order": [
+        "image_mrQeK3",
         "comm_channel_LtGX8G",
         "comm_channel_kMqUag",
         "footer-0",
