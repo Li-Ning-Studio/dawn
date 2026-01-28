@@ -234,8 +234,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_1_cfc9a24d-bacd-4dc8-a601-ff7fd071a40f.jpg",
-            "title": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<strong>Curve² Geometry</strong>",
+            "text": "<p>This specialized frame expands the sweet spot, making contact significantly easier for players to achieve consistency on every shot.</p>",
             "link_label": "",
             "link": ""
           }
@@ -244,8 +244,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_2_e37f9c28-5d8e-4aa4-ac70-49a4afecba7f.jpg",
-            "title": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<strong>Graphite Lab Core</strong>",
+            "text": "<p>This flexible shaft is engineered to transfer smoothly and accurately for the perfect shot.</p>",
             "link_label": "",
             "link": ""
           }
@@ -254,8 +254,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_3_9b2af6f5-1ec4-46fd-9620-e600179def6e.jpg",
-            "title": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<strong>Precision Racket</strong>",
+            "text": "<p>The definitive racket for accuracy as it gives players direction for every target.</p>",
             "link_label": "",
             "link": ""
           }
@@ -266,6 +266,10 @@
         "column_8FEbwY",
         "column_VRDBCc"
       ],
+      "custom_css": [
+        "h3,h2 {background-image: linear-gradient( -225deg, #09b859 0%, #0c8642 52%, #1e5534 100% ); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {font-size: 2.5rem;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -275,7 +279,7 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
