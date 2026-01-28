@@ -1,0 +1,272 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_kQYMRq": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom\"\n>\n  <p style=\"margin-bottom: 0\">Introducing</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title\">\n    Peak Performance Trio\n  </h1>\n  <p style=\"margin-top: 3px\">Pro Rackets Series from HNDRD.</p>\n  <a href=\"/collections/flagship\" class=\"cta\">\n    <span>Explore</span>\n  </a>\n  <video src=\"https://cdn.shopify.com/videos/c/vp/e1a9238787ba4d5283c3e1cd974a44c6/e1a9238787ba4d5283c3e1cd974a44c6.HD-1080p-2.5Mbps-67958891.mp4\" muted autoplay loop></video>\n</section>\n\n<style>\n\n.main-sec-custom video{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 50%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #ff0066;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\n  }\n\n  .title {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #a445b2 0%,\n      #d41872 52%,\n      #ff0066 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 100,
+        "padding_bottom": 72
+      }
+    },
+    "custom_liquid_P7pYzd": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<a href=\"\" class=\"btn\"> I'M READY\n</a>\n<style>\n.btn{\ntext-decoration:none;\ncursor:pointer;\n  --green: #1BFD9C;\n  font-size: 15px;\n  padding: 0.7em 2.7em;\n  letter-spacing: 0.06em;\n  position: relative;\n  font-family: inherit;\n  border-radius: 0.6em;\n  overflow: hidden;\n  transition: all 0.3s;\n  line-height: 1.4em;\n  border: 2px solid var(--green);\n  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);\n  color: var(--green);\n  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);\n}\n\n.btn:hover {\n  color: #82ffc9;\n  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);\n}\n\n.btn:before {\n  content: \"\";\n  position: absolute;\n  left: -4em;\n  width: 4em;\n  height: 100%;\n  top: 0;\n  transition: transform .4s ease-in-out;\n  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);\n}\n\n.btn:hover:before {\n  transform: translateX(15em);\n}\n</style>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_7V7ntg": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_8d14a2dc-e82d-44d7-b134-54fe42617bd4.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_d8fe3542-ba6a-4a8e-9c04-3f2a6f7c8f75.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_bXNV7q": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nY9tcG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_063c7726-6b69-4f8a-8128-4fc028b68ac9.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HnyCDf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_f54d6fa7-2d31-4074-bb5f-93334f9247f6.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7nz3P8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_dabd4f2b-aff0-4cc4-835c-ac6022774800.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nY9tcG",
+        "column_HnyCDf",
+        "column_7nz3P8"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_e8TUTP": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_f45fedec-e15d-4a71-9e3e-60200be24a51.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_be65f83a-7188-472e-910d-e2d1f66e2ea3.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_imEdxf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Lwnd64": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_592b499d-f5e5-4418-afbd-5032a392ac89.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9Dw33n": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_75b52d7c-2a0d-4b8a-8fd8-db30fbed3759.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EWLLdV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_365b814b-2825-4266-8bb6-a19f7a4d6e13.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Lwnd64",
+        "column_9Dw33n",
+        "column_EWLLdV"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_AQEQxy": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_32ee5b9f-813f-4c4d-b568-8b9925f48a18.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_R_02c2b280-52bd-4bc1-bec6-8cdf2f7a4095.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_FHyJ3f": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jaFa7e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_cfc9a24d-bacd-4dc8-a601-ff7fd071a40f.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8FEbwY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_e37f9c28-5d8e-4aa4-ac70-49a4afecba7f.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VRDBCc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_9b2af6f5-1ec4-46fd-9620-e600179def6e.jpg",
+            "title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_jaFa7e",
+        "column_8FEbwY",
+        "column_VRDBCc"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_kQYMRq",
+    "custom_liquid_P7pYzd",
+    "hero_component_7V7ntg",
+    "multicolumn_bXNV7q",
+    "hero_component_e8TUTP",
+    "multicolumn_imEdxf",
+    "hero_component_AQEQxy",
+    "multicolumn_FHyJ3f"
+  ]
+}
