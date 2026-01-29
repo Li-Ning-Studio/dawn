@@ -54,7 +54,10 @@
   }
 {%- endstyle -%}
 
-<section style="display: flex; justify-content: center; align-items: center; background: {{ section.settings.subfooter_background }}; margin-top: 6rem;">
+<section
+  class="subfooter color-{{ section.settings.subfooter_color_scheme }} color-foreground"
+  style="display: flex; justify-content: center; align-items: center; background: {{ section.settings.subfooter_background | escape }}; padding: 9.5rem 0;"
+>
   <div
     style="text-align: center;"
   >
@@ -538,6 +541,12 @@
       "id": "subfooter_background",
       "label": "Sub Footer Background",
       "default": "red"
+    },
+    {
+      "type": "color_scheme",
+      "id": "subfooter_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "header",

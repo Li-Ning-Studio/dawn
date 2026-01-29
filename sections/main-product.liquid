@@ -571,7 +571,28 @@
                 {% liquid
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
+                  assign catalog_file = product.metafields.custom_but_hidden.product_catalog_file
+                  assign catalog_file_value = catalog_file.value | default: catalog_file
+                  assign catalog_file_url = ''
+                  if catalog_file_value != blank
+                    if catalog_file_value.url != blank
+                      assign catalog_file_url = catalog_file_value.url
+                    else
+                      assign catalog_file_path = catalog_file_value | remove_first: 'files/'
+                      assign catalog_file_url = catalog_file_path | file_url
+                    endif
+                  endif
                 %}
+                {%- if catalog_file_url != blank -%}
+                  <div class="product__catalog-download">
+                    <a class="link underlined-link" href="{{ catalog_file_url }}" download>
+                      <span class="svg-wrapper product__catalog-icon">
+                        {{- 'icon-share.svg' | inline_asset_content -}}
+                      </span>
+                      {{ 'sections.main-product.download_catalog' | t }}
+                    </a>
+                  </div>
+                {%- endif -%}
 
               {%- when 'variant_picker' -%}
                 {% if product.metafields.custom_but_hidden.combined_products %}
@@ -614,7 +635,7 @@
               {%- when 'buy_buttons' -%}
                 {% if product.tags contains 'Service' %}
                   <p>This service cannot be purchased seperately.</p>
-                {% else %}
+                {% elsif settings.catalog_mode_enabled != true %}
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,
