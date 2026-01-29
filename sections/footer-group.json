@@ -122,7 +122,8 @@
         "slide_YUQgYr"
       ],
       "custom_css": [
-        "* {background: #030303; padding: 0px;}"
+        "* {background: #030303; padding: 0px;}",
+        "@media screen and (max-width: 800px) {* {display: none; }}"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
