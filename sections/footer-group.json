@@ -59,8 +59,16 @@
         },
         "brand_information_kxcV8Y": {
           "type": "brand_information",
+          "disabled": true,
           "settings": {
             "show_social": true
+          }
+        },
+        "text_qfCRWG": {
+          "type": "text",
+          "settings": {
+            "heading": "HNDRD",
+            "subtext": "<p><em>HNDRD is pronounced in the same way as the English word Hundred </em><em><strong>- /</strong></em><em>ˈ</em><em><strong>h</strong></em><em>ʌ</em><em><strong>n.dr</strong></em><em>ə</em><em><strong>d/. </strong></em></p><p></p><p></p>"
           }
         }
       },
@@ -71,7 +79,8 @@
         "footer-0",
         "link_list_HfaMaF",
         "link_list_QWa7Dj",
-        "brand_information_kxcV8Y"
+        "brand_information_kxcV8Y",
+        "text_qfCRWG"
       ],
       "settings": {
         "color_scheme": "scheme-4",
@@ -91,9 +100,34 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "responsive_slideshow_QcX3tB": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_acnz4E": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/LIVEHUNDREDPERCENT.png",
+            "mobile_image": "shopify://shop_images/LIVEHUNDREDPERCENT.png",
+            "heading": "",
+            "subheading": "",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_acnz4E"
+      ],
+      "custom_css": [
+        "* {background: black;}"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
     }
   },
   "order": [
-    "footer"
+    "footer",
+    "responsive_slideshow_QcX3tB"
   ]
 }
