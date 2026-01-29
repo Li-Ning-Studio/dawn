@@ -101,22 +101,32 @@
         "padding_bottom": 36
       }
     },
-    "custom_liquid_fGteHd": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "* {background: #000000; margin: 0;}"
+    "responsive_slideshow_tDYMKU": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_YUQgYr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/LIVEHUNDREDPERCENT_2.png",
+            "heading": "",
+            "subheading": "",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_YUQgYr"
       ],
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<h3 style=\"font-size: 3rem; color: white; background: black; max-width: 100vw; font-weight: 400; letter-spacing: -1px; font-style: italic; text-wrap:nowrap; text-align: center;\">\n <span>LIVE</span>\n <span style=\"font-weight: 800;\">HUNDRED</span>\n <span>PERCENT</span>\n</h3>",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
+      "custom_css": [
+        "* {background: black;}"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
     }
   },
   "order": [
     "footer",
-    "custom_liquid_fGteHd"
+    "responsive_slideshow_tDYMKU"
   ]
 }
