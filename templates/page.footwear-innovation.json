@@ -64,7 +64,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n   Badminton shoes are <span>kinetic foundations</span>. At <span style=\"color: #ffa300\">HNDRD</span>, we calibrate material densities and friction coefficients to manage <span>extreme lateral loads</span> and ensure <span>biomechanical stability</span> on court.\n  </p>\n\n</section>\n\n<style>\n.hero {\n  color: #9f9f9f;\n  text-align: left;\n  padding: 0rem 2rem;\n}\n.hero .headline {\n  max-width: 700px;\n  margin: 0 auto;\n  font-size: 1.6rem;\n  font-weight: 500;\n  line-height: 1.6;\n  letter-spacing: 0px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 0rem 2rem;\n  }\n  .hero .headline {\n    font-size: 1.9rem;\n  }\n}\n</style>",
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n   Badminton shoes are <span>kinetic foundations</span>. At <span style=\"color: #ffa300\">HNDRD</span>, we calibrate material densities and friction coefficients to manage <span>extreme lateral loads</span> and ensure <span>biomechanical stability</span> on court.\n  </p>\n\n</section>\n\n<style>\n.hero {\n  color: #9f9f9f;\n  text-align: left;\n  padding: 0rem 2rem;\n}\n.hero .headline {\n  max-width: 800px;\n  margin: 0 auto;\n  font-size: 1.6rem;\n  font-weight: 500;\n  line-height: 1.6;\n  letter-spacing: 0px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 0rem 2rem;\n  }\n  .hero .headline {\n    font-size: 1.9rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 36,
         "padding_bottom": 36
