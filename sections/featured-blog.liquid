@@ -138,36 +138,38 @@
           {%- endfor -%}
         {%- endif -%}
       </ul>
-      {%- if posts_exceed_limit -%}
-        <div class="slider-buttons{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.settings.post_limit }}</span>
+      {% comment %}
+        {%- if posts_exceed_limit -%}
+          <div class="slider-buttons{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
+            <button
+              type="button"
+              class="slider-button slider-button--prev"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </span>
+            </button>
+            <div class="slider-counter caption">
+              <span class="slider-counter--current">1</span>
+              <span aria-hidden="true"> / </span>
+              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+              <span class="slider-counter--total">{{ section.settings.post_limit }}</span>
+            </div>
+            <button
+              type="button"
+              class="slider-button slider-button--next"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </span>
+            </button>
           </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
-        </div>
-      {%- endif -%}
+        {%- endif -%}
+      {% endcomment %}
     </slider-component>
 
     {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
@@ -178,9 +180,10 @@
         {% endif %}
       >
         <a
+          style="--buttons-radius: 12rem; --buttons-radius-outset: 12rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0; padding: 1.6rem 3rem;"
           href="{{ section.settings.blog.url }}"
           id="ViewAll-{{ section.id }}"
-          class="blog__button button"
+          class="blog__button button button--secondary"
           aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
         >
           {{ 'sections.featured_blog.view_all' | t }}
@@ -215,7 +218,7 @@
     {
       "type": "header",
       "content": "t:sections.featured-blog.settings.text_header.content"
-    },            
+    },
     {
       "type": "inline_richtext",
       "id": "heading",
@@ -253,7 +256,7 @@
     {
       "type": "header",
       "content": "t:sections.featured-blog.settings.layout_header.content"
-    },        
+    },
     {
       "type": "range",
       "id": "columns_desktop",
@@ -269,7 +272,7 @@
       "default": true,
       "label": "t:sections.featured-blog.settings.show_view_all.label",
       "info": "t:sections.featured-blog.settings.show_view_all.info"
-    },    
+    },
     {
       "type": "checkbox",
       "id": "show_image",
@@ -294,7 +297,7 @@
       "label": "t:sections.all.colors.label",
       "info": "t:sections.all.colors.has_cards_info",
       "default": "scheme-1"
-    },    
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"

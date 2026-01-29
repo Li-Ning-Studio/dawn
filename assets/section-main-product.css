@@ -241,6 +241,26 @@ product-info {
   margin: 2.6rem 0;
 }
 
+.product__catalog-download .link.underlined-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.product__catalog-download .product__catalog-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg);
+}
+
+.product__catalog-download .product__catalog-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 .product__info-container iframe {
   max-width: 100%;
 }
