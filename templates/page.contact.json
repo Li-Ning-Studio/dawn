@@ -49,7 +49,9 @@
     },
     "form": {
       "type": "contact-form",
-      "custom_css": [],
+      "custom_css": [
+        ".contact {max-width: 800px;}"
+      ],
       "settings": {
         "heading": "",
         "heading_size": "h2",
