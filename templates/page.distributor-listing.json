@@ -9,6 +9,26 @@
  */
 {
   "sections": {
+    "custom_liquid_9EBgqz": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hero\">\n  <h1 class=\"headline\">Local Partners</h1>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 4
+      }
+    },
+    "custom_liquid_gtdgRy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n    <span>HNDRD</span> is headquartered in Singapore, and we partner with various entities around the world to distribute and market our products in different regions.\n  </p>\n\n</section>\n\n<style>\n.hero {\n  color: #9f9f9f;\n  text-align: left;\n  padding: 0rem 2rem;\n}\n.hero .headline {\n  max-width: 800px;\n  margin: 0 auto;\n  font-size: 1.6rem;\n  font-weight: 500;\n  line-height: 1.6;\n  letter-spacing: 0px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 0rem 2rem;\n  }\n  .hero .headline {\n    font-size: 1.9rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "multicolumn_LjhEEj": {
       "type": "multicolumn",
       "blocks": {
@@ -27,7 +47,7 @@
         "column_AiLCCY"
       ],
       "settings": {
-        "title": "{{ page.title }}",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -53,6 +73,8 @@
     }
   },
   "order": [
+    "custom_liquid_9EBgqz",
+    "custom_liquid_gtdgRy",
     "multicolumn_LjhEEj",
     "main"
   ]
