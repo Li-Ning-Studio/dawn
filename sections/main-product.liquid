@@ -584,14 +584,9 @@
                   endif
                 %}
                 {%- if catalog_file_url != blank -%}
-                  <div class="product__catalog-download">
-                    <a class="link underlined-link" href="{{ catalog_file_url }}" download>
-                      <span class="svg-wrapper product__catalog-icon">
-                        {{- 'icon-share.svg' | inline_asset_content -}}
-                      </span>
-                      {{ 'sections.main-product.download_catalog' | t }}
-                    </a>
-                  </div>
+                  <a class="button button--secondary product__catalog-download" href="{{ catalog_file_url }}" download>
+                    {{ 'sections.main-product.download_catalog' | t }}
+                  </a>
                 {%- endif -%}
 
               {%- when 'variant_picker' -%}
