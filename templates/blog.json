@@ -9,20 +9,69 @@
  */
 {
   "sections": {
+    "studio_text_C7Ljjy": {
+      "type": "studio-text",
+      "name": "t:sections.studio-text.presets.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "subtext": "",
+        "text": "<p><strong>HNDRD </strong><strong>{{ blog.title }}</strong></p>",
+        "max_width": 800,
+        "font_size_desktop": 19,
+        "font_size_mobile": 16,
+        "letter_spacing": 0,
+        "font_weight": 500,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "left",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 100,
+        "padding_bottom": 4
+      }
+    },
+    "studio_text_cpLXcb": {
+      "type": "studio-text",
+      "custom_css": [],
+      "name": "t:sections.studio-text.presets.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "subtext": "",
+        "text": "<p>Stay updated with the latest happenings at HNDRD. Keep track of player announcements, press releases and more.</p>",
+        "max_width": 800,
+        "font_size_desktop": 19,
+        "font_size_mobile": 16,
+        "letter_spacing": 0,
+        "font_weight": 500,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "left",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 32,
+        "padding_bottom": 48
+      }
+    },
     "main": {
       "type": "main-blog",
+      "custom_css": [
+        ".title--primary {display: none;}"
+      ],
       "settings": {
+        "color_scheme": "scheme-4",
         "layout": "grid",
         "show_image": true,
-        "image_height": "adapt",
+        "image_height": "medium",
         "show_date": true,
         "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 32,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
+    "studio_text_C7Ljjy",
+    "studio_text_cpLXcb",
     "main"
   ]
 }
