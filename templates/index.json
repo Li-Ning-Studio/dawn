@@ -83,6 +83,9 @@
     },
     "featured_blog_ABytR8": {
       "type": "featured-blog",
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.page-width-desktop {max-width: 200rem; }}"
+      ],
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "blog": "news",
