@@ -17,24 +17,49 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_daJXwB": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "studio_text_BwYncg": {
+      "type": "studio-text",
+      "name": "t:sections.studio-text.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"hero\">\n  <h1 class=\"headline\">About HNDRD</h1>\n</div>",
         "color_scheme": "scheme-4",
+        "subtext": "",
+        "text": "<p><strong>About HNDRD</strong></p>",
+        "max_width": 800,
+        "font_size_desktop": 19,
+        "font_size_mobile": 16,
+        "letter_spacing": 0,
+        "font_weight": 500,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "left",
+        "button_label": "",
+        "button_link": "",
         "padding_top": 100,
-        "padding_bottom": 0
+        "padding_bottom": 4
       }
     },
-    "custom_liquid_KxBBLi": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "studio_text_9ajGXf": {
+      "type": "studio-text",
+      "custom_css": [
+        "em {color: #ffa300; font-style: normal;}"
+      ],
+      "name": "t:sections.studio-text.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\">\n    Born in <span>Singapore</span>, <span style=\"color: #ffa300\">HNDRD</span> is a team spread out all over the <span>world</span> focused on <span>design,  manufacturing and availability</span> of <span>high performance</span> sports footwear, equipment,  apparel and accessories for <span>athletes</span> of every level. \n  </p>\n\n</section>\n\n<style>\n.hero {\n  color: #9f9f9f;\n  text-align: left;\n  padding: 0rem 2rem;\n}\n.hero .headline {\n  max-width: 800px;\n  margin: 0 auto;\n  font-size: 1.6rem;\n  font-weight: 500;\n  line-height: 1.6;\n  letter-spacing: 0px;\n}\n.hero .headline span {\n  color: white;\n}\n\n@media (min-width: 600px) {\n  .hero {\n    padding: 0rem 2rem;\n  }\n  .hero .headline {\n    font-size: 1.9rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "subtext": "",
+        "text": "<p>Born in Singapore, <em>HNDRD</em> is a team spread out all over the world focused on <strong>design</strong>, <strong>manufacturing</strong> and <strong>availability</strong> of high <strong>performance sports</strong> footwear, equipment, apparel and accessories for <strong>athletes</strong> of every level. </p>",
+        "max_width": 800,
+        "font_size_desktop": 19,
+        "font_size_mobile": 16,
+        "letter_spacing": 0,
+        "font_weight": 500,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "left",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "hero_video_component_LzQQHy": {
@@ -53,14 +78,25 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_UCmg7b": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "studio_text_4FQKLJ": {
+      "type": "studio-text",
+      "name": "t:sections.studio-text.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hero\">\n  <p class=\"headline\"> Our journey began in\n    <span>2009</span> with the founding of <span>Sunlight Sports</span> in <span>Singapore</span>, where we established a\n    legacy of excellence managing distribution for <span>premier global brands</span>.<br />\n    <br /> In 2020, we\n    registered the HNDRD trademark, turning our focus to <span>\n      engineering\n      our own identity\n    </span>. This vision became reality in 2022 with\n    our debut in <span>Indonesia</span>, headlined by the launch of the Beast Max shoe series and\n    the Flutter racket line. <br />\n    <br /> Since then, HNDRD has evolved into a <span>multi-sport\n    powerhouse</span>.<br />\n    </p>\n</section>",
         "color_scheme": "scheme-4",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "subtext": "",
+        "text": "<p>Our journey began in <strong>2009</strong> with the founding of <strong>Sunlight Sports</strong> in <strong>Singapore</strong>, where we established a legacy of excellence managing distribution for <strong>premier global brands</strong>.<br/><br/>In <strong>2020</strong>, we registered the HNDRD <strong>trademark</strong>, turning our focus to engineering our <strong>own identity</strong>. This vision became reality in <strong>2022</strong> with our debut in <strong>Indonesia</strong>, headlined by the launch of the Beast Max shoe series and the Flutter racket line.<br/><br/>Since then, HNDRD has evolved into a <strong>multi-sport powerhouse</strong>.</p>",
+        "max_width": 800,
+        "font_size_desktop": 19,
+        "font_size_mobile": 16,
+        "letter_spacing": 0,
+        "font_weight": 500,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "left",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 76,
+        "padding_bottom": 76
       }
     },
     "media_gJBRPP": {
@@ -108,10 +144,10 @@
   },
   "order": [
     "main",
-    "custom_liquid_daJXwB",
-    "custom_liquid_KxBBLi",
+    "studio_text_BwYncg",
+    "studio_text_9ajGXf",
     "hero_video_component_LzQQHy",
-    "custom_liquid_UCmg7b",
+    "studio_text_4FQKLJ",
     "media_gJBRPP",
     "custom_liquid_pzGm6q",
     "media_BeACzG",
