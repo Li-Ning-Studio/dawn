@@ -1,6 +1,6 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template">
+<article class="article-template color-{{ section.settings.color_scheme }} gradient">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -47,17 +47,17 @@
           {{ block.shopify_attributes }}
         >
           <h1
-            class="article-template__title"
+            class="article-template__title color-foreground"
           >
             {{ article.title | escape }}
           </h1>
           {%- if block.settings.blog_show_date -%}
-            <span class="circle-divider caption-with-letter-spacing">
+            <span class="circle-divider caption-with-letter-spacing color-foreground">
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
           {%- endif -%}
           {%- if block.settings.blog_show_author -%}
-            <span class="caption-with-letter-spacing">
+            <span class="caption-with-letter-spacing color-foreground">
               <span>{{ article.author }}</span>
             </span>
           {%- endif -%}
@@ -368,6 +368,14 @@
           "default": "t:sections.main-article.blocks.share.settings.text.default"
         }
       ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     }
   ]
 }
