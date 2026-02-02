@@ -17,6 +17,27 @@
         "padding_bottom": 28
       }
     },
+    "studio_text_A7kBhx": {
+      "type": "studio-text",
+      "name": "t:sections.studio-text.presets.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "subtext": "",
+        "text": "<p>Brand <strong>Assets</strong></p>",
+        "max_width": 800,
+        "font_size_desktop": 36,
+        "font_size_mobile": 24,
+        "letter_spacing": 0,
+        "font_weight": 900,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "center",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 80,
+        "padding_bottom": 32
+      }
+    },
     "brand_assets_FAWCWf": {
       "type": "brand-assets",
       "name": "t:sections.brand-assets.name",
@@ -29,18 +50,19 @@
           "hndrd-pattern"
         ],
         "columns_desktop": 5,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "show_category": false,
         "show_size_label": true,
         "show_downloads": true,
         "color_scheme": "scheme-2",
-        "padding_top": 88,
+        "padding_top": 32,
         "padding_bottom": 80
       }
     }
   },
   "order": [
     "main",
+    "studio_text_A7kBhx",
     "brand_assets_FAWCWf"
   ]
 }
