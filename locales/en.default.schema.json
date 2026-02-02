@@ -2960,6 +2960,62 @@
         "name": "Rich text"
       }
     },
+    "studio-text": {
+      "name": "Studio text",
+      "settings": {
+        "text": {
+          "label": "Text",
+          "default": "<p>Our journey began in 2009 with the founding of <strong>Sunlight Sports</strong> in Singapore, where we established a legacy of excellence managing distribution for <strong>premier global brands</strong>.</p>"
+        },
+        "subtext": {
+          "label": "Subtext",
+          "default": "About"
+        },
+        "max_width": {
+          "label": "Max width"
+        },
+        "font_size_desktop": {
+          "label": "Font size (desktop)"
+        },
+        "font_size_mobile": {
+          "label": "Font size (mobile)"
+        },
+        "letter_spacing": {
+          "label": "Letter spacing"
+        },
+        "font_weight": {
+          "label": "Font weight"
+        },
+        "line_height": {
+          "label": "Line height"
+        },
+        "muted_opacity": {
+          "label": "Muted text opacity"
+        },
+        "text_align": {
+          "label": "Text alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "button_label": {
+          "label": "Button label",
+          "default": "Learn more"
+        },
+        "button_link": {
+          "label": "Button link"
+        }
+      },
+      "presets": {
+        "name": "Studio text"
+      }
+    },
     "video": {
       "name": "Video",
       "settings": {
@@ -3173,6 +3229,38 @@
       },
       "presets": {
         "name": "Slideshow"
+      }
+    },
+    "brand-assets": {
+      "name": "Brand assets",
+      "settings": {
+        "assets": {
+          "label": "Assets"
+        },
+        "layout": {
+          "content": "Layout"
+        },
+        "columns_desktop": {
+          "label": "Columns on desktop"
+        },
+        "columns_mobile": {
+          "label": "Columns on mobile",
+          "options__1": {
+            "label": "One"
+          },
+          "options__2": {
+            "label": "Two"
+          }
+        },
+        "show_category": {
+          "label": "Show asset type"
+        },
+        "show_size_label": {
+          "label": "Show size label"
+        },
+        "show_downloads": {
+          "label": "Show download links"
+        }
       }
     },
     "collapsible_content": {
