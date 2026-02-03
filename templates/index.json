@@ -101,6 +101,28 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_ABytR8": {
+      "type": "featured-blog",
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.page-width-desktop {max-width: 200rem; }}",
+        ".article-card__excerpt {opacity: 0.7;}"
+      ],
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "newsroom",
+        "post_limit": 2,
+        "heading": "Newsroom",
+        "heading_size": "h2",
+        "columns_desktop": 2,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 56,
+        "padding_bottom": 12
+      }
+    },
     "hero_video_component_brw6tn": {
       "type": "hero-video-component",
       "disabled": true,
@@ -294,29 +316,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_blog_ABytR8": {
-      "type": "featured-blog",
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (min-width: 990px) {.page-width-desktop {max-width: 200rem; }}",
-        ".article-card__excerpt {opacity: 0.7;}"
-      ],
-      "name": "t:sections.featured-blog.presets.name",
-      "settings": {
-        "blog": "newsroom",
-        "post_limit": 3,
-        "heading": "Latest HNDRD Happenings",
-        "heading_size": "h2",
-        "columns_desktop": 3,
-        "show_view_all": true,
-        "show_image": true,
-        "show_date": false,
-        "show_author": false,
-        "color_scheme": "scheme-4",
-        "padding_top": 56,
-        "padding_bottom": 12
-      }
-    },
     "custom_liquid_zyYmqT": {
       "type": "custom-liquid",
       "disabled": true,
@@ -337,13 +336,13 @@
     "hero_component_LPP9xd",
     "custom_liquid_idjarF",
     "image_with_text_ygmKTK",
+    "featured_blog_ABytR8",
     "hero_video_component_brw6tn",
     "custom_liquid_tGjXJw",
     "studio_text_kW33gC",
     "image_with_text_xQMGk9",
     "image_with_text_Ybbgtc",
     "image_with_text_me3nhP",
-    "featured_blog_ABytR8",
     "custom_liquid_zyYmqT"
   ]
 }
