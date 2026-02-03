@@ -53,6 +53,54 @@
         "padding_bottom": 0
       }
     },
+    "image_with_text_ygmKTK": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_p3tFbp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcoming Srikant to Club HNDRD",
+            "heading_size": "h1"
+          }
+        },
+        "text_Vid8hq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Officially welcoming the Indian badminton icon Srikant Kidambi onboard. Badminton’s finest champion is now on our court and we’re more than excited for what the future holds.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_RxngVL": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read More",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_p3tFbp",
+        "text_Vid8hq",
+        "button_RxngVL"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1_d40a3eb3-0b9c-468c-af73-b15c15d9dec4.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "hero_video_component_brw6tn": {
       "type": "hero-video-component",
       "disabled": true,
@@ -79,28 +127,6 @@
         "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "featured_blog_ABytR8": {
-      "type": "featured-blog",
-      "custom_css": [
-        "@media screen and (min-width: 990px) {.page-width-desktop {max-width: 200rem; }}",
-        ".article-card__excerpt {opacity: 0.7;}"
-      ],
-      "name": "t:sections.featured-blog.presets.name",
-      "settings": {
-        "blog": "newsroom",
-        "post_limit": 3,
-        "heading": "Latest HNDRD Happenings",
-        "heading_size": "h2",
-        "columns_desktop": 3,
-        "show_view_all": true,
-        "show_image": true,
-        "show_date": false,
-        "show_author": false,
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 12
       }
     },
     "studio_text_kW33gC": {
@@ -268,6 +294,28 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_ABytR8": {
+      "type": "featured-blog",
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.page-width-desktop {max-width: 200rem; }}",
+        ".article-card__excerpt {opacity: 0.7;}"
+      ],
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "newsroom",
+        "post_limit": 3,
+        "heading": "Latest HNDRD Happenings",
+        "heading_size": "h2",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 56,
+        "padding_bottom": 12
+      }
+    },
     "custom_liquid_zyYmqT": {
       "type": "custom-liquid",
       "disabled": true,
@@ -287,13 +335,14 @@
     "custom_liquid_Hte7NK",
     "hero_component_LPP9xd",
     "custom_liquid_idjarF",
+    "image_with_text_ygmKTK",
     "hero_video_component_brw6tn",
     "custom_liquid_tGjXJw",
-    "featured_blog_ABytR8",
     "studio_text_kW33gC",
     "image_with_text_xQMGk9",
     "image_with_text_Ybbgtc",
     "image_with_text_me3nhP",
+    "featured_blog_ABytR8",
     "custom_liquid_zyYmqT"
   ]
 }
