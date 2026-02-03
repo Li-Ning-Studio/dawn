@@ -105,15 +105,16 @@
       "type": "featured-blog",
       "custom_css": [
         "@media screen and (min-width: 990px) {.page-width-desktop {max-width: 200rem; }}",
-        ".article-card__excerpt {opacity: 0.7;}"
+        ".article-card__excerpt {opacity: 0.7;}",
+        ".full-unstyled-link {letter-spacing: -0.5px;}"
       ],
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "blog": "newsroom",
-        "post_limit": 2,
+        "post_limit": 3,
         "heading": "Newsroom",
         "heading_size": "h2",
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "show_view_all": true,
         "show_image": true,
         "show_date": false,
