@@ -58,7 +58,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n  <p class=\"longcopy\">\n <span class=\"highlight\">Our professional shoe are now yours to try on, test, and review. HNDRD introduces the 1st ever trial session for The Phenom.</span> <span class=\"highlight\"></span>\n  </p>\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n  <p class=\"longcopy\">Our\n <span class=\"highlight\"> professional shoe   </span>are now yours <span class=\"highlight\">to try on, test, and review. </span>HNDRD introduces the<span class=\"highlight\"> 1st ever trial session   </span>  for The Phenom.\n  </p>\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 40,
         "padding_bottom": 44
@@ -70,10 +70,10 @@
         "row_jgyg4n": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/Comp_1_1.gif",
+            "image": "shopify://shop_images/Banner_15.1.png",
             "caption": "",
             "heading": "<strong>Event </strong>Schedule",
-            "text": "<h4><strong>Saturday, 7th February 2026</strong><br/><br/>Sport fit JP Nagar 7th Phase<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\" target=\"_blank\" title=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\">View Location↗️</a><br/><br/>Smashbounce Korattur Badminton Academy<br/>(6:00 PM - 8:00PM) - <a href=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\" target=\"_blank\" title=\"https://maps.app.goo.gl/A5V5RFrGNkdnBgtQ8\">View Location↗️</a><br/><br/><strong>Sunday , 8th February 2026</strong><br/><br/>Blaze Badminton Academy,<br/>(10:00 AM - 12:00 PM) <a href=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\" target=\"_blank\" title=\"https://maps.app.goo.gl/zjCLoDv6n5RiBwff6\">View Location↗️</a></h4>",
+            "text": "<h4><strong>Saturday, 7th February 2026</strong><br/><br/>Sport fit JP Nagar 7th Phase<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\" target=\"_blank\" title=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\">View Location↗️</a><br/><br/><strong>Sunday , 8th February 2026</strong><br/><br/>Game theory JP Nagar, 8th phase,<br/>(7:00 PM - 9:00 PM) <a href=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\" target=\"_blank\" title=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\">View Location↗️</a></h4>",
             "button_label": "",
             "button_link": ""
           }
@@ -82,7 +82,6 @@
       "block_order": [
         "row_jgyg4n"
       ],
-      "disabled": true,
       "custom_css": [
         "a {color: orange;}",
         "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
@@ -91,7 +90,7 @@
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
         "image_layout": "alternate-left",
         "heading_size": "h1",
