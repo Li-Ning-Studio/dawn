@@ -17,6 +17,16 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_fewQHN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- https://texteffects.dev/posts/ice-text-effect -->\n<div class=\"frz\">\n\t<h1 data-heading=\"Frozen\" >\n\t\tIntroducing\n\t\t\n\t\t<!-- HTML for if you're animating and/or using text shadows instead of drop shadows-->\n\t\t<!-- <span class=\"layer1\" aria-hidden=\"true\">Frozen</span> -->\n\t\t<span class=\"animation\" aria-hidden=\"true\">Introducing</span> \n\t</h1>\n</div>\n<style>\n.frz{\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\n\tposition: relative;\n}\n\n.frz h1 {\n\ttransform: translate(0, -40%);\n\tfont-size:  40px;\nfont-family: \"frozen\", serif;\n\tbackground-image: url(\"https://assets.codepen.io/209981/ice.jpg\");\n\t-webkit-background-clip: text;\n\t-webkit-text-fill-color: transparent;\n\tbackground-size: contain;\n\tposition: relative;\n\t-webkit-text-stroke: 1px #fff;\n\t}\n\n.animation {\nposition: absolute;\nleft: 0;\nbackground: linear-gradient(45deg,rgba(255, 255, 255, 0) 45%,rgba(255, 255, 255, 0.8) 50%,rgba(255, 255, 255, 0) 55%,rgba(255, 255, 255, 0) 100%);\n-webkit-background-clip: text;\n-webkit-text-fill-color:transparent;\nanimation: shine 5s infinite;\nbackground-size: 200%;\n}\n@keyframes shine {\n\t0% {\n\t\tbackground-position: -120%;\n\t}\n\t50% {\n\t\tbackground-position: 120%;\n\t}\n\t100% {\n\t\tbackground-position: 120%;\n\t}\n}\n\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_hyb6Vp": {
       "type": "hero-component",
       "custom_css": [
@@ -35,21 +45,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "custom_liquid_fewQHN": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
-    "hero_component_hyb6Vp",
-    "custom_liquid_fewQHN"
+    "custom_liquid_fewQHN",
+    "hero_component_hyb6Vp"
   ]
 }
