@@ -17,52 +17,39 @@
         "padding_bottom": 28
       }
     },
-    "rich_text_GWVHdc": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_b6Cph8": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_wqnAtt": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_VjWitF": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_b6Cph8",
-        "text_wqnAtt",
-        "button_VjWitF"
+    "hero_component_hyb6Vp": {
+      "type": "hero-component",
+      "custom_css": [
+        "p,h3 {color: white !important;}"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Hero Component",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 4,
+        "image": "shopify://shop_images/1_333d8031-dfc1-42b7-bbd8-3d82e79f8c50.jpg",
+        "mobile_image": "shopify://shop_images/2_8002c126-1268-4290-8dcd-96043d0b50ff.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_fewQHN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "rich_text_GWVHdc"
+    "hero_component_hyb6Vp",
+    "custom_liquid_fewQHN"
   ]
 }
