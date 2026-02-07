@@ -17,16 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_fewQHN": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- https://texteffects.dev/posts/ice-text-effect -->\n<div class=\"frz\">\n\t<h1 data-heading=\"Frozen\" >\n\t\tIntroducing\n\t\t\n\t\t<!-- HTML for if you're animating and/or using text shadows instead of drop shadows-->\n\t\t<!-- <span class=\"layer1\" aria-hidden=\"true\">Frozen</span> -->\n\t\t<span class=\"animation\" aria-hidden=\"true\">Introducing</span> \n\t</h1>\n</div>\n<style>\n.frz{\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\n\tposition: relative;\n}\n\n.frz h1 {\n\ttransform: translate(0, -40%);\n\tfont-size:  40px;\nfont-family: \"frozen\", serif;\n\tbackground-image: url(\"https://assets.codepen.io/209981/ice.jpg\");\n\t-webkit-background-clip: text;\n\t-webkit-text-fill-color: transparent;\n\tbackground-size: contain;\n\tposition: relative;\n\t-webkit-text-stroke: 1px #fff;\n\t}\n\n.animation {\nposition: absolute;\nleft: 0;\nbackground: linear-gradient(45deg,rgba(255, 255, 255, 0) 45%,rgba(255, 255, 255, 0.8) 50%,rgba(255, 255, 255, 0) 55%,rgba(255, 255, 255, 0) 100%);\n-webkit-background-clip: text;\n-webkit-text-fill-color:transparent;\nanimation: shine 5s infinite;\nbackground-size: 200%;\n}\n@keyframes shine {\n\t0% {\n\t\tbackground-position: -120%;\n\t}\n\t50% {\n\t\tbackground-position: 120%;\n\t}\n\t100% {\n\t\tbackground-position: 120%;\n\t}\n}\n\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_hyb6Vp": {
       "type": "hero-component",
       "custom_css": [
@@ -45,11 +35,189 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "swipeable_products_AEUzw4": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "svg {color: black;}",
+        ".card__media {background: #000;}",
+        "img {background: #383636; background: radial-gradient( circle, rgba(56, 54, 54, 1) 0%, rgba(0, 0, 0, 1) 100% );}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Available in 4 Colors",
+        "products": [
+          "hyper-court"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_CnH8qR": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Main_L_f30fe209-0bef-4dcf-802c-4d56d60f84be.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_3dBRWK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Py9NMN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_1_93b37be7-28c2-4e74-be93-eafefa629623.png",
+            "title": "X Cushion Midsole",
+            "text": "<p>Featuring enhanced energy return and impact absorption, the X Cushion midsole ensures you stay quick on your feet while minimizing fatigue. Every jump and landing is smoother and more efficient.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fpBXdR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3_378ff903-9f5e-4905-becd-b2ffef1b569c.png",
+            "title": "KPU Shield Upper",
+            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nFJp83": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2_b1324f88-2e42-4813-95a2-53b24541a2bc.png",
+            "title": "Heel Brace",
+            "text": "<p>The built-in heel brace secures your foot during aggressive moves, providing extra stability and reducing the risk of strain, so you can focus on your game without hesitation.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_k9iH4y": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_4_686837af-2a39-4b8b-80e7-b8276449545d.png",
+            "title": "Active Grip Outsole",
+            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Py9NMN",
+        "column_fpBXdR",
+        "column_nFJp83",
+        "column_k9iH4y"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Features",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_4Tdb7X": {
+      "type": "multirow",
+      "blocks": {
+        "row_KFbHVr": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_1_93b37be7-28c2-4e74-be93-eafefa629623.png",
+            "caption": "",
+            "heading": "X Cushion Midsole",
+            "text": "<p>Featuring enhanced energy return and impact absorption, the X Cushion midsole ensures you stay quick on your feet while minimizing fatigue. Every jump and landing is smoother and more efficient.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Na7wDK": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_2_b1324f88-2e42-4813-95a2-53b24541a2bc.png",
+            "caption": "",
+            "heading": "Heel Brace",
+            "text": "<p>The built-in heel brace secures your foot during aggressive moves, providing extra stability and reducing the risk of strain, so you can focus on your game without hesitation.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_3cgeV9": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_3_378ff903-9f5e-4905-becd-b2ffef1b569c.png",
+            "caption": "",
+            "heading": "KPU Shield Upper",
+            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_fiYi7z": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_4_686837af-2a39-4b8b-80e7-b8276449545d.png",
+            "caption": "",
+            "heading": "Active Grip Outsole",
+            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_KFbHVr",
+        "row_Na7wDK",
+        "row_3cgeV9",
+        "row_fiYi7z"
+      ],
+      "disabled": true,
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "row_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_fewQHN",
-    "hero_component_hyb6Vp"
+    "hero_component_hyb6Vp",
+    "swipeable_products_AEUzw4",
+    "hero_component_CnH8qR",
+    "multicolumn_3dBRWK",
+    "multirow_4Tdb7X"
   ]
 }
