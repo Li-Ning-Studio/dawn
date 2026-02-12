@@ -11,13 +11,193 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_JzFU4p": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hrt\">\n  <img class=\"himg1\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n    <img class=\"himg2\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg3\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg4\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg5\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg6\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg7\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg8\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  </img>\n</div>\n<style>\n\n.hrt{\nposition:fixed;\nz-index:100;\n pointer-events: none;\n  cursor: default;\n}\n.hrt img{\n  overflow:hidden;\n  width:20px;\n  position: absolute;\n  top:80vh;\n   animation-name: myAnimation;\n  animation-duration: 20s;\n animation-iteration-count: infinite;\n  opacity:0;\nz-index:100;\n}\n@keyframes myAnimation {\n  0% {top: 80vh;\n    opacity:0;\n  }\n  50% {\n    opacity:0.7;\n  }\n  70%{\n    opacity:0;\n  }\n  100% {top: -10vh;\n  opacity:0;\n  }\n}\n\n.himg1{\n  left:10vw;\n   animation-delay: 5s;\n \n}.himg2{\n  left:20vw;\n   animation-delay: 17s;\n}.himg3{\n  left:30vw;\n   animation-delay: 15s;\n}.himg4{\n  left:40vw;\n   animation-delay:10s;\n}.himg5{\n  left:50vw;\n   animation-delay: 7s;\n}.himg6{\n  left:60vw;\n   animation-delay: 13s;\n}.himg7{\n  left:70vw;\n   animation-delay: 1s;\n}.himg8{\n  left:80vw;\n   animation-delay: 9s;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_qJU7Kn": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01_a41bcac4-68e1-4f53-b25d-b883957ac1a7.png",
+        "mobile_image": "shopify://shop_images/01_R_87cad5ed-3b67-4333-9e25-152d047b2f12.png",
+        "subtitle": "Need Content - 1",
+        "title": "Need Content - 2",
+        "description": "Need Content - 3",
+        "button_text": "Need Content - 4",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_GpUK3x": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_8NkVwh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_aceb1379-e2eb-4ae4-85a8-c8a41219b6cd.png",
+            "title": "Need Content - 6",
+            "text": "",
+            "link_label": "Need Content - 7",
+            "link": ""
+          }
+        },
+        "column_HKkb4x": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_3965651c-a29b-4a98-80a6-3eb7d7546115.png",
+            "title": "Need Content - 8",
+            "text": "",
+            "link_label": "Need Content - 9",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_8NkVwh",
+        "column_HKkb4x"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Need Content - 5",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_PyVDGt": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "badminton-rackets",
+        "products_to_show": 4,
+        "title": "Top Badminton Picks",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_tN9Unr": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "badminton-shoes",
+        "products_to_show": 4,
+        "title": "Top Pickleball Picks",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_UiVgmL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fyMz4X": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need Content - 10",
+            "heading_size": "h1"
+          }
+        },
+        "text_pywPKz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Need Content - 11</p>"
+          }
+        },
+        "button_TNqCWh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Need Content - 12 (Shop All)",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fyMz4X",
+        "text_pywPKz",
+        "button_TNqCWh"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_JzFU4p",
+    "hero_component_qJU7Kn",
+    "multicolumn_GpUK3x",
+    "featured_collection_PyVDGt",
+    "featured_collection_tN9Unr",
+    "rich_text_UiVgmL"
   ]
 }
