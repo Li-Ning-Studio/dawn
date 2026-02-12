@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_UCPty7": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hrt\">\n  <img class=\"himg1\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n    <img class=\"himg2\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg3\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg4\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg5\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg6\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg7\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg8\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  </img>\n</div>\n<style>\n\n.hrt{\nposition:fixed;\nz-index:100;\n pointer-events: none;\n  cursor: default;\n}\n.hrt img{\n  overflow:hidden;\n  width:20px;\n  position: absolute;\n  top:80vh;\n   animation-name: myAnimation;\n  animation-duration: 20s;\n animation-iteration-count: infinite;\n  opacity:0;\nz-index:100;\n}\n@keyframes myAnimation {\n  0% {top: 80vh;\n    opacity:0;\n  }\n  50% {\n    opacity:0.7;\n  }\n  70%{\n    opacity:0;\n  }\n  100% {top: -10vh;\n  opacity:0;\n  }\n}\n\n.himg1{\n  left:10vw;\n   animation-delay: 5s;\n \n}.himg2{\n  left:20vw;\n   animation-delay: 17s;\n}.himg3{\n  left:30vw;\n   animation-delay: 15s;\n}.himg4{\n  left:40vw;\n   animation-delay:10s;\n}.himg5{\n  left:50vw;\n   animation-delay: 7s;\n}.himg6{\n  left:60vw;\n   animation-delay: 13s;\n}.himg7{\n  left:70vw;\n   animation-delay: 1s;\n}.himg8{\n  left:80vw;\n   animation-delay: 9s;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_CywM7V": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/02_4d06ffb6-9a7b-4683-b9a3-1c62d22a0636.png",
+        "mobile_image": "shopify://shop_images/02_R_87687d22-d5df-41e2-84fd-2848ecc8bb59.png",
+        "subtitle": "Need Content - 1",
+        "title": "Need Content - 2",
+        "description": "Need Content - 3",
+        "button_text": "Need Content - 4",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_bGeaCP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TAm6jM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_90547f1f-d9b9-4945-a797-12e72162c68d.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_a7rGAk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_4110fcf9-bed7-44c7-b1dc-92111d72c614.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TAm6jM",
+        "column_a7rGAk"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Need Content - 4 Shop By Sport",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_XEj3WJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_7Na88U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_6b3e206e-b38f-4cc1-aa58-125bbd171838.png",
+            "title": "",
+            "text": "",
+            "link_label": "Rackets",
+            "link": ""
+          }
+        },
+        "column_cFa6dq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_6d095191-1609-486a-b2d6-5f2481dc54fe.png",
+            "title": "",
+            "text": "",
+            "link_label": "Shoes",
+            "link": ""
+          }
+        },
+        "column_UbrdAH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_67275448-47f1-4c72-a89b-05bf9e1dab7d.png",
+            "title": "",
+            "text": "",
+            "link_label": "Paddles",
+            "link": ""
+          }
+        },
+        "column_6A8U87": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_2d5544e6-1f8e-4668-94f6-3e916897a0d5.png",
+            "title": "",
+            "text": "",
+            "link_label": "Kit bags",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_7Na88U",
+        "column_cFa6dq",
+        "column_UbrdAH",
+        "column_6A8U87"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Need Content - 5 Shop By Category",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_qiKtLE": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/05_2f206e66-d906-4b20-8297-ef33c53cc5aa.png",
+        "mobile_image": "shopify://shop_images/05_R_c680f1da-03a1-458d-ac6d-33ffbc471893.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_LhXVrn": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Need Content",
+        "products": [
+          "predator-pro-5u",
+          "flutter-ff-zoom",
+          "flutter-ff-attk",
+          "nitrix-thunder-5u",
+          "flareon-typhoon-5u",
+          "hyfonic-lazer-5u"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "collage_MzMCWB": {
+      "type": "collage",
+      "blocks": {
+        "image_Eny6Ub": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_09111995-fb5e-476b-8bf9-42c2e6deabd9.png"
+          }
+        },
+        "image_aNFHcm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_9cd1bce4-f6f9-45b3-9d8c-bb9a23acff12.png"
+          }
+        },
+        "image_JERGN9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_e484ac60-c6ca-40fd-a68c-b890dad82c28.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_Eny6Ub",
+        "image_aNFHcm",
+        "image_JERGN9"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "swipeable_products_8ETVje": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Need Content",
+        "products": [
+          "phenom",
+          "raze",
+          "blade-lite-ii",
+          "raze-pro"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "swipeable_products_Ufzxc8": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Need Content",
+        "products": [
+          "cosmogear-max-kit-bag",
+          "court-vertex-kit-bag",
+          "matrix-kit-bag"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_wJmRGT": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/04_48d75fae-b56d-4ff5-9664-c421eadeba27.png",
+        "mobile_image": "shopify://shop_images/04_R_0bea9b4f-10b5-4301-a6b1-255a7a3ee756.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_B6pDc7": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Need Content",
+        "products": [
+          "spirit-x-flow-blast-extend",
+          "zephyr-20-extend",
+          "spirit-x-flow",
+          "phantom-20-wide",
+          "spirit-x-blast-extend",
+          "spirit-x-flow-blast-wide",
+          "spirit-x-flow-wide",
+          "spirit-x-blast-wide",
+          "spirit-x-wide",
+          "spirit-x-extend",
+          "spirit-x-wide-copy",
+          "spirit-x-pop-extend",
+          "zephyr-20-wide",
+          "phantom-20-extend"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_WXWcVR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LbYgDY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_b5146b5e-92c1-4d71-b36e-e1ebd7affd93.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NgRkqD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_9cd1bce4-f6f9-45b3-9d8c-bb9a23acff12.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LbYgDY",
+        "column_NgRkqD"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "swipeable_products_GnKRVw": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Need Content",
+        "products": [
+          "court-sonic-pbx",
+          "court-step-pbx"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_yNr6Tt": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/06_41fb6ed7-eeb3-4ad1-81ff-706ad93baa9e.png",
+        "mobile_image": "shopify://shop_images/06_R_77937c5d-37fa-4d8c-94b1-03a11cfcd919.png",
+        "subtitle": "Need Content",
+        "title": "Need Content",
+        "description": "Need Content",
+        "button_text": "Need Content",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_dbLMfq": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "apparels",
+        "products_to_show": 4,
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_UCPty7",
+    "hero_component_CywM7V",
+    "multicolumn_bGeaCP",
+    "multicolumn_XEj3WJ",
+    "hero_component_qiKtLE",
+    "swipeable_products_LhXVrn",
+    "collage_MzMCWB",
+    "swipeable_products_8ETVje",
+    "swipeable_products_Ufzxc8",
+    "hero_component_wJmRGT",
+    "swipeable_products_B6pDc7",
+    "multicolumn_WXWcVR",
+    "swipeable_products_GnKRVw",
+    "hero_component_yNr6Tt",
+    "featured_collection_dbLMfq"
+  ]
+}
