@@ -73,7 +73,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Need Content - 5",
+        "title": "Need Content - 5 choose side",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -91,6 +91,7 @@
     },
     "featured_collection_PyVDGt": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "badminton-rackets",
@@ -118,8 +119,172 @@
         "padding_bottom": 36
       }
     },
+    "collage_9HVEKg": {
+      "type": "collage",
+      "blocks": {
+        "image_xD8RQF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_5f6e9c81-9553-4243-ab34-e85b30b606e9.png"
+          }
+        },
+        "image_PFmCmW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_297c9240-769d-4552-8829-81650489c51a.png"
+          }
+        },
+        "image_bxFxmK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_c52c369e-217c-470d-9bb0-3ad5d7acf24a.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_xD8RQF",
+        "image_PFmCmW",
+        "image_bxFxmK"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "Need Content - Offers for Couples",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "collage_ePetqe": {
+      "type": "collage",
+      "blocks": {
+        "image_UARA8F": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_9cbeef79-d293-4def-8df3-7ef843066afb.png"
+          }
+        },
+        "image_fX3n46": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_bc4c70fe-3ad4-48c5-9fa6-b5fd7983fb50.png"
+          }
+        },
+        "image_UrFNfh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_64aa1175-59aa-40dc-a8da-e564975bfdab.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_UARA8F",
+        "image_fX3n46",
+        "image_UrFNfh"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_4WpfNQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9HAeLb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_847c57a1-963b-4173-9253-02b9f0b3535e.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cThMYe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_66c5142c-41bf-4cf7-9800-3333672f832b.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9HAeLb",
+        "column_cThMYe"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Need Content - singles offer",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "collage_3UFJgH": {
+      "type": "collage",
+      "blocks": {
+        "image_hMQPey": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_719a2080-444b-49cf-a333-da7ad5fa380f.png"
+          }
+        },
+        "image_hQ9Lgp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_4d9a9527-a00e-4c26-bf7b-06e03ed71f6c.png"
+          }
+        },
+        "image_PaNdjW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_0a804adc-6355-464d-9d0e-916e3e274f34.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_hMQPey",
+        "image_hQ9Lgp",
+        "image_PaNdjW"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_tN9Unr": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "badminton-shoes",
@@ -197,6 +362,10 @@
     "hero_component_qJU7Kn",
     "multicolumn_GpUK3x",
     "featured_collection_PyVDGt",
+    "collage_9HVEKg",
+    "collage_ePetqe",
+    "multicolumn_4WpfNQ",
+    "collage_3UFJgH",
     "featured_collection_tN9Unr",
     "rich_text_UiVgmL"
   ]
