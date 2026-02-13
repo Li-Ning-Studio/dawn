@@ -21,7 +21,17 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"hrt\">\n  <img class=\"himg1\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n    <img class=\"himg2\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg3\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg4\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg5\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg6\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg7\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg8\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  </img>\n</div>\n<style>\n\n.hrt{\nposition:fixed;\nz-index:100;\n pointer-events: none;\n  cursor: default;\n}\n.hrt img{\n  overflow:hidden;\n  width:20px;\n  position: absolute;\n  top:80vh;\n   animation-name: myAnimation;\n  animation-duration: 20s;\n animation-iteration-count: infinite;\n  opacity:0;\nz-index:100;\n}\n@keyframes myAnimation {\n  0% {top: 80vh;\n    opacity:0;\n  }\n  50% {\n    opacity:0.7;\n  }\n  70%{\n    opacity:0;\n  }\n  100% {top: -10vh;\n  opacity:0;\n  }\n}\n\n.himg1{\n  left:10vw;\n   animation-delay: 5s;\n \n}.himg2{\n  left:20vw;\n   animation-delay: 17s;\n}.himg3{\n  left:30vw;\n   animation-delay: 15s;\n}.himg4{\n  left:40vw;\n   animation-delay:10s;\n}.himg5{\n  left:50vw;\n   animation-delay: 7s;\n}.himg6{\n  left:60vw;\n   animation-delay: 13s;\n}.himg7{\n  left:70vw;\n   animation-delay: 1s;\n}.himg8{\n  left:80vw;\n   animation-delay: 9s;\n}\n</style>",
+        "custom_liquid": "<div class=\"hrt\">\n  <img class=\"himg1\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n    <img class=\"himg2\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg3\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg4\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg5\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg6\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg7\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  <img class=\"himg8\" src=\"https://pngimg.com/d/balloon_PNG3392.png\">\n  </img>\n</div>\n<style>\n\n.hrt{\nposition:fixed;\nz-index:100;\n pointer-events: none;\n  cursor: default;\n}\n.hrt img{\n  overflow:hidden;\n  width:20px;\n  position: absolute;\n  top:80vh;\n   animation-name: myAnimation;\n  animation-duration: 20s;\n animation-iteration-count: infinite;\n  opacity:0;\nz-index:100;\n}\n@keyframes myAnimation {\n  0% {top: 80vh;\n    opacity:0;\n  }\n  50% {\n    opacity:0.7;\n  }\n  70%{\n    opacity:0;\n  }\n  100% {top: -10vh;\n  opacity:0;\n  }\n}\n\n.himg1{\n  left:10vw;\n   animation-delay: 5s;\n \n}.himg2{\n  left:20vw;\n   animation-delay: 17s;\n}.himg3{\n  left:30vw;\n   animation-delay: 15s;\n}.himg4{\n  left:40vw;\n   animation-delay:10s;\n}.himg5{\n  left:50vw;\n   animation-delay: 7s;\n}.himg6{\n  left:60vw;\n   animation-delay: 13s;\n}.himg7{\n  left:70vw;\n   animation-delay: 1s;\n}.himg8{\n  left:80vw;\n   animation-delay: 9s;\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_d9iNgN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n\n.btn, .button  {\n  font-family:Figtree, sans-serif;\nwidth:250px;\nmargin: 0 auto;\n  display: flex;\n  justify-content: center;\ncolumn-gap:5px;\n  align-items: center;\n  padding: 20px 22px 20px 22px;\n  box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;\n  background-color: #e8e8e8;\n  border-color: #ffe2e2;\n  border-style: solid;\n  border-width: 9px;\n  border-radius: 35px;\n  transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), \n  border-color 400ms ease-in-out,\n  background-color 400ms ease-in-out;\nfont-size: 1.3rem;\n}\n\n\n.title,.collage-wrapper-title, .hero-component__title, .related-products__heading{\ncolor:#ff3a59;\n}\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -33,10 +43,10 @@
       "settings": {
         "image": "shopify://shop_images/02_4d06ffb6-9a7b-4683-b9a3-1c62d22a0636.png",
         "mobile_image": "shopify://shop_images/02_R_87687d22-d5df-41e2-84fd-2848ecc8bb59.png",
-        "subtitle": "Need Content - 1",
-        "title": "Need Content - 2",
-        "description": "Need Content - 3",
-        "button_text": "Need Content - 4",
+        "subtitle": "Power pairs play harder.",
+        "title": "Better Together",
+        "description": "Celebrate your match on and off the court with coordinated performance gear.",
+        "button_text": "Shop Couple Exclusives",
         "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
@@ -73,7 +83,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Swipe right on your kind of court.",
+        "title": "Choose Your Vibe",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -83,10 +93,10 @@
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 56,
+        "padding_bottom": 68
       }
     },
     "multicolumn_XEj3WJ": {
@@ -141,7 +151,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Need Content - 5 Shop By Category",
+        "title": "Find Your Perfect Match",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -154,7 +164,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 80
       }
     },
     "hero_component_qiKtLE": {
@@ -170,7 +180,7 @@
         "link_to": "/",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 48
       }
     },
     "swipeable_products_LhXVrn": {
@@ -189,7 +199,7 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 48
       }
     },
     "collage_MzMCWB": {
@@ -228,7 +238,7 @@
         "card_styles": "product-card-wrapper",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 60
       }
     },
     "swipeable_products_8ETVje": {
@@ -261,7 +271,7 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 60
       }
     },
     "hero_component_wJmRGT": {
@@ -277,7 +287,7 @@
         "link_to": "/",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "swipeable_products_B6pDc7": {
@@ -351,14 +361,14 @@
       ],
       "name": "t:sections.collage.presets.name",
       "settings": {
-        "heading": "Need Content",
+        "heading": "",
         "heading_size": "h1",
         "desktop_layout": "left",
         "mobile_layout": "column",
         "card_styles": "product-card-wrapper",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 88
       }
     },
     "hero_component_yNr6Tt": {
@@ -367,49 +377,94 @@
       "settings": {
         "image": "shopify://shop_images/06_41fb6ed7-eeb3-4ad1-81ff-706ad93baa9e.png",
         "mobile_image": "shopify://shop_images/06_R_77937c5d-37fa-4d8c-94b1-03a11cfcd919.png",
-        "subtitle": "Need Content",
-        "title": "Need Content",
-        "description": "Need Content",
-        "button_text": "Need Content",
+        "subtitle": "Built for power pairs on and off the court.",
+        "title": "Wear Your Match",
+        "description": "Performance apparel designed for couples who train, play, and grow together.",
+        "button_text": "Shop Couple Styles",
         "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "featured_collection_dbLMfq": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "swipeable_products_XEtnND": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
       "settings": {
-        "collection": "apparels",
-        "products_to_show": 4,
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "solid",
+        "title": "Fits for Every Vibe",
+        "products": [
+          "air-crush-t-shirt",
+          "bladefire-t-shirt",
+          "burnout-t-shirt",
+          "celestial-t-shirt",
+          "chrome-t-shirt",
+          "ace-short",
+          "draygo-t-shirt",
+          "core-t-shirt",
+          "court-t-shirt",
+          "court-king-t-shirt",
+          "everyday-polo-t-shirt",
+          "ember-shorts"
+        ],
+        "show_color_variants": false,
         "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_BANGfg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ykGkaN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Love at First Price",
+            "heading_size": "h0"
+          }
+        },
+        "text_fxdGbJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The only red flag here is the discount tag.</p>"
+          }
+        },
+        "button_atdcKp": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "shopify://pages/pro-series",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ykGkaN",
+        "text_fxdGbJ",
+        "button_atdcKp"
+      ],
+      "custom_css": [
+        "div {background: #f8e4e9;}",
+        "h2 {color: #ff3a59;}",
+        "a {color: #fff; border: none; border-radius: 12px; background: #ff3a59; width: 200px;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 72
       }
     }
   },
   "order": [
     "main",
     "custom_liquid_UCPty7",
+    "custom_liquid_d9iNgN",
     "hero_component_CywM7V",
     "multicolumn_bGeaCP",
     "multicolumn_XEj3WJ",
@@ -423,6 +478,7 @@
     "swipeable_products_GnKRVw",
     "collage_JMJ7V9",
     "hero_component_yNr6Tt",
-    "featured_collection_dbLMfq"
+    "swipeable_products_XEtnND",
+    "rich_text_BANGfg"
   ]
 }

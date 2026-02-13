@@ -17,6 +17,16 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_y6kULM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n\n.btn, .button  {\n  font-family:Figtree, sans-serif;\nwidth:250px;\nmargin: 0 auto;\n  display: flex;\n  justify-content: center;\ncolumn-gap:5px;\n  align-items: center;\n  padding: 20px 22px 20px 22px;\n  box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;\n  background-color: #e8e8e8;\n  border-color: #ffe2e2;\n  border-style: solid;\n  border-width: 9px;\n  border-radius: 35px;\n  transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), \n  border-color 400ms ease-in-out,\n  background-color 400ms ease-in-out;\nfont-size: 1.3rem;\n}\n\n\n.title,.collage-wrapper-title, .hero-component__title, .related-products__heading{\ncolor:#ff3a59;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_UCPty7": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -34,13 +44,13 @@
         "image": "shopify://shop_images/03_ae104e9a-0f31-4179-b4d7-42262494d5e0.png",
         "mobile_image": "shopify://shop_images/03_R_1d34844f-8155-455a-87ba-dc531d383709.png",
         "subtitle": "Need Content - 1",
-        "title": "Need Content - 2",
-        "description": "Need Content - 3",
-        "button_text": "Need Content - 4",
+        "title": "The Hottest Rally of the Season",
+        "description": "Your court crush just got more affordable.",
+        "button_text": "Find the one ❤️",
         "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 52
       }
     },
     "multicolumn_bGeaCP": {
@@ -73,7 +83,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Need Content - 4 Shop By Sport",
+        "title": "Choose your kind of court.",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -83,10 +93,10 @@
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 76
       }
     },
     "multicolumn_XEj3WJ": {
@@ -141,7 +151,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Need Content - 5 Shop By Category",
+        "title": "Find Your Type",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -154,7 +164,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 80
       }
     },
     "hero_component_qiKtLE": {
@@ -177,7 +187,7 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Need Content",
+        "title": "The right tension changes everything.",
         "products": [
           "predator-pro-5u",
           "flutter-ff-zoom",
@@ -188,8 +198,8 @@
         ],
         "show_color_variants": false,
         "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 36,
+        "padding_bottom": 56
       }
     },
     "collage_MzMCWB": {
@@ -228,14 +238,14 @@
         "card_styles": "product-card-wrapper",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 68
       }
     },
     "swipeable_products_8ETVje": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Need Content",
+        "title": "Find a pair that keeps up with you",
         "products": [
           "phenom",
           "raze",
@@ -245,14 +255,14 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 56
       }
     },
     "swipeable_products_Ufzxc8": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Need Content",
+        "title": "The only baggage worth carrying.",
         "products": [
           "cosmogear-max-kit-bag",
           "court-vertex-kit-bag",
@@ -261,7 +271,7 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 72
       }
     },
     "hero_component_wJmRGT": {
@@ -277,14 +287,14 @@
         "link_to": "/",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 44
       }
     },
     "swipeable_products_B6pDc7": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Need Content",
+        "title": "It’s not the size, it’s the precision.",
         "products": [
           "spirit-x-flow-blast-extend",
           "zephyr-20-extend",
@@ -304,7 +314,22 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 56
+      }
+    },
+    "swipeable_products_GnKRVw": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Find a pair that keeps up with you",
+        "products": [
+          "court-sonic-pbx",
+          "court-step-pbx"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 40
       }
     },
     "multicolumn_WXWcVR": {
@@ -349,23 +374,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "swipeable_products_GnKRVw": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Need Content",
-        "products": [
-          "court-sonic-pbx",
-          "court-step-pbx"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 4,
+        "padding_bottom": 88
       }
     },
     "hero_component_yNr6Tt": {
@@ -374,48 +384,93 @@
       "settings": {
         "image": "shopify://shop_images/06_41fb6ed7-eeb3-4ad1-81ff-706ad93baa9e.png",
         "mobile_image": "shopify://shop_images/06_R_77937c5d-37fa-4d8c-94b1-03a11cfcd919.png",
-        "subtitle": "Need Content",
-        "title": "Need Content",
-        "description": "Need Content",
-        "button_text": "Need Content",
+        "subtitle": "Own your game. Own your style.",
+        "title": "Strong Alone",
+        "description": "Standout performance wear made for independent athletes",
+        "button_text": "Shop Solo Styles",
         "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "featured_collection_dbLMfq": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "swipeable_products_LW3EyC": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
       "settings": {
-        "collection": "apparels",
-        "products_to_show": 4,
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "solid",
+        "title": "Fits for Every Vibe",
+        "products": [
+          "air-crush-t-shirt",
+          "bladefire-t-shirt",
+          "burnout-t-shirt",
+          "celestial-t-shirt",
+          "chrome-t-shirt",
+          "ace-short",
+          "draygo-t-shirt",
+          "core-t-shirt",
+          "court-t-shirt",
+          "court-king-t-shirt",
+          "everyday-polo-t-shirt",
+          "ember-shorts"
+        ],
+        "show_color_variants": false,
         "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 68
+      }
+    },
+    "rich_text_8eTKq8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_p3eqU9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Love at First Price",
+            "heading_size": "h0"
+          }
+        },
+        "text_XWbwhx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The only red flag here is the discount tag.</p>"
+          }
+        },
+        "button_iccVMg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "shopify://pages/pro-series",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_p3eqU9",
+        "text_XWbwhx",
+        "button_iccVMg"
+      ],
+      "custom_css": [
+        "div {background: #f8e4e9;}",
+        "h2 {color: #ff3a59;}",
+        "a {color: #fff; border: none; border-radius: 12px; background: #ff3a59; width: 200px;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 72
       }
     }
   },
   "order": [
     "main",
+    "custom_liquid_y6kULM",
     "custom_liquid_UCPty7",
     "hero_component_CywM7V",
     "multicolumn_bGeaCP",
@@ -430,6 +485,7 @@
     "swipeable_products_GnKRVw",
     "multicolumn_WXWcVR",
     "hero_component_yNr6Tt",
-    "featured_collection_dbLMfq"
+    "swipeable_products_LW3EyC",
+    "rich_text_8eTKq8"
   ]
 }
