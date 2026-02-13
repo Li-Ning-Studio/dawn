@@ -47,20 +47,20 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Hundred's Official India Tour is coming to Gujarat!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Hundred's Official India Tour is coming to Gujarat!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 56,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     },
     "custom_liquid_wEr9EG": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n  <p class=\"longcopy\">Get ready to <span class=\"highlight\">experience  our Professional Rackets and Shoes </span> like never before!<br> Join us for <span class=\"highlight\"> Hundred's India Tour </span> and be a part of the action.\n  </p>\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n   <p class=\"longcopy\">Get ready to experience  our <span class=\"highlight\">Professional Rackets and Shoes </span> like never before!<br></p> <!--Join us for <span class=\"highlight\"> Hundred's India Tour </span> and be a part of the action.\n  </p> -->\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 40,
-        "padding_bottom": 44
+        "padding_top": 12,
+        "padding_bottom": 60
       }
     },
     "multirow_RFTCVa": {
@@ -108,31 +108,21 @@
     "image_with_text_UxtnK3": {
       "type": "image-with-text",
       "blocks": {
-        "heading_D6QCdV": {
+        "heading_DBhqNa": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Event </strong>Schedule",
+            "heading": "Join us for <strong>Hundred's India Tour</strong> and be a part of the action.",
             "heading_size": "h1"
-          }
-        },
-        "text_DTVHwA": {
-          "type": "text",
-          "settings": {
-            "text": "<h4><strong>SURAT - Friday, 27th February 2026 </strong><br/><br/>Yash Tennis Academy,<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/dG1j44W67mDGZCCp6\" target=\"_blank\" title=\"https://maps.app.goo.gl/dG1j44W67mDGZCCp6\">View Location</a><br/><br/>Khelghar Sports Arena | Khelghar Sports Store,<br/>(3:00 PM - 5:00PM) - <a href=\"https://maps.app.goo.gl/rCzhSuVdkEtPP4kCA\" target=\"_blank\" title=\"https://maps.app.goo.gl/rCzhSuVdkEtPP4kCA\">View Location</a><br/><br/><strong>BARODA - Saturday, 28th February 2026</strong><br/><br/>Baroda Sports Arena, <br/>(7:00 AM - 9:00 AM) <a href=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\" target=\"_blank\" title=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\">View Location</a></h4><h4>Baroda Sports Arena, <br/>(4:00 PM - 6:00 PM) <a href=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\" target=\"_blank\" title=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\">View Location</a></h4><h4><strong>AHMEDABAD - Sunday, 1st March 2026</strong><br/><br/>Shuttle Empire Badminton Academy, <br/>(9:00 AM - 11:00 AM) <a href=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\" target=\"_blank\" title=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\">View Location</a></h4><h4>Shuttle Empire Badminton Academy,<br/>(5:00 PM - 7:00 PM) <a href=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\" target=\"_blank\" title=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\">View Location</a></h4>",
-            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_D6QCdV",
-        "text_DTVHwA"
+        "heading_DBhqNa"
       ],
       "custom_css": [
-        "a {color: orange;}",
-        "img {padding: 0 20px;}",
-        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "strong {color: #fd524e;}",
-        "@media screen and (min-width: 750px) {h2 {font-size: 5rem; } h4 {font-size: 2rem; } .image-with-text__content {margin-left: 10%; }}"
+        "strong {color: rgba(255, 255, 255, 0.95);}",
+        "h2 {font-size: 2rem; font-weight: 800; letter-spacing: 0px; line-height: 145%; color: rgba(255, 255, 255, 0.5);}",
+        "@media screen and (min-width: 750px) {h2 {font-size: 3rem; }}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -148,7 +138,68 @@
         "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 40
+      }
+    },
+    "multicolumn_x6JCif": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Jpyc4z": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>SURAT</strong>",
+            "text": "<h4><strong>Friday, 27th February 2026</strong></h4><h4>Yash Tennis Academy,<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/dG1j44W67mDGZCCp6\" target=\"_blank\" title=\"https://maps.app.goo.gl/dG1j44W67mDGZCCp6\">View Location</a><br/><br/>Khelghar Sports Arena | Khelghar Sports Store,<br/>(3:00 PM - 5:00PM) - <a href=\"https://maps.app.goo.gl/rCzhSuVdkEtPP4kCA\" target=\"_blank\" title=\"https://maps.app.goo.gl/rCzhSuVdkEtPP4kCA\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gKA4jw": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>BARODA</strong>",
+            "text": "<h4><strong>Saturday, 28th February 2026</strong></h4><h4>Baroda Sports Arena,<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\" target=\"_blank\" title=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\">View Location</a></h4><h4>Baroda Sports Arena,<br/>(4:00 PM - 6:00 PM) - <a href=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\" target=\"_blank\" title=\"https://maps.app.goo.gl/3xTFffZC918bGbXY7\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Ch8G9U": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>AHMEDABAD</strong>",
+            "text": "<h4><strong>Sunday, 1st March 2026</strong></h4><h4>Shuttle Empire Badminton Academy,<br/>(9:00 AM - 11:00 AM) - <a href=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\" target=\"_blank\" title=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\">View Location</a></h4><h4>Shuttle Empire Badminton Academy,<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\" target=\"_blank\" title=\"https://maps.app.goo.gl/A2jaWQME16Bkct8Z9\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Jpyc4z",
+        "column_gKA4jw",
+        "column_Ch8G9U"
+      ],
+      "custom_css": [
+        "a {color: orange;}",
+        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {color: #f69e24;}",
+        "h4 strong {color: grey;}",
+        ".multicolumn-card {background: #170c02; background: linear-gradient( 271deg, rgba(23, 12, 2, 1) 0%, rgba(9, 9, 9, 1) 34% );}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Event </strong>Schedule",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 56
       }
     },
     "rich_text_YUaPWT": {
@@ -172,7 +223,7 @@
             "form_id": "869449",
             "text_color": "#ffffff",
             "button_background_color": "#ffa300",
-            "button_label_color": "#000000",
+            "button_label_color": "#121212",
             "links_color": "#1878b9",
             "errors_color": "#e02229",
             "text_alignment": "center",
@@ -326,6 +377,7 @@
     "custom_liquid_wEr9EG",
     "multirow_RFTCVa",
     "image_with_text_UxtnK3",
+    "multicolumn_x6JCif",
     "rich_text_YUaPWT",
     "1757582427791457ea",
     "collapsible_content_ywGM93",
