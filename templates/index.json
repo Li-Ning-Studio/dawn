@@ -9,6 +9,26 @@
  */
 {
   "sections": {
+    "hero_component_KFMqwA": {
+      "type": "hero-component",
+      "disabled": true,
+      "custom_css": [
+        ".hero-component__title {color: #ff3050;}"
+      ],
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/07_e183eea9-edab-40e9-9dc1-f586e6e481ad.png",
+        "mobile_image": "shopify://shop_images/07_R_7985c6d9-a550-4ad3-b804-ca4315f8b0bc.png",
+        "subtitle": "Match Made on Court & In Life",
+        "title": "Love Meets the Leaderboard.",
+        "description": "Double the love. Double the savings.",
+        "button_text": "Find Your Match ❤️",
+        "link_to": "shopify://pages/match-made-sale",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
     "hero_component_G3BHfh": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -481,54 +501,6 @@
         "padding_bottom": 16
       }
     },
-    "collection_list_7JkihE": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_c9RUyB": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "cricket-kit-bags"
-          }
-        },
-        "featured_collection_XKPimG": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "insoles"
-          }
-        },
-        "featured_collection_wA7wV3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "badminton-shuttlecocks"
-          }
-        },
-        "featured_collection_3VcG6M": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "accessories"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_c9RUyB",
-        "featured_collection_XKPimG",
-        "featured_collection_wA7wV3",
-        "featured_collection_3VcG6M"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Power Your Play",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "hero_component_NJbR8D": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -605,6 +577,7 @@
     }
   },
   "order": [
+    "hero_component_KFMqwA",
     "hero_component_G3BHfh",
     "hero_video_component_FgLawM",
     "swipeable_products_q8JBYr",
@@ -625,7 +598,6 @@
     "swipeable_products_Cm4fE8",
     "hero_component_Dd4CVH",
     "swipeable_products_HyzyGP",
-    "collection_list_7JkihE",
     "hero_component_NJbR8D",
     "swipeable_products_9k7FUW",
     "hero_component_aTVWXK",
