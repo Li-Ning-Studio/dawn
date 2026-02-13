@@ -50,9 +50,9 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/1_aceb1379-e2eb-4ae4-85a8-c8a41219b6cd.png",
-            "title": "Need Content - 6",
+            "title": "Couple Goals Collection",
             "text": "",
-            "link_label": "Need Content - 7",
+            "link_label": "Shop Couple Bundles",
             "link": "shopify://pages/match-made-couples"
           }
         },
@@ -60,9 +60,9 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/2_3965651c-a29b-4a98-80a6-3eb7d7546115.png",
-            "title": "Need Content - 8",
+            "title": "Single & Savage",
             "text": "",
-            "link_label": "Need Content - 9",
+            "link_label": "Shop Solo Deals",
             "link": "shopify://pages/match-made-singles"
           }
         }
@@ -81,7 +81,7 @@
         "button_link": "",
         "columns_desktop": 2,
         "column_alignment": "center",
-        "background_style": "none",
+        "background_style": "primary",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -197,6 +197,16 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_66m6mt": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<a href=\"\" class=\"btn\">  Unlock Couple Offers\n   <svg height=\"32\" width=\"32\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H24V24H0z\" fill=\"none\"></path><path d=\"M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z\"></path></svg>\n</a>\n<style>\n.section-template--26530421539109__custom_liquid_66m6mt-padding{\ndisplay:flex;\njustify-content:center;\n}\n.btn, .button  {\n  font-family:Figtree, sans-serif;\nwidth:250px;\nmargin: 0 auto;\n  display: flex;\n  justify-content: center;\ncolumn-gap:5px;\n  align-items: center;\n  padding: 20px 22px 20px 22px;\n  box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;\n  background-color: #e8e8e8;\n  border-color: #ffe2e2;\n  border-style: solid;\n  border-width: 9px;\n  border-radius: 35px;\n  transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), \n  border-color 400ms ease-in-out,\n  background-color 400ms ease-in-out;\nfont-size: 1.3rem;\n}\n\n@keyframes movingBorders {\n  0% {\n    border-color: #fce4e4;\n  }\n\n  50% {\n    border-color: #ffd8d8;\n  }\n\n  90% {\n    border-color: #fce4e4;\n  }\n}\n\n.btn:hover {\n  background-color: #eee;\n  transform: scale(105%);\n  animation: movingBorders 3s infinite;\n}\n\n.btnsvg {\n  fill: rgb(255, 110, 110);\n}\n\n@keyframes beatingHeart {\n  0% {\n    transform: scale(1);\n  }\n\n  15% {\n    transform: scale(1.15);\n  }\n\n  30% {\n    transform: scale(1);\n  }\n\n  45% {\n    transform: scale(1.15);\n  }\n\n  60% {\n    transform: scale(1);\n  }\n}\n\n.btn:hover svg {\n  transform: scale(105%);\n  border-color: #ffd8d8;\n  animation: beatingHeart 1.2s infinite;\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_4WpfNQ": {
       "type": "multicolumn",
       "blocks": {
@@ -282,6 +292,16 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_BUtB9B": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<a href=\"\" class=\"btn\"> Claim Your Solo Offer\n   <svg height=\"32\" width=\"32\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H24V24H0z\" fill=\"none\"></path><path d=\"M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z\"></path></svg>\n</a>\n<style>\n.section-template--26530421539109__custom_liquid_BUtB9B-padding{\ndisplay:flex;\njustify-content:center;\n}\n.btn {\ntext-decoration:none;\ncolor: black;\n  font-family:Figtree, sans-serif;\n  display: flex;\n  justify-content: center;\ncolumn-gap:5px;\n  align-items: center;\n  padding: 20px 22px 20px 22px;\n  box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;\n  background-color: #e8e8e8;\n  border-color: #ffe2e2;\n  border-style: solid;\n  border-width: 9px;\n  border-radius: 35px;\n  transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), \n  border-color 400ms ease-in-out,\n  background-color 400ms ease-in-out;\n  word-spacing: -2px;\n}\n\n@keyframes movingBorders {\n  0% {\n    border-color: #fce4e4;\n  }\n\n  50% {\n    border-color: #ffd8d8;\n  }\n\n  90% {\n    border-color: #fce4e4;\n  }\n}\n\n.btn:hover {\n  background-color: #eee;\n  transform: scale(105%);\n  animation: movingBorders 3s infinite;\n}\n\n.btnsvg {\n  fill: rgb(255, 110, 110);\n}\n\n@keyframes beatingHeart {\n  0% {\n    transform: scale(1);\n  }\n\n  15% {\n    transform: scale(1.15);\n  }\n\n  30% {\n    transform: scale(1);\n  }\n\n  45% {\n    transform: scale(1.15);\n  }\n\n  60% {\n    transform: scale(1);\n  }\n}\n\n.btn:hover svg {\n  transform: scale(105%);\n  border-color: #ffd8d8;\n  animation: beatingHeart 1.2s infinite;\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection_tN9Unr": {
       "type": "featured-collection",
       "disabled": true,
@@ -332,7 +352,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop All",
-            "button_link": "",
+            "button_link": "shopify://pages/pro-series",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -344,6 +364,11 @@
         "heading_fyMz4X",
         "text_pywPKz",
         "button_TNqCWh"
+      ],
+      "custom_css": [
+        "div {background: #f8e4e9;}",
+        "h2 {color: #ff3a59;}",
+        "a {color: #fff; border: none; border-radius: 12px; background: #ff3a59; width: 200px;}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -364,8 +389,10 @@
     "featured_collection_PyVDGt",
     "collage_9HVEKg",
     "collage_ePetqe",
+    "custom_liquid_66m6mt",
     "multicolumn_4WpfNQ",
     "collage_3UFJgH",
+    "custom_liquid_BUtB9B",
     "featured_collection_tN9Unr",
     "rich_text_UiVgmL"
   ]
