@@ -1,5 +1,11 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign title_block = section.blocks | where: 'type', 'title' | first
+  assign mobile_image = article.metafields.custom.mobile_image.value | default: article.metafields.custom.mobile_image
+  assign hero_has_title = false
+-%}
+
 <article class="article-template color-{{ section.settings.color_scheme }} gradient">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -10,38 +16,68 @@
       {%- when 'featured_image' -%}
         {%- if article.image -%}
           <div
-            class="article-template__hero-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+            class="article-hero article-template__hero-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
             {{ block.shopify_attributes }}
           >
+            {%- if title_block != blank -%}
+              <div class="article-hero__title-wrapper">
+                <h1 class="article-template__title article-hero__title">
+                  {{ article.title | escape }}
+                </h1>
+                {%- if title_block.settings.blog_show_author -%}
+                  <span class="caption-with-letter-spacing article-hero__meta">
+                    <span>{{ article.author }}</span>
+                  </span>
+                {%- endif -%}
+                {%- if title_block.settings.blog_show_date -%}
+                  <div class="article-hero__date">
+                    {{- article.published_at | time_tag: format: 'date' -}}
+                  </div>
+                {%- endif -%}
+              </div>
+              {%- assign hero_has_title = true -%}
+            {%- endif -%}
+
             <div
-              class="article-template__hero-{{ block.settings.image_height }} media"
-              {% if block.settings.image_height == 'adapt' and article.image %}
-                style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
+              class="article-hero__media media"
+              style="
+                --article-hero-ratio-desktop: {{ article.image.aspect_ratio }};
+                --article-hero-ratio-mobile: {{ mobile_image.aspect_ratio | default: article.image.aspect_ratio }};
+              "
             >
-              <img
-                srcset="
-                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
-                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
-                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
-                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
-                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
-                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
-                  {{ article.image | image_url }} {{ article.image.width }}w
-                "
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                src="{{ article.image | image_url: width: 1100 }}"
-                loading="eager"
-                fetchpriority="high"
-                width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
-                alt="{{ article.image.alt | escape }}"
-              >
+              <picture>
+                {%- if mobile_image != blank -%}
+                  <source
+                    media="(max-width: 749px)"
+                    srcset="{{ mobile_image | image_url: width: 750 }} 750w, {{ mobile_image | image_url: width: 1500 }} 1500w"
+                    sizes="100vw"
+                  >
+                {%- endif -%}
+                <source
+                  media="(min-width: 750px)"
+                  srcset="{{ article.image | image_url: width: 1920 }} 1920w, {{ article.image | image_url: width: 2560 }} 2560w, {{ article.image | image_url: width: 3840 }} 3840w"
+                  sizes="100vw"
+                >
+                {{
+                  article.image
+                  | image_url: width: 3840
+                  | image_tag:
+                    class: 'article-hero__image',
+                    sizes: '100vw',
+                    width: article.image.width,
+                    height: article.image.height,
+                    loading: 'eager',
+                    fetchpriority: 'high'
+                }}
+              </picture>
             </div>
           </div>
         {%- endif -%}
 
       {%- when 'title' -%}
+        {%- if hero_has_title -%}
+          {%- continue -%}
+        {%- endif -%}
         <header
           class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
@@ -51,15 +87,15 @@
           >
             {{ article.title | escape }}
           </h1>
-          {%- if block.settings.blog_show_date -%}
-            <span class="circle-divider caption-with-letter-spacing color-foreground">
-              {{- article.published_at | time_tag: format: 'date' -}}
-            </span>
-          {%- endif -%}
           {%- if block.settings.blog_show_author -%}
             <span class="caption-with-letter-spacing color-foreground">
               <span>{{ article.author }}</span>
             </span>
+          {%- endif -%}
+          {%- if block.settings.blog_show_date -%}
+            <div class="article-hero__date">
+              {{- article.published_at | time_tag: format: 'date' -}}
+            </div>
           {%- endif -%}
         </header>
 

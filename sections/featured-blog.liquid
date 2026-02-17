@@ -68,10 +68,18 @@
                 style="--animation-order: {{ forloop.index }};"
               {% endif %}
             >
+              {% liquid
+                assign article_ratio = 1.66
+                if section.settings.image_ratio == 'adapt' and article.image
+                  assign article_ratio = article.image.aspect_ratio
+                elsif section.settings.image_ratio == '16-9'
+                  assign article_ratio = 1.7778
+                endif
+              %}
               {% render 'article-card',
                 blog: section.settings.blog,
                 article: article,
-                media_aspect_ratio: 1.66,
+                media_aspect_ratio: article_ratio,
                 show_image: section.settings.show_image,
                 show_date: section.settings.show_date,
                 show_author: section.settings.show_author,
@@ -278,6 +286,22 @@
       "id": "show_image",
       "default": true,
       "label": "t:sections.featured-blog.settings.show_image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.featured-blog.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "16-9",
+          "label": "t:sections.featured-blog.settings.image_ratio.options__2.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.featured-blog.settings.image_ratio.label"
     },
     {
       "type": "checkbox",

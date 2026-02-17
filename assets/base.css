@@ -2621,8 +2621,8 @@ input[type='checkbox'] {
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 28px;
+  width: 28px;
   fill: none;
   vertical-align: middle;
 }
@@ -2871,11 +2871,14 @@ details[open] > .mega-menu__content {
 .header__menu-item {
   padding: 1.5rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.78);
+  color: rgba(var(--color-foreground), 0.85);
   border-top: 2.7px solid transparent;
   border-bottom: 2.7px solid transparent;
   transition: border-color 0.2s ease;
   height: 100%;
+  font-size: 15.5px;
+  font-weight: 500;
+  /* letter-spacing: -0.1px; */
 }
 
 .header__menu-item:hover {
@@ -3252,35 +3255,11 @@ details-disclosure > details {
   }
 }
 
-/* Global lean scrollbar styling */
-/* Applies across the site for a subtle, visible scrollbar */
-/* Firefox */
+/* Hide scrollbars globally for consistent cross-OS appearance */
 html,
 body,
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(var(--color-foreground), 0.45) rgba(var(--color-foreground), 0.08);
-}
-
-/* WebKit (Chrome, Safari, Edge Chromium) */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-foreground), 0.45);
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(var(--color-foreground), 0.08);
-  border-radius: 8px;
-}
-
-/* Ensure sliders show the lean scrollbar (override component default) */
-.slider::-webkit-scrollbar {
-  display: block !important;
 }
 
 .rte:after {

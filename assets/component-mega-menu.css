@@ -45,12 +45,12 @@
   text-decoration: none;
   transition: all var(--duration-short) ease;
   word-wrap: break-word;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .mega-menu__link--level-2 {
-  color: rgba(var(--color-foreground), 0.65);
-
-  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.5);
 }
 .header--top-center .mega-menu__list {
   display: flex;
