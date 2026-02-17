@@ -24,23 +24,35 @@
       </h1>
 
       <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-        {%- for article in blog.articles -%}
-          <div
-            class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            {%- render 'article-card',
-              article: article,
-              media_height: section.settings.image_height,
-              media_aspect_ratio: article.image.aspect_ratio,
-              show_image: section.settings.show_image,
-              show_date: section.settings.show_date,
-              show_author: section.settings.show_author,
-              show_excerpt: true
-            -%}
+      {%- for article in blog.articles -%}
+        <div
+          class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {%- liquid
+            assign article_ratio = 1.66
+            assign media_height = section.settings.image_height
+            if section.settings.image_ratio == 'adapt' and article.image
+              assign article_ratio = article.image.aspect_ratio
+            elsif section.settings.image_ratio == '16-9'
+              assign article_ratio = 1.7778
+            endif
+            if section.settings.image_ratio != 'adapt'
+              assign media_height = 'adapt'
+            endif
+          -%}
+          {%- render 'article-card',
+            article: article,
+            media_height: media_height,
+            media_aspect_ratio: article_ratio,
+            show_image: section.settings.show_image,
+            show_date: section.settings.show_date,
+            show_author: section.settings.show_author,
+            show_excerpt: true
+          -%}
           </div>
         {%- endfor -%}
       </div>
@@ -109,6 +121,22 @@
       ],
       "default": "medium",
       "label": "t:sections.main-blog.settings.image_height.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.featured-blog.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "16-9",
+          "label": "t:sections.featured-blog.settings.image_ratio.options__2.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.featured-blog.settings.image_ratio.label"
     },
     {
       "type": "checkbox",
