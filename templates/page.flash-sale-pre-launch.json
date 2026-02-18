@@ -27,6 +27,17 @@
         "padding_bottom": 0
       }
     },
+    "countdown_timer_d4FdMK": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Flash Sale Ends Soon!",
+        "end_time": "2026-02-28",
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1) 100%)",
+        "text_color": "#ffffff",
+        "padding_top": 16
+      }
+    },
     "175696303696d1be70": {
       "type": "apps",
       "blocks": {
@@ -76,6 +87,7 @@
   "order": [
     "main",
     "custom_liquid_grrEt8",
+    "countdown_timer_d4FdMK",
     "175696303696d1be70",
     "hero_component_7Bjgy6"
   ]
