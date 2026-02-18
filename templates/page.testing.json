@@ -17,207 +17,130 @@
         "padding_bottom": 28
       }
     },
-    "hero_component_hyb6Vp": {
+    "hero_component_n48tdp": {
       "type": "hero-component",
-      "custom_css": [
-        "p,h3 {color: white !important;}"
-      ],
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/1_333d8031-dfc1-42b7-bbd8-3d82e79f8c50.jpg",
-        "mobile_image": "shopify://shop_images/2_8002c126-1268-4290-8dcd-96043d0b50ff.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_AEUzw4": {
-      "type": "swipeable-products",
-      "custom_css": [
-        "svg {color: black;}",
-        ".card__media {background: #000;}",
-        "img {background: #383636; background: radial-gradient( circle, rgba(56, 54, 54, 1) 0%, rgba(0, 0, 0, 1) 100% );}"
-      ],
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Available in 4 Colors",
-        "products": [
-          "hyper-court"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_CnH8qR": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Main_L_f30fe209-0bef-4dcf-802c-4d56d60f84be.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 36
       }
     },
-    "multicolumn_3dBRWK": {
+    "countdown_timer_Uni3mg": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Sale Starts in",
+        "end_time": "2026-03-01 00:00",
+        "background": "linear-gradient(0deg, rgba(73, 73, 73, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+        "text_color": "#ffffff",
+        "padding_top": 38
+      }
+    },
+    "multicolumn_CtQqPP": {
       "type": "multicolumn",
       "blocks": {
-        "column_Py9NMN": {
+        "column_iJPp6y": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_1_93b37be7-28c2-4e74-be93-eafefa629623.png",
-            "title": "X Cushion Midsole",
-            "text": "<p>Featuring enhanced energy return and impact absorption, the X Cushion midsole ensures you stay quick on your feet while minimizing fatigue. Every jump and landing is smoother and more efficient.</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_fpBXdR": {
+        "column_wQFTAp": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_3_378ff903-9f5e-4905-becd-b2ffef1b569c.png",
-            "title": "KPU Shield Upper",
-            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_nFJp83": {
+        "column_39z73f": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_2_b1324f88-2e42-4813-95a2-53b24541a2bc.png",
-            "title": "Heel Brace",
-            "text": "<p>The built-in heel brace secures your foot during aggressive moves, providing extra stability and reducing the risk of strain, so you can focus on your game without hesitation.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_k9iH4y": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/A_4_686837af-2a39-4b8b-80e7-b8276449545d.png",
-            "title": "Active Grip Outsole",
-            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_Py9NMN",
-        "column_fpBXdR",
-        "column_nFJp83",
-        "column_k9iH4y"
+        "column_iJPp6y",
+        "column_wQFTAp",
+        "column_39z73f"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Features",
+        "title": "Multicolumn",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "",
+        "button_label": "Button label",
         "button_link": "",
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "background_style": "primary",
+        "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "multirow_4Tdb7X": {
-      "type": "multirow",
+    "1771400369087e8f4d": {
+      "type": "apps",
       "blocks": {
-        "row_KFbHVr": {
-          "type": "row",
+        "forms_inline_JYWRTa": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "image": "shopify://shop_images/A_1_93b37be7-28c2-4e74-be93-eafefa629623.png",
-            "caption": "",
-            "heading": "X Cushion Midsole",
-            "text": "<p>Featuring enhanced energy return and impact absorption, the X Cushion midsole ensures you stay quick on your feet while minimizing fatigue. Every jump and landing is smoother and more efficient.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_Na7wDK": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/A_2_b1324f88-2e42-4813-95a2-53b24541a2bc.png",
-            "caption": "",
-            "heading": "Heel Brace",
-            "text": "<p>The built-in heel brace secures your foot during aggressive moves, providing extra stability and reducing the risk of strain, so you can focus on your game without hesitation.</p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "row_3cgeV9": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/A_3_378ff903-9f5e-4905-becd-b2ffef1b569c.png",
-            "caption": "",
-            "heading": "KPU Shield Upper",
-            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "row_fiYi7z": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/A_4_686837af-2a39-4b8b-80e7-b8276449545d.png",
-            "caption": "",
-            "heading": "Active Grip Outsole",
-            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "form_id": "",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
           }
         }
       },
       "block_order": [
-        "row_KFbHVr",
-        "row_Na7wDK",
-        "row_3cgeV9",
-        "row_fiYi7z"
+        "forms_inline_JYWRTa"
       ],
-      "disabled": true,
-      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "row_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "include_margins": true
+      }
+    },
+    "custom_liquid_wGDhbK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<h1 data-text= \"Stay Tuned!\">\n</h1>\n<style>\n\nh1{\n  font-family: 'Teko', sans-serif;\n  text-transform: uppercase;\n  font-size: 10rem;\n  text-align: center;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  margin: 0;\n  background: white;\n  position: relative;\n  background: #fff;\n  color: #e0dbd6;\n}\n\nh1:before{\n  content: attr(data-text);\n  position: ;\n  background: #1c1c1c;\n  -webkit-background-clip: text;\n  color: transparent;\n  background-size: 100% 90%;\n  line-height: 0.9;\n  clip-path: ellipse(120px 120px at -2.54% -9.25%);\n  animation: swing 5s infinite;\n  animation-direction: alternate;\n}\n\n@keyframes swing{\n  0%{\n     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)\n    clip-path: ellipse(120px 120px at -2.54% -9.25%)\n  }\n  50%{\n    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);\n    clip-path: ellipse(120px 120px at 49.66% 64.36%);\n\n  }\n  100%{\n     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);\n    clip-path: ellipse(120px 120px at 102.62% -1.61%);\n  }\n}\n\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "hero_component_hyb6Vp",
-    "swipeable_products_AEUzw4",
-    "hero_component_CnH8qR",
-    "multicolumn_3dBRWK",
-    "multirow_4Tdb7X"
+    "hero_component_n48tdp",
+    "countdown_timer_Uni3mg",
+    "multicolumn_CtQqPP",
+    "1771400369087e8f4d",
+    "custom_liquid_wGDhbK"
   ]
 }
