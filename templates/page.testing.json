@@ -31,6 +31,16 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_fRpeDg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "countdown_timer_Uni3mg": {
       "type": "countdown-timer",
       "name": "Countdown Timer",
@@ -96,34 +106,6 @@
         "padding_bottom": 36
       }
     },
-    "1771400369087e8f4d": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_JYWRTa": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_JYWRTa"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "custom_liquid_wGDhbK": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -138,9 +120,9 @@
   "order": [
     "main",
     "hero_component_n48tdp",
+    "custom_liquid_fRpeDg",
     "countdown_timer_Uni3mg",
     "multicolumn_CtQqPP",
-    "1771400369087e8f4d",
     "custom_liquid_wGDhbK"
   ]
 }
