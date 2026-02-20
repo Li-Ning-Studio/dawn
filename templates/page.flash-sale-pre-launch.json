@@ -21,8 +21,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/home_banner_994ae89b-e819-45f0-967d-8c333ed583a2.png",
-        "mobile_image": "shopify://shop_images/home_banner_R_1c01cda0-56ec-4b65-b62a-a86c92fc70fb.png",
+        "image": "shopify://shop_images/home_banner_115ab5eb-9cef-4334-b4a9-ae1bba546ed3.png",
+        "mobile_image": "shopify://shop_images/home_banner_R_18b1cdb2-cf25-42ae-b561-84e9e2568884.png",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -48,20 +48,9 @@
       "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  The Drop You Don’t Miss\n  </h1>\n  <p style=\"margin-top: 3px\">Only 24 hours to catch it.</p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #02dd80 0%, #b39293 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  The Drop You Don’t Miss\n  </h1>\n  <p style=\"margin-top: 3px\">Only 24 hours to catch it. The sale goes live in…</p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #02dd80 0%, #567ebd 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_grrEt8": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align:center; padding:2rem 1rem; background:transparent;\">\n\n  <!-- Logo \n  <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/PNG.png?v=1756963728\" \n       alt=\"Flash Sale Logo\"\n       style=\"max-width:220px; width:100%; height:auto; margin:0 auto 1.5rem; display:block;\" />-->\n\n  <!-- Darker Gradient Headline -->\n  <h1 style=\"\n    background-image:linear-gradient(135deg,#2b5876 0%,#4e4376 50%,#000428 100%);\n    -webkit-background-clip:text;\n    background-clip:text;\n    color:transparent;\n    font-size:2.5rem;\n    font-weight:800;\n    line-height:1.2;\n    text-align:center;\n    margin:0 auto 1.5rem;\n    max-width:700px;\n  \">\n    March 1st\n  </h1>\n\n  <!-- Countdown Timer -->\n  <div id=\"countdown\" style=\"\n    font-size:2rem;\n    font-weight:600;\n    color:#222;\n    margin-bottom:1rem;\n  \">⏳ Loading timer...</div>\n\n  <!-- Marketing Copy -->\n  <p style=\"font-size:1rem; color:#444; margin-bottom:1rem;\">\n    Get ready to grab your favorites at exclusive prices when the sale goes live!\n  </p>\n\n</div>\n\n<!-- Scripts -->\n<script>\n(function () {\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const countdownEl = document.getElementById(\"countdown\");\n    const saleDate = new Date(\"2026-03-01T00:00:00Z\").getTime();\n\n    function updateCountdown() {\n      const now = new Date().getTime();\n      const diff = saleDate - now;\n\n      if (!countdownEl) return;\n\n      if (diff >= 0) {\n        countdownEl.innerHTML = \"🔥 Sale is live!\";\n        return;\n      }\n\n      const days = Math.floor(diff / (1000 * 60 * 60 * 24));\n      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);\n      const minutes = Math.floor((diff / 1000 / 60) % 60);\n      const seconds = Math.floor((diff / 1000) % 60);\n\n      countdownEl.innerHTML = `⏳ ${days}D ${hours}H ${minutes}M ${seconds}S`;\n    }\n\n    setInterval(updateCountdown, 1000);\n    updateCountdown();\n  });\n})();\n</script>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 0,
+        "padding_top": 60,
         "padding_bottom": 0
       }
     },
@@ -72,11 +61,22 @@
       ],
       "name": "Countdown Timer",
       "settings": {
-        "title": "Sale Starts in",
+        "title": "",
         "end_time": "2026-03-01 00:00",
         "background": "linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 8%)",
         "text_color": "#40cf85",
-        "padding_top": 38
+        "padding_top": 10
+      }
+    },
+    "custom_liquid_epaJFd": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n Loot Locked, Unlocks Soon\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 88,
+        "padding_bottom": 24
       }
     },
     "multicolumn_FHwD3f": {
@@ -130,12 +130,12 @@
         "column_rdVqUb"
       ],
       "custom_css": [
-        ".title {font-size: 4rem;}",
+        ".title {font-size: 4rem; margin: 0 auto;}",
         "h3 {color: #0dd981;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<strong>Loot Locked, Unlocks Soon</strong>",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -147,7 +147,7 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 60
       }
     },
@@ -156,7 +156,7 @@
       "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  Join the Lobby\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #02dd80 0%, #b39293 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  Join the Lobby\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>",
         "color_scheme": "scheme-4",
         "padding_top": 12,
         "padding_bottom": 16
@@ -177,7 +177,7 @@
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 13,
-            "padding_bottom": 24,
+            "padding_bottom": 35,
             "padding_right": 0,
             "padding_left": 0
           }
@@ -197,7 +197,7 @@
       "settings": {
         "custom_liquid": "<h1 data-text= \"Stay ready.\">\n</h1>\n<style>\n\nh1{\n  font-family: 'Teko', sans-serif;\n  text-transform: uppercase;\n  font-size: 10rem;\n  text-align: center;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  margin: 0;\n  background: white;\n  position: relative;\n  background: #000;\n  color: #555;\n}\n\nh1:before{\n  content: attr(data-text);\n  position: ;\n  background: #20d482;\n  -webkit-background-clip: text;\n  color: transparent;\n  background-size: 100% 90%;\n  line-height: 0.9;\n  clip-path: ellipse(120px 120px at -2.54% -9.25%);\n  animation: swing 5s infinite;\n  animation-direction: alternate;\n}\n\n@keyframes swing{\n  0%{\n     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)\n    clip-path: ellipse(120px 120px at -2.54% -9.25%)\n  }\n  50%{\n    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);\n    clip-path: ellipse(120px 120px at 49.66% 64.36%);\n\n  }\n  100%{\n     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);\n    clip-path: ellipse(120px 120px at 102.62% -1.61%);\n  }\n}\n\n\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 72,
+        "padding_top": 76,
         "padding_bottom": 80
       }
     }
@@ -207,8 +207,8 @@
     "hero_component_ekdqEn",
     "custom_liquid_RfdwcM",
     "custom_liquid_dLjrGJ",
-    "custom_liquid_grrEt8",
     "countdown_timer_qzmWRV",
+    "custom_liquid_epaJFd",
     "multicolumn_FHwD3f",
     "custom_liquid_3etQcY",
     "apps_eWhNpr",
