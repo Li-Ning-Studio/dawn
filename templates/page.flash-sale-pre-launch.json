@@ -35,6 +35,7 @@
     },
     "custom_liquid_dLjrGJ": {
       "type": "custom-liquid",
+      "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  The Drop You Don’t Miss\n  </h1>\n  <p style=\"margin-top: 3px\">Only 24 hours to catch it.</p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #02dd80 0%, #b39293 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
@@ -75,7 +76,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_2_e25f643c-bd8d-4e78-8bcc-10b1454bed6b.png",
-            "title": "",
+            "title": "Smash Season Near",
             "text": "",
             "link_label": "",
             "link": ""
@@ -85,7 +86,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_3_74b6a599-0065-4d08-b929-3538925375af.png",
-            "title": "",
+            "title": "Step In Soon",
             "text": "",
             "link_label": "",
             "link": ""
@@ -95,7 +96,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_1_14257228-8590-47c4-9858-90bda3f2229a.png",
-            "title": "",
+            "title": "Inventory Expanding",
             "text": "",
             "link_label": "",
             "link": ""
@@ -105,7 +106,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artboard_4_f3818e64-f874-43cf-b04c-f0d6aaf04631.png",
-            "title": "",
+            "title": "Precision Loading",
             "text": "",
             "link_label": "",
             "link": ""
@@ -118,16 +119,20 @@
         "column_pGWhpA",
         "column_rdVqUb"
       ],
+      "custom_css": [
+        ".title {font-size: 4rem;}",
+        "h3 {color: #0dd981;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Need Content",
+        "title": "💎<strong>Loot Locked, Unlocks Soon</strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
@@ -142,7 +147,7 @@
       "settings": {
         "custom_liquid": "<h1 data-text= \"Stay Tuned!\">\n</h1>\n<style>\n\nh1{\n  font-family: 'Teko', sans-serif;\n  text-transform: uppercase;\n  font-size: 10rem;\n  text-align: center;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  margin: 0;\n  background: white;\n  position: relative;\n  background: #000;\n  color: #555;\n}\n\nh1:before{\n  content: attr(data-text);\n  position: ;\n  background: #20d482;\n  -webkit-background-clip: text;\n  color: transparent;\n  background-size: 100% 90%;\n  line-height: 0.9;\n  clip-path: ellipse(120px 120px at -2.54% -9.25%);\n  animation: swing 5s infinite;\n  animation-direction: alternate;\n}\n\n@keyframes swing{\n  0%{\n     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)\n    clip-path: ellipse(120px 120px at -2.54% -9.25%)\n  }\n  50%{\n    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);\n    clip-path: ellipse(120px 120px at 49.66% 64.36%);\n\n  }\n  100%{\n     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);\n    clip-path: ellipse(120px 120px at 102.62% -1.61%);\n  }\n}\n\n\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 60,
+        "padding_top": 32,
         "padding_bottom": 80
       }
     }
