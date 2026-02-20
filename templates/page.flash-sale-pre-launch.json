@@ -17,78 +17,132 @@
         "padding_bottom": 28
       }
     },
+    "hero_component_ekdqEn": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/home_banner_994ae89b-e819-45f0-967d-8c333ed583a2.png",
+        "mobile_image": "shopify://shop_images/home_banner_R_1c01cda0-56ec-4b65-b62a-a86c92fc70fb.png",
+        "subtitle": "need content",
+        "title": "need content",
+        "description": "need content",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
     "custom_liquid_grrEt8": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center; padding:2rem 1rem; background:transparent;\">\n\n  <!-- Logo -->\n  <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/PNG.png?v=1756963728\" \n       alt=\"Flash Sale Logo\"\n       style=\"max-width:220px; width:100%; height:auto; margin:0 auto 1.5rem; display:block;\" />\n\n  <!-- Darker Gradient Headline -->\n  <h1 style=\"\n    background-image:linear-gradient(135deg,#2b5876 0%,#4e4376 50%,#000428 100%);\n    -webkit-background-clip:text;\n    background-clip:text;\n    color:transparent;\n    font-size:2.5rem;\n    font-weight:800;\n    line-height:1.2;\n    text-align:center;\n    margin:0 auto 1.5rem;\n    max-width:700px;\n  \">\n    September 7th\n  </h1>\n\n  <!-- Countdown Timer -->\n  <div id=\"countdown\" style=\"\n    font-size:2rem;\n    font-weight:600;\n    color:#222;\n    margin-bottom:1rem;\n  \">⏳ Loading timer...</div>\n\n  <!-- Marketing Copy -->\n  <p style=\"font-size:1rem; color:#444; margin-bottom:1rem;\">\n    Get ready to grab your favorites at exclusive prices when the sale goes live!\n  </p>\n\n</div>\n\n<!-- Scripts -->\n<script>\n(function () {\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const countdownEl = document.getElementById(\"countdown\");\n    const saleDate = new Date(\"2025-09-07T00:00:00Z\").getTime();\n\n    function updateCountdown() {\n      const now = new Date().getTime();\n      const diff = saleDate - now;\n\n      if (!countdownEl) return;\n\n      if (diff <= 0) {\n        countdownEl.innerHTML = \"🔥 Sale is live!\";\n        return;\n      }\n\n      const days = Math.floor(diff / (1000 * 60 * 60 * 24));\n      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);\n      const minutes = Math.floor((diff / 1000 / 60) % 60);\n      const seconds = Math.floor((diff / 1000) % 60);\n\n      countdownEl.innerHTML = `⏳ ${days}D ${hours}H ${minutes}M ${seconds}S`;\n    }\n\n    setInterval(updateCountdown, 1000);\n    updateCountdown();\n  });\n})();\n</script>",
-        "color_scheme": "scheme-1",
+        "custom_liquid": "<div style=\"text-align:center; padding:2rem 1rem; background:transparent;\">\n\n  <!-- Logo \n  <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/PNG.png?v=1756963728\" \n       alt=\"Flash Sale Logo\"\n       style=\"max-width:220px; width:100%; height:auto; margin:0 auto 1.5rem; display:block;\" />-->\n\n  <!-- Darker Gradient Headline -->\n  <h1 style=\"\n    background-image:linear-gradient(135deg,#2b5876 0%,#4e4376 50%,#000428 100%);\n    -webkit-background-clip:text;\n    background-clip:text;\n    color:transparent;\n    font-size:2.5rem;\n    font-weight:800;\n    line-height:1.2;\n    text-align:center;\n    margin:0 auto 1.5rem;\n    max-width:700px;\n  \">\n    March 1st\n  </h1>\n\n  <!-- Countdown Timer -->\n  <div id=\"countdown\" style=\"\n    font-size:2rem;\n    font-weight:600;\n    color:#222;\n    margin-bottom:1rem;\n  \">⏳ Loading timer...</div>\n\n  <!-- Marketing Copy -->\n  <p style=\"font-size:1rem; color:#444; margin-bottom:1rem;\">\n    Get ready to grab your favorites at exclusive prices when the sale goes live!\n  </p>\n\n</div>\n\n<!-- Scripts -->\n<script>\n(function () {\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const countdownEl = document.getElementById(\"countdown\");\n    const saleDate = new Date(\"2026-03-01T00:00:00Z\").getTime();\n\n    function updateCountdown() {\n      const now = new Date().getTime();\n      const diff = saleDate - now;\n\n      if (!countdownEl) return;\n\n      if (diff >= 0) {\n        countdownEl.innerHTML = \"🔥 Sale is live!\";\n        return;\n      }\n\n      const days = Math.floor(diff / (1000 * 60 * 60 * 24));\n      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);\n      const minutes = Math.floor((diff / 1000 / 60) % 60);\n      const seconds = Math.floor((diff / 1000) % 60);\n\n      countdownEl.innerHTML = `⏳ ${days}D ${hours}H ${minutes}M ${seconds}S`;\n    }\n\n    setInterval(updateCountdown, 1000);\n    updateCountdown();\n  });\n})();\n</script>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "countdown_timer_d4FdMK": {
+    "countdown_timer_qzmWRV": {
       "type": "countdown-timer",
+      "custom_css": [
+        "h2 {font-size: 3rem; font-weight: bolder; margin-bottom: 20px;}"
+      ],
       "name": "Countdown Timer",
       "settings": {
-        "title": "Flash Sale Ends Soon!",
-        "end_time": "2026-02-28",
-        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1) 100%)",
-        "text_color": "#ffffff",
-        "padding_top": 16
+        "title": "Sale Starts in",
+        "end_time": "2026-03-01 00:00",
+        "background": "linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 8%)",
+        "text_color": "#40cf85",
+        "padding_top": 38
       }
     },
-    "175696303696d1be70": {
-      "type": "apps",
+    "multicolumn_FHwD3f": {
+      "type": "multicolumn",
       "blocks": {
-        "forms_inline_rDX7pH": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "column_yApFkL": {
+          "type": "column",
           "settings": {
-            "form_id": "640368",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 10,
-            "padding_bottom": 30,
-            "padding_right": 0,
-            "padding_left": 0
+            "image": "shopify://shop_images/Artboard_2_e25f643c-bd8d-4e78-8bcc-10b1454bed6b.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_N7qwFn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_74b6a599-0065-4d08-b929-3538925375af.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pGWhpA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_14257228-8590-47c4-9858-90bda3f2229a.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rdVqUb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_f3818e64-f874-43cf-b04c-f0d6aaf04631.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "forms_inline_rDX7pH"
+        "column_yApFkL",
+        "column_N7qwFn",
+        "column_pGWhpA",
+        "column_rdVqUb"
       ],
-      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "include_margins": true
+        "title": "Need Content",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 60
       }
     },
-    "hero_component_7Bjgy6": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "custom_liquid_n8AY6p": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Page_banner_62a79262-5f8b-4a27-8b26-bdebf4190e1e.png",
-        "mobile_image": "shopify://shop_images/Page_banner_R_b674778e-018b-4392-aae4-e8a70431d095.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<h1 data-text= \"Stay Tuned!\">\n</h1>\n<style>\n\nh1{\n  font-family: 'Teko', sans-serif;\n  text-transform: uppercase;\n  font-size: 10rem;\n  text-align: center;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  margin: 0;\n  background: white;\n  position: relative;\n  background: #000;\n  color: #555;\n}\n\nh1:before{\n  content: attr(data-text);\n  position: ;\n  background: #20d482;\n  -webkit-background-clip: text;\n  color: transparent;\n  background-size: 100% 90%;\n  line-height: 0.9;\n  clip-path: ellipse(120px 120px at -2.54% -9.25%);\n  animation: swing 5s infinite;\n  animation-direction: alternate;\n}\n\n@keyframes swing{\n  0%{\n     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)\n    clip-path: ellipse(120px 120px at -2.54% -9.25%)\n  }\n  50%{\n    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);\n    clip-path: ellipse(120px 120px at 49.66% 64.36%);\n\n  }\n  100%{\n     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);\n    clip-path: ellipse(120px 120px at 102.62% -1.61%);\n  }\n}\n\n\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 60,
+        "padding_bottom": 80
       }
     }
   },
   "order": [
     "main",
+    "hero_component_ekdqEn",
     "custom_liquid_grrEt8",
-    "countdown_timer_d4FdMK",
-    "175696303696d1be70",
-    "hero_component_7Bjgy6"
+    "countdown_timer_qzmWRV",
+    "multicolumn_FHwD3f",
+    "custom_liquid_n8AY6p"
   ]
 }

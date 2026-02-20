@@ -21,34 +21,29 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "subtitle": "Prnx",
-        "title": "PHOTON LIKE MOVEMENTS",
-        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
-        "button_text": "BEND YOUR OPPONENT",
-        "link_to": "/",
+        "image": "shopify://shop_images/home_banner_994ae89b-e819-45f0-967d-8c333ed583a2.png",
+        "mobile_image": "shopify://shop_images/home_banner_R_1c01cda0-56ec-4b65-b62a-a86c92fc70fb.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_fRpeDg": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "countdown_timer_Uni3mg": {
       "type": "countdown-timer",
+      "custom_css": [
+        "h2 {font-size: 3rem; font-weight: bolder; margin-bottom: 20px;}"
+      ],
       "name": "Countdown Timer",
       "settings": {
         "title": "Sale Starts in",
         "end_time": "2026-03-01 00:00",
-        "background": "linear-gradient(0deg, rgba(73, 73, 73, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "text_color": "#ffffff",
+        "background": "linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 8%)",
+        "text_color": "#40cf85",
         "padding_top": 38
       }
     },
@@ -58,8 +53,9 @@
         "column_iJPp6y": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Artboard_2_e25f643c-bd8d-4e78-8bcc-10b1454bed6b.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -67,8 +63,9 @@
         "column_wQFTAp": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Artboard_3_74b6a599-0065-4d08-b929-3538925375af.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -76,8 +73,19 @@
         "column_39z73f": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Artboard_1_14257228-8590-47c4-9858-90bda3f2229a.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PiMTfb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_f3818e64-f874-43cf-b04c-f0d6aaf04631.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -86,41 +94,41 @@
       "block_order": [
         "column_iJPp6y",
         "column_wQFTAp",
-        "column_39z73f"
+        "column_39z73f",
+        "column_PiMTfb"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 60
       }
     },
     "custom_liquid_wGDhbK": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<h1 data-text= \"Stay Tuned!\">\n</h1>\n<style>\n\nh1{\n  font-family: 'Teko', sans-serif;\n  text-transform: uppercase;\n  font-size: 10rem;\n  text-align: center;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  margin: 0;\n  background: white;\n  position: relative;\n  background: #fff;\n  color: #e0dbd6;\n}\n\nh1:before{\n  content: attr(data-text);\n  position: ;\n  background: #1c1c1c;\n  -webkit-background-clip: text;\n  color: transparent;\n  background-size: 100% 90%;\n  line-height: 0.9;\n  clip-path: ellipse(120px 120px at -2.54% -9.25%);\n  animation: swing 5s infinite;\n  animation-direction: alternate;\n}\n\n@keyframes swing{\n  0%{\n     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)\n    clip-path: ellipse(120px 120px at -2.54% -9.25%)\n  }\n  50%{\n    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);\n    clip-path: ellipse(120px 120px at 49.66% 64.36%);\n\n  }\n  100%{\n     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);\n    clip-path: ellipse(120px 120px at 102.62% -1.61%);\n  }\n}\n\n\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "custom_liquid": "<h1 data-text= \"Stay Tuned!\">\n</h1>\n<style>\n\nh1{\n  font-family: 'Teko', sans-serif;\n  text-transform: uppercase;\n  font-size: 10rem;\n  text-align: center;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  margin: 0;\n  background: white;\n  position: relative;\n  background: #000;\n  color: #555;\n}\n\nh1:before{\n  content: attr(data-text);\n  position: ;\n  background: #20d482;\n  -webkit-background-clip: text;\n  color: transparent;\n  background-size: 100% 90%;\n  line-height: 0.9;\n  clip-path: ellipse(120px 120px at -2.54% -9.25%);\n  animation: swing 5s infinite;\n  animation-direction: alternate;\n}\n\n@keyframes swing{\n  0%{\n     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)\n    clip-path: ellipse(120px 120px at -2.54% -9.25%)\n  }\n  50%{\n    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);\n    clip-path: ellipse(120px 120px at 49.66% 64.36%);\n\n  }\n  100%{\n     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);\n    clip-path: ellipse(120px 120px at 102.62% -1.61%);\n  }\n}\n\n\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 60,
+        "padding_bottom": 80
       }
     }
   },
   "order": [
     "main",
     "hero_component_n48tdp",
-    "custom_liquid_fRpeDg",
     "countdown_timer_Uni3mg",
     "multicolumn_CtQqPP",
     "custom_liquid_wGDhbK"
