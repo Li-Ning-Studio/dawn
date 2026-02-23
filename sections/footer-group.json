@@ -137,7 +137,8 @@
       ],
       "custom_css": [
         "* {background: #030303; padding: 0px;}",
-        "@media screen and (max-width: 800px) {* {display: none; }}"
+        "@media screen and (max-width: 800px) {* {display: none; }}",
+        "img {opacity: 0.2; }"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
