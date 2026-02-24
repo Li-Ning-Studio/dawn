@@ -125,6 +125,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/LiveHundredPercent_6.png",
+            "mobile_image": "shopify://shop_images/LiveHundredPercent_7.png",
             "heading": "",
             "subheading": "",
             "button_label": "",
@@ -137,7 +138,7 @@
       ],
       "custom_css": [
         "* {background: #030303; padding: 0px;}",
-        "@media screen and (max-width: 800px) {* {display: none; }}",
+        "@media screen and (max-width: 800px) {}",
         "img {opacity: 0.5;}"
       ],
       "name": "t:sections.slideshow.presets.name",
