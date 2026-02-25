@@ -19,13 +19,14 @@
     },
     "countdown_timer_kxATRA": {
       "type": "countdown-timer",
+      "custom_css": [],
       "name": "Countdown Timer",
       "settings": {
-        "title": "Countdown Begins! ⚡",
-        "end_time": "2025-06-09 00:00",
-        "background": "linear-gradient(120deg, rgba(253, 251, 251, 1), rgba(235, 237, 238, 1) 100%)",
-        "text_color": "#8348ff",
-        "padding_top": 16
+        "title": "Hurry Sale ends in...",
+        "end_time": "2026-03-02 00:00",
+        "background": "linear-gradient(180deg, rgba(251, 253, 252, 1), rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 6%)",
+        "text_color": "#88fd86",
+        "padding_top": 38
       }
     },
     "hero_component_AFhdP9": {
@@ -39,20 +40,29 @@
         "description": "",
         "button_text": "",
         "link_to": "/",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_xHMdcR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.button {\n  /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */\n  /* with hue-rotate color can be changed */\n  --main-color: rgb(46, 213, 115);\n  --main-bg-color: rgba(46, 213, 116, 0.36);\n  --pattern-color: rgba(46, 213, 116, 0.073);\n\n  /* change this rotation value */\n  filter: hue-rotate(0deg);\n\n  cursor: pointer;\n  text-transform: uppercase;\n  letter-spacing: 0.5rem;\n  background: radial-gradient(\n      circle,\n      var(--main-bg-color) 0%,\n      rgba(0, 0, 0, 0) 95%\n    ),\n    linear-gradient(var(--pattern-color) 1px, transparent 1px),\n    linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);\n  background-size:\n    cover,\n    15px 15px,\n    15px 15px;\n  background-position:\n    center center,\n    center center,\n    center center;\n  border-image: radial-gradient(\n      circle,\n      var(--main-color) 0%,\n      rgba(0, 0, 0, 0) 100%\n    )\n    1;\n  border-width: 1px 0 1px 0;\n  color: var(--main-color);\n  padding: 1rem 3rem;\n  font-weight: 700;\n  font-size: 1.5rem;\n  transition: background-size 0.2s ease-in-out;\n}\n\n.button:hover {\n  background-size:\n    cover,\n    10px 10px,\n    10px 10px;\n}\n.button:active {\n  filter: hue-rotate(250deg);\n}\n\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_fYXKrh": {
+    "custom_liquid_cpaLyT": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Your Sport, Your Steal!</h1>",
-        "color_scheme": "",
-        "padding_top": 8,
-        "padding_bottom": 0
+        "custom_liquid": "<style>\nStrong, h2 {\n color: #fff;\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 900;\n  text-align: center;\n  line-height: 1;\n}\n.countdown-timer-section{\n    background-image: url(https://media.istockphoto.com/id/1545637815/vector/synthwave-wireframe-net-illustration-abstract-digital-background-80s-90s-retro-futurism.jpg?s=612x612&w=0&k=20&c=9LMGyg_BEwdgBfSHxcpxgO014zI1rliHNLKEA9Az5Q0=);\n    background-size: contain;\n}\n\n.fancy,  strong {\n  @supports (background-clip: text) or (-webkit-background-clip: text) {\n    background-image: \n      url(\"data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A\");\n    background-size: 50% auto;\n    background-position: center;\n    color: transparent;\n    -webkit-background-clip: text;\n    background-clip: text;\n  }\n}\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 16
       }
     },
     "multicolumn_M8qycr": {
@@ -64,7 +74,7 @@
             "image": "shopify://shop_images/Artboard_1_4facc907-0bae-46e8-b71a-eb44761d7da3.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Smash",
             "link": "shopify://collections/badminton-dec-flash-sale"
           }
         },
@@ -74,7 +84,7 @@
             "image": "shopify://shop_images/Artboard_3_32d4e0eb-e380-4142-a248-a9a790c7b731.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Strike",
             "link": "shopify://collections/cricket-shoe-dec-flash-sale"
           }
         },
@@ -84,7 +94,7 @@
             "image": "shopify://shop_images/Artboard_2_413d2644-1dfe-4fe5-9ead-a41430ef0b9f.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Swing",
             "link": "shopify://collections/pickleball"
           }
         }
@@ -94,9 +104,13 @@
         "column_QTEkyB",
         "column_p3rQT9"
       ],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<strong>PICK YOUR ARENA</strong>",
+        "title": "PICK YOUR<strong> ARENA</strong>",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -105,22 +119,11 @@
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 32,
         "padding_bottom": 28
-      }
-    },
-    "custom_liquid_g9bLdF": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #667eea 0%, #764ba2 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  All Categories, Fresh Deals Category</h1>",
-        "color_scheme": "",
-        "padding_top": 8,
-        "padding_bottom": 0
       }
     },
     "multicolumn_UWV9KM": {
@@ -132,7 +135,7 @@
             "image": "shopify://shop_images/Artboard_2_a038925b-213b-4a87-bf52-cce63eafaf5e.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Swing for Victory",
             "link": "shopify://collections/badminton-rackets-dec-flash-sale"
           }
         },
@@ -142,7 +145,7 @@
             "image": "shopify://shop_images/Artboard_3_a81acf35-0785-4574-ba6c-e5f3b0f8adaa.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Move Like a Pro",
             "link": "shopify://collections/badminton-shoes-dec-flash-sale"
           }
         },
@@ -152,7 +155,7 @@
             "image": "shopify://shop_images/Artboard_1_c5ad350f-d755-404d-bda2-6ba6e19b45a1.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Pack Like a Champion",
             "link": "shopify://collections/badminton-bags-dec-flash-sale"
           }
         },
@@ -162,7 +165,7 @@
             "image": "shopify://shop_images/Artboard_4_baacebf1-2dea-4396-8c54-89e0405ae021.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Power Your Serve",
             "link": ""
           }
         }
@@ -173,10 +176,13 @@
         "column_VW6BAw",
         "column_dNLkwP"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<strong>CONFIGURE YOUR BUILD</strong>",
+        "title": "CONFIGURE YOUR <strong>BUILD</strong>",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "square",
@@ -185,11 +191,53 @@
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 28,
         "padding_bottom": 20
+      }
+    },
+    "custom_liquid_bRbYdj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #f43b47 30%, #01ba71 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Best Sellers!</h1>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 8
+      }
+    },
+    "featured_collection_7hbWbR": {
+      "type": "featured-collection",
+      "custom_css": [
+        "img {background: #06544d; background: linear-gradient( 357deg, rgba(6, 84, 77, 1) 0%, rgba(1, 186, 113, 1) 66% );}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "diwali-sale",
+        "products_to_show": 6,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 36
       }
     },
     "multicolumn_XNezHU": {
@@ -201,7 +249,7 @@
             "image": "shopify://shop_images/Artboard_1_58c6a716-eb8c-4c0d-bab1-3cb911e9c690.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "Grab",
             "link": ""
           }
         },
@@ -211,7 +259,7 @@
             "image": "shopify://shop_images/Artboard_1_641b73d1-f5bd-4def-9f70-3fec4cd8992f.png",
             "title": "",
             "text": "",
-            "link_label": "",
+            "link_label": "garb",
             "link": ""
           }
         }
@@ -229,33 +277,13 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custom_liquid_bRbYdj": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #f43b47 30%, #673fe7 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Best Sellers!</h1>",
-        "color_scheme": "scheme-1",
-        "padding_top": 8,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_cd3F96": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f43b47 0%, #ff0844 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  So Many Freebies, So Little Time!\n</h1>",
-        "color_scheme": "",
-        "padding_top": 8,
-        "padding_bottom": 0
       }
     },
     "hero_component_ihqe7q": {
@@ -293,7 +321,7 @@
           "flutter-s-zoom"
         ],
         "show_color_variants": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -312,6 +340,16 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_cd3F96": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f43b47 0%, #ff0844 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  So Many Freebies, So Little Time!\n</h1>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 8,
+        "padding_bottom": 12
       }
     },
     "swipeable_products_iLkcGi": {
@@ -333,7 +371,7 @@
           "ioniq-80-limited-edition"
         ],
         "show_color_variants": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -349,7 +387,7 @@
         "description": "Own the court with a limited edition that delivers precise control and premium build quality",
         "button_text": "BEND YOUR OPPONENT",
         "link_to": "/",
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -359,8 +397,24 @@
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f9d423 0%, #f83600 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Our Favorite Picks, Now on Offer!</h1>",
-        "color_scheme": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 8,
+        "padding_bottom": 4
+      }
+    },
+    "hero_component_twUJfx": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Shop_All_Banner.png",
+        "mobile_image": "shopify://shop_images/Shop_All_Banner_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     }
@@ -369,18 +423,20 @@
     "main",
     "countdown_timer_kxATRA",
     "hero_component_AFhdP9",
-    "custom_liquid_fYXKrh",
+    "custom_liquid_xHMdcR",
+    "custom_liquid_cpaLyT",
     "multicolumn_M8qycr",
-    "custom_liquid_g9bLdF",
     "multicolumn_UWV9KM",
-    "multicolumn_XNezHU",
     "custom_liquid_bRbYdj",
-    "custom_liquid_cd3F96",
+    "featured_collection_7hbWbR",
+    "multicolumn_XNezHU",
     "hero_component_ihqe7q",
     "swipeable_products_9jPGh3",
     "hero_component_YqaQVD",
+    "custom_liquid_cd3F96",
     "swipeable_products_iLkcGi",
     "hero_component_4zcJ94",
-    "custom_liquid_h3e4K6"
+    "custom_liquid_h3e4K6",
+    "hero_component_twUJfx"
   ]
 }
