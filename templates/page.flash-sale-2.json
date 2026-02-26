@@ -19,6 +19,7 @@
     },
     "countdown_timer_kxATRA": {
       "type": "countdown-timer",
+      "disabled": true,
       "custom_css": [],
       "name": "Countdown Timer",
       "settings": {
@@ -45,11 +46,22 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_xHMdcR": {
+    "custom_liquid_FmdEgi": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n.button {\n  /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */\n  /* with hue-rotate color can be changed */\n  --main-color: rgb(46, 213, 115);\n  --main-bg-color: rgba(46, 213, 116, 0.36);\n  --pattern-color: rgba(46, 213, 116, 0.073);\n\n  /* change this rotation value */\n  filter: hue-rotate(0deg);\n\n  cursor: pointer;\n  text-transform: uppercase;\n  letter-spacing: 0.5rem;\n  background: radial-gradient(\n      circle,\n      var(--main-bg-color) 0%,\n      rgba(0, 0, 0, 0) 95%\n    ),\n    linear-gradient(var(--pattern-color) 1px, transparent 1px),\n    linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);\n  background-size:\n    cover,\n    15px 15px,\n    15px 15px;\n  background-position:\n    center center,\n    center center,\n    center center;\n  border-image: radial-gradient(\n      circle,\n      var(--main-color) 0%,\n      rgba(0, 0, 0, 0) 100%\n    )\n    1;\n  border-width: 1px 0 1px 0;\n  color: var(--main-color);\n  padding: 1rem 3rem;\n  font-weight: 700;\n  font-size: 1.5rem;\n  transition: background-size 0.2s ease-in-out;\n}\n\n.button:hover {\n  background-size:\n    cover,\n    10px 10px,\n    10px 10px;\n}\n.button:active {\n  filter: hue-rotate(250deg);\n}\n\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; text-align:center; width:80%; font-weight: 900; letter-spacing: -1px\" class=\"title3\">\n Today's Deals, Tomorrow's  Regret\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:40px;\n\">\n   Buy Before Bye\n  </a>\n  \n</section>\n\n<style>\n\n.main-sec-custom3 video{\n  position: absolute;\n  \n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .button1 {\ntext-decoration:none;\ndisplay:flex;\njustify-content:center;\nalign-items:center;\n\n  position: relative;\n  height: 3.5em;\n  border: 3px ridge #00ff89;\n  outline: none;\n  background-color: transparent;\n  color: white;\n  transition: 1s;\n  border-radius: 0.3em;\n  font-size: 1.4rem;\n  font-weight: bold;\n  cursor: pointer;\npadding: 0 20px;\n}\n\n.button1::after {\n  content: \"\";\n  position: absolute;\n  top: -10px;\n  left: 3%;\n  width: 95%;\n  height: 40%;\n  background-color: #000;\n  transition: 0.5s;\n  transform-origin: center;\n}\n\n.button1::before {\n  content: \"\";\n  transform-origin: center;\n  position: absolute;\n  top: 80%;\n  left: 3%;\n  width: 95%;\n  height: 40%;\n  background-color: #000;\n  transition: 0.5s;\n}\n\n.button1:hover::before, .button1:hover::after {\n  transform: scale(0)\n}\n\n.button1:hover {\n  box-shadow: inset 0px 0px 25px #00ff89;\n}\n\n  .title3 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #00ff89 0%,\n      #09b859 52%,\n      #d9ca26 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title3 {\n      font-size: 5rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}.button1{\nfont-size:2rem;\n}\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_xHMdcR": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.button {\n  /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */\n  /* with hue-rotate color can be changed */\n  --main-color: rgb(46, 213, 115);\n  --main-bg-color: rgba(46, 213, 116, 0.36);\n  --pattern-color: rgba(46, 213, 116, 0.073);\n\n  /* change this rotation value */\n  filter: hue-rotate(0deg);\n\n  cursor: pointer;\n  text-transform: uppercase;\n  letter-spacing: 0.5rem;\n  background: radial-gradient(\n      circle,\n      var(--main-bg-color) 0%,\n      rgba(0, 0, 0, 0) 95%\n    ),\n    linear-gradient(var(--pattern-color) 1px, transparent 1px),\n    linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);\n  background-size:\n    cover,\n    15px 15px,\n    15px 15px;\n  background-position:\n    center center,\n    center center,\n    center center;\n  border-image: radial-gradient(\n      circle,\n      var(--main-color) 0%,\n      rgba(0, 0, 0, 0) 100%\n    )\n    1;\n  border-width: 1px 0 1px 0;\n  color: var(--main-color);\n  padding: 1rem 3rem;\n  font-weight: 700;\n  font-size: 1.5rem;\n  transition: background-size 0.2s ease-in-out;\n}\n\n.button:hover {\n  background-size:\n    cover,\n    10px 10px,\n    10px 10px;\n!important }\n.button:active {\n  filter: hue-rotate(250deg);\n}\n\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -57,17 +69,29 @@
     },
     "custom_liquid_cpaLyT": {
       "type": "custom-liquid",
+      "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\nStrong, h2 {\n color: #fff;\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 900;\n  text-align: center;\n  line-height: 1;\n}\n.countdown-timer-section{\n    background-image: url(https://media.istockphoto.com/id/1545637815/vector/synthwave-wireframe-net-illustration-abstract-digital-background-80s-90s-retro-futurism.jpg?s=612x612&w=0&k=20&c=9LMGyg_BEwdgBfSHxcpxgO014zI1rliHNLKEA9Az5Q0=);\n    background-size: contain;\n}\n\n.fancy,  strong {\n  @supports (background-clip: text) or (-webkit-background-clip: text) {\n    background-image: \n      url(\"data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A\");\n    background-size: 50% auto;\n    background-position: center;\n    color: transparent;\n    -webkit-background-clip: text;\n    background-clip: text;\n  }\n}\n</style>",
+        "custom_liquid": "<style>\n#MainContent img {\n  background: url(https://cdn.shopify.com/s/files/1/0933/9378/1029/files/unnamed.webp?v=1772079897&width=400);\n  background-size: cover;\n}\n\n#MainContent Strong, #MainContent h2, .title {\n color: #fff;\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 600;\n  text-align: center;\n  line-height: 1;\n  background-image: linear-gradient(320deg, #f88920 30%, #2dd573 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\ncolor: #00ff89;\n  margin-bottom:10px;\n  text-shadow: 0 0 10px rgb(6,84,75,0.5);\n}\n.countdown-timer-section{\n    background-image: url(https://media.istockphoto.com/id/1545637815/vector/synthwave-wireframe-net-illustration-abstract-digital-background-80s-90s-retro-futurism.jpg?s=612x612&w=0&k=20&c=9LMGyg_BEwdgBfSHxcpxgO014zI1rliHNLKEA9Az5Q0=);\n    background-size: contain;\n}\n\n\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 0,
-        "padding_bottom": 16
+        "padding_bottom": 0
       }
     },
     "multicolumn_M8qycr": {
       "type": "multicolumn",
       "blocks": {
+        "column_FYyCfk": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/unnamed.webp",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_tdanAK": {
           "type": "column",
           "settings": {
@@ -100,13 +124,15 @@
         }
       },
       "block_order": [
+        "column_FYyCfk",
         "column_tdanAK",
         "column_QTEkyB",
         "column_p3rQT9"
       ],
       "custom_css": [
         ".title-wrapper--no-top-margin {justify-content: center;}",
-        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}"
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #00ff89;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -122,8 +148,8 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 32,
-        "padding_bottom": 28
+        "padding_top": 68,
+        "padding_bottom": 68
       }
     },
     "multicolumn_UWV9KM": {
@@ -178,7 +204,8 @@
       ],
       "custom_css": [
         ".title-wrapper--no-top-margin {justify-content: center;}",
-        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}"
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #00ff89;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -194,30 +221,22 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 20
-      }
-    },
-    "custom_liquid_bRbYdj": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(320deg, #f43b47 30%, #01ba71 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n Best Sellers!</h1>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 36,
-        "padding_bottom": 8
+        "padding_top": 24,
+        "padding_bottom": 68
       }
     },
     "featured_collection_7hbWbR": {
       "type": "featured-collection",
       "custom_css": [
-        "img {background: #06544d; background: linear-gradient( 357deg, rgba(6, 84, 77, 1) 0%, rgba(1, 186, 113, 1) 66% );}"
+        "img {background: url(https://cdn.shopify.com/s/files/1/0933/9378/1029/files/unnamed.webp?v=1772079897&width=400); background-size: cover;}",
+        ".title {margin-bottom: 40px;}",
+        ".button {margin-top: 40px;}"
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "diwali-sale",
         "products_to_show": 6,
-        "title": "",
+        "title": "Most Wanted <strong>Loadout</strong>!",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -236,8 +255,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 4,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 80
       }
     },
     "multicolumn_XNezHU": {
@@ -249,7 +268,7 @@
             "image": "shopify://shop_images/Artboard_1_58c6a716-eb8c-4c0d-bab1-3cb911e9c690.png",
             "title": "",
             "text": "",
-            "link_label": "Grab",
+            "link_label": "Player Favorites",
             "link": ""
           }
         },
@@ -259,7 +278,7 @@
             "image": "shopify://shop_images/Artboard_1_641b73d1-f5bd-4def-9f70-3fec4cd8992f.png",
             "title": "",
             "text": "",
-            "link_label": "garb",
+            "link_label": "Epic Discount Drop",
             "link": ""
           }
         }
@@ -267,6 +286,9 @@
       "block_order": [
         "column_PFMrnN",
         "column_3EnA8A"
+      ],
+      "custom_css": [
+        "span {color: #00ff89;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -278,16 +300,21 @@
         "button_link": "",
         "columns_desktop": 2,
         "column_alignment": "center",
-        "background_style": "none",
+        "background_style": "primary",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 84
       }
     },
     "hero_component_ihqe7q": {
       "type": "hero-component",
+      "custom_css": [
+        "h3,p {color: white !important;}",
+        "h3 {margin-top: 40px !important;}",
+        ".button {background: radial-gradient( circle, var(--main-bg-color) 0%, rgba(0, 0, 0, 0) 95% ), linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px) !important; background-size: cover, 15px 15px, 15px 15px !important; background-position: center center, center center, center center !important; border-radius: 0 !important;}"
+      ],
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/B1G1_Banner.png",
@@ -296,34 +323,41 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/apparels",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "link_to": "",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 32,
+        "padding_bottom": 8
+      }
+    },
+    "custom_liquid_cUTC4z": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; text-align:center; width:80%; font-weight: 900; letter-spacing: -1px\" class=\"title3\">\n TWO IS THE NEW HIGH SCORE\n  </h1>\n  <p style=\"margin-top: 3px\">One racket in your cart. One more on us.</p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:20px;\n\">\n Grab Your Extra Life\n  </a>\n  \n</section>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 48,
+        "padding_bottom": 16
       }
     },
     "swipeable_products_9jPGh3": {
       "type": "swipeable-products",
+      "custom_css": [
+        "svg {color: green;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
-        "title": "New Launch",
+        "title": "2 Rackets. 1 Deal.",
         "products": [
-          "t-fusion-tornado-5u",
-          "t-fusion-tornado",
-          "rock-sk-10",
-          "rock-sk-10-5u",
-          "t-fusion-assault",
-          "t-fusion-assault-5u",
-          "nitrix-pro-3u",
-          "nitrix-pro-4u",
-          "flutter-s-attk",
-          "flutter-s-ctrl",
-          "flutter-s-zoom"
+          "flutter-ff-attk",
+          "flutter-ff-zoom",
+          "predator-82-extra-strong",
+          "predator-79-extra-strong",
+          "n-ergy-80"
         ],
         "show_color_variants": false,
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 44,
+        "padding_bottom": 24
       }
     },
     "hero_component_YqaQVD": {
@@ -342,18 +376,11 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_cd3F96": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f43b47 0%, #ff0844 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  So Many Freebies, So Little Time!\n</h1>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 8,
-        "padding_bottom": 12
-      }
-    },
     "swipeable_products_iLkcGi": {
       "type": "swipeable-products",
+      "custom_css": [
+        "svg {color: green;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
         "title": "Champions Choice",
@@ -374,6 +401,75 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "custom_liquid_cd3F96": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f43b47 0%, #ff0844 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  So Many Freebies, So Little Time!\n</h1>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 8,
+        "padding_bottom": 12
+      }
+    },
+    "collection_list_Wi9izD": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_BmJpWR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_JDfADf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_gN6t3d": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_DB7pcy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_Hept6t": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_BmJpWR",
+        "featured_collection_JDfADf",
+        "featured_collection_gN6t3d",
+        "featured_collection_DB7pcy",
+        "featured_collection_Hept6t"
+      ],
+      "custom_css": [
+        "h2 {margin: 10px auto;}"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "So Many Freebies, So Little Time!",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 88
       }
     },
     "hero_component_4zcJ94": {
@@ -423,18 +519,20 @@
     "main",
     "countdown_timer_kxATRA",
     "hero_component_AFhdP9",
+    "custom_liquid_FmdEgi",
     "custom_liquid_xHMdcR",
     "custom_liquid_cpaLyT",
     "multicolumn_M8qycr",
     "multicolumn_UWV9KM",
-    "custom_liquid_bRbYdj",
     "featured_collection_7hbWbR",
     "multicolumn_XNezHU",
     "hero_component_ihqe7q",
+    "custom_liquid_cUTC4z",
     "swipeable_products_9jPGh3",
     "hero_component_YqaQVD",
-    "custom_liquid_cd3F96",
     "swipeable_products_iLkcGi",
+    "custom_liquid_cd3F96",
+    "collection_list_Wi9izD",
     "hero_component_4zcJ94",
     "custom_liquid_h3e4K6",
     "hero_component_twUJfx"
