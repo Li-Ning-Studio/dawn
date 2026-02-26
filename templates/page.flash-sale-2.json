@@ -379,7 +379,8 @@
     "swipeable_products_iLkcGi": {
       "type": "swipeable-products",
       "custom_css": [
-        "svg {color: green;}"
+        "svg {color: green;}",
+        "li{margin-bottom:10px;}"
       ],
       "name": "Swipeable Products",
       "settings": {
@@ -399,7 +400,7 @@
         ],
         "show_color_variants": false,
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 20,
+        "padding_top": 36,
         "padding_bottom": 20
       }
     },
