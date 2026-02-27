@@ -21,14 +21,24 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/c_banner.png",
-        "mobile_image": "shopify://shop_images/c_banner_responsive.png",
+        "image": "shopify://shop_images/banner_2_4553620d-6c54-49f6-b48d-6fb4679d44a3.png",
+        "mobile_image": "shopify://shop_images/banner_responsive_2.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
+        "link_to": "",
+        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_EFmYdF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n</style>",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -37,19 +47,35 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n\n        .img-carousel-container {\n            width: 100%;\n            position: relative;\n            margin: 0 auto;\n        }\n\n        .img-carousel-wrapper {\n            overflow: hidden;\n        }\n\n        .img-carousel {\n            display: flex;\n            transition: transform 0.3s ease-out;\n        }\n\n        .img-carousel-item {\n            flex-shrink: 0;\n            width: 100%;\n        }\n\n        .img-carousel-item img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Hide dots and arrows on mobile */\n        .img-carousel-dots,\n        .img-carousel-nav-button {\n            display: none;\n        }\n\n        /* Swipe text below images */\n        .swipe-text {\n            display: none;\n            text-align: center;\n            font-size: 12px;\n            color: #666;\n            padding: 10px 0;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        @media (max-width: 768px) {\n            .swipe-text {\n                display: block;\n            }\n        }\n\n        /* Desktop styles */\n        @media (min-width: 769px) {\n            .img-carousel-container {\n                max-width: 100%;\n            }\n\n            .img-carousel {\n                flex-wrap: nowrap;\n                gap: 20px;\n                padding: 0 20px;\n            }\n\n            .img-carousel-item {\n                width: calc(33.333% - 14px);\n            }\n        }\n\n        /* Mobile styles */\n        @media (max-width: 768px) {\n            .img-carousel-wrapper {\n                touch-action: pan-y;\n                -webkit-overflow-scrolling: touch;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"img-carousel-container\">\n        <div class=\"img-carousel-wrapper\">\n            <div class=\"img-carousel\" id=\"imgCarousel\">\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2_7ea0def0-5db3-4e9f-9a67-7dc735c23809.png?v=1761560331\" alt=\"Image 1\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/3_c92e3e64-17ca-4456-8b31-f1ab242ecb17.png?v=1761560331\" alt=\"Image 2\">\n                </div>\n                <div class=\"img-carousel-item\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/4_8b5e76c3-9b30-4f98-bbc9-5d4153a1ca63.png?v=1761560330\" alt=\"Image 3\">\n                </div>\n            </div>\n        </div>\n        <div class=\"swipe-text\">Swipe to see more >></div>\n    </div>\n\n    <script>\n        (function() {\n            let currentSlide = 0;\n            const carousel = document.getElementById('imgCarousel');\n            const totalSlides = 3;\n            let startX = 0;\n            let currentX = 0;\n            let isDragging = false;\n\n            function updateCarousel() {\n                if (window.innerWidth <= 768) {\n                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;\n                } else {\n                    carousel.style.transform = 'translateX(0)';\n                }\n            }\n\n            function next() {\n                if (currentSlide < totalSlides - 1) {\n                    currentSlide++;\n                    updateCarousel();\n                }\n            }\n\n            function prev() {\n                if (currentSlide > 0) {\n                    currentSlide--;\n                    updateCarousel();\n                }\n            }\n\n            // Touch events for swipe on mobile\n            carousel.addEventListener('touchstart', (e) => {\n                if (window.innerWidth > 768) return;\n                startX = e.touches[0].clientX;\n                isDragging = true;\n            });\n\n            carousel.addEventListener('touchmove', (e) => {\n                if (!isDragging || window.innerWidth > 768) return;\n                currentX = e.touches[0].clientX;\n            });\n\n            carousel.addEventListener('touchend', () => {\n                if (!isDragging || window.innerWidth > 768) return;\n                const diff = startX - currentX;\n                \n                if (Math.abs(diff) > 50) {\n                    if (diff > 0) {\n                        next();\n                    } else {\n                        prev();\n                    }\n                }\n                \n                isDragging = false;\n            });\n\n            // Update on window resize\n            window.addEventListener('resize', updateCarousel);\n            \n            // Initial update\n            updateCarousel();\n        })();\n    </script>\n</body>\n</html>",
-        "color_scheme": "",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n \n  <h1 style=\" font-weight: 900; letter-spacing: -1px\" class=\"title1\">\n  CAN YOU FEEL THE PULL?\n  </h1>\n  \n  <video src=\"https://cdn.shopify.com/videos/c/vp/d6f4178253464b2780128be2f61c5fa0/d6f4178253464b2780128be2f61c5fa0.HD-1080p-7.2Mbps-76746195.mp4\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');\n\np{\nz-index:2;\n}\n.main-sec-custom1 video{\ntop: 41%;\n  position: absolute;\nfilter: blur(5px);\nopacity: 70%;\ntransform: rotate(0deg);\n  left: 0;\n  width: 100%;\n  height: 30%;\n  object-fit: cover;\n  z-index:-1 ;\nover-flow:hidden;\n\n}\n  \n  .title1 {\nfont-family:\"Audiowide\", sans-serif;\nmargin-top:-160px;\n    font-size: 2rem;\n   background-image: linear-gradient(-225deg, #a2110b 0%, #de210d 62%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 5rem;\nmargin-top:-40px;\n\n    }\n.main-sec-custom1 video{\n  height: 44%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_8AmK6R": {
+    "custom_liquid_FKgYX4": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Halberd Strike - Coming Soon</title>\n    <style>\n        .halberd-countdown-wrapper {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        .halberd-countdown-wrapper * {\n            box-sizing: border-box;\n        }\n\n        .halberd-container {\n            text-align: center;\n            max-width: 600px;\n            width: 100%;\n            margin: 0 auto;\n            padding: 40px 20px;\n        }\n\n        .halberd-logo {\n            width: 100%;\n            max-width: 320px;\n            height: auto;\n            margin-bottom: 30px;\n            opacity: 0;\n            animation: halberdFadeIn 1s ease-out forwards;\n        }\n\n        .halberd-launch-text {\n            color: rgba(0, 0, 0, 0.6);\n            font-size: 12px;\n            letter-spacing: 2px;\n            text-transform: uppercase;\n            margin-bottom: 24px;\n            opacity: 0;\n            animation: halberdFadeIn 1s ease-out 0.3s forwards;\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        @keyframes halberdFadeIn {\n            to {\n                opacity: 1;\n            }\n        }\n\n        @media (max-width: 480px) {\n            .halberd-logo {\n                max-width: 240px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"halberd-countdown-wrapper\">\n        <div class=\"halberd-container\">\n            <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/image_6.png?v=1761564007\" alt=\"Halberd Strike\" class=\"halberd-logo\">\n            \n            <div class=\"halberd-launch-text\">Launching Soon</div>\n        </div>\n    </div>\n</body>\n</html>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n \n  <h2 class=\"second-title\">The Force Arrives</h2>\n <p>Experience grip beyond belief. Join the league of the elites.\n<br>\nSign up below</p>\n</section>\n\n<style>\n  .second-title {\nletter-spacing: -0.5px;\n    font-size: 3rem;\n    font-weight: 800;\n    margin: 0;\n    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 6rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "hero_video_component_PbxWay": {
+      "type": "hero-video-component",
+      "disabled": true,
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/color-bends-1772197023249.mp4",
+        "subtitle": "Prnx",
+        "title": "MOTION IN ACTION",
+        "description": "Experience the speed and precision with our latest video showcase",
+        "button_text": "EXPLORE MORE",
+        "link_to": "/",
         "color_scheme": "",
-        "padding_top": 12,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -59,9 +85,9 @@
         "forms_inline_JGCJ7L": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "717896",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
+            "form_id": "890720",
+            "text_color": "#fc0606",
+            "button_background_color": "#de121c",
             "button_label_color": "#ffffff",
             "links_color": "#1878b9",
             "errors_color": "#e02229",
@@ -123,6 +149,7 @@
         "row_qd6TpW",
         "row_Y6ijwx"
       ],
+      "disabled": true,
       "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "adapt",
@@ -144,15 +171,15 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/h_banner.png",
-        "mobile_image": "shopify://shop_images/h_banner_responsive.png",
+        "image": "shopify://shop_images/banner_3_74c5f586-57e3-4e15-b7b9-3934256044ba.png",
+        "mobile_image": "shopify://shop_images/banner_responsive_3.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
+        "link_to": "",
+        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
+        "padding_top": 68,
         "padding_bottom": 0
       }
     }
@@ -160,8 +187,10 @@
   "order": [
     "main",
     "hero_component_4NTVjw",
+    "custom_liquid_EFmYdF",
     "custom_liquid_37tWNM",
-    "custom_liquid_8AmK6R",
+    "custom_liquid_FKgYX4",
+    "hero_video_component_PbxWay",
     "17615601770881d59e",
     "multirow_GdRJkm",
     "hero_component_qcze89"
