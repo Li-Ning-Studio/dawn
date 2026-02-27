@@ -389,6 +389,18 @@
     "collection_list_Wi9izD": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_Hept6t": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-stringing-remix-gripping-services"
+          }
+        },
+        "featured_collection_gN6t3d": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-socks"
+          }
+        },
         "featured_collection_BmJpWR": {
           "type": "featured_collection",
           "settings": {
@@ -401,31 +413,19 @@
             "collection": "free-cosmopack-headcover"
           }
         },
-        "featured_collection_gN6t3d": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-socks"
-          }
-        },
         "featured_collection_DB7pcy": {
           "type": "featured_collection",
           "settings": {
             "collection": "free-drawstring-bag-1"
           }
-        },
-        "featured_collection_Hept6t": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-stringing-remix-gripping-services"
-          }
         }
       },
       "block_order": [
+        "featured_collection_Hept6t",
+        "featured_collection_gN6t3d",
         "featured_collection_BmJpWR",
         "featured_collection_JDfADf",
-        "featured_collection_gN6t3d",
-        "featured_collection_DB7pcy",
-        "featured_collection_Hept6t"
+        "featured_collection_DB7pcy"
       ],
       "custom_css": [
         "h2 {margin: 10px auto;}",
@@ -442,7 +442,7 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "show_view_all": false,
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 100
       }
