@@ -247,55 +247,6 @@
         "padding_bottom": 80
       }
     },
-    "multicolumn_XNezHU": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_PFMrnN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_58c6a716-eb8c-4c0d-bab1-3cb911e9c690.png",
-            "title": "",
-            "text": "",
-            "link_label": "Player Favorites",
-            "link": "shopify://collections/buy-or-bye-best-sellers"
-          }
-        },
-        "column_3EnA8A": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_641b73d1-f5bd-4def-9f70-3fec4cd8992f.png",
-            "title": "",
-            "text": "",
-            "link_label": "Epic Discount Drop",
-            "link": "shopify://collections/buy-or-bye-high-discount"
-          }
-        }
-      },
-      "block_order": [
-        "column_PFMrnN",
-        "column_3EnA8A"
-      ],
-      "custom_css": [
-        "span {color: #00ff89; font-size: 2rem; margin-top: -10px;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 40,
-        "padding_bottom": 84
-      }
-    },
     "hero_component_ihqe7q": {
       "type": "hero-component",
       "custom_css": [
@@ -346,6 +297,55 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 44,
         "padding_bottom": 24
+      }
+    },
+    "multicolumn_XNezHU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PFMrnN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_58c6a716-eb8c-4c0d-bab1-3cb911e9c690.png",
+            "title": "",
+            "text": "",
+            "link_label": "Player Favorites",
+            "link": "shopify://collections/buy-or-bye-best-sellers"
+          }
+        },
+        "column_3EnA8A": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_641b73d1-f5bd-4def-9f70-3fec4cd8992f.png",
+            "title": "",
+            "text": "",
+            "link_label": "Epic Discount Drop",
+            "link": "shopify://collections/buy-or-bye-high-discount"
+          }
+        }
+      },
+      "block_order": [
+        "column_PFMrnN",
+        "column_3EnA8A"
+      ],
+      "custom_css": [
+        "span {color: #00ff89; font-size: 2rem; margin-top: -10px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 84
       }
     },
     "hero_component_YqaQVD": {
@@ -505,6 +505,54 @@
         "padding_bottom": 84
       }
     },
+    "hero_component_fcGe8K": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Apparel_Banner.png",
+        "mobile_image": "shopify://shop_images/Apparel_Banner_R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/apparels-bye-or-buy",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "featured_collection_gpQKzJ": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".button {margin-top: 40px; color: #00ff89; background: #000; font-weight: 600;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "apparels-bye-or-buy",
+        "products_to_show": 4,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 84
+      }
+    },
     "multicolumn_UgmLLW": {
       "type": "multicolumn",
       "blocks": {
@@ -610,16 +658,18 @@
     "multicolumn_M8qycr",
     "multicolumn_UWV9KM",
     "featured_collection_7hbWbR",
-    "multicolumn_XNezHU",
     "hero_component_ihqe7q",
     "custom_liquid_cUTC4z",
     "swipeable_products_9jPGh3",
+    "multicolumn_XNezHU",
     "hero_component_YqaQVD",
     "swipeable_products_iLkcGi",
     "collection_list_Wi9izD",
     "hero_component_4zcJ94",
     "custom_liquid_HFHKWW",
     "featured_collection_bQVTz8",
+    "hero_component_fcGe8K",
+    "featured_collection_gpQKzJ",
     "multicolumn_UgmLLW",
     "custom_liquid_h3e4K6",
     "hero_component_twUJfx"
