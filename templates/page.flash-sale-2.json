@@ -50,7 +50,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; text-align:center; width:80%; font-weight: 900; letter-spacing: -1px\" class=\"title3\">\n Today's Deals, Tomorrow's  Regret\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:40px;\n\">\n   Buy Before Bye\n  </a>\n  \n</section>\n\n<style>\n\n.main-sec-custom3 video{\n  position: absolute;\n  \n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .button1 {\ntext-decoration:none;\ndisplay:flex;\njustify-content:center;\nalign-items:center;\n\n  position: relative;\n  height: 3.5em;\n  border: 3px ridge #00ff89;\n  outline: none;\n  background-color: transparent;\n  color: white;\n  transition: 1s;\n  border-radius: 0.3em;\n  font-size: 1.4rem;\n  font-weight: bold;\n  cursor: pointer;\npadding: 0 20px;\n}\n\n.button1::after .button::after  {\n  content: \"\";\n  position: absolute;\n  top: -10px;\n  left: 3%;\n  width: 95%;\n  height: 40%;\n \n  transition: 0.5s;\n  transform-origin: center;\n}\n\n.button1::before {\n  content: \"\";\n  transform-origin: center;\n  position: absolute;\n  top: 80%;\n  left: 3%;\n  width: 95%;\n  height: 40%;\n\n  transition: 0.5s;\n}\n\n.button1:hover::before, .button1:hover::after {\n  transform: scale(0)\n}\n\n.button1:hover {\n  box-shadow: inset 0px 0px 25px #00ff89;\n}\n\n  .title3 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #00ff89 0%,\n      #09b859 52%,\n      #d9ca26 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title3 {\n      font-size: 5rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}.button1{\nfont-size:2rem;\n}\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; font-family: 'Teko', sans-serif; text-align:center;  width:80%; font-weight: 900; letter-spacing: 1px\" class=\"title3\">\n Today's Deals, Tomorrow's  Regret\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:40px;\n\">\n   Buy Before Bye\n  </a>\n  \n</section>\n\n<style>\n#MainContent{\nfont-family: 'Teko', sans-serif;\nletter-spacing: 1px;\n}\n.main-sec-custom3 video{\n  position: absolute;\n  \n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .button1 {\ntext-decoration:none;\ndisplay:flex;\njustify-content:center;\nalign-items:center;\n\n  position: relative;\n  height: 3.5em;\n  border: 3px ridge #00ff89;\n  outline: none;\n  background-color: transparent;\n  color: white;\n  transition: 1s;\n  border-radius: 0.3em;\n  font-size: 1.4rem;\n  font-weight: bold;\n  cursor: pointer;\npadding: 0 20px;\n}\n\n.button1::after .button::after  {\n  content: \"\";\n  position: absolute;\n  top: -10px;\n  left: 3%;\n  width: 95%;\n  height: 40%;\n \n  transition: 0.5s;\n  transform-origin: center;\n}\n\n.button1::before {\n  content: \"\";\n  transform-origin: center;\n  position: absolute;\n  top: 80%;\n  left: 3%;\n  width: 95%;\n  height: 40%;\n\n  transition: 0.5s;\n}\n\n.button1:hover::before, .button1:hover::after {\n  transform: scale(0)\n}\n\n.button1:hover {\n  box-shadow: inset 0px 0px 25px #00ff89;\n}\n\n  .title3 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #00ff89 0%,\n      #09b859 52%,\n      #d9ca26 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title3 {\n      font-size: 5rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}.button1{\nfont-size:2rem;\n}\n  }\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 60,
         "padding_bottom": 40
@@ -61,7 +61,7 @@
       "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n.card__media{\nbackground:black;\n}\n#MainContent img {\n  background: url(https://cdn.shopify.com/s/files/1/0933/9378/1029/files/unnamed.webp?v=1772079897&width=400);\n  background-size: cover;\n}\n\n #MainContent h2, .title {\n color: #fff;\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 600;\n  text-align: center;\n  line-height: 1;\n  background-image: linear-gradient(320deg, #f88920 30%, #2dd573 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\ncolor: #00ff89;\n  margin-bottom:10px;\n  text-shadow: 0 0 10px rgb(6,84,75,0.5);\nfont-size:3rem;\n}\n.countdown-timer-section{\n    background-image: url(https://media.istockphoto.com/id/1545637815/vector/synthwave-wireframe-net-illustration-abstract-digital-background-80s-90s-retro-futurism.jpg?s=612x612&w=0&k=20&c=9LMGyg_BEwdgBfSHxcpxgO014zI1rliHNLKEA9Az5Q0=);\n    background-size: contain;\n}\n\n\n</style>",
+        "custom_liquid": "<style>\n.card__media{\nbackground:black;\n}\n#MainContent img {\n  background: url(https://cdn.shopify.com/s/files/1/0933/9378/1029/files/unnamed.webp?v=1772079897&width=400);\n  background-size: cover;\n}\n\n #MainContent h2, .title {\n color: #fff;\n font-family: 'Teko', sans-serif;\n    letter-spacing: 1px;\n  font-weight: 600;\n  text-align: center;\n  line-height: 1;\n  background-image: linear-gradient(320deg, #f88920 30%, #2dd573 70%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\ncolor: #00ff89;\n  margin-bottom:10px;\n  text-shadow: 0 0 10px rgb(6,84,75,0.5);\nfont-size:3rem;\n}\n.countdown-timer-section{\n    background-image: url(https://media.istockphoto.com/id/1545637815/vector/synthwave-wireframe-net-illustration-abstract-digital-background-80s-90s-retro-futurism.jpg?s=612x612&w=0&k=20&c=9LMGyg_BEwdgBfSHxcpxgO014zI1rliHNLKEA9Az5Q0=);\n    background-size: contain;\n}\n\n\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 0,
         "padding_bottom": 0
@@ -121,7 +121,7 @@
       "custom_css": [
         ".title-wrapper--no-top-margin {justify-content: center;}",
         ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #00ff89; font-size: 1.8rem;}"
+        "span {color: #00ff89; font-size: 2rem; letter-spacing: 1px;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -194,7 +194,8 @@
       "custom_css": [
         ".title-wrapper--no-top-margin {justify-content: center;}",
         ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #00ff89;}"
+        "span {color: #00ff89; font-size: 2rem; letter-spacing: 1px;}",
+        "li {margin-bottom: 20px;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -276,7 +277,7 @@
         "column_3EnA8A"
       ],
       "custom_css": [
-        "span {color: #00ff89; font-size: 1.8rem; margin-top: -10px;}"
+        "span {color: #00ff89; font-size: 2rem; margin-top: -10px;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -321,7 +322,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; text-align:center; width:80%; font-weight: 900; letter-spacing: -1px\" class=\"title3\">\n TWO IS THE NEW HIGH SCORE\n  </h1>\n  <p style=\"margin-top: 3px\">One racket in your cart. One more on us.</p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:20px;\n\">\n Grab Your Extra Life\n  </a>\n  \n</section>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; \nfont-family: 'Teko', sans-serif; text-align:center; width:80%; font-weight: 900; letter-spacing: 1px\" class=\"title3\">\n TWO IS THE NEW HIGH SCORE\n  </h1>\n  <p style=\"margin-top: 3px\">One racket in your cart. One more on us.</p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:20px;\n\">\n Grab Your Extra Life\n  </a>\n  \n</section>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 48,
         "padding_bottom": 16
@@ -472,7 +473,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; text-align:center; width:80%; font-weight: 900; letter-spacing: -1px\" class=\"title3\">\n EXIT STAGE DEALS\n  </h1>\n  <p style=\"margin-top: 3px\">Last run. Last stock. Once it’s gone, it’s game over.</p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:20px;\n\">\nPlay Before It’s Gone\n  </a>\n  \n</section>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; \nfont-family: 'Teko', sans-serif; text-align:center; width:80%; font-weight: 900; letter-spacing: 1px\" class=\"title3\">\n EXIT STAGE DEALS\n  </h1>\n  <p style=\"margin-top: 3px\">Last run. Last stock. Once it’s gone, it’s game over.</p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:20px;\n\">\nPlay Before It’s Gone\n  </a>\n  \n</section>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 48,
         "padding_bottom": 56
@@ -510,58 +511,72 @@
         "padding_bottom": 84
       }
     },
-    "collection_list_64RcFd": {
-      "type": "collection-list",
+    "multicolumn_UgmLLW": {
+      "type": "multicolumn",
       "blocks": {
-        "featured_collection_C4AWNX": {
-          "type": "featured_collection",
+        "column_AEM9fq": {
+          "type": "column",
           "settings": {
-            "collection": "free-t-shirt-printing"
+            "image": "shopify://shop_images/Artboard_1_97309a61-4eb8-4e56-b0ca-bc47f6f167bb.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "featured_collection_JhQMcm": {
-          "type": "featured_collection",
+        "column_La68TC": {
+          "type": "column",
           "settings": {
-            "collection": "free-cosmopack-headcover"
+            "image": "shopify://shop_images/Artboard_2_e4d31489-b20c-427e-90df-1d4d19c37ddf.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "featured_collection_Fc83KA": {
-          "type": "featured_collection",
+        "column_qniekf": {
+          "type": "column",
           "settings": {
-            "collection": "free-socks"
+            "image": "shopify://shop_images/Artboard_3_0b716636-5876-4289-8421-bbb509f6156f.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "featured_collection_hAMX7V": {
-          "type": "featured_collection",
+        "column_xejrFw": {
+          "type": "column",
           "settings": {
-            "collection": "free-drawstring-bag-1"
+            "image": "shopify://shop_images/Artboard_4_807651cd-9310-42e2-be51-7317be68e1cf.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "featured_collection_C4AWNX",
-        "featured_collection_JhQMcm",
-        "featured_collection_Fc83KA",
-        "featured_collection_hAMX7V"
+        "column_AEM9fq",
+        "column_La68TC",
+        "column_qniekf",
+        "column_xejrFw"
       ],
-      "custom_css": [
-        "h2 {margin: 10px auto;}",
-        "a {color: #00ff89;}",
-        ".card .card__content {background: black;}",
-        ".card__inner .card__content {background: none;}"
-      ],
-      "name": "t:sections.collection-list.presets.name",
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Shop by Price, Play Your Way",
         "heading_size": "h1",
+        "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
         "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 100
+        "padding_bottom": 92
       }
     },
     "custom_liquid_h3e4K6": {
@@ -587,7 +602,7 @@
         "button_text": "",
         "link_to": "/",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 0,
+        "padding_top": 12,
         "padding_bottom": 0
       }
     }
@@ -611,7 +626,7 @@
     "hero_component_4zcJ94",
     "custom_liquid_HFHKWW",
     "featured_collection_bQVTz8",
-    "collection_list_64RcFd",
+    "multicolumn_UgmLLW",
     "custom_liquid_h3e4K6",
     "hero_component_twUJfx"
   ]
