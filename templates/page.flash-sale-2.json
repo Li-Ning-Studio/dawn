@@ -40,7 +40,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/buy-or-bye-complete-collection",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 0,
         "padding_bottom": 0
@@ -74,7 +74,6 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/unnamed.webp",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -98,7 +97,7 @@
             "title": "",
             "text": "",
             "link_label": "Strike",
-            "link": "shopify://collections/cricket-shoe-dec-flash-sale"
+            "link": "shopify://collections/buy-or-bye-cricket"
           }
         },
         "column_p3rQT9": {
@@ -108,7 +107,7 @@
             "title": "",
             "text": "",
             "link_label": "Swing",
-            "link": "shopify://collections/pickleball"
+            "link": "shopify://collections/buy-or-bye-pickleball"
           }
         }
       },
@@ -151,7 +150,7 @@
             "title": "",
             "text": "",
             "link_label": "Swing for Victory",
-            "link": "shopify://collections/badminton-rackets-dec-flash-sale"
+            "link": "shopify://collections/buy-or-bye-rackets"
           }
         },
         "column_6MeRGw": {
@@ -161,7 +160,7 @@
             "title": "",
             "text": "",
             "link_label": "Move Like a Pro",
-            "link": "shopify://collections/badminton-shoes-dec-flash-sale"
+            "link": "shopify://collections/buy-or-bye-shoes"
           }
         },
         "column_VW6BAw": {
@@ -171,7 +170,7 @@
             "title": "",
             "text": "",
             "link_label": "Pack Like a Champion",
-            "link": "shopify://collections/badminton-bags-dec-flash-sale"
+            "link": "shopify://collections/buy-or-bye-bags"
           }
         },
         "column_dNLkwP": {
@@ -181,7 +180,7 @@
             "title": "",
             "text": "",
             "link_label": "Power Your Serve",
-            "link": ""
+            "link": "shopify://collections/buy-or-bye-paddles"
           }
         }
       },
@@ -223,7 +222,7 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "diwali-sale",
+        "collection": "buy-or-bye-top-choice",
         "products_to_show": 6,
         "title": "Most Wanted Loadout!",
         "heading_size": "h1",
@@ -258,7 +257,7 @@
             "title": "",
             "text": "",
             "link_label": "Player Favorites",
-            "link": ""
+            "link": "shopify://collections/buy-or-bye-best-sellers"
           }
         },
         "column_3EnA8A": {
@@ -268,7 +267,7 @@
             "title": "",
             "text": "",
             "link_label": "Epic Discount Drop",
-            "link": ""
+            "link": "shopify://collections/buy-or-bye-high-discount"
           }
         }
       },
@@ -312,7 +311,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "",
+        "link_to": "shopify://collections/buy-1-get-1",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 32,
         "padding_bottom": 8
@@ -322,7 +321,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; \nfont-family: 'Teko', sans-serif; text-align:center; width:80%; font-weight: 900; letter-spacing: 1px\" class=\"title3\">\n TWO IS THE NEW HIGH SCORE\n  </h1>\n  <p style=\"margin-top: 3px\">One racket in your cart. One more on us.</p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:20px;\n\">\n Grab Your Extra Life\n  </a>\n  \n</section>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; \nfont-family: 'Teko', sans-serif; text-align:center; width:80%; font-weight: 900; letter-spacing: 1px\" class=\"title3\">\n TWO IS THE NEW HIGH SCORE\n  </h1>\n  <p style=\"margin-top: 3px\">One racket in your cart. One more on us.</p>\n  <a  class=\"button1\" href=\"/collections/buy-1-get-1\"   style=\"\nmargin-top:20px;\n\">\n Grab Your Extra Life\n  </a>\n  \n</section>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 48,
         "padding_bottom": 16
@@ -359,7 +358,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/apparels",
+        "link_to": "shopify://collections/champions-choice",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -374,17 +373,12 @@
       "settings": {
         "title": "Champions Choice",
         "products": [
-          "nuclear-60",
-          "z-tronic-100",
-          "t-fusion-800-attk-3u",
-          "t-fusion-800-attk-4u",
-          "t-fusion-800-ctrl",
-          "t-fusion-800-zoom",
-          "nuclear-72",
-          "ioniq-100-limited-edition",
-          "nuclear-78",
-          "ioniq-80",
-          "ioniq-80-limited-edition"
+          "nitrix-70-volta",
+          "hyfonic-7-4u",
+          "flareon-700",
+          "phenom",
+          "hyper-court",
+          "hyper-spike"
         ],
         "show_color_variants": false,
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
@@ -463,7 +457,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "",
+        "link_to": "shopify://collections/buy-or-bye-clearance",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 0,
         "padding_bottom": 0
@@ -473,7 +467,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; \nfont-family: 'Teko', sans-serif; text-align:center; width:80%; font-weight: 900; letter-spacing: 1px\" class=\"title3\">\n EXIT STAGE DEALS\n  </h1>\n  <p style=\"margin-top: 3px\">Last run. Last stock. Once it’s gone, it’s game over.</p>\n  <a  class=\"button1\" href=\"/products/hyfonic-1\"   style=\"\nmargin-top:20px;\n\">\nPlay Before It’s Gone\n  </a>\n  \n</section>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  <h1 style=\"margin: 0 auto; \nfont-family: 'Teko', sans-serif; text-align:center; width:80%; font-weight: 900; letter-spacing: 1px\" class=\"title3\">\n EXIT STAGE DEALS\n  </h1>\n  <p style=\"margin-top: 3px\">Last run. Last stock. Once it’s gone, it’s game over.</p>\n  <a  class=\"button1\" href=\"/collections/buy-or-bye-clearance\"   style=\"\nmargin-top:20px;\n\">\nPlay Before It’s Gone\n  </a>\n  \n</section>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 48,
         "padding_bottom": 56
@@ -486,14 +480,14 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "atomic-x-rackets",
-        "products_to_show": 12,
+        "collection": "buy-or-bye-clearance",
+        "products_to_show": 10,
         "title": "",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
@@ -521,7 +515,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/shop-under-999"
           }
         },
         "column_La68TC": {
@@ -531,7 +525,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/shop-under-1999"
           }
         },
         "column_qniekf": {
@@ -541,7 +535,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/shop-under-2999"
           }
         },
         "column_xejrFw": {
@@ -551,7 +545,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify://collections/shop-above-3k"
           }
         }
       },
@@ -600,7 +594,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "/",
+        "link_to": "shopify://collections/buy-or-bye-complete-collection",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 12,
         "padding_bottom": 0
