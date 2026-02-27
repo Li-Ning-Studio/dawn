@@ -17,19 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "countdown_timer_kxATRA": {
-      "type": "countdown-timer",
-      "disabled": true,
-      "custom_css": [],
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Hurry Sale ends in...",
-        "end_time": "2026-03-02 00:00",
-        "background": "linear-gradient(180deg, rgba(251, 253, 252, 1), rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 6%)",
-        "text_color": "#88fd86",
-        "padding_top": 38
-      }
-    },
     "hero_component_AFhdP9": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -232,7 +219,7 @@
         "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "image_ratio": "adapt",
@@ -244,7 +231,17 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 52,
-        "padding_bottom": 80
+        "padding_bottom": 12
+      }
+    },
+    "custom_liquid_zz7cEk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  \n  <a  class=\"button1\" href=\"/collections/buy-or-bye-top-choice\"   style=\"\n padding: 10px 40px; font-size:1.5rem;\n\">\n   View All\n  </a>\n  \n</section>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 12,
+        "padding_bottom": 60
       }
     },
     "hero_component_ihqe7q": {
@@ -490,7 +487,7 @@
         "columns_desktop": 5,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "image_ratio": "adapt",
@@ -502,7 +499,17 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 84
+        "padding_bottom": 8
+      }
+    },
+    "custom_liquid_icizwC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  \n  <a  class=\"button1\" href=\"/collections/buy-or-bye-clearance\"   style=\"\n padding: 10px 40px; font-size:1.5rem;\n\">\n   View All\n  </a>\n  \n</section>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 12,
+        "padding_bottom": 100
       }
     },
     "hero_component_fcGe8K": {
@@ -538,7 +545,7 @@
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "image_ratio": "adapt",
@@ -549,8 +556,18 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 84
+        "padding_top": 28,
+        "padding_bottom": 16
+      }
+    },
+    "custom_liquid_nnT66M": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n \n  \n  <a  class=\"button1\" href=\"/collections/apparels-bye-or-buy\"   style=\"\n padding: 10px 40px; font-size:1.5rem;\n\">\n   View All\n  </a>\n  \n</section>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 12,
+        "padding_bottom": 60
       }
     },
     "multicolumn_UgmLLW": {
@@ -621,17 +638,6 @@
         "padding_bottom": 92
       }
     },
-    "custom_liquid_h3e4K6": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Load Poppins Font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<!-- Gradient Headline -->\n<h1 style=\"\n  background-image: linear-gradient(120deg, #f9d423 0%, #f83600 100%);\n  background-clip: text;\n  -webkit-background-clip: text;\n  color: transparent;\n  font-size: 3rem;\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -0.5px;\n  text-align: center;\n  font-family: 'Poppins', sans-serif;\n\">\n  Our Favorite Picks, Now on Offer!</h1>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 8,
-        "padding_bottom": 4
-      }
-    },
     "hero_component_twUJfx": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -651,13 +657,13 @@
   },
   "order": [
     "main",
-    "countdown_timer_kxATRA",
     "hero_component_AFhdP9",
     "custom_liquid_FmdEgi",
     "custom_liquid_cpaLyT",
     "multicolumn_M8qycr",
     "multicolumn_UWV9KM",
     "featured_collection_7hbWbR",
+    "custom_liquid_zz7cEk",
     "hero_component_ihqe7q",
     "custom_liquid_cUTC4z",
     "swipeable_products_9jPGh3",
@@ -668,10 +674,11 @@
     "hero_component_4zcJ94",
     "custom_liquid_HFHKWW",
     "featured_collection_bQVTz8",
+    "custom_liquid_icizwC",
     "hero_component_fcGe8K",
     "featured_collection_gpQKzJ",
+    "custom_liquid_nnT66M",
     "multicolumn_UgmLLW",
-    "custom_liquid_h3e4K6",
     "hero_component_twUJfx"
   ]
 }
