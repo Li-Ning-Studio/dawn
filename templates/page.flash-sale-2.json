@@ -17,8 +17,25 @@
         "padding_bottom": 28
       }
     },
+    "hero_video_component_i9HaWU": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt_a6cffc47-4ea9-4570-ab1c-7051eba973c9.mp4",
+        "mobile_video": "shopify://files/videos/sq_d55f1286-826a-4555-bee5-f96c4916bc09.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/buy-or-bye-complete-collection",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_AFhdP9": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/home_banner_5c3ad59c-d703-47d2-b3a9-f4834d23e060.png",
@@ -657,6 +674,7 @@
   },
   "order": [
     "main",
+    "hero_video_component_i9HaWU",
     "hero_component_AFhdP9",
     "custom_liquid_FmdEgi",
     "custom_liquid_cpaLyT",
