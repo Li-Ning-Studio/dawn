@@ -43,17 +43,6 @@
         "enable_language_selector": false
       }
     },
-    "countdown_timer_6zkjxL": {
-      "type": "countdown-timer",
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "HURRY!!!! Buy or Bye Sale Ends Soon!",
-        "end_time": "2026-03-02 00:00",
-        "background": "linear-gradient(300deg, rgba(57, 140, 117, 1) 53%, rgba(0, 247, 136, 1) 100%)",
-        "text_color": "#ffffff",
-        "padding_top": 16
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -73,6 +62,17 @@
         "padding_bottom": 20
       }
     },
+    "countdown_timer_6zkjxL": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "HURRY!!!! Buy or Bye Sale Ends Soon!",
+        "end_time": "2026-03-02 00:00",
+        "background": "linear-gradient(300deg, rgba(57, 140, 117, 1) 53%, rgba(0, 247, 136, 1) 100%)",
+        "text_color": "#ffffff",
+        "padding_top": 16
+      }
+    },
     "custom_liquid_TYDpBY": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -86,8 +86,8 @@
   },
   "order": [
     "announcement-bar",
-    "countdown_timer_6zkjxL",
     "header",
+    "countdown_timer_6zkjxL",
     "custom_liquid_TYDpBY"
   ]
 }
