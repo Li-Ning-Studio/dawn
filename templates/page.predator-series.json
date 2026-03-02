@@ -21,8 +21,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom\"\n>\n  <p style=\"margin-bottom: 0\">Introducing</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title\">\n   One Game. Three Personalities.\n  </h1>\n  <p style=\"margin-top: 3px\">Pick the one that matches the way you play</p>\n  <a href=\"/collections/bb-flagship\" class=\"cta\">\n    <span>Match Your Style</span>\n  </a>\n  <video src=\"https://cdn.shopify.com/videos/c/vp/1b3282409df44fbeb5bef63b12a89c75/1b3282409df44fbeb5bef63b12a89c75.HD-1080p-2.5Mbps-68364991.mp4\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n.main-sec-custom video{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 40%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid white;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta:hover{\nbackground:white;\ncolor:black;\n}\n\n  .title {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #dba20f 0%,\n      #2d9fa7 52%,\n      #0c8642 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom\"\n>\n  <p style=\"margin-bottom: 0\">Introducing</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title\">\n   One Game. Three Personalities.\n  </h1>\n  <p style=\"margin-top: 3px\">Pick the one that matches the way you play</p>\n  <a href=\"/collections/bb-flagship\" class=\"cta\">\n    <span>Match Your Style</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n.main-sec-custom video{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 40%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid black;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta:hover{\nbackground:black;\ncolor:white;\n}\n\n  .title {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #003801 0%,\n     \n      #571a09 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 28
       }
@@ -31,8 +31,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"nav\">\n  <div class=\"container\">\n  <div class=\"btn\"><a href=\"#shopify-section-template--26404948705573__hero_component_7V7ntg\">NITRIX  10</a></div>\n    <div class=\"btn\"><a href=\"#shopify-section-template--26404948705573__hero_component_e8TUTP\">FLAREON 100</a></div>\n    <div class=\"btn\"><a href=\"#shopify-section-template--26404948705573__hero_component_AQEQxy\">HYFONIC 1</a></div>\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      viewBox=\"0 0 400 60\"\n      height=\"60\"\n      width=\"400\"\n      overflow=\"visible\"\n      class=\"outline\"\n    >\n     \n    </svg>\n  </div>\n</div>\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n\n.nav{\ndisplay:none;\n}\n\n@media screen and (min-width: 800px) {\n   \n.outline {\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n}\n\n.rect {\n  stroke-dashoffset: 7.5;\n  stroke-dasharray: 0 0 10 40 10 40;\n  transition: 0.5s;\n  stroke: #ffffff;\n}\n\n.nav {\ndisplay:block;\n  position: relative;\n  width: 60%;\n  height: 60px;\n  border-radius: 50px;\n  margin:0 auto;\n}\n.nav a {\ntext-decoration:none;\ncolor:white;\n}\n\n\n\n.container {\n  position: absolute;\n  inset: 0;\n  background: transparent;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  padding: 0.5em;\n}\n\n.btn {\n  padding: 0.5em 1.5em;\n  color: #fff;\n  cursor: pointer;\nfont-size: 2rem;\nfont-weight: bolder;\n  transition: 0.5s ease;\n\nborder-radius: 500px;\n}\n.btn:nth-child(1){\nborder-bottom: 1px solid #eaaf13;\n}\n.btn:nth-child(3){\nborder-bottom: 1px solid #1e5534;\n}\n.btn:nth-child(2){\nborder-bottom: 1px solid #2d9fa7;\n}\n.btn:nth-child(1):hover {\n  background: #e4ae0b;\n  border-radius: 500px;\n}\n.btn:nth-child(2):hover {\n  background: #2d9fa7;\n  border-radius: 500px;\n}\n.btn:nth-child(3):hover {\n  background: #09b859;\n  border-radius: 500px;\n}\n\n}\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "custom_liquid": "<div class=\"nav\">\n  <div class=\"container\">\n  <div class=\"btn\"><a href=\"#shopify-section-template--26670945075493__hero_component_7V7ntg\" class=\"aa1\">Extra Strong</a></div>\n    <div class=\"btn\"><a href=\"#shopify-section-template--26670945075493__hero_component_e8TUTP\" class=\"aa2\">Extreme</a></div>\n   \n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      viewBox=\"0 0 400 60\"\n      height=\"60\"\n      width=\"400\"\n      overflow=\"visible\"\n      class=\"outline\"\n    >\n     \n    </svg>\n  </div>\n</div>\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n\n.nav{\ndisplay:none;\n}\n\n@media screen and (min-width: 800px) {\n   \n.outline {\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n}\n\n.rect {\n  stroke-dashoffset: 7.5;\n  stroke-dasharray: 0 0 10 40 10 40;\n  transition: 0.5s;\n  stroke: #ffffff;\n}\n\n.nav {\ndisplay:block;\n  position: relative;\n  width: 60%;\n  height: 60px;\n  border-radius: 50px;\n  margin:0 auto;\n}\n.nav a {\ntext-decoration:none;\n  transition: 0.5s ease;\n}\n.aa1{\ncolor:#003801;\n}\n.aa2{\ncolor: #571a09;\n}\n\n\n.container {\n  position: absolute;\n  inset: 0;\n  background: transparent;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  padding: 0.5em;\n}\n\n.btn {\n  padding: 0.5em 1.5em;\n  \n  cursor: pointer;\nfont-size: 2rem;\nfont-weight: bolder;\n  transition: 0.5s ease;\n\nborder-radius: 500px;\n}\n.btn:nth-child(1){\nborder-bottom: 1px solid #003801;\ncolor:#003801;\n}\n\n.btn:nth-child(2){\nborder-bottom: 1px solid #571a09;\n}\n.btn:nth-child(1):hover{\n  background: #003801;\n  border-radius: 500px;\n}\n.btn:nth-child(1):hover .aa1{\ncolor: white;\n}\n.btn:nth-child(2):hover .aa2{\ncolor: white;\n}\n.btn:nth-child(2):hover {\n  background: #571a09;\n  border-radius: 500px;\n}\n.btn:nth-child(3):hover {\n  background: #09b859;\n  border-radius: 500px;\n}\n\n}\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 40,
         "padding_bottom": 0
       }
@@ -41,8 +41,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"cct\">\n    <a href=\"#shopify-section-template--26404948705573__hero_component_7V7ntg\" class=\"bbtn1\"><i class=\"animation\"></i><b>NITRIX 10\n    </a>\n     <a href=\"#shopify-section-template--26404948705573__hero_component_e8TUTP\" class=\"bbtn2\"><i class=\"animation\"></i>FLAREON 100<i class=\"animation\"></i>\n    </a>\n     <a href=\"#shopify-section-template--26404948705573__hero_component_AQEQxy\" class=\"bbtn3\"><i class=\"\"></i>HYFONIC - 1<i class=\"animation\"></i>\n    </a>\n</div>\n<style>\n@media screen and (min-width: 800px) {\n.cct{\ndisplay:none;\n}\n}\n.cct{\ntext-align:center;\n}\n.bbtn1, .bbtn2, .bbtn3 {\n  outline: 0;\n  display: inline-flex;\n  align-items: center;\n margin-left: 3px;\n  justify-content: space-between;\n  background: #f0b300;\n  min-width: 100px;\n  border: 0;\n  border-radius: 500px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);\n  box-sizing: border-box;\n  padding: 12px 17px;\n  color: #000;\n  font-size: 11px;\n  letter-spacing: 1.2px;\n  text-transform: uppercase;\n  overflow: hidden;\n  cursor: pointer;\n  text-decoration:none;\nfont-weight:1000px;\n}\n.bbtn2{\nbackground: #2d9fa7;\n}\n.bbtn3{\nbackground: #09b859;\n}\n\n\n.bbtn1 .animation, .bbtn2 .animation , .bbtn3 .animation  {\n  border-radius: 100%;\n  animation: ripple 2s linear infinite;\n}\n\n@keyframes ripple {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);\n  }\n\n  100% {\n    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);\n  }\n}\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "custom_liquid": "<div class=\"cct\">\n    <a href=\"#shopify-section-template--26670945075493__hero_component_7V7ntg\" class=\"bbtn1\"><i class=\"animation\"></i><b>Extra Strong\n    </a>\n     <a href=\"#shopify-section-template--26670945075493__hero_component_e8TUTP\" class=\"bbtn2\"><i class=\"animation\"></i>Extreme<i class=\"animation\"></i>\n    </a>\n    \n</div>\n<style>\n.cct{\ndisplay: flex;\njustify-content:space-around;\nalign-items:center;\ncolumn-gap: 0px;\n}\n@media screen and (min-width: 800px) {\n.cct{\ndisplay:none;\n}\n}\n.cct{\ntext-align:center;\n}\n.bbtn1, .bbtn2  {\n  outline: 0;\n  display: inline-flex;\n  align-items: center;\n \n  justify-content: space-between;\n  background: #39bc02;\n  min-width: 100px;\n  border: 0;\n  border-radius: 500px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);\n  box-sizing: border-box;\n  padding: 12px 17px;\n  color: #000;\n  font-size: 11px;\n  letter-spacing: 1.2px;\n  text-transform: uppercase;\n  overflow: hidden;\n  cursor: pointer;\n  text-decoration:none;\nfont-weight:1000px;\n}\n.bbtn2{\nbackground: #ae3c13;\n}\n\n\n.bbtn1 .animation, .bbtn2 .animation , .bbtn3 .animation  {\n  border-radius: 100%;\n  animation: ripple 2s linear infinite;\n}\n\n@keyframes ripple {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);\n  }\n\n  100% {\n    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);\n  }\n}\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 72
       }
@@ -51,15 +51,15 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_92a9a1f0-4100-43b6-8e7c-90b8b83247f9.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_2a158238-b426-4c12-bb43-9d86f6de9233.jpg",
+        "image": "shopify://shop_images/1_a859f3be-3d67-4d01-88f2-ddb69fe86f3d.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_1_01e16aa8-e83f-4e35-8860-6d7fbe8c576f.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/nitrix-10-4u-unstrung",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 48,
+        "color_scheme": "scheme-1",
+        "padding_top": 4,
         "padding_bottom": 0
       }
     },
@@ -67,8 +67,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n  <p style=\"margin-bottom: 0\">NITRIX 10</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\n   Attack Has a New Address\n  </h1>\n  <p style=\"margin-top: 3px\"> Designed for <strong>players who step in and take over</strong></p>\n  <a href=\"/products/nitrix-10-4u-unstrung\" class=\"cta1\">\n    <span>Go All In</span>\n  </a>\n  <video src=\"https://cdn.shopify.com/videos/c/vp/c4aef05ce41c401194587a233082ad91/c4aef05ce41c401194587a233082ad91.HD-1080p-2.5Mbps-68576853.mp4\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\np{\nz-index:2;\n}\n.main-sec-custom1 video{\n  position: absolute;\nfilter: blur(5px);\nopacity: 70%;\ntransform: rotate(0deg);\n  left: 0;\n  width: 100%;\n  height: 30%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #dba20f;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#dba20f;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #7a5601 0%, #dba20f 62%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n.main-sec-custom1 video{\n  height: 44%;\n  \n}\n  }\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n  <p style=\"margin-bottom: 0\">NITRIX 10</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\n   Attack Has a New Address\n  </h1>\n  <p style=\"margin-top: 3px\"> Designed for <strong>players who step in and take over</strong></p>\n  <a href=\"/products/nitrix-10-4u-unstrung\" class=\"cta1\">\n    <span>Go All In</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\np{\nz-index:2;\n}\n.main-sec-custom1 video{\n  position: absolute;\nfilter: blur(5px);\nopacity: 70%;\ntransform: rotate(0deg);\n  left: 0;\n  width: 100%;\n  height: 30%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #2f9c00;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#2f9c00;\ncolor: white;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #003b01 40%, #2f9c00 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n.main-sec-custom1 video{\n  height: 44%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 64
       }
@@ -79,9 +79,9 @@
         "column_nY9tcG": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_1_063c7726-6b69-4f8a-8128-4fc028b68ac9.jpg",
-            "title": "<strong>Superlight Carbon Core</strong>",
-            "text": "<p>Designed for swift movements, this flexible shaft ensures a powerful whip for aggressive impact during play.</p>",
+            "image": "shopify://shop_images/A_1_84cc5c25-e435-4568-ae8d-5534ae3f2919.jpg",
+            "title": "<strong>Vapor Shaft Technology</strong>",
+            "text": "<p>The aerodynamic vapor shaft profile is optimized for speed, torque resistance and flex to deliver maximum power on attacking shots.</p>",
             "link_label": "",
             "link": ""
           }
@@ -89,9 +89,9 @@
         "column_7nz3P8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_dabd4f2b-aff0-4cc4-835c-ac6022774800.jpg",
-            "title": "<strong>Graphite Lab</strong>",
-            "text": "<p>This frame holds firm on impact without compromising the crisp, responsive feel required for explosive shots.</p>",
+            "image": "shopify://shop_images/A_2_437e4269-1ea7-4071-b53d-1b4c12c091f6.jpg",
+            "title": "<strong>Japanese Graphite Carbon</strong>",
+            "text": "<p>Constructed from the highest quality Japanese graphite carbon material, allowing for an extremely lightweight yet strong frame that can handle tensions up to 38lbs.</p>",
             "link_label": "",
             "link": ""
           }
@@ -99,9 +99,9 @@
         "column_HnyCDf": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_3_f54d6fa7-2d31-4074-bb5f-93334f9247f6.jpg",
-            "title": "<strong>Vaporshaft 6.8mm</strong>",
-            "text": "<p>Slim and flexible shaft that gives you the whip-effect during smashes.</p>",
+            "image": "shopify://shop_images/A_3_bc479c00-2c0b-4aac-8e49-146b552101ef.jpg",
+            "title": "<strong>Curve² Sweet Spot</strong>",
+            "text": "<p>Hundred's patented Curve² head technology engineers an extra-large sweet spot for unmatched forgiveness and precision on off-center hits.</p>",
             "link_label": "",
             "link": ""
           }
@@ -113,8 +113,8 @@
         "column_HnyCDf"
       ],
       "custom_css": [
-        "h3,h2 {background-image: linear-gradient(-225deg, #7a5601 0%, #dba20f 62%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "h3 {font-size: 2.5rem;}"
+        "h3,h2 {background-image: linear-gradient(-225deg, #003b01 40%, #2f9c00 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {font-size: 2.2rem;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -127,7 +127,7 @@
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -138,14 +138,14 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_dc200b98-b688-4eca-a18b-6fa3a7d21f14.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_5f92e674-34bd-4fe7-bdec-bd786accfaa1.jpg",
+        "image": "shopify://shop_images/2_c65d202e-a6ff-4e62-94bd-ab374a994e4f.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_2_086d5636-d231-4236-98d2-fcf097a26ff5.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/flareon-100",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -154,8 +154,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom2\"\n>\n  <p style=\"margin-bottom: 0\"> FLAREON 100</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title2\">\n  Play the Game a Step Faster\n  </h1>\n  <p style=\"margin-top: 3px\">Quick through the air, <strong>quicker between shots</strong></p>\n  <a href=\"/products/flareon-100\" class=\"cta2\">\n    <span>Pick Up the Pace</span>\n  </a>\n  <video src=\"https://cdn.shopify.com/videos/c/vp/980e3e29060f4b22b52f3b59d28322ef/980e3e29060f4b22b52f3b59d28322ef.HD-1080p-2.5Mbps-68370670.mp4\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\n\n.main-sec-custom2 video{\n  position: absolute;\n  top: ;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #2d9fa7;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta2:hover{\nbackground:#2d9fa7;\n}\n\n  .title2 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #225c66 0%,\n      #2d9fa7 52%,\n      #225c66 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom2\"\n>\n  <p style=\"margin-bottom: 0\"> FLAREON 100</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title2\">\n  Play the Game a Step Faster\n  </h1>\n  <p style=\"margin-top: 3px\">Quick through the air, <strong>quicker between shots</strong></p>\n  <a href=\"/products/flareon-100\" class=\"cta2\">\n    <span>Pick Up the Pace</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\n\n.main-sec-custom2 video{\n  position: absolute;\n  top: ;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #4b1208;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #4b1208;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta2:hover{\nbackground:#4b1208;\ncolor:white;\n}\n\n  .title2 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #4b1208 40%, #ae3c13 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 56,
         "padding_bottom": 48
       }
@@ -166,9 +166,9 @@
         "column_Lwnd64": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_1_68783569-be3e-4dfd-8fd5-f7c53a800f13.jpg",
-            "title": "<strong>Graphite Lab</strong>",
-            "text": "<p>Specialised for rapid acceleration, this advanced construction delivers a whip effect that generates power and velocity to every smash</p>",
+            "image": "shopify://shop_images/A_3_bfc962a0-2478-4826-a098-9ae829e95fe7.jpg",
+            "title": "<strong>Built to Last, Designed to Destroy</strong>",
+            "text": "<p>Featuring high-quality graphite from Graphite Lab, this racket is tough, durable, and battle-ready. It absorbs impact, holds tension like a pro, and delivers unwavering power</p>",
             "link_label": "",
             "link": ""
           }
@@ -176,9 +176,9 @@
         "column_EWLLdV": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_3_749909fa-68ef-40d9-bb8e-c06a6f61a4a3.jpg",
-            "title": "<strong>AECG+</strong>",
-            "text": "<p>This high-rigidity carbon graphite core provides maximum repulsion for effortless shots and sharp speed during fast rallies</p>",
+            "image": "shopify://shop_images/A_1_95dbad77-f5e7-47c9-9599-524085f71215.jpg",
+            "title": "<strong>Whip. Snap. Strike.</strong>",
+            "text": "<p>A whip-like 7.0mm Vaporshaft loads energy with every backswing and releases it in a devastating snap, turning every shot into a power-filled attack.</p>",
             "link_label": "",
             "link": ""
           }
@@ -186,9 +186,9 @@
         "column_9Dw33n": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_d3bfa569-5fbd-4290-a6eb-feab85a9e3a7.jpg",
-            "title": "<strong>Speed Racket</strong>",
-            "text": "<p>The ultra-light design maximizes swing speed, making every serve a swift start.</p>",
+            "image": "shopify://shop_images/A_2_a14a492d-e56b-44a0-9070-5b34cbac4bfa.jpg",
+            "title": "<strong>Stability Meets Speed</strong>",
+            "text": "<p>The Predator Extreme cuts through air and slices through like a bullet, thanks to its aerodynamic Nano Frame System. Get faster swings, sharper attacks, and rock-solid stability.</p>",
             "link_label": "",
             "link": ""
           }
@@ -200,8 +200,8 @@
         "column_9Dw33n"
       ],
       "custom_css": [
-        "h3,h2 {background-image: linear-gradient( -225deg, #225c66 0%, #2d9fa7 52%, #225c66 100% ); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "h3 {font-size: 2.5rem;}"
+        "h3,h2 {background-image: linear-gradient(-225deg, #4b1208 40%, #ae3c13 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {font-size: 2.2rem;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -214,7 +214,7 @@
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -223,10 +223,11 @@
     },
     "hero_component_AQEQxy": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_3307e0c2-9c11-459f-abc7-711b477d21b9.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_e3ed8cf5-25c0-466d-8363-5aefd0c839a2.jpg",
+        "image": "shopify://shop_images/3_04192143-2623-427f-94c3-0e261671ae71.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_3_5f7073c6-0148-42e6-a30d-9dd4396c7572.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -239,6 +240,7 @@
     },
     "custom_liquid_6XCngy": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\nclass=\"main-sec-custom3\"\n>\n  <p style=\"margin-bottom: 0\"> HYFONIC - 1</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title3\">\n   Make The Shuttle Listen\n  </h1>\n  <p style=\"margin-top: 3px\">Designed for <strong> measured rallies</strong> and smart play</p>\n  <a href=\"/products/hyfonic-1\" class=\"cta3\">\n    <span>Trust the Play</span>\n  </a>\n  <video src=\"https://cdn.shopify.com/videos/c/vp/ed77b6832ed946a1948387dea62d312f/ed77b6832ed946a1948387dea62d312f.HD-1080p-2.5Mbps-68374261.mp4\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\n\n.main-sec-custom3 video{\n  position: absolute;\n  \n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta3 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #1e5534;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition:0.5s ease;\n  }\n.cta3:hover{\nbackground: #1e5534;\n}\n\n  .title3 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #09b859 0%,\n      #0c8642 52%,\n      #1e5534 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title3 {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
@@ -250,10 +252,20 @@
     "multicolumn_FHyJ3f": {
       "type": "multicolumn",
       "blocks": {
+        "column_VRDBCc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_1c9fb0f6-0ab9-4945-971d-f6fb9f8000b6.jpg",
+            "title": "<strong>Precision Racket</strong>",
+            "text": "<p>The definitive racket for accuracy as it gives players direction for every target.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_jaFa7e": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_1_cfc9a24d-bacd-4dc8-a601-ff7fd071a40f.jpg",
+            "image": "shopify://shop_images/Artboard_3_453bb794-0962-47ef-8ac8-ee01ac8920e3.jpg",
             "title": "<strong>Curve² Geometry</strong>",
             "text": "<p>This specialized frame expands the sweet spot, making contact significantly easier for players to achieve consistency on every shot.</p>",
             "link_label": "",
@@ -263,29 +275,20 @@
         "column_8FEbwY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_e37f9c28-5d8e-4aa4-ac70-49a4afecba7f.jpg",
+            "image": "shopify://shop_images/Artboard_2_d5a6e1e3-abe6-43a1-8705-a96524b90e3b.jpg",
             "title": "<strong>Graphite Lab Core</strong>",
             "text": "<p>This flexible shaft is engineered to transfer smoothly and accurately for the perfect shot.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_VRDBCc": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_9b2af6f5-1ec4-46fd-9620-e600179def6e.jpg",
-            "title": "<strong>Precision Racket</strong>",
-            "text": "<p>The definitive racket for accuracy as it gives players direction for every target.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
+        "column_VRDBCc",
         "column_jaFa7e",
-        "column_8FEbwY",
-        "column_VRDBCc"
+        "column_8FEbwY"
       ],
+      "disabled": true,
       "custom_css": [
         "h3,h2 {background-image: linear-gradient( -225deg, #09b859 0%, #0c8642 52%, #1e5534 100% ); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
         "h3 {font-size: 2.5rem;}"
@@ -301,7 +304,7 @@
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -314,27 +317,17 @@
         "column_jcwTag": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/1_2_920c1f5e-382a-4621-b889-3a617d4ad969.png",
+            "image": "shopify://shop_images/Predator_Extra_Strong.jpg",
             "title": "",
             "text": "",
             "link_label": "",
             "link": "shopify://products/nitrix-10-4u-unstrung"
           }
         },
-        "column_zQQTdC": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/2_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/flareon-100"
-          }
-        },
         "column_9GREgA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/3_1_c304ccf7-a65a-48d5-9229-ed392d0f92c0.png",
+            "image": "shopify://shop_images/Predator_Extreme.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -344,21 +337,20 @@
       },
       "block_order": [
         "column_jcwTag",
-        "column_zQQTdC",
         "column_9GREgA"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "The Prime Trinity",
+        "title": "<strong>Predator Series</strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -369,8 +361,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\n   This Is Where Your Game Begins.\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/collections/bb-flagship\" class=\"cta4\">\n    <span>Your Move.</span>\n  </a>\n  <video src=\"https://cdn.shopify.com/videos/c/vp/1b3282409df44fbeb5bef63b12a89c75/1b3282409df44fbeb5bef63b12a89c75.HD-1080p-2.5Mbps-68364991.mp4\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n.main-sec-custom4 video{\n  position: absolute;\ntransform: rotate(180deg);\nmargin-top:60%;\n  left: 0;\n  width: 100%;\n  height: 15%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta4 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid white;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta4:hover{\nbackground:white;\ncolor:black;\n}\n\n  .title4 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #dba20f 0%,\n      #2d9fa7 52%,\n      #0c8642 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n.main-sec-custom4 video{\nmargin-top:0px;\nheight: 50%;\n}\n\n  }\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\n   This Is Where Your Game Begins.\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/collections/bb-flagship\" class=\"cta4\">\n    <span>Your Move.</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n.main-sec-custom4 video{\n  position: absolute;\ntransform: rotate(180deg);\nmargin-top:60%;\n  left: 0;\n  width: 100%;\n  height: 15%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta4 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid black;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta4:hover{\nbackground:black;\ncolor:white;\n}\n\n  .title4 {\n    font-size: 3.2rem;\n     background-image: linear-gradient(\n      -225deg,\n      #003801 30%,\n      #571a09 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n.main-sec-custom4 video{\nmargin-top:0px;\nheight: 50%;\n}\n\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 100,
         "padding_bottom": 100
       }
