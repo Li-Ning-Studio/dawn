@@ -24,7 +24,7 @@
         "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom\"\n>\n  <p style=\"margin-bottom: 0\">Introducing</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title\">\n   One Game. Three Personalities.\n  </h1>\n  <p style=\"margin-top: 3px\">Pick the one that matches the way you play</p>\n  <a href=\"/collections/bb-flagship\" class=\"cta\">\n    <span>Match Your Style</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n.main-sec-custom video{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 40%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid black;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta:hover{\nbackground:black;\ncolor:white;\n}\n\n  .title {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #003801 0%,\n     \n      #571a09 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
         "color_scheme": "scheme-1",
         "padding_top": 48,
-        "padding_bottom": 28
+        "padding_bottom": 40
       }
     },
     "custom_liquid_6ErPVe": {
@@ -35,6 +35,17 @@
         "color_scheme": "scheme-1",
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_7fx4wh": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"ct\">\n<a href=\"\" class=\"b2\">Extra Strong</a>\n<a href=\"\" class=\"b2 b1\">Extreme</a>\n</div>\n<style>\n\n.ct{\ndisplay:flex;\njustify-content:space-around;\nalign-items:center;\n\n}\n.b2 {\ntext-decoration:none;\n  display: inline-block;\n  transition: all 0.2s ease-in;\n  position: relative;\n  overflow: hidden;\n  z-index: 1;\n  color: #090909;\n  padding: 0.7em 1.7em;\n  cursor: pointer;\n  font-size: 18px;\n  border-radius: 0.5em;\n  background: #e8e8e8;\n  border: 1px solid #e8e8e8;\n  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;\n}\n\n.b2:active {\n  color: #666;\n  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;\n}\n\n.b2:before {\n  content: \"\";\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%) scaleY(1) scaleX(1.25);\n  top: 100%;\n  width: 140%;\n  height: 180%;\n  background-color: rgba(0, 0, 0, 0.05);\n  border-radius: 50%;\n  display: block;\n  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);\n  z-index: -1;\n}\n\n.b2:after {\n  content: \"\";\n  position: absolute;\n  left: 55%;\n  transform: translateX(-50%) scaleY(1) scaleX(1.45);\n  top: 180%;\n  width: 160%;\n  height: 190%;\n  background-color: #009087;\n  border-radius: 50%;\n  display: block;\n  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);\n  z-index: -1;\n}\n\n.b2:hover {\n  color: #ffffff;\n  border: 1px solid #009087;\n}\n\n.b2:hover:before {\n  top: -35%;\n  background-color: #009087;\n  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);\n}\n\n.b2:hover:after {\n  top: -45%;\n  background-color: #009087;\n  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "custom_liquid_CCaBBV": {
@@ -57,7 +68,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/nitrix-10-4u-unstrung",
+        "link_to": "shopify://collections/predator-extra-strong",
         "color_scheme": "scheme-1",
         "padding_top": 4,
         "padding_bottom": 0
@@ -67,7 +78,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n  <p style=\"margin-bottom: 0\">NITRIX 10</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\n   Attack Has a New Address\n  </h1>\n  <p style=\"margin-top: 3px\"> Designed for <strong>players who step in and take over</strong></p>\n  <a href=\"/products/nitrix-10-4u-unstrung\" class=\"cta1\">\n    <span>Go All In</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\np{\nz-index:2;\n}\n.main-sec-custom1 video{\n  position: absolute;\nfilter: blur(5px);\nopacity: 70%;\ntransform: rotate(0deg);\n  left: 0;\n  width: 100%;\n  height: 30%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #2f9c00;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#2f9c00;\ncolor: white;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #003b01 40%, #2f9c00 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n.main-sec-custom1 video{\n  height: 44%;\n  \n}\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n  <p style=\"margin-bottom: 0\">NITRIX 10</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\n   Attack Has a New Address\n  </h1>\n  <p style=\"margin-top: 3px\"> Designed for <strong>players who step in and take over</strong></p>\n  <a href=\"/collections/predator-extra-strong\" class=\"cta1\">\n    <span>Go All In</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\np{\nz-index:2;\n}\n.main-sec-custom1 video{\n  position: absolute;\nfilter: blur(5px);\nopacity: 70%;\ntransform: rotate(0deg);\n  left: 0;\n  width: 100%;\n  height: 30%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #003801;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#003801;\ncolor: white;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #003b01 40%, #2f9c00 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n.main-sec-custom1 video{\n  height: 44%;\n  \n}\n  }\n</style>",
         "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 64
@@ -144,7 +155,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/flareon-100",
+        "link_to": "shopify://collections/predator-extreme",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -154,7 +165,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom2\"\n>\n  <p style=\"margin-bottom: 0\"> FLAREON 100</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title2\">\n  Play the Game a Step Faster\n  </h1>\n  <p style=\"margin-top: 3px\">Quick through the air, <strong>quicker between shots</strong></p>\n  <a href=\"/products/flareon-100\" class=\"cta2\">\n    <span>Pick Up the Pace</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\n\n.main-sec-custom2 video{\n  position: absolute;\n  top: ;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #4b1208;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #4b1208;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta2:hover{\nbackground:#4b1208;\ncolor:white;\n}\n\n  .title2 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #4b1208 40%, #ae3c13 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom2\"\n>\n  <p style=\"margin-bottom: 0\"> FLAREON 100</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title2\">\n  Play the Game a Step Faster\n  </h1>\n  <p style=\"margin-top: 3px\">Quick through the air, <strong>quicker between shots</strong></p>\n  <a href=\"/collections/predator-extreme\" class=\"cta2\">\n    <span>Pick Up the Pace</span>\n  </a>\n  <video src=\"\" autoplay muted playsinline loop></video>\n</section>\n\n<style>\n\n.main-sec-custom2 video{\n  position: absolute;\n  top: ;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #4b1208;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #4b1208;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta2:hover{\nbackground:#4b1208;\ncolor:white;\n}\n\n  .title2 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #4b1208 40%, #ae3c13 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
         "color_scheme": "scheme-1",
         "padding_top": 56,
         "padding_bottom": 48
@@ -321,7 +332,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify://products/nitrix-10-4u-unstrung"
+            "link": "shopify://collections/predator-extra-strong"
           }
         },
         "column_9GREgA": {
@@ -331,7 +342,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify://products/hyfonic-1"
+            "link": "shopify://collections/predator-extreme"
           }
         }
       },
@@ -354,7 +365,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 100
+        "padding_bottom": 28
       }
     },
     "custom_liquid_wyUQkH": {
@@ -372,6 +383,7 @@
     "main",
     "custom_liquid_kQYMRq",
     "custom_liquid_6ErPVe",
+    "custom_liquid_7fx4wh",
     "custom_liquid_CCaBBV",
     "hero_component_7V7ntg",
     "custom_liquid_eGCwcN",
