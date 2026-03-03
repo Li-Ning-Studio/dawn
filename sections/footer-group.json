@@ -121,6 +121,7 @@
     },
     "media_rN6VHd": {
       "type": "media",
+      "disabled": true,
       "custom_css": [
         "img {height: 21px;}"
       ],
@@ -131,39 +132,11 @@
         "padding_top": 68,
         "padding_bottom": 0
       }
-    },
-    "responsive_slideshow_tDYMKU": {
-      "type": "responsive-slideshow",
-      "blocks": {
-        "slide_YUQgYr": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/live500.png",
-            "mobile_image": "shopify://shop_images/LiveHundredPercent_10.png",
-            "heading": "",
-            "subheading": "",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_YUQgYr"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "* {background: #030303; padding: 0px; width: 100vw;}",
-        "@media screen and (max-width: 800px) {}",
-        "img {opacity: 0.5;}"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {}
     }
   },
   "order": [
     "footer",
     "custom_liquid_f8nrbW",
-    "media_rN6VHd",
-    "responsive_slideshow_tDYMKU"
+    "media_rN6VHd"
   ]
 }
