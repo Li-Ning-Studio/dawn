@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-arrow" viewBox="0 0 14 10"><path fill="currentColor" fill-rule="evenodd" d="M8.537.808a.5.5 0 0 1 .817-.162l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 1 1-.708-.708L11.793 5.5H1a.5.5 0 0 1 0-1h10.793L8.646 1.354a.5.5 0 0 1-.109-.546" clip-rule="evenodd"/></svg>
+<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" version="1.1"
+    viewBox="0 0 256 256">
+    <style>
+        .arrow-right {
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 24px;
+        }
+
+        .arrow-right, .arrow-right-2 {
+        fill: none;
+        }
+    </style>
+    <rect class="arrow-right-2" y="0" width="256" height="256" />
+    <line class="arrow-right" x1="74.79" y1="128" x2="232.59" y2="128" />
+    <line class="arrow-right" x1="28.6" y1="128" x2="39.75" y2="128" />
+    <polyline class="arrow-right" points="160.59 56 232.59 128 160.59 200" />
+</svg>
