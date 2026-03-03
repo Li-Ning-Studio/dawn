@@ -121,7 +121,9 @@
     },
     "media_rN6VHd": {
       "type": "media",
-      "custom_css": [],
+      "custom_css": [
+        "img {opacity: 0.05;}"
+      ],
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/logoname_1.png",
