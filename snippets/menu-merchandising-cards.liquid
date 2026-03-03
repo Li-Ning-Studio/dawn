@@ -1,0 +1,108 @@
+{% comment %}
+  Renders up to 3 merchandising cards for a top-level navigation item.
+
+  Inputs:
+  - menu_handle: top-level menu handle (required)
+  - context: desktop | mobile | search
+  - max_cards: optional max cards count (default: 2)
+
+  Expected metaobject definition:
+  - Type: menu_merchandising_card (fallback to menu_merch_card)
+  - Fields: menu_label, image, title, description, cta_label, cta_url
+
+  Field fallbacks are intentionally lenient so existing definitions can be reused
+  without code changes when keys differ slightly.
+{% endcomment %}
+
+{%- liquid
+  assign menu_merchandising_cards = shop.metaobjects.menu_merchandising_card.values
+  if menu_merchandising_cards == blank
+    assign menu_merchandising_cards = shop.metaobjects.menu_merch_card.values
+  endif
+-%}
+
+{%- if menu_merchandising_cards != blank and menu_handle != blank -%}
+  {%- capture cards_markup -%}
+    {%- liquid
+      assign rendered_cards = 0
+      assign cards_limit = max_cards | default: 2
+    -%}
+    {%- for merch_card in menu_merchandising_cards -%}
+      {%- liquid
+        assign card_menu_label = merch_card.menu_label.value | default: merch_card.menu_handle.value | default: merch_card.menu.value
+        assign card_menu_handle = card_menu_label | handleize
+      -%}
+      {%- if card_menu_handle == menu_handle and rendered_cards < cards_limit -%}
+        {%- liquid
+          assign card_status = merch_card.system.status | downcase
+        -%}
+        {%- if card_status == blank or card_status == 'active' -%}
+        {%- liquid
+          assign card_image = merch_card.image.value | default: merch_card.media.value
+          assign card_title = merch_card.title.value | default: merch_card.heading.value
+          assign card_description = merch_card.description.value | default: merch_card.subtitle.value
+          assign card_image_sizes = '(min-width: 990px) 560px, 78vw'
+          if context == 'search'
+            assign card_image_sizes = '(min-width: 990px) 420px, 78vw'
+          endif
+          assign card_image_widths = '320, 480, 640, 800, 960, 1200, 1400, 1600, 1800, 2000'
+          assign card_url = merch_card.cta_url.value
+          if card_url == blank
+            assign card_url = merch_card.url.value
+          endif
+          if card_url == blank and merch_card.collection.value
+            assign card_url = merch_card.collection.value.url
+          endif
+          if card_url == blank and merch_card.product.value
+            assign card_url = merch_card.product.value.url
+          endif
+        -%}
+        <article class="menu-merchandising-card">
+          {%- if card_url != blank -%}
+            <a href="{{ card_url }}" class="menu-merchandising-card__link">
+          {%- endif -%}
+          {%- if card_image != blank -%}
+            <div class="menu-merchandising-card__media">
+              {{
+                card_image
+                | image_url: width: 2000
+                | image_tag:
+                  class: 'menu-merchandising-card__image',
+                  widths: card_image_widths,
+                  sizes: card_image_sizes,
+                  loading: 'lazy',
+                  alt: card_image.alt | default: card_title
+              }}
+            </div>
+          {%- endif -%}
+          {%- if card_title != blank or card_description != blank -%}
+            <div class="menu-merchandising-card__content">
+              {%- if card_title != blank -%}
+                <p class="menu-merchandising-card__title">
+                  <span class="menu-merchandising-card__title-text">{{ card_title | escape }}</span>
+                  <span class="menu-merchandising-card__title-arrow svg-wrapper" aria-hidden="true">
+                    {{- 'icon-arrow.svg' | inline_asset_content -}}
+                  </span>
+                </p>
+              {%- endif -%}
+              {%- if card_description != blank -%}
+                <p class="menu-merchandising-card__description">{{ card_description | escape }}</p>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if card_url != blank -%}
+            </a>
+          {%- endif -%}
+        </article>
+        {%- assign rendered_cards = rendered_cards | plus: 1 -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {%- if cards_markup != blank -%}
+    <div class="menu-merchandising-cards menu-merchandising-cards--{{ context | default: 'desktop' }}{% if rendered_cards == 1 %} menu-merchandising-cards--single{% endif %}">
+      {{ cards_markup }}
+    </div>
+  {%- endif -%}
+{%- endif -%}

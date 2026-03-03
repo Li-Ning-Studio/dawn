@@ -31,11 +31,80 @@
   opacity: 1;
   /* transform: translateY(1px); */
 }
+
+.mega-menu[open] > .header__menu-item,
+.mega-menu:hover > .header__menu-item,
+.mega-menu:focus-within > .header__menu-item {
+  color: rgb(var(--color-foreground));
+  border-bottom-color: var(--secondary-accent-color);
+}
 .mega-menu__list {
   display: flex;
   gap: 4rem 7rem;
   list-style: none;
   justify-content: center;
+}
+
+.mega-menu__layout {
+  position: relative;
+  width: 100%;
+}
+
+.mega-menu__layout--with-merch {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  min-height: clamp(22rem, 26vw, 32rem);
+}
+
+.mega-menu__layout .mega-menu__list {
+  margin: 0 auto;
+}
+
+.mega-menu__layout--with-merch .mega-menu__list > li {
+  width: auto;
+  padding-right: 0;
+}
+
+.mega-menu__layout--with-merch .mega-menu__list {
+  margin: 0;
+  flex: 0 1 auto;
+}
+
+.mega-menu__merch {
+  position: static;
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.mega-menu__merch .menu-merchandising-cards--desktop {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 30rem);
+  gap: 1.2rem;
+  width: fit-content;
+  overflow: visible;
+  padding-left: 0;
+}
+
+.mega-menu__merch .menu-merchandising-cards--desktop.menu-merchandising-cards--single {
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  max-width: 30rem;
+}
+
+.mega-menu__merch .menu-merchandising-card {
+  min-width: 0;
+}
+
+.mega-menu__merch .menu-merchandising-card:only-child {
+  grid-column: auto;
+  max-width: none;
+  justify-self: auto;
 }
 .mega-menu__link {
   display: block;
@@ -61,6 +130,11 @@
 .header--top-center .mega-menu__list > li {
   width: 16%;
   padding-right: 2.4rem;
+}
+
+.header--top-center .mega-menu__layout--with-merch .mega-menu__list > li {
+  width: auto;
+  padding-right: 0;
 }
 
 .mega-menu__link:hover {
@@ -103,4 +177,15 @@
   position: fixed;
   left: 0;
   right: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .mega-menu__layout--with-merch {
+    gap: 1.8rem;
+    min-height: clamp(20rem, 24vw, 28rem);
+  }
+
+  .mega-menu__merch .menu-merchandising-cards--desktop {
+    grid-auto-columns: minmax(0, 24rem);
+  }
 }
