@@ -37,6 +37,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        ".header-wrapper.gradient {background: rgba(var(--color-background));}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
@@ -48,6 +51,7 @@
         "enable_country_selector": true,
         "enable_language_selector": true,
         "enable_customer_avatar": true,
+        "search_featured_collection": "",
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 20,
