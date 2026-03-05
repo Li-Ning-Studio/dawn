@@ -11,13 +11,242 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_dWQTKa": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_1144d809-5607-49d2-837c-b76e28b501ce.png",
+        "mobile_image": "shopify://shop_images/1R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_UjTXVg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin:0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Ranger Force</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\">CONTENT</p>\n  <a href=\"#\" class=\"ctax\">\n    <span>CONTENT</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #fe0101;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 10px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_MFBUkN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin:0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Ranger Force</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\">CONTENT</p>\n  <a href=\"#\" class=\"ctax\">\n    <span>CONTENT</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #fe0101;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 10px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_aphVB8": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/9.png",
+        "mobile_image": "shopify://shop_images/9R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_TpKYCV": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> li-Ning Ranger Force</p>\n  <h2 class=\"second-title\">Content</h2>\n  <h2 class=\"second-title\"> </h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_cN7FTN": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/6_070caaf8-0b87-45f7-98b6-c1b7963b8725.png",
+        "mobile_image": "shopify://shop_images/6R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_RnKawP": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> li-Ning Ranger Force</p>\n  <h2 class=\"second-title\">Content</h2>\n  <h2 class=\"second-title\"> </h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_bTbLTw": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/4_73e276a0-c984-4028-afe5-c971a697f72b.png",
+        "mobile_image": "shopify://shop_images/4R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pNVnPR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; \">\n  <p style=\"font-size: 1.4rem; \">Cotent</p>\n  <p class=\"longcopy\">\n    Long Desc Content <span class=\"highlight\"></span><span class=\"highlight\"></span>  <span class=\"highlight\"></span> <span class=\"highlight\"></span>\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%;\n}\n\n.highlight {\n  color: black;\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_7MBQDW": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/8.png",
+        "mobile_image": "shopify://shop_images/8R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_dfndBM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; \">\n  <p style=\"font-size: 1.4rem; \">Cotent</p>\n  <p class=\"longcopy\">\n    Long Desc Content <span class=\"highlight\"></span><span class=\"highlight\"></span>  <span class=\"highlight\"></span> <span class=\"highlight\"></span>\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%;\n}\n\n.highlight {\n  color: black;\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multirow_99MBFg": {
+      "type": "multirow",
+      "blocks": {
+        "row_G8wcVy": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_1_a572a2fa-fca6-4e41-86ad-13f23e68271f.png",
+            "caption": "Built to take the hit",
+            "heading": "<strong>TUFF TIP UPPER</strong>",
+            "text": "<p>Abrasion-resistant material protects the toe and high-stress zones from scuffs and drag during lunges and slides.</p>",
+            "button_label": "Need content",
+            "button_link": ""
+          }
+        },
+        "row_6WWJJm": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_2_3cd054e7-5ffc-4bc6-8882-006bf54810e5.png",
+            "caption": "Grip that grips back",
+            "heading": "<strong>RIPTIDE TRACTION </strong>",
+            "text": "<p>The ripple-shaped pattern bites into the court at multiple angles, giving you secure traction on every push and stop.</p>",
+            "button_label": "Need content",
+            "button_link": ""
+          }
+        },
+        "row_GLJ6Qi": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_3_6c01eb8d-d136-4a1a-b15e-abca3b84699b.png",
+            "caption": "Bounce that keeps coming",
+            "heading": "<strong>MIDSOLE CUSHION</strong>",
+            "text": "<p>High-rebound foam absorbs impact on every landing and springs you back into motion. The cushioning stays responsive over long sessions.</p>",
+            "button_label": "Need content",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_G8wcVy",
+        "row_6WWJJm",
+        "row_GLJ6Qi"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_bnQHR7": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/banner_3_74c5f586-57e3-4e15-b7b9-3934256044ba.png",
+        "mobile_image": "shopify://shop_images/banner_responsive_3.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_dWQTKa",
+    "custom_liquid_UjTXVg",
+    "hero_component_aphVB8",
+    "custom_liquid_TpKYCV",
+    "hero_component_cN7FTN",
+    "custom_liquid_RnKawP",
+    "hero_component_bTbLTw",
+    "custom_liquid_pNVnPR",
+    "hero_component_7MBQDW",
+    "custom_liquid_dfndBM",
+    "multirow_99MBFg",
+    "hero_component_bnQHR7",
+    "custom_liquid_MFBUkN"
   ]
 }
