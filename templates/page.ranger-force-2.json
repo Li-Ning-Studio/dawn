@@ -38,33 +38,7 @@
       "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin:0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Ranger Force</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\">CONTENT</p>\n  <a href=\"#\" class=\"ctax\">\n    <span>CONTENT</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #fe0101;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 10px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.image-with-text__heading{\n background-image: linear-gradient(to right, #082d6b 0%, #fe0101 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "hero_component_aphVB8": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/9.png",
-        "mobile_image": "shopify://shop_images/9R.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_TpKYCV": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> li-Ning Ranger Force</p>\n  <h2 class=\"second-title\">Content</h2>\n  <h2 class=\"second-title\"> </h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin:0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Ranger Force</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\">CONTENT</p>\n  <a href=\"#\" class=\"ctax\">\n    <span>CONTENT</span>\n  </a>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #fe0101;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 10px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\nfont-family:\"Audiowide\", sans-serif;\n  }\n\n  .title {\nfont-family:\"Audiowide\", sans-serif;\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.image-with-text__heading{\n background-image: linear-gradient(to right, #082d6b 0%, #fe0101 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\nfont-family:\"Audiowide\", sans-serif;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -86,11 +60,37 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_TpKYCV": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> li-Ning Ranger Force</p>\n  <h2 class=\"second-title\">Content</h2>\n  <h2 class=\"second-title\"> </h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \nfont-family:\"Audiowide\", sans-serif;\n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_component_aphVB8": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/9.png",
+        "mobile_image": "shopify://shop_images/9R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_RnKawP": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> li-Ning Ranger Force</p>\n  <h2 class=\"second-title\">Content</h2>\n  <h2 class=\"second-title\"> </h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> li-Ning Ranger Force</p>\n  <h2 class=\"second-title\">Content</h2>\n  <h2 class=\"second-title\"> </h2>\n</section>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -116,7 +116,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; \">\n  <p style=\"font-size: 1.4rem; \">Cotent</p>\n  <p class=\"longcopy\">\n    Long Desc Content <span class=\"highlight\"></span><span class=\"highlight\"></span>  <span class=\"highlight\"></span> <span class=\"highlight\"></span>\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%;\n}\n\n.highlight {\n  color: black;\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; \">\n  <p class=\"pp\" style=\"font-size: 1.4rem; \">Cotent</p>\n  <p class=\"longcopy\">\n    Long Desc Content <span class=\"highlight\"></span><span class=\"highlight\"></span>  <span class=\"highlight\"></span> <span class=\"highlight\"></span>\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%;\n}\n.pp{\nfont-family:\"Audiowide\", sans-serif;\n}\n.highlight {\n  color: black;\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -142,7 +142,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; \">\n  <p style=\"font-size: 1.4rem; \">Cotent</p>\n  <p class=\"longcopy\">\n    Long Desc Content <span class=\"highlight\"></span><span class=\"highlight\"></span>  <span class=\"highlight\"></span> <span class=\"highlight\"></span>\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%;\n}\n\n.highlight {\n  color: black;\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; \">\n  <p class=\"pp\" style=\"font-size: 1.4rem; \">Cotent</p>\n  <p class=\"longcopy\">\n    Long Desc Content <span class=\"highlight\"></span><span class=\"highlight\"></span>  <span class=\"highlight\"></span> <span class=\"highlight\"></span>\n  </p>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -191,9 +191,9 @@
         "row_GLJ6Qi"
       ],
       "custom_css": [
-        ".caption-with-letter-spacing {font-weight: 900; color: black; margin-bottom: 10px;}",
+        ".caption-with-letter-spacing {font-weight: 900; color: black; margin-bottom: 10px; font-family: \"Audiowide\", sans-serif;}",
         ".rte {margin-top: 10px;}",
-        ".button {border: 1px solid #fe0101;}"
+        ".button {border: 1px solid #fe0101; font-family: \"Audiowide\", sans-serif;}"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
@@ -232,7 +232,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin:0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Ranger Force</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\">CONTENT</p>\n  <a href=\"#\" class=\"ctax\">\n    <span>CONTENT</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #fe0101;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 10px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fe0101 0%, #082d6b 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin:0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Ranger Force</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\">CONTENT</p>\n  <a href=\"#\" class=\"ctax\">\n    <span>CONTENT</span>\n  </a>\n</section>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
