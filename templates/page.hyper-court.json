@@ -23,19 +23,111 @@
       "settings": {
         "image": "shopify://shop_images/1_333d8031-dfc1-42b7-bbd8-3d82e79f8c50.jpg",
         "mobile_image": "shopify://shop_images/2_8002c126-1268-4290-8dcd-96043d0b50ff.jpg",
-        "subtitle": "Prnx",
-        "title": "PHOTON LIKE MOVEMENTS",
-        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
-        "button_text": "BEND YOUR OPPONENT",
-        "link_to": "/",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "swipeable_products_tcbEWV": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #040404;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Available in 4 colors",
+        "products": [
+          "hyper-court"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multirow_TwaRz3": {
+      "type": "multirow",
+      "blocks": {
+        "row_WPXyNV": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_1_0ff404b1-8082-41b3-b560-dc846bb990ef.png",
+            "caption": "",
+            "heading": "X CUSHION MIDSOLE",
+            "text": "<p>Featuring enhanced energy return and impact absorption, the X Cushion midsole ensures you stay quick on your feet while minimizing fatigue. Every jump and landing is smoother and more efficient.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_PUmQM9": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_3_4edb1a06-6b9a-4e7a-8110-41fa2b6a22ea.png",
+            "caption": "",
+            "heading": "KPU SHIELD UPPER",
+            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_PcgkQY": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_2_841365cf-a535-4655-88ae-873db0af093a.png",
+            "caption": "",
+            "heading": "HEEL BRACE",
+            "text": "<p>The built-in heel brace secures your foot during aggressive moves, providing extra stability and reducing the risk of strain, so you can focus on your game without hesitation.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_mcMwG6": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/A_4_f255c84d-36f1-4336-85f0-d40731100bdf.png",
+            "caption": "",
+            "heading": "ACTIVE GRIP OUTSOLE",
+            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_WPXyNV",
+        "row_PUmQM9",
+        "row_PcgkQY",
+        "row_mcMwG6"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "row_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
-    "hero_component_bdTeJB"
+    "hero_component_bdTeJB",
+    "swipeable_products_tcbEWV",
+    "multirow_TwaRz3"
   ]
 }
