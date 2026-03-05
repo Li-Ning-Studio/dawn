@@ -27,7 +27,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "",
+        "link_to": "shopify://products/hyper-court",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -37,7 +37,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, HyperCourt</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Crafted for Perfectionists\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>shop</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #00ffc4;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, HyperCourt</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Crafted for Perfectionists\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/hyper-court\" class=\"ctax\">\n    <span>shop</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #00ffc4;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 60,
         "padding_bottom": 28
@@ -72,7 +72,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "",
+        "link_to": "shopify://products/hyper-court",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 12,
         "padding_bottom": 0
@@ -99,7 +99,7 @@
             "heading": "X CUSHION MIDSOLE",
             "text": "<p>Featuring enhanced energy return and impact absorption, the X Cushion midsole ensures you stay quick on your feet while minimizing fatigue. Every jump and landing is smoother and more efficient.</p>",
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "shopify://products/hyper-court"
           }
         },
         "row_PUmQM9": {
@@ -110,7 +110,7 @@
             "heading": "KPU SHIELD UPPER",
             "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "shopify://products/hyper-court"
           }
         },
         "row_PcgkQY": {
@@ -121,7 +121,7 @@
             "heading": "HEEL BRACE",
             "text": "<p>The built-in heel brace secures your foot during aggressive moves, providing extra stability and reducing the risk of strain, so you can focus on your game without hesitation.</p>",
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "shopify://products/hyper-court"
           }
         },
         "row_mcMwG6": {
@@ -132,7 +132,7 @@
             "heading": "ACTIVE GRIP OUTSOLE",
             "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "shopify://products/hyper-court"
           }
         }
       },
@@ -158,6 +158,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_P3TNHW": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\n   This Is Where Your Game Begins.\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/collections/bb-flagship\" class=\"cta4\">\n    <span>Your Move.</span>\n  </a>\n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n  .cta4 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid white;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta4:hover{\nbackground:white;\ncolor:black;\n}\n\n  .title4 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #ffffff 20%,\n      #00ffc4 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n.main-sec-custom4 video{\nmargin-top:0px;\nheight: 50%;\n}\n\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -167,6 +177,7 @@
     "swipeable_products_tcbEWV",
     "hero_component_7h6NiP",
     "custom_liquid_LRFBAA",
-    "multirow_TwaRz3"
+    "multirow_TwaRz3",
+    "custom_liquid_P3TNHW"
   ]
 }
