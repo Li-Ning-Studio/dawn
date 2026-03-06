@@ -15,6 +15,7 @@ if (preactRoot) {
     labelNoGrip,
     labelFree,
     descriptionNoGrip,
+    descriptionApplicationNote,
     messageLoading,
     messageEmpty,
     messageError,
@@ -37,6 +38,7 @@ if (preactRoot) {
       }}
       descriptions={{
         noGrip: descriptionNoGrip || '',
+        applicationNote: descriptionApplicationNote || '',
       }}
       messages={{
         loading: messageLoading || '',

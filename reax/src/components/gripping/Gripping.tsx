@@ -19,6 +19,7 @@ type GrippingProps = {
   };
   descriptions: {
     noGrip: string;
+    applicationNote: string;
   };
   messages: {
     loading: string;
@@ -315,6 +316,10 @@ const Gripping = ({
             })}
           </div>
         </div>
+      ) : null}
+
+      {descriptions.applicationNote ? (
+        <p style={{ opacity: 0.8, fontSize: '1.45rem', lineHeight: '1.6' }}>{descriptions.applicationNote}</p>
       ) : null}
 
       {/* SUMMARY */}

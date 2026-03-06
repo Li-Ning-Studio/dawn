@@ -16,18 +16,26 @@
   }
 
   .comms-btn {
-    color: black;
-    border: 2px solid black;
+    color: rgb(var(--color-foreground));
+    border: 2px solid currentColor;
     border-radius: 100px;
     padding: 2rem 4rem;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
+    background: transparent;
+    transition: background-color var(--duration-short) ease, color var(--duration-short) ease;
 
   }
 
+  .comms-btn:hover,
+  .comms-btn:focus-visible {
+    background-color: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+  }
+
   .contact-no {
-    color: black;
+    color: rgb(var(--color-foreground));
     text-decoration: none;
     font-size: 2.3rem;
     font-weight: 900;
@@ -46,7 +54,10 @@
   }
 {%- endstyle -%}
 
-<section style="display: flex; justify-content: center; align-items: center; background: {{ section.settings.subfooter_background }}; margin-top: 6rem;">
+<section
+  class="subfooter color-{{ section.settings.subfooter_color_scheme }} color-foreground"
+  style="display: flex; justify-content: center; align-items: center; background: {{ section.settings.subfooter_background | escape }}; padding: 9.5rem 0;"
+>
   <div
     style="text-align: center;"
   >
@@ -530,6 +541,12 @@
       "id": "subfooter_background",
       "label": "Sub Footer Background",
       "default": "red"
+    },
+    {
+      "type": "color_scheme",
+      "id": "subfooter_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "header",

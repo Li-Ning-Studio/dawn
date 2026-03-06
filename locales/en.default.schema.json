@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "global": {
@@ -312,6 +321,10 @@
     "cart": {
       "name": "Cart",
       "settings": {
+        "catalog_mode_enabled": {
+          "label": "Catalog mode",
+          "info": "Hide customer account and cart navigation links for showcase-only stores"
+        },
         "cart_type": {
           "label": "Type",
           "drawer": {
@@ -712,6 +725,15 @@
         },
         "show_image": {
           "label": "Featured image"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt"
+          },
+          "options__2": {
+            "label": "16:9"
+          }
         },
         "show_date": {
           "label": "Date"
@@ -1144,6 +1166,13 @@
           "options__2": {
             "label": "Left"
           }
+        },
+        "header__search": {
+          "content": "Search"
+        },
+        "search_featured_collection": {
+          "label": "Featured collection",
+          "info": "Displayed when the search input is empty."
         },
         "enable_customer_avatar": {
           "label": "Customer account avatar",
@@ -1730,6 +1759,15 @@
           },
           "options__4": {
             "label": "Large"
+          }
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt"
+          },
+          "options__2": {
+            "label": "16:9"
           }
         }
       }
@@ -2956,6 +2994,62 @@
         "name": "Rich text"
       }
     },
+    "studio-text": {
+      "name": "Studio text",
+      "settings": {
+        "text": {
+          "label": "Text",
+          "default": "<p>Our journey began in 2009 with the founding of <strong>Sunlight Sports</strong> in Singapore, where we established a legacy of excellence managing distribution for <strong>premier global brands</strong>.</p>"
+        },
+        "subtext": {
+          "label": "Subtext",
+          "default": "About"
+        },
+        "max_width": {
+          "label": "Max width"
+        },
+        "font_size_desktop": {
+          "label": "Font size (desktop)"
+        },
+        "font_size_mobile": {
+          "label": "Font size (mobile)"
+        },
+        "letter_spacing": {
+          "label": "Letter spacing"
+        },
+        "font_weight": {
+          "label": "Font weight"
+        },
+        "line_height": {
+          "label": "Line height"
+        },
+        "muted_opacity": {
+          "label": "Muted text opacity"
+        },
+        "text_align": {
+          "label": "Text alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "button_label": {
+          "label": "Button label",
+          "default": "Learn more"
+        },
+        "button_link": {
+          "label": "Button link"
+        }
+      },
+      "presets": {
+        "name": "Studio text"
+      }
+    },
     "video": {
       "name": "Video",
       "settings": {
@@ -3069,6 +3163,10 @@
             "image": {
               "label": "Image"
             },
+            "mobile_image": {
+              "label": "Mobile image",
+              "info": "Replaces the main image on small screens"
+            },
             "heading": {
               "label": "Heading",
               "default": "Image slide"
@@ -3165,6 +3263,38 @@
       },
       "presets": {
         "name": "Slideshow"
+      }
+    },
+    "brand-assets": {
+      "name": "Brand assets",
+      "settings": {
+        "assets": {
+          "label": "Assets"
+        },
+        "layout": {
+          "content": "Layout"
+        },
+        "columns_desktop": {
+          "label": "Columns on desktop"
+        },
+        "columns_mobile": {
+          "label": "Columns on mobile",
+          "options__1": {
+            "label": "One"
+          },
+          "options__2": {
+            "label": "Two"
+          }
+        },
+        "show_category": {
+          "label": "Show asset type"
+        },
+        "show_size_label": {
+          "label": "Show size label"
+        },
+        "show_downloads": {
+          "label": "Show download links"
+        }
       }
     },
     "collapsible_content": {

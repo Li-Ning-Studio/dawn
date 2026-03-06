@@ -1447,6 +1447,13 @@
     "name": "t:settings_schema.cart.name",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "catalog_mode_enabled",
+        "label": "t:settings_schema.cart.settings.catalog_mode_enabled.label",
+        "info": "t:settings_schema.cart.settings.catalog_mode_enabled.info",
+        "default": false
+      },
+      {
         "type": "select",
         "id": "cart_type",
         "options": [

@@ -1,0 +1,39 @@
+.studio-text__content {
+  max-width: var(--studio-text-max-width);
+  margin: 0 auto;
+  text-align: var(--studio-text-align);
+}
+
+.studio-text__text {
+  font-size: var(--studio-text-font-size-mobile);
+  font-weight: var(--studio-text-font-weight);
+  letter-spacing: var(--studio-text-letter-spacing);
+  line-height: var(--studio-text-line-height);
+  color: rgba(var(--color-foreground), var(--studio-text-muted-opacity));
+}
+
+.studio-text__subtext {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.studio-text__text p {
+  margin: 0;
+}
+
+.studio-text__text strong,
+.studio-text__text b {
+  color: rgb(var(--color-foreground));
+  font-weight: inherit;
+}
+
+.studio-text__cta {
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .studio-text__text {
+    font-size: var(--studio-text-font-size);
+  }
+}
