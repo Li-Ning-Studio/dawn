@@ -194,7 +194,8 @@
       "custom_css": [
         ".caption-with-letter-spacing {font-weight: 900; color: black; margin-bottom: 10px; font-family: \"Audiowide\", sans-serif;}",
         ".rte {margin-top: 10px;}",
-        ".button {border: 1px solid #fe0101; font-family: \"Audiowide\", sans-serif;}"
+        ".button {border: 1px solid #fe0101; font-family: \"Audiowide\", sans-serif;}",
+        ".button::before{}"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
