@@ -1,74 +1,72 @@
-{% if request.host contains 'hndrd.co' %}
-  {% assign brand_name = 'Hundred' %}
-{% else %}
-  {% assign brand_name = 'Studio' %}
-{% endif %}
+{%- comment -%} 1. Determine the Brand based on the URL {%- endcomment -%}
+{%- if request.host contains 'hndrd.co' -%}
+  {%- assign brand_name = 'Hundred' -%}
+{%- else -%}
+  {%- assign brand_name = 'Studio' -%}
+{%- endif -%}
 
-{% capture manufacturer %}
-    {% if product.metafields.custom_but_hidden.country.value == 'IN'  %}
-        {% if brand_name == 'Hundred' %}
-            Sunlight Sports Global Pvt. Ltd.
-        {% else %}
-            Sunlight Sports Pvt. Ltd.
-        {% endif %}
-    {% elsif product.metafields.custom_but_hidden.country.value == 'CN' %}
-        {% if brand_name == 'Hundred' %}
-           Hyaku Sports Pvt. Ltd.
-        {% else %}
-           Li-Ning (China) Sports Goods Co. Ltd., Beijing, PRC
-        {% endif %}
-    {% elsif product.metafields.custom_but_hidden.country.value == 'JP' %}
-        {% if brand_name == 'Hundred' %}
-            Hyaku Sports Pvt. Ltd.
-        {% else %}
-            Li-Ning (China) Sports Goods Co. Ltd., Beijing, PRC
-        {% endif %}
-    {% else %}
-        Sunlight Sports Global Pvt. Ltd.
-    {% endif %}
-{% endcapture %}
+{%- assign country_code = product.metafields.custom_but_hidden.country.value | upcase -%}
 
-{% capture importer %}
-    {% if product.metafields.custom_but_hidden.country.value == 'IN'  %}
-        {% if brand_name == 'Hundred' %}
-            Sunlight Sports Global Pvt. Ltd., Warehouse Shed, Chinna Golconda, Hameedulla Nagar Village, Shamshabad Mandal, Ranga Reddi, Telangana, India
-        {% else %}
-            Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
-        {% endif %}
-    {% elsif product.metafields.custom_but_hidden.country.value == 'CN' %}
-        {% if brand_name == 'Hundred' %}
-            Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
-        {% else %}
-            Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
-        {% endif %}
-    {% elsif product.metafields.custom_but_hidden.country.value == 'JP' %}
-        {% if brand_name == 'Hundred' %}
-            Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
-        {% else %}
-            Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
-        {% endif %}
-    {% else %}
-        Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
-    {% endif %}
-{% endcapture %}
+{%- comment -%} 2. Logic for Manufacturer {%- endcomment -%}
+{%- capture manufacturer -%}
+  {%- if country_code == 'IN' -%}
+    {%- if brand_name == 'Hundred' -%}
+      Sunlight Sports Global Pvt. Ltd.
+    {%- else -%}
+      Sunlight Sports Pvt. Ltd.
+    {%- endif -%}
+  {%- elsif country_code == 'CN' or country_code == 'JP' or country_code == 'VN' -%}
+    {%- if brand_name == 'Hundred' -%}
+      Hyaku Sports Pvt. Ltd.
+    {%- else -%}
+      Li-Ning (China) Sports Goods Co. Ltd., Beijing, PRC
+    {%- endif -%}
+  {%- else -%}
+    Sunlight Sports Global Pvt. Ltd.
+  {%- endif -%}
+{%- endcapture -%}
 
-{% if product.metafields.custom_but_hidden.country.value %}
+{%- comment -%} 3. Logic for Importer {%- endcomment -%}
+{%- capture importer -%}
+  {%- if country_code == 'IN' -%}
+    {%- if brand_name == 'Hundred' -%}
+      Sunlight Sports Global Pvt. Ltd., Warehouse Shed, Chinna Golconda, Hameedulla Nagar Village, Shamshabad Mandal, Ranga Reddi, Telangana, India
+    {%- else -%}
+      Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
+    {%- endif -%}
+  {%- elsif country_code == 'CN' -%}
+    {%- comment -%} Both Hundred and Studio use Hyderabad for CN {%- endcomment -%}
+    Sunlight Sports Global Pvt. Ltd., Warehouse Shed, Chinna Golconda, Hameedulla Nagar Village, Shamshabad Mandal, Ranga Reddi, Telangana, India
+  {%- elsif country_code == 'JP' or country_code == 'VN' -%}
+    {%- if brand_name == 'Hundred' -%}
+      Sunlight Sports Global Pvt. Ltd., Warehouse Shed, Chinna Golconda, Hameedulla Nagar Village, Shamshabad Mandal, Ranga Reddi, Telangana, India
+    {%- else -%}
+      Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
+    {%- endif -%}
+  {%- else -%}
+    Sunlight Sports Pvt. Ltd. Muneshwara Layout, Avalahalli, Old Madras Rd, near K.R. Puram Bengaluru 560049 Karnataka IN
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- comment -%} 4. Display Logic {%- endcomment -%}
+<div class="product-legal-info">
+  {% if product.metafields.custom_but_hidden.country.value %}
+    <div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
+      <p style="text-transform: capitalize; grid-column: span 5/span 5;">Country of Origin</p>
+      <p style="grid-column: span 7/span 7;">{{ product.metafields.custom_but_hidden.country.value }}</p>
+    </div>
+    <hr style="margin: 0; border: none; border-top: 1px solid #e4e4e4;">
+  {% endif %}
+
   <div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
-    <p style="text-transform: capitalize; grid-column: span 5/span 5;">Country of Origin</p>
-    <p style="grid-column: span 7/span 7;">{{ product.metafields.custom_but_hidden.country.value }}</p>
+    <p style="text-transform: capitalize; grid-column: span 5/span 5;">Manufactured by</p>
+    <p style="grid-column: span 7/span 7;">{{ manufacturer }}</p>
   </div>
-{% endif %}
 
-<hr style="margin: 0; background: #e4e4e4">
+  <hr style="margin: 0; border: none; border-top: 1px solid #e4e4e4;">
 
-<div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
-  <p style="text-transform: capitalize; grid-column: span 5/span 5;">Manufactured by</p>
-  <p style="grid-column: span 7/span 7;">{{ manufacturer }}</p>
-</div>
-
-<hr style="margin: 0; background: #e4e4e4">
-
-<div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
-  <p style="text-transform: capitalize; grid-column: span 5/span 5;">Imported and Marketed by</p>
-  <p style="grid-column: span 7/span 7;">{{ importer }}</p>
+  <div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
+    <p style="text-transform: capitalize; grid-column: span 5/span 5;">Imported and Marketed by</p>
+    <p style="grid-column: span 7/span 7;">{{ importer }}</p>
+  </div>
 </div>
