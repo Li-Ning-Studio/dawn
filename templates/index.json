@@ -9,6 +9,36 @@
  */
 {
   "sections": {
+    "hero_component_D4bCLN": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_1144d809-5607-49d2-837c-b76e28b501ce.png",
+        "mobile_image": "shopify://shop_images/1R.png",
+        "subtitle": "Ranger Force",
+        "title": "May the Force be with you",
+        "description": "Experience grip that pulls you in",
+        "button_text": "CHECK IT OUT",
+        "link_to": "shopify://pages/ranger-force",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_XYKJa8": {
+      "type": "swipeable-products",
+      "disabled": true,
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Feel the force",
+        "products": [],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "hero_video_component_rjR7UX": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -326,6 +356,8 @@
     }
   },
   "order": [
+    "hero_component_D4bCLN",
+    "swipeable_products_XYKJa8",
     "hero_video_component_rjR7UX",
     "swipeable_products_qfYdBf",
     "hero_component_bryecW",
