@@ -11,7 +11,6 @@
   "sections": {
     "hero_component_D4bCLN": {
       "type": "hero-component",
-      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/1_1144d809-5607-49d2-837c-b76e28b501ce.png",
@@ -28,12 +27,13 @@
     },
     "swipeable_products_XYKJa8": {
       "type": "swipeable-products",
-      "disabled": true,
       "name": "Swipeable Products",
       "settings": {
         "title": "Feel the force",
-        "products": [],
-        "show_color_variants": false,
+        "products": [
+          "ranger-force"
+        ],
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
