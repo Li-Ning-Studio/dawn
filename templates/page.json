@@ -1,14 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_xqKUmC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"spotlight\">\n  <div class=\"spotlight-container\">\n\n    <h2 class=\"spotlight-title\">Best Sellers</h2>\n    <p class=\"spotlight-subtitle\">\n      The most popular picks across rackets, shoes, bags, apparel, and accessories. <b>loved by players everywhere.</b>\n    </p>\n\n    <div class=\"spotlight-grid\">\n\n     <a class=\"spotlight-item\" href=\"/collections/badminton-rackets\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/Template-01_f564b69f-56b9-45a9-90d4-44bc2a52cb6d.png?v=1756529224\" alt=\"badminton racket\">\n        <p>Rackets</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/shoes\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/Template-01_b4353d7a-113a-4b30-beca-e5dc776988b6.jpg?v=1761289106&width=1600\" alt=\"\">\n        <p>Shoes</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/badminton-kit-bags\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/Template_1_e5b6962b-8335-401a-8f5b-549be94ff260.jpg?v=1768305974&width=1600\" alt=\"\">\n        <p>Kitbags</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/backpacks\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/Template_01_cf56ccc791.jpg?v=1749900031&width=1600\" alt=\"\">\n        <p>Backpacks</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/apparels\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/1_5b9d2aa3-c709-4811-8150-9119b330a67c.jpg?v=1752900767&width=1600\" alt=\"\">\n        <p>Apparels</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/accessories\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/01_e94e005a0f.jpg?v=1749896398&width=1600\" alt=\"\">\n        <p>Accessories</p>\n      </a>\n\n\n    </div>\n  </div>\n</section>\n<style>\n/* From Uiverse.io by SteveBloX */ \n.spotlight {\n  padding: 60px 20px;\n  background: #fff;\n  text-align: center;\n}\n\n.spotlight-container {\n  max-width: 900px;\n  margin: auto;\n}\n\n.spotlight-title {\n  font-size: 48px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  margin-bottom: 10px;\n}\n\n.spotlight-subtitle {\n  font-size: 16px;\n  color: #555;\n  max-width: 500px;\n  margin: 0 auto 40px;\n  line-height: 1.5;\n}\n\n.spotlight-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 40px 20px;\n}\n\n.spotlight-item img {\n  width: 90px;\n  height: auto;\n  margin-bottom: 10px;\n}\n.spotlight-item{\n  text-decoration:none;\n  color:black;\n}\n\n.spotlight-item p {\n  font-size: 14px;\n  font-weight: 500;\n}\n\n/* Mobile */\n@media (max-width: 600px) {\n  .spotlight-title {\n    font-size: 36px;\n  }\n\n  .spotlight-grid {\n    gap: 30px 10px;\n  }\n\n  .spotlight-item img {\n    width: 70px;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_xqKUmC"
   ]
 }
