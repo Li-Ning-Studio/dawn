@@ -86,19 +86,29 @@
         "padding_bottom": 32
       }
     },
+    "custom_liquid_wCCxbf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"spotlight\">\n  <div class=\"spotlight-container\">\n\n    <h2 class=\"spotlight-title\">Best Sellers</h2>\n    <p class=\"spotlight-subtitle\">\n      The most popular picks across rackets, shoes, bags, apparel, and accessories. <b>Loved by players everywhere.</b>\n    </p>\n\n    <div class=\"spotlight-grid\">\n\n     <a class=\"spotlight-item\" href=\"/collections/best-selling-rackets\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/1-7.jpg?v=1772877984&width=1000\" alt=\"badminton racket\">\n        <p>Rackets</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-shoes\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template-01_6d3c9bd5-61b6-4767-a1fc-5ff451f51e6a.jpg?v=1772878262&width=1000\" alt=\"\">\n        <p>Shoes</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-kit-bags\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template_02.jpg?v=1772878259&width=1000\" alt=\"\">\n        <p>Kitbags</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/backpacks\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/Template_01_cf56ccc791.jpg?v=1749900031&width=1600\" alt=\"\">\n        <p>Backpacks</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/apparels\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/1_5b9d2aa3-c709-4811-8150-9119b330a67c.jpg?v=1752900767&width=1600\" alt=\"\">\n        <p>Apparels</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/accessories\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/01_e94e005a0f.jpg?v=1749896398&width=1600\" alt=\"\">\n        <p>Accessories</p>\n      </a>\n\n\n    </div>\n  </div>\n</section>\n<style>\n/* From Uiverse.io by SteveBloX */ \n.spotlight {\n  padding: 0 20px;\n  background: #fff;\n  text-align: center;\n}\n\n.spotlight-container {\n  max-width: 900px;\n  margin: auto;\n}\n\n.spotlight-title {\n  font-size: 48px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  margin-bottom: 10px;\n}\n\n.spotlight-subtitle {\n  font-size: 16px;\n  color: #555;\n  max-width: 500px;\n  margin: 0 auto 40px;\n  line-height: 1.5;\n}\n\n.spotlight-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 40px 0px;\n    max-width: 610px;\n    margin: 0 auto;\n}\n\n.spotlight-item img {\n  width: 120px;\n  height: auto;\n  margin-bottom: 5px;\n}\n.spotlight-item{\n  text-decoration:none;\n  color:black;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-end;\n  row-gap: 15px;\n}\n\n.spotlight-item p {\n  font-size: 14px;\n  font-weight: 500;\nmargin-top:-10px;\n}\n\n/* Mobile */\n@media (max-width: 600px) {\n  .spotlight-title {\n    font-size: 36px;\n  }\n\n  .spotlight-grid {\n    gap: 30px 10px;\n  }\n\n  .spotlight-item img {\n    width: 70px;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
     "hero_component_Nd47g8": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_01_0a0a3e36-88bb-480f-85f8-dfbb6c43bc14.jpg",
-        "mobile_image": "shopify://shop_images/banner_02_res_5e5de518-14bb-49d3-bbf9-7a1b1b40de25.jpg",
-        "subtitle": "Axforce Blast",
-        "title": "Amplify Your Attack",
-        "description": "Deliver explosive smashes with unstoppable force and precision.  Axforce Blast redefines intensity",
+        "image": "shopify://shop_images/Wind_Lite_Stealth.jpg",
+        "mobile_image": "shopify://shop_images/Wind_Lite_Stealth_responsive.jpg",
+        "subtitle": "Wind Lite Stealth",
+        "title": "Swift-Soar-Smash",
+        "description": "Head-Light Rackets that ensures your pinnacle of agility",
         "button_text": "Bring the Power!",
-        "link_to": "shopify://products/axforce-blast-6u-1",
+        "link_to": "shopify://products/wind-lite-stealth",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 24,
         "padding_bottom": 0
       }
     },
@@ -106,16 +116,17 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Axforce Series",
+        "title": "Wind Lite Stealth",
         "products": [
-          "axforce-blast-6u-1",
-          "axforce-blast-5u-strung",
-          "axforce-blast-4u-1"
+          "wind-lite-stealth",
+          "wind-lite-stealth-78-grams",
+          "wind-lite-stealth-79-grams",
+          "wind-lite-stealth-80-grams"
         ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 64
+        "padding_bottom": 52
       }
     },
     "hero_component_iq8qEP": {
@@ -156,20 +167,20 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 32,
-        "padding_bottom": 64
+        "padding_bottom": 32
       }
     },
     "hero_component_xTDVjV": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2_82143675-df15-483c-8836-6a7284d344a5.png",
-        "mobile_image": "shopify://shop_images/Responsive_Banner_2.png",
-        "subtitle": "Halbertec Motor",
-        "title": "Master Of All Elements",
-        "description": "Switch through your playing style mid-game seamlessly",
-        "button_text": "Buy It Now!",
-        "link_to": "shopify://products/halbertec-motor-5u",
+        "image": "shopify://shop_images/AxForce_Cannon_Banner_32485db1-3094-4994-bc8b-3da10875d67e.jpg",
+        "mobile_image": "shopify://shop_images/AxForce_50_50.png",
+        "subtitle": "Axforce Cannon",
+        "title": "The powerhouse of speed",
+        "description": "Designed for fierce performance that will deliver cannon-speed shots, leading you to victory",
+        "button_text": "Make it Yours!",
+        "link_to": "shopify://products/axforce-cannon-6u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -181,9 +192,9 @@
       "settings": {
         "title": "Smash Away!",
         "products": [
-          "halbertec-motor-5u",
-          "halbertec-motor-4u",
-          "halbertec-motor-3u"
+          "axforce-cannon-6u",
+          "axforce-cannon-5u",
+          "axforce-cannon-4u"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -269,16 +280,6 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 40
-      }
-    },
-    "custom_liquid_wCCxbf": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section class=\"spotlight\">\n  <div class=\"spotlight-container\">\n\n    <h2 class=\"spotlight-title\">Best Sellers</h2>\n    <p class=\"spotlight-subtitle\">\n      The most popular picks across rackets, shoes, bags, apparel, and accessories. <b>Loved by players everywhere.</b>\n    </p>\n\n    <div class=\"spotlight-grid\">\n\n     <a class=\"spotlight-item\" href=\"/collections/best-selling-rackets\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/1-7.jpg?v=1772877984&width=1000\" alt=\"badminton racket\">\n        <p>Rackets</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-shoes\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template-01_6d3c9bd5-61b6-4767-a1fc-5ff451f51e6a.jpg?v=1772878262&width=1000\" alt=\"\">\n        <p>Shoes</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-kit-bags\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template_02.jpg?v=1772878259&width=1000\" alt=\"\">\n        <p>Kitbags</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/backpacks\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/Template_01_cf56ccc791.jpg?v=1749900031&width=1600\" alt=\"\">\n        <p>Backpacks</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/apparels\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/1_5b9d2aa3-c709-4811-8150-9119b330a67c.jpg?v=1752900767&width=1600\" alt=\"\">\n        <p>Apparels</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/accessories\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/01_e94e005a0f.jpg?v=1749896398&width=1600\" alt=\"\">\n        <p>Accessories</p>\n      </a>\n\n\n    </div>\n  </div>\n</section>\n<style>\n/* From Uiverse.io by SteveBloX */ \n.spotlight {\n  padding: 0 20px;\n  background: #fff;\n  text-align: center;\n}\n\n.spotlight-container {\n  max-width: 900px;\n  margin: auto;\n}\n\n.spotlight-title {\n  font-size: 48px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  margin-bottom: 10px;\n}\n\n.spotlight-subtitle {\n  font-size: 16px;\n  color: #555;\n  max-width: 500px;\n  margin: 0 auto 40px;\n  line-height: 1.5;\n}\n\n.spotlight-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 40px 0px;\n    max-width: 610px;\n    margin: 0 auto;\n}\n\n.spotlight-item img {\n  width: 120px;\n  height: auto;\n  margin-bottom: 5px;\n}\n.spotlight-item{\n  text-decoration:none;\n  color:black;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-end;\n  row-gap: 15px;\n}\n\n.spotlight-item p {\n  font-size: 14px;\n  font-weight: 500;\nmargin-top:-10px;\n}\n\n/* Mobile */\n@media (max-width: 600px) {\n  .spotlight-title {\n    font-size: 36px;\n  }\n\n  .spotlight-grid {\n    gap: 30px 10px;\n  }\n\n  .spotlight-item img {\n    width: 70px;\n  }\n}\n</style>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 100
       }
     },
     "multicolumn_zLUfhX": {
