@@ -46,7 +46,7 @@
     "swipeable_products_tcbEWV": {
       "type": "swipeable-products",
       "custom_css": [
-        "img {background: #040404;}",
+        "img {background: #949da3 ;}",
         "svg {color: black;}",
         ".media {border-radius: 0;}"
       ],
@@ -151,6 +151,55 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_hxf74J": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_EdDhW8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_8648c335-d88a-4b26-bb08-6b65d38ba1ae.jpg",
+            "title": "KPU SHIELD UPPER",
+            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Xez74D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_a1299ac5-9b53-40a5-b295-38dc7c799973.jpg",
+            "title": "ACTIVE GRIP OUTSOLE",
+            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EdDhW8",
+        "column_Xez74D"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info .inline-richtext {background-image: linear-gradient(to right, #fff 5%, #00ffc4 50%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: 900; font-size: 20px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
@@ -335,6 +384,7 @@
     "hero_component_LW9ptk",
     "custom_liquid_LRFBAA",
     "multicolumn_JknLPn",
+    "multicolumn_hxf74J",
     "hero_component_zbnX6g",
     "custom_liquid_YCPYGt",
     "hero_component_9tcnyj",
