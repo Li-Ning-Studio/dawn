@@ -82,7 +82,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> HNDRD HyperCourt</p>\n  <h2 class=\"second-title\">A flexible built to mirror your natural motion</h2>\n  <h2 class=\"second-title1\"> When the Game Shifts, So Do You</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor: rgba(255, 255, 255, 0.95); \n\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> HNDRD HyperCourt</p>\n  <h2 class=\"second-title\">A flexible built to mirror your natural motion</h2>\n  <h2 class=\"second-title1\"> When the Game Shifts, So Do You</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\ndisplay:none;\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor: rgba(255, 255, 255, 0.95); \n\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 48,
         "padding_bottom": 52
@@ -156,58 +156,8 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_hxf74J": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_EdDhW8": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/5_05e52795-36be-498b-8af5-57cf9b08fec5.jpg",
-            "title": "KPU SHIELD UPPER",
-            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Xez74D": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/6_6f903f10-4a25-48e9-99f2-5242763aa322.jpg",
-            "title": "ACTIVE GRIP OUTSOLE",
-            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_EdDhW8",
-        "column_Xez74D"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".multicolumn-card__info .inline-richtext {background-image: linear-gradient(to right, #fff 5%, #00ffc4 50%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: 900; font-size: 20px;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 76
       }
     },
     "hero_component_zbnX6g": {
@@ -286,17 +236,6 @@
         "color_scheme": "scheme-4",
         "padding_top": 48,
         "padding_bottom": 28
-      }
-    },
-    "custom_liquid_KM4yCV": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">A flexible built to mirror your natural motion</p>\n  <p class=\"longcopy\">\n    Need <span class=\"highlight\">Content</span><span class=\"highlight\"></span> <span class=\"highlight\"></span>  <span class=\"highlight\"></span>.\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 80,
-        "padding_bottom": 20
       }
     },
     "multirow_TwaRz3": {
@@ -385,14 +324,12 @@
     "hero_component_LW9ptk",
     "custom_liquid_LRFBAA",
     "multicolumn_JknLPn",
-    "multicolumn_hxf74J",
     "hero_component_zbnX6g",
     "custom_liquid_YCPYGt",
     "hero_component_9tcnyj",
     "custom_liquid_8BRkmL",
     "hero_component_7h6NiP",
     "custom_liquid_wayMqQ",
-    "custom_liquid_KM4yCV",
     "multirow_TwaRz3",
     "hero_component_REChCd",
     "custom_liquid_P3TNHW"
