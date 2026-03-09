@@ -68,54 +68,24 @@
         "link_to": "shopify://pages/sk-series",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 24
+        "padding_bottom": 48
       }
     },
-    "responsive_slideshow_Ma699H": {
-      "type": "responsive-slideshow",
-      "blocks": {
-        "slide_ezTjGQ": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner4_ec6071bf-f29f-4282-a346-205ca3c3ca49.jpg",
-            "mobile_image": "shopify://shop_images/Banner_4_Responsive_7e843f22-9f60-4fad-828e-2c8e9fe22ce7.jpg",
-            "heading": "Whip Like a Stingray",
-            "subheading": "Head-Heavy rackets with flexible shaft  for explosive smash power.",
-            "button_label": "Buy It Now!",
-            "link": "shopify://products/predator-82-extreme"
-          }
-        },
-        "slide_cGzkAA": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_2_6588dc9c-0680-4ff5-8dd9-755eb78adb15.jpg",
-            "mobile_image": "shopify://shop_images/Responsive_Poster_bffb5b7b-6cfa-412e-a9bf-9e76e6d7f92e.jpg",
-            "heading": "Every Game is a Hunt",
-            "subheading": "Launch and Attack fiercely with the predator series.",
-            "button_label": "Shop Predator",
-            "link": "shopify://products/predator-82-extra-strong"
-          }
-        },
-        "slide_8cxXbB": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_be239cfa-b2f3-44ab-a2ba-99045e80035b.jpg",
-            "mobile_image": "shopify://shop_images/Banner_1_R_2845eae0-dc96-4339-ae33-925940894666.jpg",
-            "heading": "",
-            "subheading": "Built to stay composed under pressure and unleash raw power the moment you strike.",
-            "button_label": "Shop Now!",
-            "link": "shopify://products/predator-pro-4u"
-          }
-        }
-      },
-      "block_order": [
-        "slide_ezTjGQ",
-        "slide_cGzkAA",
-        "slide_8cxXbB"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {}
+    "hero_component_EAQyDa": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_8e1b4524-7145-427c-ba01-dd6f318b4d9d.jpg",
+        "mobile_image": "shopify://shop_images/5_a52b855d-7ba5-4308-867f-1ca756dd5523.jpg",
+        "subtitle": "N-ERGY 80",
+        "title": "Turbocharge Your Attack",
+        "description": "Japanese carbon-fiber for swift strikes",
+        "button_text": "N-ergize Your Wins",
+        "link_to": "shopify://products/n-ergy-80",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     },
     "swipeable_products_Y8n63R": {
       "type": "swipeable-products",
@@ -123,13 +93,9 @@
       "settings": {
         "title": "",
         "products": [
-          "predator-84-extreme",
-          "predator-82-extra-strong",
-          "predator-82-extreme",
-          "predator-pro-4u",
-          "predator-82-extra-strong-copy"
+          "n-ergy-80"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 20
@@ -141,12 +107,12 @@
         "slide_dLkD47": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_4ec8d8c9-1a67-484c-bf0e-f0b39c7a4049.jpg",
-            "mobile_image": "shopify://shop_images/2_f4bf6af8-f196-4008-80b2-bf6cbf4e31ed.jpg",
-            "heading": "Smash With Authority.",
-            "subheading": "A head-heavy, ultra-light racket engineered for players who attack without hesitation.",
-            "button_label": "Feel the Power",
-            "link": "shopify://products/t-fusion-300-5u"
+            "image": "shopify://shop_images/Banner_1_ba815d3b-3263-4535-8f59-62677eef097e.png",
+            "mobile_image": "shopify://shop_images/Banner_1_R_4329b113-3351-4deb-b6d1-f61bad0270e0.png",
+            "heading": "Weaponize Your Smash",
+            "subheading": "Bring the intensity of battle with a racket designed for peak attack and crushing impact.",
+            "button_label": "Get It Now!",
+            "link": "shopify://products/atomic-x-black-knight"
           }
         }
       },
@@ -160,10 +126,11 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "T-Fusion 300",
+        "title": "Atomic X Series",
         "products": [
-          "t-fusion-300-5u",
-          "t-fusion-300-4u"
+          "atomic-x-black-knight",
+          "atomic-x-38-ctrl",
+          "atomic-x-dark-sword"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -175,13 +142,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/01_77b25466-a9ac-42ce-b3c5-f1620f989c9e.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_69784b1a-e374-40ea-ad8d-ca4b3e0b1c03.jpg",
-        "subtitle": "Raze Pro",
-        "title": "Unmatched Support for Every Step",
-        "description": "Superior stability and all-day comfort powered by an advanced multi-layer sole construction.",
+        "image": "shopify://shop_images/1_4a005f71-333e-4299-bd47-43478006e9af.jpg",
+        "mobile_image": "shopify://shop_images/1-1.jpg",
+        "subtitle": "HYPER COURT",
+        "title": "Built for Unpredictable Play",
+        "description": "Move How the Game Demands.",
         "button_text": "Buy Now!",
-        "link_to": "shopify://products/raze-pro",
+        "link_to": "shopify://pages/hyper-court",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 16
@@ -191,9 +158,9 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Raze Series",
+        "title": "Hyper Court",
         "products": [
-          "raze-pro"
+          "hyper-court"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -383,20 +350,20 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 16,
-        "padding_bottom": 72
+        "padding_bottom": 24
       }
     },
     "hero_component_mYeEJ4": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_5_d5a4cf24-9cf6-4e77-a65d-923848f872c7.jpg",
-        "mobile_image": "shopify://shop_images/Responsive_6_e8de4082-88e3-499b-8a9f-0185f4b70295.jpg",
-        "subtitle": "HyperTurf",
-        "title": "Nimble Movements, Hyper Impacts",
-        "description": "Perform at your peak without letting your court surface impact your style.",
-        "button_text": "Get It Here!",
-        "link_to": "shopify://products/hyper-turf",
+        "image": "shopify://shop_images/banner_1_db3c3647-f30c-4bc2-abfc-04f1b0e81484.jpg",
+        "mobile_image": "shopify://shop_images/banner_1_responsive_ba8378f1-ae8a-4a92-8840-5aca61531bc7.jpg",
+        "subtitle": "Hyper Drive",
+        "title": "Last Longer During Innings",
+        "description": "Light-weight and heavily cushioned to make your movements feels at ease.",
+        "button_text": "Buy Now!",
+        "link_to": "shopify://products/hyper-drive",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -406,9 +373,9 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "HyperTurf Cricket Shoes",
+        "title": "Hyper Drive Cricket Shoes",
         "products": [
-          "hyper-turf"
+          "hyper-drive"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -561,7 +528,7 @@
     "hero_video_component_FgLawM",
     "swipeable_products_q8JBYr",
     "hero_video_component_MnJ8yg",
-    "responsive_slideshow_Ma699H",
+    "hero_component_EAQyDa",
     "swipeable_products_Y8n63R",
     "responsive_slideshow_EyqbQY",
     "swipeable_products_kQUykU",
