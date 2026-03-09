@@ -43,6 +43,25 @@
         "padding_bottom": 28
       }
     },
+    "swipeable_products_tcbEWV": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #040404;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "<strong>Available in 4 colors</strong>",
+        "products": [
+          "hyper-court"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 24,
+        "padding_bottom": 68
+      }
+    },
     "hero_component_LW9ptk": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -306,31 +325,13 @@
         "padding_top": 60,
         "padding_bottom": 88
       }
-    },
-    "swipeable_products_tcbEWV": {
-      "type": "swipeable-products",
-      "custom_css": [
-        "img {background: #040404;}",
-        "svg {color: black;}",
-        ".media {border-radius: 0;}"
-      ],
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "<strong>Available in 4 colors</strong>",
-        "products": [
-          "hyper-court"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 24,
-        "padding_bottom": 68
-      }
     }
   },
   "order": [
     "main",
     "hero_component_bdTeJB",
     "custom_liquid_9LCqGj",
+    "swipeable_products_tcbEWV",
     "hero_component_LW9ptk",
     "custom_liquid_LRFBAA",
     "multicolumn_JknLPn",
@@ -343,7 +344,6 @@
     "custom_liquid_KM4yCV",
     "multirow_TwaRz3",
     "hero_component_REChCd",
-    "custom_liquid_P3TNHW",
-    "swipeable_products_tcbEWV"
+    "custom_liquid_P3TNHW"
   ]
 }
