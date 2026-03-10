@@ -313,6 +313,12 @@
       "name": "Currency format",
       "settings": {
         "paragraph": "Cart and checkout prices always show currency codes",
+        "show_usual_price": {
+          "label": "Show usual price on product pages"
+        },
+        "show_prices_incl_taxes_message": {
+          "label": "Show \"All prices incl. taxes\" on product pages"
+        },
         "currency_code_enabled": {
           "label": "Currency codes"
         }
