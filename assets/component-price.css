@@ -102,3 +102,35 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+.price__meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.price__tax-note {
+  display: block;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-size: 1.4rem;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.price--large > .price__tax-note {
+  margin-top: 0.5rem;
+  font-size: 1.45rem;
+}
+
+@media screen and (min-width: 750px) {
+  .price__tax-note,
+  .price__usually-sells-at {
+    font-size: 1.41rem;
+  }
+
+  .price--large > .price__tax-note {
+    font-size: 1.5rem;
+  }
+}
