@@ -11,13 +11,315 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_component_gXadBV": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Main_Banner_3f795f34-6e03-4c6e-bed0-a820d6a20cb8.png",
+        "mobile_image": "shopify://shop_images/Main_Banner_R_fd8f26ce-2efc-4628-93eb-782eb5f893f4.png",
+        "subtitle": "content",
+        "title": "content",
+        "description": "content",
+        "button_text": "content",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_FaTQG3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_r8i9BG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Strength.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ADNinX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Support.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eabneV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Hydration.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_r8i9BG",
+        "column_ADNinX",
+        "column_eabneV"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "content (shop by category)",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 80
+      }
+    },
+    "hero_component_AKqH9A": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Hydration_Banner.png",
+        "mobile_image": "shopify://shop_images/Hydration_Banner_R.png",
+        "subtitle": "content",
+        "title": "content",
+        "description": "content",
+        "button_text": "content",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_3kV3TT": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "content",
+        "products": [
+          "goa",
+          "pune",
+          "race",
+          "rock",
+          "jawa"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_yqDiPz": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Strength_Banner_6c0d4248-b50c-4735-b568-d3c1d347ee18.png",
+        "mobile_image": "shopify://shop_images/Strength_Banner_R_7fc0522f-b573-4dc3-9ef7-9537bde1925c.png",
+        "subtitle": "content",
+        "title": "content",
+        "description": "content",
+        "button_text": "content",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_rtK4hN": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "content",
+        "products": [],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_EFyg8z": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Support_Banner.png",
+        "mobile_image": "shopify://shop_images/Support_Banner_R.png",
+        "subtitle": "content",
+        "title": "content",
+        "description": "content",
+        "button_text": "content",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_F9UkEz": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "content",
+        "products": [],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_4wGUEX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pdkD6N": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Water_Bottles.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yER7gA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Hand_Grip.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WXYUif": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Skipping_Rope.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rErjah": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Wrist_Support.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mewbb7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Ankle_Support.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YjCXe7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Knee_Support.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YFnfJ4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Elbow_Support.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UxDjfX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Waist_Support.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pdkD6N",
+        "column_yER7gA",
+        "column_WXYUif",
+        "column_rErjah",
+        "column_mewbb7",
+        "column_YjCXe7",
+        "column_YFnfJ4",
+        "column_UxDjfX"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "content (Shop by essentials)",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 88
+      }
+    },
+    "hero_component_ejmDHP": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Shop_All_Banner_3ea18a33-9c55-4aaf-9ed7-067d55157421.png",
+        "mobile_image": "shopify://shop_images/Shop_All_Banner_R_7fadf679-73bd-4300-8b91-0b21be752d8b.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_gXadBV",
+    "multicolumn_FaTQG3",
+    "hero_component_AKqH9A",
+    "swipeable_products_3kV3TT",
+    "hero_component_yqDiPz",
+    "swipeable_products_rtK4hN",
+    "hero_component_EFyg8z",
+    "swipeable_products_F9UkEz",
+    "multicolumn_4wGUEX",
+    "hero_component_ejmDHP"
   ]
 }
