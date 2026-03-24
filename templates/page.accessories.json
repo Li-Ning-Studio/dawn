@@ -23,14 +23,24 @@
       "settings": {
         "image": "shopify://shop_images/Main_Banner_3f795f34-6e03-4c6e-bed0-a820d6a20cb8.png",
         "mobile_image": "shopify://shop_images/Main_Banner_R_fd8f26ce-2efc-4628-93eb-782eb5f893f4.png",
-        "subtitle": "content",
-        "title": "content",
-        "description": "content",
-        "button_text": "content",
-        "link_to": "/",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_A7iPU7": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\nTrain Without Limits\n  </h1>\n  <p style=\"margin-top: 3px\"> Everything you need to <strong>train harder, recover better, and stay consistent.</strong></p>\n  <a href=\"/products/nitrix-10-4u-unstrung\" class=\"cta1\">\n    <span>Get Started</span>\n  </a>\n \n</section>\n\n<style>\n\n\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #eb500f;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: Black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#eb500f;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #f6540e 0%, #842507 92%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 64
       }
     },
     "multicolumn_FaTQG3": {
@@ -74,7 +84,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "content (shop by category)",
+        "title": "Find Your Setup",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -96,14 +106,24 @@
       "settings": {
         "image": "shopify://shop_images/Hydration_Banner.png",
         "mobile_image": "shopify://shop_images/Hydration_Banner_R.png",
-        "subtitle": "content",
-        "title": "content",
-        "description": "content",
-        "button_text": "content",
-        "link_to": "/",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 36,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_AJr93U": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\nNever Miss Your Intake\n  </h1>\n  <p style=\"margin-top: 3px\"> Stay fueled through every <strong>rep, rally, and run.</strong></p>\n  <a href=\"/products/nitrix-10-4u-unstrung\" class=\"cta1\">\n    <span>Explore Bottles</span>\n  </a>\n \n</section>\n\n<style>\n\n\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #eb500f;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: Black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#f6540e;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #f6540e 0%, #842507 92%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 64
       }
     },
     "swipeable_products_3kV3TT": {
@@ -121,7 +141,7 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 60
       }
     },
     "hero_component_yqDiPz": {
@@ -130,14 +150,24 @@
       "settings": {
         "image": "shopify://shop_images/Strength_Banner_6c0d4248-b50c-4735-b568-d3c1d347ee18.png",
         "mobile_image": "shopify://shop_images/Strength_Banner_R_7fc0522f-b573-4dc3-9ef7-9537bde1925c.png",
-        "subtitle": "content",
-        "title": "content",
-        "description": "content",
-        "button_text": "content",
-        "link_to": "/",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_MyEGMV": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\nThe Grind Starts Here\n  </h1>\n  <p style=\"margin-top: 3px\"> If it burns,<strong> it’s working. </strong> Keep going. </p>\n  <a href=\"/products/nitrix-10-4u-unstrung\" class=\"cta1\">\n    <span>Push Harder</span>\n  </a>\n \n</section>\n\n<style>\n\n\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #eb500f;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: Black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#f6540e;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #f6540e 0%, #842507 92%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 64
       }
     },
     "swipeable_products_TgTa3K": {
@@ -155,7 +185,7 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 44
       }
     },
     "hero_component_EFyg8z": {
@@ -164,14 +194,24 @@
       "settings": {
         "image": "shopify://shop_images/Support_Banner.png",
         "mobile_image": "shopify://shop_images/Support_Banner_R.png",
-        "subtitle": "content",
-        "title": "content",
-        "description": "content",
-        "button_text": "content",
-        "link_to": "/",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_8zCJ3t": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom1\"\n>\n\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\nMove Like You Mean It\n  </h1>\n  <p style=\"margin-top: 3px\"> Less hesitation. <strong> More control. More freedom </strong>to keep going.   </p>\n  <a href=\"/products/nitrix-10-4u-unstrung\" class=\"cta1\">\n    <span>Find Yours</span>\n  </a>\n \n</section>\n\n<style>\n\n\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #eb500f;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: Black;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#f6540e;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #f6540e 0%, #842507 92%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 64
       }
     },
     "swipeable_products_biGLLk": {
@@ -288,7 +328,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "content (Shop by essentials)",
+        "title": "What Are You Working On?",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -324,12 +364,16 @@
   "order": [
     "main",
     "hero_component_gXadBV",
+    "custom_liquid_A7iPU7",
     "multicolumn_FaTQG3",
     "hero_component_AKqH9A",
+    "custom_liquid_AJr93U",
     "swipeable_products_3kV3TT",
     "hero_component_yqDiPz",
+    "custom_liquid_MyEGMV",
     "swipeable_products_TgTa3K",
     "hero_component_EFyg8z",
+    "custom_liquid_8zCJ3t",
     "swipeable_products_biGLLk",
     "multicolumn_4wGUEX",
     "hero_component_ejmDHP"
