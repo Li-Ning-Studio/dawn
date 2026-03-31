@@ -43,13 +43,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1.png",
-        "mobile_image": "shopify://shop_images/Banner_1_R.png",
+        "image": "shopify://shop_images/1_39d291b3-67aa-4415-8fbd-6425052f2209.png",
+        "mobile_image": "shopify://shop_images/1R_72c2f25a-c82a-4b72-824d-10cde889e1d1.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/axforce-cannon-pro-5u-limited-edition",
+        "link_to": "shopify://products/bladex-assassin-5u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -67,20 +67,34 @@
     },
     "swipeable_products_hx9em3": {
       "type": "swipeable-products",
-      "custom_css": [
-        "@media screen and (min-width: 750px) {.grid {width: 80%; margin: 0 auto; }}"
-      ],
+      "custom_css": [],
       "name": "Swipeable Products",
       "settings": {
         "title": "",
         "products": [
-          "axforce-cannon-pro-limited-edition-4u",
-          "axforce-cannon-pro-5u-limited-edition"
+          "bladex-assassin-5u",
+          "bladex-assassin-4u"
         ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 24,
         "padding_bottom": 36
+      }
+    },
+    "hero_component_hct6L9": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/3_e30bdd66-705b-47af-aaaa-fa7c03e51993.png",
+        "mobile_image": "shopify://shop_images/3R.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/bladex-assassin-5u",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multirow_d3UGE7": {
@@ -89,7 +103,7 @@
         "row_8k4gYR": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/1_da3d15fc-0ed1-4a0e-91d1-953ac7c47873.png",
+            "image": "shopify://shop_images/A_1_d2d2c0f7-b46b-4ff8-922d-e92d1879730f.png",
             "caption": "",
             "heading": "Explosive Power & Speed",
             "text": "<p>Engineered to maximise energy transfer from racket to shuttle, delivering faster shots and powerful smashes with every hit.</p>",
@@ -100,7 +114,7 @@
         "row_dL3HX7": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/2_a941496e-932a-4fc5-9b03-03e8fb73f3c3.png",
+            "image": "shopify://shop_images/A_2_ebcc264e-15fc-4e2e-92d7-162c609323a6.png",
             "caption": "",
             "heading": "Flexible Shaft for Better Control",
             "text": "<p>Specially designed shaft enhances shot accuracy and enables more dynamic, forceful strokes for all playing styles.</p>",
@@ -111,7 +125,7 @@
         "row_Y8yYCA": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/3_71d70856-d9c3-4a76-a950-b857552614df.png",
+            "image": "shopify://shop_images/A_3_12434aa2-2bdf-45b4-8269-c7f8f486e462.png",
             "caption": "",
             "heading": "FREE Dual Compartment Kitbag Included",
             "text": "<p>Comes with a premium kitbag to store your racket and essentials—perfect for training and match days.</p>",
@@ -168,13 +182,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2_081d13a5-9d7a-40f9-abbc-5c472339bcea.png",
-        "mobile_image": "shopify://shop_images/Banner_2_R.png",
+        "image": "shopify://shop_images/2_b7834eb5-c52f-40d4-a930-dc3a31e71093.png",
+        "mobile_image": "shopify://shop_images/2R.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/axforce-cannon-pro-5u-limited-edition",
+        "link_to": "shopify://products/bladex-assassin-5u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -184,7 +198,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n.cta-container {\n  width: 100%;\n  padding: 3rem 2rem;\n  text-align: center;\n  background: #fff;\n}\n\n.cta-text {\n  font-size: 5rem;\n  font-weight: 600;\n  color: #222;\n  letter-spacing: -1px;\n  margin: 0;\n  line-height: 1.1;\n}\n\n.cta-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem;\n  margin-top: 1.5rem; /* increased space between line and button */\n}\n\n.cta-line {\n  width: 80px;\n  height: 2px;\n  background: linear-gradient(90deg, transparent, #000);\n  opacity: 0.7;\n}\n\n.cta-button {\n  background: linear-gradient(135deg, #ff0000, #cc0000, #990000);\n  color: #fff;\n  border: none;\n  padding: 1.2rem 3.5rem; /* made button slightly bigger */\n  border-radius: 50px;\n  font-weight: 700;\n  font-size: 1.35rem; /* slightly larger font */\n  letter-spacing: -0.5px;\n  cursor: pointer;\n  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);\n  transition: all 0.3s ease;\n  position: relative;\n  overflow: hidden;\n}\n\n.cta-button:hover {\n  transform: translateY(-3px);\n  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.4);\n}\n\n@media screen and (max-width: 768px) {\n  .cta-text {\n    font-size: 3.5rem;\n    line-height: 1.1;\n  }\n  .cta-line {\n    width: 60px;\n  }\n  .cta-button {\n    padding: 1rem 3rem;\n    font-size: 1.2rem;\n  }\n}\n\n@media screen and (max-width: 480px) {\n  .cta-text {\n    font-size: 3rem;\n    line-height: 1.05;\n  }\n  .cta-line {\n    width: 40px;\n  }\n  .cta-button {\n    padding: 0.95rem 2.5rem;\n    font-size: 1.05rem;\n  }\n}\n</style>\n\n<div class=\"cta-container\">\n  <p class=\"cta-text\">\n    Content\n  </p>\n  <div class=\"cta-wrapper\">\n    <div class=\"cta-line\"></div>\n    <button class=\"cta-button\" onclick=\"handleCTA()\">Content</button>\n    <div class=\"cta-line\" style=\"background: linear-gradient(90deg, #000, transparent);\"></div>\n  </div>\n</div>\n\n<script>\nfunction handleCTA() {\n  window.location.href = \"https://in.lining.studio/products/axforce-cannon-pro-5u-limited-edition\";\n}\n</script>",
+        "custom_liquid": "<style>\n.cta-container {\n  width: 100%;\n  padding: 3rem 2rem;\n  text-align: center;\n  background: #fff;\n}\n\n.cta-text {\n  font-size: 5rem;\n  font-weight: 600;\n  color: #222;\n  letter-spacing: -1px;\n  margin: 0;\n  line-height: 1.1;\n}\n\n.cta-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem;\n  margin-top: 1.5rem; /* increased space between line and button */\n}\n\n.cta-line {\n  width: 80px;\n  height: 2px;\n  background: linear-gradient(90deg, transparent, #000);\n  opacity: 0.7;\n}\n\n.cta-button {\n  background: linear-gradient(135deg, #ff0000, #cc0000, #990000);\n  color: #fff;\n  border: none;\n  padding: 1.2rem 3.5rem; /* made button slightly bigger */\n  border-radius: 50px;\n  font-weight: 700;\n  font-size: 1.35rem; /* slightly larger font */\n  letter-spacing: -0.5px;\n  cursor: pointer;\n  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);\n  transition: all 0.3s ease;\n  position: relative;\n  overflow: hidden;\n}\n\n.cta-button:hover {\n  transform: translateY(-3px);\n  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.4);\n}\n\n@media screen and (max-width: 768px) {\n  .cta-text {\n    font-size: 3.5rem;\n    line-height: 1.1;\n  }\n  .cta-line {\n    width: 60px;\n  }\n  .cta-button {\n    padding: 1rem 3rem;\n    font-size: 1.2rem;\n  }\n}\n\n@media screen and (max-width: 480px) {\n  .cta-text {\n    font-size: 3rem;\n    line-height: 1.05;\n  }\n  .cta-line {\n    width: 40px;\n  }\n  .cta-button {\n    padding: 0.95rem 2.5rem;\n    font-size: 1.05rem;\n  }\n}\n</style>\n\n<div class=\"cta-container\">\n  <p class=\"cta-text\">\n    Content\n  </p>\n  <div class=\"cta-wrapper\">\n    <div class=\"cta-line\"></div>\n    <button class=\"cta-button\" onclick=\"handleCTA()\">Content</button>\n    <div class=\"cta-line\" style=\"background: linear-gradient(90deg, #000, transparent);\"></div>\n  </div>\n</div>\n\n<script>\nfunction handleCTA() {\n  window.location.href = \"https://in.lining.studio/products/bladex-assassin-5u\";\n}\n</script>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 64
@@ -198,6 +212,7 @@
     "hero_component_cLGCnf",
     "custom_liquid_pPEkd3",
     "swipeable_products_hx9em3",
+    "hero_component_hct6L9",
     "multirow_d3UGE7",
     "custom_liquid_EgFpGY",
     "custom_liquid_PQhe3y",
