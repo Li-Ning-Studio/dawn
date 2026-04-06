@@ -11,7 +11,6 @@
   "sections": {
     "hero_video_component_gBEqpc": {
       "type": "hero-video-component",
-      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/1920X700 (1).mp4",
@@ -20,10 +19,31 @@
         "title": "Peak Performance Trio",
         "description": "Pro Rackets Series from HNDRD.",
         "button_text": "EXPLORE",
-        "link_to": "/",
+        "link_to": "shopify://collections/professional-rackets-1",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 16
+      }
+    },
+    "swipeable_products_dp9iPg": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Professional Rackets",
+        "products": [
+          "nitrix-70-venom",
+          "nitrix-70-venom-3u",
+          "flareon-700-3u",
+          "flareon-700",
+          "hyfonic-7",
+          "hyfonic-7-4u",
+          "nitrix-70-volta-3u",
+          "nitrix-70-volta"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "hero_component_G3BHfh": {
@@ -155,22 +175,6 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
     },
-    "swipeable_products_kQUykU": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Atomic X Series",
-        "products": [
-          "atomic-x-black-knight",
-          "atomic-x-38-ctrl",
-          "atomic-x-dark-sword"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 36
-      }
-    },
     "hero_component_pmECNB": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -183,7 +187,7 @@
         "button_text": "Buy Now!",
         "link_to": "shopify://pages/hyper-court",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 12,
         "padding_bottom": 16
       }
     },
@@ -490,6 +494,7 @@
   },
   "order": [
     "hero_video_component_gBEqpc",
+    "swipeable_products_dp9iPg",
     "hero_component_G3BHfh",
     "hero_video_component_FgLawM",
     "swipeable_products_q8JBYr",
@@ -498,7 +503,6 @@
     "hero_component_EAQyDa",
     "swipeable_products_Y8n63R",
     "responsive_slideshow_EyqbQY",
-    "swipeable_products_kQUykU",
     "hero_component_pmECNB",
     "swipeable_products_TRadWW",
     "multicolumn_AmKzdE",
