@@ -59,7 +59,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n    .why-best-heading {\n        width: 100%;\n        padding: 3rem 2rem;\n        background: #fff;\n    }\n    \n    .heading-container {\n        max-width: 1200px;\n        margin: 0 auto;\n        text-align: center;\n    }\n    \n    .main-heading {\n        font-size: 5rem;\n        font-weight: 700;\n        line-height: 1.2;\n        letter-spacing: -2px;\n        margin-bottom: 1rem;\n        display: flex;\ncolor: #222;\n        flex-direction: column;\n        gap: 0.5rem;\n    }\n    \n    .main-heading .highlight {\n        background: linear-gradient(135deg, #1d1d65, #1d1d65);\n        -webkit-background-clip: text;\n        -webkit-text-fill-color: transparent;\n        background-clip: text;\n    }\n    \n    .subheading {\n        font-size: 2rem;\n        color: #666;\n        font-weight: 400;\n        max-width: 600px;\n        margin: 0 auto;\n    }\n    \n    @media (max-width: 768px) {\n        .why-best-heading {\n            padding: 2rem 1rem;\n        }\n        \n        .main-heading {\n            font-size: 3rem;\n            line-height: 1.2;\n        }\n        \n        .subheading {\n            font-size: 1.75rem;\n        }\n    }\n</style>\n\n<div class=\"why-best-heading\">\n    <div class=\"heading-container\">\n        <h2 class=\"main-heading\">\n            <span>BladeX Assassin </span>\n            <span class=\"highlight\">Speaks In Speed</span>\n        </h2>\n        <p class=\"subheading\">Quick to React</p>\n    </div>\n</div>",
+        "custom_liquid": "<style>\n    .why-best-heading {\n        width: 100%;\n        padding: 3rem 2rem;\n        background: #fff;\n    }\n    \n    .heading-container {\n        max-width: 1200px;\n        margin: 0 auto;\n        text-align: center;\n    }\n    \n    .main-heading {\n        font-size: 5rem;\n        font-weight: 700;\n        line-height: 1.2;\n        letter-spacing: -2px;\n        margin-bottom: 1rem;\n        display: flex;\n        color: #222;\n        flex-direction: row;\n        gap: 0.5rem;\n        align-items: center;\n        justify-content:center;\n        column-gap: 15px;\n    }\n    \n    .main-heading .highlight {\n        background: linear-gradient(135deg, #1d1d65, #1d1d65);\n        -webkit-background-clip: text;\n        -webkit-text-fill-color: transparent;\n        background-clip: text;\n    }\n    \n    .subheading {\n        font-size: 2rem;\n        color: #666;\n        font-weight: 400;\n        max-width: 600px;\n        margin: 0 auto;\n    }\n    \n    @media (max-width: 768px) {\n        .why-best-heading {\n            padding: 2rem 1rem;\n        }\n        \n        .main-heading {\n            font-size: 3rem;\n            line-height: 1.2;\n         flex-direction:column;\n        }\n        \n        .subheading {\n            font-size: 1.75rem;\n        }\n    }\n</style>\n\n<div class=\"why-best-heading\">\n    <div class=\"heading-container\">\n        <h2 class=\"main-heading\">\n            Split-Second Strike,\n            <span class=\"highlight\">Speaks In Speed</span>\n        </h2>\n        <p class=\"subheading\">Loads and releases in a split second for fluid swings.</p>\n    </div>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -105,7 +105,7 @@
           "settings": {
             "image": "shopify://shop_images/A_1_d2d2c0f7-b46b-4ff8-922d-e92d1879730f.png",
             "caption": "",
-            "heading": "Sonic Boom System",
+            "heading": "<strong>Sonic Boom System</strong>",
             "text": "<p>Leave a mark with every hit. Each strike lands with a sharp, echoing crack that reflects the pace and intent behind it.</p>",
             "button_label": "Shop Now",
             "button_link": "shopify://products/bladex-assassin-5u"
@@ -116,7 +116,7 @@
           "settings": {
             "image": "shopify://shop_images/A_2_ebcc264e-15fc-4e2e-92d7-162c609323a6.png",
             "caption": "",
-            "heading": "Head-Light Balance",
+            "heading": "<strong>Head-Light Balance</strong>",
             "text": "<p>Speed starts at the wrist. The head-light design gives you effortless control and lets you stay a step ahead in every exchange.</p>",
             "button_label": "Shop Now",
             "button_link": "shopify://products/bladex-assassin-5u"
@@ -127,7 +127,7 @@
           "settings": {
             "image": "shopify://shop_images/A_3_12434aa2-2bdf-45b4-8269-c7f8f486e462.png",
             "caption": "",
-            "heading": "6.6mm Flex Shaft",
+            "heading": "<strong>6.6mm Flex Shaft</strong>",
             "text": "<p>Slim, responsive, and quick to react. The flexible shaft loads and releases in a split second, keeping your swings fast and fluid.</p>",
             "button_label": "Shop Now",
             "button_link": "shopify://products/bladex-assassin-5u"
