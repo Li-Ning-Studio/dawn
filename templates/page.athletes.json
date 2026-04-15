@@ -61,6 +61,41 @@
         "padding_bottom": 60
       }
     },
+    "multicolumn_UbJTA7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_eFiYPi": {
+          "type": "column",
+          "repeater": "{{ page.metafields.custom.sponsored_athletes.value }}",
+          "settings": {
+            "image": "{{ block.repeater.portrait.value }}",
+            "title": "{{ block.repeater.name.value }}",
+            "text": "<p>{{ block.repeater.description | metafield_tag }}</p>",
+            "link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_eFiYPi"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_nVVMj4": {
       "type": "multicolumn",
       "blocks": {
@@ -407,6 +442,7 @@
     "custom_liquid_YiDMDb",
     "custom_liquid_jVNxhm",
     "custom_liquid_rkTYKh",
+    "multicolumn_UbJTA7",
     "multicolumn_nVVMj4",
     "multicolumn_LVwGJm",
     "multicolumn_M4nx3J",
