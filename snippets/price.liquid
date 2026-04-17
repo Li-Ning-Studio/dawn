@@ -18,7 +18,7 @@
   Explicit flag to show savings percent text next to price.
   Default is false so cards/sections don't render it unless opted in.
 {%- endcomment -%}
-{% if show_savings_percent == nil %}{% assign show_savings_percent = false %}{% endif %}
+{% if show_savings_percent == null %}{% assign show_savings_percent = false %}{% endif %}
 
 {%- liquid
   if use_variant
@@ -37,6 +37,10 @@
   assign money_price = price | money
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
+  assign usually_sells_at = product.metafields.custom_but_hidden.usual_price.value
+  assign show_usually_sells_at = false
+  assign usually_sells_at_cents = blank
+  assign money_usually_sells_at = ''
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
     assign money_price_min = price_min | money_with_currency
@@ -45,6 +49,32 @@
 
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+
+  comment
+    This row is intentionally tied to `use_variant` so it only appears in variant-aware price contexts
+    (for example PDP and featured PDP), and not in collection/product cards.
+    `custom_but_hidden.usual_price` is expected to be a Money metafield.
+  endcomment
+  if settings.show_usual_price and use_variant and target.available and price > 0 and compare_at_price and compare_at_price > 0
+    assign usually_sells_at_cents = usually_sells_at | plus: 0 | round
+
+    if usually_sells_at_cents <= 0
+      assign usually_sells_at_cents = blank
+    endif
+
+    if usually_sells_at_cents != blank
+      assign compare_at_delta = compare_at_price | minus: price
+      assign usually_sells_delta = usually_sells_at_cents | minus: price
+      assign usually_sells_delta_percent = usually_sells_delta | times: 100 | divided_by: price
+      if compare_at_delta > 0 and usually_sells_delta > 0 and usually_sells_delta_percent >= 5 and usually_sells_at_cents > price and usually_sells_at_cents < compare_at_price
+        assign show_usually_sells_at = true
+        assign money_usually_sells_at = usually_sells_at_cents | money
+        if settings.currency_code_enabled
+          assign money_usually_sells_at = usually_sells_at_cents | money_with_currency
+        endif
+      endif
+    endif
   endif
 -%}
 
@@ -137,7 +167,7 @@
     </div>
     {%- if show_savings_percent and belongs_to_sale_collection -%}
       <span
-        style="margin-left: 1rem;"
+        style="margin-left: 0.5rem; overflow: hidden;"
         id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}-{{ card_variant.id }}"
         class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
       >
@@ -168,6 +198,28 @@
           {% endif %}
         </div>
       {% endunless %}
+    {% endif %}
+    {% if show_usually_sells_at and request.page_type == 'product' %}
+      {% capture usually_sells_at_text -%}
+        {{ 'products.product.price.usually_sells_at_html' | t: price: money_usually_sells_at }}
+      {%- endcapture %}
+      <div class="price__meta-row">
+        {%
+          render 'highlight-badge',
+          icon: 'icon-trend-down.svg',
+          text: usually_sells_at_text | strip,
+          badge_class: 'price__usually-sells-at '
+        %}
+        {% if settings.show_prices_incl_taxes_message and use_variant %}
+          <small class="price__tax-note price__tax-note--inline ">
+            {{ 'products.product.all_prices_incl_taxes' | t }}
+          </small>
+        {% endif %}
+      </div>
+    {% elsif settings.show_prices_incl_taxes_message and use_variant %}
+      <small class="price__tax-note ">
+        {{ 'products.product.all_prices_incl_taxes' | t }}
+      </small>
     {% endif %}
   </div>
 {% endunless %}
