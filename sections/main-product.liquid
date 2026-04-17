@@ -16,6 +16,7 @@
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'component-highlight-badge.css' | asset_url | stylesheet_tag }}
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
@@ -902,7 +903,21 @@
     -%}
 
     <script type="application/ld+json">
-      {{ product | structured_data }}
+      {%- if settings.catalog_mode_enabled -%}
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemPage",
+          "name": {{ product.title | strip_html | json }},
+          "url": {{ canonical_url | json }},
+          "description": {{ product.description | strip_html | truncate: 300 | json }}{% if seo_media %},
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": {{ seo_media | image_url: width: 1200 | prepend: 'https:' | json }}
+          }{% endif %}
+        }
+      {%- else -%}
+        {{ product | structured_data }}
+      {%- endif -%}
     </script>
   </div>
 

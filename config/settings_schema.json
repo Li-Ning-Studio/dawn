@@ -1440,6 +1440,18 @@
         "id": "currency_code_enabled",
         "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_usual_price",
+        "label": "t:settings_schema.currency_format.settings.show_usual_price.label",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_prices_incl_taxes_message",
+        "label": "t:settings_schema.currency_format.settings.show_prices_incl_taxes_message.label",
+        "default": true
       }
     ]
   },
