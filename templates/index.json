@@ -46,26 +46,101 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div id=\"list\">\n      \n      <div class=\"videoItem\">\n          \n        <video playsinline=\"true\" autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" preload=\"metadata\">\n          <source src=\"https://cdn.shopify.com/videos/c/vp/aaa8c125270f4e5c8337b238f9c42a44/aaa8c125270f4e5c8337b238f9c42a44.HD-1080p-7.2Mbps-80396606.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PEAK PERFORMACE TRIO</h1>\n<p>Pro Rackets Series from HNDRD.</p>\n<a href=\"/collections/professional-rackets-1\">EXPLORE</a>\n</div>\n      \n      \n       <div class=\"videoItem\">\n           <video playsinline=\"true\" autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" preload=\"metadata\">\n          <source src=\"https://cdn.shopify.com/videos/c/vp/24990befbb394b8f9d1fda5c1703413c/24990befbb394b8f9d1fda5c1703413c.HD-1080p-2.5Mbps-77191738.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PERFORMANCE SERVED RIGHT</h1>\n<p>The shoe that every player needs</p>\n<a href=\"/pages/phenom\">SHOP THE PHENOM</a>\n</div>\n<style>\n\n#list { \n display:flex;\ncolumn-gap:20px;\nmargin: 0 20px;\n}\n.videoItem video{\nwidth:100%;\n}\n.videoItem{\n  text-align:center;\nmargin:30px 0;\n}\n.videoItem a{\n  text-decoration:none;\n  color:black;\n  background:#ebedf0;\n  padding:20px 30px;\n  border-radius:40px;\nfont-weight:500;\nfont-size: 1.5rem;\n}\n.videoItem p{\nmargin-bottom: 40px;\n}\n.videoItem h1{\nfont-weight:bolder;\n}\n@media screen and (max-width: 750px) {\n    #list{\nflex-direction:column;\nmargin:0;\n}\n.videoItem h1{\nmargin:10px 10px;\n}\n}\n</style>",
+        "custom_liquid": "<div id=\"list\">\n      \n      <div class=\"videoItem\">\n          \n        <video playsinline=\"true\" autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" preload=\"metadata\">\n          <source src=\"https://cdn.shopify.com/videos/c/vp/aaa8c125270f4e5c8337b238f9c42a44/aaa8c125270f4e5c8337b238f9c42a44.HD-1080p-7.2Mbps-80396606.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PEAK PERFORMACE TRIO</h1>\n<p>Pro Rackets Series from HNDRD.</p>\n<a href=\"/pages/the-prime-trinity\">EXPLORE</a>\n</div>\n      \n      \n       <div class=\"videoItem\">\n           <video playsinline=\"true\" autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" preload=\"metadata\">\n          <source src=\"https://cdn.shopify.com/videos/c/vp/24990befbb394b8f9d1fda5c1703413c/24990befbb394b8f9d1fda5c1703413c.HD-1080p-2.5Mbps-77191738.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PERFORMANCE SERVED RIGHT</h1>\n<p>The shoe that every player needs</p>\n<a href=\"/pages/phenom\">SHOP THE PHENOM</a>\n</div>\n<style>\n\n#list { \n display:flex;\ncolumn-gap:20px;\nmargin: 0 20px;\n}\n.videoItem video{\nwidth:100%;\n}\n.videoItem{\n  text-align:center;\nmargin:30px 0;\n}\n.videoItem a{\n  text-decoration:none;\n  color:black;\n  background:#ebedf0;\n  padding:20px 30px;\n  border-radius:40px;\nfont-weight:500;\nfont-size: 1.5rem;\n}\n.videoItem p{\nmargin-bottom: 40px;\n}\n.videoItem h1{\nfont-weight:bolder;\n}\n@media screen and (max-width: 750px) {\n    #list{\nflex-direction:column;\nmargin:0;\n}\n.videoItem h1{\nmargin:10px 10px;\n}\n}\n</style>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 80
       }
     },
-    "hero_video_component_MnJ8yg": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
+    "responsive_slideshow_Eb8XFX": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_FUXGUn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_44c694a9-d307-462c-b50b-a69799f1b096.jpg",
+            "mobile_image": "shopify://shop_images/Banner_responsive_7ba8a6a5-ebcf-4153-adae-b95d2d4ddd0e.jpg",
+            "heading": "Let Your Game Speak For You",
+            "subheading": "Ultra stability to let you sway cross the court in ease",
+            "button_label": "Suit Up!",
+            "link": "shopify://products/court-star-pro"
+          }
+        },
+        "slide_A4mggU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_copy.jpg",
+            "mobile_image": "shopify://shop_images/02_ceb10ff7-44cd-4e85-a310-bb8d4ed75905.jpg",
+            "heading": "Step up. Stay ahead.",
+            "subheading": "Where every step fuels speed and every landing feels like home court.",
+            "button_label": "Lace up. Win!",
+            "link": "shopify://products/raze"
+          }
+        },
+        "slide_DtRnUp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_3f298e1b-1346-446d-aeea-7a026a4e918b.jpg",
+            "mobile_image": "shopify://shop_images/Banner_1_Responsive_948ebae5-b2ef-4abf-8a7b-5a2b472544cc.jpg",
+            "heading": "Pro's Mastery",
+            "subheading": "Stay one step ahead",
+            "button_label": "Grab Blade Pro",
+            "link": "shopify://products/blade-pro"
+          }
+        },
+        "slide_GPkz9D": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_ffad1ded-9860-4e85-841a-4611979d037f.jpg",
+            "mobile_image": "shopify://shop_images/Banner_1_R_b5513951-58cc-46ef-82e9-033d02a26ade.jpg",
+            "heading": "Unmatched Support for Every Step",
+            "subheading": "Power through the court with Raze Pro's multi-layered sole for ultimate comfort and support.",
+            "button_label": "Buy Now!",
+            "link": "shopify://products/raze-pro"
+          }
+        }
+      },
+      "block_order": [
+        "slide_FUXGUn",
+        "slide_A4mggU",
+        "slide_DtRnUp",
+        "slide_GPkz9D"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
+    },
+    "hero_component_pmECNB": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
       "settings": {
-        "video": "shopify://files/videos/SK Banner pre launch.mp4",
-        "mobile_video": "shopify://files/videos/SK - Responsive pre launch.mp4",
-        "subtitle": "Srikanth Kidambi Edition",
-        "title": "Discover the Difference",
-        "description": "Challenge the legacy rooted in you.",
-        "button_text": "Experience It Now!",
-        "link_to": "shopify://pages/sk-series",
+        "image": "shopify://shop_images/Banner_44c694a9-d307-462c-b50b-a69799f1b096.jpg",
+        "mobile_image": "shopify://shop_images/Banner_responsive_7ba8a6a5-ebcf-4153-adae-b95d2d4ddd0e.jpg",
+        "subtitle": "Court Star",
+        "title": "Let Your Game Speak For You",
+        "description": "Ultra stability to let you sway cross the court in ease",
+        "button_text": "Suit Up!",
+        "link_to": "shopify://products/court-star-pro",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 68
+        "padding_top": 12,
+        "padding_bottom": 16
+      }
+    },
+    "swipeable_products_TRadWW": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Best Sellers!",
+        "products": [
+          "court-star-pro",
+          "raze",
+          "blade-pro",
+          "raze-pro"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 20
       }
     },
     "hero_component_EAQyDa": {
@@ -103,35 +178,20 @@
         "padding_bottom": 20
       }
     },
-    "hero_component_pmECNB": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "hero_video_component_MnJ8yg": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_44c694a9-d307-462c-b50b-a69799f1b096.jpg",
-        "mobile_image": "shopify://shop_images/Banner_responsive_7ba8a6a5-ebcf-4153-adae-b95d2d4ddd0e.jpg",
-        "subtitle": "Court Star",
-        "title": "Let Your Game Speak For You",
-        "description": "Ultra stability to let you sway cross the court in ease",
-        "button_text": "Suit Up!",
-        "link_to": "shopify://products/court-star-pro",
+        "video": "shopify://files/videos/SK Banner pre launch.mp4",
+        "mobile_video": "shopify://files/videos/SK - Responsive pre launch.mp4",
+        "subtitle": "Srikanth Kidambi Edition",
+        "title": "Discover the Difference",
+        "description": "Challenge the legacy rooted in you.",
+        "button_text": "Experience It Now!",
+        "link_to": "shopify://pages/sk-series",
         "color_scheme": "",
-        "padding_top": 12,
-        "padding_bottom": 16
-      }
-    },
-    "swipeable_products_TRadWW": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Court Star Series",
-        "products": [
-          "court-star-pro",
-          "court-star"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 8,
-        "padding_bottom": 20
+        "padding_top": 0,
+        "padding_bottom": 68
       }
     },
     "multicolumn_AmKzdE": {
@@ -441,11 +501,12 @@
     "hero_component_G3BHfh",
     "swipeable_products_dp9iPg",
     "custom_liquid_kxpHLq",
-    "hero_video_component_MnJ8yg",
-    "hero_component_EAQyDa",
-    "swipeable_products_Y8n63R",
+    "responsive_slideshow_Eb8XFX",
     "hero_component_pmECNB",
     "swipeable_products_TRadWW",
+    "hero_component_EAQyDa",
+    "swipeable_products_Y8n63R",
+    "hero_video_component_MnJ8yg",
     "multicolumn_AmKzdE",
     "hero_video_component_6gwBpL",
     "swipeable_products_HjzUcP",
