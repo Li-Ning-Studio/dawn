@@ -9,36 +9,32 @@
  */
 {
   "sections": {
-    "hero_video_component_gBEqpc": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
+    "hero_component_G3BHfh": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "video": "shopify://files/videos/1920X700 (1).mp4",
-        "mobile_video": "shopify://files/videos/Sq (2).mp4",
-        "subtitle": "Introducing",
-        "title": "Peak Performance Trio",
-        "description": "Pro Rackets Series from HNDRD.",
-        "button_text": "EXPLORE",
-        "link_to": "shopify://collections/professional-rackets-1",
+        "image": "shopify://shop_images/1_a859f3be-3d67-4d01-88f2-ddb69fe86f3d.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_1_01e16aa8-e83f-4e35-8860-6d7fbe8c576f.jpg",
+        "subtitle": "Predator",
+        "title": "Whip Like a Stingray",
+        "description": "Head-Heavy rackets with flexible shaft  for explosive smash power",
+        "button_text": "Buy It Now!",
+        "link_to": "shopify://products/predator-79-extra-strong",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 16
+        "padding_bottom": 36
       }
     },
     "swipeable_products_dp9iPg": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Professional Rackets",
+        "title": "Predator Series",
         "products": [
-          "nitrix-70-venom",
-          "nitrix-70-venom-3u",
-          "flareon-700-3u",
-          "flareon-700",
-          "hyfonic-7",
-          "hyfonic-7-4u",
-          "nitrix-70-volta-3u",
-          "nitrix-70-volta"
+          "predator-79-extra-strong",
+          "predator-82-extra-strong",
+          "predator-82-extreme",
+          "predator-84-extreme"
         ],
         "show_color_variants": false,
         "color_scheme": "",
@@ -46,66 +42,14 @@
         "padding_bottom": 20
       }
     },
-    "hero_component_G3BHfh": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "custom_liquid_kxpHLq": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Banner_3bb28fc4-a079-4666-acc6-3f17fd65a486.jpg",
-        "mobile_image": "shopify://shop_images/Banner_R_c67ae718-0e3d-4457-8a2b-f0ae1a55659e.jpg",
-        "subtitle": "Introducing",
-        "title": "The Prime Trinity",
-        "description": "Test your play style with these high-performance series",
-        "button_text": "Check It Out!",
-        "link_to": "shopify://pages/the-prime-trinity",
+        "custom_liquid": "<div id=\"list\">\n      \n      <div class=\"videoItem\">\n          \n        <video autoplay loop>\n          <source src=\"https://cdn.shopify.com/videos/c/vp/aaa8c125270f4e5c8337b238f9c42a44/aaa8c125270f4e5c8337b238f9c42a44.HD-1080p-7.2Mbps-80396606.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PEAK PERFORMACE TRIO</h1>\n<p>Pro Rackets Series from HNDRD.</p>\n<a href=\"/collections/professional-rackets-1\">EXPLORE</a>\n</div>\n      \n      \n       <div class=\"videoItem\">\n           <video autoplay loop>\n          <source src=\"https://cdn.shopify.com/videos/c/vp/24990befbb394b8f9d1fda5c1703413c/24990befbb394b8f9d1fda5c1703413c.HD-1080p-2.5Mbps-77191738.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PERFORMANCE SERVED RIGHT</h1>\n<p>The shoe that every player needs</p>\n<a href=\"/pages/phenom\">SHOP THE PHENOM</a>\n</div>\n<style>\n\n#list { \n display:flex;\ncolumn-gap:20px;\nmargin: 0 20px;\n}\n.videoItem video{\nwidth:100%;\n}\n.videoItem{\n  text-align:center;\nmargin:30px 0;\n}\n.videoItem a{\n  text-decoration:none;\n  color:black;\n  background:#ebedf0;\n  padding:20px 30px;\n  border-radius:40px;\nfont-weight:500;\nfont-size: 1.5rem;\n}\n.videoItem p{\nmargin-bottom: 30px;\n}\n.videoItem h1{\nfont-weight:bolder;\n}\n@media screen and (max-width: 750px) {\n    #list{\nflex-direction:column;\nmargin:0;\n}\n.videoItem h1{\nmargin:10px 10px;\n}\n}\n</style>",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "hero_video_component_FgLawM": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/Wb1.mp4",
-        "mobile_video": "shopify://files/videos/Wb2.mp4",
-        "subtitle": "Phenom",
-        "title": "PERFORMANCE SERVED RIGHT",
-        "description": "Do you have the hunger to become the best version of yourself? You need a shoe that keeps up.",
-        "button_text": "SHOP THE PHENOM",
-        "link_to": "shopify://pages/phenom",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 8
-      }
-    },
-    "swipeable_products_q8JBYr": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "The Over Engineered Shoe",
-        "products": [
-          "phenom"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_VwnCmb": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Home_Banner_51445582-7ddf-4784-a354-487606bba8b9.png",
-        "mobile_image": "shopify://shop_images/Home_Banner_R_33712625-ab31-47ff-ba53-99ebc1dcb9f4.png",
-        "subtitle": "New Launch!",
-        "title": "Train Without Limits",
-        "description": "Everything you need to train harder, recover better, and stay consistent.",
-        "button_text": "Get Started",
-        "link_to": "shopify://pages/accessories",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 68
+        "padding_top": 40,
+        "padding_bottom": 80
       }
     },
     "hero_video_component_MnJ8yg": {
@@ -153,27 +97,6 @@
         "padding_top": 0,
         "padding_bottom": 20
       }
-    },
-    "responsive_slideshow_EyqbQY": {
-      "type": "responsive-slideshow",
-      "blocks": {
-        "slide_dLkD47": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_ba815d3b-3263-4535-8f59-62677eef097e.png",
-            "mobile_image": "shopify://shop_images/Banner_1_R_4329b113-3351-4deb-b6d1-f61bad0270e0.png",
-            "heading": "Weaponize Your Smash",
-            "subheading": "Bring the intensity of battle with a racket designed for peak attack and crushing impact.",
-            "button_label": "Get It Now!",
-            "link": "shopify://products/atomic-x-black-knight"
-          }
-        }
-      },
-      "block_order": [
-        "slide_dLkD47"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {}
     },
     "hero_component_pmECNB": {
       "type": "hero-component",
@@ -320,6 +243,22 @@
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 24
+      }
+    },
+    "hero_component_VwnCmb": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Home_Banner_51445582-7ddf-4784-a354-487606bba8b9.png",
+        "mobile_image": "shopify://shop_images/Home_Banner_R_33712625-ab31-47ff-ba53-99ebc1dcb9f4.png",
+        "subtitle": "New Launch!",
+        "title": "Train Without Limits",
+        "description": "Everything you need to train harder, recover better, and stay consistent.",
+        "button_text": "Get Started",
+        "link_to": "shopify://pages/accessories",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 68
       }
     },
     "hero_component_mYeEJ4": {
@@ -493,21 +432,18 @@
     }
   },
   "order": [
-    "hero_video_component_gBEqpc",
-    "swipeable_products_dp9iPg",
     "hero_component_G3BHfh",
-    "hero_video_component_FgLawM",
-    "swipeable_products_q8JBYr",
-    "hero_component_VwnCmb",
+    "swipeable_products_dp9iPg",
+    "custom_liquid_kxpHLq",
     "hero_video_component_MnJ8yg",
     "hero_component_EAQyDa",
     "swipeable_products_Y8n63R",
-    "responsive_slideshow_EyqbQY",
     "hero_component_pmECNB",
     "swipeable_products_TRadWW",
     "multicolumn_AmKzdE",
     "hero_video_component_6gwBpL",
     "swipeable_products_HjzUcP",
+    "hero_component_VwnCmb",
     "hero_component_mYeEJ4",
     "swipeable_products_RyJQbU",
     "hero_component_Di3AGa",
