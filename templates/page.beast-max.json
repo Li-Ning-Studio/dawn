@@ -37,7 +37,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Beast Max</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  Need Content Title\n  </h1>\n  <p style=\"margin-top: 3px\">Description Content</p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>CTA CONTENT</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Beast Max</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  The Beast Has Arrived.\n  </h1>\n  <p style=\"margin-top: 3px\">Performance so fierce, it speaks for itself.</p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>Enter the Beast</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 60,
         "padding_bottom": 28
@@ -52,7 +52,7 @@
       ],
       "name": "Swipeable Products",
       "settings": {
-        "title": "<strong>Available in 4 colors</strong>",
+        "title": "Power Comes In Shades",
         "products": [
           "beast-max"
         ],
@@ -71,7 +71,7 @@
             "image": "shopify://shop_images/Artboard_1_c1c293bb-48c4-4151-901a-8d150eb19600.jpg",
             "caption": "",
             "heading": "<strong>Carbon Fiber Plate</strong>",
-            "text": "<p>The sole has a carbon fibre plate strategically inserted within to improve the durability of the sole and enhance the player’s stability. Lightweight Carbon Fiber Material with good toughness, shock resistance and impact resistance helps provide good support and force transmission during exercise, reduces energy loss and improves athletic performance</p>",
+            "text": "<p>A carbon fibre plate embedded midfoot acts as the Beast Max's backbone, transferring force, resisting impact, and preventing the kind of sole fatigue that slows you down.</p>",
             "button_label": "Shop Beast Max",
             "button_link": "shopify://products/beast-max"
           }
@@ -82,7 +82,7 @@
             "image": "shopify://shop_images/Artboard_2_11ce1159-349c-4161-8990-67e314928b2e.jpg",
             "caption": "",
             "heading": "<strong>Heel Support</strong>",
-            "text": "<p>Charge into the game head first with the total foot protection system that provides ample support to your ankles through the sturdy heel brace. The fabric pull-up strap ensures convenience while wearing</p>",
+            "text": "<p>No ankle tape needed. The Beast Max's built-in heel brace delivers the kind of lockdown support that lets you throw yourself into every lunge, leap, and lateral without a second thought.</p>",
             "button_label": "Shop Beast Max",
             "button_link": "shopify://products/beast-max"
           }
@@ -93,7 +93,7 @@
             "image": "shopify://shop_images/Artboard_3_13b8067a-5b05-4bfd-8379-295c435115fc.jpg",
             "caption": "",
             "heading": "<strong>Durable Build</strong>",
-            "text": "<p>The use of high-quality materials ensures better durability. The upper is made with a fusion of mesh and TPU with a toughened edge for toe box protection. This adds to the breathability and longer service life</p>",
+            "text": "<p>The Beast doesn't break down. A fortified mesh and TPU upper with the reinforced toe box guards against the wear while still offering the premium feel through airflow. </p>",
             "button_label": "Shop Beast Max",
             "button_link": "shopify://products/beast-max"
           }
@@ -145,7 +145,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\nLONG TITLE CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>Buy Now</span>\n  </a>\n</section>\n\n<style>\n\n\n  .title4 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #ffffff 20%,\n      #e6bc32 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n.main-sec-custom4 video{\nmargin-top:0px;\nheight: 50%;\n}\n\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\nBeast Mode Isn't a State of Mind. It's a Shoe.\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>Think You Can Handle It?</span>\n  </a>\n</section>\n\n<style>\n\n\n  .title4 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #ffffff 20%,\n      #e6bc32 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n.main-sec-custom4 video{\nmargin-top:0px;\nheight: 50%;\n}\n\n  }\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 60,
         "padding_bottom": 88
