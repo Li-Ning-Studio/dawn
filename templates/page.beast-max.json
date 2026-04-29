@@ -21,13 +21,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/1_4a005f71-333e-4299-bd47-43478006e9af.jpg",
-        "mobile_image": "shopify://shop_images/1-1.jpg",
+        "image": "shopify://shop_images/01_7b52da1a-a3b7-485f-9e49-a72e14875d06.jpg",
+        "mobile_image": "shopify://shop_images/1_0e330293-646e-46b0-bf22-65e6188d81ba.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/hyper-court",
+        "link_to": "shopify://products/beast-max",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -37,7 +37,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Hyper Court</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n   The Adaptive Advantage\n  </h1>\n  <p style=\"margin-top: 3px\">Made to adapt to your movement and give you the advantage in every step on court.</p>\n  <a href=\"/products/hyper-court\" class=\"ctax\">\n    <span>Take the Advantage</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #00ffc4;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Beast Max</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  Need Content Title\n  </h1>\n  <p style=\"margin-top: 3px\">Description Content</p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>CTA CONTENT</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 60,
         "padding_bottom": 28
@@ -54,188 +54,12 @@
       "settings": {
         "title": "<strong>Available in 4 colors</strong>",
         "products": [
-          "hyper-court"
+          "beast-max"
         ],
         "show_color_variants": true,
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 24,
         "padding_bottom": 12
-      }
-    },
-    "hero_component_LW9ptk": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/6_1e112991-5c51-4404-9f50-f0b5529afb09.jpg",
-        "mobile_image": "shopify://shop_images/6-6.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/hyper-court",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 48,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_LRFBAA": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> HNDRD HyperCourt</p>\n  <h2 class=\"second-title\">A flexible built to mirror your natural motion</h2>\n  <h2 class=\"second-title1\"> When the Game Shifts, So Do You</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\ndisplay:none;\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor: rgba(255, 255, 255, 0.95); \n\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 48,
-        "padding_bottom": 52
-      }
-    },
-    "multicolumn_JknLPn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_FjrVzf": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/3_8648c335-d88a-4b26-bb08-6b65d38ba1ae.jpg",
-            "title": "KPU SHIELD UPPER",
-            "text": "<p>The KPU upper combines durability and adaptability offering a fit that feels secure without compromising flexibility. It’s tough enough to handle intense play while maintaining breathability for all-day comfort.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_FUb9iF": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/2_a1299ac5-9b53-40a5-b295-38dc7c799973.jpg",
-            "title": "ACTIVE GRIP OUTSOLE",
-            "text": "<p>The multidirectional traction pattern of the Active Grip outsole keeps you stable and ready for quick pivots sharp stops, and rapid sprints across the court.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_kzx3jK": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/1_e882d613-89b8-4d93-b59b-cd3c9adf9b85.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_aaaKnD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/4_8b4d9d0d-421e-49b8-b976-2b418ca23a48.jpg",
-            "title": "HEEL BRACE",
-            "text": "<p>The built-in heel brace secures your foot during aggressive moves, providing extra stability and reducing the risk of strain, so you can focus on your game without hesitation.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_FjrVzf",
-        "column_FUb9iF",
-        "column_kzx3jK",
-        "column_aaaKnD"
-      ],
-      "custom_css": [
-        ".multicolumn-card__info .inline-richtext {background-image: linear-gradient(to right, #fff 5%, #00ffc4 50%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: 900; font-size: 20px;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 76
-      }
-    },
-    "hero_component_zbnX6g": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/4_dae980d1-1eb2-4600-a448-eeca455bf02a.jpg",
-        "mobile_image": "shopify://shop_images/4-4.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/hyper-court",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 48,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_YCPYGt": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Play the Champion’s Way</p>\n  <p class=\"longcopy\">\n  <span class=\"highlight\">  Kidambi Srikanth </span> chooses <span class=\"highlight\">Hypercourt </span>for a fit that moves naturally with every step <span class=\"highlight\"></span>  <span class=\"highlight\"></span>.\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 64,
-        "padding_bottom": 40
-      }
-    },
-    "hero_component_9tcnyj": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/5_f4062c39-0873-4a66-af31-466aea858bf2.jpg",
-        "mobile_image": "shopify://shop_images/5-5.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/hyper-court",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 48,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_8BRkmL": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> HNDRD HyperCourt</p>\n  <h2 class=\"second-title\">Designed to move the way your foot moves.</h2>\n  \n<a href=\"/products/hyper-court\" class=\"ctax\">\n    <span>Stay Ready. Stay Adaptive.</span>\n  </a>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin-bottom: 4rem;\n  background-image: linear-gradient(to left, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 48,
-        "padding_bottom": 72
-      }
-    },
-    "hero_component_7h6NiP": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/3_822006c4-e871-4afc-b9fe-ce46368a2553.jpg",
-        "mobile_image": "shopify://shop_images/3-3.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/hyper-court",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 48,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_wayMqQ": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Grip. Support. Confidence.</p>\n  <p class=\"longcopy\">A <span class=\"highlight\"> durable grip pattern </span> and <span class=\"highlight\"> stabilizing support plate</span> help you stay planted and powerful\n   <span class=\"highlight\"></span>.\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 48,
-        "padding_bottom": 28
       }
     },
     "multirow_TwaRz3": {
@@ -244,33 +68,45 @@
         "row_WPXyNV": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/5_05e52795-36be-498b-8af5-57cf9b08fec5.jpg",
+            "image": "shopify://shop_images/Artboard_1_c1c293bb-48c4-4151-901a-8d150eb19600.jpg",
             "caption": "",
-            "heading": "<strong>Built for Unpredictable Play</strong>",
-            "text": "<p>Your game changes in an instant.<strong> Hyper Court’s</strong> adaptive upper responds instantly to your movement, delivering the perfect balance of flexibility and support for total confidence in every rally.</p>",
-            "button_label": "Shop Hyper Court",
-            "button_link": "shopify://products/hyper-court"
+            "heading": "<strong>Carbon Fiber Plate</strong>",
+            "text": "<p>The sole has a carbon fibre plate strategically inserted within to improve the durability of the sole and enhance the player’s stability. Lightweight Carbon Fiber Material with good toughness, shock resistance and impact resistance helps provide good support and force transmission during exercise, reduces energy loss and improves athletic performance</p>",
+            "button_label": "Shop Beast Max",
+            "button_link": "shopify://products/beast-max"
           }
         },
         "row_PUmQM9": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/6_6f903f10-4a25-48e9-99f2-5242763aa322.jpg",
+            "image": "shopify://shop_images/Artboard_2_11ce1159-349c-4161-8990-67e314928b2e.jpg",
             "caption": "",
-            "heading": "<strong>Out move the Moment</strong>",
-            "text": "<p>The upper flexes naturally during push-offs and adapts to your movement patterns. It locks your foot in place, so there’s no internal shifting during fast cuts. The material allows airflow, so your feet stay cool through long rallies.</p>",
-            "button_label": "Shop Hyper Court",
-            "button_link": "shopify://products/hyper-court"
+            "heading": "<strong>Heel Support</strong>",
+            "text": "<p>Charge into the game head first with the total foot protection system that provides ample support to your ankles through the sturdy heel brace. The fabric pull-up strap ensures convenience while wearing</p>",
+            "button_label": "Shop Beast Max",
+            "button_link": "shopify://products/beast-max"
+          }
+        },
+        "row_zqQFzz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_13b8067a-5b05-4bfd-8379-295c435115fc.jpg",
+            "caption": "",
+            "heading": "<strong>Durable Build</strong>",
+            "text": "<p>The use of high-quality materials ensures better durability. The upper is made with a fusion of mesh and TPU with a toughened edge for toe box protection. This adds to the breathability and longer service life</p>",
+            "button_label": "Shop Beast Max",
+            "button_link": "shopify://products/beast-max"
           }
         }
       },
       "block_order": [
         "row_WPXyNV",
-        "row_PUmQM9"
+        "row_PUmQM9",
+        "row_zqQFzz"
       ],
       "custom_css": [
-        ".image-with-text__heading {background-image: linear-gradient(to right, #fff 20%, #00ffc4 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; letter-spacing: 1px;}",
-        ".button::after,.button::before,.button {border: 1px solid #00ffc4; border-radius: 500px; padding: 1.6rem 3.1rem; letter-spacing: 1px; font-weight: 700;}"
+        ".image-with-text__heading {background-image: linear-gradient(to right, #fff 20%, #e6bc32 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; letter-spacing: 1px;}",
+        ".button::after,.button::before,.button {border: 1px solid #e6bc32; border-radius: 500px; padding: 1.6rem 3.1rem; letter-spacing: 1px; font-weight: 700;}"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
@@ -293,13 +129,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/7_5cca33d5-6c65-4fe7-bbe4-31d3299bafc3.jpg",
-        "mobile_image": "shopify://shop_images/7-7.jpg",
+        "image": "shopify://shop_images/02_f98eb6ed-e9e5-44b4-a38b-d18de8349e47.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_1_784de790-d462-47a4-add1-d2f695cd68d0.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/hyper-court",
+        "link_to": "shopify://products/beast-max",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 80,
         "padding_bottom": 36
@@ -309,7 +145,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\n Unlock the Adaptive Advantage\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/products/hyper-court\" class=\"ctax\">\n    <span>Buy Now</span>\n  </a>\n</section>\n\n<style>\n\n\n  .title4 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #ffffff 20%,\n      #00ffc4 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n.main-sec-custom4 video{\nmargin-top:0px;\nheight: 50%;\n}\n\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\nLONG TITLE CONTENT\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>Buy Now</span>\n  </a>\n</section>\n\n<style>\n\n\n  .title4 {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #ffffff 20%,\n      #e6bc32 100%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n.main-sec-custom4 video{\nmargin-top:0px;\nheight: 50%;\n}\n\n  }\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 60,
         "padding_bottom": 88
@@ -321,15 +157,6 @@
     "hero_component_bdTeJB",
     "custom_liquid_9LCqGj",
     "swipeable_products_tcbEWV",
-    "hero_component_LW9ptk",
-    "custom_liquid_LRFBAA",
-    "multicolumn_JknLPn",
-    "hero_component_zbnX6g",
-    "custom_liquid_YCPYGt",
-    "hero_component_9tcnyj",
-    "custom_liquid_8BRkmL",
-    "hero_component_7h6NiP",
-    "custom_liquid_wayMqQ",
     "multirow_TwaRz3",
     "hero_component_REChCd",
     "custom_liquid_P3TNHW"
