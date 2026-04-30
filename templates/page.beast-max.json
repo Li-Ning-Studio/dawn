@@ -64,10 +64,9 @@
     },
     "hero_video_component_GEDTRa": {
       "type": "hero-video-component",
-      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
-        "video": "shopify://files/videos/01.mp4",
+        "video": "shopify://files/videos/02.mp4",
         "mobile_video": "shopify://files/videos/01.mp4",
         "subtitle": "",
         "title": "",
@@ -81,10 +80,9 @@
     },
     "custom_liquid_wE4R9y": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> HNDRD Beast Max</p>\n  <h2 class=\"second-title\">A patterned outsole that bites into the court</h2>\n  <h2 class=\"second-title1\"> Traction beyond imagination</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #ffffff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\ndisplay:none;\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor: rgba(255, 255, 255, 0.95); \n\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> HNDRD Beast Max</p>\n  <h2 class=\"second-title\">A patterned outsole that bites into the court</h2>\n  <h2 class=\"second-title1\"> Traction beyond imagination</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\ndisplay:none;\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor: rgba(255, 255, 255, 0.95); \n\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 48,
         "padding_bottom": 52
