@@ -9,6 +9,36 @@
  */
 {
   "sections": {
+    "hero_video_component_yDajRm": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/02.mp4",
+        "mobile_video": "shopify://files/videos/01.mp4",
+        "subtitle": "Introducing, Beast Max",
+        "title": "The Beast Has Arrived.",
+        "description": "Performance so fierce, it speaks for itself.",
+        "button_text": "ENTER THE BEAST",
+        "link_to": "shopify://pages/beast-max",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "swipeable_products_Cm4fE8": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Power Comes In Shades",
+        "products": [
+          "beast-max"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "hero_component_G3BHfh": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -342,26 +372,6 @@
         "padding_bottom": 0
       }
     },
-    "swipeable_products_Cm4fE8": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "PLAY LIKE A PRO",
-        "products": [
-          "spirit-x-blast-extend",
-          "spirit-x-flow-wide",
-          "spirit-x-flow-blast-wide",
-          "spirit-x-wide-copy",
-          "delta-p500-pro-pack-of-6",
-          "nexagear-pickleball-bag"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "hero_component_Dd4CVH": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -518,6 +528,8 @@
     }
   },
   "order": [
+    "hero_video_component_yDajRm",
+    "swipeable_products_Cm4fE8",
     "hero_component_G3BHfh",
     "swipeable_products_dp9iPg",
     "custom_liquid_kxpHLq",
@@ -532,7 +544,6 @@
     "custom_liquid_nnJyGE",
     "hero_component_VwnCmb",
     "hero_component_Di3AGa",
-    "swipeable_products_Cm4fE8",
     "hero_component_Dd4CVH",
     "swipeable_products_HyzyGP",
     "multicolumn_aLMb78",
