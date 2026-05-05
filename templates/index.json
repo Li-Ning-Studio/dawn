@@ -82,109 +82,6 @@
         "padding_bottom": 80
       }
     },
-    "featured_collection_HDRmDh": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "bb-flagship",
-        "products_to_show": 6,
-        "title": "Featured Products",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": true,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 8,
-        "padding_bottom": 36
-      }
-    },
-    "responsive_slideshow_Eb8XFX": {
-      "type": "responsive-slideshow",
-      "blocks": {
-        "slide_FUXGUn": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_44c694a9-d307-462c-b50b-a69799f1b096.jpg",
-            "mobile_image": "shopify://shop_images/Banner_responsive_7ba8a6a5-ebcf-4153-adae-b95d2d4ddd0e.jpg",
-            "heading": "Let Your Game Speak For You",
-            "subheading": "Ultra stability to let you sway cross the court in ease",
-            "button_label": "Suit Up!",
-            "link": "shopify://products/court-star-pro"
-          }
-        },
-        "slide_A4mggU": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1_copy.jpg",
-            "mobile_image": "shopify://shop_images/2_copy.jpg",
-            "heading": "Step up. Stay ahead.",
-            "subheading": "Where every step fuels speed and every landing feels like home court.",
-            "button_label": "Lace up. Win!",
-            "link": "shopify://products/raze"
-          }
-        },
-        "slide_DtRnUp": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_3f298e1b-1346-446d-aeea-7a026a4e918b.jpg",
-            "mobile_image": "shopify://shop_images/Banner_1_Responsive_948ebae5-b2ef-4abf-8a7b-5a2b472544cc.jpg",
-            "heading": "Pro's Mastery",
-            "subheading": "Stay one step ahead",
-            "button_label": "Grab Blade Pro",
-            "link": "shopify://products/blade-pro"
-          }
-        },
-        "slide_GPkz9D": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_ffad1ded-9860-4e85-841a-4611979d037f.jpg",
-            "mobile_image": "shopify://shop_images/Banner_1_R_b5513951-58cc-46ef-82e9-033d02a26ade.jpg",
-            "heading": "Unmatched Support for Every Step",
-            "subheading": "Power through the court with Raze Pro's multi-layered sole for ultimate comfort and support.",
-            "button_label": "Buy Now!",
-            "link": "shopify://products/raze-pro"
-          }
-        }
-      },
-      "block_order": [
-        "slide_FUXGUn",
-        "slide_A4mggU",
-        "slide_DtRnUp",
-        "slide_GPkz9D"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {}
-    },
-    "swipeable_products_TRadWW": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Best Sellers!",
-        "products": [
-          "court-star-pro",
-          "raze",
-          "blade-pro",
-          "raze-pro"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 8,
-        "padding_bottom": 20
-      }
-    },
     "multicolumn_AmKzdE": {
       "type": "multicolumn",
       "blocks": {
@@ -261,6 +158,109 @@
         "swipe_on_mobile": false,
         "padding_top": 68,
         "padding_bottom": 64
+      }
+    },
+    "featured_collection_HDRmDh": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bb-flagship",
+        "products_to_show": 6,
+        "title": "Featured Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 68,
+        "padding_bottom": 36
+      }
+    },
+    "responsive_slideshow_Eb8XFX": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_FUXGUn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_44c694a9-d307-462c-b50b-a69799f1b096.jpg",
+            "mobile_image": "shopify://shop_images/Banner_responsive_7ba8a6a5-ebcf-4153-adae-b95d2d4ddd0e.jpg",
+            "heading": "Let Your Game Speak For You",
+            "subheading": "Ultra stability to let you sway cross the court in ease",
+            "button_label": "Suit Up!",
+            "link": "shopify://products/court-star-pro"
+          }
+        },
+        "slide_A4mggU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_copy.jpg",
+            "mobile_image": "shopify://shop_images/2_copy.jpg",
+            "heading": "Step up. Stay ahead.",
+            "subheading": "Where every step fuels speed and every landing feels like home court.",
+            "button_label": "Lace up. Win!",
+            "link": "shopify://products/raze"
+          }
+        },
+        "slide_DtRnUp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_3f298e1b-1346-446d-aeea-7a026a4e918b.jpg",
+            "mobile_image": "shopify://shop_images/Banner_1_Responsive_948ebae5-b2ef-4abf-8a7b-5a2b472544cc.jpg",
+            "heading": "Pro's Mastery",
+            "subheading": "Stay one step ahead",
+            "button_label": "Grab Blade Pro",
+            "link": "shopify://products/blade-pro"
+          }
+        },
+        "slide_GPkz9D": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_ffad1ded-9860-4e85-841a-4611979d037f.jpg",
+            "mobile_image": "shopify://shop_images/Banner_1_R_b5513951-58cc-46ef-82e9-033d02a26ade.jpg",
+            "heading": "Unmatched Support for Every Step",
+            "subheading": "Power through the court with Raze Pro's multi-layered sole for ultimate comfort and support.",
+            "button_label": "Buy Now!",
+            "link": "shopify://products/raze-pro"
+          }
+        }
+      },
+      "block_order": [
+        "slide_FUXGUn",
+        "slide_A4mggU",
+        "slide_DtRnUp",
+        "slide_GPkz9D"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
+    },
+    "swipeable_products_TRadWW": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Best Sellers!",
+        "products": [
+          "court-star-pro",
+          "raze",
+          "blade-pro",
+          "raze-pro"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 20
       }
     },
     "hero_component_EAQyDa": {
@@ -533,10 +533,10 @@
     "hero_component_G3BHfh",
     "swipeable_products_dp9iPg",
     "custom_liquid_kxpHLq",
+    "multicolumn_AmKzdE",
     "featured_collection_HDRmDh",
     "responsive_slideshow_Eb8XFX",
     "swipeable_products_TRadWW",
-    "multicolumn_AmKzdE",
     "hero_component_EAQyDa",
     "swipeable_products_Y8n63R",
     "hero_component_mYeEJ4",
