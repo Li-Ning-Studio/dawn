@@ -17,19 +17,221 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_Hyc3LN": {
+    "custom_liquid_EnX3Ve": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> </p>\n  <h2 class=\"second-title\">Deal Of the Day</h2>\n  <h2 class=\"second-title1\"> Special offers running only till midnight</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #000 20%, red 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\ndisplay:none;\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\n\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> </p>\n  <h2 class=\"second-title\">Deal Of The Day</h2>\n  <h2 class=\"second-title1\"> Limited-time steals on select products. Once they’re gone, they’re gone, don’t miss out!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #000 20%, #40fe88 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\ndisplay:none;\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor:#013039;\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 52
+      }
+    },
+    "countdown_timer_d3eCiw": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Starts In",
+        "end_time": "2026-05-07 00:00",
+        "background": "",
+        "text_color": "#000000",
+        "padding_top": 16
+      }
+    },
+    "hero_component_MFYxwA": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_10a2f198-759a-4008-b17e-173f1131deb8.jpg",
+        "mobile_image": "shopify://shop_images/responsive_a3bf1525-84dd-46ac-9c12-1a461119a408.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/deal-of-the-day",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Hyc3LN": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> </p>\n  <h2 class=\"second-title\">Grab It Before It’s Gone</h2>\n  <h2 class=\"second-title1\"> Limited-time steals on select products. Once they’re gone, they’re gone, don’t miss out!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #000 20%, #40fe88 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\ndisplay:none;\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor:#013039;\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_cGrpnP": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "deal-of-the-day",
+        "products_to_show": 11,
+        "title": "Only Today!",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_qCghBj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_kje73E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_R_5229df15-19b7-42eb-ae87-a0041b47f5fe.png",
+            "title": "Atomic X Black Knight",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jLYwDF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_copy_b8772d5c-7bd6-4c63-b10d-78c86ff23df6.jpg",
+            "title": "Raze",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yV3NLw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Responsive_2_d32217b0-87dc-4cf3-87e1-32a929ea6ade.jpg",
+            "title": "HyperTurf",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_kje73E",
+        "column_jLYwDF",
+        "column_yV3NLw"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 40
+      }
+    },
+    "multicolumn_AdkrzW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_g6HHAL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cosmo_banner_r_88369642-9f2e-45d3-a7db-fe893734fbea.png",
+            "title": "Cosmogear",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NbPKK7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02_bcd0549c-8931-405d-965c-49c2f679f528.jpg",
+            "title": "Super Storm",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QTr39A": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Main_R_501da129-427f-417a-8fbc-00bd6a98b66b.png",
+            "title": "Quantum Pro",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7PxHzn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_47de7d29-5170-4503-9641-40efbfd81c35.jpg",
+            "title": "Spirit X",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_g6HHAL",
+        "column_NbPKK7",
+        "column_QTr39A",
+        "column_7PxHzn"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
-    "custom_liquid_Hyc3LN"
+    "custom_liquid_EnX3Ve",
+    "countdown_timer_d3eCiw",
+    "hero_component_MFYxwA",
+    "custom_liquid_Hyc3LN",
+    "featured_collection_cGrpnP",
+    "multicolumn_qCghBj",
+    "multicolumn_AdkrzW"
   ]
 }
