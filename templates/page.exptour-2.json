@@ -1,0 +1,396 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_dF4Kan": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n#shopify-section-template--27174708871461__1757582427791457ea{\nbackground: url(https://cdn.shopify.com/s/files/1/0933/9378/1029/files/oie_611136p5vaERQZ_a239cfe1-4346-490e-aeac-3d5608a2dfc8.jpg?v=1778059271&width=535);\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    background-attachment: fixed;\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_3mFtqf": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/WhatsApp_Image_2025-09-11_at_2.51.19_PM.jpg",
+        "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-09-11_at_2.51.19_PM_1.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_LqDdTM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Hundred's Official India Tour is coming to Odisha!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 56,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_wEr9EG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n   <p class=\"longcopy\">Get ready to experience  our <span class=\"highlight\">Professional Rackets and Shoes </span> like never before!<br></p> <!--Join us for <span class=\"highlight\"> Hundred's India Tour </span> and be a part of the action.\n  </p> -->\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\ndisplay:none;\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 16,
+        "padding_bottom": 28
+      }
+    },
+    "1757582427791457ea": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_YgrnmV": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "979858",
+            "text_color": "#ffffff",
+            "button_background_color": "#ffa300",
+            "button_label_color": "#121212",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 13,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_YgrnmV"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multirow_RFTCVa": {
+      "type": "multirow",
+      "blocks": {
+        "row_jgyg4n": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/oie_611136p5vaERQZ_a239cfe1-4346-490e-aeac-3d5608a2dfc8.jpg",
+            "caption": "",
+            "heading": "<strong>Event </strong>Schedule",
+            "text": "<h4><strong>Saturday, 7th February 2026</strong><br/><br/>Sport fit JP Nagar 7th Phase<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\" target=\"_blank\" title=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\">View Location↗️</a><br/><br/><strong>Sunday , 8th February 2026</strong><br/><br/>Game theory JP Nagar, 8th phase,<br/>(7:00 PM - 9:00 PM) <a href=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\" target=\"_blank\" title=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\">View Location↗️</a></h4>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_jgyg4n"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "a {color: orange;}",
+        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "strong {color: #fd524e;}",
+        "@media screen and (min-width: 750px) {h2 {font-size: 5rem; } h4 {font-size: 2rem; }}"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "row_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
+    "image_with_text_UxtnK3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DBhqNa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join us for <strong>Hundred's India Tour</strong> and be a part of the action.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DBhqNa"
+      ],
+      "custom_css": [
+        "strong {color: rgba(255, 255, 255, 0.95);}",
+        "h2 {font-size: 2rem; font-weight: 800; letter-spacing: 0px; line-height: 145%; color: rgba(255, 255, 255, 0.5);}",
+        "@media screen and (min-width: 750px) {h2 {font-size: 3rem; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Comp_1_1.gif",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 64,
+        "padding_bottom": 40
+      }
+    },
+    "multicolumn_x6JCif": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Jpyc4z": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>28th May, Thursday (Cuttack)</strong>",
+            "text": "<h4>Kamal Das Badminton Academy (BCTC)<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\" target=\"_blank\" title=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\">View Location</a></h4><h4>Kamal Das Badminton Academy (BCTC)<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\" target=\"_blank\" title=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Yp8iYp": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>29th May, Friday (Bhubaneswar)</strong>",
+            "text": "<h4>BIJU PATNAIK INDOOR STADIUM<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/xWauiBRPYJvRQMkp8\" target=\"_blank\" title=\"https://maps.app.goo.gl/xWauiBRPYJvRQMkp8\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gKA4jw": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>30th May, Saturday (Bhubaneswar)</strong>",
+            "text": "<h4>Udaan Sports Academy<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\" target=\"_blank\" title=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\">View Location</a></h4><h4>Udaan Sports Academy<br/>(4:00 PM - 6:00 PM) - <a href=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\" target=\"_blank\" title=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XV7YnQ": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>31st May, Sunday (Bhubaneswar)</strong>",
+            "text": "<h4>KIIT- Biju Patnaik Multipurpose Indoor Stadium<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/ABmbXZ8QNwbmJbGR8\" target=\"_blank\" title=\"https://maps.app.goo.gl/ABmbXZ8QNwbmJbGR8\">View Location</a></h4><h4>KIIT- Biju Patnaik Multipurpose Indoor Stadium<br/>(3:00 PM - 5:00 PM) - <a href=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\" target=\"_blank\" title=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Jpyc4z",
+        "column_Yp8iYp",
+        "column_gKA4jw",
+        "column_XV7YnQ"
+      ],
+      "custom_css": [
+        "a {color: orange;}",
+        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {color: #f69e24;}",
+        "h4 strong {color: grey;}",
+        ".multicolumn-card {background: #170c02; background: linear-gradient( 271deg, rgba(23, 12, 2, 1) 0%, rgba(9, 9, 9, 1) 34% );}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Event </strong>Schedule",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 56
+      }
+    },
+    "rich_text_YUaPWT": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-d27ab943-fb87-45cd-880f-d5fa2e3a3ca4",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_ywGM93": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bKfjRY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Your Tour Benefits At a Glance",
+            "icon": "star",
+            "row_content": "<p>🎯 What's in Store for You</p><p>✅ Free Equipment Trials - Experience our latest high-performance rackets at no cost</p><p>🎁 Exclusive Rewards - Unlock special offers and limited-time coupon codes</p><p>🏆 Competitive Fun - Participate in on-court challenges and win exciting prizes</p><p>🤝 Network & Connect - Meet professional players and fellow badminton enthusiasts</p><p>💬 Meet the Team - Connect with Hundred experts and discover what makes our gear elite</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HhrpyN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Terms and Conditions",
+            "icon": "clipboard",
+            "row_content": "<p>By attending the Hundred Experience Tour, you agree that:</p><ul><li>Your participation was voluntary and you were responsible for your own safety.</li><li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li><li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li><li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li><li>Event details and activities may have been subject to change at the organizers' discretion.</li><li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li><li>Non Marking Shoes are not provided by us during the event. Please bring your own.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_d8Azcr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Racket Experience Tour?",
+            "icon": "fire",
+            "row_content": "<p>The Racket Experience Tour is a hands-on demo event where players can <strong>try and play with our latest badminton rackets</strong> before deciding which one suits their playing style best.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6PJJLm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who can participate?",
+            "icon": "question_mark",
+            "row_content": "<p>The event is open to <strong>all badminton players</strong> — beginners, intermediate, advanced players, academy trainees, and recreational players.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xU3L8e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the event free to attend?",
+            "icon": "price_tag",
+            "row_content": "<p>Yes, the Racket Experience Tour is <strong>completely free</strong> for all participants.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BfyDx3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will experts be available to help choose the right racket?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes. Our team will be present to <strong>guide you in selecting the right racket</strong> based on your playing style, level, and preferences.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dYfxKE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this event only for badminton?",
+            "icon": "eye",
+            "row_content": "<p>Yes, this particular tour stop in Odisha is <strong>focused on badminton rackets only</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qbkH6m": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I purchase rackets at the venue?",
+            "icon": "price_tag",
+            "row_content": "<p>Selected products may be available for <strong>exclusive event offers</strong>.<br/>Our team will also guide you on <strong>where to purchase online or in-store</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CFeGXg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can academy players and coaches attend together?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Absolutely. <strong>Players, coaches, and academy groups</strong> are welcome to attend and experience the rackets together.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bKfjRY",
+        "collapsible_row_HhrpyN",
+        "collapsible_row_d8Azcr",
+        "collapsible_row_6PJJLm",
+        "collapsible_row_xU3L8e",
+        "collapsible_row_BfyDx3",
+        "collapsible_row_dYfxKE",
+        "collapsible_row_qbkH6m",
+        "collapsible_row_CFeGXg"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-3",
+        "color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/Artboard_2_05a69494-985e-4e9f-868d-5423b550f98f.jpg",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 72
+      }
+    },
+    "rich_text_HD493f": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_dF4Kan",
+    "hero_component_3mFtqf",
+    "custom_liquid_LqDdTM",
+    "custom_liquid_wEr9EG",
+    "1757582427791457ea",
+    "multirow_RFTCVa",
+    "image_with_text_UxtnK3",
+    "multicolumn_x6JCif",
+    "rich_text_YUaPWT",
+    "collapsible_content_ywGM93",
+    "rich_text_HD493f"
+  ]
+}
