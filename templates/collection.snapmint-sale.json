@@ -17,6 +17,17 @@
         "color_scheme": "scheme-1"
       }
     },
+    "media_7HnTg3": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/hndrd-snapmint-sale.jpg",
+        "mobile_image": "shopify://shop_images/hndrd-snapmint-sale.jpg",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -238,6 +249,7 @@
   },
   "order": [
     "banner",
+    "media_7HnTg3",
     "product-grid"
   ]
 }
