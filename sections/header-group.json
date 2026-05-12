@@ -64,14 +64,23 @@
     },
     "countdown_timer_6zkjxL": {
       "type": "countdown-timer",
-      "disabled": true,
       "name": "Countdown Timer",
       "settings": {
-        "title": "HURRY!!!! Buy or Bye Sale Ends Soon!",
-        "end_time": "2026-03-02 00:00",
-        "background": "linear-gradient(300deg, rgba(57, 140, 117, 1) 53%, rgba(0, 247, 136, 1) 100%)",
-        "text_color": "#ffffff",
+        "title": "Hurry!!! Deal Of The Day Ending Soon",
+        "end_time": "2026-05-13 00:00",
+        "background": "linear-gradient(84deg, rgba(242, 201, 201, 1), rgba(255, 255, 255, 1) 85%)",
+        "text_color": "#000000",
         "padding_top": 16
+      }
+    },
+    "custom_liquid_H69tci": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n#HeaderMenu-deal-of-the-day, #HeaderDrawer-deal-of-the-day{\nbackground-image: linear-gradient(to right, red 0%, Blue 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_TYDpBY": {
@@ -90,6 +99,7 @@
     "announcement-bar",
     "header",
     "countdown_timer_6zkjxL",
+    "custom_liquid_H69tci",
     "custom_liquid_TYDpBY"
   ]
 }
