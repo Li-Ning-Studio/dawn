@@ -9,36 +9,6 @@
  */
 {
   "sections": {
-    "hero_video_component_yDajRm": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/02.mp4",
-        "mobile_video": "shopify://files/videos/01.mp4",
-        "subtitle": "Introducing, Beast Max",
-        "title": "The Beast Has Arrived.",
-        "description": "Performance so fierce, it speaks for itself.",
-        "button_text": "ENTER THE BEAST",
-        "link_to": "shopify://pages/beast-max",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 32
-      }
-    },
-    "swipeable_products_Cm4fE8": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Power Comes In Shades",
-        "products": [
-          "beast-max"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "hero_component_G3BHfh": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -78,8 +48,37 @@
       "settings": {
         "custom_liquid": "<div id=\"list\">\n      \n      <div class=\"videoItem\">\n          \n        <video playsinline=\"true\" autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" preload=\"metadata\">\n          <source src=\"https://cdn.shopify.com/videos/c/vp/aaa8c125270f4e5c8337b238f9c42a44/aaa8c125270f4e5c8337b238f9c42a44.HD-1080p-7.2Mbps-80396606.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PEAK PERFORMANCE TRIO</h1>\n<p>Pro Rackets Series from HNDRD.</p>\n<a href=\"/collections/professional-rackets-1\">EXPLORE</a>\n</div>\n      \n      \n       <div class=\"videoItem\">\n           <video playsinline=\"true\" autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" preload=\"metadata\">\n          <source src=\"https://cdn.shopify.com/videos/c/vp/24990befbb394b8f9d1fda5c1703413c/24990befbb394b8f9d1fda5c1703413c.HD-1080p-2.5Mbps-77191738.mp4\" type=\"video/mp4\">\n        </video>\n<h1>PERFORMANCE SERVED RIGHT</h1>\n<p>The shoe that every player needs</p>\n<a href=\"/pages/phenom\">SHOP THE PHENOM</a>\n</div>\n<style>\n\n#list { \n display:flex;\ncolumn-gap:20px;\nmargin: 0 20px;\n}\n.videoItem video{\nwidth:100%;\n}\n.videoItem{\n  text-align:center;\nmargin:30px 0;\n}\n.videoItem a{\n  text-decoration:none;\n  color:black;\n  background:#ebedf0;\n  padding:20px 30px;\n  border-radius:40px;\nfont-weight:500;\nfont-size: 1.5rem;\n}\n.videoItem p{\nmargin-bottom: 40px;\n}\n.videoItem h1{\nfont-weight:bolder;\n}\n@media screen and (max-width: 750px) {\n    #list{\nflex-direction:column;\nmargin:0;\n}\n.videoItem h1{\nmargin:10px 10px;\n}\n}\n</style>",
         "color_scheme": "",
-        "padding_top": 40,
+        "padding_top": 4,
         "padding_bottom": 80
+      }
+    },
+    "featured_collection_HDRmDh": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bb-flagship",
+        "products_to_show": 6,
+        "title": "Featured Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 36
       }
     },
     "multicolumn_AmKzdE": {
@@ -157,36 +156,110 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 68,
-        "padding_bottom": 64
+        "padding_bottom": 40
       }
     },
-    "featured_collection_HDRmDh": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "hero_component_EAQyDa": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "collection": "bb-flagship",
-        "products_to_show": 6,
-        "title": "Featured Products",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": true,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
+        "image": "shopify://shop_images/Banner_1_a3440e97-5c4d-4762-8744-4b0eab776d2f.png",
+        "mobile_image": "shopify://shop_images/Banner_1_R_5229df15-19b7-42eb-ae87-a0041b47f5fe.png",
+        "subtitle": "Atomic X Series",
+        "title": "Rumbling Of High-Volt Smashes",
+        "description": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
+        "button_text": "Get It Now!",
+        "link_to": "shopify://products/atomic-x-black-knight",
+        "color_scheme": "scheme-1",
+        "padding_top": 64,
+        "padding_bottom": 24
+      }
+    },
+    "swipeable_products_Y8n63R": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Atomic X Series",
+        "products": [
+          "atomic-x-black-knight",
+          "atomic-x-dark-sword",
+          "atomic-x-38-pwr",
+          "atomic-x-38-ctrl",
+          "atomic-x-35-spd",
+          "atomic-x-100-pro"
+        ],
+        "show_color_variants": true,
         "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_Ktr9dz": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Qixqa4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_responsive_7ba8a6a5-ebcf-4153-adae-b95d2d4ddd0e.jpg",
+            "title": "Victory Starts Here",
+            "text": "<p>Ultra stability to let you sway cross the court in ease</p>",
+            "link_label": "Suit Up!",
+            "link": "shopify://products/court-star-pro"
+          }
+        },
+        "column_UPjB9t": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_copy.jpg",
+            "title": "Step up. Stay ahead.",
+            "text": "<p>Where every step fuels speed and every landing feels like home court.</p>",
+            "link_label": "Lace Up. Win!",
+            "link": "shopify://products/raze"
+          }
+        },
+        "column_ndqA9E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_Responsive_948ebae5-b2ef-4abf-8a7b-5a2b472544cc.jpg",
+            "title": "Pro's Mastery",
+            "text": "<p>Built to dominate every court movement</p>",
+            "link_label": "Grab Blade Pro",
+            "link": "shopify://products/blade-pro"
+          }
+        },
+        "column_7dpTbb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_R_b5513951-58cc-46ef-82e9-033d02a26ade.jpg",
+            "title": "Step Into Comfort",
+            "text": "<p>Enhanced support for faster court movement</p>",
+            "link_label": "Buy Now",
+            "link": "shopify://products/raze-pro"
+          }
+        }
+      },
+      "block_order": [
+        "column_Qixqa4",
+        "column_UPjB9t",
+        "column_ndqA9E",
+        "column_7dpTbb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Best Sellers!",
+        "heading_size": "h1",
+        "image_width": "full",
         "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 68,
-        "padding_bottom": 36
+        "padding_top": 36,
+        "padding_bottom": 12
       }
     },
     "responsive_slideshow_Eb8XFX": {
@@ -243,6 +316,7 @@
         "slide_DtRnUp",
         "slide_GPkz9D"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
     },
@@ -250,7 +324,7 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Best Sellers!",
+        "title": "",
         "products": [
           "court-star-pro",
           "raze",
@@ -259,43 +333,38 @@
         ],
         "show_color_variants": false,
         "color_scheme": "",
-        "padding_top": 8,
+        "padding_top": 0,
         "padding_bottom": 20
       }
     },
-    "hero_component_EAQyDa": {
-      "type": "hero-component",
-      "name": "Hero Component",
+    "hero_video_component_yDajRm": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_a3440e97-5c4d-4762-8744-4b0eab776d2f.png",
-        "mobile_image": "shopify://shop_images/Banner_1_R_5229df15-19b7-42eb-ae87-a0041b47f5fe.png",
-        "subtitle": "Atomic X Series",
-        "title": "Rumbling Of High-Volt Smashes",
-        "description": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
-        "button_text": "Get It Now!",
-        "link_to": "shopify://products/atomic-x-black-knight",
-        "color_scheme": "scheme-1",
-        "padding_top": 64,
-        "padding_bottom": 24
+        "video": "shopify://files/videos/02.mp4",
+        "mobile_video": "shopify://files/videos/01.mp4",
+        "subtitle": "Introducing, Beast Max",
+        "title": "The Beast Has Arrived.",
+        "description": "Performance so fierce, it speaks for itself.",
+        "button_text": "ENTER THE BEAST",
+        "link_to": "shopify://pages/beast-max",
+        "color_scheme": "",
+        "padding_top": 56,
+        "padding_bottom": 32
       }
     },
-    "swipeable_products_Y8n63R": {
+    "swipeable_products_Cm4fE8": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Atomic X Series",
+        "title": "Power Comes In Shades",
         "products": [
-          "atomic-x-black-knight",
-          "atomic-x-dark-sword",
-          "atomic-x-38-pwr",
-          "atomic-x-38-ctrl",
-          "atomic-x-35-spd",
-          "atomic-x-100-pro"
+          "beast-max"
         ],
         "show_color_variants": true,
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 20
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "hero_component_mYeEJ4": {
@@ -528,17 +597,18 @@
     }
   },
   "order": [
-    "hero_video_component_yDajRm",
-    "swipeable_products_Cm4fE8",
     "hero_component_G3BHfh",
     "swipeable_products_dp9iPg",
     "custom_liquid_kxpHLq",
-    "multicolumn_AmKzdE",
     "featured_collection_HDRmDh",
-    "responsive_slideshow_Eb8XFX",
-    "swipeable_products_TRadWW",
+    "multicolumn_AmKzdE",
     "hero_component_EAQyDa",
     "swipeable_products_Y8n63R",
+    "multicolumn_Ktr9dz",
+    "responsive_slideshow_Eb8XFX",
+    "swipeable_products_TRadWW",
+    "hero_video_component_yDajRm",
+    "swipeable_products_Cm4fE8",
     "hero_component_mYeEJ4",
     "swipeable_products_RyJQbU",
     "custom_liquid_nnJyGE",
