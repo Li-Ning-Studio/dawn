@@ -19,6 +19,7 @@
     },
     "custom_liquid_EnX3Ve": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> Deal Of The Day</p>\n  <h2 class=\"second-title\">Coming Soon!</h2>\n  <h2 class=\"second-title1\"> Limited-time steals on select products. Once they’re gone, they’re gone, don’t miss out!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #000 20%, #40fe88 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\nletter-spacing: -1px;\n    font-size: 2rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor:#013039;\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
@@ -41,7 +42,6 @@
     },
     "hero_component_MFYxwA": {
       "type": "hero-component",
-      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Banner_10a2f198-759a-4008-b17e-173f1131deb8.jpg",
@@ -58,7 +58,6 @@
     },
     "custom_liquid_Hyc3LN": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px; margin: 0 15px;\">\n  <p style=\"font-size: 1.4rem\"> </p>\n  <h2 class=\"second-title\">Grab It Before It’s Gone</h2>\n  <h2 class=\"second-title1\"> Limited-time steals on select products. Once they’re gone, they’re gone, don’t miss out!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n  background-image: linear-gradient(to left, #000 20%, #40fe88 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n.second-title1{\nletter-spacing: -1px;\n    font-size: 2.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 20px 0;\ncolor:#013039;\n}\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n .second-title1 {\n      display:block;\n    }\n  }\n</style>",
@@ -69,7 +68,6 @@
     },
     "featured_collection_cGrpnP": {
       "type": "featured-collection",
-      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "deal-of-the-day",
