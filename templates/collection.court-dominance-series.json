@@ -15,7 +15,7 @@
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29"
+        "color_scheme": "scheme-1"
       }
     },
     "product-grid": {
@@ -241,17 +241,15 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"titleall\">\n   Court Dominanace Series\n  </h1>\n \n \n</section>\n\n<style>\n\n\n  .titleall {\n    font-size: 2.8rem;\n    background-image: linear-gradient(\n      -225deg,\n      #79ba9d 0%,\n      #f5f6b5 52%,\n      #f26663 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n\n  @media screen and (min-width: 750px) {\n    .titleall {\n      font-size: 5rem;\n    }\n\n  }\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"titleall\">\n   Court Dominanace Series\n  </h1>\n \n \n</section>\n\n<style>\n\n\n  .titleall {\n    font-size: 2.8rem;\n    background-image: linear-gradient(\n      -225deg,\n      #1d242e 0%,\n      #222931 52%,\n      #001c3c 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n\n  @media screen and (min-width: 750px) {\n    .titleall {\n      font-size: 5rem;\n    }\n\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 28
       }
     },
     "featured_collection_YJNgwg": {
       "type": "featured-collection",
-      "custom_css": [
-        "img,.media {background: #14181f; border-radius: 0;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "court-dominance-series",
@@ -264,16 +262,16 @@
         "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
@@ -281,6 +279,7 @@
     },
     "custom_liquid_jPKKxT": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<style>\n.product__media-item{\ndisplay:none;\n}\n.is-active{\ndisplay:block;\n}\n.form__label{\ncolor:white;\n}\n.product__media{\nbackground: #14181f;\nborder-radius: 0;\n}\n</style>",
@@ -289,8 +288,77 @@
         "padding_bottom": 0
       }
     },
+    "multicolumn_j34KcE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HMLECA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_11_906c8a97-164d-4e2b-b3e3-1a802f03e418.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mrXWm9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_a076a29e-675d-48cb-8a7b-36028e93e515.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yFwQDT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_6_523bd1e6-d297-42e1-8da7-c3e881eb8651.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AH7BKt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_12_8c77bc64-9fc0-4141-8326-f0d7d2d73cfc.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HMLECA",
+        "column_mrXWm9",
+        "column_yFwQDT",
+        "column_AH7BKt"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_hJq7Ly": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/01_7b52da1a-a3b7-485f-9e49-a72e14875d06.jpg",
@@ -307,35 +375,79 @@
     },
     "custom_liquid_yqDeQN": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Beast Max</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"titlebm\">\n  The Beast Has Arrived.\n  </h1>\n  <p style=\"margin-top: 3px\">Performance so fierce, it speaks for itself.</p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>Enter the Beast</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .titlebm{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n\n  @media screen and (min-width: 750px) {\n    .titlebm {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-4",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Beast Max</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"titlebm\">\n  The Beast Has Arrived.\n  </h1>\n  <p style=\"margin-top: 3px\">Performance so fierce, it speaks for itself.</p>\n  <a href=\"/products/beast-max\" class=\"ctax\">\n    <span>Enter the Beast</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #1d242e;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .titlebm{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #000 20%, #1d242e 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n\n  @media screen and (min-width: 750px) {\n    .titlebm {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 28
       }
     },
     "swipeable_products_9RimmF": {
       "type": "swipeable-products",
-      "custom_css": [
-        "img {background: #949da3;}",
-        "svg {color: black;}",
-        ".media {border-radius: 0;}"
-      ],
+      "custom_css": [],
       "name": "Swipeable Products",
       "settings": {
-        "title": "Power Comes In Shades",
+        "title": "Beast Max",
         "products": [
           "beast-max"
         ],
         "show_color_variants": true,
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "padding_top": 24,
         "padding_bottom": 12
       }
     },
+    "multicolumn_jTLLd9": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_EbG9dN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4-4_a7e2eddb-0322-4b19-93ee-6bc0d53e2713.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zT7pHQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_f88d9843-dcf0-48df-8408-d7426c7647f3.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EbG9dN",
+        "column_zT7pHQ"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_JN6PNP": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/1_396dfc68-088c-4823-92e8-ac6bf47d1049.jpg",
@@ -352,35 +464,79 @@
     },
     "custom_liquid_zhW8rD": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Hyper Court</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n   The Adaptive Advantage\n  </h1>\n  <p style=\"margin-top: 3px\">Made to adapt to your movement and give you the advantage in every step on court.</p>\n  <a href=\"/products/hyper-court\" class=\"ctax1\">\n    <span>Take the Advantage</span>\n  </a>\n</section>\n\n<style>\n  .ctax1 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #00ffc4;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #00ffc4 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-4",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Hyper Court</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n   The Adaptive Advantage\n  </h1>\n  <p style=\"margin-top: 3px\">Made to adapt to your movement and give you the advantage in every step on court.</p>\n  <a href=\"/products/hyper-court\" class=\"ctax1\">\n    <span>Take the Advantage</span>\n  </a>\n</section>\n\n<style>\n  .ctax1 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #222931;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #000 20%, #222931 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 28
       }
     },
     "swipeable_products_PNMCiy": {
       "type": "swipeable-products",
-      "custom_css": [
-        "img {background: #949da3;}",
-        "svg {color: black;}",
-        ".media {border-radius: 0;}"
-      ],
+      "custom_css": [],
       "name": "Swipeable Products",
       "settings": {
-        "title": "Available in 4 colors",
+        "title": "Hyper Court",
         "products": [
           "hyper-court"
         ],
         "show_color_variants": true,
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "padding_top": 24,
         "padding_bottom": 12
       }
     },
+    "multicolumn_jcBWdF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_G464qi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_73895423-6351-4168-97a3-f935619f205f.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8wReBK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/7_663d3c03-9aec-4b01-929c-1e79244eb17a.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_G464qi",
+        "column_8wReBK"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero_component_yiiMTX": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Main_L_b984a05e-e33d-4d71-a651-7b93bb85c465.png",
@@ -397,29 +553,26 @@
     },
     "custom_liquid_aEprMX": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Hyper Spike</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title2\">\n   The Court Speedster\n  </h1>\n  <p style=\"margin-top: 3px\">Responsive cushioning made for aggressive court movement.</p>\n  <a href=\"/products/hyper-spike\" class=\"ctax2\">\n    <span>Step In. Spike Hard.</span>\n  </a>\n</section>\n\n<style>\n  .ctax2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #9eca8e;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title2{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #9eca8e 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-4",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Hyper Spike</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title2\">\n   The Court Speedster\n  </h1>\n  <p style=\"margin-top: 3px\">Responsive cushioning made for aggressive court movement.</p>\n  <a href=\"/products/hyper-spike\" class=\"ctax2\">\n    <span>Step In. Spike Hard.</span>\n  </a>\n</section>\n\n<style>\n  .ctax2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #001c3c;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: black;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title2{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #000 20%, #001c3c 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 28
       }
     },
     "swipeable_products_EKcc8e": {
       "type": "swipeable-products",
-      "custom_css": [
-        "img {background: #949da3;}",
-        "svg {color: black;}",
-        ".media {border-radius: 0;}"
-      ],
+      "custom_css": [],
       "name": "Swipeable Products",
       "settings": {
-        "title": "Style for Every Rally",
+        "title": "Hyper Spike",
         "products": [
           "hyper-spike"
         ],
         "show_color_variants": true,
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-1",
         "padding_top": 24,
         "padding_bottom": 12
       }
@@ -431,12 +584,15 @@
     "custom_liquid_RFD9Qn",
     "featured_collection_YJNgwg",
     "custom_liquid_jPKKxT",
+    "multicolumn_j34KcE",
     "hero_component_hJq7Ly",
     "custom_liquid_yqDeQN",
     "swipeable_products_9RimmF",
+    "multicolumn_jTLLd9",
     "hero_component_JN6PNP",
     "custom_liquid_zhW8rD",
     "swipeable_products_PNMCiy",
+    "multicolumn_jcBWdF",
     "hero_component_yiiMTX",
     "custom_liquid_aEprMX",
     "swipeable_products_EKcc8e"
