@@ -1,0 +1,99 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "hero_component_4NTVjw": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_cf1f1897-fe24-40f6-b33f-75037330e488.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_1_183bc424-fc0a-457f-b677-0cdd65211ea7.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_DVrJdC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n Coming Soon!\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #2F4600;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #DAF78B 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_XRKVFL": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_7HgFab": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_da1af777-c082-4a41-966c-bc9f96855250.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LLBmxB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_c93c4114-a834-45a2-9fd1-2c26b5389ce3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_7HgFab",
+        "column_LLBmxB"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_component_4NTVjw",
+    "custom_liquid_DVrJdC",
+    "multicolumn_XRKVFL"
+  ]
+}
