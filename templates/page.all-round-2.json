@@ -21,8 +21,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_cf1f1897-fe24-40f6-b33f-75037330e488.jpg",
-        "mobile_image": "shopify://shop_images/Artboard_1_183bc424-fc0a-457f-b677-0cdd65211ea7.jpg",
+        "image": "shopify://shop_images/01.jpg",
+        "mobile_image": "shopify://shop_images/01_responsive.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -37,56 +37,97 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n Coming Soon!\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #2F4600;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #fff 20%, #DAF78B 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\nAll Round\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #2F4600;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #000000 20%, #222323 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
         "padding_top": 40,
         "padding_bottom": 52
       }
     },
-    "multicolumn_XRKVFL": {
-      "type": "multicolumn",
+    "multirow_3APpPb": {
+      "type": "multirow",
       "blocks": {
-        "column_7HgFab": {
-          "type": "column",
+        "row_pfDR4T": {
+          "type": "row",
           "settings": {
-            "image": "shopify://shop_images/Artboard_3_da1af777-c082-4a41-966c-bc9f96855250.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/Artboard_2_3e0c70ed-0b61-47dd-88ed-506c8bcda46b.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
           }
         },
-        "column_LLBmxB": {
-          "type": "column",
+        "row_jXybNf": {
+          "type": "row",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_c93c4114-a834-45a2-9fd1-2c26b5389ce3.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/Artboard_1_7faabedd-73af-4ec5-8c23-9d6e9a774ee4.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_7f9LDJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_bc162400-8351-48a3-a99b-ec71798e39dd.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_LyhKpB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_4d19d295-61a3-4760-aaef-09830fd1c453.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "column_7HgFab",
-        "column_LLBmxB"
+        "row_pfDR4T",
+        "row_jXybNf",
+        "row_7f9LDJ",
+        "row_LyhKpB"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "title": "",
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
         "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "hero_component_86Dkny": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/02.jpg",
+        "mobile_image": "shopify://shop_images/02_responsive.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -94,6 +135,7 @@
     "main",
     "hero_component_4NTVjw",
     "custom_liquid_DVrJdC",
-    "multicolumn_XRKVFL"
+    "multirow_3APpPb",
+    "hero_component_86Dkny"
   ]
 }
