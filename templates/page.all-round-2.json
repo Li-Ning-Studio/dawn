@@ -33,12 +33,13 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_DVrJdC": {
+    "custom_liquid_hzKUJg": {
       "type": "custom-liquid",
+      "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\nAll Round\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #2F4600;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #000000 20%, #222323 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-1",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin:0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, All Round</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n   A Shoe That Can Do It All\n  </h1>\n  <p style=\"margin-top: 3px\"> Six corners. Sudden lunges. Split-steps that never stop. </p>\n  <a href=\"/products/ranger-force\" class=\"ctax\">\n    <span>GET YOURS</span>\n  </a>\n</section>\n\n<style>\n\n.ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #86AA8B;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 10px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nfont-family:\"Audiowide\", sans-serif;\n  }\n\n  .title {\nfont-family: \"Changa One\", sans-serif;\nletter-spacing:1px;\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #33649F 0%, #C5EA8D 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.image-with-text__heading{\n background-image: linear-gradient(to right, #33649F 0%, #C5EA8D 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\nfont-family:\"Audiowide\", sans-serif;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -50,10 +51,10 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/Artboard_2_3e0c70ed-0b61-47dd-88ed-506c8bcda46b.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "caption": "",
+            "heading": "<strong>RALLY BREEZE UPPER</strong>",
+            "text": "<p>A dual-layer upper specialised for heated sessions. Mesh panels push air through so your feet stay cool and comfortable.</p>",
+            "button_label": "Shop Now",
             "button_link": ""
           }
         },
@@ -61,10 +62,10 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/Artboard_1_7faabedd-73af-4ec5-8c23-9d6e9a774ee4.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "caption": "",
+            "heading": "<strong>SPRING STEP MIDSOLE</strong>",
+            "text": "<p>Impact is cushioned and returned. The high-rebound midsole keeps your legs safe so you're always ready.</p>",
+            "button_label": "Shop Now",
             "button_link": ""
           }
         },
@@ -72,10 +73,10 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/Artboard_3_bc162400-8351-48a3-a99b-ec71798e39dd.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "caption": "",
+            "heading": "<strong>LOCK HEEL BRACE</strong>",
+            "text": "<p>A reinforced heel brace that keeps your foot stable enough for the lunge, and responsive enough for the recovery.</p>",
+            "button_label": "Shop Now",
             "button_link": ""
           }
         },
@@ -83,10 +84,10 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/Artboard_4_4d19d295-61a3-4760-aaef-09830fd1c453.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "caption": "",
+            "heading": "<strong>FEATHERWEIGHT BUILD</strong>",
+            "text": "<p>At under 300 grams, the All Rounder is light on your feet while still being heavy on court presence.</p>",
+            "button_label": "Shop Now",
             "button_link": ""
           }
         }
@@ -108,8 +109,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
+        "section_color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
+        "row_color_scheme": "scheme-7478fd78-6b30-4ee1-a215-53e78ca2d073",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -134,7 +135,7 @@
   "order": [
     "main",
     "hero_component_4NTVjw",
-    "custom_liquid_DVrJdC",
+    "custom_liquid_hzKUJg",
     "multirow_3APpPb",
     "hero_component_86Dkny"
   ]
