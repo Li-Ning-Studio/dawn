@@ -9,6 +9,36 @@
  */
 {
   "sections": {
+    "hero_component_ErFhK9": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01_9ac9f3db-895a-4789-b939-f2c78c54bd2f.jpg",
+        "mobile_image": "shopify://shop_images/1_149af9b2-aca7-4111-89cb-99b516f1bff5.jpg",
+        "subtitle": "All Round",
+        "title": "EVERY CORNER. ONE ANSWER.",
+        "description": "The shoe that keeps up with players who do it all",
+        "button_text": "MAKE YOUR MOVE",
+        "link_to": "shopify://products/all-round",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_TPy6Ug": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "One Shoe. Full Court.",
+        "products": [
+          "all-round"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "hero_component_xTDVjV": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -365,6 +395,8 @@
     }
   },
   "order": [
+    "hero_component_ErFhK9",
+    "swipeable_products_TPy6Ug",
     "hero_component_xTDVjV",
     "swipeable_products_zQQwqq",
     "hero_component_D4bCLN",
