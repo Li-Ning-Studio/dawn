@@ -28,18 +28,19 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/court-star-pro",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_jgitkd": {
+    "custom_liquid_YxmGdH": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  /* Same size as \"Before They're History!\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 700;\n    line-height: 3rem;\n  }\n\n  /* Style for the image */\n  .logo-image {\n    max-width: 400px;  /* Adjust the width as needed */\n    height: auto;\n    display: block;\n    margin: 0 auto;  /* Center the image horizontally */\n    margin-bottom: 0; /* Remove extra space below the image */\n  }\n\n  /* Remove margin from h1 */\n  h1 {\n    margin: 0;\n  }\n</style>\n\n<section class=\"mb-10 flex justify-center px-2 text-center\">\n  <section>\n    <p style=\"text-align: center;\">Play Like a Legend with</p>\n    <!-- Image placed outside of h1 -->\n    <img src=\"https://hundredstrapiprodin-16636.kxcdn.com/uploads/Logo_Gif_8e485f0579/Logo_Gif_8e485f0579.gif\" class=\"logo-image\">\n    <!-- Removed h1 element -->\n    <p style=\"text-align: center;\">Superior Grip, Unbeatable Speed, and Unstoppable Style, Because Winners Don’t Compromise.</p>\n  </section>\n</section>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Play Like a Legend with</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  COURT STAR PRO\n  </h1>\n  <p style=\"margin-top: 3px\">Superior Grip, Unbeatable Speed, and Unstoppable Style, Because Winners Don’t Compromise.</p>\n \n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #463409 20%, #876D30 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n.related-products__heading{\n background-image: linear-gradient(to right, #ffffff 20%, #e6bc32 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n}\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 28
       }
     },
     "swipeable_products_N4jRek": {
@@ -211,6 +212,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/court-star-pro",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -219,7 +221,7 @@
   "order": [
     "main",
     "hero_component_Ykgyww",
-    "custom_liquid_jgitkd",
+    "custom_liquid_YxmGdH",
     "swipeable_products_N4jRek",
     "image_with_text_4dn4bJ",
     "image_with_text_3CDfii",
