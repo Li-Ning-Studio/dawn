@@ -28,6 +28,7 @@
         "description": "",
         "button_text": "",
         "link_to": "shopify://products/atomic-x-black-knight",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -36,14 +37,95 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .gradient-text {\n    /* Apply the gradient background */\n    background-image: linear-gradient(30deg, #30cfd0 0%, #330867 100%);\n    background-size: cover;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n  }\n\n  /* Larger text size for \"T-Rex\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 900;\n    line-height: 4rem;\n  }\n\n  /* Smaller text size for \"You've entered the blast zone\" */\n  .small-text {\n    font-size: 2.25rem;\n  }\n</style>\n\n<section class=\"mt-40 mb-10 flex justify-center px-2 text-center\">\n       <section>\n  <p style=\"text-align: center;\">Atomic X Black Knight</p>\n<h1 style=\"font-size: 3rem; text-align: center; margin-top: 0rem; font-weight: 700; line-height: 3rem; letter-spacing: -2px;\">\n      <span class=\"gradient-text large-text\">The Deadly Force</span> <br/><span style=\"color:#f3c334;\"> </span></h1>\n  <p style=\"text-align: center;\">Every Smash is a Masterpiece</p>\n<div style=\"display: flex; justify-content: center;\">\n  <a href=\"/products/atomic-x-black-knight/\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: linear-gradient(321deg, #1CCCD1 0%, #DEEEE0 100%);\ntext-decoration: none;\">\nShop Now\n</a>\n</div>\n</section>",
+        "custom_liquid": "<style>\n  .gradient-text {\n    /* Apply the gradient background */\n    background-image: linear-gradient(30deg, #30cfd0 0%, #330867 100%);\n    background-size: cover;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    text-fill-color: transparent;\n  }\n\n  /* Larger text size for \"T-Rex\" */\n  .large-text {\n    font-size: 3rem;\n    font-weight: 900;\n    line-height: 4rem;\n  }\n\n  /* Smaller text size for \"You've entered the blast zone\" */\n  .small-text {\n    font-size: 2.25rem;\n  }\n</style>\n\n<section class=\"mt-40 mb-10 flex justify-center px-2 text-center\">\n       <section>\n  <p style=\"text-align: center;\">Atomic X Black Knight</p>\n<h1 style=\"font-size: 3rem; text-align: center; margin-top: 0rem; font-weight: 700; line-height: 3rem; letter-spacing: -2px;\">\n      <span class=\"gradient-text large-text\">The Deadly Force</span> <br/><span style=\"color:#f3c334;\"> </span></h1>\n  <p style=\"text-align: center;\">Every Smash is a Masterpiece</p>\n<div style=\"display: flex; justify-content: center;\">\n  <a href=\"/products/atomic-x-black-knight/\" style=\"\n    text-align: center;\n    border: 0 solid;\n    margin-left: 12px;\n    margin-right: 12px;\n    display: block;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n    padding-left: 1.25rem;\n    padding-right: 1.25rem;\n    padding-top: 1rem;\n    width: 100%;\n    max-width: 500px;\n    padding-bottom: 1.5rem;\n    font-size: 1.2rem;\n    line-height: 1.85rem;\n    /* display: inline-flex; */\n    align-items: center;\n    justify-content: center;\n    border-radius: 9999px;\n    font-weight: 900;\n    text-transform: uppercase;\n    letter-spacing: .025em;\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    transition: all .3s ease-in;\n    border-width: 2px;\n    border-color: rgba(255,255,255,var(--tw-border-opacity));\n    color: white;\n    background: linear-gradient(321deg, #1CCCD1 0%, #018DCC 100%);\ntext-decoration: none;\">\nShop Now\n</a>\n</div>\n</section>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
       }
     },
+    "featured_product_LzgEcL": {
+      "type": "featured-product",
+      "blocks": {
+        "text_LaBpgU": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_dcdYqb": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "rating_qKaaU4": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price_q4zmkX": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_rpjajV": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_HAkBji": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_nTDMJH": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_jMAyEf": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_LaBpgU",
+        "title_dcdYqb",
+        "rating_qKaaU4",
+        "price_q4zmkX",
+        "variant_picker_rpjajV",
+        "quantity_selector_HAkBji",
+        "buy_buttons_nTDMJH",
+        "share_jMAyEf"
+      ],
+      "custom_css": [
+        ".product__media-item {display: none;}",
+        "#Slide-template--24597750251813__featured_product_LzgEcL-52641616232741,#Slide-template--24597750251813__featured_product_LzgEcL-52641616429349 {display: block;}",
+        ".slider-buttons {display: none;}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "atomic-x-black-knight",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 68,
+        "padding_bottom": 76
+      }
+    },
     "swipeable_products_C66hiJ": {
       "type": "swipeable-products",
+      "disabled": true,
       "name": "Swipeable Products",
       "settings": {
         "title": "",
@@ -54,6 +136,63 @@
         "color_scheme": "",
         "padding_top": 44,
         "padding_bottom": 72
+      }
+    },
+    "multicolumn_X8JD6D": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_X9y4AJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_1_d1db6ad5-fba4-4c2c-8010-3be445dfe9f4.jpg",
+            "title": "<strong>VAPORSHAFT - 7.0M</strong>",
+            "text": "<p>Crafted with a thickness of 7.0 m for a flexible profile, it features a striking ability that improves the power of athletes by multitudes to boost your swings.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tTkh9U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2_ba08d8c4-5bd9-4804-8e8a-199752947e9b.jpg",
+            "title": "<strong>CONTROL FOAM</strong>",
+            "text": "<p>The racket frame is internally fortified using high-tech light shock-absorbing material that enhances the racket's striking power and ensures smooth force transmission placing power and control.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rXzkDL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3_70c111a0-d0e7-431a-b2c1-ebde673363fa.jpg",
+            "title": "<strong>T - FUSE</strong>",
+            "text": "<p>The T-Joint reinforces intersection of the shaft and head and ensures faster recovery.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_X9y4AJ",
+        "column_tTkh9U",
+        "column_rXzkDL"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 64
       }
     },
     "image_with_text_WBEyKr": {
@@ -87,6 +226,7 @@
         "text_LeYcRr",
         "button_iVN8M7"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/A_1_d1db6ad5-fba4-4c2c-8010-3be445dfe9f4.jpg",
@@ -135,6 +275,7 @@
         "text_Q6Jatm",
         "button_YTpCwY"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/A_2_ba08d8c4-5bd9-4804-8e8a-199752947e9b.jpg",
@@ -183,6 +324,7 @@
         "text_xxpyNT",
         "button_wKnT3t"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/A_3_70c111a0-d0e7-431a-b2c1-ebde673363fa.jpg",
@@ -199,15 +341,34 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
+    },
+    "hero_component_VgcEtB": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_1_a3440e97-5c4d-4762-8744-4b0eab776d2f.png",
+        "mobile_image": "shopify://shop_images/Banner_1_R_5229df15-19b7-42eb-ae87-a0041b47f5fe.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/atomic-x-black-knight",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "hero_component_4tqqwk",
     "custom_liquid_iTPQDb",
+    "featured_product_LzgEcL",
     "swipeable_products_C66hiJ",
+    "multicolumn_X8JD6D",
     "image_with_text_WBEyKr",
     "image_with_text_nQrF6t",
-    "image_with_text_M3RP3L"
+    "image_with_text_M3RP3L",
+    "hero_component_VgcEtB"
   ]
 }
