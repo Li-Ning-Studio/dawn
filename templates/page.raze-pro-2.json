@@ -17,105 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "hero_component_kdwJAE": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/01_c9cb35ee-cc11-4c30-bb6f-029088d97225.jpg",
-        "mobile_image": "shopify://shop_images/01_Mobile.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/raze-pro",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_RGNaKG": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Need Content</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  RAZE PRO II\n  </h1>\n  <p style=\"margin-top: 3px\">LONG DESCRIPTIVE CONTENT</p>\n \n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #0A2755 20%, #25C2D1 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 28
-      }
-    },
-    "swipeable_products_Jhzh7b": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Content here",
-        "products": [
-          "raze-pro"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 52,
-        "padding_bottom": 72
-      }
-    },
-    "multirow_HXTqBA": {
-      "type": "multirow",
-      "blocks": {
-        "row_UAFC3f": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_8ca56005-e59a-4bd7-a052-cc3ea9b35691.jpg",
-            "caption": "",
-            "heading": "content heading",
-            "text": "<p>desciption</p>",
-            "button_label": "cta",
-            "button_link": ""
-          }
-        },
-        "row_dhjfbx": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_62e733cb-bfda-41a3-8aa4-304c2587dfee.jpg",
-            "caption": "",
-            "heading": "content title",
-            "text": "<p>description</p>",
-            "button_label": "cta",
-            "button_link": ""
-          }
-        },
-        "row_pMEhMR": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_6212e60c-80f1-4821-b816-a902af1e48ae.jpg",
-            "caption": "",
-            "heading": "Content Heading",
-            "text": "<p>description</p>",
-            "button_label": "cta",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_UAFC3f",
-        "row_dhjfbx",
-        "row_pMEhMR"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "hero_component_78QGFh": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -135,10 +36,6 @@
   },
   "order": [
     "main",
-    "hero_component_kdwJAE",
-    "custom_liquid_RGNaKG",
-    "swipeable_products_Jhzh7b",
-    "multirow_HXTqBA",
     "hero_component_78QGFh"
   ]
 }
