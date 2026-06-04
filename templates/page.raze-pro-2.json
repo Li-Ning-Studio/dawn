@@ -21,8 +21,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/01.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_29144e3c-ee7d-4f13-863d-288a64391917.jpg",
+        "image": "shopify://shop_images/01_c9cb35ee-cc11-4c30-bb6f-029088d97225.jpg",
+        "mobile_image": "shopify://shop_images/01_Mobile.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -37,7 +37,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Rule the Game with</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  RAZE PRO\n  </h1>\n  <p style=\"margin-top: 3px\">Grip that Holds, Speed that Thrills, and Style that Kills. Made For Those Who Play to Win.</p>\n \n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #941A21 20%, #8A2529 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Need Content</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  RAZE PRO II\n  </h1>\n  <p style=\"margin-top: 3px\">LONG DESCRIPTIVE CONTENT</p>\n \n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #0A2755 20%, #25C2D1 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 28
@@ -58,7 +58,7 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "5 Colors, One Game-Changer.",
+        "title": "Content here",
         "products": [
           "raze-pro"
         ],
@@ -68,172 +68,71 @@
         "padding_bottom": 72
       }
     },
-    "hero_component_6M7R6A": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_2_e9eee45c-b0ca-4473-bcf1-f806f42db8e6.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/raze-pro",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "image_with_text_YPzjPq": {
-      "type": "image-with-text",
+    "multirow_HXTqBA": {
+      "type": "multirow",
       "blocks": {
-        "heading_K6ifap": {
-          "type": "heading",
+        "row_UAFC3f": {
+          "type": "row",
           "settings": {
-            "heading": "<strong>EXTENDED HEEL LOCK</strong>",
-            "heading_size": "h1"
+            "image": "shopify://shop_images/Artboard_1_8ca56005-e59a-4bd7-a052-cc3ea9b35691.jpg",
+            "caption": "",
+            "heading": "content heading",
+            "text": "<p>desciption</p>",
+            "button_label": "cta",
+            "button_link": ""
           }
         },
-        "text_9Eq7LV": {
-          "type": "text",
+        "row_dhjfbx": {
+          "type": "row",
           "settings": {
-            "text": "<p>The Raze Pro’s<strong> extended heel lock</strong> is a game-changer, offering superior rearfoot stability and enhanced support. With every step, it works to reduce strain, creating a secure fit that helps keep you balanced through quick pivots and rapid movements.</p>",
-            "text_style": "subtitle"
+            "image": "shopify://shop_images/Artboard_2_62e733cb-bfda-41a3-8aa4-304c2587dfee.jpg",
+            "caption": "",
+            "heading": "content title",
+            "text": "<p>description</p>",
+            "button_label": "cta",
+            "button_link": ""
           }
         },
-        "button_xV4yUp": {
-          "type": "button",
+        "row_pMEhMR": {
+          "type": "row",
           "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
+            "image": "shopify://shop_images/Artboard_3_6212e60c-80f1-4821-b816-a902af1e48ae.jpg",
+            "caption": "",
+            "heading": "Content Heading",
+            "text": "<p>description</p>",
+            "button_label": "cta",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading_K6ifap",
-        "text_9Eq7LV",
-        "button_xV4yUp"
+        "row_UAFC3f",
+        "row_dhjfbx",
+        "row_pMEhMR"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image": "shopify://shop_images/A_3_1cfe84f6-3698-473f-9f02-57139aeb53ee.jpg",
-        "height": "adapt",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 72,
-        "padding_bottom": 0
-      }
-    },
-    "image_with_text_yBnpXy": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_nJx4VW": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>AIRFLOW UPPER</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_Eaprm7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Built with a TPU and mesh combination, the Raze Pro’s upper breathes with every move, circulating air to keep feet cool and focused. A design that adapts and flexes, it provides just the right fit to keep you comfortable.</p>",
-            "text_style": "subtitle"
-          }
-        },
-        "button_DA8xrL": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_nJx4VW",
-        "text_Eaprm7",
-        "button_DA8xrL"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/A_1_9aef13f5-a353-4040-aec6-b2aa70b9c634.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 72,
-        "padding_bottom": 0
-      }
-    },
-    "image_with_text_UDbGYe": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_UzaQMn": {
-          "type": "heading",
-          "settings": {
-            "heading": "HEXAQFOAM MIDSOLE",
-            "heading_size": "h1"
-          }
-        },
-        "text_DVy8LJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Cushioned for smooth, confident landings, the Raze Pro midsole is made with a dense<strong>HexaFoam</strong>layer just under 1 inch thick. This foam layer provides stability with lasting support to help you maintain agility on the court.</p>",
-            "text_style": "subtitle"
-          }
-        },
-        "button_7w8eJ3": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_UzaQMn",
-        "text_DVy8LJ",
-        "button_7w8eJ3"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/A_2_1cf60090-9120-454e-a064-681e3b4442ca.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "hero_component_78QGFh": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_df8c5b39-8043-4314-9983-582d6f7eae44.jpg",
-        "mobile_image": "shopify://shop_images/Banner_1_R_fc0cbfe4-3ffb-4c20-a0ef-abe487e315d6.jpg",
+        "image": "shopify://shop_images/02_Banner.jpg",
+        "mobile_image": "shopify://shop_images/02_Mobile.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -251,10 +150,7 @@
     "custom_liquid_RGNaKG",
     "custom_liquid_xUqHx7",
     "swipeable_products_Jhzh7b",
-    "hero_component_6M7R6A",
-    "image_with_text_YPzjPq",
-    "image_with_text_yBnpXy",
-    "image_with_text_UDbGYe",
+    "multirow_HXTqBA",
     "hero_component_78QGFh"
   ]
 }
