@@ -21,6 +21,81 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
+        "image": "shopify://shop_images/01_Banner.jpg",
+        "mobile_image": "shopify://shop_images/01_Mobile.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/raze-pro",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_DDBxw8": {
+      "type": "multirow",
+      "blocks": {
+        "row_PfKcA4": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_8ca56005-e59a-4bd7-a052-cc3ea9b35691.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_YGaizx": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_62e733cb-bfda-41a3-8aa4-304c2587dfee.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_7w96GQ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_6212e60c-80f1-4821-b816-a902af1e48ae.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_PfKcA4",
+        "row_YGaizx",
+        "row_7w96GQ"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_LJHXFH": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
         "image": "shopify://shop_images/02_Banner.jpg",
         "mobile_image": "shopify://shop_images/02_Mobile.jpg",
         "subtitle": "",
@@ -36,6 +111,8 @@
   },
   "order": [
     "main",
-    "hero_component_78QGFh"
+    "hero_component_78QGFh",
+    "multirow_DDBxw8",
+    "hero_component_LJHXFH"
   ]
 }
