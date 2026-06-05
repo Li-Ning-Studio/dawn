@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_component_F6qDKQ": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01_Banner.jpg",
+        "mobile_image": "shopify://shop_images/01_Mobile.jpg",
+        "subtitle": "Raze Pro II",
+        "title": "Feels Light. Plays Hard.",
+        "description": "The Perfect Balance of Featherlight Comfort and Court Power",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_G3BHfh": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -584,6 +601,7 @@
     }
   },
   "order": [
+    "hero_component_F6qDKQ",
     "hero_component_G3BHfh",
     "swipeable_products_dp9iPg",
     "custom_liquid_kxpHLq",
