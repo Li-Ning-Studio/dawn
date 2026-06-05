@@ -131,6 +131,34 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "swipeable_products_mQeWrV": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Swipeable Products",
+        "products": [],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_aC4BGJ": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/03_Banner.jpg",
+        "mobile_image": "shopify://shop_images/03_Mobile.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -139,6 +167,8 @@
     "custom_liquid_TMNzBR",
     "swipeable_products_hHdfW4",
     "multirow_DDBxw8",
-    "hero_component_LJHXFH"
+    "hero_component_LJHXFH",
+    "swipeable_products_mQeWrV",
+    "hero_component_aC4BGJ"
   ]
 }
