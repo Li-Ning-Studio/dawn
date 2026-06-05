@@ -37,14 +37,19 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Feels Light. Plays Hard.</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  RAZE PRO II\n  </h1>\n  <p style=\"margin-top: 3px\">The Perfect Balance of Featherlight Comfort and Court Power</p>\n \n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #941A21 20%, #8A2529 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-1",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 15px;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Feels Light. Plays Hard.</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  RAZE PRO II\n  </h1>\n  <p style=\"margin-top: 3px\">The Perfect Balance of Featherlight Comfort and Court Power</p>\n \n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #e6bc32;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title{\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #4CCBDE 20%, #fff 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 60,
         "padding_bottom": 28
       }
     },
     "swipeable_products_hHdfW4": {
       "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #b6d1fc;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
         "title": "",
@@ -52,9 +57,25 @@
           "raze-pro-ii"
         ],
         "show_color_variants": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "hero_component_XFiARa": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/03_Banner.jpg",
+        "mobile_image": "shopify://shop_images/03_Mobile.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/raze-pro-ii",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multirow_DDBxw8": {
@@ -65,7 +86,7 @@
           "settings": {
             "image": "shopify://shop_images/Artboard_1_8ca56005-e59a-4bd7-a052-cc3ea9b35691.jpg",
             "caption": "",
-            "heading": "Airflow Upper",
+            "heading": "<strong>Airflow Upper</strong>",
             "text": "<p>A PU and mesh combination that circulates air with every move, keeping your feet cool, flexible, and perfectly fitted through every rally.</p>",
             "button_label": "Grab Your Pair",
             "button_link": "shopify://products/raze-pro-ii"
@@ -76,7 +97,7 @@
           "settings": {
             "image": "shopify://shop_images/Artboard_2_62e733cb-bfda-41a3-8aa4-304c2587dfee.jpg",
             "caption": "",
-            "heading": "Extended Heel Lock",
+            "heading": "<strong>Extended Heel Lock</strong>",
             "text": "<p>The extended Heel lock is a game-changer, offering superior rearfoot stability and enhanced support. It works to reduce strain, creating a secure fit that helps keep you balanced through quick pivots and rapid movements.</p>",
             "button_label": "Lace Up Now",
             "button_link": "shopify://products/raze-pro-ii"
@@ -87,7 +108,7 @@
           "settings": {
             "image": "shopify://shop_images/Artboard_3_6212e60c-80f1-4821-b816-a902af1e48ae.jpg",
             "caption": "",
-            "heading": "HexaFoam Midsole",
+            "heading": "<strong>HexaFoam Midsole</strong>",
             "text": "<p>A dense HexaFoam layer delivers smooth, confident landings with lasting stability so you stay agile from the first point to the last.</p>",
             "button_label": "Experience the Comfort",
             "button_link": "shopify://products/raze-pro-ii"
@@ -98,6 +119,9 @@
         "row_PfKcA4",
         "row_YGaizx",
         "row_7w96GQ"
+      ],
+      "custom_css": [
+        "h2 {background-image: linear-gradient(to right, #4ccbde 20%, #fff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; /* Fallback for unsupported browsers */}"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
@@ -110,8 +134,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
+        "section_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "row_color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -138,6 +162,7 @@
     "hero_component_78QGFh",
     "custom_liquid_TMNzBR",
     "swipeable_products_hHdfW4",
+    "hero_component_XFiARa",
     "multirow_DDBxw8",
     "hero_component_LJHXFH"
   ]
