@@ -17,6 +17,22 @@
         "padding_bottom": 28
       }
     },
+    "hero_component_JdemAw": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_18bb475f-7732-4257-8592-ff27bf5b1485.jpg",
+        "mobile_image": "shopify://shop_images/02_16987afa-8b34-4490-8f84-c948913b6f30.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_HxfM34": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -122,6 +138,7 @@
   },
   "order": [
     "main",
+    "hero_component_JdemAw",
     "custom_liquid_HxfM34",
     "custom_liquid_TXReRa",
     "custom_liquid_VLraMa",
