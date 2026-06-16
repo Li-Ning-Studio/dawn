@@ -37,10 +37,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Phenom</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Crafted for Perfectionists\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>shop</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Content</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Title Content\n  </h1>\n  <p style=\"margin-top: 3px\">Description Content</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>shop now</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 60,
-        "padding_bottom": 28
+        "padding_bottom": 64
       }
     },
     "hero_component_BXz9L7": {
@@ -59,6 +59,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_EtQFpN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Short title phenom</p>\n  <p class=\"longcopy\">\n   Long  <span class=\"highlight\">Descriptive </span> Content<span class=\"highlight\"></span>  <span class=\"highlight\"></span> <span class=\"highlight\"></span>\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
     "hero_component_ztiMmE": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -73,6 +83,16 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_VcLEUR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Short title Nitix Venom</p>\n  <p class=\"longcopy\">Long <span class=\"highlight\">Descriptive</span> Content <span class=\"highlight\"></span></p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 36
       }
     },
     "hero_component_6X4pTX": {
@@ -91,6 +111,27 @@
         "padding_bottom": 0
       }
     },
+    "swipeable_products_PAEbhi": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #e8e8e8;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "phenom",
+          "nitrix-70-venom",
+          "nitrix-70-volta"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "hero_component_7T9NpH": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -105,6 +146,16 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_FbJ6Fi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> HNDRD</p>\n  <h2 class=\"second-title\">Short</h2>\n  <h2 class=\"second-title\"> Description/Copy</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "hero_component_XHLjac": {
@@ -122,6 +173,16 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_jzVTXz": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Sub heading</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n   Title\n  </h1>\n  <p style=\"margin-top: 3px\">Short Description</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>Shop All</span>\n  </a>\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -129,9 +190,14 @@
     "hero_component_AbaUMG",
     "custom_liquid_gepEGe",
     "hero_component_BXz9L7",
+    "custom_liquid_EtQFpN",
     "hero_component_ztiMmE",
+    "custom_liquid_VcLEUR",
     "hero_component_6X4pTX",
+    "swipeable_products_PAEbhi",
     "hero_component_7T9NpH",
-    "hero_component_XHLjac"
+    "custom_liquid_FbJ6Fi",
+    "hero_component_XHLjac",
+    "custom_liquid_jzVTXz"
   ]
 }
