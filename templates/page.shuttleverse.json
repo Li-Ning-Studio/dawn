@@ -17,16 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_dF4Kan": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n#shopify-section-template--27174708871461__1757582427791457ea{\nbackground: url(https://cdn.shopify.com/s/files/1/0933/9378/1029/files/oie_611136p5vaERQZ_a239cfe1-4346-490e-aeac-3d5608a2dfc8.jpg?v=1778059271&width=535);\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    background-attachment: fixed;\n}\n\n</style>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_3mFtqf": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -47,319 +37,93 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Welcome to the Ultimate Badminton Community Experience</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 3rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<!-- ============================================================\n     SHUTTLEVERSE — SECTION 1: STICKY CTA BAR\n     HOW TO ADD IN SHOPIFY:\n     Online Store → Themes → Customize → Add Section → Custom HTML\n     Paste this entire block. The bar sticks to the bottom of the\n     viewport across all sections on the page.\n     IMPORTANT: Add this section only ONCE on the page.\n     Replace the href=\"#sv-register\" with your actual product/form URL.\n================================================================ -->\n\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n\n<style>\n  /* Scoped with .sv- prefix to avoid theme conflicts */\n  .sv-sticky-bar {\n    position: fixed;\n    bottom: 0; left: 0; right: 0;\n    background: #F5C500;\n    color: #1A0640;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 24px;\n    padding: 14px 24px;\n    z-index: 9999;\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 800;\n    font-size: 1.1rem;\n    letter-spacing: 0.04em;\n    text-transform: uppercase;\n    flex-wrap: wrap;\n  }\n  .sv-sticky-bar__label {\n    font-weight: 600;\n    font-size: 0.95rem;\n    opacity: 0.7;\n    font-family: 'Inter', sans-serif;\n    text-transform: none;\n    letter-spacing: 0;\n  }\n  .sv-sticky-bar__text {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 800;\n    font-size: 1.1rem;\n    letter-spacing: 0.04em;\n    text-transform: uppercase;\n    color: #1A0640;\n  }\n  .sv-sticky-bar__btn {\n    display: inline-block;\n    background: #1A0640;\n    color: #F5C500;\n    border: none;\n    padding: 10px 28px;\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 800;\n    font-size: 1rem;\n    letter-spacing: 0.08em;\n    text-transform: uppercase;\n    cursor: pointer;\n    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);\n    text-decoration: none;\n    transition: background 0.2s, color 0.2s;\n  }\n  .sv-sticky-bar__btn:hover {\n    background: #ffffff;\n    color: #1A0640;\n  }\n  /* Push page content so sticky bar doesn't overlap footer */\n  body { padding-bottom: 60px; }\n\n  @media (max-width: 600px) {\n    .sv-sticky-bar { gap: 10px; padding: 12px 16px; }\n    .sv-sticky-bar__label { display: none; }\n  }\n</style>\n\n<div class=\"sv-sticky-bar\">\n  <span class=\"sv-sticky-bar__label\">Secure your spot now</span>\n  <span class=\"sv-sticky-bar__text\">Register for ₹199</span>\n  <!-- Replace href with your registration page URL -->\n  <a href=\"#sv-register\" class=\"sv-sticky-bar__btn\">Register Now</a>\n</div>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 56,
-        "padding_bottom": 20
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_wEr9EG": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n   <p class=\"longcopy\"><span class=\"highlight\">HNDRD SHUTTLEVERSE </span> is a community-driven badminton event designed for players of  <span class=\"highlight\"> all skill levels to compete, connect, and experience</span>  the sport in a  <span class=\"highlight\"> fun, engaging, and professionally managed environment. </span><br> <br>Whether you're stepping onto the court for the first time or you're a seasoned player,  <span class=\"highlight\"> SHUTTLEVERSE </span> is where competition meets community.</p>   \n  </p> \n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\ndisplay:none;\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.2rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 1.8rem;\n  }\n}\n</style>",
+        "custom_liquid": "<!-- ============================================================\n     SHUTTLEVERSE — SECTION 2: HERO\n     HOW TO ADD IN SHOPIFY:\n     Online Store → Themes → Customize → Add Section → Custom HTML\n     Paste this entire block.\n     NOTE: The font import is included here. If Section 1 (Sticky Bar)\n     is already on the page, you can remove the duplicate <link> tag\n     at the top of this section to keep the page clean.\n================================================================ -->\n\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .sv-hero {\n    position: relative;\n    min-height: 00vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    overflow: hidden;\n    padding: 80px 24px 120px;\n    text-align: center;\n    background: linear-gradient(135deg, #1A0640 0%, #3A0D7A 40%, #5B1FA8 70%, #3A0D7A 100%);\n  }\n\n  /* Diagonal slash background — brand signature */\n  .sv-hero__slashes {\n    position: absolute; inset: 0;\n    z-index: 1;\n    overflow: hidden;\n    pointer-events: none;\n  }\n  .sv-hero__slashes svg {\n    width: 100%; height: 100%;\n    position: absolute; inset: 0;\n  }\n\n  /* Diagonal cut at bottom */\n  .sv-hero__clip {\n    position: absolute;\n    bottom: -2px; left: 0; right: 0;\n    height: 80px;\n    background: #F5C500; /* matches quickfacts band below */\n    clip-path: polygon(0 100%, 100% 0, 100% 100%);\n    z-index: 3;\n  }\n\n  .sv-hero__content {\n    position: relative;\n    z-index: 2;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n\n  .sv-hero__lockup {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 20px;\n  }\n\n  .sv-hero__presents {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 900;\n    font-size: clamp(0.7rem, 1.5vw, 0.95rem);\n    letter-spacing: 0.4em;\n    color: #F5C500;\n    text-transform: uppercase;\n  }\n\n  .sv-hero__mark svg {\n    width: 56px; height: 40px;\n    display: block;\n  }\n\n  .sv-hero__title {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 900;\n    font-size: clamp(5rem, 18vw, 14rem);\n    line-height: 0.88;\n    text-transform: uppercase;\n    letter-spacing: -0.01em;\n    text-shadow: 0 0 80px rgba(245,197,0,0.25);\n    margin: 0;\n  }\n  .sv-hero__title .sv-shuttle { color: #F5C500; display: block; }\n  .sv-hero__title .sv-verse   { color: #ffffff; display: block; }\n\n  .sv-hero__year {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 700;\n    font-size: clamp(1.2rem, 3vw, 1.8rem);\n    letter-spacing: 0.5em;\n    color: #F5C500;\n    margin-top: 8px;\n  }\n\n  .sv-hero__tagline {\n    font-family: 'Inter', sans-serif;\n    font-size: clamp(1rem, 2vw, 1.15rem);\n    color: #F0EAF8;\n    opacity: 0.85;\n    margin-top: 28px;\n    max-width: 480px;\n    line-height: 1.65;\n  }\n\n  .sv-hero__cta {\n    display: inline-block;\n    margin-top: 36px;\n    background: #F5C500;\n    color: #1A0640;\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 800;\n    font-size: 1.3rem;\n    letter-spacing: 0.1em;\n    text-transform: uppercase;\n    padding: 16px 48px;\n    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);\n    cursor: pointer;\n    border: none;\n    text-decoration: none;\n    transition: transform 0.15s, box-shadow 0.15s;\n  }\n  .sv-hero__cta:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 8px 32px rgba(245,197,0,0.45);\n    color: #1A0640;\n  }\n\n  .sv-hero__price {\n    margin-top: 14px;\n    font-family: 'Barlow Condensed', sans-serif;\n    font-size: 1rem;\n    color: #F5C500;\n    letter-spacing: 0.05em;\n    opacity: 0.9;\n  }\n  .sv-hero__price strong { font-size: 1.4rem; }\n\n  @media (max-width: 600px) {\n    .sv-hero { padding: 60px 20px 100px; min-height: 90vh; }\n  }\n\n  @media (prefers-reduced-motion: reduce) {\n    .sv-hero__cta { transition: none; }\n  }\n</style>\n\n<section class=\"sv-hero\">\n\n  <!-- Decorative diagonal slashes + floating shuttlecocks -->\n  <div class=\"sv-hero__slashes\" aria-hidden=\"true\">\n    <svg viewBox=\"0 0 1440 900\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n      <!-- Subtle beam bands -->\n      <line x1=\"300\" y1=\"900\" x2=\"1000\" y2=\"-100\" stroke=\"rgba(255,255,255,0.04)\" stroke-width=\"80\"/>\n      <line x1=\"900\" y1=\"900\" x2=\"1600\" y2=\"-100\" stroke=\"rgba(91,31,168,0.4)\" stroke-width=\"120\"/>\n      <!-- Gold slash lines -->\n      <line x1=\"-100\" y1=\"900\" x2=\"600\"  y2=\"-100\" stroke=\"rgba(245,197,0,0.12)\" stroke-width=\"2\"/>\n      <line x1=\"100\"  y1=\"900\" x2=\"800\"  y2=\"-100\" stroke=\"rgba(245,197,0,0.06)\" stroke-width=\"1\"/>\n      <line x1=\"800\"  y1=\"900\" x2=\"1500\" y2=\"-100\" stroke=\"rgba(245,197,0,0.08)\" stroke-width=\"1.5\"/>\n      <line x1=\"1000\" y1=\"900\" x2=\"1700\" y2=\"-100\" stroke=\"rgba(245,197,0,0.05)\" stroke-width=\"1\"/>\n      <!-- Shuttlecock top-left -->\n      <g transform=\"translate(60,80) rotate(-35)\" opacity=\"0.15\">\n        <ellipse cx=\"0\" cy=\"0\" rx=\"18\" ry=\"24\" fill=\"#F5C500\"/>\n        <rect x=\"-3\" y=\"24\" width=\"6\" height=\"50\" fill=\"#F5C500\"/>\n        <ellipse cx=\"0\" cy=\"24\" rx=\"8\" ry=\"5\" fill=\"#C49A00\"/>\n      </g>\n      <!-- Shuttlecock bottom-right -->\n      <g transform=\"translate(1360,760) rotate(20)\" opacity=\"0.12\">\n        <ellipse cx=\"0\" cy=\"0\" rx=\"22\" ry=\"30\" fill=\"#F5C500\"/>\n        <rect x=\"-4\" y=\"30\" width=\"8\" height=\"60\" fill=\"#F5C500\"/>\n        <ellipse cx=\"0\" cy=\"30\" rx=\"10\" ry=\"6\" fill=\"#C49A00\"/>\n      </g>\n    </svg>\n  </div>\n\n  <div class=\"sv-hero__content\">\n    <div class=\"sv-hero__lockup\">\n      <!-- HNDRD mark (SVG racket-slash logo) -->\n      <div class=\"sv-hero__mark\" aria-label=\"HNDRD\">\n        <svg viewBox=\"0 0 56 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M8 32 L28 8 L48 32\" stroke=\"white\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n          <path d=\"M16 24 L28 8\" stroke=\"#F5C500\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        </svg>\n      </div>\n      <div class=\"sv-hero__presents\">HNDRD presents</div>\n    </div>\n\n    <h1 class=\"sv-hero__title\">\n      <span class=\"sv-shuttle\">Shuttle</span>\n      <span class=\"sv-verse\">Verse</span>\n    </h1>\n    <div class=\"sv-hero__year\">2026</div>\n\n    <p class=\"sv-hero__tagline\">\n      The ultimate badminton community experience — where competition meets community. All skill levels welcome.\n    </p>\n\n    <!-- Replace href with your registration URL -->\n    <a href=\"#sv-register\" class=\"sv-hero__cta\">Claim Your Spot</a>\n    <div class=\"sv-hero__price\">Only <strong>₹199</strong> per participant &nbsp;·&nbsp; Limited slots</div>\n  </div>\n\n  <div class=\"sv-hero__clip\" aria-hidden=\"true\"></div>\n</section>",
         "color_scheme": "scheme-4",
-        "padding_top": 16,
-        "padding_bottom": 28
-      }
-    },
-    "multirow_RFTCVa": {
-      "type": "multirow",
-      "blocks": {
-        "row_jgyg4n": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/oie_611136p5vaERQZ_a239cfe1-4346-490e-aeac-3d5608a2dfc8.jpg",
-            "caption": "",
-            "heading": "<strong>Event </strong>Schedule",
-            "text": "<h4><strong>Saturday, 7th February 2026</strong><br/><br/>Sport fit JP Nagar 7th Phase<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\" target=\"_blank\" title=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\">View Location↗️</a><br/><br/><strong>Sunday , 8th February 2026</strong><br/><br/>Game theory JP Nagar, 8th phase,<br/>(7:00 PM - 9:00 PM) <a href=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\" target=\"_blank\" title=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\">View Location↗️</a></h4>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_jgyg4n"
-      ],
-      "custom_css": [
-        "a {color: orange;}",
-        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "strong {color: #fd524e;}",
-        "@media screen and (min-width: 750px) {h2 {font-size: 5rem; } h4 {font-size: 2rem; }}"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "row_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 36,
-        "padding_bottom": 60
-      }
-    },
-    "image_with_text_UxtnK3": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_DBhqNa": {
-          "type": "heading",
-          "settings": {
-            "heading": "Join us for <strong>Hundred's India Tour</strong> and be a part of the action.",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DBhqNa"
-      ],
-      "custom_css": [
-        "strong {color: rgba(255, 255, 255, 0.95);}",
-        "h2 {font-size: 2rem; font-weight: 800; letter-spacing: 0px; line-height: 145%; color: rgba(255, 255, 255, 0.5);}",
-        "@media screen and (min-width: 750px) {h2 {font-size: 3rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Comp_1_1.gif",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 64,
-        "padding_bottom": 40
-      }
-    },
-    "multicolumn_x6JCif": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_Jpyc4z": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>28th May, Thursday (Cuttack)</strong>",
-            "text": "<h4>Kamal Das Badminton Academy (BCTC)<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\" target=\"_blank\" title=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\">View Location</a></h4><h4>Kamal Das Badminton Academy (BCTC)<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\" target=\"_blank\" title=\"https://maps.app.goo.gl/LohEfwz5A2L78W4B6\">View Location</a></h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Yp8iYp": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>29th May, Friday (Bhubaneswar)</strong>",
-            "text": "<h4>BIJU PATNAIK INDOOR STADIUM<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/xWauiBRPYJvRQMkp8\" target=\"_blank\" title=\"https://maps.app.goo.gl/xWauiBRPYJvRQMkp8\">View Location</a></h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_gKA4jw": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>30th May, Saturday (Bhubaneswar)</strong>",
-            "text": "<h4>Udaan Sports Academy<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\" target=\"_blank\" title=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\">View Location</a></h4><h4>Udaan Sports Academy<br/>(4:00 PM - 6:00 PM) - <a href=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\" target=\"_blank\" title=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\">View Location</a></h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_XV7YnQ": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>31st May, Sunday (Bhubaneswar)</strong>",
-            "text": "<h4>KIIT- Biju Patnaik Multipurpose Indoor Stadium<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/ABmbXZ8QNwbmJbGR8\" target=\"_blank\" title=\"https://maps.app.goo.gl/ABmbXZ8QNwbmJbGR8\">View Location</a></h4><h4>KIIT- Biju Patnaik Multipurpose Indoor Stadium<br/>(3:00 PM - 5:00 PM) - <a href=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\" target=\"_blank\" title=\"https://maps.app.goo.gl/2WkSxGipdiVFarBC6\">View Location</a></h4>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Jpyc4z",
-        "column_Yp8iYp",
-        "column_gKA4jw",
-        "column_XV7YnQ"
-      ],
-      "custom_css": [
-        "a {color: orange;}",
-        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "h3 {color: #f69e24;}",
-        "h4 strong {color: grey;}",
-        ".multicolumn-card {background: #170c02; background: linear-gradient( 271deg, rgba(23, 12, 2, 1) 0%, rgba(9, 9, 9, 1) 34% );}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<strong>Event </strong>Schedule",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 4,
-        "padding_bottom": 56
-      }
-    },
-    "rich_text_YUaPWT": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-d27ab943-fb87-45cd-880f-d5fa2e3a3ca4",
-        "full_width": true,
-        "padding_top": 4,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "collapsible_content_ywGM93": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_bKfjRY": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Your Tour Benefits At a Glance",
-            "icon": "star",
-            "row_content": "<p>🎯 What's in Store for You</p><p>✅ Free Equipment Trials - Experience our latest high-performance rackets at no cost</p><p>🎁 Exclusive Rewards - Unlock special offers and limited-time coupon codes</p><p>🏆 Competitive Fun - Participate in on-court challenges and win exciting prizes</p><p>🤝 Network & Connect - Meet professional players and fellow badminton enthusiasts</p><p>💬 Meet the Team - Connect with Hundred experts and discover what makes our gear elite</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_HhrpyN": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Terms and Conditions",
-            "icon": "clipboard",
-            "row_content": "<p>By attending the Hundred Experience Tour, you agree that:</p><ul><li>Your participation was voluntary and you were responsible for your own safety.</li><li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li><li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li><li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li><li>Event details and activities may have been subject to change at the organizers' discretion.</li><li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li><li>Non Marking Shoes are not provided by us during the event. Please bring your own.</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_d8Azcr": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is the Racket Experience Tour?",
-            "icon": "fire",
-            "row_content": "<p>The Racket Experience Tour is a hands-on demo event where players can <strong>try and play with our latest badminton rackets</strong> before deciding which one suits their playing style best.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_6PJJLm": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Who can participate?",
-            "icon": "question_mark",
-            "row_content": "<p>The event is open to <strong>all badminton players</strong> — beginners, intermediate, advanced players, academy trainees, and recreational players.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_xU3L8e": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is the event free to attend?",
-            "icon": "price_tag",
-            "row_content": "<p>Yes, the Racket Experience Tour is <strong>completely free</strong> for all participants.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_BfyDx3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Will experts be available to help choose the right racket?",
-            "icon": "check_mark",
-            "row_content": "<p>Yes. Our team will be present to <strong>guide you in selecting the right racket</strong> based on your playing style, level, and preferences.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_dYfxKE": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is this event only for badminton?",
-            "icon": "eye",
-            "row_content": "<p>Yes, this particular tour stop in Odisha is <strong>focused on badminton rackets only</strong>.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_qbkH6m": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I purchase rackets at the venue?",
-            "icon": "price_tag",
-            "row_content": "<p>Selected products may be available for <strong>exclusive event offers</strong>.<br/>Our team will also guide you on <strong>where to purchase online or in-store</strong>.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_CFeGXg": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can academy players and coaches attend together?",
-            "icon": "lightning_bolt",
-            "row_content": "<p>Absolutely. <strong>Players, coaches, and academy groups</strong> are welcome to attend and experience the rackets together.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_bKfjRY",
-        "collapsible_row_HhrpyN",
-        "collapsible_row_d8Azcr",
-        "collapsible_row_6PJJLm",
-        "collapsible_row_xU3L8e",
-        "collapsible_row_BfyDx3",
-        "collapsible_row_dYfxKE",
-        "collapsible_row_qbkH6m",
-        "collapsible_row_CFeGXg"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
+    "custom_liquid_THcEDW": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "caption": "",
-        "heading": "",
-        "heading_size": "h0",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "scheme-3",
-        "color_scheme": "scheme-4",
-        "open_first_collapsible_row": false,
-        "image": "shopify://shop_images/Artboard_2_05a69494-985e-4e9f-868d-5423b550f98f.jpg",
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 72
+        "custom_liquid": "<!-- ============================================================\n     SHUTTLEVERSE — SECTION 3: QUICKFACTS BAND\n     HOW TO ADD IN SHOPIFY:\n     Online Store → Themes → Customize → Add Section → Custom HTML\n     Place this section immediately below the Hero section.\n================================================================ -->\n\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .sv-qf {\n    background: #F5C500;\n    color: #1A0640;\n    padding: 28px 40px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: 0;\n    position: relative;\n    z-index: 2;\n  }\n\n  .sv-qf__item {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 0 36px;\n    border-right: 2px solid rgba(58,13,122,0.2);\n  }\n  .sv-qf__item:last-child { border-right: none; }\n\n  .sv-qf__label {\n    font-family: 'Inter', sans-serif;\n    font-size: 0.62rem;\n    font-weight: 600;\n    text-transform: uppercase;\n    letter-spacing: 0.15em;\n    opacity: 0.6;\n    color: #1A0640;\n  }\n\n  .sv-qf__value {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 900;\n    font-size: 1.45rem;\n    letter-spacing: 0.03em;\n    line-height: 1.1;\n    margin-top: 2px;\n    color: #1A0640;\n  }\n\n  @media (max-width: 600px) {\n    .sv-qf {\n      flex-direction: column;\n      gap: 14px;\n      padding: 24px 20px;\n    }\n    .sv-qf__item {\n      border-right: none;\n      border-bottom: 1px solid rgba(58,13,122,0.15);\n      padding: 12px 0;\n      width: 100%;\n      text-align: center;\n    }\n    .sv-qf__item:last-child { border-bottom: none; }\n  }\n</style>\n\n<div class=\"sv-qf\">\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Date</span>\n    <span class=\"sv-qf__value\">28 JUN 2026</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Venue</span>\n    <span class=\"sv-qf__value\">SPORTFIT, JP NAGAR</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Reporting</span>\n    <span class=\"sv-qf__value\">10:30 AM</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Duration</span>\n    <span class=\"sv-qf__value\">4–5 HOURS</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Entry Fee</span>\n    <span class=\"sv-qf__value\">₹199</span>\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "rich_text_HD493f": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
+    "custom_liquid_HfFkYp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
-        "full_width": true,
-        "padding_top": 4,
+        "custom_liquid": "<!-- SHUTTLEVERSE SECTION 4: WHATS INCLUDED -->\n<!-- Shopify: Themes > Customize > Add Section > Custom HTML -->\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Inter:wght@400;500&display=swap\" rel=\"stylesheet\">\n<style>\n.sv4{background:linear-gradient(180deg,#1A0640,#2A0960);padding:80px 24px;position:relative;overflow:hidden;}\n.sv4::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#F5C500;}\n.sv4 .in{max-width:1100px;margin:0 auto;}\n.sv4 .ey{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#F5C500;margin-bottom:12px;display:block;}\n.sv4 .ti{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;color:#fff;margin:0;}\n.sv4 .gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-top:48px;background:rgba(255,255,255,.05);}\n.sv4 .ca{background:rgba(91,31,168,.25);padding:32px 28px;border-left:3px solid transparent;position:relative;overflow:hidden;transition:border-color .2s,background .2s;opacity:0;transform:translateY(20px);}\n.sv4 .ca::after{content:'';position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 32px 32px 0;border-color:transparent #F5C500 transparent transparent;opacity:0;transition:opacity .2s;}\n.sv4 .ca:hover{border-left-color:#F5C500;background:rgba(91,31,168,.5);}\n.sv4 .ca:hover::after{opacity:1;}\n.sv4 .ic{font-size:2rem;margin-bottom:14px;display:block;}\n.sv4 .ct{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:.05em;text-transform:uppercase;color:#fff;margin-bottom:8px;}\n.sv4 .cd{font-family:'Inter',sans-serif;font-size:.88rem;color:#F0EAF8;opacity:.75;line-height:1.6;}\n@media(max-width:600px){.sv4 .gr{grid-template-columns:1fr;}.sv4{padding:60px 20px;}}\n@media(prefers-reduced-motion:reduce){.sv4 .ca{opacity:1!important;transform:none!important;}}\n</style>\n<div class=\"sv4\"><div class=\"in\">\n  <span class=\"ey\">What's Included</span>\n  <h2 class=\"ti\">Everything<br>you need to play</h2>\n  <div class=\"gr\">\n    <div class=\"ca\"><span class=\"ic\">🏸</span><div class=\"ct\">Event Entry</div><p class=\"cd\">Full day access to all scheduled matches, challenges, and court activities.</p></div>\n    <div class=\"ca\"><span class=\"ic\">🎯</span><div class=\"ct\">Shuttles Provided</div><p class=\"cd\">Official event shuttles supplied by organizers — just bring your racket.</p></div>\n    <div class=\"ca\"><span class=\"ic\">🏆</span><div class=\"ct\">Prizes and Giveaways</div><p class=\"cd\">Prizes, merchandise, and exclusive HNDRD rewards for standout performers.</p></div>\n    <div class=\"ca\"><span class=\"ic\">🤝</span><div class=\"ct\">Community Access</div><p class=\"cd\">Network with fellow enthusiasts and get exclusive HNDRD experiences and offers.</p></div>\n    <div class=\"ca\"><span class=\"ic\">🎪</span><div class=\"ct\">Brand Activations</div><p class=\"cd\">Interactive brand zones, product experiences, and exclusive HNDRD drops.</p></div>\n    <div class=\"ca\"><span class=\"ic\">🍱</span><div class=\"ct\">Lunch Available</div><p class=\"cd\">Food available at the venue. Additional charges apply.</p></div>\n  </div>\n</div></div>\n<script>\n(function(){var cs=document.querySelectorAll('.sv4 .ca');if(!cs.length)return;var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target,i=Array.prototype.indexOf.call(cs,el);setTimeout(function(){el.style.opacity='1';el.style.transform='translateY(0)';el.style.transition='opacity .45s ease,transform .45s ease,border-color .2s,background .2s';},i*70);ob.unobserve(el);}});},{threshold:.1});cs.forEach(function(c){ob.observe(c);});})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_UndVHN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- SHUTTLEVERSE SECTION 5: EVENT DETAILS -->\n<!-- Shopify: Themes > Customize > Add Section > Custom HTML -->\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Inter:wght@400;500&display=swap\" rel=\"stylesheet\">\n<style>\n.sv5{background:#3A0D7A;position:relative;overflow:hidden;clip-path:polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%);padding:100px 24px;}\n.sv5 .in{max-width:1100px;margin:0 auto;}\n.sv5 .ey{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#F5C500;margin-bottom:12px;display:block;}\n.sv5 .ti{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;color:#fff;margin:0;}\n.sv5 .gr{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start;}\n.sv5 .bl{margin-bottom:28px;}\n.sv5 .bl:last-child{margin-bottom:0;}\n.sv5 .lb{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#F5C500;opacity:.8;margin-bottom:4px;display:block;}\n.sv5 .vl{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.5rem,3.5vw,2.4rem);letter-spacing:.01em;line-height:1.1;color:#fff;}\n.sv5 .sb{font-family:'Inter',sans-serif;font-size:.9rem;color:#F0EAF8;opacity:.7;margin-top:4px;}\n.sv5 .dv{width:40px;height:3px;background:#F5C500;margin:10px 0 0;}\n@media(max-width:680px){.sv5 .gr{grid-template-columns:1fr;gap:0;}.sv5{clip-path:none;padding:70px 20px;}}\n</style>\n<section class=\"sv5\"><div class=\"in\">\n  <span class=\"ey\">Event Details</span>\n  <h2 class=\"ti\">Mark the<br>calendar</h2>\n  <div class=\"gr\">\n    <div>\n      <div class=\"bl\"><span class=\"lb\">Date</span><div class=\"vl\">Saturday, 28 June 2026</div><div class=\"dv\"></div></div>\n      <div class=\"bl\"><span class=\"lb\">Reporting Time</span><div class=\"vl\">10:30 AM onwards</div><div class=\"sb\">Arrive on time — late arrivals may forfeit their first matches</div><div class=\"dv\"></div></div>\n      <div class=\"bl\"><span class=\"lb\">Duration</span><div class=\"vl\">4–5 Hours</div><div class=\"dv\"></div></div>\n    </div>\n    <div>\n      <div class=\"bl\"><span class=\"lb\">Venue</span><div class=\"vl\">Sportfit, JP Nagar</div><div class=\"sb\">Bangalore 560078</div><div class=\"dv\"></div></div>\n      <div class=\"bl\"><span class=\"lb\">Organized By</span><div class=\"vl\">HNDRD</div><div class=\"dv\"></div></div>\n      <div class=\"bl\"><span class=\"lb\">Spectators</span><div class=\"vl\">Welcome</div><div class=\"sb\">Subject to venue regulations and available space</div><div class=\"dv\"></div></div>\n    </div>\n  </div>\n</div></section>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_cFMhfJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- SHUTTLEVERSE SECTION 6: WHO CAN PLAY + WHAT TO BRING -->\n<!-- Shopify: Themes > Customize > Add Section > Custom HTML -->\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500&display=swap\" rel=\"stylesheet\">\n<style>\n/* --- WHO CAN PLAY --- */\n.sv6a{background:#1A0640;padding:80px 24px;text-align:center;}\n.sv6a .in{max-width:700px;margin:0 auto;}\n.sv6a .ey{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#F5C500;margin-bottom:12px;display:block;}\n.sv6a .ti{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;color:#fff;margin:0;}\n.sv6a .desc{margin-top:20px;font-family:'Inter',sans-serif;font-size:1rem;color:#F0EAF8;opacity:.75;line-height:1.7;}\n.sv6a .pills{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:36px;}\n.sv6a .pill{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 32px;border:2px solid;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background .2s,color .2s;cursor:default;}\n.sv6a .pill-b{border-color:#F5C500;color:#F5C500;}\n.sv6a .pill-i{border-color:#fff;color:#fff;background:rgba(255,255,255,.08);}\n.sv6a .pill-a{border-color:#9B59CC;color:#9B59CC;}\n.sv6a .pill:hover{background:#F5C500;color:#1A0640;border-color:#F5C500;}\n.sv6a .note{margin-top:20px;font-family:'Inter',sans-serif;font-size:.88rem;color:#F0EAF8;opacity:.55;}\n\n/* --- WHAT TO BRING --- */\n.sv6b{background:linear-gradient(135deg,#2A0960,#3A0D7A);padding:80px 24px;position:relative;overflow:hidden;}\n.sv6b::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent,transparent 40px,rgba(245,197,0,.025) 40px,rgba(245,197,0,.025) 41px);}\n.sv6b .in{max-width:1100px;margin:0 auto;position:relative;z-index:1;}\n.sv6b .ey{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#F5C500;margin-bottom:12px;display:block;}\n.sv6b .ti{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;color:#fff;margin:0;}\n.sv6b .gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:40px;}\n.sv6b .it{background:rgba(255,255,255,.05);border:1px solid rgba(245,197,0,.2);padding:24px 20px;text-align:center;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}\n.sv6b .ic{font-size:1.8rem;margin-bottom:8px;display:block;}\n.sv6b .nm{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;color:#F0EAF8;}\n@media(max-width:600px){.sv6a .pills{gap:10px;}.sv6a .pill{padding:12px 22px;font-size:.9rem;}.sv6b .gr{grid-template-columns:1fr 1fr;}.sv6a,.sv6b{padding:60px 20px;}}\n</style>\n\n<!-- WHO CAN PLAY -->\n<section class=\"sv6a\">\n  <div class=\"in\">\n    <span class=\"ey\">Who Can Play</span>\n    <h2 class=\"ti\">All levels.<br>One court.</h2>\n    <p class=\"desc\">ShuttleVerse is built for everyone aged 16 and above. Whether you have never played a competitive match or you have been smashing since school — there is a spot for you.</p>\n    <div class=\"pills\">\n      <div class=\"pill pill-b\">🌱 Beginner</div>\n      <div class=\"pill pill-i\">⚡ Intermediate</div>\n      <div class=\"pill pill-a\">🔥 Advanced</div>\n    </div>\n    <p class=\"note\">No skill-level restrictions. Right-handed or left-handed. Just show up ready.</p>\n  </div>\n</section>\n\n<!-- WHAT TO BRING -->\n<section class=\"sv6b\">\n  <div class=\"in\">\n    <span class=\"ey\">Pack Your Bag</span>\n    <h2 class=\"ti\">What to bring</h2>\n    <div class=\"gr\">\n      <div class=\"it\"><span class=\"ic\">🏸</span><div class=\"nm\">Your Racket</div></div>\n      <div class=\"it\"><span class=\"ic\">👟</span><div class=\"nm\">Non-Marking Sports Shoes</div></div>\n      <div class=\"it\"><span class=\"ic\">💧</span><div class=\"nm\">Water Bottle</div></div>\n      <div class=\"it\"><span class=\"ic\">👕</span><div class=\"nm\">Comfortable Sportswear</div></div>\n    </div>\n  </div>\n</section>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_GwyNeF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- SHUTTLEVERSE SECTION 7: FAQ ACCORDION -->\n<!-- Shopify: Themes > Customize > Add Section > Custom HTML -->\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500&display=swap\" rel=\"stylesheet\">\n<style>\n.sv7{background:#1A0640;padding:80px 24px 100px;}\n.sv7 .in{max-width:800px;margin:0 auto;}\n.sv7 .ey{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#F5C500;margin-bottom:12px;display:block;}\n.sv7 .ti{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;color:#fff;margin:0;}\n.sv7 .list{margin-top:48px;}\n.sv7 .fi{border-bottom:1px solid rgba(255,255,255,.1);}\n.sv7 .fq{width:100%;background:none;border:none;color:#fff;text-align:left;padding:20px 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .2s;}\n.sv7 .fq:hover{color:#F5C500;}\n.sv7 .fa-arrow{flex-shrink:0;width:22px;height:22px;border:2px solid #F5C500;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#F5C500;transition:transform .25s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);line-height:1;}\n.sv7 .fi.open .fa-arrow{transform:rotate(45deg);}\n.sv7 .fa{max-height:0;overflow:hidden;font-family:'Inter',sans-serif;font-size:.95rem;color:#F0EAF8;opacity:.8;line-height:1.7;transition:max-height .35s ease,padding-bottom .35s ease;padding-bottom:0;}\n.sv7 .fi.open .fa{max-height:200px;padding-bottom:20px;}\n@media(max-width:600px){.sv7{padding:60px 20px 80px;}.sv7 .fq{font-size:1rem;}}\n</style>\n\n<section class=\"sv7\">\n  <div class=\"in\">\n    <span class=\"ey\">FAQ</span>\n    <h2 class=\"ti\">Got questions?</h2>\n    <div class=\"list\">\n\n      <div class=\"fi\">\n        <button class=\"fq\">Is the registration fee refundable?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">No. Registrations once confirmed are non-refundable and non-transferable unless the event is cancelled by HNDRD.</div>\n      </div>\n\n      <div class=\"fi\">\n        <button class=\"fq\">What happens after I pay?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">You will receive a confirmation message or email from the HNDRD team with your full registration details. Keep it handy on event day.</div>\n      </div>\n\n      <div class=\"fi\">\n        <button class=\"fq\">Can I register on the day?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">On-spot registrations may be available if slots remain open — but we strongly recommend registering in advance to secure your place.</div>\n      </div>\n\n      <div class=\"fi\">\n        <button class=\"fq\">Will shuttles be provided?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">Yes. Event shuttles are provided by the organizers. Just bring your racket.</div>\n      </div>\n\n      <div class=\"fi\">\n        <button class=\"fq\">What if I arrive late?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">Late arrivals may forfeit their scheduled matches or activities. Please report by 10:30 AM to make the most of the day.</div>\n      </div>\n\n      <div class=\"fi\">\n        <button class=\"fq\">Is there a skill-level restriction?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">No. ShuttleVerse is designed for players across all skill levels — Beginner, Intermediate, and Advanced. Everyone aged 16 and above is welcome.</div>\n      </div>\n\n      <div class=\"fi\">\n        <button class=\"fq\">Can spectators attend?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">Yes, spectators are welcome subject to venue regulations and available space at Sportfit, JP Nagar.</div>\n      </div>\n\n      <div class=\"fi\">\n        <button class=\"fq\">Will there be prizes?<span class=\"fa-arrow\">+</span></button>\n        <div class=\"fa\">Yes. Winners and standout performers may receive prizes, merchandise, and exclusive HNDRD rewards.</div>\n      </div>\n\n    </div>\n  </div>\n</section>\n\n<script>\n(function(){\n  var items = document.querySelectorAll('.sv7 .fi');\n  items.forEach(function(item){\n    item.querySelector('.fq').addEventListener('click', function(){\n      var isOpen = item.classList.contains('open');\n      document.querySelectorAll('.sv7 .fi.open').forEach(function(o){ o.classList.remove('open'); });\n      if(!isOpen) item.classList.add('open');\n    });\n  });\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_LjMxTE": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- SHUTTLEVERSE SECTION 8: FINAL CTA -->\n<!-- Shopify: Themes > Customize > Add Section > Custom HTML -->\n<!-- IMPORTANT: Replace href=\"YOUR_REGISTRATION_URL\" with your actual product/form URL.\n     The id=\"sv-register\" anchor is referenced by the sticky bar and hero buttons. -->\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500&display=swap\" rel=\"stylesheet\">\n<style>\n.sv8{background:linear-gradient(135deg,#5B1FA8,#3A0D7A);text-align:center;padding:100px 24px 120px;position:relative;overflow:hidden;clip-path:polygon(0 40px,100% 0,100% 100%,0 100%);}\n.sv8-bg{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(6rem,20vw,16rem);letter-spacing:-.02em;color:rgba(255,255,255,.04);text-transform:uppercase;white-space:nowrap;pointer-events:none;line-height:1;user-select:none;}\n.sv8 .ey{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#F5C500;margin-bottom:8px;display:block;position:relative;z-index:1;}\n.sv8-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(4rem,12vw,8rem);color:#F5C500;line-height:1;letter-spacing:-.01em;position:relative;z-index:1;}\n.sv8-sub{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;margin-top:4px;position:relative;z-index:1;}\n.sv8-body{font-family:'Inter',sans-serif;font-size:.95rem;color:#F0EAF8;opacity:.8;margin-top:16px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.6;position:relative;z-index:1;}\n.sv8-btn{display:inline-block;margin-top:36px;background:#F5C500;color:#1A0640;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;letter-spacing:.1em;text-transform:uppercase;padding:18px 56px;clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);cursor:pointer;border:none;text-decoration:none;transition:transform .15s,box-shadow .15s;position:relative;z-index:1;}\n.sv8-btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(245,197,0,.5);color:#1A0640;}\n.sv8-slots{margin-top:14px;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#F0EAF8;opacity:.55;position:relative;z-index:1;}\n.sv8-tc{margin-top:32px;font-family:'Inter',sans-serif;font-size:.75rem;color:#F0EAF8;opacity:.35;line-height:1.6;max-width:560px;margin-left:auto;margin-right:auto;position:relative;z-index:1;}\n@media(max-width:600px){.sv8{clip-path:none;padding:70px 20px 100px;}.sv8-btn{padding:15px 36px;font-size:1.2rem;}}\n@media(prefers-reduced-motion:reduce){.sv8-btn{transition:none;}}\n</style>\n\n<section class=\"sv8\" id=\"sv-register\">\n  <div class=\"sv8-bg\" aria-hidden=\"true\">SHUTTLEVERSE</div>\n  <span class=\"ey\">Ready to play?</span>\n  <div class=\"sv8-price\">₹199</div>\n  <div class=\"sv8-sub\">Secure your slot now</div>\n  <p class=\"sv8-body\">Court access, organized gameplay, community experience, giveaways, prizes, and HNDRD access — all in one day.</p>\n  <!-- Replace href with your Shopify product page or registration form URL -->\n  <a href=\"YOUR_REGISTRATION_URL\" class=\"sv8-btn\">Register form BookMyShow</a> <a href=\"YOUR_REGISTRATION_URL\" class=\"sv8-btn\">Register form District</a> <a href=\"YOUR_REGISTRATION_URL\" class=\"sv8-btn\">Register for Swiggy Sceans</a>\n  <div class=\"sv8-slots\">⚠ Limited Slots · First Come, First Served</div>\n  <p class=\"sv8-tc\">Registration confirmed only after successful payment. Participants must follow venue and event rules. HNDRD reserves the right to modify schedules. Participants may be photographed or filmed for promotional purposes. Any misconduct may result in disqualification without refund. Event decisions made by organizers are final.</p>\n</section>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     }
   },
   "order": [
     "main",
-    "custom_liquid_dF4Kan",
     "hero_component_3mFtqf",
     "custom_liquid_LqDdTM",
     "custom_liquid_wEr9EG",
-    "multirow_RFTCVa",
-    "image_with_text_UxtnK3",
-    "multicolumn_x6JCif",
-    "rich_text_YUaPWT",
-    "collapsible_content_ywGM93",
-    "rich_text_HD493f"
+    "custom_liquid_THcEDW",
+    "custom_liquid_HfFkYp",
+    "custom_liquid_UndVHN",
+    "custom_liquid_cFMhfJ",
+    "custom_liquid_GwyNeF",
+    "custom_liquid_LjMxTE"
   ]
 }
