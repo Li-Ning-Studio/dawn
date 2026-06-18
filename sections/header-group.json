@@ -75,6 +75,7 @@
     },
     "custom_liquid_H69tci": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<style>\n#HeaderMenu-deal-of-the-day, #HeaderDrawer-deal-of-the-day{\nbackground-image: linear-gradient(to right, red 0%, Blue 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n\n}\n</style>",
