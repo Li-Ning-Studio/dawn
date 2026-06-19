@@ -48,7 +48,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component with \"Shop All\" CTA\n  Sits perfectly between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      4 words <span class=\"highlight-text\">title</span>\n    </h2>\n    <p class=\"intro-description\">\n    Short Description\n    </p>\n    \n    <!-- Shop All CTA Button -->\n    \n    \n    <div class=\"summer-divider\"></div>\n  </div>\n</div>\n\n<style>\n  .lining-summer-intro {\n    /* Blends seamlessly with the bottom of the hero banner and grid background */\n    background-color: #e3f7f2; \n    text-align: center;\n  }\n\n  .lining-intro-container {\n    max-width: 800px;\n    margin: 0 auto;\n  }\n\n  /* Matches the bold, aggressive \"SUMMER SALE\" typography aesthetic */\n  .intro-title {\n    font-family: 'Impact', 'Arial Black', sans-serif;\n    font-size: 5.5rem;\n    line-height: 1.1;\n    letter-spacing: 1px;\n    color: #0c2340; /* Deep athletic navy */\n    text-transform: uppercase;\n    margin-bottom: 20px;\n  }\n\n  /* Matches the bright orange/red from the banner text */\n  .highlight-text {\n    background: linear-gradient(180deg, #ffaa00 0%, #ff4500 100%);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: #ff4500; \n  }\n\n  /* Sleek, readable block description */\n  .intro-description {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;\n    font-size: 1.85rem;\n    line-height: 1.6;\n    color: #4a5568;\n    max-width: 680px;\n    margin: 0 auto 24px auto;\n    font-weight: 400;\n  }\n\n  /* CTA Button Styling */\n  .intro-cta-wrapper {\n    margin-bottom: 35px;\n  }\n\n  .shop-all-btn {\n    display: inline-block;\n    font-family: 'Impact', 'Arial Black', sans-serif;\n    font-size: 1.7rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #ffffff;\n    text-decoration: none;\n    background: linear-gradient(135deg, #ff9900 0%, #ff3300 100%);\n    padding: 14px 40px;\n    border-radius: 50px;\n    box-shadow: 0 6px 20px rgba(255, 51, 0, 0.4);\n    transition: transform 0.2s ease, box-shadow 0.2s ease;\n  }\n\n  .shop-all-btn:hover {\n    transform: scale(1.04);\n    box-shadow: 0 8px 25px rgba(255, 51, 0, 0.5);\n  }\n\n  /* Minimalist summer accent line separating the text from the image grid below */\n  .summer-divider {\n    width: 60px;\n    height: 4px;\n    background: #ff4500;\n    margin: 0 auto;\n    border-radius: 2px;\n  }\n\n  /* Responsive Design for Mobile Devices */\n  @media (max-width: 767px) {\n    .lining-summer-intro {\n      padding: 35px 15px 20px 15px;\n    }\n    \n    .intro-title {\n      font-size: 4rem;\n      letter-spacing: 0.5px;\n    }\n\n    .intro-description {\n      font-size: 1.5rem;\n      line-height: 1.5;\n      margin-bottom: 20px;\n    }\n\n    .shop-all-btn {\n      font-size: 1.55rem;\n      padding: 12px 32px;\n    }\n  }\n</style>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component with \"Shop All\" CTA\n  Sits perfectly between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      Sizzling Offers <span class=\"highlight-text\">Live Now</span>\n    </h2>\n    <p class=\"intro-description\">\n  Don't miss out on exclusive summer discounts across our entire collection of elite badminton gear.\n    </p>\n    \n    <!-- Shop All CTA Button -->\n    \n    \n    <div class=\"summer-divider\"></div>\n  </div>\n</div>\n\n<style>\n  .lining-summer-intro {\n    /* Blends seamlessly with the bottom of the hero banner and grid background */\n    background-color: #e3f7f2; \n    text-align: center;\n  }\n\n  .lining-intro-container {\n    max-width: 800px;\n    margin: 0 auto;\n  }\n\n  /* Matches the bold, aggressive \"SUMMER SALE\" typography aesthetic */\n  .intro-title {\n    font-family: 'Impact', 'Arial Black', sans-serif;\n    font-size: 5.5rem;\n    line-height: 1.1;\n    letter-spacing: 1px;\n    color: #0c2340; /* Deep athletic navy */\n    text-transform: uppercase;\n    margin-bottom: 20px;\n  }\n\n  /* Matches the bright orange/red from the banner text */\n  .highlight-text {\n    background: linear-gradient(180deg, #ffaa00 0%, #ff4500 100%);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: #ff4500; \n  }\n\n  /* Sleek, readable block description */\n  .intro-description {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;\n    font-size: 1.85rem;\n    line-height: 1.6;\n    color: #4a5568;\n    max-width: 680px;\n    margin: 0 auto 24px auto;\n    font-weight: 400;\n  }\n\n  /* CTA Button Styling */\n  .intro-cta-wrapper {\n    margin-bottom: 35px;\n  }\n\n  .shop-all-btn {\n    display: inline-block;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;\nfont-weight:600;\n    font-size: 1.7rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #ffffff;\n    text-decoration: none;\n    background: linear-gradient(135deg, #ff9900 0%, #ff3300 100%);\n    padding: 14px 40px;\n    border-radius: 50px;\n    box-shadow: 0 6px 20px rgba(255, 51, 0, 0.4);\n    transition: transform 0.2s ease, box-shadow 0.2s ease;\n  }\n\n  .shop-all-btn:hover {\n    transform: scale(1.04);\n    box-shadow: 0 8px 25px rgba(255, 51, 0, 0.5);\n  }\n\n  /* Minimalist summer accent line separating the text from the image grid below */\n  .summer-divider {\n    width: 60px;\n    height: 4px;\n    background: #ff4500;\n    margin: 0 auto;\n    border-radius: 2px;\n  }\n\n  /* Responsive Design for Mobile Devices */\n  @media (max-width: 767px) {\n    .lining-summer-intro {\n      padding: 35px 15px 20px 15px;\n    }\n    \n    .intro-title {\n      font-size: 4rem;\n      letter-spacing: 0.5px;\n    }\n\n    .intro-description {\n      font-size: 1.5rem;\n      line-height: 1.5;\n      margin-bottom: 20px;\n    }\n\n    .shop-all-btn {\n      font-size: 1.55rem;\n      padding: 12px 32px;\n    }\n  }\n</style>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 24,
         "padding_bottom": 8
@@ -84,7 +84,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      4 words <span class=\"highlight-text\">title</span>\n    </h2>\n    <p class=\"intro-description\">  </p>\n     <div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Shop All Sale</a>\n    </div>\n  \n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      Smash Your <span class=\"highlight-text\">Summer Goals</span>\n    </h2>\n    <p class=\"intro-description\">  </p>\n     <div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Summer Smashes</a>\n    </div>\n  \n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 32,
         "padding_bottom": 8
@@ -93,22 +93,22 @@
     "swipeable_products_GWaxmg": {
       "type": "swipeable-products",
       "custom_css": [
-        "img {background: #E3F7F2;}"
+        "img {background: #e3f7f2;}"
       ],
       "name": "Swipeable Products",
       "settings": {
         "title": "",
         "products": [
-          "axforce-cannon-4u",
-          "ignite-8-unstrung",
-          "g-force-5900-superlite",
-          "axforce-blast-4u",
+          "axforce-cannon-5u",
           "air-force-g3-77-grams",
-          "wind-lite-stealth",
-          "halbertec-motor-4u",
-          "g-force-superlite-ma-10",
-          "axforce-cannon-pro-4u",
-          "g-force-3900-superlite-ii"
+          "halbertec-motor-pro-5u",
+          "ignite-8-unstrung",
+          "g-force-5800-superlite",
+          "g-force-5900-superlite",
+          "bladex-600-5u",
+          "3d-calibar-x-combat",
+          "3d-calibar-x-drive",
+          "aeronaut-9000-4u"
         ],
         "show_color_variants": false,
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
@@ -136,7 +136,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      4 words <span class=\"highlight-text\">title</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Shop All Sale</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n     Serve Heat <span class=\"highlight-text\">In Style</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Heat up the Court</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 32,
         "padding_bottom": 8
@@ -145,7 +145,7 @@
     "swipeable_products_4jkfd7": {
       "type": "swipeable-products",
       "custom_css": [
-        "strong {color: #f32635;}"
+        "strong {color: #ff3f00;}"
       ],
       "name": "Swipeable Products",
       "settings": {
@@ -179,7 +179,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      4 words <span class=\"highlight-text\">title</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Shop All Sale</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      Gear Up <span class=\"highlight-text\">For Victory</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Carry Your Game</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 32,
         "padding_bottom": 8
@@ -191,15 +191,12 @@
       "settings": {
         "title": "",
         "products": [
-          "lateral-kit-bag",
+          "parallel-kit-bag",
+          "blaze-kit-bag",
           "monarch-kit-bag",
           "birdie-kit-bag",
-          "velocity-backpack",
-          "nimbus-square-bag",
-          "dolph-kit-bag",
-          "stealth-backpack",
-          "holster-gear-kit-bag",
-          "aero-glide-kit-bag"
+          "aero-glide-kit-bag",
+          "panther-badminton-kit-bag"
         ],
         "show_color_variants": false,
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
