@@ -27,7 +27,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/exclusive-winter-sale-starts-here",
+        "link_to": "shopify://collections/summer-sale",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -58,7 +58,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Category Grid - Clean Image-Only Version\n  Maps to image cards: 2.1.jpg, 2.2.jpg, 2.3.jpg\n{% endcomment %}\n\n<div class=\"lining-summer-categories\" id=\"section-summer-sale\">\n  <div class=\"lining-container\">\n    <div class=\"category-grid\">\n      \n      <!-- Card 1: Rackets -->\n      <a href=\"/collections/rackets\" class=\"category-card\" aria-label=\"Shop Rackets\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2.1.jpg?v=1781843190&width=750\" onerror=\"this.onerror=null; this.src='2.1.jpg';\" alt=\"Rackets Sale\" loading=\"lazy\">\n        </div>\n      </a>\n\n      <!-- Card 2: Shoes -->\n      <a href=\"/collections/shoes\" class=\"category-card\" aria-label=\"Shop Shoes\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2.2.jpg?v=1781843190&width=750\" onerror=\"this.onerror=null; this.src='2.2.jpg';\" alt=\"Shoes Sale\" loading=\"lazy\">\n        </div>\n      </a>\n\n      <!-- Card 3: Kitbags -->\n      <a href=\"/collections/kitbags\" class=\"category-card\" aria-label=\"Shop Kitbags\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2.3.jpg?v=1781843190&width=750\" onerror=\"this.onerror=null; this.src='2.3.jpg';\" alt=\"Kitbags Sale\" loading=\"lazy\">\n        </div>\n      </a>\n\n    </div>\n  </div>\n</div>\n\n<style>\n  #section-summer-sale {\n    padding: 30px 0 60px 0;\n    /* Soft summer mint/cyan background that blends perfectly with the bottom of the banners */\n    background-color: #e3f7f2; \n  }\n  \n  .lining-container {\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 0 20px;\n  }\n  \n  .category-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 24px;\n  }\n  \n  .category-card {\n    position: relative;\n    display: block;\n    border-radius: 12px;\n    overflow: hidden;\n    box-shadow: 0 8px 24px rgba(0,0,0,0.06);\n    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;\n    background: #fff;\n  }\n  \n  /* Micro-interaction on hover to make it feel premium without visual clutter */\n  .category-card:hover {\n    transform: translateY(-6px);\n    box-shadow: 0 16px 36px rgba(0,0,0,0.12);\n  }\n  \n  .image-wrapper {\n    position: relative;\n    width: 100%;\n    padding-bottom: 100%; /* Keeps a clean 1:1 ratio box */\n    overflow: hidden;\n  }\n  \n  .image-wrapper img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n\n  /* Responsive Scaling */\n  @media (max-width: 991px) {\n    .category-grid {\n      gap: 16px;\n    }\n  }\n  \n  @media (max-width: 767px) {\n    #section-summer-sale {\n      padding: 20px 0 40px 0;\n    }\n    .category-grid {\n      grid-template-columns: 1fr; /* Clean single column layout on mobile */\n      gap: 20px;\n    }\n  }\n</style>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Category Grid - Clean Image-Only Version\n  Maps to image cards: 2.1.jpg, 2.2.jpg, 2.3.jpg\n{% endcomment %}\n\n<div class=\"lining-summer-categories\" id=\"section-summer-sale\">\n  <div class=\"lining-container\">\n    <div class=\"category-grid\">\n      \n      <!-- Card 1: Rackets -->\n      <a href=\"/collections/summer-sale-rackets\" class=\"category-card\" aria-label=\"Shop Rackets\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2.1.jpg?v=1781843190&width=750\" onerror=\"this.onerror=null; this.src='2.1.jpg';\" alt=\"Rackets Sale\" loading=\"lazy\">\n        </div>\n      </a>\n\n      <!-- Card 2: Shoes -->\n      <a href=\"/collections/summer-sale-shoes\" class=\"category-card\" aria-label=\"Shop Shoes\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2.2.jpg?v=1781843190&width=750\" onerror=\"this.onerror=null; this.src='2.2.jpg';\" alt=\"Shoes Sale\" loading=\"lazy\">\n        </div>\n      </a>\n\n      <!-- Card 3: Kitbags -->\n      <a href=\"/collections/summer-sale-bags\" class=\"category-card\" aria-label=\"Shop Kitbags\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2.3.jpg?v=1781843190&width=750\" onerror=\"this.onerror=null; this.src='2.3.jpg';\" alt=\"Kitbags Sale\" loading=\"lazy\">\n        </div>\n      </a>\n\n    </div>\n  </div>\n</div>\n\n<style>\n  #section-summer-sale {\n    padding: 30px 0 60px 0;\n    /* Soft summer mint/cyan background that blends perfectly with the bottom of the banners */\n    background-color: #e3f7f2; \n  }\n  \n  .lining-container {\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 0 20px;\n  }\n  \n  .category-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 24px;\n  }\n  \n  .category-card {\n    position: relative;\n    display: block;\n    border-radius: 12px;\n    overflow: hidden;\n    box-shadow: 0 8px 24px rgba(0,0,0,0.06);\n    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;\n    background: #fff;\n  }\n  \n  /* Micro-interaction on hover to make it feel premium without visual clutter */\n  .category-card:hover {\n    transform: translateY(-6px);\n    box-shadow: 0 16px 36px rgba(0,0,0,0.12);\n  }\n  \n  .image-wrapper {\n    position: relative;\n    width: 100%;\n    padding-bottom: 100%; /* Keeps a clean 1:1 ratio box */\n    overflow: hidden;\n  }\n  \n  .image-wrapper img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n\n  /* Responsive Scaling */\n  @media (max-width: 991px) {\n    .category-grid {\n      gap: 16px;\n    }\n  }\n  \n  @media (max-width: 767px) {\n    #section-summer-sale {\n      padding: 20px 0 40px 0;\n    }\n    .category-grid {\n      grid-template-columns: 1fr; /* Clean single column layout on mobile */\n      gap: 20px;\n    }\n  }\n</style>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 16,
         "padding_bottom": 24
@@ -74,7 +74,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/halberd-strike",
+        "link_to": "shopify://collections/summer-sale-rackets",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -84,7 +84,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      Smash Your <span class=\"highlight-text\">Summer Goals</span>\n    </h2>\n    <p class=\"intro-description\">  </p>\n     <div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Summer Smashes</a>\n    </div>\n  \n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      Smash Your <span class=\"highlight-text\">Summer Goals</span>\n    </h2>\n    <p class=\"intro-description\">  </p>\n     <div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/summer-sale-rackets\" class=\"shop-all-btn\">Summer Smashes</a>\n    </div>\n  \n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 32,
         "padding_bottom": 8
@@ -126,7 +126,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/apparels",
+        "link_to": "shopify://collections/summer-sale-shoes",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -136,7 +136,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n     Serve Heat <span class=\"highlight-text\">In Style</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Heat up the Court</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n     Serve Heat <span class=\"highlight-text\">In Style</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/summer-sale-shoes\" class=\"shop-all-btn\">Heat up the Court</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 32,
         "padding_bottom": 8
@@ -169,7 +169,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/badminton-kit-bags",
+        "link_to": "shopify://collections/summer-sale-bags",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -179,7 +179,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      Gear Up <span class=\"highlight-text\">For Victory</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/all\" class=\"shop-all-btn\">Carry Your Game</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
+        "custom_liquid": "{% comment %}\n  Li-Ning Summer Sale Intro Text Component\n  Sits between the hero banner (01_2.jpg) and the category cards.\n{% endcomment %}\n\n<div class=\"lining-summer-intro\" id=\"intro-{{ section.id }}\">\n  <div class=\"lining-intro-container\">\n    <h2 class=\"intro-title\">\n      Gear Up <span class=\"highlight-text\">For Victory</span>\n    </h2>\n    <p class=\"intro-description\">\n     \n    </p>\n\n<div class=\"intro-cta-wrapper\">\n      <a href=\"/collections/summer-sale-bags\" class=\"shop-all-btn\">Carry Your Game</a>\n    </div>\n\n    <div class=\"summer-divider\"></div>\n  </div>\n</div>",
         "color_scheme": "scheme-8cb72dc6-20ee-46bd-9a7e-9db42ebf39cf",
         "padding_top": 32,
         "padding_bottom": 8
@@ -214,7 +214,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/badminton-kit-bags",
+        "link_to": "shopify://collections/summer-sale",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
