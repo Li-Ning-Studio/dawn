@@ -21,8 +21,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Mani_Banner_10b8e05c-eb69-4b2e-b0e8-019feb02e684.png",
-        "mobile_image": "shopify://shop_images/Main_Banner_R_02c7acb8-292a-4d2f-9582-7278fce0a755.png",
+        "image": "shopify://shop_images/01_af2ddcb9-045d-48f3-a5f8-d6e86e6f0033.jpg",
+        "mobile_image": "shopify://shop_images/01_Mobile.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -35,11 +35,88 @@
     },
     "custom_liquid_maUJf6": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<style>\n  .christmas-subheadline {\n    text-align: center;\n    padding: 16px 12px;\n  }\n\n  .christmas-subheadline h2 {\n    font-size: clamp(18px, 3.5vw, 28px);\n    font-weight: 600;\n    letter-spacing: 0.3px;\n    margin: 0;\n    color: #f32635; /* single color */\n    display: inline-block;\n    line-height: 1.3;\n  }\n\n  .emoji {\n    font-size: 16px;\n    vertical-align: middle;\n    margin: 0 4px;\n  }\n\n  @media (max-width: 640px) {\n    .christmas-subheadline h2 {\n      font-size: 20px;\n    }\n    .emoji {\n      display: block;\n      margin: 4px auto;\n      font-size: 16px;\n    }\n  }\n</style>\n\n<div class=\"christmas-subheadline\">\n  <h2>\n    <span class=\"emoji\">🎄</span>\n    Grab 2025’s Best Selling Rackets at Special Prices\n    <span class=\"emoji\">❄️</span>\n  </h2>\n</div>",
         "color_scheme": "",
         "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_jEEkzF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_tRkMyP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2.1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/halbertec-4000-4u"
+          }
+        },
+        "column_kcHxXD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2.2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/windstorm-76"
+          }
+        },
+        "column_tnQXYk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2.3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/xi-phos-x1-nihs"
+          }
+        }
+      },
+      "block_order": [
+        "column_tRkMyP",
+        "column_kcHxXD",
+        "column_tnQXYk"
+      ],
+      "custom_css": [
+        "strong {color: #f32635;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "shopify://collections/the-season-s-heavy-hitters",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 48
+      }
+    },
+    "hero_component_CfXcQQ": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/03_d2ca7936-5858-4134-8d59-2c42b7a9c999.jpg",
+        "mobile_image": "shopify://shop_images/03_Mobile.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/halberd-strike",
+        "color_scheme": "",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -63,111 +140,6 @@
         "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 20
-      }
-    },
-    "multicolumn_jEEkzF": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_nUtpBr": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/CW1.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/axforce-cannon-4u"
-          }
-        },
-        "column_tRkMyP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_b8e1b8cd-cea6-4bd0-9090-80899babe39f.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/halbertec-4000-4u"
-          }
-        },
-        "column_kcHxXD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_a7369062-666e-440c-b003-31821a4372ee.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/windstorm-76"
-          }
-        },
-        "column_tnQXYk": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_4_f8ce1916-a30c-417f-a2f4-e424a39e2b47.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/xi-phos-x1-nihs"
-          }
-        }
-      },
-      "block_order": [
-        "column_nUtpBr",
-        "column_tRkMyP",
-        "column_kcHxXD",
-        "column_tnQXYk"
-      ],
-      "custom_css": [
-        "strong {color: #f32635;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Rackets, This Week <strong>Only</strong>.",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Shop Sale Rackets",
-        "button_link": "shopify://collections/the-season-s-heavy-hitters",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 48
-      }
-    },
-    "hero_component_CfXcQQ": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Hal_fea99a53-d25c-4995-882c-12e7949af0eb.png",
-        "mobile_image": "shopify://shop_images/Hal_R_7092ef3b-1672-4e5d-99d5-40649e5b9452.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/halberd-strike",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_4jkfd7": {
-      "type": "swipeable-products",
-      "custom_css": [
-        "strong {color: #f32635;}"
-      ],
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Strike Season. <strong>Free</strong> Socks.",
-        "products": [
-          "halberd-strike"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 12,
         "padding_bottom": 20
       }
     },
@@ -210,6 +182,7 @@
         "column_Eq8rzf",
         "column_GfWB4B"
       ],
+      "disabled": true,
       "custom_css": [
         "strong {color: #f32635;}"
       ],
@@ -246,8 +219,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/apparels_a6ef3eff-11ea-4539-8bd5-d05d6f2e98af.jpg",
-        "mobile_image": "shopify://shop_images/apparels_1.jpg",
+        "image": "shopify://shop_images/04_fbafd282-21c4-4184-bced-8b5c8720c55c.jpg",
+        "mobile_image": "shopify://shop_images/04_Mobile.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -268,31 +241,29 @@
         "padding_bottom": 0
       }
     },
-    "swipeable_products_EXpWYr": {
+    "swipeable_products_4jkfd7": {
       "type": "swipeable-products",
+      "custom_css": [
+        "strong {color: #f32635;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
-        "title": "",
+        "title": "Strike Season. <strong>Free</strong> Socks.",
         "products": [
-          "kynetic-t-shirt",
-          "luminex-t-shirt",
-          "lunar-t-shirt",
-          "eliteflex-training-shorts",
-          "line-shorts",
-          "eclipse-t-shirt"
+          "halberd-strike"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
         "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 24
+        "padding_top": 12,
+        "padding_bottom": 20
       }
     },
     "hero_component_ACnNQ4": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Kitbag_ee29d2f8-b44b-4288-939c-aaf7857f805c.png",
-        "mobile_image": "shopify://shop_images/Kitbag_R_73294ad0-843f-48e7-8eeb-a2d92c46a1e2.png",
+        "image": "shopify://shop_images/05_93e57397-bf62-4cea-9baf-e47bd6776f2a.jpg",
+        "mobile_image": "shopify://shop_images/05_Mobile.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -335,64 +306,20 @@
         "padding_bottom": 20
       }
     },
-    "multicolumn_EJrkUG": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_UKd9LV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_a09b51f6-cc58-4bcb-b674-4c74438ef06c.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/crato-kit-bag"
-          }
-        },
-        "column_rpp8YA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_9762fed4-c083-4dec-91cd-410352646c3e.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/stripe-kit-bag"
-          }
-        },
-        "column_zG8HyH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_cf705fd3-dd7d-40ad-a35c-3d774cf62bb6.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://products/pacecraft-kit-bag"
-          }
-        }
-      },
-      "block_order": [
-        "column_UKd9LV",
-        "column_rpp8YA",
-        "column_zG8HyH"
-      ],
-      "custom_css": [
-        "strong {color: #f32635;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
+    "hero_component_bGgQcA": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "title": "<strong>Weekly</strong> Drops on Kit Bags.",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
+        "image": "shopify://shop_images/07_9184671c-9709-4400-9fe5-b93d7fb9a8a8.jpg",
+        "mobile_image": "shopify://shop_images/07_Mobile.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/badminton-kit-bags",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -400,18 +327,17 @@
     "main",
     "hero_component_pzhwAd",
     "custom_liquid_maUJf6",
-    "swipeable_products_GWaxmg",
     "multicolumn_jEEkzF",
     "hero_component_CfXcQQ",
-    "swipeable_products_4jkfd7",
+    "swipeable_products_GWaxmg",
     "multicolumn_ARpY8V",
     "custom_liquid_QBtBzG",
     "hero_component_waCfEx",
     "custom_liquid_pMLyrY",
-    "swipeable_products_EXpWYr",
+    "swipeable_products_4jkfd7",
     "hero_component_ACnNQ4",
     "custom_liquid_xgH3Ej",
     "swipeable_products_iqfVnr",
-    "multicolumn_EJrkUG"
+    "hero_component_bGgQcA"
   ]
 }
