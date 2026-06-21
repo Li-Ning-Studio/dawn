@@ -9,34 +9,33 @@
  */
 {
   "sections": {
-    "hero_video_component_EYYPMR": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
+    "hero_component_n9R8Ji": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "video": "shopify://files/videos/0e133f2a5fe94b11a5f23e650ca41307.HD-1080p-7.2Mbps-66571274.mp4",
-        "mobile_video": "shopify://files/videos/MOBILE.mp4",
-        "subtitle": "Phenom",
-        "title": "THE MOST AWAITED SHOE",
-        "description": "What every professional player dreams of is now ready to be yours.",
-        "button_text": "SHOP THE PHENOM",
-        "link_to": "shopify://products/phenom",
-        "color_scheme": "",
+        "image": "shopify://shop_images/01_2.jpg",
+        "mobile_image": "shopify://shop_images/03_1.jpg",
+        "subtitle": "Dominate Every Rally with",
+        "title": "HUNDRED RAZOR BADMINTON SHOES",
+        "description": "Like The Edge Of A Blade,",
+        "button_text": "GET RAZOR!!!",
+        "link_to": "shopify://products/razor",
         "padding_top": 0,
-        "padding_bottom": 68
+        "padding_bottom": 0
       }
     },
-    "swipeable_products_Xr6TG7": {
+    "swipeable_products_qF6iTW": {
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "The Over Engineered Shoe",
+        "title": "RAZOR THE COURT",
         "products": [
-          "phenom"
+          "razor"
         ],
         "show_color_variants": true,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 40
+        "padding_top": 12,
+        "padding_bottom": 36
       }
     },
     "hero_component_CE4EqA": {
@@ -69,6 +68,36 @@
         "padding_bottom": 40
       }
     },
+    "hero_video_component_EYYPMR": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/0e133f2a5fe94b11a5f23e650ca41307.HD-1080p-7.2Mbps-66571274.mp4",
+        "mobile_video": "shopify://files/videos/MOBILE.mp4",
+        "subtitle": "Phenom",
+        "title": "THE MOST AWAITED SHOE",
+        "description": "What every professional player dreams of is now ready to be yours.",
+        "button_text": "SHOP THE PHENOM",
+        "link_to": "shopify://products/phenom",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 68
+      }
+    },
+    "swipeable_products_Xr6TG7": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "The Over Engineered Shoe",
+        "products": [
+          "phenom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    },
     "hero_video_component_4r8WXU": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -85,45 +114,16 @@
         "padding_bottom": 68
       }
     },
-    "hero_component_n9R8Ji": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/01.jpg",
-        "mobile_image": "shopify://shop_images/03.jpg",
-        "subtitle": "Dominate Every Rally with",
-        "title": "HUNDRED RAZOR BADMINTON SHOES",
-        "description": "Like The Edge Of A Blade,",
-        "button_text": "GET RAZOR!!!",
-        "link_to": "shopify://products/razor",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_qF6iTW": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "RAZOR THE COURT",
-        "products": [
-          "razor"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 12,
-        "padding_bottom": 36
-      }
-    },
     "hero_component_nKcbRQ": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/1_2_1.jpg",
-        "mobile_image": "shopify://shop_images/2_1_1.jpg",
-        "subtitle": "Make Every Stride Count with",
-        "title": "HUNDRED JAKARTA VI RUNNING SHOES",
-        "description": "Lightweight Comfort Meets Urban Endurance",
-        "button_text": "RUN THE CITY",
+        "image": "shopify://shop_images/01_707f07c9-ef06-4ac9-93a7-6fd444825c89.webp",
+        "mobile_image": "shopify://shop_images/02.webp",
+        "subtitle": "Lightweight comfort with responsive cushioning for every journey",
+        "title": "HUNDRED COMFORT MAX RUNNING SHOES",
+        "description": "Built for Speed, Designed for Comfort",
+        "button_text": "FEEL THE COMFORT",
         "link_to": "shopify://products/jakarta-vi",
         "padding_top": 0,
         "padding_bottom": 0
@@ -133,14 +133,14 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "BORN TO OUTPACE",
+        "title": "Built for Comfort",
         "products": [
-          "jakarta-vi"
+          "comfort-max"
         ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 8
       }
     },
     "hero_component_eFU6Jy": {
@@ -269,13 +269,13 @@
     }
   },
   "order": [
-    "hero_video_component_EYYPMR",
-    "swipeable_products_Xr6TG7",
-    "hero_component_CE4EqA",
-    "swipeable_products_BbzVyD",
-    "hero_video_component_4r8WXU",
     "hero_component_n9R8Ji",
     "swipeable_products_qF6iTW",
+    "hero_component_CE4EqA",
+    "swipeable_products_BbzVyD",
+    "hero_video_component_EYYPMR",
+    "swipeable_products_Xr6TG7",
+    "hero_video_component_4r8WXU",
     "hero_component_nKcbRQ",
     "swipeable_products_ptFa6j",
     "hero_component_eFU6Jy",
