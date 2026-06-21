@@ -188,62 +188,97 @@
         "padding_bottom": 52
       }
     },
-    "featured_collection_X7GMPy": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "swipeable_products_GFAWyE": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
       "settings": {
-        "collection": "insole",
-        "products_to_show": 4,
         "title": "Socks & Insoles",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
+        "products": [
+          "fusionsupport-insole",
+          "steady-soft-insole",
+          "steady-soft-pro-insole",
+          "ventcomfort-insole"
+        ],
+        "show_color_variants": false,
         "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "featured_collection_grw9xt": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "rich_text_HUEV9d": {
+      "type": "rich-text",
+      "blocks": {
+        "button_X6Hecz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lihat Semua",
+            "button_link": "shopify://collections/insole",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_X6Hecz"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "collection": "grips",
-        "products_to_show": 4,
-        "title": "Grips",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "swipeable_products_qarhLB": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Grips",
+        "products": [
+          "x-pro-dry",
+          "x-pro-tacky",
+          "x-tac-dry",
+          "gtr-17-replacement-grip",
+          "gtr-18-replacement-grip",
+          "gtr-19-replacement-grip",
+          "gtr-32-replacement-grip"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_N3tXim": {
+      "type": "rich-text",
+      "blocks": {
+        "button_3RknnX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lihat Semua",
+            "button_link": "shopify://collections/grips",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_3RknnX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -254,7 +289,9 @@
     "rich_text_zDdGUr",
     "swipeable_products_qHzftE",
     "rich_text_i7ntUm",
-    "featured_collection_X7GMPy",
-    "featured_collection_grw9xt"
+    "swipeable_products_GFAWyE",
+    "rich_text_HUEV9d",
+    "swipeable_products_qarhLB",
+    "rich_text_N3tXim"
   ]
 }
