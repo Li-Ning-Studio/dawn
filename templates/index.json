@@ -38,6 +38,35 @@
         "padding_bottom": 36
       }
     },
+    "hero_component_gKmhp8": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_1.png",
+        "mobile_image": "shopify://shop_images/2_1.png",
+        "subtitle": "Built for explosive speed, stable control, and unstoppable court performance.",
+        "title": "VELOCITY ZOOM BADMINTON SHOES",
+        "description": "Explosive Speed Meets Total Control",
+        "button_text": "SHOP VELOCITY ZOOM",
+        "link_to": "/",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_Q7qTKA": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Explosive Speed Control",
+        "products": [
+          "velocity-zoom"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 28
+      }
+    },
     "hero_component_nKcbRQ": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -209,35 +238,6 @@
         "padding_bottom": 40
       }
     },
-    "hero_component_gKmhp8": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/1_3_1.jpg",
-        "mobile_image": "shopify://shop_images/2_2_1.jpg",
-        "subtitle": "Stay Fast, Stay in Control with",
-        "title": "HYPERCOURT BADMINTON SHOES",
-        "description": "Maximum Court Grip, Minimum Response Time",
-        "button_text": "MASTER THE MATCH",
-        "link_to": "/",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_Q7qTKA": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "QUICK. STABLE. UNSTOPPABLE.",
-        "products": [
-          "hypercourt"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 28
-      }
-    },
     "hero_component_gek4dX": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -271,6 +271,8 @@
   "order": [
     "hero_component_n9R8Ji",
     "swipeable_products_qF6iTW",
+    "hero_component_gKmhp8",
+    "swipeable_products_Q7qTKA",
     "hero_component_nKcbRQ",
     "swipeable_products_ptFa6j",
     "hero_component_CE4EqA",
@@ -282,8 +284,6 @@
     "swipeable_products_E6q4Mq",
     "hero_component_mnpwfC",
     "swipeable_products_6DxbDf",
-    "hero_component_gKmhp8",
-    "swipeable_products_Q7qTKA",
     "hero_component_gek4dX",
     "swipeable_products_bTa7eP"
   ]
