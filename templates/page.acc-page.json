@@ -58,6 +58,71 @@
         "padding_bottom": 36
       }
     },
+    "swipeable_products_pUDVDp": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Support",
+        "products": [
+          "active-ankle-stabilizer",
+          "active-ankle-support",
+          "active-elbow-guard",
+          "active-knee-sleeve-full-length",
+          "active-knee-strap",
+          "active-knee-support-medium-compression",
+          "active-wrist-support"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_zDdGUr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_r7LwdC": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_3wLHBn": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_UNer49": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lihat Semua",
+            "button_link": "shopify://collections/wrist-support-salinan",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_r7LwdC",
+        "text_3wLHBn",
+        "button_UNer49"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection_7d3hEp": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -143,71 +208,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "swipeable_products_pUDVDp": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Swipeable Products",
-        "products": [
-          "active-ankle-stabilizer",
-          "active-ankle-support",
-          "active-elbow-guard",
-          "active-knee-sleeve-full-length",
-          "active-knee-strap",
-          "active-knee-support-medium-compression",
-          "active-wrist-support"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_zDdGUr": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_r7LwdC": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_3wLHBn": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_UNer49": {
-          "type": "button",
-          "settings": {
-            "button_label": "Lihat Semua",
-            "button_link": "shopify://collections/wrist-support-salinan",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_r7LwdC",
-        "text_3wLHBn",
-        "button_UNer49"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
