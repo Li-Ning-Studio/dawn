@@ -1,0 +1,338 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_kQYMRq": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 10px;\n  \"\nclass=\"main-sec-custom\"\n>\n  <p style=\"margin-bottom: 0\">Awaken</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title\">\n  Attack Is the Only Setting\n  </h1>\n  <p style=\"margin-top: 3px\">Trusted by attacking players who don’t hold back</p>\n  <a href=\"/collections/predator\" class=\"cta\">\n    <span>Enter Predator Mode</span>\n  </a>\n  \n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n\n  .cta {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid white;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta:hover{\nbackground:white;\ncolor:black;\n}\n\n  .title {\n    font-size: 3.2rem;\n    background-image: linear-gradient(\n      -225deg,\n      #fff 0%,\n     \n      #2FA600 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 48,
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_6ErPVe": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"nav\">\n  <div class=\"container\">\n  <div class=\"btn\"><a href=\"#shopify-section-template--26670945075493__swipeable_products_EUex9n\" class=\"aa1\">Extra Strong</a></div>\n    <div class=\"btn\"><a href=\"#shopify-section-template--26670945075493__swipeable_products_WTtDxj\" class=\"aa2\">Extreme</a></div>\n   \n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      viewBox=\"0 0 400 60\"\n      height=\"60\"\n      width=\"400\"\n      overflow=\"visible\"\n      class=\"outline\"\n    >\n     \n    </svg>\n  </div>\n</div>\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n\n.nav{\ndisplay:none;\n}\n\n@media screen and (min-width: 800px) {\n   \n.outline {\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n}\n\n.rect {\n  stroke-dashoffset: 7.5;\n  stroke-dasharray: 0 0 10 40 10 40;\n  transition: 0.5s;\n  stroke: #ffffff;\n}\n\n.nav {\ndisplay:block;\n  position: relative;\n  width: 60%;\n  height: 60px;\n  border-radius: 50px;\n  margin:0 auto;\n}\n.nav a {\ntext-decoration:none;\n  transition: 0.5s ease;\n}\n.aa1{\ncolor:#3bc400;\n}\n.aa2{\ncolor: #fa742b;\n}\n\n\n.container {\n  position: absolute;\n  inset: 0;\n  background: transparent;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  padding: 0.5em;\n}\n\n.btn {\n  padding: 0.5em 1.5em;\n  \n  cursor: pointer;\nfont-size: 2rem;\nfont-weight: bolder;\n  transition: 0.5s ease;\n\nborder-radius: 0px;\n}\n.btn:nth-child(1){\nborder-bottom: 1px solid #3bc400;\n}\n\n.btn:nth-child(2){\nborder-bottom: 1px solid #fa742b;\n}\n.btn:nth-child(1):hover{\n  background: #003801;\n  border-radius: 500px;\n}\n.btn:nth-child(1):hover .aa1{\ncolor: white;\n}\n.btn:nth-child(2):hover .aa2{\ncolor: white;\n}\n.btn:nth-child(2):hover {\n  background: #571a09;\n  border-radius: 500px;\n}\n.btn:nth-child(3):hover {\n  background: #09b859;\n  border-radius: 500px;\n}\n\n}\n</style>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_CCaBBV": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"cct\">\n    <a href=\"#shopify-section-template--26670945075493__swipeable_products_EUex9n\" class=\"bbtn1\"><i class=\"animation\"></i><b>Extra Strong\n    </a>\n     <a href=\"#shopify-section-template--26670945075493__swipeable_products_WTtDxj\" class=\"bbtn2\"><i class=\"animation\"></i>Extreme<i class=\"animation\"></i>\n    </a>\n    \n</div>\n<style>\n.cct{\ndisplay: flex;\njustify-content:space-around;\nalign-items:center;\ncolumn-gap: 0px;\n}\n@media screen and (min-width: 800px) {\n.cct{\ndisplay:none;\n}\n}\n.cct{\ntext-align:center;\n}\n.bbtn1, .bbtn2  {\n  outline: 0;\n  display: inline-flex;\n  align-items: center;\n \n  justify-content: space-between;\n  background: #003801;\n  min-width: 100px;\n  border: 0;\n  border-radius: 500px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);\n  box-sizing: border-box;\n  padding: 12px 17px;\n  color: #fff;\n  font-size: 11px;\n  letter-spacing: 1.2px;\n  text-transform: uppercase;\n  overflow: hidden;\n  cursor: pointer;\n  text-decoration:none;\nfont-weight:1000px;\n}\n.bbtn2{\nbackground: #4b1208;\n}\n\n\n.bbtn1 .animation, .bbtn2 .animation , .bbtn3 .animation  {\n  border-radius: 100%;\n  animation: 2s linear infinite;\n}\n\n@keyframes ripple {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);\n  }\n\n  100% {\n    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);\n  }\n}\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "hero_component_7V7ntg": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_a859f3be-3d67-4d01-88f2-ddb69fe86f3d.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_1_01e16aa8-e83f-4e35-8860-6d7fbe8c576f.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/predator-extra-strong",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_eGCwcN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 10px;\n  \"\nclass=\"main-sec-custom1\"\n>\n  <p style=\"margin-bottom: 0\">EXTRA STRONG</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\n  Built to Take the Load\n  </h1>\n  <p style=\"margin-top: 3px\"> A solid frame that doesn’t flinch at higher tensions or heavier shots.</p>\n  <a href=\"/collections/predator-extra-strong\" class=\"cta1\">\n    <span>Start Striking</span>\n  </a>\n  \n</section>\n\n<style>\np{\nz-index:2;\n}\n\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #3bc400;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #3bc400;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#003801;\ncolor: white;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #3bc400 40%, #2f9c00 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n.main-sec-custom1 video{\n  height: 44%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 40,
+        "padding_bottom": 64
+      }
+    },
+    "swipeable_products_EUex9n": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #fff;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "predator-79-extra-strong",
+          "predator-82-extra-strong"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_bXNV7q": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nY9tcG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_1_84cc5c25-e435-4568-ae8d-5534ae3f2919.jpg",
+            "title": "<strong>Vapor Shaft Technology</strong>",
+            "text": "<p>The aerodynamic vapor shaft profile is optimized for speed, torque resistance and flex to deliver maximum power on attacking shots.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7nz3P8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2_437e4269-1ea7-4071-b53d-1b4c12c091f6.jpg",
+            "title": "<strong>Japanese Graphite Carbon</strong>",
+            "text": "<p>Constructed from the highest quality Japanese graphite carbon material, allowing for an extremely lightweight yet strong frame that can handle tensions up to 38lbs.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HnyCDf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3_bc479c00-2c0b-4aac-8e49-146b552101ef.jpg",
+            "title": "<strong>Curve² Sweet Spot</strong>",
+            "text": "<p>Hundred's patented Curve² head technology engineers an extra-large sweet spot for unmatched forgiveness and precision on off-center hits.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nY9tcG",
+        "column_7nz3P8",
+        "column_HnyCDf"
+      ],
+      "custom_css": [
+        "h3,h2 {background-image: linear-gradient(-225deg, #3bc400 40%, #2f9c00 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {font-size: 2.2rem;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 96
+      }
+    },
+    "hero_component_e8TUTP": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/2_c65d202e-a6ff-4e62-94bd-ab374a994e4f.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_2_086d5636-d231-4236-98d2-fcf097a26ff5.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/predator-extreme",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_3kFkqj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 10px;\n  \"\nclass=\"main-sec-custom2\"\n>\n  <p style=\"margin-bottom: 0\"> EXTREME</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title2\">\n  Extreme Means No Mercy\n  </h1>\n  <p style=\"margin-top: 3px\">Holds brutal string tension so your hardest hits don’t lose their edge.</p>\n  <a href=\"/collections/predator-extreme\" class=\"cta2\">\n    <span>Play Extreme</span>\n  </a>\n  \n</section>\n\n<style>\n\n\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #fa742b;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #fa742b;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta2:hover{\nbackground:#4b1208;\ncolor:white;\n}\n\n  .title2 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #fa742b 40%, #ae3c13 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 56,
+        "padding_bottom": 48
+      }
+    },
+    "swipeable_products_WTtDxj": {
+      "type": "swipeable-products",
+      "custom_css": [
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "predator-82-extreme",
+          "predator-84-extreme"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_imEdxf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Lwnd64": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3_bfc962a0-2478-4826-a098-9ae829e95fe7.jpg",
+            "title": "<strong>Built to Last, Designed to Destroy</strong>",
+            "text": "<p>Featuring high-quality graphite from Graphite Lab, this racket is tough, durable, and battle-ready. It absorbs impact, holds tension like a pro, and delivers unwavering power</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EWLLdV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_1_95dbad77-f5e7-47c9-9599-524085f71215.jpg",
+            "title": "<strong>Whip. Snap. Strike.</strong>",
+            "text": "<p>A whip-like 7.0mm Vaporshaft loads energy with every backswing and releases it in a devastating snap, turning every shot into a power-filled attack.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9Dw33n": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2_a14a492d-e56b-44a0-9070-5b34cbac4bfa.jpg",
+            "title": "<strong>Stability Meets Speed</strong>",
+            "text": "<p>The Predator Extreme cuts through air and slices through like a bullet, thanks to its aerodynamic Nano Frame System. Get faster swings, sharper attacks, and rock-solid stability.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Lwnd64",
+        "column_EWLLdV",
+        "column_9Dw33n"
+      ],
+      "custom_css": [
+        "h3,h2 {background-image: linear-gradient(-225deg, #fa742b 40%, #ae3c13 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {font-size: 2.2rem;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 88
+      }
+    },
+    "multicolumn_QBbxhi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jcwTag": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Predator_Extra_Strong_f2f0e938-382c-46d7-a935-7e96e0f385de.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/predator-extra-strong"
+          }
+        },
+        "column_9GREgA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Predator_Extreme.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/predator-extreme"
+          }
+        }
+      },
+      "block_order": [
+        "column_jcwTag",
+        "column_9GREgA"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Predator Series</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 60
+      }
+    },
+    "custom_liquid_wyUQkH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 10px;\n  \"\nclass=\"main-sec-custom4\"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title4\">\n  This Is Where Rallies Stop Being Polite\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/collections/predator\" class=\"cta4\">\n    <span>Meet the Predators</span>\n  </a>\n \n</section>\n\n<style>\nimg{\nposition:relative;\nz-index:1;\n}\n.main-sec-custom4 video{\n  position: absolute;\ntransform: rotate(180deg);\nmargin-top:60%;\n  left: 0;\n  width: 100%;\n  height: 15%;\n  object-fit: cover;\n  z-index:0 ;\nover-flow:hidden;\n}\n  .cta4 {\n    margin-top: 1.9rem;\n    background: transparent;\n    border: 1.5px solid white;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n\n.cta4:hover{\nbackground:white;\ncolor:black;\n}\n\n  .title4 {\n    font-size: 3.2rem;\n     background-image: linear-gradient(\n      -225deg,\n      #fff 30%,\n      #fff 80%\n    );\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom4 p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title4 {\n      font-size: 6rem;\n    }\n\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 76,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_kQYMRq",
+    "custom_liquid_6ErPVe",
+    "custom_liquid_CCaBBV",
+    "hero_component_7V7ntg",
+    "custom_liquid_eGCwcN",
+    "swipeable_products_EUex9n",
+    "multicolumn_bXNV7q",
+    "hero_component_e8TUTP",
+    "custom_liquid_3kFkqj",
+    "swipeable_products_WTtDxj",
+    "multicolumn_imEdxf",
+    "multicolumn_QBbxhi",
+    "custom_liquid_wyUQkH"
+  ]
+}
