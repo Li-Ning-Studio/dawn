@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "hero_component_GhhRa7": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1.jpg",
+        "mobile_image": "shopify://shop_images/2.jpg",
+        "subtitle": "Aero Tech",
+        "title": "Light on Weight, Heavy on Performance",
+        "description": "Ultralight comfort, responsive cushioning, and all-court grip for effortless speed and control.",
+        "button_text": "GET AERO",
+        "link_to": "shopify://products/aero-tech",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_video_component_HCGgYR": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -37,21 +52,6 @@
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 44
-      }
-    },
-    "hero_component_GhhRa7": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/1_7c5d331a-2b53-45de-851c-96c9505b7d19.png",
-        "mobile_image": "shopify://shop_images/2_9e0fdc70-74e2-443e-8ade-e3d3cd28843f.png",
-        "subtitle": "Aero Flow",
-        "title": "WHERE AIR MEETS MOTION",
-        "description": "Experience the ultimate lightness with every step",
-        "button_text": "GET AERO",
-        "link_to": "shopify://products/aero-flow",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "swipeable_products_VJWXwz": {
@@ -278,10 +278,10 @@
     }
   },
   "order": [
-    "hero_video_component_HCGgYR",
-    "swipeable_products_J3G9h3",
     "hero_component_GhhRa7",
     "swipeable_products_VJWXwz",
+    "hero_video_component_HCGgYR",
+    "swipeable_products_J3G9h3",
     "hero_component_XcQqXm",
     "swipeable_products_BNkLCX",
     "hero_component_pLiiEX",
