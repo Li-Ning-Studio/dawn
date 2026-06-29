@@ -19,11 +19,10 @@
     },
     "hero_component_ekdqEn": {
       "type": "hero-component",
-      "disabled": true,
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/home_banner_115ab5eb-9cef-4334-b4a9-ae1bba546ed3.png",
-        "mobile_image": "shopify://shop_images/home_banner_R_18b1cdb2-cf25-42ae-b561-84e9e2568884.png",
+        "image": "shopify://shop_images/Pre_1.jpg",
+        "mobile_image": "shopify://shop_images/pre_Mobile_1.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -47,12 +46,81 @@
     },
     "custom_liquid_3gQmGB": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"premium-hero-wrapper\">\n  <div class=\"solar-glow-core\"></div>\n  \n  <div class=\"premium-hero-content\">\n    <div class=\"brand-logo-frame\">\n      <img src=\"YOUR_LOGO_IMAGE_URL_HERE\" alt=\"Beat The Heat Logo\" class=\"brand-logo-graphic\">\n    </div>\n\n    <div class=\"event-meta-block\">\n      <span class=\"gold-pill\">EXCLUSIVE DROPS EVENT</span>\n      <p class=\"event-schedule\">SUNDAY, 5TH JULY • 12:00 PM IST</p>\n      <a href=\"https://in.hndrd.co\" class=\"brand-domain-link\">in.hndrd.co</a>\n    </div>\n\n    <div class=\"premium-timer-wrapper\">\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-days\">00</span>\n        <span class=\"time-tag\">DAYS</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-hours\">00</span>\n        <span class=\"time-tag\">HOURS</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-mins\">00</span>\n        <span class=\"time-tag\">MINUTES</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-secs\">00</span>\n        <span class=\"time-tag\">SECONDS</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\n  :root {\n    --bg-dark: #080808;\n    --solar-gold: #ffaa00;\n    --solar-flare: #ff4500;\n    --matte-white: #f5f5f7;\n    --muted-grey: #86868b;\n  }\n\n  .premium-hero-wrapper {\n    background-color: var(--bg-dark);\n    min-height: 85vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: relative;\n    padding: 60px 24px;\n    overflow: hidden;\n  }\n\n  /* Sophisticated, subtle atmospheric lighting */\n  .solar-glow-core {\n    position: absolute;\n    width: 500px;\n    height: 500px;\n    background: radial-gradient(circle, rgba(255,100,0,0.08) 0%, rgba(255,170,0,0.03) 50%, transparent 100%);\n    top: 35%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    filter: blur(40px);\n    pointer-events: none;\n  }\n\n  .premium-hero-content {\n    max-width: 900px;\n    width: 100%;\n    text-align: center;\n    z-index: 2;\n  }\n\n  .brand-logo-frame {\n    max-width: 480px;\n    margin: 0 auto 40px auto;\n  }\n\n  .brand-logo-graphic {\n    width: 100%;\n    height: auto;\n    display: block;\n    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.7));\n  }\n\n  .event-meta-block {\n    margin-bottom: 50px;\n  }\n\n  .gold-pill {\n    display: inline-block;\n    border: 1px solid rgba(255, 170, 0, 0.4);\n    color: var(--solar-gold);\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 3px;\n    padding: 6px 16px;\n    border-radius: 50px;\n    background: rgba(255, 170, 0, 0.03);\n    margin-bottom: 20px;\n  }\n\n  .event-schedule {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    color: var(--matte-white);\n    font-size: 24px;\n    font-weight: 300;\n    letter-spacing: 1px;\n    margin: 0 0 8px 0;\n  }\n\n  .brand-domain-link {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    color: var(--muted-grey);\n    text-decoration: none;\n    font-size: 16px;\n    letter-spacing: 0.5px;\n    transition: color 0.3s;\n  }\n  .brand-domain-link:hover {\n    color: var(--solar-gold);\n  }\n\n  /* Minimalist Premium Timer Grid */\n  .premium-timer-wrapper {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    max-width: 640px;\n    margin: 0 auto;\n    background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(10,10,10,0.8) 100%);\n    border: 1px solid rgba(255,255,255,0.05);\n    padding: 30px;\n    border-radius: 16px;\n    box-shadow: 0 20px 40px rgba(0,0,0,0.4);\n    backdrop-filter: blur(10px);\n  }\n\n  .timer-column {\n    flex: 1;\n  }\n\n  .time-digit {\n    display: block;\n    font-family: 'Helvetica Neue', Arial, sans-serif;\n    font-size: 48px;\n    font-weight: 200;\n    color: var(--matte-white);\n    line-height: 1;\n  }\n\n  .time-tag {\n    display: block;\n    font-family: -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 10px;\n    color: var(--muted-grey);\n    letter-spacing: 2px;\n    margin-top: 8px;\n    font-weight: 600;\n  }\n\n  .timer-dot-divider {\n    width: 4px;\n    height: 4px;\n    background-color: var(--solar-gold);\n    border-radius: 50px;\n    margin: 0 10px 18px 10px;\n    opacity: 0.6;\n  }\n\n  @media(max-width: 600px) {\n    .brand-logo-frame { max-width: 320px; }\n    .event-schedule { font-size: 18px; }\n    .premium-timer-wrapper { padding: 20px 10px; }\n    .time-digit { font-size: 32px; }\n    .time-tag { font-size: 9px; letter-spacing: 1px; }\n  }\n</style>\n\n<script>\n  // Dynamic accurate counter set to July 5th, 2026\n  const targetTimeline = new Date(\"July 5, 2026 00:00:00\").getTime();\n\n  const syncTimer = setInterval(function() {\n    const timeNow = new Date().getTime();\n    const timelineGap = targetTimeline - timeNow;\n\n    const calcDays = Math.floor(timelineGap / (1000 * 60 * 60 * 24));\n    const calcHours = Math.floor((timelineGap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n    const calcMins = Math.floor((timelineGap % (1000 * 60 * 60)) / (1000 * 60));\n    const calcSecs = Math.floor((timelineGap % (1000 * 60)) / 1000);\n\n    document.getElementById(\"prem-days\").innerHTML = calcDays < 10 ? \"0\" + calcDays : calcDays;\n    document.getElementById(\"prem-hours\").innerHTML = calcHours < 10 ? \"0\" + calcHours : calcHours;\n    document.getElementById(\"prem-mins\").innerHTML = calcMins < 10 ? \"0\" + calcMins : calcMins;\n    document.getElementById(\"prem-secs\").innerHTML = calcSecs < 10 ? \"0\" + calcSecs : calcSecs;\n\n    if (timelineGap < 0) {\n      clearInterval(syncTimer);\n      document.querySelector(\".premium-timer-wrapper\").innerHTML = \"<div style='color:var(--solar-gold); font-size:18px; letter-spacing:2px; font-weight:bold;'>THE DROP IS LIVE NOW</div>\";\n    }\n  }, 1000);\n</script>",
+        "custom_liquid": "<div class=\"premium-hero-wrapper\">\n  <div class=\"solar-glow-core\"></div>\n  \n  <div class=\"premium-hero-content\">\n   \n\n    <div class=\"event-meta-block\">\n      <span class=\"gold-pill\">EXCLUSIVE DROPS EVENT</span>\n      <p class=\"event-schedule\">SUNDAY, 5TH JULY • 12:00 PM IST</p>\n      <a href=\"https://in.hndrd.co\" class=\"brand-domain-link\">in.hndrd.co</a>\n    </div>\n\n    <div class=\"premium-timer-wrapper\">\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-days\">00</span>\n        <span class=\"time-tag\">DAYS</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-hours\">00</span>\n        <span class=\"time-tag\">HOURS</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-mins\">00</span>\n        <span class=\"time-tag\">MINUTES</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-secs\">00</span>\n        <span class=\"time-tag\">SECONDS</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\n  :root {\n    --bg-dark: #080808;\n    --solar-gold: #ffaa00;\n    --solar-flare: #ff4500;\n    --matte-white: #f5f5f7;\n    --muted-grey: #86868b;\n  }\n\n  .premium-hero-wrapper {\n    background-color: var(--bg-dark);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: relative;\n    padding: 60px 24px;\n    overflow: hidden;\n  }\n\n  /* Sophisticated, subtle atmospheric lighting */\n  .solar-glow-core {\n    position: absolute;\n    width: 500px;\n    height: 500px;\n    background: radial-gradient(circle, rgba(255,100,0,0.08) 0%, rgba(255,170,0,0.03) 50%, transparent 100%);\n    top: 35%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    filter: blur(40px);\n    pointer-events: none;\n  }\n\n  .premium-hero-content {\n    max-width: 900px;\n    width: 100%;\n    text-align: center;\n    z-index: 2;\n  }\n\n  .brand-logo-frame {\n    max-width: 480px;\n    margin: 0 auto 40px auto;\n  }\n\n  .brand-logo-graphic {\n    width: 100%;\n    height: auto;\n    display: block;\n    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.7));\n  }\n\n  .event-meta-block {\n    margin-bottom: 50px;\n  }\n\n  .gold-pill {\n    display: inline-block;\n    border: 1px solid rgba(255, 170, 0, 0.4);\n    color: var(--solar-gold);\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 3px;\n    padding: 6px 16px;\n    border-radius: 50px;\n    background: rgba(255, 170, 0, 0.03);\n    margin-bottom: 20px;\n  }\n\n  .event-schedule {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    color: var(--matte-white);\n    font-size: 24px;\n    font-weight: 300;\n    letter-spacing: 1px;\n    margin: 0 0 8px 0;\n  }\n\n  .brand-domain-link {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    color: var(--muted-grey);\n    text-decoration: none;\n    font-size: 16px;\n    letter-spacing: 0.5px;\n    transition: color 0.3s;\n  }\n  .brand-domain-link:hover {\n    color: var(--solar-gold);\n  }\n\n  /* Minimalist Premium Timer Grid */\n  .premium-timer-wrapper {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    max-width: 640px;\n    margin: 0 auto;\n    background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(10,10,10,0.8) 100%);\n    border: 1px solid rgba(255,255,255,0.05);\n    padding: 30px;\n    border-radius: 16px;\n    box-shadow: 0 20px 40px rgba(0,0,0,0.4);\n    backdrop-filter: blur(10px);\n  }\n\n  .timer-column {\n    flex: 1;\n  }\n\n  .time-digit {\n    display: block;\n    font-family: 'Helvetica Neue', Arial, sans-serif;\n    font-size: 48px;\n    font-weight: 200;\n    color: var(--matte-white);\n    line-height: 1;\n  }\n\n  .time-tag {\n    display: block;\n    font-family: -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 10px;\n    color: var(--muted-grey);\n    letter-spacing: 2px;\n    margin-top: 8px;\n    font-weight: 600;\n  }\n\n  .timer-dot-divider {\n    width: 4px;\n    height: 4px;\n    background-color: var(--solar-gold);\n    border-radius: 50px;\n    margin: 0 10px 18px 10px;\n    opacity: 0.6;\n  }\n\n  @media(max-width: 600px) {\n    .brand-logo-frame { max-width: 320px; }\n    .event-schedule { font-size: 18px; }\n    .premium-timer-wrapper { padding: 20px 10px; }\n    .time-digit { font-size: 32px; }\n    .time-tag { font-size: 9px; letter-spacing: 1px; }\n  }\n</style>\n\n<script>\n  // Dynamic accurate counter set to July 5th, 2026\n  const targetTimeline = new Date(\"July 5, 2026 00:00:00\").getTime();\n\n  const syncTimer = setInterval(function() {\n    const timeNow = new Date().getTime();\n    const timelineGap = targetTimeline - timeNow;\n\n    const calcDays = Math.floor(timelineGap / (1000 * 60 * 60 * 24));\n    const calcHours = Math.floor((timelineGap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n    const calcMins = Math.floor((timelineGap % (1000 * 60 * 60)) / (1000 * 60));\n    const calcSecs = Math.floor((timelineGap % (1000 * 60)) / 1000);\n\n    document.getElementById(\"prem-days\").innerHTML = calcDays < 10 ? \"0\" + calcDays : calcDays;\n    document.getElementById(\"prem-hours\").innerHTML = calcHours < 10 ? \"0\" + calcHours : calcHours;\n    document.getElementById(\"prem-mins\").innerHTML = calcMins < 10 ? \"0\" + calcMins : calcMins;\n    document.getElementById(\"prem-secs\").innerHTML = calcSecs < 10 ? \"0\" + calcSecs : calcSecs;\n\n    if (timelineGap < 0) {\n      clearInterval(syncTimer);\n      document.querySelector(\".premium-timer-wrapper\").innerHTML = \"<div style='color:var(--solar-gold); font-size:18px; letter-spacing:2px; font-weight:bold;'>THE DROP IS LIVE NOW</div>\";\n    }\n  }, 1000);\n</script>",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "multicolumn_9TcDB6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bepxHX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_179b255f-57ec-4abd-ab25-4bbb39243945.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YTmYkn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_e3de6fb0-51b9-4c49-b5da-df863cd4e93f.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9tUM9U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_309a688f-e684-48b1-a9cf-bccf240f2632.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ea3Nwh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_0286ab3a-0d9b-4a93-b2aa-8087aef478c6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_bepxHX",
+        "column_YTmYkn",
+        "column_9tUM9U",
+        "column_ea3Nwh"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -60,6 +128,7 @@
     "main",
     "hero_component_ekdqEn",
     "custom_liquid_xnczKb",
-    "custom_liquid_3gQmGB"
+    "custom_liquid_3gQmGB",
+    "multicolumn_9TcDB6"
   ]
 }
