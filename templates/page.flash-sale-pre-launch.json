@@ -19,6 +19,7 @@
     },
     "hero_component_ekdqEn": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/home_banner_115ab5eb-9cef-4334-b4a9-ae1bba546ed3.png",
@@ -33,185 +34,32 @@
         "padding_bottom": 8
       }
     },
-    "custom_liquid_RfdwcM": {
+    "custom_liquid_xnczKb": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n\n</style>",
-        "color_scheme": "",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<link href=\"https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n\n  body {\n    min-height: 100vh;\n    background: #0a0a0f;\n    font-family: 'Barlow', sans-serif;\n    overflow-x: hidden;\n  }\n\n  .bg-layer {\n    position: fixed;\n    inset: 0;\n    background:\n      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(30,120,255,0.18) 0%, transparent 60%),\n      radial-gradient(ellipse 80% 50% at 50% 110%, rgba(255,100,0,0.22) 0%, transparent 60%),\n      #0a0a0f;\n    z-index: 0;\n  }\n\n  .page {\n    position: relative;\n    z-index: 1;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    padding: 2rem 1rem;\n    gap: 0;\n  }\n\n  /* Top eyebrow */\n  .eyebrow {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 700;\n    font-size: 13px;\n    letter-spacing: 0.25em;\n    text-transform: uppercase;\n    color: rgba(255,255,255,0.45);\n    margin-bottom: 2rem;\n  }\n\n  .eyebrow span {\n    display: inline-block;\n    border: 1px solid rgba(255,255,255,0.15);\n    border-radius: 100px;\n    padding: 6px 18px;\n  }\n\n  /* Logo container */\n  .logo-wrap {\n    margin-bottom: 1.5rem;\n  }\n\n  .logo-wrap img {\n    max-width: 480px;\n    width: 90vw;\n    filter: drop-shadow(0 0 60px rgba(255,130,0,0.35)) drop-shadow(0 0 30px rgba(30,140,255,0.25));\n  }\n\n  /* Tagline */\n  .tagline {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 400;\n    font-size: 18px;\n    letter-spacing: 0.06em;\n    color: rgba(255,255,255,0.55);\n    text-align: center;\n    margin-bottom: 3rem;\n    text-transform: uppercase;\n  }\n\n  .tagline strong {\n    color: rgba(255,255,255,0.9);\n    font-weight: 700;\n  }\n\n  /* Date badge */\n  .date-badge {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-bottom: 2.5rem;\n  }\n\n  .date-pill {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 900;\n    font-size: 22px;\n    letter-spacing: 0.04em;\n    background: linear-gradient(135deg, #ff9a00, #ff5500);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n  }\n\n  .date-divider {\n    width: 1px;\n    height: 20px;\n    background: rgba(255,255,255,0.2);\n  }\n\n  .date-day {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    letter-spacing: 0.15em;\n    color: rgba(255,255,255,0.4);\n    text-transform: uppercase;\n  }\n\n  /* Countdown */\n  .countdown-label {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 700;\n    font-size: 11px;\n    letter-spacing: 0.3em;\n    text-transform: uppercase;\n    color: rgba(255,255,255,0.3);\n    margin-bottom: 1rem;\n    text-align: center;\n  }\n\n  .countdown {\n    display: flex;\n    gap: 16px;\n    align-items: flex-start;\n    margin-bottom: 3.5rem;\n  }\n\n  .cd-unit {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 6px;\n  }\n\n  .cd-box {\n    width: 80px;\n    height: 80px;\n    background: rgba(255,255,255,0.04);\n    border: 1px solid rgba(255,255,255,0.08);\n    border-radius: 10px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .cd-box::before {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 50%);\n    pointer-events: none;\n  }\n\n  .cd-num {\n    font-family: 'Black Han Sans', sans-serif;\n    font-size: 36px;\n    line-height: 1;\n    background: linear-gradient(180deg, #7dd4fc 0%, #ffffff 50%, #fdba74 100%);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    letter-spacing: -0.02em;\n  }\n\n  .cd-lbl {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-size: 10px;\n    font-weight: 700;\n    letter-spacing: 0.2em;\n    text-transform: uppercase;\n    color: rgba(255,255,255,0.3);\n  }\n\n  .cd-sep {\n    font-family: 'Black Han Sans', sans-serif;\n    font-size: 32px;\n    color: rgba(255,255,255,0.15);\n    padding-top: 16px;\n    line-height: 1;\n  }\n\n  /* Divider */\n  .divider {\n    width: 100%;\n    max-width: 400px;\n    height: 1px;\n    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);\n    margin-bottom: 2.5rem;\n  }\n\n  /* Notify section */\n  .notify-block {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 12px;\n    width: 100%;\n    max-width: 380px;\n    margin-bottom: 3rem;\n  }\n\n  .notify-label {\n    font-family: 'Barlow', sans-serif;\n    font-size: 13px;\n    color: rgba(255,255,255,0.35);\n    letter-spacing: 0.02em;\n  }\n\n  .notify-row {\n    display: flex;\n    width: 100%;\n    gap: 0;\n    border-radius: 8px;\n    overflow: hidden;\n    border: 1px solid rgba(255,255,255,0.1);\n  }\n\n  .notify-input {\n    flex: 1;\n    background: rgba(255,255,255,0.04);\n    border: none;\n    outline: none;\n    padding: 12px 16px;\n    font-family: 'Barlow', sans-serif;\n    font-size: 14px;\n    color: rgba(255,255,255,0.8);\n    min-width: 0;\n  }\n\n  .notify-input::placeholder {\n    color: rgba(255,255,255,0.2);\n  }\n\n  .notify-btn {\n    background: linear-gradient(135deg, #ff9a00, #ff5500);\n    border: none;\n    padding: 12px 20px;\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 700;\n    font-size: 13px;\n    letter-spacing: 0.1em;\n    text-transform: uppercase;\n    color: white;\n    cursor: pointer;\n    white-space: nowrap;\n    transition: opacity 0.2s;\n  }\n\n  .notify-btn:hover { opacity: 0.88; }\n\n  .success-msg {\n    display: none;\n    font-size: 13px;\n    color: #4ade80;\n    letter-spacing: 0.05em;\n  }\n\n  /* Bottom brand */\n  .brand-footer {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 6px;\n  }\n\n  .brand-name {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 900;\n    font-size: 20px;\n    letter-spacing: 0.15em;\n    text-transform: uppercase;\n    color: rgba(255,255,255,0.9);\n  }\n\n  .brand-sub {\n    font-family: 'Barlow', sans-serif;\n    font-size: 11px;\n    color: rgba(255,255,255,0.25);\n    letter-spacing: 0.12em;\n    text-transform: uppercase;\n  }\n\n  .brand-link {\n    font-family: 'Barlow', sans-serif;\n    font-size: 11px;\n    color: rgba(255,160,60,0.5);\n    letter-spacing: 0.08em;\n    text-decoration: none;\n    margin-top: 2px;\n  }\n\n  /* Ice accent line */\n  .ice-line {\n    width: 60px;\n    height: 2px;\n    background: linear-gradient(90deg, #7dd4fc, #38bdf8);\n    border-radius: 2px;\n    margin: 0 auto 2rem;\n  }\n\n  /* Snowflake / heat specks */\n  .specks {\n    position: fixed;\n    inset: 0;\n    pointer-events: none;\n    z-index: 0;\n    overflow: hidden;\n  }\n\n  .speck {\n    position: absolute;\n    border-radius: 50%;\n    animation: float linear infinite;\n    opacity: 0;\n  }\n\n  @keyframes float {\n    0%   { transform: translateY(0) rotate(0deg); opacity: 0; }\n    10%  { opacity: 1; }\n    90%  { opacity: 0.5; }\n    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }\n  }\n</style>\n</head>\n<body>\n<div class=\"bg-layer\"></div>\n\n<div class=\"specks\" id=\"specks\"></div>\n\n<div class=\"page\">\n\n  <div class=\"eyebrow\"><span>Flash Sale — Coming Soon</span></div>\n\n  <div class=\"logo-wrap\">\n    <img src=\"/mnt/user-data/uploads/Artboard_1.png\" alt=\"Beat the Heat Sale\" onerror=\"this.style.display='none'; document.getElementById('logo-fallback').style.display='block'\">\n    <div id=\"logo-fallback\" style=\"display:none; font-family:'Black Han Sans',sans-serif; font-size:52px; text-align:center; line-height:1.1;\">\n      <div style=\"background:linear-gradient(180deg,#93c5fd,#7dd4fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;\">BEAT THE</div>\n      <div style=\"background:linear-gradient(180deg,#fb923c,#ef4444); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;\">HEAT</div>\n    </div>\n  </div>\n\n  <p class=\"tagline\">Hundred India's biggest sale of the season &nbsp;·&nbsp; <strong>This Sunday Only</strong></p>\n\n  <div class=\"date-badge\">\n    <div class=\"date-pill\">Sunday, July 5</div>\n    <div class=\"date-divider\"></div>\n    <div class=\"date-day\">in.hndrd.co</div>\n  </div>\n\n  <div class=\"ice-line\"></div>\n\n  <p class=\"countdown-label\">Sale starts in</p>\n\n  <div class=\"countdown\">\n    <div class=\"cd-unit\">\n      <div class=\"cd-box\"><div class=\"cd-num\" id=\"cd-d\">00</div></div>\n      <div class=\"cd-lbl\">Days</div>\n    </div>\n    <div class=\"cd-sep\">:</div>\n    <div class=\"cd-unit\">\n      <div class=\"cd-box\"><div class=\"cd-num\" id=\"cd-h\">00</div></div>\n      <div class=\"cd-lbl\">Hours</div>\n    </div>\n    <div class=\"cd-sep\">:</div>\n    <div class=\"cd-unit\">\n      <div class=\"cd-box\"><div class=\"cd-num\" id=\"cd-m\">00</div></div>\n      <div class=\"cd-lbl\">Mins</div>\n    </div>\n    <div class=\"cd-sep\">:</div>\n    <div class=\"cd-unit\">\n      <div class=\"cd-box\"><div class=\"cd-num\" id=\"cd-s\">00</div></div>\n      <div class=\"cd-lbl\">Secs</div>\n    </div>\n  </div>\n\n  <div class=\"divider\"></div>\n\n  <div class=\"notify-block\">\n    <p class=\"notify-label\">Get notified when the sale goes live</p>\n    <div class=\"notify-row\">\n      <input class=\"notify-input\" type=\"email\" placeholder=\"your@email.com\" id=\"email-inp\">\n      <button class=\"notify-btn\" onclick=\"handleNotify()\">Notify Me</button>\n    </div>\n    <p class=\"success-msg\" id=\"success-msg\">🎉 You're in! We'll ping you when it's live.</p>\n  </div>\n\n  <div class=\"brand-footer\">\n    <div class=\"brand-name\">Hundred India</div>\n    <div class=\"brand-sub\">Badminton Gear · Sportswear</div>\n    <a class=\"brand-link\" href=\"https://in.hndrd.co\" target=\"_blank\">in.hndrd.co</a>\n  </div>\n\n</div>\n\n<script>\n  function pad(n) { return String(n).padStart(2,'0'); }\n\n  function tick() {\n    const now = new Date();\n    const target = new Date('2025-07-05T00:00:00+05:30');\n    const now2026 = new Date('2026-07-05T00:00:00+05:30');\n    const saleDate = now2026;\n    const diff = Math.max(0, saleDate - now);\n    const d = Math.floor(diff / 86400000);\n    const h = Math.floor((diff % 86400000) / 3600000);\n    const m = Math.floor((diff % 3600000) / 60000);\n    const s = Math.floor((diff % 60000) / 1000);\n    document.getElementById('cd-d').textContent = pad(d);\n    document.getElementById('cd-h').textContent = pad(h);\n    document.getElementById('cd-m').textContent = pad(m);\n    document.getElementById('cd-s').textContent = pad(s);\n  }\n\n  tick();\n  setInterval(tick, 1000);\n\n  function handleNotify() {\n    const v = document.getElementById('email-inp').value.trim();\n    if (!v || !v.includes('@')) {\n      document.getElementById('email-inp').style.borderBottom = '1px solid #ef4444';\n      return;\n    }\n    document.querySelector('.notify-row').style.display = 'none';\n    document.getElementById('success-msg').style.display = 'block';\n  }\n\n  const specks = document.getElementById('specks');\n  for (let i = 0; i < 28; i++) {\n    const el = document.createElement('div');\n    el.className = 'speck';\n    const isIce = Math.random() > 0.5;\n    const size = Math.random() * 4 + 2;\n    el.style.cssText = `\n      width:${size}px; height:${size}px;\n      left:${Math.random()*100}%;\n      bottom:${Math.random()*20 - 10}%;\n      background:${isIce ? 'rgba(125,212,252,0.6)' : 'rgba(251,146,60,0.5)'};\n      animation-duration:${Math.random()*8+5}s;\n      animation-delay:${Math.random()*8}s;\n    `;\n    specks.appendChild(el);\n  }\n</script>\n</body>\n</html>",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_dLjrGJ": {
+    "custom_liquid_3gQmGB": {
       "type": "custom-liquid",
-      "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  The Drop You Don’t Miss\n  </h1>\n  <p style=\"margin-top: 3px\">Only 24 hours to catch it. The sale goes live in…</p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n#shopify-section-template--24671440929061__apps_eWhNpr{\nbackground-color: #1c1c1c;\n}\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #02dd80 0%, #567ebd 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 60,
+        "custom_liquid": "<div class=\"premium-hero-wrapper\">\n  <div class=\"solar-glow-core\"></div>\n  \n  <div class=\"premium-hero-content\">\n    <div class=\"brand-logo-frame\">\n      <img src=\"YOUR_LOGO_IMAGE_URL_HERE\" alt=\"Beat The Heat Logo\" class=\"brand-logo-graphic\">\n    </div>\n\n    <div class=\"event-meta-block\">\n      <span class=\"gold-pill\">EXCLUSIVE DROPS EVENT</span>\n      <p class=\"event-schedule\">SUNDAY, 5TH JULY • 12:00 PM IST</p>\n      <a href=\"https://in.hndrd.co\" class=\"brand-domain-link\">in.hndrd.co</a>\n    </div>\n\n    <div class=\"premium-timer-wrapper\">\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-days\">00</span>\n        <span class=\"time-tag\">DAYS</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-hours\">00</span>\n        <span class=\"time-tag\">HOURS</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-mins\">00</span>\n        <span class=\"time-tag\">MINUTES</span>\n      </div>\n      <div class=\"timer-dot-divider\"></div>\n      <div class=\"timer-column\">\n        <span class=\"time-digit\" id=\"prem-secs\">00</span>\n        <span class=\"time-tag\">SECONDS</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\n  :root {\n    --bg-dark: #080808;\n    --solar-gold: #ffaa00;\n    --solar-flare: #ff4500;\n    --matte-white: #f5f5f7;\n    --muted-grey: #86868b;\n  }\n\n  .premium-hero-wrapper {\n    background-color: var(--bg-dark);\n    min-height: 85vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: relative;\n    padding: 60px 24px;\n    overflow: hidden;\n  }\n\n  /* Sophisticated, subtle atmospheric lighting */\n  .solar-glow-core {\n    position: absolute;\n    width: 500px;\n    height: 500px;\n    background: radial-gradient(circle, rgba(255,100,0,0.08) 0%, rgba(255,170,0,0.03) 50%, transparent 100%);\n    top: 35%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    filter: blur(40px);\n    pointer-events: none;\n  }\n\n  .premium-hero-content {\n    max-width: 900px;\n    width: 100%;\n    text-align: center;\n    z-index: 2;\n  }\n\n  .brand-logo-frame {\n    max-width: 480px;\n    margin: 0 auto 40px auto;\n  }\n\n  .brand-logo-graphic {\n    width: 100%;\n    height: auto;\n    display: block;\n    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.7));\n  }\n\n  .event-meta-block {\n    margin-bottom: 50px;\n  }\n\n  .gold-pill {\n    display: inline-block;\n    border: 1px solid rgba(255, 170, 0, 0.4);\n    color: var(--solar-gold);\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 3px;\n    padding: 6px 16px;\n    border-radius: 50px;\n    background: rgba(255, 170, 0, 0.03);\n    margin-bottom: 20px;\n  }\n\n  .event-schedule {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    color: var(--matte-white);\n    font-size: 24px;\n    font-weight: 300;\n    letter-spacing: 1px;\n    margin: 0 0 8px 0;\n  }\n\n  .brand-domain-link {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    color: var(--muted-grey);\n    text-decoration: none;\n    font-size: 16px;\n    letter-spacing: 0.5px;\n    transition: color 0.3s;\n  }\n  .brand-domain-link:hover {\n    color: var(--solar-gold);\n  }\n\n  /* Minimalist Premium Timer Grid */\n  .premium-timer-wrapper {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    max-width: 640px;\n    margin: 0 auto;\n    background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(10,10,10,0.8) 100%);\n    border: 1px solid rgba(255,255,255,0.05);\n    padding: 30px;\n    border-radius: 16px;\n    box-shadow: 0 20px 40px rgba(0,0,0,0.4);\n    backdrop-filter: blur(10px);\n  }\n\n  .timer-column {\n    flex: 1;\n  }\n\n  .time-digit {\n    display: block;\n    font-family: 'Helvetica Neue', Arial, sans-serif;\n    font-size: 48px;\n    font-weight: 200;\n    color: var(--matte-white);\n    line-height: 1;\n  }\n\n  .time-tag {\n    display: block;\n    font-family: -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 10px;\n    color: var(--muted-grey);\n    letter-spacing: 2px;\n    margin-top: 8px;\n    font-weight: 600;\n  }\n\n  .timer-dot-divider {\n    width: 4px;\n    height: 4px;\n    background-color: var(--solar-gold);\n    border-radius: 50px;\n    margin: 0 10px 18px 10px;\n    opacity: 0.6;\n  }\n\n  @media(max-width: 600px) {\n    .brand-logo-frame { max-width: 320px; }\n    .event-schedule { font-size: 18px; }\n    .premium-timer-wrapper { padding: 20px 10px; }\n    .time-digit { font-size: 32px; }\n    .time-tag { font-size: 9px; letter-spacing: 1px; }\n  }\n</style>\n\n<script>\n  // Dynamic accurate counter set to July 5th, 2026\n  const targetTimeline = new Date(\"July 5, 2026 00:00:00\").getTime();\n\n  const syncTimer = setInterval(function() {\n    const timeNow = new Date().getTime();\n    const timelineGap = targetTimeline - timeNow;\n\n    const calcDays = Math.floor(timelineGap / (1000 * 60 * 60 * 24));\n    const calcHours = Math.floor((timelineGap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n    const calcMins = Math.floor((timelineGap % (1000 * 60 * 60)) / (1000 * 60));\n    const calcSecs = Math.floor((timelineGap % (1000 * 60)) / 1000);\n\n    document.getElementById(\"prem-days\").innerHTML = calcDays < 10 ? \"0\" + calcDays : calcDays;\n    document.getElementById(\"prem-hours\").innerHTML = calcHours < 10 ? \"0\" + calcHours : calcHours;\n    document.getElementById(\"prem-mins\").innerHTML = calcMins < 10 ? \"0\" + calcMins : calcMins;\n    document.getElementById(\"prem-secs\").innerHTML = calcSecs < 10 ? \"0\" + calcSecs : calcSecs;\n\n    if (timelineGap < 0) {\n      clearInterval(syncTimer);\n      document.querySelector(\".premium-timer-wrapper\").innerHTML = \"<div style='color:var(--solar-gold); font-size:18px; letter-spacing:2px; font-weight:bold;'>THE DROP IS LIVE NOW</div>\";\n    }\n  }, 1000);\n</script>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "countdown_timer_qzmWRV": {
-      "type": "countdown-timer",
-      "custom_css": [
-        "h2 {font-size: 3rem; font-weight: bolder; margin-bottom: 20px;}"
-      ],
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "",
-        "end_time": "2026-03-01 00:00",
-        "background": "linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 8%)",
-        "text_color": "#40cf85",
-        "padding_top": 10
-      }
-    },
-    "custom_liquid_epaJFd": {
-      "type": "custom-liquid",
-      "custom_css": [],
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n Loot Locked, Unlocks Soon\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>",
-        "color_scheme": "scheme-4",
-        "padding_top": 88,
-        "padding_bottom": 24
-      }
-    },
-    "multicolumn_FHwD3f": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_yApFkL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_e25f643c-bd8d-4e78-8bcc-10b1454bed6b.png",
-            "title": "Smash Season Near",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_N7qwFn": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_74b6a599-0065-4d08-b929-3538925375af.png",
-            "title": "Step In Soon",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_pGWhpA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_14257228-8590-47c4-9858-90bda3f2229a.png",
-            "title": "Inventory Expanding",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rdVqUb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_4_f3818e64-f874-43cf-b04c-f0d6aaf04631.png",
-            "title": "Precision Loading",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_yApFkL",
-        "column_N7qwFn",
-        "column_pGWhpA",
-        "column_rdVqUb"
-      ],
-      "custom_css": [
-        ".title {font-size: 4rem; margin: 0 auto;}",
-        "h3 {color: #0dd981;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 12,
-        "padding_bottom": 60
-      }
-    },
-    "custom_liquid_3etQcY": {
-      "type": "custom-liquid",
-      "custom_css": [],
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\"></p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n  Join the Lobby\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n<!--  <a href=\"/products/phenom\" class=\"ctax\">\n    <span></span>\n  </a>-->\n</section>",
-        "color_scheme": "scheme-4",
-        "padding_top": 12,
-        "padding_bottom": 16
-      }
-    },
-    "apps_eWhNpr": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_4r4T4W": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "640368",
-            "text_color": "#ffffff",
-            "button_background_color": "#3cd986",
-            "button_label_color": "#121212",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 34,
-            "padding_bottom": 35,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_4r4T4W"
-      ],
-      "custom_css": [],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "custom_liquid_n8AY6p": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<h1 data-text= \"Stay ready.\">\n</h1>\n<style>\n\nh1{\n  font-family: 'Teko', sans-serif;\n  text-transform: uppercase;\n  font-size: 10rem;\n  text-align: center;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  margin: 0;\n  background: white;\n  position: relative;\n  background: #000;\n  color: #555;\n}\n\nh1:before{\n  content: attr(data-text);\n  position: ;\n  background: #20d482;\n  -webkit-background-clip: text;\n  color: transparent;\n  background-size: 100% 90%;\n  line-height: 0.9;\n  clip-path: ellipse(120px 120px at -2.54% -9.25%);\n  animation: swing 5s infinite;\n  animation-direction: alternate;\n}\n\n@keyframes swing{\n  0%{\n     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)\n    clip-path: ellipse(120px 120px at -2.54% -9.25%)\n  }\n  50%{\n    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);\n    clip-path: ellipse(120px 120px at 49.66% 64.36%);\n\n  }\n  100%{\n     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);\n    clip-path: ellipse(120px 120px at 102.62% -1.61%);\n  }\n}\n\n\n</style>",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 76,
-        "padding_bottom": 80
       }
     }
   },
   "order": [
     "main",
     "hero_component_ekdqEn",
-    "custom_liquid_RfdwcM",
-    "custom_liquid_dLjrGJ",
-    "countdown_timer_qzmWRV",
-    "custom_liquid_epaJFd",
-    "multicolumn_FHwD3f",
-    "custom_liquid_3etQcY",
-    "apps_eWhNpr",
-    "custom_liquid_n8AY6p"
+    "custom_liquid_xnczKb",
+    "custom_liquid_3gQmGB"
   ]
 }
