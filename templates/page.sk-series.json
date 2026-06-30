@@ -33,6 +33,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_w6X489": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line (forced height, always visible) -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      RACKETS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    Unlock peak performance with the SK Collection’s signature models:\n    <strong>Nitrix Pro</strong> and\n    <strong>Nitrix Attack</strong>.\n  </p>\n\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_DXfR7X": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -49,18 +59,9 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_w6X489": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line (forced height, always visible) -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      RACKETS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    Unlock peak performance with the SK Collection’s signature models:\n    <strong>Nitrix Pro</strong> and\n    <strong>Nitrix Attack</strong>.\n  </p>\n\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_cyRGkQ": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line (forced height, always visible) -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      RACKETS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    Unlock peak performance with the SK Collection’s signature models:\n    <strong>Nitrix Pro</strong> and\n    <strong>Nitrix Attack</strong>.\n  </p>\n\n</div>",
@@ -161,7 +162,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      SHOES\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection brings unmatched comfort and court control with:\n    <strong>Quantum</strong> and\n    <strong>Quantum Boom</strong>.\n  </p>\n\n</div>",
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      SHOES\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection brings unmatched comfort and court control with:\n    <strong>Quantum</strong> and\n    <strong>HyperCourt</strong>.\n  </p>\n\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -184,9 +185,11 @@
       "settings": {
         "title": "",
         "products": [
+          "quantum",
+          "hyper-court",
           "quantum-boom"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
