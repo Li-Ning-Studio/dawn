@@ -22,7 +22,7 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/1_10dbcfaf-4188-4d88-b5db-af7567dc55d8.png",
-        "mobile_image": "shopify://shop_images/09_R_Banner.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_2_f47bd6e4-76d1-4fa4-9111-57c9f77a78c2.png",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -33,14 +33,14 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_w6X489": {
+    "custom_liquid_n3D4mK": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line (forced height, always visible) -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      RACKETS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    Unlock peak performance with the SK Collection’s signature models:\n    <strong>Nitrix Pro</strong> and\n    <strong>Nitrix Attack</strong>.\n  </p>\n\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 0
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/sk_logo_white.jpg?v=1782811541\"\n         alt=\"SK Collection Logo\"\n         style=\"height:70px; width:auto; display:block;\">\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Heading content\n  </h1>\n  <p style=\"margin-top: 3px\">Short descriptive content</p>\n  <a href=\"/collections/sk-collection\" class=\"ctax\">\n    <span>shop sk series</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #3DCEBD;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #3DCEBD 0%, #fff 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 76,
+        "padding_bottom": 100
       }
     },
     "hero_component_DXfR7X": {
@@ -48,12 +48,12 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/2_650b13a2-2f45-47e3-a856-7672416325f7.png",
-        "mobile_image": "shopify://shop_images/01_R_Banner_c70c9b45-6d14-4ff3-bdc1-8b1e31d0b57b.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_3_54e49c62-438d-4f22-9acd-1492443c6b49.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/nitrix-pro-4u",
+        "link_to": "shopify://collections/sk-rackets",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -61,28 +61,21 @@
     },
     "custom_liquid_cyRGkQ": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line (forced height, always visible) -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      RACKETS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    Unlock peak performance with the SK Collection’s signature models:\n    <strong>Nitrix Pro</strong> and\n    <strong>Nitrix Attack</strong>.\n  </p>\n\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/sk_logo_white.jpg?v=1782811541\"\n         alt=\"SK Collection Logo\"\n         style=\"height:70px; width:auto; display:block;\">\n\n    <!-- Vertical Line (forced height, always visible) -->\n    <div style=\"width:2px; height:40px; background:#fff; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#3DCEBD;\">\n      RACKETS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#EBF4F5; font:inherit;\">\n    Unlock peak performance with the SK Collection’s signature models:\n    <strong>Nitrix Pro</strong> and\n    <strong>Nitrix Attack</strong>.\n  </p>\n\n</div>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 64,
         "padding_bottom": 0
-      }
-    },
-    "custom_liquid_Yqjmpj": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"pro-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Pro.png?v=1764227453\" \n    alt=\"Pro Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:550; color:#666;\">\n    Trusted by Srikanth Kidambi himself, a choice for players who thrive on attacking opportunities.\n  </p>\n</div>",
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "swipeable_products_6XUmtV": {
       "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #8deef3;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
         "title": "",
@@ -93,51 +86,7 @@
           "nitrix-attack-4u"
         ],
         "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_fjF8Ut": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/02_M_Banner_371d0030-9b4f-40f2-9ff5-43f887842a83.jpg",
-        "mobile_image": "shopify://shop_images/02_R_Banner_54a2d663-c98e-4c73-ad6e-7aa743e1be83.jpg",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/nitrix-attack-4u",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_9BwbWd": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"attack-logo-wrapper\" style=\"text-align:center; padding:20px 0;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Logo_Attack.png?v=1764245037\" \n    alt=\"Attack Logo\"\n    style=\"max-width:220px; width:100%; height:auto; margin:0 auto; display:block;\"\n  >\n  <p style=\"margin-top:18px; margin-bottom:0; font-size:16px; font-weight:600; color:#666;\">\n    This is one of badminton’s fiercest attackers, a racket built to play bold.\n  </p>\n</div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_yjzDXt": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "",
-        "products": [
-          "nitrix-attack-4u",
-          "nitrix-attack-5u"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -147,12 +96,12 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/3_1406d958-e111-4e2f-97e9-ed1812e0b8b2.png",
-        "mobile_image": "shopify://shop_images/03_R_Banner_00c3c539-7cde-4666-bfe5-5e0f62045562.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_4_60dba412-6e63-4615-81d7-806f21cbf7d1.png",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://products/hyper-court",
+        "link_to": "shopify://collections/sk-series-shoes",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -162,10 +111,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      SHOES\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection brings unmatched comfort and court control with:\n    <strong>Quantum</strong> and\n    <strong>HyperCourt</strong>.\n  </p>\n\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/sk_logo_white.jpg?v=1782811541\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#fff; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#3DCEBD;\">\n      SHOES\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#EBF4F5; font:inherit;\">\n    The SK Collection brings unmatched comfort and court control with:\n    <strong>Quantum</strong> and\n    <strong>HyperCourt</strong>.\n  </p>\n\n</div>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 76,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_anVzbL": {
@@ -181,6 +130,11 @@
     },
     "swipeable_products_yXCDRr": {
       "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #8deef3;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
         "title": "",
@@ -190,7 +144,7 @@
           "quantum-boom"
         ],
         "show_color_variants": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -223,27 +177,12 @@
         "padding_bottom": 0
       }
     },
-    "swipeable_products_cEUfVj": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "",
-        "products": [
-          "quantum"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "hero_component_xtgg4C": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/4_e83926bf-5e78-4fbd-a56f-fbcf73facb84.png",
-        "mobile_image": "shopify://shop_images/07_R_Banner.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_5_45c71405-de41-4f99-9d2a-f2d7f5d4eb7b.png",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -258,28 +197,19 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      GEAR BAGS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection includes a wide range of kitbags and backpacks, built for players who need space, durability and smart storage.\n  </p>\n\n</div>",
-        "color_scheme": "",
-        "padding_top": 24,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_3tfAzt": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/sk_logo_white.jpg?v=1782811541\"\n         alt=\"SK Collection Logo\"\n         style=\"height:60px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#fff; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#3DCEBD;\">\n      GEAR BAGS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#EBF4F5; font:inherit;\">\n    The SK Collection includes a wide range of kitbags and backpacks, built for players who need space, durability and smart storage.\n  </p>\n\n</div>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 96,
+        "padding_bottom": 56
       }
     },
     "swipeable_products_dNzaaM": {
       "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #8deef3;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
         "title": "",
@@ -290,7 +220,7 @@
           "magnum-kit-bag"
         ],
         "show_color_variants": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -300,7 +230,7 @@
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/5_fcfca534-9b16-470d-aa4f-ccc39b40e8a3.png",
-        "mobile_image": "shopify://shop_images/09_R_Banner.png",
+        "mobile_image": "shopify://shop_images/Artboard_6_6bce417a-aa51-4379-9e05-44f8ba8347f7.png",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -315,14 +245,19 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/SK.png?v=1764322051\"\n         alt=\"SK Collection Logo\"\n         style=\"height:50px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#000; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#000;\">\n      APPARELS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#333; font:inherit;\">\n    The SK Collection offers a full range of apparels designed for comfort, performance and everyday training.\n  </p>\n\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "custom_liquid": "<div style=\"text-align:center; font:inherit; background:transparent; padding:20px 10px;\">\n\n  <!-- Logo + Line + Title -->\n  <div style=\"display:inline-flex; align-items:center; gap:20px;\">\n\n    <!-- Logo -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/sk_logo_white.jpg?v=1782811541\"\n         alt=\"SK Collection Logo\"\n         style=\"height:60px; width:auto; display:block;\">\n\n    <!-- Vertical Line -->\n    <div style=\"width:2px; height:40px; background:#fff; display:block;\"></div>\n\n    <!-- Title -->\n    <div style=\"font-size:26px; font-weight:700; color:#3DCEBD;\">\n      APPARELS\n    </div>\n\n  </div>\n\n  <!-- Description -->\n  <p style=\"margin-top:16px; font-size:16px; font-weight:400; color:#EBF4F5; font:inherit;\">\n    The SK Collection offers a full range of apparels designed for comfort, performance and everyday training.\n  </p>\n\n</div>",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 64,
+        "padding_bottom": 80
       }
     },
     "swipeable_products_qArrFX": {
       "type": "swipeable-products",
+      "custom_css": [
+        "img {background: #8deef3;}",
+        "svg {color: black;}",
+        ".media {border-radius: 0;}"
+      ],
       "name": "Swipeable Products",
       "settings": {
         "title": "",
@@ -331,13 +266,39 @@
           "phantom-t-shirt",
           "skyline-motion-t-shirt"
         ],
-        "show_color_variants": false,
-        "color_scheme": "",
+        "show_color_variants": true,
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "padding_top": 8,
         "padding_bottom": 20
       }
     },
-    "hero_video_component_EzEn8P": {
+    "hero_component_qHTNzD": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/6_38f77af9-6347-4b79-8cf0-6917e4566306.png",
+        "mobile_image": "shopify://shop_images/Artboard_7_ac34a0cf-1c5d-4f93-9453-bb291efaf746.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/sk-collection",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_MUDWHB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\npadding: 0 10px;\n  \"\n>\n  <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/sk_logo_white.jpg?v=1782811541\"\n         alt=\"SK Collection Logo\"\n         style=\"height:70px; width:auto; display:block;\">\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n   Heading Content\n  </h1>\n  <p style=\"margin-top: 3px\"></p>\n  <a href=\"/collections/sk-collection\" class=\"ctax\">\n    <span>shop all</span>\n  </a>\n</section>\n\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 96,
+        "padding_bottom": 100
+      }
+    },
+    "hero_video_component_UPamrr": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
       "settings": {
@@ -357,28 +318,24 @@
   "order": [
     "main",
     "hero_component_dKYM7L",
-    "custom_liquid_w6X489",
+    "custom_liquid_n3D4mK",
     "hero_component_DXfR7X",
     "custom_liquid_cyRGkQ",
-    "custom_liquid_Yqjmpj",
     "swipeable_products_6XUmtV",
-    "hero_component_fjF8Ut",
-    "custom_liquid_9BwbWd",
-    "swipeable_products_yjzDXt",
     "hero_component_rfQT4Q",
     "custom_liquid_Ta9NTP",
     "custom_liquid_anVzbL",
     "swipeable_products_yXCDRr",
     "hero_component_AC3rGD",
     "custom_liquid_qViB8L",
-    "swipeable_products_cEUfVj",
     "hero_component_xtgg4C",
     "custom_liquid_BX8yaV",
-    "hero_component_3tfAzt",
     "swipeable_products_dNzaaM",
     "hero_component_NXADy7",
     "custom_liquid_thhWYE",
     "swipeable_products_qArrFX",
-    "hero_video_component_EzEn8P"
+    "hero_component_qHTNzD",
+    "custom_liquid_MUDWHB",
+    "hero_video_component_UPamrr"
   ]
 }
