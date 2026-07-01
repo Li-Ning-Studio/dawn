@@ -52,20 +52,10 @@
       "type": "media",
       "name": "Media",
       "settings": {
-        "desktop_image": "shopify://shop_images/1_549687ca-91f2-4818-b210-bd458dc196bb.jpg",
+        "desktop_image": "shopify://shop_images/ChatGPT_Image_Jul_1_2026_11_31_32_AM.png",
         "mobile_image": "shopify://shop_images/Artboard_1_d9d97431-4eb3-4e32-bf56-36191437b2f3.jpg",
         "color_scheme": "scheme-4",
         "padding_top": 0,
-        "padding_bottom": 60
-      }
-    },
-    "custom_liquid_YFByhU": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 10px;\n  \"\nclass=\"main-sec-custom1\"\n>\n  <p style=\"margin-bottom: 0\">EXTRA STRONG</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title1\">\n  Built to Take the Load\n  </h1>\n  <p style=\"margin-top: 3px\"> A solid frame that doesn’t flinch at higher tensions or heavier shots.</p>\n  <a href=\"/collections/predator-extra-strong\" class=\"cta1\">\n    <span>Start Striking</span>\n  </a>\n  \n</section>\n\n<style>\np{\nz-index:2;\n}\n\n  .cta1 {\n    margin-top: 1.7rem;\n    background: transparent;\n    border: 1.5px solid #3bc400;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #3bc400;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta1:hover{\nbackground:#003801;\ncolor: white;\n}\n  .title1 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #3bc400 40%, #2f9c00 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title1 {\n      font-size: 6rem;\n    }\n.main-sec-custom1 video{\n  height: 44%;\n  \n}\n  }\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 44,
         "padding_bottom": 44
       }
     },
@@ -102,6 +92,7 @@
     },
     "media_GeChN3": {
       "type": "media",
+      "disabled": true,
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/2_cd62c7bb-9bf5-4616-96cf-f050806256b7.jpg",
@@ -109,16 +100,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "custom_liquid_BpUR3h": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\nmargin: 0 10px;\n  \"\nclass=\"main-sec-custom2\"\n>\n  <p style=\"margin-bottom: 0\"> EXTREME</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1px\" class=\"title2\">\n  Extreme Means No Mercy\n  </h1>\n  <p style=\"margin-top: 3px\">Holds brutal string tension so your hardest hits don’t lose their edge.</p>\n  <a href=\"/collections/predator-extreme\" class=\"cta2\">\n    <span>Play Extreme</span>\n  </a>\n  \n</section>\n\n<style>\n\n\n  .cta2 {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #fa742b;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #fa742b;\n    text-decoration: none;\n    font-size: 1.5rem;\nz-index:1;\ntransition: 0.5s ease;\n  }\n.cta2:hover{\nbackground:#4b1208;\ncolor:white;\n}\n\n  .title2 {\n    font-size: 3.2rem;\n   background-image: linear-gradient(-225deg, #fa742b 40%, #ae3c13 90%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\nz-index:1;\n  }\n.main-sec-custom p{\nz-index:1;\n}\n  @media screen and (min-width: 750px) {\n    .title2 {\n      font-size: 6rem;\n    }\n.main-sec-custom video{\n  height: 65%;\n  \n}\n  }\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "custom_liquid_NxgerD": {
@@ -285,12 +266,10 @@
     "custom_liquid_jA6bpj",
     "custom_liquid_Xr46mV",
     "media_QrLECU",
-    "custom_liquid_YFByhU",
     "custom_liquid_dQXKBm",
     "custom_liquid_6UExMe",
     "custom_liquid_wEPQLr",
     "media_GeChN3",
-    "custom_liquid_BpUR3h",
     "custom_liquid_NxgerD",
     "custom_liquid_YKPRxb",
     "collapsible_content_TM36Gc",
