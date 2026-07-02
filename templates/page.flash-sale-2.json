@@ -17,25 +17,35 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_XWmPHf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 2b: Sticky bottom countdown bar (alt style). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-sticky-bar{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --blue-1:#0a3fb0; --blue-2:#1f6bff; --ink:#0b0b0c; --white:#ffffff;\n    position:fixed; left:0; right:0; bottom:0; z-index:999;\n    display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap;\n    background:linear-gradient(90deg, var(--ink) 0%, #1a1a1d 100%);\n    border-top:3px solid var(--orange-1);\n    padding:12px 20px;\n    font-family:'Inter',sans-serif;\n    box-shadow:0 -10px 30px rgba(0,0,0,.35);\n    transform:translateY(0);\n    transition:transform .3s ease;\n    box-sizing:border-box;\n  }\n  .hb-sticky-bar *{box-sizing:border-box;}\n  .hb-sticky-bar.hb-hide{transform:translateY(100%);}\n\n  .hb-sb-msg{display:flex; align-items:center; gap:10px;}\n  .hb-sb-dot{width:9px; height:9px; border-radius:50%; background:var(--orange-1); box-shadow:0 0 0 4px rgba(255,90,31,.25); animation:hb-pulse 1.4s ease-in-out infinite;}\n  @keyframes hb-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.25);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.08);} }\n  .hb-sb-msg span{font-weight:700; font-size:13px; color:var(--white); letter-spacing:.2px;}\n  .hb-sb-msg strong{color:var(--orange-2); font-weight:800;}\n\n  .hb-sb-timer{display:flex; align-items:center; gap:6px;}\n  .hb-sb-seg{\n    background:linear-gradient(160deg, var(--blue-2), var(--blue-1));\n    border-radius:8px; padding:6px 10px; min-width:44px; text-align:center;\n  }\n  .hb-sb-seg .hb-n{font-family:'Anton',sans-serif; font-size:18px; color:var(--white); line-height:1;}\n  .hb-sb-seg .hb-u{font-size:8px; font-weight:700; letter-spacing:.5px; color:#cfe0ff; text-transform:uppercase;}\n  .hb-sb-colon{font-family:'Anton',sans-serif; color:#555; font-size:16px;}\n\n  .hb-sb-cta{\n    background:var(--orange-1); color:var(--white); font-weight:800; font-size:13px;\n    letter-spacing:.3px; padding:11px 24px; border-radius:30px; text-decoration:none;\n    white-space:nowrap;\n  }\n  .hb-sb-close{\n    background:none; border:none; color:#7a7a80; font-size:18px; cursor:pointer; line-height:1;\n    padding:4px 6px;\n  }\n  .hb-sb-close:hover{color:#fff;}\n\n  body{padding-bottom:70px;} /* keeps page content clear of the fixed bar */\n\n  @media (max-width:640px){\n    .hb-sticky-bar{gap:12px; padding:10px 14px;}\n    .hb-sb-msg span{font-size:11.5px;}\n    .hb-sb-seg{min-width:36px; padding:5px 7px;}\n    .hb-sb-seg .hb-n{font-size:15px;}\n    .hb-sb-cta{padding:9px 16px; font-size:12px;}\n  }\n</style>\n\n<div class=\"hb-sticky-bar\" id=\"hb-sticky-bar\">\n  <div class=\"hb-sb-msg\">\n    <span class=\"hb-sb-dot\"></span>\n    <span><strong>BEAT THE HEAT</strong> ends in</span>\n  </div>\n\n  <div class=\"hb-sb-timer\" id=\"hb-sticky-timer\">\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"hrs\">14</div><div class=\"hb-u\">Hrs</div></div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"min\">32</div><div class=\"hb-u\">Min</div></div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"sec\">08</div><div class=\"hb-u\">Sec</div></div>\n  </div>\n\n \n  \n</div>\n\n<script>\n (function(){\n    // Countdown target: July 6, 2026, 12:00 AM (local time)\n    var end = new Date(2026, 6, 6, 0, 0, 0);\n    var bar = document.getElementById('hb-sticky-bar');\n \n    function tick(){\n      var diff = Math.max(0, end - new Date());\n      var h = String(Math.floor(diff/3600000)).padStart(2,'0');\n      var m = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');\n      var s = String(Math.floor((diff%60000)/1000)).padStart(2,'0');\n      bar.querySelector('[data-unit=\"hrs\"]').textContent = h;\n      bar.querySelector('[data-unit=\"min\"]').textContent = m;\n      bar.querySelector('[data-unit=\"sec\"]').textContent = s;\n      if(diff <= 0){ bar.classList.add('hb-hide'); clearInterval(timer); }\n    }\n    tick();\n    var timer = setInterval(tick, 1000);\n \n    document.getElementById('hb-sticky-close').addEventListener('click', function(){\n      bar.classList.add('hb-hide');\n      document.body.style.paddingBottom = '0';\n    });\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_video_component_i9HaWU": {
       "type": "hero-video-component",
-      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
-        "video": "shopify://files/videos/yt_a6cffc47-4ea9-4570-ab1c-7051eba973c9.mp4",
-        "mobile_video": "shopify://files/videos/sq_d55f1286-826a-4555-bee5-f96c4916bc09.mp4",
+        "video": "shopify://files/videos/Banner_f7981c30-30ec-4092-bbbc-526a4892b398.mp4",
+        "mobile_video": "shopify://files/videos/Banner R_b2de4604-b4a9-4c52-8593-049827b17231.mp4",
         "subtitle": "",
         "title": "",
         "description": "",
         "button_text": "",
         "link_to": "",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-b7e439ba-31a9-4c3f-af23-2041822a8f4a",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
     "hero_component_AFhdP9": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/01_4b3b2f6b-fd23-4b10-a4c2-566e9c00939b.jpg",
@@ -50,6 +60,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_eHfdCT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 1b: Summer's Final Countdown (text-only). Paste into a Shopify \"Custom Liquid\" section, right below the hero. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-final-countdown{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    position:relative;\n    background:var(--ink);\n    padding:60px 24px;\n    text-align:center;\n    overflow:hidden;\n    font-family:'Inter',sans-serif;\n    box-sizing:border-box;\n  }\n  .hb-final-countdown *{box-sizing:border-box;}\n\n  /* subtle moving diagonal streaks, no images used */\n  .hb-final-countdown::before{\n    content:\"\";\n    position:absolute; inset:-20%;\n    background:repeating-linear-gradient(115deg, rgba(255,90,31,.06) 0 2px, transparent 2px 90px);\n    pointer-events:none;\n  }\n  .hb-final-countdown::after{\n    content:\"\";\n    position:absolute; left:50%; top:50%; width:900px; height:900px;\n    transform:translate(-50%,-50%);\n    background:radial-gradient(circle, rgba(255,138,31,.14) 0%, transparent 65%);\n    pointer-events:none;\n  }\n\n  .hb-fc-inner{position:relative; z-index:2; max-width:820px; margin:0 auto;}\n\n  .hb-fc-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:22px;\n  }\n  .hb-fc-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-fc-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-fc-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-fc-heading{\n    font-family:'Anton',sans-serif;\n    text-transform:uppercase;\n    line-height:1.2;\n    font-size:clamp(44px, 7vw, 92px);\n    color:var(--white);\n    margin:0;\n  }\n  .hb-fc-heading .hb-hl{\n    background:linear-gradient(180deg,#fff6c8 0%, #ffb31f 45%, #ff4d00 100%);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n\n  .hb-fc-sub{\n    margin:26px auto 20px;\n    max-width:460px;\n    font-size:clamp(16px, 2vw, 20px);\n    font-weight:600;\n    color:#c9c9cd;\n  }\n  .hb-fc-sub b{color:var(--white); font-weight:800;}\n\n  .hb-fc-rule{\n    width:60px; height:3px; background:var(--orange-1); margin:34px auto; border-radius:2px;\n  }\n\n  .hb-fc-cta{\n    display:inline-flex; align-items:center; gap:10px;\n    background:var(--orange-1); color:var(--white);\n    font-weight:800; font-size:16px; letter-spacing:.4px;\n    padding:18px 42px; border-radius:50px;\n    text-decoration:none;\n    box-shadow:0 10px 28px rgba(255,90,31,.35);\n    transition:transform .18s ease, box-shadow .18s ease;\n  }\n  .hb-fc-cta:hover{ transform:translateY(-2px); box-shadow:0 14px 34px rgba(255,90,31,.45); }\n  .hb-fc-cta svg{width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.5;}\n\n  @media (max-width:640px){\n    .hb-final-countdown{padding:80px 20px;}\n  }\n</style>\n\n<section class=\"hb-final-countdown\">\n  <div class=\"hb-fc-inner\">\n    <div class=\"hb-fc-eyebrow\"><span class=\"hb-dot\"></span>24 hours only</div>\n    <h2 class=\"hb-fc-heading\">Summer's <span class=\"hb-hl\">Final</span> Countdown</h2>\n    <p class=\"hb-fc-sub\">One day. <b>The biggest deals of summer.</b> Then they're gone.</p>\n    <div class=\"hb-fc-rule\"></div>\n    <a href=\"#products\" class=\"hb-fc-cta\">\n      Don't Wait\n      <svg viewBox=\"0 0 24 24\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg>\n    </a>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "multicolumn_M8qycr": {
       "type": "multicolumn",
       "blocks": {
@@ -59,7 +79,7 @@
             "image": "shopify://shop_images/Artboard_1_0172f986-0805-4560-a104-64770cbd7aa9.jpg",
             "title": "",
             "text": "",
-            "link_label": "Content",
+            "link_label": "Smash Zone",
             "link": ""
           }
         },
@@ -69,7 +89,7 @@
             "image": "shopify://shop_images/Artboard_2_75838ed6-da00-40ad-ab80-47eae6300acc.jpg",
             "title": "",
             "text": "",
-            "link_label": "Content",
+            "link_label": "Sixer Season",
             "link": ""
           }
         },
@@ -79,7 +99,7 @@
             "image": "shopify://shop_images/Artboard_3_e9f47073-f221-485b-b66c-798f83483c82.jpg",
             "title": "",
             "text": "",
-            "link_label": "Content",
+            "link_label": "Paddle Party",
             "link": ""
           }
         },
@@ -101,9 +121,10 @@
         "column_p3rQT9"
       ],
       "custom_css": [
-        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
         ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #000; font-size: 2rem; letter-spacing: 1px;}"
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -116,10 +137,10 @@
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 68,
+        "padding_top": 44,
         "padding_bottom": 68
       }
     },
@@ -132,7 +153,7 @@
             "image": "shopify://shop_images/Artboard_1_76cf47e8-1423-49a3-bb42-e22465f92d40.jpg",
             "title": "",
             "text": "",
-            "link_label": "Content",
+            "link_label": "Swing Things",
             "link": ""
           }
         },
@@ -142,7 +163,7 @@
             "image": "shopify://shop_images/Artboard_2_eea6a6c1-9281-4df8-ac6a-6f4e980af3ff.jpg",
             "title": "",
             "text": "",
-            "link_label": "Content",
+            "link_label": "Footwork Flex",
             "link": ""
           }
         },
@@ -152,7 +173,7 @@
             "image": "shopify://shop_images/Artboard_3_6d047f16-20aa-4a2f-914c-c80ff8cf9947.jpg",
             "title": "",
             "text": "",
-            "link_label": "Content",
+            "link_label": "Fit The Kit",
             "link": ""
           }
         },
@@ -162,7 +183,7 @@
             "image": "shopify://shop_images/Artboard_4_7d81ffd7-7487-4c5d-ad9c-840646d6241d.jpg",
             "title": "",
             "text": "",
-            "link_label": "Content",
+            "link_label": "Paddle Pop",
             "link": ""
           }
         }
@@ -174,10 +195,10 @@
         "column_dNLkwP"
       ],
       "custom_css": [
-        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
         ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #000; font-size: 1.8rem; letter-spacing: 1px;}",
-        "li {margin-bottom: 20px;}"
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -190,14 +211,118 @@
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 24,
-        "padding_bottom": 68
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_eiKLAx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 4: Scrolling marquee strip. Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-strip{\n    --blue-1:#0a3fb0; --blue-2:#1f6bff; --ink:#0b0b0c; --white:#ffffff;\n    background:linear-gradient(90deg,var(--blue-1),var(--blue-2)); padding:16px 0; overflow:hidden; white-space:nowrap;\n    border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); box-sizing:border-box;\n  }\n  .hb-strip *{box-sizing:border-box;}\n  .hb-strip-track{display:inline-flex; gap:40px; animation:hb-scroll 22s linear infinite;}\n  .hb-strip-track span{font-family:'Anton',sans-serif; font-size:22px; text-transform:uppercase; letter-spacing:1px; color:var(--white);}\n  @keyframes hb-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }\n  @media (prefers-reduced-motion: reduce){ .hb-strip-track{animation:none;} }\n</style>\n\n<div class=\"hb-strip\">\n  <div class=\"hb-strip-track\">\n    <span>BEAT THE HEAT ★ UPTO 70% OFF ★ 24 HRS ONLY ★  COMBO OFFERS ★</span>\n    <span>BEAT THE HEAT ★ UPTO 70% OFF ★ 24 HRS ONLY ★  COMBO OFFERS ★</span>\n<span>BEAT THE HEAT ★ UPTO 70% OFF ★ 24 HRS ONLY ★ COMBO OFFERS ★</span>\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "hero_component_ihqe7q": {
+      "type": "hero-component",
+      "custom_css": [
+        "h3,p {color: white !important;}",
+        "h3 {margin-top: 40px !important;}",
+        ".button {background: radial-gradient( circle, var(--main-bg-color) 0%, rgba(0, 0, 0, 0) 95% ), linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px) !important; background-size: cover, 15px 15px, 15px 15px !important; background-position: center center, center center, center center !important; border-radius: 0 !important;}"
+      ],
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/06_d61b35ec-23bc-42cb-9f58-63dc57defe16.jpg",
+        "mobile_image": "shopify://shop_images/06_Copy.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://collections/buy-1-get-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_98bxMi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 8: Combo Kits / Buy More Save More. Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-combo{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f;\n    --blue-1:#0a3fb0; --blue-2:#1f6bff; --sky:#8fd7ff;\n    --ink:#0b0b0c; --white:#ffffff;\n    background:var(--ink); padding:90px 24px 20px; font-family:'Inter',sans-serif; box-sizing:border-box;\n    position:relative; overflow:hidden;\n  }\n  .hb-combo *{box-sizing:border-box;}\n  .hb-combo-inner{max-width:1200px; margin:0 auto; position:relative; z-index:2;}\n\n  /* ---- text header (replaces banner) ---- */\n  .hb-combo-header{\n    text-align:center;\n    max-width:640px;\n    margin:0 auto 56px;\n  }\n  .hb-combo-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:18px;\n  }\n  .hb-combo-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-combo-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-combo-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-combo-heading{\n    font-family:'Anton',sans-serif; text-transform:uppercase; line-height:1.2;\n    font-size:clamp(38px,5.5vw,66px); margin:0;\n  }\n  .hb-combo-heading .hb-l1{\n    background:linear-gradient(180deg,#eaf6ff, #ffffff 55%, #cfe9ff);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n  .hb-combo-heading .hb-l2{\n    background:linear-gradient(180deg,#ff8a1f, #ff5a1f 60%, #ffc61f);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n  .hb-combo-sub{margin-top:18px; color:#a9a9ad; font-weight:600; font-size:15px; line-height:1.5;}\n  .hb-combo-sub b{color:var(--white); font-weight:800;}\n\n  /* ---- step guide ---- */\n  .hb-steps{\n    display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;\n    margin-bottom:48px;\n  }\n  .hb-step{\n    display:flex; align-items:center; gap:10px;\n    background:#151517; border:1px solid #232326; border-radius:40px;\n    padding:10px 18px 10px 10px;\n  }\n  .hb-step .hb-num{\n    width:26px; height:26px; border-radius:50%; background:var(--orange-1); color:#fff;\n    font-family:'Anton',sans-serif; font-size:13px; display:flex; align-items:center; justify-content:center;\n  }\n  .hb-step p{font-size:13px; font-weight:700; color:#d8d8db; margin:0;}\n  .hb-step p b{color:var(--orange-2);}\n  .hb-step-arrow{color:#3d3d40; font-size:16px;}\n\n \n</style>\n\n<section class=\"hb-combo\">\n  <div class=\"hb-combo-inner\">\n\n    <!-- Text header -->\n    <div class=\"hb-combo-header\">\n      <div class=\"hb-combo-eyebrow\"><span class=\"hb-dot\"></span>Combo Offers</div>\n      <h2 class=\"hb-combo-heading\">\n        <span class=\"hb-l1\">Buy More.</span> <span class=\"hb-l2\">Save More.</span>\n      </h2>\n      <p class=\"hb-combo-sub\">Pick 2 products for exclusive savings. <b>Add a 3rd for even bigger discounts.</b> Mix rackets, shoes &amp; kit bags across 3 combo tiers.</p>\n    </div>\n\n    <!-- Step guide -->\n    <div class=\"hb-steps\">\n      <div class=\"hb-step\"><span class=\"hb-num\">1</span><p>Pick a <b>combo tier</b></p></div>\n      <span class=\"hb-step-arrow\">→</span>\n      <div class=\"hb-step\"><span class=\"hb-num\">2</span><p>Add <b>2 products</b> for the base discount</p></div>\n      <span class=\"hb-step-arrow\">→</span>\n      <div class=\"hb-step\"><span class=\"hb-num\">3</span><p>Add a <b>3rd</b> for +2% extra off</p></div>\n    </div>\n\n   </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_MDtbVy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DrHcfH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_78e398f8-70bf-4b2c-a86e-83b6ce9c1fb3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Build Starter Kit",
+            "link": ""
+          }
+        },
+        "column_VQyn4H": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_0453ec4b-f6d2-4a04-bca9-84a320f017ea.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Build Intermediate Kit",
+            "link": ""
+          }
+        },
+        "column_wnW6in": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_a6171ee3-62ea-4e48-9345-3808667757c6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Build Advance Kit",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_DrHcfH",
+        "column_VQyn4H",
+        "column_wnW6in"
+      ],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 68
+      }
+    },
+    "hero_component_j9eRJN": {
       "type": "hero-component",
       "custom_css": [
         "h3,p {color: white !important;}",
@@ -214,8 +339,8 @@
         "button_text": "",
         "link_to": "shopify://collections/buy-1-get-1",
         "color_scheme": "scheme-1",
-        "padding_top": 32,
-        "padding_bottom": 8
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "featured_collection_ztpET9": {
@@ -234,7 +359,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -276,7 +401,10 @@
         "column_3EnA8A"
       ],
       "custom_css": [
-        "span {color: #000; font-size: 2rem; margin-top: -10px;}"
+        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #fff; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #17171a;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -329,6 +457,16 @@
         "padding_bottom": 20
       }
     },
+    "custom_liquid_NJk9xG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 5: Freebies / Gift Vault (offer construct). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n .hb-freebies{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    background:linear-gradient(180deg,#0b0b0c 0%, #141416 100%); padding:90px 24px; position:relative;\n    font-family:'Inter',sans-serif; box-sizing:border-box;\n  }\n  .hb-freebies *{box-sizing:border-box;}\n  .hb-freebies-inner{max-width:1200px; margin:0 auto;}\n  .hb-gift-lead{display:inline-block; background:var(--orange-1); color:#fff; font-weight:800; font-size:12px; letter-spacing:1px; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:14px;}\n  .hb-freebies-title{font-family:'Anton',sans-serif; font-size:clamp(32px,5vw,52px); text-transform:uppercase; line-height:1.2; color:var(--white);}\n  .hb-freebies-title span{color:var(--orange-2);}\n  .hb-freebies-desc{color:#a9a9ad; max-width:520px; margin-top:10px; font-size:14px;}\n\n \n\n\n  .hb-tier-strip{margin-top:20px; background:#151517; border:1px solid #232326; border-radius:16px; padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}\n  .hb-tier-strip .hb-tlabel{display:flex; align-items:center; gap:12px;}\n  .hb-tier-strip .hb-tlabel .hb-badge8k{font-family:'Anton',sans-serif; font-size:26px; background:linear-gradient(160deg,var(--orange-3),var(--orange-1)); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:1px var(--ink);}\n  .hb-tier-strip p{font-size:13px; color:#a9a9ad; max-width:480px; margin:0;}\n  .hb-tier-strip .hb-tcta{background:var(--orange-1); color:#fff; font-weight:800; font-size:13px; padding:12px 24px; border-radius:30px; text-decoration:none; white-space:nowrap;}\n\n  @media (max-width:900px){\n    .hb-gift-grid{grid-template-columns:repeat(2,1fr);}\n    .hb-bonus-row{grid-template-columns:1fr;}\n    .hb-tier-strip{flex-direction:column; align-items:flex-start;}\n  }\n</style>\n\n<section class=\"hb-freebies\">\n  <div class=\"hb-freebies-inner\">\n    <span class=\"hb-gift-lead\">Buy more, get more</span>\n    <div class=\"hb-freebies-title\">Every Buy Comes <span>With A Gift</span></div>\n    <p class=\"hb-freebies-desc\">Shop the sale and walk away with a freebie on top — no code needed, it's added the moment the matching item hits your cart.</p>\n\n  \n\n    <div class=\"hb-tier-strip\">\n      <div class=\"hb-tlabel\">\n        <span class=\"hb-badge8k\">₹8K+</span>\n        <p>Spend over ₹8,000 on rackets and unlock a <strong style=\"color:#FF8A1F;\">FREE COSMOGEAR KIT BAG </strong>with your order.</p>\n      </div>\n      <a href=\"#products\" class=\"hb-tcta\">Unlock This Gift</a>\n    </div>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "collection_list_Wi9izD": {
       "type": "collection-list",
       "blocks": {
@@ -372,19 +510,20 @@
       ],
       "custom_css": [
         "h2 {margin: 10px auto;}",
-        "a {font-size: 1.6rem; font-family: Figtree, sans-serif; letter-spacing: 1px; color: #000;}"
+        "a {font-size: 1.6rem; font-family: Figtree, sans-serif; letter-spacing: 1px; color: #fff;}",
+        "div {background: #131315;}"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "So Many Freebies, So Little Time!",
+        "title": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
         "columns_desktop": 5,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
+        "padding_top": 40,
         "padding_bottom": 100
       }
     },
@@ -571,15 +710,22 @@
   },
   "order": [
     "main",
+    "custom_liquid_XWmPHf",
     "hero_video_component_i9HaWU",
     "hero_component_AFhdP9",
+    "custom_liquid_eHfdCT",
     "multicolumn_M8qycr",
     "multicolumn_UWV9KM",
+    "custom_liquid_eiKLAx",
     "hero_component_ihqe7q",
+    "custom_liquid_98bxMi",
+    "multicolumn_MDtbVy",
+    "hero_component_j9eRJN",
     "featured_collection_ztpET9",
     "multicolumn_XNezHU",
     "hero_component_YqaQVD",
     "swipeable_products_iLkcGi",
+    "custom_liquid_NJk9xG",
     "collection_list_Wi9izD",
     "hero_component_4zcJ94",
     "featured_collection_bQVTz8",
