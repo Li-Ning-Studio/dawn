@@ -64,7 +64,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- HNDRD — Section 1b: Summer's Final Countdown (text-only). Paste into a Shopify \"Custom Liquid\" section, right below the hero. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-final-countdown{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    position:relative;\n    background:var(--ink);\n    padding:60px 24px;\n    text-align:center;\n    overflow:hidden;\n    font-family:'Inter',sans-serif;\n    box-sizing:border-box;\n  }\n  .hb-final-countdown *{box-sizing:border-box;}\n\n  /* subtle moving diagonal streaks, no images used */\n  .hb-final-countdown::before{\n    content:\"\";\n    position:absolute; inset:-20%;\n    background:repeating-linear-gradient(115deg, rgba(255,90,31,.06) 0 2px, transparent 2px 90px);\n    pointer-events:none;\n  }\n  .hb-final-countdown::after{\n    content:\"\";\n    position:absolute; left:50%; top:50%; width:900px; height:900px;\n    transform:translate(-50%,-50%);\n    background:radial-gradient(circle, rgba(255,138,31,.14) 0%, transparent 65%);\n    pointer-events:none;\n  }\n\n  .hb-fc-inner{position:relative; z-index:2; max-width:820px; margin:0 auto;}\n\n  .hb-fc-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:22px;\n  }\n  .hb-fc-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-fc-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-fc-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-fc-heading{\n    font-family:'Anton',sans-serif;\n    text-transform:uppercase;\n    line-height:1.2;\n    font-size:clamp(44px, 7vw, 92px);\n    color:var(--white);\n    margin:0;\n  }\n  .hb-fc-heading .hb-hl{\n    background:linear-gradient(180deg,#fff6c8 0%, #ffb31f 45%, #ff4d00 100%);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n\n  .hb-fc-sub{\n    margin:26px auto 20px;\n    max-width:460px;\n    font-size:clamp(16px, 2vw, 20px);\n    font-weight:600;\n    color:#c9c9cd;\n  }\n  .hb-fc-sub b{color:var(--white); font-weight:800;}\n\n  .hb-fc-rule{\n    width:60px; height:3px; background:var(--orange-1); margin:34px auto; border-radius:2px;\n  }\n\n  .hb-fc-cta{\n    display:inline-flex; align-items:center; gap:10px;\n    background:var(--orange-1); color:var(--white);\n    font-weight:800; font-size:16px; letter-spacing:.4px;\n    padding:18px 42px; border-radius:50px;\n    text-decoration:none;\n    box-shadow:0 10px 28px rgba(255,90,31,.35);\n    transition:transform .18s ease, box-shadow .18s ease;\n  }\n  .hb-fc-cta:hover{ transform:translateY(-2px); box-shadow:0 14px 34px rgba(255,90,31,.45); }\n  .hb-fc-cta svg{width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.5;}\n\n  @media (max-width:640px){\n    .hb-final-countdown{padding:80px 20px;}\n  }\n</style>\n\n<section class=\"hb-final-countdown\">\n  <div class=\"hb-fc-inner\">\n    <div class=\"hb-fc-eyebrow\"><span class=\"hb-dot\"></span>24 hours only</div>\n    <h2 class=\"hb-fc-heading\">Summer's <span class=\"hb-hl\">Final</span> Countdown</h2>\n    <p class=\"hb-fc-sub\">One day. <b>The biggest deals of summer.</b> Then they're gone.</p>\n    <div class=\"hb-fc-rule\"></div>\n    <a href=\"#products\" class=\"hb-fc-cta\">\n      Don't Wait\n      <svg viewBox=\"0 0 24 24\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg>\n    </a>\n  </div>\n</section>",
+        "custom_liquid": "<!-- HNDRD — Section 1b: Summer's Final Countdown (text-only). Paste into a Shopify \"Custom Liquid\" section, right below the hero. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-final-countdown{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    position:relative;\n    background:var(--ink);\n    padding:60px 24px;\n    text-align:center;\n    overflow:hidden;\n    font-family:'Inter',sans-serif;\n    box-sizing:border-box;\n  }\n  .hb-final-countdown *{box-sizing:border-box;}\n\n  /* subtle moving diagonal streaks, no images used */\n  .hb-final-countdown::before{\n    content:\"\";\n    position:absolute; inset:-20%;\n    background:repeating-linear-gradient(115deg, rgba(255,90,31,.06) 0 2px, transparent 2px 90px);\n    pointer-events:none;\n  }\n  .hb-final-countdown::after{\n    content:\"\";\n    position:absolute; left:50%; top:50%; width:900px; height:900px;\n    transform:translate(-50%,-50%);\n    background:radial-gradient(circle, rgba(255,138,31,.14) 0%, transparent 65%);\n    pointer-events:none;\n  }\n\n  .hb-fc-inner{position:relative; z-index:2; max-width:820px; margin:0 auto;}\n\n  .hb-fc-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:22px;\n  }\n  .hb-fc-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-fc-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-fc-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-fc-heading{\n    font-family:'Anton',sans-serif;\n    text-transform:uppercase;\n    line-height:1.2;\n    font-size:clamp(44px, 7vw, 92px);\n    color:var(--white);\n    margin:0;\n  }\n  .hb-fc-heading .hb-hl{\n    background:linear-gradient(180deg,#fff6c8 0%, #ffb31f 45%, #ff4d00 100%);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n\n  .hb-fc-sub{\n    margin:26px auto 20px;\n    max-width:460px;\n    font-size:clamp(16px, 2vw, 20px);\n    font-weight:600;\n    color:#c9c9cd;\n  }\n  .hb-fc-sub b{color:var(--white); font-weight:800;}\n\n  .hb-fc-rule{\n    width:60px; height:3px; background:var(--orange-1); margin:34px auto; border-radius:2px;\n  }\n\n  .hb-fc-cta{\n    display:inline-flex; align-items:center; gap:10px;\n    background:var(--orange-1); color:var(--white);\n    font-weight:800; font-size:16px; letter-spacing:.4px;\n    padding:18px 42px; border-radius:50px;\n    text-decoration:none;\n    box-shadow:0 10px 28px rgba(255,90,31,.35);\n    transition:transform .18s ease, box-shadow .18s ease;\n  }\n  .hb-fc-cta:hover{ transform:translateY(-2px); box-shadow:0 14px 34px rgba(255,90,31,.45); }\n  .hb-fc-cta svg{width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.5;}\n\n  @media (max-width:640px){\n    .hb-final-countdown{padding:80px 20px;}\n  }\n</style>\n\n<section class=\"hb-final-countdown\">\n  <div class=\"hb-fc-inner\">\n    <div class=\"hb-fc-eyebrow\"><span class=\"hb-dot\"></span>24 hours only</div>\n    <h2 class=\"hb-fc-heading\">Summer's <span class=\"hb-hl\">Final</span> Countdown</h2>\n    <p class=\"hb-fc-sub\">One day. <b>The biggest deals of summer.</b> Then they're gone.</p>\n    <div class=\"hb-fc-rule\"></div>\n    <a href=\"#\" class=\"hb-fc-cta\">\n      Don't Wait\n      <svg viewBox=\"0 0 24 24\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg>\n    </a>\n  </div>\n</section>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -243,7 +243,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/buy-1-get-1",
+        "link_to": "",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -337,7 +337,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/buy-1-get-1",
+        "link_to": "",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -346,7 +346,7 @@
     "featured_collection_ztpET9": {
       "type": "featured-collection",
       "custom_css": [
-        ".button{margin-top: 20px;}"
+        ".button {margin-top: 20px;}"
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
@@ -385,7 +385,7 @@
             "title": "",
             "text": "",
             "link_label": "Crowd favorite",
-            "link": "shopify://collections/buy-or-bye-best-sellers"
+            "link": ""
           }
         },
         "column_3EnA8A": {
@@ -395,7 +395,7 @@
             "title": "",
             "text": "",
             "link_label": "Highest Discount",
-            "link": "shopify://collections/buy-or-bye-high-discount"
+            "link": ""
           }
         }
       },
@@ -437,7 +437,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/champions-choice",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -466,7 +466,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- HNDRD — Section 5: Freebies / Gift Vault (offer construct). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n .hb-freebies{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    background:linear-gradient(180deg,#0b0b0c 0%, #141416 100%); padding:90px 24px; position:relative;\n    font-family:'Inter',sans-serif; box-sizing:border-box;\n  }\n  .hb-freebies *{box-sizing:border-box;}\n  .hb-freebies-inner{max-width:1200px; margin:0 auto;}\n  .hb-gift-lead{display:inline-block; background:var(--orange-1); color:#fff; font-weight:800; font-size:12px; letter-spacing:1px; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:14px;}\n  .hb-freebies-title{font-family:'Anton',sans-serif; font-size:clamp(32px,5vw,52px); text-transform:uppercase; line-height:1.2; color:var(--white);}\n  .hb-freebies-title span{color:var(--orange-2);}\n  .hb-freebies-desc{color:#a9a9ad; max-width:520px; margin-top:10px; font-size:14px;}\n\n \n\n\n  .hb-tier-strip{margin-top:20px; background:#151517; border:1px solid #232326; border-radius:16px; padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}\n  .hb-tier-strip .hb-tlabel{display:flex; align-items:center; gap:12px;}\n  .hb-tier-strip .hb-tlabel .hb-badge8k{font-family:'Anton',sans-serif; font-size:26px; background:linear-gradient(160deg,var(--orange-3),var(--orange-1)); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:1px var(--ink);}\n  .hb-tier-strip p{font-size:13px; color:#a9a9ad; max-width:480px; margin:0;}\n  .hb-tier-strip .hb-tcta{background:var(--orange-1); color:#fff; font-weight:800; font-size:13px; padding:12px 24px; border-radius:30px; text-decoration:none; white-space:nowrap;}\n\n  @media (max-width:900px){\n    .hb-gift-grid{grid-template-columns:repeat(2,1fr);}\n    .hb-bonus-row{grid-template-columns:1fr;}\n    .hb-tier-strip{flex-direction:column; align-items:flex-start;}\n  }\n</style>\n\n<section class=\"hb-freebies\">\n  <div class=\"hb-freebies-inner\">\n    <span class=\"hb-gift-lead\">Buy more, get more</span>\n    <div class=\"hb-freebies-title\">Every Buy Comes <span>With A Gift</span></div>\n    <p class=\"hb-freebies-desc\">Shop the sale and walk away with a freebie on top — no code needed, it's added the moment the matching item hits your cart.</p>\n\n  \n\n    <div class=\"hb-tier-strip\">\n      <div class=\"hb-tlabel\">\n        <span class=\"hb-badge8k\">₹8K+</span>\n        <p>Spend over ₹8,000 on rackets and unlock a <strong style=\"color:#FF8A1F;\">FREE COSMOGEAR KIT BAG </strong>with your order.</p>\n      </div>\n      <a href=\"#products\" class=\"hb-tcta\">Unlock This Gift</a>\n    </div>\n  </div>\n</section>",
+        "custom_liquid": "<!-- HNDRD — Section 5: Freebies / Gift Vault (offer construct). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n .hb-freebies{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    background:linear-gradient(180deg,#0b0b0c 0%, #141416 100%); padding:90px 24px; position:relative;\n    font-family:'Inter',sans-serif; box-sizing:border-box;\n  }\n  .hb-freebies *{box-sizing:border-box;}\n  .hb-freebies-inner{max-width:1200px; margin:0 auto;}\n  .hb-gift-lead{display:inline-block; background:var(--orange-1); color:#fff; font-weight:800; font-size:12px; letter-spacing:1px; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:14px;}\n  .hb-freebies-title{font-family:'Anton',sans-serif; font-size:clamp(32px,5vw,52px); text-transform:uppercase; line-height:1.2; color:var(--white);}\n  .hb-freebies-title span{color:var(--orange-2);}\n  .hb-freebies-desc{color:#a9a9ad; max-width:520px; margin-top:10px; font-size:14px;}\n\n \n\n\n  .hb-tier-strip{margin-top:20px; background:#151517; border:1px solid #232326; border-radius:16px; padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}\n  .hb-tier-strip .hb-tlabel{display:flex; align-items:center; gap:12px;}\n  .hb-tier-strip .hb-tlabel .hb-badge8k{font-family:'Anton',sans-serif; font-size:26px; background:linear-gradient(160deg,var(--orange-3),var(--orange-1)); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:1px var(--ink);}\n  .hb-tier-strip p{font-size:13px; color:#a9a9ad; max-width:480px; margin:0;}\n  .hb-tier-strip .hb-tcta{background:var(--orange-1); color:#fff; font-weight:800; font-size:13px; padding:12px 24px; border-radius:30px; text-decoration:none; white-space:nowrap;}\n\n  @media (max-width:900px){\n    .hb-gift-grid{grid-template-columns:repeat(2,1fr);}\n    .hb-bonus-row{grid-template-columns:1fr;}\n    .hb-tier-strip{flex-direction:column; align-items:flex-start;}\n  }\n</style>\n\n<section class=\"hb-freebies\">\n  <div class=\"hb-freebies-inner\">\n    <span class=\"hb-gift-lead\">Buy more, get more</span>\n    <div class=\"hb-freebies-title\">Every Buy Comes <span>With A Gift</span></div>\n    <p class=\"hb-freebies-desc\">Shop the sale and walk away with a freebie on top — no code needed, it's added the moment the matching item hits your cart.</p>\n\n  \n\n    <div class=\"hb-tier-strip\">\n      <div class=\"hb-tlabel\">\n        <span class=\"hb-badge8k\">₹8K+</span>\n        <p>Spend over ₹8,000 on rackets and unlock a <strong style=\"color:#FF8A1F;\">FREE COSMOGEAR KIT BAG </strong>with your order.</p>\n      </div>\n      <a href=\"#\" class=\"hb-tcta\">Unlock This Gift</a>\n    </div>\n  </div>\n</section>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -515,8 +515,10 @@
       ],
       "custom_css": [
         "h2 {margin: 10px auto;}",
+        "img {z-index: 2;}",
         "a {font-size: 1.6rem; font-family: Figtree, sans-serif; letter-spacing: 1px; color: #fff;}",
-        "div {background: #131315;}"
+        ".card__content {background: #131315;}",
+        ".card__inner .card__content {background: none;}"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
@@ -542,7 +544,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/buy-or-bye-clearance",
+        "link_to": "",
         "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
         "padding_top": 0,
         "padding_bottom": 0
@@ -588,7 +590,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/apparels-bye-or-buy",
+        "link_to": "",
         "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
         "padding_top": 0,
         "padding_bottom": 0
@@ -634,7 +636,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify://collections/shop-under-999"
+            "link": ""
           }
         },
         "column_La68TC": {
@@ -644,7 +646,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify://collections/shop-under-1999"
+            "link": ""
           }
         },
         "column_qniekf": {
@@ -654,7 +656,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify://collections/shop-under-2999"
+            "link": ""
           }
         },
         "column_xejrFw": {
@@ -664,7 +666,7 @@
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify://collections/shop-above-3k"
+            "link": ""
           }
         }
       },
@@ -702,7 +704,7 @@
         "title": "",
         "description": "",
         "button_text": "",
-        "link_to": "shopify://collections/buy-or-bye-complete-collection",
+        "link_to": "",
         "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
         "padding_top": 12,
         "padding_bottom": 0
