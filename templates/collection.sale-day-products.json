@@ -183,6 +183,45 @@
         "padding_bottom": 96
       }
     },
+    "featured_collection_RpDi3r": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bth-fitness-accessories",
+        "products_to_show": 4,
+        "title": "Fitness Accessories",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 96
+      }
+    },
+    "custom_liquid_JFVG7k": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 1b: Summer's Final Countdown (text-only). Paste into a Shopify \"Custom Liquid\" section, right below the hero. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-final-countdown{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    position:relative;\n    background:var(--ink);\n    padding:60px 24px;\n    text-align:center;\n    overflow:hidden;\n    font-family:'Inter',sans-serif;\n    box-sizing:border-box;\n  }\n  .hb-final-countdown *{box-sizing:border-box;}\n\n  /* subtle moving diagonal streaks, no images used */\n  .hb-final-countdown::before{\n    content:\"\";\n    position:absolute; inset:-20%;\n    background:repeating-linear-gradient(115deg, rgba(255,90,31,.06) 0 2px, transparent 2px 90px);\n    pointer-events:none;\n  }\n  .hb-final-countdown::after{\n    content:\"\";\n    position:absolute; left:50%; top:50%; width:900px; height:900px;\n    transform:translate(-50%,-50%);\n    background:radial-gradient(circle, rgba(255,138,31,.14) 0%, transparent 65%);\n    pointer-events:none;\n  }\n\n  .hb-fc-inner{position:relative; z-index:2; max-width:820px; margin:0 auto;}\n\n  .hb-fc-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:22px;\n  }\n  .hb-fc-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-fc-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-fc-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-fc-heading{\n    font-family:'Anton',sans-serif;\n    text-transform:uppercase;\n    line-height:1.2;\n    font-size:clamp(44px, 7vw, 92px);\n    color:var(--white);\n    margin:0;\n  }\n  .hb-fc-heading .hb-hl{\n    background:linear-gradient(180deg,#fff6c8 0%, #ffb31f 45%, #ff4d00 100%);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n\n</style>\n\n<section class=\"hb-final-countdown\">\n  <div class=\"hb-fc-inner\">\n    <div class=\"hb-fc-eyebrow\"><span class=\"hb-dot\"></span>24 hours only</div>\n    <h2 class=\"hb-fc-heading\">THE COMPLETE <span class=\"hb-hl\">COLLECTION</span></h2>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -395,6 +434,8 @@
     "featured_collection_8dkkMa",
     "featured_collection_mjXzFr",
     "featured_collection_PfmYgk",
+    "featured_collection_RpDi3r",
+    "custom_liquid_JFVG7k",
     "product-grid"
   ]
 }
