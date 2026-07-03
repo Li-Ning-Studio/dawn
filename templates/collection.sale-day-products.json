@@ -9,12 +9,178 @@
  */
 {
   "sections": {
+    "custom_liquid_XAbAYJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 2b: Sticky bottom countdown bar (alt style). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-sticky-bar{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --blue-1:#0a3fb0; --blue-2:#1f6bff; --ink:#0b0b0c; --white:#ffffff;\n    position:fixed; left:0; right:0; bottom:0; z-index:999;\n    display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap;\n    background:linear-gradient(90deg, var(--ink) 0%, #1a1a1d 100%);\n    border-top:3px solid var(--orange-1);\n    padding:12px 20px;\n    font-family:'Inter',sans-serif;\n    box-shadow:0 -10px 30px rgba(0,0,0,.35);\n    transform:translateY(0);\n    transition:transform .3s ease;\n    box-sizing:border-box;\n  }\n  .hb-sticky-bar *{box-sizing:border-box;}\n  .hb-sticky-bar.hb-hide{transform:translateY(100%);}\n\n  .hb-sb-msg{display:flex; align-items:center; gap:10px;}\n  .hb-sb-dot{width:9px; height:9px; border-radius:50%; background:var(--orange-1); box-shadow:0 0 0 4px rgba(255,90,31,.25); animation:hb-pulse 1.4s ease-in-out infinite;}\n  @keyframes hb-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.25);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.08);} }\n  .hb-sb-msg span{font-weight:700; font-size:13px; color:var(--white); letter-spacing:.2px;}\n  .hb-sb-msg strong{color:var(--orange-2); font-weight:800;}\n\n  .hb-sb-timer{display:flex; align-items:center; gap:6px;}\n  .hb-sb-seg{\n    background:linear-gradient(160deg, var(--blue-2), var(--blue-1));\n    border-radius:8px; padding:6px 10px; min-width:44px; text-align:center;\n  }\n  .hb-sb-seg .hb-n{font-family:'Anton',sans-serif; font-size:18px; color:var(--white); line-height:1;}\n  .hb-sb-seg .hb-u{font-size:8px; font-weight:700; letter-spacing:.5px; color:#cfe0ff; text-transform:uppercase;}\n  .hb-sb-colon{font-family:'Anton',sans-serif; color:#555; font-size:16px;}\n\n  .hb-sb-cta{\n    background:var(--orange-1); color:var(--white); font-weight:800; font-size:13px;\n    letter-spacing:.3px; padding:11px 24px; border-radius:30px; text-decoration:none;\n    white-space:nowrap;\n  }\n  .hb-sb-close{\n    background:none; border:none; color:#7a7a80; font-size:18px; cursor:pointer; line-height:1;\n    padding:4px 6px;\n  }\n  .hb-sb-close:hover{color:#fff;}\n\n  body{padding-bottom:70px;} /* keeps page content clear of the fixed bar */\n\n  @media (max-width:640px){\n    .hb-sticky-bar{gap:12px; padding:10px 14px;}\n    .hb-sb-msg span{font-size:11.5px;}\n    .hb-sb-seg{min-width:36px; padding:5px 7px;}\n    .hb-sb-seg .hb-n{font-size:15px;}\n    .hb-sb-cta{padding:9px 16px; font-size:12px;}\n  }\n</style>\n\n<div class=\"hb-sticky-bar\" id=\"hb-sticky-bar\">\n  <div class=\"hb-sb-msg\">\n    <span class=\"hb-sb-dot\"></span>\n    <span><strong>BEAT THE HEAT</strong> ends in</span>\n  </div>\n\n  <div class=\"hb-sb-timer\" id=\"hb-sticky-timer\">\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"hrs\">14</div><div class=\"hb-u\">Hrs</div></div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"min\">32</div><div class=\"hb-u\">Min</div></div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"sec\">08</div><div class=\"hb-u\">Sec</div></div>\n  </div>\n\n \n  \n</div>\n\n<script>\n (function(){\n    // Countdown target: July 6, 2026, 12:00 AM (local time)\n    var end = new Date(2026, 6, 6, 0, 0, 0);\n    var bar = document.getElementById('hb-sticky-bar');\n \n    function tick(){\n      var diff = Math.max(0, end - new Date());\n      var h = String(Math.floor(diff/3600000)).padStart(2,'0');\n      var m = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');\n      var s = String(Math.floor((diff%60000)/1000)).padStart(2,'0');\n      bar.querySelector('[data-unit=\"hrs\"]').textContent = h;\n      bar.querySelector('[data-unit=\"min\"]').textContent = m;\n      bar.querySelector('[data-unit=\"sec\"]').textContent = s;\n      if(diff <= 0){ bar.classList.add('hb-hide'); clearInterval(timer); }\n    }\n    tick();\n    var timer = setInterval(tick, 1000);\n \n    document.getElementById('hb-sticky-close').addEventListener('click', function(){\n      bar.classList.add('hb-hide');\n      document.body.style.paddingBottom = '0';\n    });\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_DJAQmX": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 1b: Summer's Final Countdown (text-only). Paste into a Shopify \"Custom Liquid\" section, right below the hero. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-final-countdown{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    position:relative;\n    background:var(--ink);\n    padding:60px 24px;\n    text-align:center;\n    overflow:hidden;\n    font-family:'Inter',sans-serif;\n    box-sizing:border-box;\n  }\n  .hb-final-countdown *{box-sizing:border-box;}\n\n  /* subtle moving diagonal streaks, no images used */\n  .hb-final-countdown::before{\n    content:\"\";\n    position:absolute; inset:-20%;\n    background:repeating-linear-gradient(115deg, rgba(255,90,31,.06) 0 2px, transparent 2px 90px);\n    pointer-events:none;\n  }\n  .hb-final-countdown::after{\n    content:\"\";\n    position:absolute; left:50%; top:50%; width:900px; height:900px;\n    transform:translate(-50%,-50%);\n    background:radial-gradient(circle, rgba(255,138,31,.14) 0%, transparent 65%);\n    pointer-events:none;\n  }\n\n  .hb-fc-inner{position:relative; z-index:2; max-width:820px; margin:0 auto;}\n\n  .hb-fc-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:22px;\n  }\n  .hb-fc-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-fc-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-fc-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-fc-heading{\n    font-family:'Anton',sans-serif;\n    text-transform:uppercase;\n    line-height:1.2;\n    font-size:clamp(44px, 7vw, 92px);\n    color:var(--white);\n    margin:0;\n  }\n  .hb-fc-heading .hb-hl{\n    background:linear-gradient(180deg,#fff6c8 0%, #ffb31f 45%, #ff4d00 100%);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n\n</style>\n\n<section class=\"hb-final-countdown\">\n  <div class=\"hb-fc-inner\">\n    <div class=\"hb-fc-eyebrow\"><span class=\"hb-dot\"></span>24 hours only</div>\n    <h2 class=\"hb-fc-heading\">Beat The <span class=\"hb-hl\">Heat</span></h2>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f"
+      }
+    },
+    "featured_collection_gU3CE4": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bth-racket",
+        "products_to_show": 4,
+        "title": "Rackets",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_kL4LQL": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bth-badminton-shoes",
+        "products_to_show": 4,
+        "title": "Badminton Shoes",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_8dkkMa": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bth-cricket",
+        "products_to_show": 4,
+        "title": "Cricket",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_mjXzFr": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bth-bags",
+        "products_to_show": 4,
+        "title": "Bags",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_PfmYgk": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bth-pickleball",
+        "products_to_show": 4,
+        "title": "Pickleball",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 96
       }
     },
     "product-grid": {
@@ -200,12 +366,11 @@
         "merchandising_item_MDJwAW",
         "merchandising_item_MKzeWd"
       ],
-      "disabled": true,
       "settings": {
         "products_per_page": 12,
         "columns_desktop": 5,
         "columns_mobile": "2",
-        "color_scheme": "",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -216,405 +381,20 @@
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
-        "padding_top": 36,
+        "padding_top": 84,
         "padding_bottom": 36
-      }
-    },
-    "collection_list_DGERMN": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_yez3Ha": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "fitness-accessories"
-          }
-        },
-        "featured_collection_EH8rqY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "badminton-accessories"
-          }
-        },
-        "featured_collection_eYJjyh": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "footwear-accessories"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_yez3Ha",
-        "featured_collection_EH8rqY",
-        "featured_collection_eYJjyh"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "swipeable_products_NTUHr8": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Bottles",
-        "products": [
-          "goa",
-          "jawa",
-          "pune",
-          "race",
-          "rock"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_yjgFRC": {
-      "type": "rich-text",
-      "blocks": {
-        "button_WXkFzG": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/hydration",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_WXkFzG"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "swipeable_products_xyXCNY": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Support",
-        "products": [
-          "anti-slip-knee-support",
-          "core-knee-support",
-          "flex-shield-elbow-support",
-          "flexguard-ankle-support",
-          "flexiwrist-wrist-support",
-          "coreguard-waist-support",
-          "dual-shield-knee-support",
-          "guardforce-knee-support"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_zDJKUT": {
-      "type": "rich-text",
-      "blocks": {
-        "button_fxkzgA": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/support",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_fxkzgA"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "swipeable_products_4FafGc": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Fitness",
-        "products": [
-          "turbine-skipping-rope",
-          "pulse-skipping-rope",
-          "gripcore-hand-grip",
-          "gripfit-pro-hand-grip",
-          "kinetiq-skipping-rope"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_9fpARH": {
-      "type": "rich-text",
-      "blocks": {
-        "button_znEQP9": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/strength",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_znEQP9"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "swipeable_products_jHzeft": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Strings",
-        "products": [
-          "jp65-magnite",
-          "jp-70-power",
-          "jp-70",
-          "jp58-magnite",
-          "jp-70-magnite",
-          "jp-66-hunter-x",
-          "jp-63-hunter"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_BWq8KY": {
-      "type": "rich-text",
-      "blocks": {
-        "button_4ABNhW": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/badminton-strings",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_4ABNhW"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "swipeable_products_4pKriW": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Grips",
-        "products": [
-          "gto-20-overgrip",
-          "gto-3000-overgrip",
-          "gtr-32-replacement-grip",
-          "gtr-18-replacement-grip",
-          "gtr-19-replacement-grip"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_3tXDRQ": {
-      "type": "rich-text",
-      "blocks": {
-        "button_Nq9R7D": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/grips",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_Nq9R7D"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "swipeable_products_ewbVjb": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Socks & Insoles",
-        "products": [
-          "arch-band-performance-socks",
-          "fusionsupport-insole",
-          "court-performance-socks",
-          "signature-logo-performance-socks",
-          "signature-logo-performance-socks-assorted",
-          "soft-glide-insole",
-          "gelglide-insole",
-          "ventcomfort-insole"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_Cq6MRR": {
-      "type": "rich-text",
-      "blocks": {
-        "button_NnPyq9": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/footwear-accessories",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_NnPyq9"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "swipeable_products_EpqkEe": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Shuttlecocks",
-        "products": [
-          "t-500-nylon-shuttlecoc",
-          "s40-feather-shuttlecock",
-          "f7-feather-shuttlecock",
-          "h-100-feather-shuttlecock",
-          "f80-feather-shuttlecock",
-          "f9-feather-shuttlecock",
-          "f8-feather-shuttlecock",
-          "f70-feather-shuttlecock",
-          "f1-feather-shuttlecock",
-          "f10-feather-shuttlecock",
-          "f5-feather-shuttlecock"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_6expqn": {
-      "type": "rich-text",
-      "blocks": {
-        "button_NrbE4x": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/badminton-shuttlecocks",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_NrbE4x"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
       }
     }
   },
   "order": [
+    "custom_liquid_XAbAYJ",
+    "custom_liquid_DJAQmX",
     "banner",
-    "product-grid",
-    "collection_list_DGERMN",
-    "swipeable_products_NTUHr8",
-    "rich_text_yjgFRC",
-    "swipeable_products_xyXCNY",
-    "rich_text_zDJKUT",
-    "swipeable_products_4FafGc",
-    "rich_text_9fpARH",
-    "swipeable_products_jHzeft",
-    "rich_text_BWq8KY",
-    "swipeable_products_4pKriW",
-    "rich_text_3tXDRQ",
-    "swipeable_products_ewbVjb",
-    "rich_text_Cq6MRR",
-    "swipeable_products_EpqkEe",
-    "rich_text_6expqn"
+    "featured_collection_gU3CE4",
+    "featured_collection_kL4LQL",
+    "featured_collection_8dkkMa",
+    "featured_collection_mjXzFr",
+    "featured_collection_PfmYgk",
+    "product-grid"
   ]
 }
