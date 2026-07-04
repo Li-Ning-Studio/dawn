@@ -70,80 +70,6 @@
         "padding_bottom": 0
       }
     },
-    "multicolumn_M8qycr": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_tdanAK": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_0172f986-0805-4560-a104-64770cbd7aa9.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Smash Zone",
-            "link": "shopify://collections/bth-badminton"
-          }
-        },
-        "column_FYyCfk": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_75838ed6-da00-40ad-ab80-47eae6300acc.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Sixer Season",
-            "link": "shopify://collections/bth-cricket"
-          }
-        },
-        "column_QTEkyB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_e9f47073-f221-485b-b66c-798f83483c82.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Paddle Party",
-            "link": "shopify://collections/bth-pickleball"
-          }
-        },
-        "column_p3rQT9": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_copy.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Fitness Fiesta",
-            "link": "shopify://collections/bth-fitness-accessories"
-          }
-        }
-      },
-      "block_order": [
-        "column_tdanAK",
-        "column_FYyCfk",
-        "column_QTEkyB",
-        "column_p3rQT9"
-      ],
-      "custom_css": [
-        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
-        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
-        "div {background: #0b0b0c;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<strong>PICK YOUR ARENA</strong>",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 68
-      }
-    },
     "multicolumn_UWV9KM": {
       "type": "multicolumn",
       "blocks": {
@@ -319,6 +245,80 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
+        "padding_bottom": 68
+      }
+    },
+    "multicolumn_M8qycr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_tdanAK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_0172f986-0805-4560-a104-64770cbd7aa9.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Smash Zone",
+            "link": "shopify://collections/bth-badminton"
+          }
+        },
+        "column_FYyCfk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_75838ed6-da00-40ad-ab80-47eae6300acc.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Sixer Season",
+            "link": "shopify://collections/bth-cricket"
+          }
+        },
+        "column_QTEkyB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_e9f47073-f221-485b-b66c-798f83483c82.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Paddle Party",
+            "link": "shopify://collections/bth-pickleball"
+          }
+        },
+        "column_p3rQT9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Fitness Fiesta",
+            "link": "shopify://collections/bth-fitness-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "column_tdanAK",
+        "column_FYyCfk",
+        "column_QTEkyB",
+        "column_p3rQT9"
+      ],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>PICK YOUR ARENA</strong>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
         "padding_bottom": 68
       }
     },
@@ -726,14 +726,14 @@
     "hero_video_component_i9HaWU",
     "hero_component_AFhdP9",
     "custom_liquid_eHfdCT",
-    "multicolumn_M8qycr",
-    "multicolumn_UWV9KM",
     "custom_liquid_eiKLAx",
     "hero_component_ihqe7q",
     "custom_liquid_98bxMi",
     "multicolumn_MDtbVy",
     "custom_liquid_NJk9xG",
     "collection_list_Wi9izD",
+    "multicolumn_UWV9KM",
+    "multicolumn_M8qycr",
     "hero_component_j9eRJN",
     "featured_collection_ztpET9",
     "multicolumn_XNezHU",
