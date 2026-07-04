@@ -14,6 +14,14 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_QPcfJk": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "India's biggest Sports Sale is LIVE 🔴",
+            "link": "shopify://pages/bth"
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
@@ -30,6 +38,7 @@
         }
       },
       "block_order": [
+        "announcement_QPcfJk",
         "announcement-bar-0",
         "announcement_h68U3w"
       ],
