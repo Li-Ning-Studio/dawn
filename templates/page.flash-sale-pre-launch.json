@@ -135,7 +135,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 68
+        "padding_bottom": 0
       }
     },
     "multicolumn_7apB4L": {
@@ -144,7 +144,7 @@
         "column_FefKqA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Nitrix_70_Volta_BEAST_MAX.jpg",
+            "image": "shopify://shop_images/Courtsonic_PBX.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -154,7 +154,7 @@
         "column_fQGF4M": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Flareon_700_Hyper_spike.jpg",
+            "image": "shopify://shop_images/blade_armor.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -164,7 +164,7 @@
         "column_nKxFDw": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/NITRIX_70_VENOM_Hyper_Court.jpg",
+            "image": "shopify://shop_images/Cosmogear_Max.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -177,6 +177,7 @@
         "column_fQGF4M",
         "column_nKxFDw"
       ],
+      "disabled": true,
       "custom_css": [
         ".title-wrapper--no-top-margin {justify-content: center;}",
         ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
@@ -198,7 +199,17 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 68
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_4nHRJa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"bth-teaser\">\n  <style>\n    .bth-teaser {\n      background: #110900;\n      padding: 76px 20px;\n    }\n    .bth-teaser-inner {\n      max-width: 1100px;\n      margin: 0 auto;\n      text-align: center;\n    }\n    .bth-teaser-tag {\n      display: inline-block;\n      font-family: 'Inter', sans-serif;\n      font-size: 10px;\n      font-weight: 700;\n      letter-spacing: 0.22em;\n      text-transform: uppercase;\n      color: #FF5500;\n      border: 1px solid rgba(255,85,0,0.35);\n      border-radius: 100px;\n      padding: 4px 14px;\n      margin-bottom: 18px;\n    }\n    .bth-teaser-heading {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(30px, 5.5vw, 54px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.02em;\n      line-height: 1.05;\n      margin-bottom: 10px;\n    }\n    .bth-teaser-heading span {\n      color: #F5C500;\n    }\n    .bth-teaser-sub {\n      font-family: 'Inter', sans-serif;\n      font-size: 14px;\n      color: rgba(255,255,255,0.4);\n      margin-bottom: 48px;\n    }\n    .bth-teaser-grid {\n      display: grid;\n      grid-template-columns: repeat(3, 1fr);\n      gap: 16px;\n    }\n    @media (max-width: 768px) {\n      .bth-teaser-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }\n    }\n    @media (max-width: 420px) {\n      .bth-teaser-grid { grid-template-columns: 1fr; }\n    }\n    .bth-teaser-card {\n      border-radius: 12px;\n      overflow: hidden;\n      position: relative;\n    }\n    .bth-teaser-card img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n      transition: transform 0.4s ease;\n    }\n    .bth-teaser-card:hover img {\n      transform: scale(1.03);\n    }\n    .bth-teaser-overlay {\n      position: absolute;\n      inset: 0;\n      background: rgba(0, 0, 0, 0.45);\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      gap: 10px;\n    }\n    .bth-teaser-lock-icon {\n      font-size: 28px;\n      line-height: 1;\n    }\n    .bth-teaser-lock-text {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(16px, 2.5vw, 22px);\n      font-weight: 900;\n      text-transform: uppercase;\n      letter-spacing: 0.12em;\n      color: #ffffff;\n      line-height: 1;\n    }\n    .bth-teaser-lock-date {\n      font-family: 'Inter', sans-serif;\n      font-size: clamp(10px, 1.5vw, 13px);\n      font-weight: 600;\n      letter-spacing: 0.14em;\n      text-transform: uppercase;\n      color: rgba(255, 255, 255, 0.5);\n    }\n    .bth-teaser-bottom {\n      margin-top: 44px;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 10px;\n    }\n    .bth-teaser-bottom-text {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(20px, 4vw, 32px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.04em;\n    }\n    .bth-teaser-bottom-text span {\n      color: #FF5500;\n    }\n    .bth-teaser-date {\n      font-family: 'Inter', sans-serif;\n      font-size: 13px;\n      color: rgba(255,255,255,0.35);\n      letter-spacing: 0.08em;\n      text-transform: uppercase;\n    }\n  </style>\n\n  <div class=\"bth-teaser-inner\">\n    <span class=\"bth-teaser-tag\">Dropping July 5</span>\n    <h2 class=\"bth-teaser-heading\">Prices So Low,<br>We're <span>Hiding Them</span> Till Sale Day</h2>\n    <p class=\"bth-teaser-sub\">The ₹XX,XX9 is real. Find out midnight July 5.</p>\n\n    <div class=\"bth-teaser-grid\">\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/blade_armor.jpg?v=1783155972\" alt=\"Blade Armor\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Cosmogear_Max.jpg?v=1783155972\" alt=\"Cosmogear Max\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Courtsonic_PBX.jpg?v=1783155972\" alt=\"Courtsonic PBX\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/COURTSTEP_PBX.jpg?v=1783155972\" alt=\"Courtstep PBX\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/NITRIX_70_VENOM_Hyper_Court.jpg?v=1783155972\" alt=\"Flareon 700 + Hyper Spike Combo\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitrix_70_Volta_BEAST_MAX.jpg?v=1783155972\" alt=\"Nitrix 70 Volta + Beast Max Combo\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"bth-teaser-bottom\">\n      <div class=\"bth-teaser-bottom-text\">Prices Drop at <span>Midnight, July 5</span></div>\n      <div class=\"bth-teaser-date\">Saturday · 12:00 AM IST · 24 Hours Only</div>\n    </div>\n  </div>\n</section>",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_Pke8wy": {
@@ -220,6 +231,7 @@
     "custom_liquid_qPac4z",
     "multicolumn_qhfDch",
     "multicolumn_7apB4L",
+    "custom_liquid_4nHRJa",
     "custom_liquid_Pke8wy"
   ]
 }
