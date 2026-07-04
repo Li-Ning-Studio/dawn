@@ -21,7 +21,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- HNDRD — Section 2b: Sticky bottom countdown bar (alt style). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-sticky-bar{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --blue-1:#0a3fb0; --blue-2:#1f6bff; --ink:#0b0b0c; --white:#ffffff;\n    position:fixed; left:0; right:0; bottom:0; z-index:999;\n    display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap;\n    background:linear-gradient(90deg, var(--ink) 0%, #1a1a1d 100%);\n    border-top:3px solid var(--orange-1);\n    padding:12px 20px;\n    font-family:'Inter',sans-serif;\n    box-shadow:0 -10px 30px rgba(0,0,0,.35);\n    transform:translateY(0);\n    transition:transform .3s ease;\n    box-sizing:border-box;\n  }\n  .hb-sticky-bar *{box-sizing:border-box;}\n  .hb-sticky-bar.hb-hide{transform:translateY(100%);}\n\n  .hb-sb-msg{display:flex; align-items:center; gap:10px;}\n  .hb-sb-dot{width:9px; height:9px; border-radius:50%; background:var(--orange-1); box-shadow:0 0 0 4px rgba(255,90,31,.25); animation:hb-pulse 1.4s ease-in-out infinite;}\n  @keyframes hb-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.25);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.08);} }\n  .hb-sb-msg span{font-weight:700; font-size:13px; color:var(--white); letter-spacing:.2px;}\n  .hb-sb-msg strong{color:var(--orange-2); font-weight:800;}\n\n  .hb-sb-timer{display:flex; align-items:center; gap:6px;}\n  .hb-sb-seg{\n    background:linear-gradient(160deg, var(--blue-2), var(--blue-1));\n    border-radius:8px; padding:6px 10px; min-width:44px; text-align:center;\n  }\n  .hb-sb-seg .hb-n{font-family:'Anton',sans-serif; font-size:18px; color:var(--white); line-height:1;}\n  .hb-sb-seg .hb-u{font-size:8px; font-weight:700; letter-spacing:.5px; color:#cfe0ff; text-transform:uppercase;}\n  .hb-sb-colon{font-family:'Anton',sans-serif; color:#555; font-size:16px;}\n\n  .hb-sb-cta{\n    background:var(--orange-1); color:var(--white); font-weight:800; font-size:13px;\n    letter-spacing:.3px; padding:11px 24px; border-radius:30px; text-decoration:none;\n    white-space:nowrap;\n  }\n  .hb-sb-close{\n    background:none; border:none; color:#7a7a80; font-size:18px; cursor:pointer; line-height:1;\n    padding:4px 6px;\n  }\n  .hb-sb-close:hover{color:#fff;}\n\n  body{padding-bottom:70px;} /* keeps page content clear of the fixed bar */\n\n  @media (max-width:640px){\n    .hb-sticky-bar{gap:12px; padding:10px 14px;}\n    .hb-sb-msg span{font-size:11.5px;}\n    .hb-sb-seg{min-width:36px; padding:5px 7px;}\n    .hb-sb-seg .hb-n{font-size:15px;}\n    .hb-sb-cta{padding:9px 16px; font-size:12px;}\n  }\n</style>\n\n<div class=\"hb-sticky-bar\" id=\"hb-sticky-bar\">\n  <div class=\"hb-sb-msg\">\n    <span class=\"hb-sb-dot\"></span>\n    <span><strong>BEAT THE HEAT</strong> ends in</span>\n  </div>\n\n  <div class=\"hb-sb-timer\" id=\"hb-sticky-timer\">\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"hrs\">14</div><div class=\"hb-u\">Hrs</div></div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"min\">32</div><div class=\"hb-u\">Min</div></div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\"><div class=\"hb-n\" data-unit=\"sec\">08</div><div class=\"hb-u\">Sec</div></div>\n  </div>\n<a href=\"/pages/bth\" class=\"hb-sb-cta\">Shop Now</a>\n \n  \n</div>\n\n<script>\n (function(){\n    // Countdown target: July 6, 2026, 12:00 AM (local time)\n    var end = new Date(2026, 6, 6, 0, 0, 0);\n    var bar = document.getElementById('hb-sticky-bar');\n \n    function tick(){\n      var diff = Math.max(0, end - new Date());\n      var h = String(Math.floor(diff/3600000)).padStart(2,'0');\n      var m = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');\n      var s = String(Math.floor((diff%60000)/1000)).padStart(2,'0');\n      bar.querySelector('[data-unit=\"hrs\"]').textContent = h;\n      bar.querySelector('[data-unit=\"min\"]').textContent = m;\n      bar.querySelector('[data-unit=\"sec\"]').textContent = s;\n      if(diff <= 0){ bar.classList.add('hb-hide'); clearInterval(timer); }\n    }\n    tick();\n    var timer = setInterval(tick, 1000);\n \n    document.getElementById('hb-sticky-close').addEventListener('click', function(){\n      bar.classList.add('hb-hide');\n      document.body.style.paddingBottom = '0';\n    });\n  })();\n</script>",
+        "custom_liquid": "<!-- HNDRD — Section 2b: Sticky bottom countdown bar. Paste into a Shopify \"Custom Liquid\" section. -->\n\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link\n  href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700;800&display=swap\"\n  rel=\"stylesheet\"\n>\n\n<style>\n  /* ---------- variables & reset ---------- */\n  .hb-sticky-bar {\n    --orange-1: #ff5a1f;\n    --orange-2: #ff8a1f;\n    --blue-1: #0a3fb0;\n    --blue-2: #1f6bff;\n    --ink: #0b0b0c;\n    --white: #ffffff;\n  }\n\n  .hb-sticky-bar,\n  .hb-sticky-bar * {\n    box-sizing: border-box;\n  }\n\n  /* ---------- bar container ---------- */\n  .hb-sticky-bar {\n    position: fixed;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 999;\n\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-wrap: nowrap;\n    gap: 16px;\n\n    padding: 10px 16px;\n    overflow-x: auto;\n\n    background: linear-gradient(90deg, var(--ink) 0%, #1a1a1d 100%);\n    border-top: 3px solid var(--orange-1);\n    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35);\n\n    font-family: 'Inter', sans-serif;\n\n    transform: translateY(0);\n    transition: transform 0.3s ease;\n  }\n\n  .hb-sticky-bar.hb-hide {\n    transform: translateY(100%);\n  }\n\n  /* ---------- \"Sale Ends In\" message ---------- */\n  .hb-sb-msg {\n    display: flex;\n    align-items: center;\n    gap: 6px;\n    flex-shrink: 0;\n  }\n\n  .hb-sb-msg span {\n    font-size: 12.5px;\n    font-weight: 800;\n    letter-spacing: 0.2px;\n    text-transform: uppercase;\n    color: var(--white);\n    white-space: nowrap;\n  }\n\n  .hb-sb-dot {\n    width: 7px;\n    height: 7px;\n    flex-shrink: 0;\n    border-radius: 50%;\n    background: var(--orange-1);\n    box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.25);\n    animation: hb-pulse 1.4s ease-in-out infinite;\n  }\n\n  @keyframes hb-pulse {\n    0%, 100% { box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.25); }\n    50%      { box-shadow: 0 0 0 6px rgba(255, 90, 31, 0.08); }\n  }\n\n  /* ---------- timer ---------- */\n  .hb-sb-timer {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n    flex-shrink: 0;\n  }\n\n  .hb-sb-seg {\n    min-width: 30px;\n    padding: 6px 10px;\n    line-height: 1;\n    text-align: center;\n    border-radius: 6px;\n    background: linear-gradient(160deg, var(--blue-2), var(--blue-1));\n  }\n\n  .hb-sb-seg .hb-n {\n    display: block;\n    font-family: 'Anton', sans-serif;\n    font-size: 13px;\n    line-height: 1;\n    color: var(--white);\n    letter-spacing: 1px;\n  }\n\n  .hb-sb-seg .hb-u {\n    display: none;\n    margin-top: 1px;\n    font-size: 6.5px;\n    font-weight: 700;\n    letter-spacing: 0.3px;\n    text-transform: uppercase;\n    color: #cfe0ff;\n  }\n\n  .hb-sb-colon {\n    flex-shrink: 0;\n    font-family: 'Anton', sans-serif;\n    font-size: 12px;\n    color: #555;\n  }\n\n  /* ---------- CTA ---------- */\n  .hb-sb-cta {\n    flex-shrink: 0;\n    padding: 8px 16px;\n    border-radius: 30px;\n    background: var(--orange-1);\n    color: var(--white);\n    font-size: 12px;\n    font-weight: 800;\n    letter-spacing: 0.3px;\n    text-decoration: none;\n    white-space: nowrap;\n  }\n\n  /* ---------- page offset ---------- */\n  body {\n    padding-bottom: 56px; /* keeps content clear of the fixed bar */\n  }\n\n  /* ---------- mobile ---------- */\n  @media (max-width: 640px) {\n    .hb-sticky-bar { gap: 8px; padding: 8px 10px; }\n    .hb-sb-msg span { font-size: 10.5px; }\n    .hb-sb-timer { gap: 3px; }\n    .hb-sb-seg { min-width: 24px; padding: 6px 6px; }\n    .hb-sb-seg .hb-n { font-size: 15px; }\n    .hb-sb-seg .hb-u { font-size: 5.5px; }\n    .hb-sb-cta { padding: 7px 12px; font-size: 10.5px; }\n  }\n</style>\n\n<div class=\"hb-sticky-bar\" id=\"hb-sticky-bar\">\n  <div class=\"hb-sb-msg\">\n    <span class=\"hb-sb-dot\"></span>\n    <span>Sale Ends In</span>\n  </div>\n\n  <div class=\"hb-sb-timer\" id=\"hb-sticky-timer\">\n    <div class=\"hb-sb-seg\">\n      <span class=\"hb-n\" data-unit=\"hrs\">14</span>\n      <span class=\"hb-u\">Hrs</span>\n    </div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\">\n      <span class=\"hb-n\" data-unit=\"min\">32</span>\n      <span class=\"hb-u\">Min</span>\n    </div>\n    <span class=\"hb-sb-colon\">:</span>\n    <div class=\"hb-sb-seg\">\n      <span class=\"hb-n\" data-unit=\"sec\">08</span>\n      <span class=\"hb-u\">Sec</span>\n    </div>\n  </div>\n\n  <a href=\"#products\" class=\"hb-sb-cta\">Shop Now</a>\n</div>\n\n<script>\n  (function () {\n    // Countdown target: July 6, 2026, 12:00 AM (local time)\n    var end = new Date(2026, 6, 6, 0, 0, 0);\n    var bar = document.getElementById('hb-sticky-bar');\n\n    function pad(n) {\n      return String(n).padStart(2, '0');\n    }\n\n    function tick() {\n      var diff = Math.max(0, end - new Date());\n\n      var hrs = Math.floor(diff / 3600000);\n      var min = Math.floor((diff % 3600000) / 60000);\n      var sec = Math.floor((diff % 60000) / 1000);\n\n      bar.querySelector('[data-unit=\"hrs\"]').textContent = pad(hrs);\n      bar.querySelector('[data-unit=\"min\"]').textContent = pad(min);\n      bar.querySelector('[data-unit=\"sec\"]').textContent = pad(sec);\n\n      if (diff <= 0) {\n        bar.classList.add('hb-hide');\n        clearInterval(timer);\n      }\n    }\n\n    tick();\n    var timer = setInterval(tick, 1000);\n  })();\n</script>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -68,80 +68,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "multicolumn_UWV9KM": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_TUYcB8": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_76cf47e8-1423-49a3-bb42-e22465f92d40.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Swing Things",
-            "link": "shopify://collections/bth-racket"
-          }
-        },
-        "column_6MeRGw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_eea6a6c1-9281-4df8-ac6a-6f4e980af3ff.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Footwork Flex",
-            "link": "shopify://collections/bth-shoes"
-          }
-        },
-        "column_VW6BAw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_6d047f16-20aa-4a2f-914c-c80ff8cf9947.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Fit The Kit",
-            "link": "shopify://collections/bth-bags"
-          }
-        },
-        "column_dNLkwP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_4_7d81ffd7-7487-4c5d-ad9c-840646d6241d.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Paddle Pop",
-            "link": "shopify://collections/bth-paddles"
-          }
-        }
-      },
-      "block_order": [
-        "column_TUYcB8",
-        "column_6MeRGw",
-        "column_VW6BAw",
-        "column_dNLkwP"
-      ],
-      "custom_css": [
-        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
-        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
-        "div {background: #0b0b0c;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<strong>CONFIGURE YOUR BUILD</strong>",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 24,
-        "padding_bottom": 40
       }
     },
     "custom_liquid_eiKLAx": {
@@ -248,80 +174,6 @@
         "padding_bottom": 68
       }
     },
-    "multicolumn_M8qycr": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_tdanAK": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_0172f986-0805-4560-a104-64770cbd7aa9.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Smash Zone",
-            "link": "shopify://collections/bth-badminton"
-          }
-        },
-        "column_FYyCfk": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_75838ed6-da00-40ad-ab80-47eae6300acc.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Sixer Season",
-            "link": "shopify://collections/bth-cricket"
-          }
-        },
-        "column_QTEkyB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_e9f47073-f221-485b-b66c-798f83483c82.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Paddle Party",
-            "link": "shopify://collections/bth-pickleball"
-          }
-        },
-        "column_p3rQT9": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_copy.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Fitness Fiesta",
-            "link": "shopify://collections/bth-fitness-accessories"
-          }
-        }
-      },
-      "block_order": [
-        "column_tdanAK",
-        "column_FYyCfk",
-        "column_QTEkyB",
-        "column_p3rQT9"
-      ],
-      "custom_css": [
-        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
-        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
-        "div {background: #0b0b0c;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<strong>PICK YOUR ARENA</strong>",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 68
-      }
-    },
     "custom_liquid_NJk9xG": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -399,6 +251,154 @@
         "swipe_on_mobile": true,
         "padding_top": 40,
         "padding_bottom": 100
+      }
+    },
+    "multicolumn_UWV9KM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TUYcB8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_76cf47e8-1423-49a3-bb42-e22465f92d40.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Swing Things",
+            "link": "shopify://collections/bth-racket"
+          }
+        },
+        "column_6MeRGw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_eea6a6c1-9281-4df8-ac6a-6f4e980af3ff.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Footwork Flex",
+            "link": "shopify://collections/bth-shoes"
+          }
+        },
+        "column_VW6BAw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_6d047f16-20aa-4a2f-914c-c80ff8cf9947.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Fit The Kit",
+            "link": "shopify://collections/bth-bags"
+          }
+        },
+        "column_dNLkwP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_7d81ffd7-7487-4c5d-ad9c-840646d6241d.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Paddle Pop",
+            "link": "shopify://collections/bth-paddles"
+          }
+        }
+      },
+      "block_order": [
+        "column_TUYcB8",
+        "column_6MeRGw",
+        "column_VW6BAw",
+        "column_dNLkwP"
+      ],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>CONFIGURE YOUR BUILD</strong>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 40
+      }
+    },
+    "multicolumn_M8qycr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_tdanAK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_0172f986-0805-4560-a104-64770cbd7aa9.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Smash Zone",
+            "link": "shopify://collections/bth-badminton"
+          }
+        },
+        "column_FYyCfk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_75838ed6-da00-40ad-ab80-47eae6300acc.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Sixer Season",
+            "link": "shopify://collections/bth-cricket"
+          }
+        },
+        "column_QTEkyB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_e9f47073-f221-485b-b66c-798f83483c82.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Paddle Party",
+            "link": "shopify://collections/bth-pickleball"
+          }
+        },
+        "column_p3rQT9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Fitness Fiesta",
+            "link": "shopify://collections/bth-fitness-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "column_tdanAK",
+        "column_FYyCfk",
+        "column_QTEkyB",
+        "column_p3rQT9"
+      ],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center; margin-bottom: 40px;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>PICK YOUR ARENA</strong>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 68
       }
     },
     "hero_component_j9eRJN": {
