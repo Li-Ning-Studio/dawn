@@ -43,16 +43,6 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_Pke8wy": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section class=\"bth-cats1\">\n  <style>\n    .bth-cats1 {\n      background: #110900;\n      padding: 26px 20px;\n      padding-bottom: 70px;\n    }\n .bth-cats-inner {\n      max-width: 1000px;\n      margin: 0;\n      text-align: center;\n    }\n    .bth-section-tag {\n      display: inline-block;\n      font-family: 'Inter', sans-serif;\n      font-size: 13px;\n      font-weight: 700;\n      letter-spacing: 0.22em;\n      text-transform: uppercase;\n      color: #FF5500;\n      border: 1px solid rgba(255,85,0,0.35);\n      border-radius: 100px;\n      padding: 4px 14px;\n      margin-bottom: 18px;\n    }\n    .bth-section-heading {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(30px, 5.5vw, 52px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.02em;\n      line-height: 1.05;\n    }\n    \n    .bth-cats-inner {\n      max-width: 1000px;\n      margin: 0 auto;\n    }\n    .bth-cats-grid {\n      display: grid;\n      grid-template-columns: repeat(4, 1fr);\n      gap: 14px;\n    }\n    @media (max-width: 768px) {\n      .bth-cats-grid { grid-template-columns: repeat(2, 1fr); }\n    }\n    @media (max-width: 400px) {\n      .bth-cats-grid { grid-template-columns: repeat(2, 1fr); }\n    }\n    .bth-cat-card {\n      position: relative;\n    \n      transition: transform 0.25s ease;\n    }\n    .bth-cat-card:hover {\n      transform: translateY(-4px);\n    }\n    .bth-cat-card img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      object-position: center top;\n      display: block;\n      transition: transform 0.4s ease;\n    }\n    .bth-cat-card:hover img {\n      transform: scale(1.05);\n    }\n  </style>\n<div class=\"bth-cats-inner\">\n    <span class=\"bth-section-tag\">What's On Sale</span>\n    <h2 class=\"bth-section-heading\">Drops Across Every Sport</h2>\n\n    <div class=\"bth-cats-grid\">\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_1_d51aaf71-cc64-4161-b223-46a5d1ff27ae.jpg?v=1782733742&width=535\" alt=\"Rackets\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_2_66bcee79-1432-4364-a1fb-c6bebd046a69.jpg?v=1782733742&width=535\" alt=\"Shoes\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_3_fc9641fb-1fee-4528-88c0-7a7f11311a9b.jpg?v=1782733742&width=535\" alt=\"Kit Bags\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_4_dac4ebaf-3d3f-4dca-be61-305182916e18.jpg?v=1782733742&width=535\" alt=\"Paddles\" loading=\"lazy\">\n      </div>\n\n    </div>\n  </div>\n</section>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_XXyj4a": {
       "type": "hero-component",
       "disabled": true,
@@ -147,6 +137,79 @@
         "padding_top": 0,
         "padding_bottom": 68
       }
+    },
+    "multicolumn_7apB4L": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FefKqA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Nitrix_70_Volta_BEAST_MAX.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fQGF4M": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Flareon_700_Hyper_spike.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nKxFDw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/NITRIX_70_VENOM_Hyper_Court.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FefKqA",
+        "column_fQGF4M",
+        "column_nKxFDw"
+      ],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 68
+      }
+    },
+    "custom_liquid_Pke8wy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"bth-cats1\">\n  <style>\n    .bth-cats1 {\n      background: #110900;\n      padding: 26px 20px;\n      padding-bottom: 70px;\n    }\n .bth-cats-inner {\n      max-width: 1000px;\n      margin: 0;\n      text-align: center;\n    }\n    .bth-section-tag {\n      display: inline-block;\n      font-family: 'Inter', sans-serif;\n      font-size: 13px;\n      font-weight: 700;\n      letter-spacing: 0.22em;\n      text-transform: uppercase;\n      color: #FF5500;\n      border: 1px solid rgba(255,85,0,0.35);\n      border-radius: 100px;\n      padding: 4px 14px;\n      margin-bottom: 18px;\n    }\n    .bth-section-heading {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(30px, 5.5vw, 52px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.02em;\n      line-height: 1.05;\n    }\n    \n    .bth-cats-inner {\n      max-width: 1000px;\n      margin: 0 auto;\n    }\n    .bth-cats-grid {\n      display: grid;\n      grid-template-columns: repeat(4, 1fr);\n      gap: 14px;\n    }\n    @media (max-width: 768px) {\n      .bth-cats-grid { grid-template-columns: repeat(2, 1fr); }\n    }\n    @media (max-width: 400px) {\n      .bth-cats-grid { grid-template-columns: repeat(2, 1fr); }\n    }\n    .bth-cat-card {\n      position: relative;\n    \n      transition: transform 0.25s ease;\n    }\n    .bth-cat-card:hover {\n      transform: translateY(-4px);\n    }\n    .bth-cat-card img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      object-position: center top;\n      display: block;\n      transition: transform 0.4s ease;\n    }\n    .bth-cat-card:hover img {\n      transform: scale(1.05);\n    }\n  </style>\n<div class=\"bth-cats-inner\">\n    <span class=\"bth-section-tag\">What's On Sale</span>\n    <h2 class=\"bth-section-heading\">Drops Across Every Sport</h2>\n\n    <div class=\"bth-cats-grid\">\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_1_d51aaf71-cc64-4161-b223-46a5d1ff27ae.jpg?v=1782733742&width=535\" alt=\"Rackets\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_2_66bcee79-1432-4364-a1fb-c6bebd046a69.jpg?v=1782733742&width=535\" alt=\"Shoes\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_3_fc9641fb-1fee-4528-88c0-7a7f11311a9b.jpg?v=1782733742&width=535\" alt=\"Kit Bags\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_4_dac4ebaf-3d3f-4dca-be61-305182916e18.jpg?v=1782733742&width=535\" alt=\"Paddles\" loading=\"lazy\">\n      </div>\n\n    </div>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -156,6 +219,7 @@
     "hero_component_XXyj4a",
     "custom_liquid_qPac4z",
     "multicolumn_qhfDch",
+    "multicolumn_7apB4L",
     "custom_liquid_Pke8wy"
   ]
 }
