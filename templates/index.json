@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_component_HTHmKC": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01_4b3b2f6b-fd23-4b10-a4c2-566e9c00939b.jpg",
+        "mobile_image": "shopify://shop_images/01_Copy.jpg",
+        "subtitle": "24 Hours Only",
+        "title": "Summer's Final Countdown",
+        "description": "One day. The biggest deals of summer. Then they're gone.",
+        "button_text": "Shop Now",
+        "link_to": "shopify://collections/beat-the-heat",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 88
+      }
+    },
     "hero_component_F6qDKQ": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -267,64 +284,6 @@
         "padding_top": 36,
         "padding_bottom": 12
       }
-    },
-    "responsive_slideshow_Eb8XFX": {
-      "type": "responsive-slideshow",
-      "blocks": {
-        "slide_FUXGUn": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_44c694a9-d307-462c-b50b-a69799f1b096.jpg",
-            "mobile_image": "shopify://shop_images/Banner_responsive_7ba8a6a5-ebcf-4153-adae-b95d2d4ddd0e.jpg",
-            "heading": "Let Your Game Speak For You",
-            "subheading": "Ultra stability to let you sway cross the court in ease",
-            "button_label": "Suit Up!",
-            "link": "shopify://products/court-star-pro"
-          }
-        },
-        "slide_A4mggU": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1_copy.jpg",
-            "mobile_image": "shopify://shop_images/2_copy.jpg",
-            "heading": "Step up. Stay ahead.",
-            "subheading": "Where every step fuels speed and every landing feels like home court.",
-            "button_label": "Lace up. Win!",
-            "link": "shopify://products/raze"
-          }
-        },
-        "slide_DtRnUp": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_3f298e1b-1346-446d-aeea-7a026a4e918b.jpg",
-            "mobile_image": "shopify://shop_images/Banner_1_Responsive_948ebae5-b2ef-4abf-8a7b-5a2b472544cc.jpg",
-            "heading": "Pro's Mastery",
-            "subheading": "Stay one step ahead",
-            "button_label": "Grab Blade Pro",
-            "link": "shopify://products/blade-pro"
-          }
-        },
-        "slide_GPkz9D": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_ffad1ded-9860-4e85-841a-4611979d037f.jpg",
-            "mobile_image": "shopify://shop_images/Banner_1_R_b5513951-58cc-46ef-82e9-033d02a26ade.jpg",
-            "heading": "Unmatched Support for Every Step",
-            "subheading": "Power through the court with Raze Pro's multi-layered sole for ultimate comfort and support.",
-            "button_label": "Buy Now!",
-            "link": "shopify://products/raze-pro"
-          }
-        }
-      },
-      "block_order": [
-        "slide_FUXGUn",
-        "slide_A4mggU",
-        "slide_DtRnUp",
-        "slide_GPkz9D"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {}
     },
     "swipeable_products_TRadWW": {
       "type": "swipeable-products",
@@ -589,6 +548,7 @@
     }
   },
   "order": [
+    "hero_component_HTHmKC",
     "hero_component_F6qDKQ",
     "swipeable_products_3mXzea",
     "hero_component_G3BHfh",
@@ -599,7 +559,6 @@
     "hero_component_EAQyDa",
     "swipeable_products_Y8n63R",
     "multicolumn_Ktr9dz",
-    "responsive_slideshow_Eb8XFX",
     "swipeable_products_TRadWW",
     "hero_video_component_yDajRm",
     "hero_component_mYeEJ4",
