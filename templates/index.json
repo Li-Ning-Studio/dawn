@@ -9,6 +9,35 @@
  */
 {
   "sections": {
+    "hero_component_XcQqXm": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/1_1144d809-5607-49d2-837c-b76e28b501ce.webp",
+        "mobile_image": "shopify://shop_images/1R.webp",
+        "subtitle": "Ranger Force",
+        "title": "May the Force be with you",
+        "description": "Experience grip that pulls you in",
+        "button_text": "CHECK IT OUT",
+        "link_to": "shopify://products/ranger-force",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_BNkLCX": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Feel the force",
+        "products": [
+          "ranger-force"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 44
+      }
+    },
     "hero_component_GhhRa7": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -61,35 +90,6 @@
         "title": "Swipeable Products",
         "products": [
           "halberd-strike"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 44
-      }
-    },
-    "hero_component_XcQqXm": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Saga_Lite_home_banner_desktop.jpg",
-        "mobile_image": "shopify://shop_images/Saga_Lite_home_banner_mobile.jpg",
-        "subtitle": "Saga Lite IX",
-        "title": "THE CHAMPIONMAKER",
-        "description": "Featuring advanced TUFF tip technology, the Saga Lite IX is a championmaker build for dominating the court.",
-        "button_text": "GET IT HERE!",
-        "link_to": "shopify://products/saga-lite-ix",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_BNkLCX": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "SAGA COLLECTION",
-        "products": [
-          "saga-lite-ix"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -278,12 +278,12 @@
     }
   },
   "order": [
+    "hero_component_XcQqXm",
+    "swipeable_products_BNkLCX",
     "hero_component_GhhRa7",
     "swipeable_products_VJWXwz",
     "hero_video_component_HCGgYR",
     "swipeable_products_J3G9h3",
-    "hero_component_XcQqXm",
-    "swipeable_products_BNkLCX",
     "hero_component_pLiiEX",
     "swipeable_products_mN4wX9",
     "hero_component_trUwK4",
