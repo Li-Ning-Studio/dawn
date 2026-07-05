@@ -81,6 +81,95 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_NJk9xG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 5: Freebies / Gift Vault (offer construct). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n .hb-freebies{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    background:linear-gradient(180deg,#0b0b0c 0%, #141416 100%); padding:90px 24px; position:relative;\n    font-family:'Inter',sans-serif; box-sizing:border-box;\n  }\n  .hb-freebies *{box-sizing:border-box;}\n  .hb-freebies-inner{max-width:1200px; margin:0 auto;}\n  .hb-gift-lead{display:inline-block; background:var(--orange-1); color:#fff; font-weight:800; font-size:12px; letter-spacing:1px; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:14px;}\n  .hb-freebies-title{font-family:'Anton',sans-serif; font-size:clamp(32px,5vw,52px); text-transform:uppercase; line-height:1.2; color:var(--white);}\n  .hb-freebies-title span{color:var(--orange-2);}\n  .hb-freebies-desc{color:#a9a9ad; max-width:520px; margin-top:10px; font-size:14px;}\n\n \n\n\n  .hb-tier-strip{margin-top:20px; background:#151517; border:1px solid #232326; border-radius:16px; padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}\n  .hb-tier-strip .hb-tlabel{display:flex; align-items:center; gap:12px;}\n  .hb-tier-strip .hb-tlabel .hb-badge8k{font-family:'Anton',sans-serif; font-size:26px; background:linear-gradient(160deg,var(--orange-3),var(--orange-1)); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:1px var(--ink);}\n  .hb-tier-strip p{font-size:13px; color:#a9a9ad; max-width:480px; margin:0;}\n  .hb-tier-strip .hb-tcta{background:var(--orange-1); color:#fff; font-weight:800; font-size:13px; padding:12px 24px; border-radius:30px; text-decoration:none; white-space:nowrap;}\n\n  @media (max-width:900px){\n    .hb-gift-grid{grid-template-columns:repeat(2,1fr);}\n    .hb-bonus-row{grid-template-columns:1fr;}\n    .hb-tier-strip{flex-direction:column; align-items:flex-start;}\n  }\n</style>\n\n<section class=\"hb-freebies\">\n  <div class=\"hb-freebies-inner\">\n    <span class=\"hb-gift-lead\">Buy more, get more</span>\n    <div class=\"hb-freebies-title\">Every Buy Comes <span>With A Gift</span></div>\n    <p class=\"hb-freebies-desc\">Shop the sale and walk away with a freebie on top — no code needed, it's added the moment the matching item hits your cart.</p>\n\n  \n\n    <div class=\"hb-tier-strip\">\n      <div class=\"hb-tlabel\">\n        <span class=\"hb-badge8k\">₹8K+</span>\n        <p>Spend over ₹8,000 on rackets and unlock a <strong style=\"color:#FF8A1F;\">FREE COSMOGEAR KIT BAG </strong>with your order.</p>\n      </div>\n      <a href=\"/collections/free-kit-bag\" class=\"hb-tcta\">Unlock This Gift</a>\n    </div>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_Wi9izD": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_HpkaCK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-cosmogear"
+          }
+        },
+        "featured_collection_Hept6t": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-stringing-remix-gripping-services"
+          }
+        },
+        "featured_collection_gN6t3d": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-socks"
+          }
+        },
+        "featured_collection_BmJpWR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-t-shirt-printing"
+          }
+        },
+        "featured_collection_JDfADf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-cosmopack-headcover"
+          }
+        },
+        "featured_collection_DB7pcy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "free-drawstring-bag-1"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_HpkaCK",
+        "featured_collection_Hept6t",
+        "featured_collection_gN6t3d",
+        "featured_collection_BmJpWR",
+        "featured_collection_JDfADf",
+        "featured_collection_DB7pcy"
+      ],
+      "custom_css": [
+        "h2 {margin: 10px auto;}",
+        "img {z-index: 2;}",
+        "a {font-size: 1.6rem; font-family: Figtree, sans-serif; letter-spacing: 1px; color: #fff;}",
+        ".card__content {background: #131315;}",
+        ".card__inner .card__content {background: none;}"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 100
+      }
+    },
+    "custom_liquid_EqiGm4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- ============================================================\nFREE KITBAG — SELECT RACKETS (minimal creative, text-only)\n============================================================ -->\n<link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .fk2-section{\n    --heat-1:#FF5B1E;\n    --heat-2:#FF1E4C;\n    --ink:#0A0A0A;\n    --line:#2A2A2A;\n    --text:#F5F5F0;\n    --muted:#8A8A84;\n    background:var(--ink);\n    color:var(--text);\n    font-family:'Barlow Condensed',sans-serif;\n    text-align:center;\n    padding:72px 24px;\n    border-top:1px solid var(--line);\n    border-bottom:1px solid var(--line);\n  }\n\n  .fk2-headline{\n    font-family:'Bebas Neue',sans-serif;\n    font-size:clamp(36px,6vw,68px);\n    line-height:0.95;\n    letter-spacing:0.01em;\n    text-transform:uppercase;\n    margin:0 auto 14px;\n    max-width:680px;\ncolor:white;\n  }\n  .fk2-headline em{\n    font-style:normal;\n    background:linear-gradient(90deg,var(--heat-1),var(--heat-2));\n    -webkit-background-clip:text;\n    background-clip:text;\n    color:transparent;\n  }\n\n  .fk2-sub{\n    font-size:16px;\n    letter-spacing:0.03em;\n    color:var(--muted);\n    margin:0 0 30px;\n  }\n  .fk2-sub b{color:var(--text);font-weight:600;}\n\n  .fk2-cta{\n    display:inline-flex;\n    align-items:center;\n    gap:8px;\n    background:linear-gradient(90deg,var(--heat-1),var(--heat-2));\n    color:var(--ink);\n    font-family:'Bebas Neue',sans-serif;\n    font-size:17px;\n    letter-spacing:0.05em;\n    text-decoration:none;\n    padding:13px 32px;\n    border-radius:3px;\n    transition:transform .15s ease, box-shadow .15s ease;\n  }\n  .fk2-cta:hover{\n    transform:translateY(-2px);\n    box-shadow:0 10px 24px rgba(255,30,76,0.35);\n  }\n\n  @media (max-width:600px){\n    .fk2-section{padding:52px 20px;}\n  }\n</style>\n\n<section class=\"fk2-section\">\n  <h2 class=\"fk2-headline\">Buy the racket.<br><em>Steal the bag.</em></h2>\n  <p class=\"fk2-sub\">Free kitbag on <b>select rackets</b> · no code</p>\n  <a href=\"/collections/free-kit-bag\" class=\"fk2-cta\">Shop Now →</a>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_ihqe7q": {
       "type": "hero-component",
       "custom_css": [
@@ -175,85 +264,6 @@
         "padding_bottom": 68
       }
     },
-    "custom_liquid_NJk9xG": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- HNDRD — Section 5: Freebies / Gift Vault (offer construct). Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n .hb-freebies{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f; --ink:#0b0b0c; --white:#ffffff;\n    background:linear-gradient(180deg,#0b0b0c 0%, #141416 100%); padding:90px 24px; position:relative;\n    font-family:'Inter',sans-serif; box-sizing:border-box;\n  }\n  .hb-freebies *{box-sizing:border-box;}\n  .hb-freebies-inner{max-width:1200px; margin:0 auto;}\n  .hb-gift-lead{display:inline-block; background:var(--orange-1); color:#fff; font-weight:800; font-size:12px; letter-spacing:1px; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:14px;}\n  .hb-freebies-title{font-family:'Anton',sans-serif; font-size:clamp(32px,5vw,52px); text-transform:uppercase; line-height:1.2; color:var(--white);}\n  .hb-freebies-title span{color:var(--orange-2);}\n  .hb-freebies-desc{color:#a9a9ad; max-width:520px; margin-top:10px; font-size:14px;}\n\n \n\n\n  .hb-tier-strip{margin-top:20px; background:#151517; border:1px solid #232326; border-radius:16px; padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}\n  .hb-tier-strip .hb-tlabel{display:flex; align-items:center; gap:12px;}\n  .hb-tier-strip .hb-tlabel .hb-badge8k{font-family:'Anton',sans-serif; font-size:26px; background:linear-gradient(160deg,var(--orange-3),var(--orange-1)); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:1px var(--ink);}\n  .hb-tier-strip p{font-size:13px; color:#a9a9ad; max-width:480px; margin:0;}\n  .hb-tier-strip .hb-tcta{background:var(--orange-1); color:#fff; font-weight:800; font-size:13px; padding:12px 24px; border-radius:30px; text-decoration:none; white-space:nowrap;}\n\n  @media (max-width:900px){\n    .hb-gift-grid{grid-template-columns:repeat(2,1fr);}\n    .hb-bonus-row{grid-template-columns:1fr;}\n    .hb-tier-strip{flex-direction:column; align-items:flex-start;}\n  }\n</style>\n\n<section class=\"hb-freebies\">\n  <div class=\"hb-freebies-inner\">\n    <span class=\"hb-gift-lead\">Buy more, get more</span>\n    <div class=\"hb-freebies-title\">Every Buy Comes <span>With A Gift</span></div>\n    <p class=\"hb-freebies-desc\">Shop the sale and walk away with a freebie on top — no code needed, it's added the moment the matching item hits your cart.</p>\n\n  \n\n    <div class=\"hb-tier-strip\">\n      <div class=\"hb-tlabel\">\n        <span class=\"hb-badge8k\">₹8K+</span>\n        <p>Spend over ₹8,000 on rackets and unlock a <strong style=\"color:#FF8A1F;\">FREE COSMOGEAR KIT BAG </strong>with your order.</p>\n      </div>\n      <a href=\"/collections/free-kit-bag\" class=\"hb-tcta\">Unlock This Gift</a>\n    </div>\n  </div>\n</section>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "collection_list_Wi9izD": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_HpkaCK": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-cosmogear"
-          }
-        },
-        "featured_collection_Hept6t": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-stringing-remix-gripping-services"
-          }
-        },
-        "featured_collection_gN6t3d": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-socks"
-          }
-        },
-        "featured_collection_BmJpWR": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-t-shirt-printing"
-          }
-        },
-        "featured_collection_JDfADf": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-cosmopack-headcover"
-          }
-        },
-        "featured_collection_DB7pcy": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "free-drawstring-bag-1"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_HpkaCK",
-        "featured_collection_Hept6t",
-        "featured_collection_gN6t3d",
-        "featured_collection_BmJpWR",
-        "featured_collection_JDfADf",
-        "featured_collection_DB7pcy"
-      ],
-      "custom_css": [
-        "h2 {margin: 10px auto;}",
-        "img {z-index: 2;}",
-        "a {font-size: 1.6rem; font-family: Figtree, sans-serif; letter-spacing: 1px; color: #fff;}",
-        ".card__content {background: #131315;}",
-        ".card__inner .card__content {background: none;}"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 6,
-        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 100
-      }
-    },
     "multicolumn_UWV9KM": {
       "type": "multicolumn",
       "blocks": {
@@ -289,6 +299,7 @@
         },
         "column_dNLkwP": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Artboard_4_7d81ffd7-7487-4c5d-ad9c-840646d6241d.jpg",
             "title": "",
@@ -318,7 +329,7 @@
         "image_ratio": "square",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
@@ -353,6 +364,7 @@
         },
         "column_QTEkyB": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Artboard_3_e9f47073-f221-485b-b66c-798f83483c82.jpg",
             "title": "",
@@ -392,7 +404,7 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
@@ -728,11 +740,12 @@
     "hero_component_AFhdP9",
     "custom_liquid_eHfdCT",
     "custom_liquid_eiKLAx",
+    "custom_liquid_NJk9xG",
+    "collection_list_Wi9izD",
+    "custom_liquid_EqiGm4",
     "hero_component_ihqe7q",
     "custom_liquid_98bxMi",
     "multicolumn_MDtbVy",
-    "custom_liquid_NJk9xG",
-    "collection_list_Wi9izD",
     "multicolumn_UWV9KM",
     "multicolumn_M8qycr",
     "hero_component_j9eRJN",
