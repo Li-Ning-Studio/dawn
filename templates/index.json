@@ -13,6 +13,36 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
+        "image": "shopify://shop_images/Artboard_1_4a503ad2-33f4-4c7b-915d-36b875e35bff.png",
+        "mobile_image": "shopify://shop_images/Banner_R_de0de414-91a0-4b2a-b22f-635e1919d315.png",
+        "subtitle": "Hyper Speed",
+        "title": "Comfort that drives your game.",
+        "description": "Defined by speed. Driven by comfort.",
+        "button_text": "Shop Speed",
+        "link_to": "shopify://products/hyperspeed",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "swipeable_products_A6gXg4": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Hyper Speed",
+        "products": [
+          "hyperspeed"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "hero_component_apX6LC": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
         "image": "shopify://shop_images/01_Banner.jpg",
         "mobile_image": "shopify://shop_images/01_Mobile.jpg",
         "subtitle": "Raze Pro II",
@@ -341,40 +371,6 @@
         "padding_bottom": 80
       }
     },
-    "hero_component_VwnCmb": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Home_Banner_51445582-7ddf-4784-a354-487606bba8b9.png",
-        "mobile_image": "shopify://shop_images/Home_Banner_R_33712625-ab31-47ff-ba53-99ebc1dcb9f4.png",
-        "subtitle": "New Launch!",
-        "title": "Train Without Limits",
-        "description": "Everything you need to train harder, recover better, and stay consistent.",
-        "button_text": "Get Started",
-        "link_to": "shopify://pages/accessories",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 68
-      }
-    },
-    "hero_component_Di3AGa": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/2_27.jpg",
-        "mobile_image": "shopify://shop_images/1_32.jpg",
-        "subtitle": "Pickleball, Perfected.",
-        "title": "PLAY FASTER. HIT HARDER. WIN MORE.",
-        "description": "Launch Offer! Get a free paddle bag when you purchase our cutting-edge paddles and gear",
-        "button_text": "PLAY LIKE A PRO",
-        "link_to": "shopify://collections/pickleball",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_Dd4CVH": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -450,88 +446,12 @@
         "padding_top": 36,
         "padding_bottom": 68
       }
-    },
-    "hero_component_NJbR8D": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_107e09d9-cc06-4d49-8fde-43602d9affad.png",
-        "mobile_image": "shopify://shop_images/Banner_R_64c453c6-cc22-4232-ac0c-9644214cd930.png",
-        "subtitle": "Kitbags",
-        "title": "PACK AND PLAY",
-        "description": "Go the distance with a kit bag that matches your ambition and endurance",
-        "button_text": "BAG IT!",
-        "link_to": "shopify://collections/badminton-kitbags",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_9k7FUW": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "LATEST BADMINTON KITBAGS",
-        "products": [
-          "monolith-kit-bag",
-          "cosmogear-kit-bag",
-          "atomic-x-surge-kit-bag",
-          "urban-pod-kit-bag",
-          "gravity-kit-bag",
-          "trailblazer-badminton-kit-bag",
-          "novus-backpack",
-          "switch-backpac",
-          "zest-kit-bag",
-          "victory-vault-kit-bag",
-          "glacio-pack-kit-bag"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 24
-      }
-    },
-    "hero_component_aTVWXK": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/12_706e58fc-4d6a-46d8-be0d-05be677f995d.jpg",
-        "mobile_image": "shopify://shop_images/11_2b011c26-550d-4059-abce-a466b0af765b.jpg",
-        "subtitle": "Serve your Best Game with Hundred's",
-        "title": "TENNIS STORE",
-        "description": "Empower your game with the right tools, designed to elevate every swing and move",
-        "button_text": "BEND YOUR OPPONENT",
-        "link_to": "shopify://collections/tennis",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_EVnndg": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "TENNIS PRODUCTS",
-        "products": [
-          "courtfuse",
-          "bazook",
-          "galatic",
-          "panzer",
-          "zeta-x"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 72
-      }
     }
   },
   "order": [
     "hero_component_F6qDKQ",
+    "swipeable_products_A6gXg4",
+    "hero_component_apX6LC",
     "swipeable_products_3mXzea",
     "hero_component_G3BHfh",
     "swipeable_products_dp9iPg",
@@ -546,14 +466,8 @@
     "hero_component_mYeEJ4",
     "swipeable_products_RyJQbU",
     "custom_liquid_nnJyGE",
-    "hero_component_VwnCmb",
-    "hero_component_Di3AGa",
     "hero_component_Dd4CVH",
     "swipeable_products_HyzyGP",
-    "multicolumn_aLMb78",
-    "hero_component_NJbR8D",
-    "swipeable_products_9k7FUW",
-    "hero_component_aTVWXK",
-    "swipeable_products_EVnndg"
+    "multicolumn_aLMb78"
   ]
 }
