@@ -21,8 +21,8 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/06_d61b35ec-23bc-42cb-9f58-63dc57defe16.jpg",
-        "mobile_image": "shopify://shop_images/06_Copy.jpg",
+        "image": "shopify://shop_images/hf_20260708_181256_65ee7695-fc5c-41f1-9630-2ce0dbaac9cb_1.png",
+        "mobile_image": "shopify://shop_images/01_2c3e7fd5-677a-4292-ba85-f5791720abfa.jpg",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -37,80 +37,16 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- HNDRD — Section 8: Combo Kits / Buy More Save More. Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-combo{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f;\n    --blue-1:#0a3fb0; --blue-2:#1f6bff; --sky:#8fd7ff;\n    --ink:#0b0b0c; --white:#ffffff;\n    background:var(--ink); padding:90px 24px 20px; font-family:'Inter',sans-serif; box-sizing:border-box;\n    position:relative; overflow:hidden;\n  }\n  .hb-combo *{box-sizing:border-box;}\n  .hb-combo-inner{max-width:1200px; margin:0 auto; position:relative; z-index:2;}\n\n  /* ---- text header (replaces banner) ---- */\n  .hb-combo-header{\n    text-align:center;\n    max-width:640px;\n    margin:0 auto 56px;\n  }\n  .hb-combo-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:18px;\n  }\n  .hb-combo-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-combo-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-combo-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-combo-heading{\n    font-family:'Anton',sans-serif; text-transform:uppercase; line-height:1.2;\n    font-size:clamp(38px,5.5vw,66px); margin:0;\n  }\n  .hb-combo-heading .hb-l1{\n    background:linear-gradient(180deg,#eaf6ff, #ffffff 55%, #cfe9ff);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n  .hb-combo-heading .hb-l2{\n    background:linear-gradient(180deg,#ff8a1f, #ff5a1f 60%, #ffc61f);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n  .hb-combo-sub{margin-top:18px; color:#a9a9ad; font-weight:600; font-size:15px; line-height:1.5;}\n  .hb-combo-sub b{color:var(--white); font-weight:800;}\n\n  /* ---- step guide ---- */\n  .hb-steps{\n    display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;\n    margin-bottom:48px;\n  }\n  .hb-step{\n    display:flex; align-items:center; gap:10px;\n    background:#151517; border:1px solid #232326; border-radius:40px;\n    padding:10px 18px 10px 10px;\n  }\n  .hb-step .hb-num{\n    width:26px; height:26px; border-radius:50%; background:var(--orange-1); color:#fff;\n    font-family:'Anton',sans-serif; font-size:13px; display:flex; align-items:center; justify-content:center;\n  }\n  .hb-step p{font-size:13px; font-weight:700; color:#d8d8db; margin:0;}\n  .hb-step p b{color:var(--orange-2);}\n  .hb-step-arrow{color:#3d3d40; font-size:16px;}\n\n \n</style>\n\n<section class=\"hb-combo\">\n  <div class=\"hb-combo-inner\">\n\n    <!-- Text header -->\n    <div class=\"hb-combo-header\">\n      <div class=\"hb-combo-eyebrow\"><span class=\"hb-dot\"></span>Combo Offers</div>\n      <h2 class=\"hb-combo-heading\">\n        <span class=\"hb-l1\">Buy More.</span> <span class=\"hb-l2\">Save More.</span>\n      </h2>\n      <p class=\"hb-combo-sub\">Pick 2 products for exclusive savings. <b>Add a 3rd for even bigger discounts.</b> Mix rackets, shoes &amp; kit bags across 3 combo tiers.</p>\n    </div>\n\n    <!-- Step guide -->\n    <div class=\"hb-steps\">\n      <div class=\"hb-step\"><span class=\"hb-num\">1</span><p>Pick a <b>combo tier</b></p></div>\n      <span class=\"hb-step-arrow\">→</span>\n      <div class=\"hb-step\"><span class=\"hb-num\">2</span><p>Add <b>2 products</b> for the base discount</p></div>\n      <span class=\"hb-step-arrow\">→</span>\n      <div class=\"hb-step\"><span class=\"hb-num\">3</span><p>Add a <b>3rd</b> for +2% extra off</p></div>\n    </div>\n\n   </div>\n</section>",
+        "custom_liquid": "<!-- ============================================================\n     INTRO SECTION — place directly below your hero banner\n     Self-contained: scoped styles + optional scroll-reveal JS.\n     Uses the same design tokens (Space Grotesk / Inter / hs- palette)\n     as the hero, so it reads as one continuous page.\n     ============================================================ -->\n\n<section class=\"hs-intro\" id=\"hsIntro\">\n  <p class=\"hs-intro-eyebrow\"><span class=\"hs-intro-dot\"></span>The Story</p>\n  <h2 class=\"hs-intro-heading\">\n    Speed isn't a feature.<br>It's the <em>whole point.</em>\n  </h2>\n  <p class=\"hs-intro-desc\">\n    The Shoe was built around one question: what does a shoe need to do in the 0.3 seconds\n    between seeing the shuttle and reaching it? Everything else came second.\n  </p>\n</section>\n\n<style>\n  :root{\n    --hs-emerald-deep:#0A4A3A;\n    --hs-mist:#FAFAF7;\n    --hs-ink:#0B0F0D;\n    --hs-ink-soft:#41473F;\n    --hs-blush:#F0C7DA;\n    --hs-sky:#A9DEEA;\n    --hs-amber:#EFC15F;\n    --hs-periwinkle:#93A6E6;\n    --hs-signal:#FF5A36;\n    --hs-line: rgba(11,15,13,0.12);\n  }\n\n  .hs-intro{\n    background:;\n    padding:88px 6vw 76px;\n    text-align:center;\n    max-width:720px;\n    margin:0 auto;\n    opacity:0;\n    transform:translateY(18px);\n    transition:opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.8,.2,1);\n  }\n  .hs-intro.hs-in-view{\n    opacity:1;\n    transform:translateY(0);\n  }\n\n  .hs-intro-eyebrow{\n    font-family:'IBM Plex Mono', 'Space Grotesk', monospace;\n    font-size:11.5px;\n    font-weight:600;\n    letter-spacing:0.2em;\n    text-transform:uppercase;\n    color:var(--hs-emerald-deep);\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    gap:8px;\n    margin-bottom:18px;\n  }\n  .hs-intro-dot{\n    width:6px; height:6px;\n    border-radius:50%;\n    background:var(--hs-signal);\n  }\n\n  .hs-intro-heading{\n    font-family:'Space Grotesk', sans-serif;\n    font-weight:600;\n    font-size:clamp(1.7rem, 4.2vw, 2.7rem);\n    line-height:1.14;\n    letter-spacing:-0.01em;\n    color:var(--hs-ink);\n  }\n  .hs-intro-heading em{\n    font-style:normal;\n    background:linear-gradient(90deg, var(--hs-periwinkle), var(--hs-blush) 45%, var(--hs-amber) 85%);\n    -webkit-background-clip:text;\n    background-clip:text;\n    color:transparent;\n  }\n\n  .hs-intro-desc{\n    margin-top:18px;\n    font-family:'Inter', sans-serif;\n    font-size:16px;\n    line-height:1.65;\n    color:var(--hs-ink-soft);\n    max-width:520px;\n    margin-left:auto;\n    margin-right:auto;\n  }\n\n  @media (max-width: 720px){\n    .hs-intro{ padding:64px 6vw 56px; }\n  }\n\n  @media (prefers-reduced-motion: reduce){\n    .hs-intro{\n      opacity:1;\n      transform:none;\n      transition:none;\n    }\n  }\n</style>\n\n<script>\n  // Fades the section in the first time it scrolls into view.\n  // Safe to include multiple times on a page — checks before re-adding.\n  (function(){\n    var el = document.getElementById('hsIntro');\n    if (!el || !('IntersectionObserver' in window)) {\n      if (el) el.classList.add('hs-in-view');\n      return;\n    }\n    var observer = new IntersectionObserver(function(entries){\n      entries.forEach(function(entry){\n        if (entry.isIntersecting){\n          entry.target.classList.add('hs-in-view');\n          observer.unobserve(entry.target);\n        }\n      });\n    }, { threshold: 0.25 });\n    observer.observe(el);\n  })();\n</script>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "multicolumn_PzMqAQ": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_r7jYeV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_78e398f8-70bf-4b2c-a86e-83b6ce9c1fb3.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Build Starter Kit",
-            "link": "shopify://collections/starter-kit"
-          }
-        },
-        "column_T4j7gP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_0453ec4b-f6d2-4a04-bca9-84a320f017ea.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Build Intermediate Kit",
-            "link": "shopify://collections/intermediate-kit"
-          }
-        },
-        "column_7yAjkf": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_a6171ee3-62ea-4e48-9345-3808667757c6.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Build Advance Kit",
-            "link": "shopify://collections/advance-kit"
-          }
-        }
-      },
-      "block_order": [
-        "column_r7jYeV",
-        "column_T4j7gP",
-        "column_7yAjkf"
-      ],
-      "custom_css": [
-        ".title-wrapper--no-top-margin {justify-content: center;}",
-        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
-        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
-        "div {background: #0b0b0c;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 68
       }
     }
   },
   "order": [
     "main",
     "hero_component_JdemAw",
-    "custom_liquid_KGygr7",
-    "multicolumn_PzMqAQ"
+    "custom_liquid_KGygr7"
   ]
 }
