@@ -47,7 +47,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Hundred's Official India Tour is coming to Kolkata!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Hundred's Official India Tour is coming to Bangalore!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 56,
         "padding_bottom": 20
@@ -69,7 +69,7 @@
         "forms_inline_YgrnmV": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "977047",
+            "form_id": "651310",
             "text_color": "#ffffff",
             "button_background_color": "#ffa300",
             "button_label_color": "#121212",
@@ -176,35 +176,15 @@
         "column_Jpyc4z": {
           "type": "column",
           "settings": {
-            "title": "<strong>22nd May, Friday</strong>",
-            "text": "<h4>Ace Bengal Badminton Academy (Tapas Biswas)<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/5fcf8pZzZ6JqgQsm6\" target=\"_blank\" title=\"https://maps.app.goo.gl/5fcf8pZzZ6JqgQsm6\">View Location</a></h4><h4>Prime Badminton academy<br/>(6:00 PM - 8:00 PM) - <a href=\"https://maps.app.goo.gl/FcWeLtdvPSh4by2K8\" target=\"_blank\" title=\"https://maps.app.goo.gl/FcWeLtdvPSh4by2K8\">View Location</a></h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Yp8iYp": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>23rd May, Saturday</strong>",
-            "text": "<h4>Ace Bengal Badminton Academy (paschim putiary)<br/>(7:00 AM - 9:00 AM) - <a href=\"https://maps.app.goo.gl/FbDrzCLcoSB63JYU9\" target=\"_blank\" title=\"https://maps.app.goo.gl/FbDrzCLcoSB63JYU9\">View Location</a></h4><h4></h4><h4>Ace Bengal Badminton Academy (Orient Row)<br/>(4:00 PM - 6:00 PM) - <a href=\"https://maps.app.goo.gl/1NK2HT1mUihFczvQ8\" target=\"_blank\" title=\"https://maps.app.goo.gl/1NK2HT1mUihFczvQ8\">View Location</a></h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_gKA4jw": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>24th May, Sunday</strong>",
-            "text": "<h4>SSS - Arup Baidya Badminton Academy<br/>(6:00 AM - 8:00 AM) - <a href=\"https://maps.app.goo.gl/rgwQAR2WvMbXDnzt9\" target=\"_blank\" title=\"https://maps.app.goo.gl/rgwQAR2WvMbXDnzt9\">View Location</a></h4><h4>SSS - Arup Baidya Badminton Academy<br/>(3:00 PM - 5:00 PM) - <a href=\"https://maps.app.goo.gl/rgwQAR2WvMbXDnzt9\" target=\"_blank\" title=\"https://maps.app.goo.gl/rgwQAR2WvMbXDnzt9\">View Location</a></h4>",
+            "title": "<strong>21st July, Tuesday</strong>",
+            "text": "<h4>Simply Sport Badminton Academy, Haralur Main Road.<br/>(11:00 AM - 1:00 PM) - <a href=\"https://maps.app.goo.gl/FbozxidvaScnb7hS9\" target=\"_blank\" title=\"https://maps.app.goo.gl/FbozxidvaScnb7hS9\">View Location</a></h4><h4>Simply Sport Badminton Academy, Haralur Main Road.<br/>(3:00 PM - 5:00 PM) - <a href=\"https://maps.app.goo.gl/FbozxidvaScnb7hS9\" target=\"_blank\" title=\"https://maps.app.goo.gl/FbozxidvaScnb7hS9\">View Location</a></h4>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_Jpyc4z",
-        "column_Yp8iYp",
-        "column_gKA4jw"
+        "column_Jpyc4z"
       ],
       "custom_css": [
         "a {color: orange;}",
@@ -221,7 +201,7 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 1,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
@@ -305,7 +285,7 @@
           "settings": {
             "heading": "Is this event only for badminton?",
             "icon": "eye",
-            "row_content": "<p>Yes, this particular tour stop in kolkata is <strong>focused on badminton rackets only</strong>.</p>",
+            "row_content": "<p>Yes, this particular tour stop in Bangalore is <strong>focused on badminton rackets only</strong>.</p>",
             "page": ""
           }
         },
