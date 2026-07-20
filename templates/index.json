@@ -36,6 +36,46 @@
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_ReR9YN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- ================================================\n  HUNDRED INDIA — \"SHOP BY SPORT\" HOMEPAGE SECTION\n  Namespace: sbs- (Shop By Sport)\n  Drop-in ready: pure HTML/CSS, no JS, no external deps\n  Replace every [IMAGE_URL_...] placeholder with your asset links\n================================================= -->\n\n<section class=\"sbs-section\">\n  <div class=\"sbs-header\">\n    <span class=\"sbs-eyebrow\">Built for the game you play</span>\n    <h2 class=\"sbs-title\">Shop by Sport</h2>\n  </div>\n\n  <div class=\"sbs-grid\">\n\n    <!-- BADMINTON -->\n    <a href=\"/collections/badminton\" class=\"sbs-card sbs-card--badminton\">\n      <img class=\"sbs-card-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_2_4.jpg?v=1780738099\" alt=\"Badminton gear\" loading=\"lazy\">\n      <div class=\"sbs-card-overlay\"></div>\n      <div class=\"sbs-card-content\">\n        <span class=\"sbs-card-index\"></span>\n        <h3 class=\"sbs-card-title\">Badminton</h3>\n        <p class=\"sbs-card-sub\">Shop All</p>\n      </div>\n    \n    </a>\n\n    <!-- CRICKET -->\n    <a href=\"/collections/cricket\" class=\"sbs-card sbs-card--cricket\">\n      <img class=\"sbs-card-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_3_4.jpg?v=1780738129\" alt=\"Cricket gear\" loading=\"lazy\">\n      <div class=\"sbs-card-overlay\"></div>\n      <div class=\"sbs-card-content\">\n        <span class=\"sbs-card-index\"></span>\n        <h3 class=\"sbs-card-title\">Cricket</h3>\n        <p class=\"sbs-card-sub\">Shop All</p>\n      </div>\n     <!-- <div class=\"sbs-card-bar\">\n        <span>Shop Cricket</span>\n        <svg class=\"sbs-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\">\n          <path d=\"M5 12h14M13 6l6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </div> -->\n    </a>\n\n    <!-- PICKLEBALL -->\n    <a href=\"/collections/pickleball\" class=\"sbs-card sbs-card--pickleball\">\n      <img class=\"sbs-card-img\" src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_1_11.jpg?v=1780738101\" alt=\"Pickleball gear\" loading=\"lazy\">\n      <div class=\"sbs-card-overlay\"></div>\n      <div class=\"sbs-card-content\">\n        <span class=\"sbs-card-index\"></span>\n        <h3 class=\"sbs-card-title\">Pickleball</h3>\n        <p class=\"sbs-card-sub\">Shop All</p>\n      </div>\n     \n    </a>\n\n  </div>\n</section>\n\n<style>\n  .sbs-section{\n    --sbs-black:#0d0d0d;\n    --sbs-white:#ffffff;\n    --sbs-accent:#d8ff3e; /* swap for brand accent if different */\n    padding: 72px 24px;\n    background: transparent;\n    font-family: inherit;\n  }\n\n  .sbs-header{\n    max-width: 1280px;\n    margin: 0 auto 40px;\n    text-align: center;\n  }\n\n  .sbs-eyebrow{\n    display:inline-block;\n    font-size: 12px;\n    letter-spacing: 0.18em;\n    text-transform: uppercase;\n    color: #6b6b6b;\n    margin-bottom: 12px;\n    font-weight: 600;\n  }\n\n  .sbs-title{\n    font-size: clamp(32px, 5vw, 56px);\n    line-height: 1.05;\n    color: var(--sbs-black);\n    margin: 0;\n    font-weight: 800;\n    letter-spacing: -0.02em;\n    text-transform: uppercase;\n  }\n\n  .sbs-grid{\n    max-width: 1280px;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 20px;\n  }\n\n  .sbs-card{\n    position: relative;\n    display: block;\n    aspect-ratio: 1 / 1;\n    overflow: hidden;\n    border-radius: 16px;\n    text-decoration: none;\n    isolation: isolate;\n    background: #1a1a1a;\n  }\n\n  .sbs-card-img{\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    transform: scale(1.04);\n    filter: grayscale(35%) contrast(1.05);\n    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;\n  }\n\n  .sbs-card-overlay{\n    position: absolute;\n    inset: 0;\n    background: linear-gradient(180deg, rgba(13,13,13,0) 30%, rgba(13,13,13,0.95) 100%);\n    transition: opacity 0.4s ease;\n  }\n\n  .sbs-card-content{\n    position: relative;\n    z-index: 2;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    padding: 28px;\n  }\n\n  .sbs-card-index{\n    position: absolute;\n    top: 24px;\n    right: 24px;\n    font-size: 13px;\n    font-weight: 700;\n    color: rgba(255,255,255,0.55);\n    letter-spacing: 0.05em;\n  }\n\n  .sbs-card-title{\n    font-size: 28px;\n    font-weight: 800;\n    color: var(--sbs-white);\n    text-transform: uppercase;\n    letter-spacing: -0.01em;\n    margin: 0 0 6px;\n  }\n\n  .sbs-card-sub{\n    font-size: 13px;\n    color: rgba(255,255,255,0.7);\n    margin: 0;\n    letter-spacing: 0.02em;\n  }\n\n  .sbs-card-bar{\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 3;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    height: 44px;\n    background: var(--sbs-accent);\n    color: var(--sbs-black);\n    font-size: 12px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 0.06em;\n    transform: translateY(100%);\n    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);\n  }\n\n  .sbs-arrow{\n    transition: transform 0.3s ease;\n  }\n\n  /* hover state */\n  .sbs-card:hover .sbs-card-img{\n    transform: scale(1.12);\n    filter: grayscale(0%) contrast(1);\n  }\n  .sbs-card:hover .sbs-card-bar{\n    transform: translateY(0);\n  }\n  .sbs-card:hover .sbs-arrow{\n    transform: translateX(4px);\n  }\n\n  /* tablet */\n  @media (max-width: 900px){\n    .sbs-grid{\n      grid-template-columns: 1fr;\n      gap: 16px;\n    }\n  }\n\n  /* mobile */\n  @media (max-width: 480px){\n    .sbs-section{\n      padding: 48px 16px;\n    }\n    .sbs-card-content{\n      padding: 20px;\n    }\n    .sbs-card-title{\n      font-size: 22px;\n    }\n  }\n\n  /* touch devices can't hover — keep the bar visible by default */\n  @media (hover: none){\n    .sbs-card-bar{\n      transform: translateY(0);\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_G3BHfh": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/BANNER_3e03fef9-af97-4d81-af68-e814524cedd2.jpg",
+        "mobile_image": "shopify://shop_images/BANNER_res.jpg",
+        "subtitle": "Glory Limited Edition Strung Racket",
+        "title": "Made For Glory",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "Bag it!",
+        "link_to": "shopify://products/glory-limited-edition",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "swipeable_products_dp9iPg": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Glory Series",
+        "products": [
+          "glory-limited-edition"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
         "padding_bottom": 20
       }
     },
@@ -69,39 +109,6 @@
         "padding_bottom": 20
       }
     },
-    "hero_component_G3BHfh": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/1_a859f3be-3d67-4d01-88f2-ddb69fe86f3d.jpg",
-        "mobile_image": "shopify://shop_images/Artboard_1_01e16aa8-e83f-4e35-8860-6d7fbe8c576f.jpg",
-        "subtitle": "Predator",
-        "title": "Whip Like a Stingray",
-        "description": "Head-Heavy rackets with flexible shaft  for explosive smash power",
-        "button_text": "Buy It Now!",
-        "link_to": "shopify://products/predator-79-extra-strong",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "swipeable_products_dp9iPg": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Predator Series",
-        "products": [
-          "predator-79-extra-strong",
-          "predator-82-extra-strong",
-          "predator-82-extreme",
-          "predator-84-extreme"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "custom_liquid_kxpHLq": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -118,9 +125,11 @@
       "settings": {
         "title": "Featured Products",
         "products": [
-          "nitrix-10-5u",
-          "flareon-100-5u",
-          "hyfonic-1-5u"
+          "nitrix-thunder-5u",
+          "predator-79-extra-strong",
+          "predator-82-extra-strong",
+          "atomic-x-black-knight",
+          "aura-lite"
         ],
         "show_color_variants": false,
         "color_scheme": "",
@@ -128,86 +137,19 @@
         "padding_bottom": 20
       }
     },
-    "multicolumn_AmKzdE": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_KCbqgd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_2_4.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Badminton",
-            "link": "shopify://collections/badminton"
-          }
-        },
-        "column_G9P7AL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_4.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Cricket",
-            "link": "shopify://collections/cricket"
-          }
-        },
-        "column_LRg4XV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_1_11.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Pickleball",
-            "link": "shopify://collections/pickleball"
-          }
-        }
-      },
-      "block_order": [
-        "column_KCbqgd",
-        "column_G9P7AL",
-        "column_LRg4XV"
-      ],
-      "custom_css": [
-        ".multicolumn-card__info {position: absolute; z-index: 3; bottom: -10px; left: 10px;}",
-        "p,h3,span {color: white;}",
-        "span {background: white; color: black; border-radius: 30px; padding: 5px 20px; font-weight: 500; font-size: 15px;}",
-        ".svg-wrapper {display: None;}",
-        ".page-width {margin: 0px; padding: 0px; width: 97vw;}",
-        "ul {width: 100vw; row-gap: 0px; column-gap: 0px; border-radius: 0px; padding: 0px;}",
-        ".media,ul > li {border-radius: 0px !important;}",
-        "@media screen and (min-width: 990px) {h2 {margin-left: 60px; }}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "SHOP BY SPORTS",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 68,
-        "padding_bottom": 40
-      }
-    },
     "hero_component_EAQyDa": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1_a3440e97-5c4d-4762-8744-4b0eab776d2f.png",
-        "mobile_image": "shopify://shop_images/Banner_1_R_5229df15-19b7-42eb-ae87-a0041b47f5fe.png",
-        "subtitle": "Atomic X Series",
-        "title": "Rumbling Of High-Volt Smashes",
-        "description": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
-        "button_text": "Get It Now!",
-        "link_to": "shopify://products/atomic-x-black-knight",
+        "image": "shopify://shop_images/Banner_2_a0ade6e9-eb0f-4886-9dfd-355491bfb19e.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_f5b9933d-41b7-4212-9b64-6fdcc9afb938.jpg",
+        "subtitle": "Flareon Series",
+        "title": "Made to Move Faster",
+        "description": "React quicker and play sharper with a lightweight, speed-focused frame.",
+        "button_text": "Shop Now",
+        "link_to": "shopify://products/flareon-100-5u",
         "color_scheme": "scheme-1",
-        "padding_top": 64,
+        "padding_top": 24,
         "padding_bottom": 24
       }
     },
@@ -215,16 +157,16 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Atomic X Series",
+        "title": "Flareon Series",
         "products": [
-          "atomic-x-black-knight",
-          "atomic-x-dark-sword",
-          "atomic-x-38-pwr",
-          "atomic-x-38-ctrl",
-          "atomic-x-35-spd",
-          "atomic-x-100-pro"
+          "flareon-100-5u",
+          "flareon-typhoon-5u",
+          "flareon-700",
+          "flareon-100",
+          "flareon-700-3u",
+          "flareon-typhoon"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 20
@@ -315,8 +257,19 @@
         "padding_bottom": 20
       }
     },
+    "custom_liquid_Q8rCj8": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- BEAST MAX 1:1 VIDEO SHOWCASE SECTION (CLICKABLE VIDEO) -->\n<style>\n  /* Base Section Styling */\n  .bm-showcase {\n    background-color: transparent; \n    padding: 5rem 2rem;\n    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n  }\n\n  /* Grid Layout Container */\n  .bm-container {\n    max-width: 1200px;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 4rem;\n    align-items: center;\n  }\n\n  /* --- Left Column: 1:1 Video --- */\n  .bm-video-col {\n    position: relative;\n    width: 100%;\n    aspect-ratio: 1 / 1; \n    border-radius: 16px;\n    overflow: hidden;\n    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.03);\n    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;\n  }\n\n  /* Hover effect to show the video is clickable */\n  .bm-video-col:hover {\n    transform: translateY(-5px) scale(1.02);\n    box-shadow: 0 25px 50px rgba(255, 85, 0, 0.15), 0 0 0 1px rgba(255, 85, 0, 0.1);\n  }\n\n  /* Invisible overlay link that makes the whole video area clickable */\n  .bm-video-link {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 10;\n  }\n\n  /* Subtle glow behind the video */\n  .bm-video-col::before {\n    content: '';\n    position: absolute;\n    top: -20px; left: -20px; right: -20px; bottom: -20px;\n    background: radial-gradient(circle at center, rgba(255, 85, 0, 0.08) 0%, transparent 70%);\n    z-index: 0;\n  }\n\n  .bm-video-col video {\n    position: relative;\n    z-index: 1;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    background-color: #f3f4f6;\n  }\n\n  /* --- Right Column: Content --- */\n  .bm-content-col {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n  }\n\n  /* Typography Styling */\n  .bm-intro {\n    font-size: 1.1rem;\n    font-weight: 800;\n    color: #4b5563;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    margin-bottom: 0.5rem;\n  }\n\n  .bm-title {\n    font-size: clamp(3.5rem, 6vw, 5.5rem);\n    font-weight: 900;\n    line-height: 0.95;\n    letter-spacing: -2px;\n    margin: 0 0 1.5rem 0;\n    text-transform: uppercase;\n    color: #0b0c10;\n  }\n\n  .bm-title .accent {\n    color: #ff5500;\n  }\n\n  .bm-subtitle {\n    font-size: clamp(1.5rem, 3vw, 2.2rem);\n    font-weight: 800;\n    color: #111111;\n    margin: 0 0 1rem 0;\n    line-height: 1.2;\n    letter-spacing: -0.5px;\n  }\n\n  .bm-description {\n    font-size: 1.15rem;\n    color: #4b5563;\n    line-height: 1.6;\n    margin: 0 0 2.5rem 0;\n    max-width: 90%;\n    font-weight: 500;\n  }\n\n  /* CTA Button */\n  .bm-cta {\n    align-self: flex-start;\n    display: inline-flex;\n    align-items: center;\n    gap: 12px;\n    padding: 18px 40px;\n    background-color: #ff5500;\n    color: #ffffff;\n    font-size: 1.1rem;\n    font-weight: 800;\n    text-decoration: none;\n    border-radius: 8px;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    transition: all 0.3s ease;\n    box-shadow: 0 4px 15px rgba(255, 85, 0, 0.25);\n  }\n\n  .bm-cta:hover {\n    background-color: #e04b00;\n    transform: translateY(-3px);\n    box-shadow: 0 8px 25px rgba(255, 85, 0, 0.35);\n  }\n\n  /* Responsive Design */\n  @media (max-width: 900px) {\n    .bm-showcase {\n      padding: 4rem 1.5rem;\n    }\n    \n    .bm-container {\n      grid-template-columns: 1fr;\n      gap: 3rem;\n    }\n\n    .bm-content-col {\n      order: 1; /* Text on top for mobile */\n    }\n    \n    .bm-video-col {\n      order: 2;\n    }\n\n    .bm-description {\n      max-width: 100%;\n    }\n\n    .bm-cta {\n      width: 100%;\n      justify-content: center;\n    }\n  }\n</style>\n\n<section class=\"bm-showcase\">\n  <div class=\"bm-container\">\n    \n    <!-- Left Column: Clickable 1:1 Video Container -->\n    <div class=\"bm-video-col\">\n      <!-- Invisible link covering the video -->\n      <a href=\"/pages/beast-max\" class=\"bm-video-link\" aria-label=\"View Beast Max Landing Page\">\n      \n      <video \n        autoplay \n        loop \n        muted \n        playsinline \n        \n      >\n        <!-- PASTE YOUR 1:1 VIDEO URL BELOW -->\n        <source src=\"https://cdn.shopify.com/videos/c/vp/c495e2c1f0e74c7e84742681d66168c4/c495e2c1f0e74c7e84742681d66168c4.HD-1080p-2.5Mbps-83002119.mp4\" />\n        Your browser does not support the video tag.\n      </video> </a>\n    </div>\n\n    <!-- Right Column: Product Content -->\n    <div class=\"bm-content-col\">\n      \n      <div class=\"bm-intro\">Introducing,</div>\n      \n      <h2 class=\"bm-title\">\n        Beast <span class=\"accent\">Max</span>\n      </h2>\n      \n      <h3 class=\"bm-subtitle\">The Beast Has Arrived.</h3>\n      \n      <p class=\"bm-description\">\n        Performance so fierce, it speaks for itself.\n      </p>\n\n      <!-- Updated CTA link -->\n      <a href=\"/pages/beast-max\" class=\"bm-cta\">\n        Enter The Beast\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg>\n      </a>\n      \n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "hero_video_component_yDajRm": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/02.mp4",
@@ -335,13 +288,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/banner_1_db3c3647-f30c-4bc2-abfc-04f1b0e81484.jpg",
-        "mobile_image": "shopify://shop_images/banner_1_responsive_ba8378f1-ae8a-4a92-8840-5aca61531bc7.jpg",
-        "subtitle": "Hyper Drive",
+        "image": "shopify://shop_images/1_18bb475f-7732-4257-8592-ff27bf5b1485.jpg",
+        "mobile_image": "shopify://shop_images/02_16987afa-8b34-4490-8f84-c948913b6f30.jpg",
+        "subtitle": "Hyper Series",
         "title": "Last Longer During Innings",
         "description": "Light-weight and heavily cushioned to make your movements feels at ease.",
         "button_text": "Buy Now!",
-        "link_to": "shopify://products/hyper-drive",
+        "link_to": "shopify://pages/hyper-series",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -351,11 +304,12 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Hyper Drive Cricket Shoes",
+        "title": "Hyper Series",
         "products": [
-          "hyper-drive"
+          "hyper-drive",
+          "hyper-turf"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 16,
         "padding_bottom": 16
@@ -451,17 +405,18 @@
   "order": [
     "hero_component_F6qDKQ",
     "swipeable_products_A6gXg4",
-    "hero_component_apX6LC",
-    "swipeable_products_3mXzea",
+    "custom_liquid_ReR9YN",
     "hero_component_G3BHfh",
     "swipeable_products_dp9iPg",
+    "hero_component_apX6LC",
+    "swipeable_products_3mXzea",
     "custom_liquid_kxpHLq",
     "swipeable_products_TAq9PU",
-    "multicolumn_AmKzdE",
     "hero_component_EAQyDa",
     "swipeable_products_Y8n63R",
     "multicolumn_Ktr9dz",
     "swipeable_products_TRadWW",
+    "custom_liquid_Q8rCj8",
     "hero_video_component_yDajRm",
     "hero_component_mYeEJ4",
     "swipeable_products_RyJQbU",
