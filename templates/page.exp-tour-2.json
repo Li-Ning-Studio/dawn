@@ -29,6 +29,7 @@
     },
     "hero_component_7NDLp8": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/WhatsApp_Image_2025-09-11_at_2.51.19_PM.jpg",
@@ -47,7 +48,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Hundred's Official India Tour is coming to Odisha!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">HNDRD STREAKS</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 56,
         "padding_bottom": 20
@@ -57,10 +58,48 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n   <p class=\"longcopy\">Get ready to experience  our <span class=\"highlight\">Professional Rackets and Shoes </span> like never before!<br></p> <!--Join us for <span class=\"highlight\"> Hundred's India Tour </span> and be a part of the action.\n  </p> -->\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\ndisplay:none;\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n   <p class=\"longcopy\"> <span class=\"highlight\"> 8 teams. Every round, a new opponent. One leaderboard. </span>\nWin your matches, climb the table, and finish in the <span class=\"highlight\"> top 3 to walk away with a free pair of shoes. </span>\nNo easy matchups. No repeat rivals. Just pure, round-by-round competition.  \n  </p>\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\ndisplay:none;\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.2rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 2.5rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 16,
         "padding_bottom": 28
+      }
+    },
+    "custom_liquid_3bYKji": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- ============================================================\n     SHUTTLEVERSE — SECTION 3: QUICKFACTS BAND\n     HOW TO ADD IN SHOPIFY:\n     Online Store → Themes → Customize → Add Section → Custom HTML\n     Place this section immediately below the Hero section.\n================================================================ -->\n\n<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .sv-qf {\n    background: #E5A72C;\n    color: #1A0640;\n    padding: 28px 40px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: 0;\n    position: relative;\n    z-index: 2;\n  }\n\n  .sv-qf__item {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 0 36px;\n    border-right: 2px solid rgba(58,13,122,0.2);\n  }\n  .sv-qf__item:last-child { border-right: none; }\n\n  .sv-qf__label {\n    font-family: 'Inter', sans-serif;\n    font-size: 1.62rem;\n    font-weight: 600;\n    text-transform: uppercase;\n    letter-spacing: 0.15em;\n    opacity: 0.6;\n    color: #1A0640;\n  }\n\n  .sv-qf__value {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 900;\n    font-size: 2.2rem;\n    letter-spacing: 0.03em;\n    line-height: 1.1;\n    margin-top: 2px;\n    color: #1A0640;\n  }\n\n  @media (max-width: 600px) {\n    .sv-qf {\n      flex-direction: column;\n      gap: 14px;\n      padding: 24px 20px;\n    }\n    .sv-qf__item {\n      border-right: none;\n      border-bottom: 1px solid rgba(58,13,122,0.15);\n      padding: 12px 0;\n      width: 100%;\n      text-align: center;\n    }\n    .sv-qf__item:last-child { border-bottom: none; }\n  }\n</style>\n\n<div class=\"sv-qf\">\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Date</span>\n    <span class=\"sv-qf__value\">26 JULY 2026</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Venue</span>\n    <span class=\"sv-qf__value\">Feather Touch Sports Arena, JP Nagar 7th Phase</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Reporting</span>\n    <span class=\"sv-qf__value\">03:30 PM</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Duration</span>\n    <span class=\"sv-qf__value\">2 HOURS</span>\n  </div>\n  \n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 44
+      }
+    },
+    "178480610606798654": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_KFTJt9": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1083278",
+            "text_color": "#FFFFFF",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_KFTJt9"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -69,6 +108,8 @@
     "custom_liquid_eMF8KE",
     "hero_component_7NDLp8",
     "custom_liquid_84qrmR",
-    "custom_liquid_ARCzii"
+    "custom_liquid_ARCzii",
+    "custom_liquid_3bYKji",
+    "178480610606798654"
   ]
 }
