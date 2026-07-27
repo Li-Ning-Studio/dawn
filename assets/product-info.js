@@ -414,3 +414,140 @@ if (!customElements.get('product-info')) {
     }
   );
 }
+
+if (!customElements.get('mobile-sticky-atc')) {
+  customElements.define(
+    'mobile-sticky-atc',
+    class MobileStickyAtc extends HTMLElement {
+      connectedCallback() {
+        this.sectionId = this.dataset.sectionId;
+        this.submitButton = this.querySelector('[data-sticky-atc-submit]');
+        this.priceContainer = this.querySelector('[data-sticky-atc-price]');
+        this.realSubmitButton = document.getElementById(this.dataset.submitId);
+        this.mobileQuery = window.matchMedia('(max-width: 749px)');
+        this.footerInView = false;
+
+        if (!this.submitButton || !this.realSubmitButton || !this.sectionId) return;
+
+        this.onSubmitClick = this.handleSubmitClick.bind(this);
+        this.onViewportChange = this.handleViewportChange.bind(this);
+        this.onVariantChange = this.handleVariantChange.bind(this);
+        this.onScroll = this.updateVisibility.bind(this);
+
+        this.submitButton.addEventListener('click', this.onSubmitClick);
+        this.mobileQuery.addEventListener('change', this.onViewportChange);
+        window.addEventListener('scroll', this.onScroll, { passive: true });
+        window.addEventListener('resize', this.onScroll);
+
+        this.buttonObserver = new MutationObserver(() => this.syncSubmitState());
+        this.buttonObserver.observe(this.realSubmitButton, {
+          attributes: true,
+          attributeFilter: ['class', 'disabled', 'aria-disabled'],
+          childList: true,
+          subtree: true,
+        });
+
+        this.priceSource = document.getElementById(`price-${this.sectionId}`);
+        this.priceObserver = new MutationObserver(() => this.syncPrice());
+        if (this.priceSource) {
+          this.priceObserver.observe(this.priceSource, {
+            attributes: true,
+            attributeFilter: ['class'],
+            childList: true,
+            subtree: true,
+          });
+        }
+
+        this.footer = document.querySelector('.shopify-section-group-footer-group') || document.querySelector('footer');
+        this.footerObserver = new IntersectionObserver(([entry]) => {
+          this.footerInView = entry.isIntersecting;
+          this.updateVisibility();
+        });
+        if (this.footer) this.footerObserver.observe(this.footer);
+
+        this.variantChangeUnsubscriber = subscribe(PUB_SUB_EVENTS.variantChange, this.onVariantChange);
+
+        this.hidden = false;
+        this.syncSubmitState();
+        this.syncPrice();
+        this.updateVisibility();
+      }
+
+      disconnectedCallback() {
+        this.submitButton?.removeEventListener('click', this.onSubmitClick);
+        this.mobileQuery?.removeEventListener('change', this.onViewportChange);
+        window.removeEventListener('scroll', this.onScroll);
+        window.removeEventListener('resize', this.onScroll);
+        this.buttonObserver?.disconnect();
+        this.priceObserver?.disconnect();
+        this.footerObserver?.disconnect();
+        this.variantChangeUnsubscriber?.();
+      }
+
+      handleSubmitClick() {
+        if (this.submitButton.disabled || this.submitButton.getAttribute('aria-disabled') === 'true') return;
+        this.realSubmitButton.click();
+      }
+
+      handleViewportChange() {
+        this.updateVisibility();
+      }
+
+      handleVariantChange({ data }) {
+        if (data?.sectionId && data.sectionId !== this.sectionId) return;
+
+        window.requestAnimationFrame(() => {
+          this.syncPrice();
+          this.syncSubmitState();
+          this.updateVisibility();
+        });
+      }
+
+      syncSubmitState() {
+        const realText = this.realSubmitButton.querySelector('span')?.textContent?.trim();
+        const stickyText = this.submitButton.querySelector('span');
+        const realSpinner = this.realSubmitButton.querySelector('.loading__spinner');
+        const stickySpinner = this.submitButton.querySelector('.loading__spinner');
+        const isDisabled =
+          this.realSubmitButton.disabled || this.realSubmitButton.getAttribute('aria-disabled') === 'true';
+        const isLoading = this.realSubmitButton.classList.contains('loading');
+
+        this.submitButton.disabled = this.realSubmitButton.disabled;
+        this.submitButton.toggleAttribute('aria-disabled', isDisabled);
+        this.submitButton.classList.toggle('loading', isLoading);
+
+        if (stickyText && realText) stickyText.textContent = realText;
+        stickySpinner?.classList.toggle('hidden', !realSpinner || realSpinner.classList.contains('hidden'));
+      }
+
+      syncPrice() {
+        const source = this.priceSource || document.getElementById(`price-${this.sectionId}`);
+        const sourcePrice = source?.querySelector('.price');
+
+        if (!sourcePrice || !this.priceContainer) return;
+
+        this.priceContainer.toggleAttribute('hidden', source.classList.contains('hidden'));
+
+        const price = sourcePrice.cloneNode(true);
+        price.classList.remove('price--large');
+        price.classList.add('price--sticky-atc');
+
+        price
+          .querySelectorAll('.price__tax-note--inline, .price__savings, .unit-price, .visually-hidden')
+          .forEach((element) => element.remove());
+
+        this.priceContainer.replaceChildren(price);
+      }
+
+      updateVisibility() {
+        if (!this.mobileQuery.matches || !this.realSubmitButton || this.footerInView) {
+          this.classList.remove('is-visible');
+          return;
+        }
+
+        const submitRect = this.realSubmitButton.getBoundingClientRect();
+        this.classList.toggle('is-visible', submitRect.bottom < 0);
+      }
+    },
+  );
+}

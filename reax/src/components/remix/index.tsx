@@ -3,6 +3,22 @@ import Remix from './Remix.tsx';
 
 const preactRoot = document.getElementById('remix-modal');
 
-// const threeModalPath = preactRoot?.dataset['3dModelPath'] || null;
+if (preactRoot) {
+  const { actionAdd, actionChange, closeConfirmMessage, closeConfirmKeepEditing, closeConfirmDiscard } =
+    preactRoot.dataset;
 
-render(<Remix />, preactRoot!);
+  render(
+    <Remix
+      actions={{
+        add: actionAdd || '',
+        change: actionChange || '',
+      }}
+      closeConfirm={{
+        message: closeConfirmMessage || '',
+        keepEditing: closeConfirmKeepEditing || '',
+        discard: closeConfirmDiscard || '',
+      }}
+    />,
+    preactRoot,
+  );
+}

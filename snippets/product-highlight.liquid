@@ -1,8 +1,8 @@
 {%- comment -%}
-  Renders a product highlight block
+  Renders a product highlight/facilitator row with optional long-description modal.
 
   Accepts:
-  - block: {Object} The block object from section.blocks. this contains highlight info
+  - block: {Object} The block object from section.blocks.
   - product: {Object} The current product object
 
   Usage:
@@ -10,20 +10,18 @@
 {%- endcomment -%}
 
 {%- liquid
-  # Get block settings
-  assign highlight_title = block.title
-  assign highlight_description = block.description
-  assign highlight_icon = block.icon
-  assign highlight_collections = block.collections
+  assign highlight_title = block.settings.title
+  assign highlight_description = block.settings.description
+  assign highlight_long_description = block.settings.long_description
+  assign highlight_icon = block.settings.icon
+  assign highlight_collections = block.settings.collections
+  assign modal_id = 'ProductHighlightModal-' | append: block.id
 
-  # Determine if we should show this highlight
   assign should_show = false
 
-  # If no collections specified, always show
   if highlight_collections == blank or highlight_collections.size == 0
     assign should_show = true
   else
-    # Check if current product is in any of the selected collections
     for collection in highlight_collections
       if product.collections contains collection
         assign should_show = true
@@ -32,30 +30,65 @@
     endfor
   endif
 
-  # Only render if we have content AND should show
   if highlight_title == blank
     assign should_show = false
   endif
 -%}
 
 {%- if should_show -%}
-  <div class="product-highlight" {{ block.shopify_attributes }}>
-    {%- if highlight_icon != blank -%}
-      <div class="product-highlight__icon">
-        {{ highlight_icon }}
-      </div>
-    {%- endif -%}
-
-    <div class="product-highlight__content">
-      {%- if highlight_title != blank -%}
-        <h3 class="product-highlight__title">{{ highlight_title }}</h3>
-      {%- endif -%}
-
-      {%- if highlight_description != blank -%}
-        <div class="product-highlight__description">
-          {{ highlight_description }}
+  <div class="product-highlight s3_paragraph" {{ block.shopify_attributes }}>
+    <div class="product-highlight__main ">
+      {%- if highlight_icon != blank -%}
+        <div
+          class="product-highlight__icon"
+          style="color: var(--accent-color); width: 32px; height: 32px; background-color: var(--secondary-accent-color); border-radius: 50%; padding: 6px;"
+        >
+          {{ highlight_icon }}
         </div>
       {%- endif -%}
+      <span class="product-highlight__title">{{ highlight_title }}</span>
     </div>
+
+    {%- if highlight_description != blank -%}
+      <div class="product-highlight__description">
+        {%- if highlight_long_description != blank -%}
+          <modal-opener class="product-highlight__modal-opener" data-modal="#{{ modal_id }}">
+            <button class="product-highlight__description-trigger link" type="button" aria-haspopup="dialog">
+              {{ highlight_description | strip_html }}
+            </button>
+          </modal-opener>
+        {%- else -%}
+          <span>{{ highlight_description | strip_html }}</span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
   </div>
+
+  {%- if highlight_long_description != blank -%}
+    <modal-dialog id="{{ modal_id }}" class="product-popup-modal">
+      <div
+        role="dialog"
+        aria-label="{{ highlight_title | strip_html }}"
+        aria-modal="true"
+        class="product-popup-modal__content"
+        tabindex="-1"
+      >
+        <button
+          id="ModalClose-{{ modal_id }}"
+          class="product-popup-modal__toggle"
+          aria-label="{{ 'accessibility.close' | t }}"
+          type="button"
+        >
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        </button>
+
+        <div class="product-popup-modal__content-info">
+          <h2 class="h2">{{ highlight_title }}</h2>
+          <div class="rte">
+            {{ highlight_long_description }}
+          </div>
+        </div>
+      </div>
+    </modal-dialog>
+  {%- endif -%}
 {%- endif -%}

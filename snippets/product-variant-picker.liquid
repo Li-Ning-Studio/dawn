@@ -34,7 +34,7 @@
         <fieldset
           class="
             {% if is_image_swatch %}
-              horizontally-scrollable no-scrollbar
+              product-form__input--image-swatch
             {% endif %}
             js product-form__input product-form__input--swatch
           "
@@ -42,15 +42,28 @@
           <legend class="form__label">
             {% render 'product-option-legend', option: option %}
           </legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
+          {% if is_image_swatch %}
+            <div class="product-form__image-swatch-scroller no-scrollbar">
+              <div class="product-form__image-swatch-track">
+                {% render 'product-variant-options',
+                  product: product,
+                  option: option,
+                  block: block,
+                  picker_type: picker_type
+                %}
+              </div>
+            </div>
+          {% else %}
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          {% endif %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
+        <fieldset class="js product-form__input product-form__input--pill{% if option.name == 'Size' %} product-form__input--size{% endif %}">
           <legend class="form__label">
             {% render 'product-option-legend', option: option %}
             {% render 'option-content-trigger', option: option %}

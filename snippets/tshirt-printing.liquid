@@ -1,4 +1,5 @@
 {{ 'services.css' | asset_url | stylesheet_tag }}
+{% assign tshirt_trigger_id = 'tshirt-printing-trigger-' | append: section.id %}
 
 <style>
   @font-face {
@@ -8,9 +9,8 @@
     font-style: normal;
   }
 
-
   .tshirt-printing-font {
-    font-family: 'segui',  sans-serif !important;
+    font-family: 'segui', sans-serif !important;
     /* letter-spacing: -1px; */
   }
 </style>
@@ -18,56 +18,75 @@
 <section
   id="tshirt-printing-modal"
   style="display: none;"
+  data-action-add="{{ 'studio.tshirt_printing.actions.add' | t }}"
+  data-action-change="{{ 'studio.tshirt_printing.actions.change' | t }}"
+  data-action-submit="{{ 'studio.tshirt_printing.actions.submit' | t }}"
+  data-action-close="{{ 'studio.tshirt_printing.actions.close' | t }}"
+  data-action-remove="{{ 'studio.tshirt_printing.actions.remove' | t }}"
+  data-heading-personalise="{{ 'studio.tshirt_printing.headings.personalise' | t: product_title: product.title | escape }}"
+  data-label-title="{{ 'studio.tshirt_printing.labels.title' | t | escape }}"
+  data-label-input="{{ 'studio.tshirt_printing.labels.input' | t | escape }}"
+  data-label-note="{{ 'studio.tshirt_printing.labels.note' | t | escape }}"
+  data-label-summary-html="{{ 'studio.tshirt_printing.labels.summary_html' | t: product_title: product.title | escape }}"
+  data-message-invalid-input="{{ 'studio.tshirt_printing.messages.invalid_input' | t | escape }}"
+  data-message-error="{{ 'studio.tshirt_printing.errors.load_failed' | t }}"
+  data-close-confirm-message="{{ 'studio.modal_close_guard.message' | t }}"
+  data-close-confirm-keep-editing="{{ 'studio.modal_close_guard.keep_editing' | t }}"
+  data-close-confirm-discard="{{ 'studio.modal_close_guard.discard' | t }}"
 ></section>
 
-<section class="tshirt-printing-container">
-  <legend class="form__label">
-    <span>Personalise</span>
-  </legend>
-
-  <label class="frame-option sheet" for="tshirt-printing">
-    <input type="radio" name="customisation" id="tshirt-printing">
-    <div class="frame-name" style="display: flex; justify-content: space-between; align-items: center;">
-      <span id="tshirt-printing-title">Make this T-Shirt yours </span>
-      <span style="color: var(--gray-50); font-size: 1.3rem;">
-        {%- if all_products['t-shirt-printing'].price == 0 -%}
-          FREE
-        {%- else -%}
-          {{ all_products['t-shirt-printing'].price | money }}
-        {%- endif -%}
+<section class="tshirt-printing-container service-container">
+  <div
+    id="{{ tshirt_trigger_id }}"
+    class="service-card s3_paragraph"
+    role="button"
+    tabindex="0"
+  >
+    <div class="service-card__content">
+      <div class="service-card__title-row">
+        <span>{{ 'studio.tshirt_printing.form_labels.personalisation_service' | t }}</span>
+        <span class="service-card__price">
+          {%- if all_products['t-shirt-printing'].price == 0 -%}
+            {{ 'studio.tshirt_printing.labels.free' | t }}
+          {%- else -%}
+            +{{ all_products['t-shirt-printing'].price | money }}
+          {%- endif -%}
+        </span>
+      </div>
+      <p class="service-card__description" id="tshirt-printing-description">
+        {{- 'studio.tshirt_printing.description.personalisation_service' | t: product_title: product.title -}}
+      </p>
+    </div>
+    <div class="service-card__cta">
+      <span class="service-card__cta-text" id="tshirt-printing-cta-label">{{ 'studio.tshirt_printing.actions.add' | t }}</span>
+      <span class="service-card__cta-icon">
+        {{- 'icon-plus.svg' | inline_asset_content -}}
       </span>
     </div>
-    <span class="frame-description" id="tshirt-printing-description">
-      Personalize this {{ product.title | escape }} and make it truly yours with our optional offering, designed to
-      showcase your unique style on the court.
-    </span>
-  </label>
+  </div>
 </section>
 
+<script defer="defer" src="{{ 'service-modal-trigger.js' | asset_url }}"></script>
 <script defer="defer">
   document.addEventListener('DOMContentLoaded', () => {
-    const label = document.querySelector('label[for="tshirt-printing"]');
+    const triggerEl = document.getElementById('{{ tshirt_trigger_id }}');
     const root = document.getElementById('tshirt-printing-modal');
+    const description = document.getElementById('tshirt-printing-description');
 
-    if (label && root) {
-      label.addEventListener('click', () => {
-        if (window?.s3_tshirt_printing_controller?.openModal) {
-          window.s3_tshirt_printing_controller.openModal();
-        }
-        root.style.display = 'block';
-
-        // Check if script already loaded
-        if (!document.querySelector('script[src*="vx-tshirt-printing"]')) {
-          const script = document.createElement('script');
-          script.src = "{{ 'vx-tshirt-printing.js' | asset_url }}";
-          script.defer = true;
-          script.type = 'module';
-          document.body.appendChild(script);
-        }
+    if (triggerEl && root && window.s3_initServiceModalTrigger) {
+      window.s3_initServiceModalTrigger({
+        serviceKey: 'tshirt_printing',
+        triggerEl,
+        scriptSrc: "{{ 'vx-tshirt-printing.js' | asset_url }}",
+        controllerPath: 's3_tshirt_printing_controller',
+        errorTarget: description,
+        errorMessage: root.dataset.messageError || '',
+        idlePreload: true,
+        enableKeyboard: true,
       });
-
-      // set the tshirt-printing variant id on window
-      window.s3_tshirt_printing_service_variant_id = '{{ all_products['t-shirt-printing'].variants.first.id  }}';
     }
+
+    // set the tshirt-printing variant id on window
+    window.s3_tshirt_printing_service_variant_id = '{{ all_products['t-shirt-printing'].variants.first.id  }}';
   });
 </script>

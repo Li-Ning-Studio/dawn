@@ -1,0 +1,90 @@
+/*
+  S3 Typography System (v1)
+  -------------------------
+  Purpose:
+  - Provide a compact semantic class API for typography in Liquid markup.
+  - Keep values fixed/rem-based for internal design consistency.
+  - Avoid relying on Dawn's merchant-facing body/heading scale controls.
+
+  Notes for future maintainers:
+  - Prefer these classes over inline font-size/font-weight/line-height declarations.
+  - Keep this file typography-only. Spacing tokens/utilities are intentionally deferred.
+*/
+
+/* Global fallback for all S3 typography classes. */
+[class*='s3_'] {
+  margin: 0;
+  /* color: inherit; */
+}
+
+/* Title role for prominent headings. */
+.s3_title {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+/* Subtitle role for small supporting headings and UI labels. */
+.s3_subtitle {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  /* letter-spacing: -0.01em; */
+}
+
+.s3_subheading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.06rem;
+  line-height: 1.5;
+}
+
+/* Paragraph role for descriptive copy. */
+.s3_paragraph {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-size: 1.525rem;
+  font-weight: 400;
+  line-height: 2;
+  /* letter-spacing: 0.01em; */
+}
+
+/* Caption role for compact metadata and helper text. */
+.s3_caption {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  /* text-transform: uppercase; */
+}
+@media screen and (max-width: 768px) {
+  .s3_paragraph {
+    font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.9;
+    /* letter-spacing: 0.01em; */
+  }
+
+  .s3_subheading {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    line-height: 1.45;
+  }
+  .s3_title--xl {
+    font-size: 3rem;
+  }
+
+  .s3_title--lg {
+    font-size: 3.2rem;
+  }
+}

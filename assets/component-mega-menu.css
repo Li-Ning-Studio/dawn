@@ -36,7 +36,7 @@
 .mega-menu:hover > .header__menu-item,
 .mega-menu:focus-within > .header__menu-item {
   color: rgb(var(--color-foreground));
-  border-bottom-color: var(--secondary-accent-color);
+  border-bottom-color: var(--accent-color);
 }
 .mega-menu__list {
   display: flex;
@@ -138,7 +138,7 @@
 }
 
 .mega-menu__link:hover {
-  color: var(--secondary-accent-color);
+  color: var(--accent-color);
 }
 /* .mega-menu__link:hover,
 .mega-menu__link--active {
