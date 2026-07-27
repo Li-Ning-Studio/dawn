@@ -115,10 +115,30 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product_specifications_piaCex": {
+      "type": "product-specifications",
+      "name": "t:sections.product-specifications.name",
+      "settings": {
+        "heading": "Specifications",
+        "open_by_default": true,
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "product_s_plus_n8QVCp": {
+      "type": "product-s-plus",
+      "name": "t:sections.product-s-plus.name",
+      "settings": {
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "product_specifications_piaCex",
+    "product_s_plus_n8QVCp"
   ]
 }
