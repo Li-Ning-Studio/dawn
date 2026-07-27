@@ -7,8 +7,10 @@ class PredictiveSearch extends SearchForm {
     this.isOpen = false;
     this.abortController = new AbortController();
     this.searchTerm = '';
+    this.featuredCollectionContainer = this.querySelector('[data-featured-collection]');
 
     this.setupEventListeners();
+    this.updateSearchState();
   }
 
   setupEventListeners() {
@@ -37,6 +39,7 @@ class PredictiveSearch extends SearchForm {
     this.updateSearchForTerm(this.searchTerm, newSearchTerm);
 
     this.searchTerm = newSearchTerm;
+    this.updateSearchState();
 
     if (!this.searchTerm.length) {
       this.close(true);
@@ -57,13 +60,17 @@ class PredictiveSearch extends SearchForm {
       this.abortController.abort();
       this.abortController = new AbortController();
       this.closeResults(true);
+      this.updateSearchState();
     }
   }
 
   onFocus() {
     const currentSearchTerm = this.getQuery();
 
-    if (!currentSearchTerm.length) return;
+    if (!currentSearchTerm.length) {
+      this.updateSearchState();
+      return;
+    }
 
     if (this.searchTerm !== currentSearchTerm) {
       // Search term was changed from other search input, treat it as a user change
@@ -82,7 +89,10 @@ class PredictiveSearch extends SearchForm {
   }
 
   onKeyup(event) {
-    if (!this.getQuery().length) this.close(true);
+    if (!this.getQuery().length) {
+      this.updateSearchState();
+      this.close(true);
+    }
     event.preventDefault();
 
     switch (event.code) {
@@ -228,6 +238,7 @@ class PredictiveSearch extends SearchForm {
   renderSearchResults(resultsMarkup) {
     this.predictiveSearchResults.innerHTML = resultsMarkup;
     this.setAttribute('results', true);
+    this.updateSearchState();
 
     this.setLiveRegionResults();
     this.open();
@@ -245,7 +256,11 @@ class PredictiveSearch extends SearchForm {
   }
 
   open() {
-    this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
+    if (this.closest('.search-modal')) {
+      this.predictiveSearchResults.removeAttribute('style');
+    } else {
+      this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
+    }
     this.setAttribute('open', true);
     this.input.setAttribute('aria-expanded', true);
     this.isOpen = true;
@@ -271,6 +286,16 @@ class PredictiveSearch extends SearchForm {
     this.input.setAttribute('aria-expanded', false);
     this.resultsMaxHeight = false;
     this.predictiveSearchResults.removeAttribute('style');
+    this.updateSearchState();
+  }
+
+  updateSearchState() {
+    if (!this.featuredCollectionContainer) return;
+    if (this.getQuery().length > 0) {
+      this.removeAttribute('data-search-empty');
+      return;
+    }
+    this.setAttribute('data-search-empty', 'true');
   }
 }
 

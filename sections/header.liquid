@@ -133,8 +133,10 @@
       render 'header-drawer'
     endif
 
+    assign header_search_featured_collection = section.settings.search_featured_collection
+
     if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-      render 'header-search', input_id: 'Search-In-Modal-1'
+      render 'header-search', input_id: 'Search-In-Modal-1', featured_collection: header_search_featured_collection
     endif
   -%}
 
@@ -217,7 +219,7 @@
   {%- endif -%}
 
   <div
-    style="gap: 1.5rem;"
+    style="gap: 2rem;"
     class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}"
   >
     {% comment %}
@@ -245,7 +247,7 @@
         {%- endif -%}
       </div>
     {% endcomment %}
-    {% render 'header-search', input_id: 'Search-In-Modal' %}
+    {% render 'header-search', input_id: 'Search-In-Modal', featured_collection: header_search_featured_collection %}
 
     {%- if shop.customer_accounts_enabled and settings.catalog_mode_enabled != true -%}
       <a
@@ -607,6 +609,16 @@
       "default": true,
       "label": "t:sections.header.settings.enable_customer_avatar.label",
       "info": "t:sections.header.settings.enable_customer_avatar.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.header__search.content"
+    },
+    {
+      "type": "collection",
+      "id": "search_featured_collection",
+      "label": "t:sections.header.settings.search_featured_collection.label",
+      "info": "t:sections.header.settings.search_featured_collection.info"
     },
     {
       "type": "header",

@@ -734,6 +734,9 @@ class SliderComponent extends HTMLElement {
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
+    this.linkedGalleryCounter = this.dataset.galleryCounterTarget
+      ? document.querySelector(this.dataset.galleryCounterTarget)
+      : null;
 
     if (!this.slider || !this.nextButton) return;
 
@@ -748,7 +751,12 @@ class SliderComponent extends HTMLElement {
 
   initPages() {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
-    if (this.sliderItemsToShow.length < 2) return;
+    if (this.sliderItemsToShow.length < 2) {
+      this.currentPage = 1;
+      this.totalPages = this.sliderItemsToShow.length;
+      this.updateLinkedGalleryCounter();
+      return;
+    }
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor(
       (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset,
@@ -768,7 +776,14 @@ class SliderComponent extends HTMLElement {
     if (!this.slider || !this.nextButton) return;
 
     const previousPage = this.currentPage;
+    if (!this.sliderItemOffset) {
+      this.currentPage = 1;
+      this.updateLinkedGalleryCounter();
+      return;
+    }
+
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
+    this.updateLinkedGalleryCounter();
 
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
@@ -784,14 +799,6 @@ class SliderComponent extends HTMLElement {
           },
         }),
       );
-    }
-
-    // Update the active dot indicator
-    const dots = this.querySelectorAll('.slider-dot');
-    if (dots.length) {
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('slider-dot--active', index + 1 === this.currentPage);
-      });
     }
 
     if (this.enableSliderLooping) return;
@@ -830,6 +837,21 @@ class SliderComponent extends HTMLElement {
       left: position,
       behavior,
     });
+  }
+
+  updateLinkedGalleryCounter() {
+    if (!this.linkedGalleryCounter) return;
+
+    const total = this.sliderItemsToShow?.length || 0;
+    if (total < 2) {
+      this.linkedGalleryCounter.hidden = true;
+      this.linkedGalleryCounter.textContent = '';
+      return;
+    }
+
+    const current = Math.min(Math.max(this.currentPage || 1, 1), total);
+    this.linkedGalleryCounter.textContent = `${String(current).padStart(2, '0')}/${String(total).padStart(2, '0')}`;
+    this.linkedGalleryCounter.hidden = false;
   }
 }
 

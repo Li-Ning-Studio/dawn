@@ -478,7 +478,21 @@
   -%}
 
   <script type="application/ld+json">
-    {{ product | structured_data }}
+    {%- if settings.catalog_mode_enabled -%}
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemPage",
+        "name": {{ product.title | strip_html | json }},
+        "url": {{ canonical_url | json }},
+        "description": {{ product.description | strip_html | truncate: 300 | json }}{% if seo_media %},
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": {{ seo_media | image_url: width: 1200 | prepend: 'https:' | json }}
+        }{% endif %}
+      }
+    {%- else -%}
+      {{ product | structured_data }}
+    {%- endif -%}
   </script>
 
   {% if product.media.size > 0 %}

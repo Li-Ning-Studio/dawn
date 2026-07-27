@@ -16,6 +16,7 @@
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'component-highlight-badge.css' | asset_url | stylesheet_tag }}
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
@@ -39,7 +40,6 @@
       }
     }
   {%- endstyle -%}
-
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
@@ -116,18 +116,26 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                  style="margin: 0;"
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
                 <div
-                  style="margin-bottom: 0.5rem; margin-top: 0.3rem"
+                  style=""
                   class="product__title"
                   {{ block.shopify_attributes }}
                 >
-                  <h1 style="letter-spacing:-1px; font-weight: 700; line-height: 120%">{{ product.title | escape }}</h1>
+                  <div class="product__eyebrow-row">
+                    {%- assign gallery_counter_id = 'ProductGalleryCounter-' | append: section.id -%}
+                    {% render 'product-eyebrow', product: product, gallery_counter_id: gallery_counter_id %}
+                  </div>
+                  <h1
+                    class="product__main-title s3_title"
+                  >
+                    {{ product.title | escape }}
+                  </h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
@@ -137,7 +145,7 @@
               {%- when 'price' -%}
                 {%- if product.available or section.settings.display_price_out_of_stock -%}
                   <div
-                    style="margin-top: 0.5rem"
+                    style="margin-top: 0.6rem; margin-bottom: 0rem"
                     id="price-{{ section.id }}"
                     role="status"
                     {{ block.shopify_attributes }}
@@ -148,7 +156,8 @@
                       show_badges: true,
                       price_class: 'price--large',
                       show_compare_at_price: true,
-                      show_savings_percent: true
+                      show_savings_percent: true,
+                      show_tax_note: true
                     -%}
                   </div>
                   {%- if product.quantity_price_breaks_configured? -%}
@@ -174,7 +183,7 @@
                     {%- endif -%}
                   {% endcomment %}
 
-                  <div {{ block.shopify_attributes }}>
+                  <div style="margin: 0;" {{ block.shopify_attributes }}>
                     {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                     {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                       <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -236,8 +245,7 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div
-                    style="color: var(--gray-90); letter-spacing: 0.1px; line-height: 1.6"
-                    class="product__description rte quick-add-hidden"
+                    class="product__description product__description--s3 s3_paragraph rte quick-add-hidden"
                     {{ block.shopify_attributes }}
                   >
                     {{ product.description }}
@@ -254,88 +262,51 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {% when 'product_highlight' %}
-                {% render 'product-highlight', block: block.settings, product: product %}
+                {% render 'product-highlight', block: block, product: product %}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
-                {% if block.settings.heading == 'Details' %}
+                {%- liquid
+                  assign collapsible_tab_open = block.settings.open_by_default
+                -%}
+                {%- if block.settings.content != blank or block.settings.page.content != blank -%}
                   <div
-                    style="color: var(--gray-90); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
-                    class="product__accordion accordion quick-add-hidden"
-                    {{ block.shopify_attributes }}
-                  >
-                    <details id="Details-{{ block.id }}-{{ section.id }}" open>
-                      <summary>
-                        <div class="summary__title">
-                          {% render 'icon-accordion', icon: block.settings.icon %}
-                          <h2 class="h4 accordion__title inline-richtext">
-                            {{ block.settings.heading | default: block.settings.page.title | escape }}
-                          </h2>
-                        </div>
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
-                      </summary>
-                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                        {{ block.settings.content }}
-                        {{ block.settings.page.content }}
-                      </div>
-                      <div>
-                        {% render 'product-metafields' %}
-                      </div>
-                    </details>
-                  </div>
-
-                {% elsif block.settings.heading == 'Product Disclosures' %}
-                  <div
-                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
                     class="product__accordion accordion quick-add-hidden"
                     {{ block.shopify_attributes }}
                   >
                     <details
-                      styls="color: var(--gray-90); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
                       id="Details-{{ block.id }}-{{ section.id }}"
+                      {% if collapsible_tab_open %}
+                        open
+                      {% endif %}
                     >
                       <summary>
                         <div class="summary__title">
                           {% render 'icon-accordion', icon: block.settings.icon %}
-                          <h2 class="h4 accordion__title inline-richtext">
+                          <h2 class="accordion__title inline-richtext s3_subtitle">
                             {{ block.settings.heading | default: block.settings.page.title | escape }}
                           </h2>
                         </div>
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                        <span class="accordion__toggle-icons" aria-hidden="true">
+                          <span class="accordion__toggle-icon accordion__toggle-icon--plus">
+                            {{- 'icon-accordion-plus.svg' | inline_asset_content -}}
+                          </span>
+                          <span class="accordion__toggle-icon accordion__toggle-icon--minus">
+                            {{- 'icon-accordion-minus.svg' | inline_asset_content -}}
+                          </span>
+                        </span>
                       </summary>
-                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                        {% render 'product-disclosures' %}
-                      </div>
-                    </details>
-                  </div>
-
-                {% else %}
-                  <div
-                    style="color: var(--gray-80); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
-                    class="product__accordion accordion quick-add-hidden"
-                    {{ block.shopify_attributes }}
-                  >
-                    <details
-                      styls="color: var(--gray-90); letter-spacing: 0.1px; line-height: 1.6; font-size: 1.4rem;"
-                      id="Details-{{ block.id }}-{{ section.id }}"
-                    >
-                      <summary>
-                        <div class="summary__title">
-                          {% render 'icon-accordion', icon: block.settings.icon %}
-                          <h2 class="h4 accordion__title inline-richtext">
-                            {{ block.settings.heading | default: block.settings.page.title | escape }}
-                          </h2>
-                        </div>
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
-                      </summary>
-                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                      <div
+                        class="accordion__content s3_paragraph rte"
+                        id="ProductAccordion-{{ block.id }}-{{ section.id }}"
+                      >
                         {{ block.settings.content }}
                         {{ block.settings.page.content }}
-                        {{  }}
                       </div>
                     </details>
                   </div>
-                {% endif %}
+                {%- endif -%}
+
                 {% comment %}
                   {%- when 'quantity_selector' -%}
                   <div
@@ -551,6 +522,8 @@
                     {%- endif -%}
                   </div>
                 {% endcomment %}
+              {%- when 'helper_text' -%}
+                {% render 'product-helper-text', product: product, block: block %}
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -571,9 +544,52 @@
                 {% liquid
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
+                  assign catalog_file = product.metafields.custom_but_hidden.product_catalog_file
+                  assign catalog_file_value = catalog_file.value | default: catalog_file
+                  assign catalog_file_url = ''
+                  if catalog_file_value != blank
+                    if catalog_file_value.url != blank
+                      assign catalog_file_url = catalog_file_value.url
+                    else
+                      assign catalog_file_path = catalog_file_value | remove_first: 'files/'
+                      assign catalog_file_url = catalog_file_path | file_url
+                    endif
+                  endif
                 %}
+                {%- if catalog_file_url != blank -%}
+                  <a class="button button--secondary product__catalog-download" href="{{ catalog_file_url }}" download>
+                    {{ 'sections.main-product.download_catalog' | t }}
+                  </a>
+                {%- endif -%}
 
               {%- when 'variant_picker' -%}
+                {%- liquid
+                  assign is_stringing_visible = false
+                  assign is_gripping_visible = false
+                  assign is_remix_visible = false
+                  assign is_tshirt_printing_visible = false
+
+                  if settings.is_stringing_enabled_globally and product.metafields.custom_but_hidden.studio_pro_stringing and settings.stringing_collection_id != blank and product.available == true
+                    assign is_stringing_visible = true
+                  endif
+
+                  if settings.is_gripping_enabled_globally and product.metafields.custom_but_hidden.studio_grip_service and settings.gripping_collection_id != blank and product.available == true
+                    assign is_gripping_visible = true
+                  endif
+
+                  if settings.is_remix_enabled_globally and product.metafields.custom_but_hidden.stickers == true and product.available == true and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model
+                    assign is_remix_visible = true
+                  endif
+
+                  if settings.is_tshirt_printing_enabled_globally and product.available == true and product.metafields.custom_but_hidden.customise == true
+                    assign is_tshirt_printing_visible = true
+                  endif
+
+                  assign has_visible_customisations = false
+                  if is_stringing_visible or is_gripping_visible or is_remix_visible or is_tshirt_printing_visible
+                    assign has_visible_customisations = true
+                  endif
+                -%}
                 {% if product.metafields.custom_but_hidden.combined_products %}
                   {% render 'combined-products-options', product: product, block: block %}
                 {% endif %}
@@ -584,31 +600,21 @@
                     product_form_id: product_form_id
                   %}
                 {% endif %}
-                {% if settings.is_stringing_enabled_globally
-                  and product.metafields.custom_but_hidden.studio_pro_stringing
-                  and settings.stringing_collection_id != blank
-                  and product.available == true
-                %}
+                {% if has_visible_customisations %}
+                  <p class="form__label product__customisations-label">
+                    {{ 'studio.labels.customisations' | t }}
+                  </p>
+                {% endif %}
+                {% if is_stringing_visible %}
                   {% render 'stringing' %}
                 {% endif %}
-                {% if settings.is_gripping_enabled_globally
-                  and product.metafields.custom_but_hidden.studio_grip_service
-                  and settings.gripping_collection_id != blank
-                  and product.available == true
-                %}
+                {% if is_gripping_visible %}
                   {% render 'gripping' %}
                 {% endif %}
-                {% if settings.is_remix_enabled_globally
-                  and product.metafields.custom_but_hidden.stickers == true
-                  and product.available == true
-                  and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model
-                %}
+                {% if is_remix_visible %}
                   {% render 'remix' %}
                 {% endif %}
-                {% if settings.is_tshirt_printing_enabled_globally
-                  and product.available == true
-                  and product.metafields.custom_but_hidden.customise == true
-                %}
+                {% if is_tshirt_printing_visible %}
                   {% render 'tshirt-printing' %}
                 {% endif %}
               {%- when 'buy_buttons' -%}
@@ -620,7 +626,8 @@
                     product: product,
                     product_form_id: product_form_id,
                     section_id: section.id,
-                    show_pickup_availability: true
+                    show_pickup_availability: true,
+                    show_mobile_sticky_atc: true
                   -%}
                   {%- comment -%}
                     Show OOS recommendations directly below the Add to Cart area
@@ -636,43 +643,7 @@
                   {%- endif -%}
                 {% endif %}
               {%- when 'rating' -%}
-                {%- if product.metafields.reviews.rating.value != blank -%}
-                  <div class="rating-wrapper">
-                    {% liquid
-                      assign rating_decimal = 0
-                      assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-                      if decimal >= 0.3 and decimal <= 0.7
-                        assign rating_decimal = 0.5
-                      elsif decimal > 0.7
-                        assign rating_decimal = 1
-                      endif
-                    %}
-                    <div
-                      class="rating"
-                      role="img"
-                      aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
-                    >
-                      <span
-                        aria-hidden="true"
-                        class="rating-star"
-                        style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-                      ></span>
-                    </div>
-                    <p class="rating-text caption">
-                      <span aria-hidden="true">
-                        {{- product.metafields.reviews.rating.value }} /
-                        {{ product.metafields.reviews.rating.value.scale_max -}}
-                      </span>
-                    </p>
-                    <p class="rating-count caption">
-                      <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-                      <span class="visually-hidden">
-                        {{- product.metafields.reviews.rating_count }}
-                        {{ 'accessibility.total_reviews' | t -}}
-                      </span>
-                    </p>
-                  </div>
-                {%- endif -%}
+                {% render 'product-rating', product: product, block: block %}
 
               {%- when 'complementary' -%}
                 <product-recommendations
@@ -691,7 +662,12 @@
                     >
                       <div class="complementary-products__container">
                         {%- if block.settings.make_collapsible_row -%}
-                          <details id="Details-{{ block.id }}-{{ section.id }}" open>
+                          <details
+                            id="Details-{{ block.id }}-{{ section.id }}"
+                            {% if block.settings.open_by_default %}
+                              open
+                            {% endif %}
+                          >
                             <summary>
                         {%- endif %}
                         <div class="summary__title">
@@ -703,7 +679,14 @@
                           {%- endif -%}
                         </div>
                         {%- if block.settings.make_collapsible_row -%}
-                          {{- 'icon-caret.svg' | inline_asset_content -}}
+                          <span class="accordion__toggle-icons" aria-hidden="true">
+                            <span class="accordion__toggle-icon accordion__toggle-icon--plus">
+                              {{- 'icon-accordion-plus.svg' | inline_asset_content -}}
+                            </span>
+                            <span class="accordion__toggle-icon accordion__toggle-icon--minus">
+                              {{- 'icon-accordion-minus.svg' | inline_asset_content -}}
+                            </span>
+                          </span>
                           </summary>
                         {%- endif -%}
                         <slideshow-component class="slider-mobile-gutter">
@@ -886,15 +869,23 @@
     -%}
 
     <script type="application/ld+json">
-      {{ product | structured_data }}
+      {%- if settings.catalog_mode_enabled -%}
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemPage",
+          "name": {{ product.title | strip_html | json }},
+          "url": {{ canonical_url | json }},
+          "description": {{ product.description | strip_html | truncate: 300 | json }}{% if seo_media %},
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": {{ seo_media | image_url: width: 1200 | prepend: 'https:' | json }}
+          }{% endif %}
+        }
+      {%- else -%}
+        {{ product | structured_data }}
+      {%- endif -%}
     </script>
   </div>
-
-  {% if product.metafields.custom_but_hidden.s_plus_reference.value != blank %}
-    <div style="margin: 7rem 2rem;">
-      {% render 's-plus' %}
-    </div>
-  {% endif %}
 </product-info>
 
 {% schema %}
@@ -1024,6 +1015,11 @@
       "limit": 1
     },
     {
+      "type": "helper_text",
+      "name": "t:sections.main-product.blocks.helper_text.name",
+      "limit": 1
+    },
+    {
       "type": "variant_picker",
       "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
@@ -1091,7 +1087,7 @@
     {
       "type": "product_highlight",
       "name": "Product Highlight",
-      "limit": 5,
+      "limit": 6,
       "settings": [
         {
           "type": "inline_richtext",
@@ -1103,6 +1099,12 @@
           "id": "description",
           "label": "Description",
           "info": "Supports Liquid code. Available variables: product, shop"
+        },
+        {
+          "type": "richtext",
+          "id": "long_description",
+          "label": "Long description",
+          "info": "Shown in modal when description is pressed."
         },
         {
           "type": "textarea",
@@ -1166,6 +1168,12 @@
           "default": "t:sections.main-product.blocks.collapsible_tab.settings.heading.default",
           "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "default": false,
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.open_by_default.label"
         },
         {
           "type": "select",
@@ -1411,6 +1419,12 @@
           "id": "make_collapsible_row",
           "default": false,
           "label": "t:sections.main-product.blocks.complementary_products.settings.make_collapsible_row.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "default": false,
+          "label": "t:sections.main-product.blocks.complementary_products.settings.open_by_default.label"
         },
         {
           "type": "select",
@@ -2462,7 +2476,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "default": 0
     }
   ]
 }

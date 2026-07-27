@@ -9,8 +9,7 @@
 }
 
 .article-template__hero-container {
-  max-width: 130rem;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .article-template__hero-small {
@@ -74,7 +73,7 @@
 }
 
 .article-template__link {
-  font-size: 1.8rem;
+  font-size: 1.5 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +87,8 @@
 }
 
 .article-template__content {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .article-template__social-sharing {
@@ -171,5 +170,99 @@
 }
 
 .article-template__back:last-child {
-  margin-bottom: 3.2rem;
+  padding-bottom: 4rem;
+}
+
+.article-hero {
+  position: relative;
+}
+
+.article-hero__media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  aspect-ratio: var(--article-hero-ratio-desktop);
+}
+
+.article-hero__media.media {
+  height: auto;
+}
+
+.article-hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: opacity(0.95) brightness(0.95);
+}
+
+.article-hero__title-wrapper {
+  margin: 0 auto 2rem;
+  max-width: var(--page-width);
+  padding: 0.75rem 1.5rem;
+}
+
+.article-hero__title {
+  margin: 0;
+  color: rgb(var(--color-foreground));
+  letter-spacing: -1px;
+}
+
+.article-hero__meta {
+  color: rgb(var(--color-foreground));
+}
+
+.article-hero__date {
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+@media screen and (min-width: 750px) {
+  .article-hero__title-wrapper {
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+    margin: 0;
+    padding: 0 3rem 0 0;
+    max-width: calc(var(--page-width) - 6rem);
+    z-index: 2;
+  }
+
+  .article-hero__title,
+  .article-hero__meta {
+    color: rgb(var(--color-foreground));
+  }
+
+  .article-hero__date {
+    padding: 0 0px 40px 40px;
+    color: rgba(var(--color-foreground), 0.85);
+  }
+
+  .article-hero__title {
+    font-size: 50px;
+    font-weight: 500;
+    padding: 0 0px 0px 40px;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .article-hero__title {
+    padding-top: 30px;
+  }
+
+  .article-hero__image {
+    filter: opacity(1) brightness(1);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .article-hero__media {
+    aspect-ratio: var(--article-hero-ratio-mobile);
+  }
 }

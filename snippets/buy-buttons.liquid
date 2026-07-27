@@ -6,6 +6,7 @@
   - product_form_id: {String} product form id.
   - section_id: {String} id of section to which this snippet belongs.
   - show_pickup_availability: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
+  - show_mobile_sticky_atc: {Boolean} renders the mobile sticky add-to-cart bar. Intended for the main product page only.
 
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
@@ -111,6 +112,52 @@
         </div>
       {%- endform -%}
     </product-form>
+
+    {%- if show_mobile_sticky_atc -%}
+      <mobile-sticky-atc
+        class="mobile-sticky-atc"
+        data-section-id="{{ section_id }}"
+        data-submit-id="ProductSubmitButton-{{ section_id }}"
+        hidden
+      >
+        <div class="mobile-sticky-atc__content">
+          <div class="mobile-sticky-atc__summary">
+            <p class="mobile-sticky-atc__title">{{ product.title | escape }}</p>
+            <div class="mobile-sticky-atc__price" data-sticky-atc-price>
+              {%- render 'price',
+                product: product,
+                use_variant: true,
+                show_badges: false,
+                price_class: 'price--sticky-atc',
+                show_compare_at_price: true
+              -%}
+            </div>
+          </div>
+          <button
+            type="button"
+            class="mobile-sticky-atc__button button"
+            data-sticky-atc-submit
+            {% if product.selected_or_first_available_variant.available == false
+              or quantity_rule_soldout
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+          >
+            <span>
+              {%- if product.selected_or_first_available_variant == null -%}
+                {{ 'products.product.unavailable' | t }}
+              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            </span>
+            {%- render 'loading-spinner' -%}
+          </button>
+        </div>
+      </mobile-sticky-atc>
+    {%- endif -%}
 
     
   {%- else -%}

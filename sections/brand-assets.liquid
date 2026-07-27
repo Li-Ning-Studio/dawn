@@ -1,0 +1,220 @@
+{{ 'section-brand-assets.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign assets = section.settings.assets
+  assign sizes = '(min-width: 990px) calc((100vw - 120px) / ' | append: section.settings.columns_desktop | append: '), (min-width: 750px) calc((100vw - 64px) / 2), calc(100vw - 40px)'
+  assign type_values = ''
+-%}
+
+<div class="brand-assets color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- if assets != blank -%}
+      {%- for asset in assets -%}
+        {%- liquid
+          assign raw_type = asset.category | strip
+          if raw_type == blank
+            assign raw_type = 'uncategorized'
+          endif
+          assign type_token = '||' | append: raw_type | append: '||'
+          unless type_values contains type_token
+            assign type_values = type_values | append: type_token
+          endunless
+        -%}
+      {%- endfor -%}
+
+      {%- assign type_list = type_values | split: '||' -%}
+
+      {%- for asset_type in type_list -%}
+        {%- if asset_type == blank -%}
+          {%- continue -%}
+        {%- endif -%}
+        {%- assign group_label = asset_type -%}
+        {%- if asset_type == 'uncategorized' -%}
+          {%- assign group_label = 'sections.brand_assets.uncategorized' | t -%}
+        {%- endif -%}
+
+        <div class="brand-assets__group">
+          <h2 class="brand-assets__group-title h2">{{ group_label }}</h2>
+          <ul
+            class="brand-assets__grid"
+            role="list"
+            style="--brand-assets-columns: {{ section.settings.columns_desktop }}; --brand-assets-columns-mobile: {{ section.settings.columns_mobile }};"
+          >
+            {%- for asset in assets -%}
+              {%- liquid
+                assign raw_type = asset.category | strip
+                if raw_type == blank
+                  assign raw_type = 'uncategorized'
+                endif
+              -%}
+              {%- if raw_type != asset_type -%}
+                {%- continue -%}
+              {%- endif -%}
+              {%- liquid
+                assign asset_title = asset.title | default: asset.handle
+                assign asset_category = asset.category
+                assign asset_size_label = asset.size_label
+                assign asset_image = asset.image
+                assign asset_file = asset.file
+                assign download_url = ''
+                if asset_file != blank and asset_file.url != blank
+                  assign download_url = asset_file.url
+                elsif asset_image != blank
+                  assign download_url = asset_image | image_url: width: 2000
+                endif
+              -%}
+              <li class="brand-assets__card">
+                <div class="brand-assets__media">
+                  {%- if asset_image != blank -%}
+                    {{
+                      asset_image
+                      | image_url: width: 1600
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '300, 450, 600, 900, 1200, 1600',
+                        sizes: sizes,
+                        alt: asset_image.alt
+                      | default: asset_title
+                    }}
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg brand-assets__placeholder' }}
+                  {%- endif -%}
+                </div>
+                <div class="brand-assets__content">
+                  {%- if asset_title != blank -%}
+                    <p class="brand-assets__title">{{ asset_title }}</p>
+                  {%- endif -%}
+                  {%- if section.settings.show_category and asset_category != blank -%}
+                    <p class="brand-assets__meta">{{ asset_category }}</p>
+                  {%- endif -%}
+                  {%- if section.settings.show_size_label and asset_size_label != blank -%}
+                    <p class="brand-assets__meta">{{ asset_size_label }}</p>
+                  {%- endif -%}
+                  {%- if section.settings.show_downloads and download_url != blank -%}
+                    <a class="button button--secondary brand-assets__download" href="{{ download_url }}" download>
+                      {{ 'sections.brand_assets.download' | t }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      <p class="brand-assets__empty">{{ 'sections.brand_assets.empty' | t }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.brand-assets.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "metaobject_list",
+      "id": "assets",
+      "label": "t:sections.brand-assets.settings.assets.label",
+      "metaobject_type": "brand_asset"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.brand-assets.settings.layout.content"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "default": 5,
+      "label": "t:sections.brand-assets.settings.columns_desktop.label"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.brand-assets.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.brand-assets.settings.columns_mobile.options__2.label"
+        }
+      ],
+      "default": "1",
+      "label": "t:sections.brand-assets.settings.columns_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category",
+      "default": true,
+      "label": "t:sections.brand-assets.settings.show_category.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_size_label",
+      "default": true,
+      "label": "t:sections.brand-assets.settings.show_size_label.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_downloads",
+      "default": true,
+      "label": "t:sections.brand-assets.settings.show_downloads.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.brand-assets.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,209 @@
+{{ 'section-studio-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  class="studio-text color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+  style="
+    --studio-text-max-width: {{ section.settings.max_width }}px;
+    --studio-text-font-size: {{ section.settings.font_size_desktop }}px;
+    --studio-text-font-size-mobile: {{ section.settings.font_size_mobile }}px;
+    --studio-text-font-weight: {{ section.settings.font_weight }};
+    --studio-text-letter-spacing: {{ section.settings.letter_spacing }}px;
+    --studio-text-line-height: {{ section.settings.line_height }};
+    --studio-text-muted-opacity: {{ section.settings.muted_opacity }};
+    --studio-text-align: {{ section.settings.text_align }};
+  "
+>
+  <div class="page-width">
+    <div class="studio-text__content color-foreground">
+      {%- if section.settings.subtext != blank -%}
+        <p class="studio-text__subtext">{{ section.settings.subtext | escape }}</p>
+      {%- endif -%}
+      <div class="studio-text__text rte">
+        {{ section.settings.text }}
+      </div>
+      {%- if section.settings.button_label != blank -%}
+        <div class="studio-text__cta">
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button button--secondary"
+          >
+            {{- section.settings.button_label | escape -}}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.studio-text.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "t:sections.studio-text.settings.subtext.label",
+      "default": "t:sections.studio-text.settings.subtext.default"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:sections.studio-text.settings.text.label",
+      "default": "t:sections.studio-text.settings.text.default"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 400,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "t:sections.studio-text.settings.max_width.label",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "font_size_desktop",
+      "min": 16,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.studio-text.settings.font_size_desktop.label",
+      "default": 19
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 14,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.studio-text.settings.font_size_mobile.label",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "min": -1.5,
+      "max": 2,
+      "step": 0.5,
+      "unit": "px",
+      "label": "t:sections.studio-text.settings.letter_spacing.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "font_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "t:sections.studio-text.settings.font_weight.label",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "line_height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "label": "t:sections.studio-text.settings.line_height.label",
+      "default": 1.6
+    },
+    {
+      "type": "range",
+      "id": "muted_opacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "label": "t:sections.studio-text.settings.muted_opacity.label",
+      "default": 0.6
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.studio-text.settings.text_align.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.studio-text.settings.text_align.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.studio-text.settings.text_align.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.studio-text.settings.text_align.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.studio-text.settings.button_label.label",
+      "default": "t:sections.studio-text.settings.button_label.default"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.studio-text.settings.button_link.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.studio-text.presets.name"
+    }
+  ]
+}
+{% endschema %}

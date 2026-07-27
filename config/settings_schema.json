@@ -126,13 +126,6 @@
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
       {
-        "type": "font_picker",
-        "id": "type_header_font",
-        "default": "assistant_n4",
-        "label": "t:settings_schema.typography.settings.type_header_font.label",
-        "info": "t:settings_schema.typography.settings.type_header_font.info"
-      },
-      {
         "type": "range",
         "id": "heading_scale",
         "min": 100,
@@ -1439,6 +1432,12 @@
         "type": "checkbox",
         "id": "currency_code_enabled",
         "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_prices_incl_taxes_message",
+        "label": "t:settings_schema.currency_format.settings.show_prices_incl_taxes_message.label",
         "default": true
       }
     ]

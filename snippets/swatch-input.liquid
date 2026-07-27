@@ -14,7 +14,7 @@
   - help_text: {String} additional content to render inside the label (optional)
   - additional_props: {String} (optional) additional properties to attach to the input
   - featured_image: {Object} optional variant featured image, used when option is Colour
-   - hex_from_map: {String} optional hex value from color map
+  - hex_from_map: {String} optional hex value from color map
 
   Usage:
    {% render 'swatch-input',
@@ -52,33 +52,15 @@
   style="
     position: relative;
     {% if featured_image %}
-      --swatch-input--border-radius: 5px;
-      padding: 3px;
+      --swatch-input--border-radius: 0;
     {% endif %}
   "
   class="
     swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %} {% if featured_image %}
-      sheet swatch-color_at_image_label
+      swatch-input__label--image
     {% endif %}
   "
 >
   {% render 'swatch', swatch: swatch, shape: shape, featured_image: featured_image, hex_from_map: hex_from_map %}
   {{ help_text }}
-
-  {% if visually_disabled %}
-    <span style="position: absolute; top: 0; right: 0;  opacity: 0.5">
-      <svg
-        style="width: 1.55rem;"
-        data-slot="icon"
-        aria-hidden="true"
-        fill="none"
-        stroke-width="2"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </span>
-  {% endif %}
 </label>
