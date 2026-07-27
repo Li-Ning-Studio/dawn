@@ -63,6 +63,57 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_A3BXYa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .sv-qf {\n    background: #F5C500;\n    color: #1A0640;\n    padding: 28px 40px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: 0;\n    position: relative;\n    z-index: 2;\n  }\n\n  .sv-qf__item {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 0 36px;\n    border-right: 2px solid rgba(58,13,122,0.2);\n  }\n  .sv-qf__item:last-child { border-right: none; }\n\n  .sv-qf__label {\n    font-family: 'Inter', sans-serif;\n    font-size: 1.62rem;\n    font-weight: 600;\n    text-transform: uppercase;\n    letter-spacing: 0.15em;\n    opacity: 0.6;\n    color: #1A0640;\n  }\n\n  .sv-qf__value {\n    font-family: 'Barlow Condensed', sans-serif;\n    font-weight: 900;\n    font-size: 2.2rem;\n    letter-spacing: 0.03em;\n    line-height: 1.1;\n    margin-top: 2px;\n    color: #1A0640;\n  }\n\n  @media (max-width: 600px) {\n    .sv-qf {\n      flex-direction: column;\n      gap: 14px;\n      padding: 24px 20px;\n    }\n    .sv-qf__item {\n      border-right: none;\n      border-bottom: 1px solid rgba(58,13,122,0.15);\n      padding: 12px 0;\n      width: 100%;\n      text-align: center;\n    }\n    .sv-qf__item:last-child { border-bottom: none; }\n  }\n</style>\n\n<div class=\"sv-qf\">\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Date</span>\n    <span class=\"sv-qf__value\">8 AUG 2026</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Venue</span>\n    <span class=\"sv-qf__value\">Machaxi Valo Sports, JP Nagar</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Reporting</span>\n    <span class=\"sv-qf__value\">4:00 PM</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Duration</span>\n    <span class=\"sv-qf__value\">2 HOURS</span>\n  </div>\n  <div class=\"sv-qf__item\">\n    <span class=\"sv-qf__label\">Entry Fee</span>\n    <span class=\"sv-qf__value\">Free</span>\n  </div>\n</div>",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "padding_top": 0,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_x6JCif": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Jpyc4z": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>8 Aug, Saturday</strong>",
+            "text": "<h4>Machaxi Valo Sports, Health & Fitness Club, JP Nagar.<br/>(4:00 PM - 6:00 PM) - <a href=\"https://maps.app.goo.gl/HyRvc85cVCBu3rBk7\" target=\"_blank\" title=\"https://maps.app.goo.gl/HyRvc85cVCBu3rBk7\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Jpyc4z"
+      ],
+      "custom_css": [
+        "a {color: orange;}",
+        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {color: #f69e24;}",
+        "h4 strong {color: grey;}",
+        ".multicolumn-card {background: #170c02; background: linear-gradient( 271deg, rgba(23, 12, 2, 1) 0%, rgba(9, 9, 9, 1) 34% );}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Event </strong>Schedule",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 56
+      }
+    },
     "1757582427791457ea": {
       "type": "apps",
       "blocks": {
@@ -168,47 +219,6 @@
         "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
         "padding_top": 64,
         "padding_bottom": 40
-      }
-    },
-    "multicolumn_x6JCif": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_Jpyc4z": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>8 Aug, Saturday</strong>",
-            "text": "<h4>Machaxi Valo Sports, Health & Fitness Club, JP Nagar.<br/>(4:00 PM - 6:00 PM) - <a href=\"https://maps.app.goo.gl/HyRvc85cVCBu3rBk7\" target=\"_blank\" title=\"https://maps.app.goo.gl/HyRvc85cVCBu3rBk7\">View Location</a></h4>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Jpyc4z"
-      ],
-      "custom_css": [
-        "a {color: orange;}",
-        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
-        "h3 {color: #f69e24;}",
-        "h4 strong {color: grey;}",
-        ".multicolumn-card {background: #170c02; background: linear-gradient( 271deg, rgba(23, 12, 2, 1) 0%, rgba(9, 9, 9, 1) 34% );}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<strong>Event </strong>Schedule",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 4,
-        "padding_bottom": 56
       }
     },
     "rich_text_YUaPWT": {
@@ -355,6 +365,7 @@
     "hero_component_3mFtqf",
     "custom_liquid_LqDdTM",
     "custom_liquid_wEr9EG",
+    "custom_liquid_A3BXYa",
     "1757582427791457ea",
     "multirow_RFTCVa",
     "image_with_text_UxtnK3",
