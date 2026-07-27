@@ -695,20 +695,21 @@
         <div class="cart__ctas" {{ block.shopify_attributes }}>
           {% if settings.is_gokwik_enabled == true %}
             {% render 'gokwik-checkout-button' %}
+          {% else %}
+            <button
+              style="padding: 2.5rem 0"
+              type="submit"
+              id="CartDrawer-Checkout"
+              class="cart__checkout-button button"
+              name="checkout"
+              form="CartDrawer-Form"
+              {% if cart == empty %}
+                disabled
+              {% endif %}
+            >
+              {{ 'sections.cart.checkout' | t }}
+            </button>
           {% endif %}
-          <button
-            style="padding: 2.5rem 0"
-            type="submit"
-            id="CartDrawer-Checkout"
-            class="cart__checkout-button button"
-            name="checkout"
-            form="CartDrawer-Form"
-            {% if cart == empty %}
-              disabled
-            {% endif %}
-          >
-            {{ 'sections.cart.checkout' | t }}
-          </button>
         </div>
       </div>
     </div>

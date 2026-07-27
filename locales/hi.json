@@ -9,6 +9,11 @@
  */
 {
   "studio": {
+    "modal_close_guard": {
+      "message": "Are you sure you want to cancel your customisation?",
+      "keep_editing": "Keep Editing",
+      "discard": "Discard"
+    },
     "stringing": {
       "form_labels": {
         "frame": "फ्रेम",
@@ -22,6 +27,64 @@
         "unstrung": "यह रैकेट बिना किसी तार के आएगा। आपको इसे स्पोर्ट्स शॉप से स्ट्रिंग करवाना होगा।",
         "pro_stringing": "कस्टम स्ट्रिंग और टेंशन के साथ इस रैकेट को कस्टमाइज़ करें। सर्वोत्तम प्रदर्शन के लिए अनुशंसित।",
         "strung": "यह रैकेट डिफ़ॉल्ट स्ट्रिंग और टेंशन के साथ आएगा।"
+      },
+      "labels": {
+        "current_selection": "वर्तमान चयन",
+        "low_tension": "कम",
+        "high_tension": "उच्च"
+      }
+    },
+    "remix": {
+      "form_labels": {
+        "personalisation_service": "Add Personalisation"
+      },
+      "description": {
+        "personalisation_service": "Make this {{ product_title }} truly yours"
+      },
+      "labels": {
+        "free": "FREE"
+      },
+      "actions": {
+        "add": "Add",
+        "change": "Change"
+      },
+      "errors": {
+        "load_failed": "Failed to load personalisation options. Please refresh the page."
+      }
+    },
+    "tshirt_printing": {
+      "form_labels": {
+        "personalisation_service": "Personalise"
+      },
+      "description": {
+        "personalisation_service": "Personalize this {{ product_title }} and make it truly yours with our optional offering, designed to showcase your unique style on the court."
+      },
+      "headings": {
+        "personalise": "Personalise this {{ product_title }}"
+      },
+      "labels": {
+        "free": "FREE",
+        "input": "Your Personalisation",
+        "note": "Note: This is for representation purposes only. The text will be printed on the back of the T-Shirt. Cash on Delivery is not applicable for orders containing Personalised T-Shirts.",
+        "step": "Step",
+        "summary": "Personalising",
+        "summary_html": "Uniquely Yours - You are making this {{ product_title }} truly yours by personalising with",
+        "title": "Make this T-Shirt yours"
+      },
+      "messages": {
+        "invalid_input": "Only letters, periods, and spaces are allowed."
+      },
+      "actions": {
+        "add": "Add",
+        "change": "Change",
+        "next": "Next",
+        "back": "Back",
+        "submit": "Personalise",
+        "close": "Close",
+        "remove": "Remove"
+      },
+      "errors": {
+        "load_failed": "Failed to load T-shirt personalisation options. Please refresh the page."
       }
     }
   },

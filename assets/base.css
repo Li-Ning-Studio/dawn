@@ -12,7 +12,7 @@
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow:
     0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-  --scollbar-width: 4px;
+  /* --scollbar-width: 4px; */
 }
 
 .product-card-wrapper .card,
@@ -94,10 +94,6 @@
 
 /* base */
 
-button {
-  text-transform: uppercase;
-}
-
 .sheet {
   border-radius: 0.8rem;
   transition: box-shadow 0.3s ease;
@@ -172,6 +168,13 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   .page-width-desktop {
     max-width: var(--page-width);
     padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  :root {
+    /* Keep configured width as the floor, then relax gutters on very wide desktops. */
+    --page-width: clamp(var(--page-width-base), 90vw, 192rem);
   }
 }
 
@@ -269,8 +272,8 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 ::selection {
-  background-color: var(--secondary-accent-color);
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: #000;
 }
 
 .text-body {
@@ -330,13 +333,14 @@ h5,
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 2.4rem);
+  font-size: calc(var(--font-heading-scale) * 3rem);
+  margin: 0;
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 2.5rem);
+    font-size: calc(var(--font-heading-scale) * 3.2rem);
   }
 }
 
@@ -355,7 +359,9 @@ h2,
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  font-size: calc(var(--font-heading-scale) * 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 750px) {
@@ -375,6 +381,7 @@ h4,
 h5,
 .h5 {
   font-size: calc(var(--font-heading-scale) * 1.1rem);
+  margin: 0;
 }
 
 @media only screen and (min-width: 750px) {
@@ -569,7 +576,7 @@ a:not([href]) {
 hr {
   border: none;
   height: 0.1rem;
-  background-color: rgba(var(--color-foreground), 0.2);
+  background-color: var(--border-color);
   display: block;
   margin: 4rem 0;
 }
@@ -1252,6 +1259,7 @@ button.shopify-payment-button__button--unbranded {
 .button,
 .shopify-challenge__button,
 .customer button {
+  letter-spacing: 0.02em;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1259,8 +1267,8 @@ button.shopify-payment-button__button--unbranded {
   padding: 1rem 3rem;
   cursor: pointer;
   font: inherit;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1.55rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
@@ -1344,7 +1352,7 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 
@@ -1357,7 +1365,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button--xlarge {
-  padding: 2.7rem 1rem;
+  padding: 3rem 12px;
 }
 
 /* Shopify Accelerated Checkout */
@@ -1888,7 +1896,7 @@ input[type='checkbox'] {
   margin-bottom: 0.6rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--gray-70);
+  /* color: var(--gray-70); */
 }
 
 .form__message {
@@ -2148,7 +2156,7 @@ input[type='checkbox'] {
 .cart-count-bubble {
   position: absolute;
   font-weight: 800;
-  background-color: var(--secondary-accent-color);
+  background-color: var(--accent-color);
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -2922,7 +2930,7 @@ details[open] > .mega-menu__content {
 
 .header__menu-item:hover {
   color: rgb(var(--color-foreground));
-  border-bottom-color: var(--secondary-accent-color);
+  border-bottom-color: var(--accent-color);
 }
 
 /* .header__menu-item span {
@@ -3050,18 +3058,18 @@ details-disclosure > details {
   letter-spacing: 2px;
   border-radius: var(--badge-corner-radius);
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.1rem;
   line-height: 1;
   padding: 0.5rem 1rem;
   text-align: center;
-  background-color: rgb(var(--color-badge-background));
+  background-color: var(--secondary-accent-color);
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
-  color: rgb(var(--color-badge-foreground));
+  color: var(--accent-color);
   word-break: break-word;
 }
 
-.badge::after {
+/* .badge::after {
   content: '';
   top: 0;
   left: 0;
@@ -3091,13 +3099,7 @@ details-disclosure > details {
     transform: translateX(100%);
     opacity: 1;
   }
-}
-
-@media screen and (max-width: 749px) {
-  .badge {
-    font-size: 1rem;
-  }
-}
+} */
 
 .gradient {
   background: rgb(var(--color-background));
@@ -3794,7 +3796,6 @@ body,
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
 }
 
 .glowing:before {
@@ -3811,7 +3812,6 @@ body,
   animation: glowing 120s linear infinite;
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
-  border-radius: 10px;
 }
 
 .glowing:after {
@@ -3823,7 +3823,6 @@ body,
   background: black;
   left: 0;
   top: 0;
-  border-radius: 10px;
 }
 
 @keyframes glowing {
