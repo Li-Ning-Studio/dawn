@@ -332,7 +332,7 @@
           "settings": {
             "heading": "What are Product Specifications?",
             "open_by_default": true,
-            "content": "{%render 'product-disclosures'%}"
+            "content": "{%render 'product-disclosures'%}\nSKU:  <span id=\"sku\">{{ product.selected_or_first_available_variant.sku }}</span>"
           }
         },
         "accordion_row_n7nYQT": {
