@@ -609,6 +609,30 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "grouped_accordions_tt68bE": {
+      "type": "grouped-accordions",
+      "blocks": {
+        "accordion_row_TnMf8B": {
+          "type": "accordion_row",
+          "settings": {
+            "heading": "What are Product Specifications?",
+            "open_by_default": true,
+            "content": "{%render 'product-disclosures'%}\nSKU:  <span id=\"sku\">{{ product.selected_or_first_available_variant.sku }}</span>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_row_TnMf8B"
+      ],
+      "name": "t:sections.grouped-accordions.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "heading": "Frequently asked questions",
+        "heading_size": "h1",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     }
   },
   "order": [
@@ -625,6 +649,7 @@
     "collapsible_content_fD6AE8",
     "related-products",
     "1749537046e7aecdbc",
-    "rich_text_cMiyAE"
+    "rich_text_cMiyAE",
+    "grouped_accordions_tt68bE"
   ]
 }

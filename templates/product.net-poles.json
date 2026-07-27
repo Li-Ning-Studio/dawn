@@ -42,6 +42,7 @@
         },
         "text_GnCjUD": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "(Inclusive of all taxes)",
             "text_style": "body"
@@ -270,6 +271,30 @@
         "padding_bottom": 52
       }
     },
+    "grouped_accordions_dQwYxR": {
+      "type": "grouped-accordions",
+      "blocks": {
+        "accordion_row_YyVx7T": {
+          "type": "accordion_row",
+          "settings": {
+            "heading": "What are Product Specifications?",
+            "open_by_default": true,
+            "content": "{%render 'product-disclosures'%}\nSKU:  <span id=\"sku\">{{ product.selected_or_first_available_variant.sku }}</span>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_row_YyVx7T"
+      ],
+      "name": "t:sections.grouped-accordions.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "heading": "Frequently asked questions",
+        "heading_size": "h1",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -314,6 +339,7 @@
   "order": [
     "main",
     "rich_text_Ld3mn8",
+    "grouped_accordions_dQwYxR",
     "related-products",
     "1749537046e7aecdbc"
   ]
