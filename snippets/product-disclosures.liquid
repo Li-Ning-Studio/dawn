@@ -53,22 +53,19 @@
 {%- comment -%} 4. Display Logic {%- endcomment -%}
 <div class="product-legal-info">
   {% if product.metafields.custom_but_hidden.country.value %}
-    <div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
-      <p style="text-transform: capitalize; grid-column: span 5/span 5;">Country of Origin</p>
-      <p style="grid-column: span 7/span 7;">{{ product.metafields.custom_but_hidden.country.value }}</p>
+    <div style="">
+      <span style="text-transform: capitalize; grid-column: span 5/span 5;">Country of Origin: </span>
+      <span>{{ product.metafields.custom_but_hidden.country.value }}</span>
     </div>
-    <hr style="margin: 0; border: none; border-top: 1px solid #e4e4e4;">
   {% endif %}
 
-  <div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
-    <p style="text-transform: capitalize; grid-column: span 5/span 5;">Manufactured by</p>
-    <p style="grid-column: span 7/span 7;">{{ manufacturer }}</p>
+  <div style="">
+    <span style="text-transform: capitalize; grid-column: span 5/span 5;">Manufactured by: </span>
+    <span>{{ manufacturer }}</span>
   </div>
 
-  <hr style="margin: 0; border: none; border-top: 1px solid #e4e4e4;">
-
-  <div style="display: grid; grid-template-columns: repeat(12,minmax(0,1fr))">
-    <p style="text-transform: capitalize; grid-column: span 5/span 5;">Imported and Marketed by</p>
-    <p style="grid-column: span 7/span 7;">{{ importer }}</p>
+  <div style="">
+    <span style="text-transform: capitalize; grid-column: span 5/span 5;">Imported and Marketed by: </span>
+    <span>{{ importer }}</span>
   </div>
 </div>

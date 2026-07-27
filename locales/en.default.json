@@ -9,6 +9,14 @@
  */
 {
   "studio": {
+    "labels": {
+      "customisations": "Customisations"
+    },
+    "modal_close_guard": {
+      "message": "Are you sure you want to cancel your customisation?",
+      "keep_editing": "Keep Editing",
+      "discard": "Discard"
+    },
     "stringing": {
       "form_labels": {
         "frame": "Frame",
@@ -21,8 +29,53 @@
       },
       "description": {
         "unstrung": "This racket will come without any strings. You will need to get it strung from a sports shop.",
-        "pro_stringing": "Customise this racket with a custom string and tension. Recommended for optimal performance.",
-        "strung": "This racket will come strung with the default string and tension."
+        "pro_stringing": "Upgrade with a custom string and tension.",
+        "strung": "This racket will come strung with the default string and tension.",
+        "two_knots": "Two-knots method uses a single continuous string for mains and crosses. Suitable for moderate tensions.",
+        "four_knots": "Four-knots method uses separate strings for mains and crosses with four tie-offs. Recommended for high tensions."
+      },
+      "labels": {
+        "current_selection": "Current Selection",
+        "free": "FREE",
+        "strings_guide": "Strings Guide",
+        "tension_unit": "LBS",
+        "low_tension": "Low",
+        "high_tension": "High",
+        "two_knots": "Two Knots",
+        "four_knots": "Four Knots"
+      },
+      "headings": {
+        "choose_string": "Choose a string",
+        "select_color": "Choose a color",
+        "select_tension": "What tension should <br/> we string at?",
+        "select_method": "How should we <br/> string it?",
+        "summary": "Summary"
+      },
+      "filters": {
+        "all": "All",
+        "power": "Power",
+        "durable": "Durable",
+        "balanced": "Balanced"
+      },
+      "messages": {
+        "loading": "Loading string options...",
+        "empty": "We couldn't find any string options right now."
+      },
+      "actions": {
+        "add": "Add",
+        "selected": "Selected",
+        "change": "Change",
+        "next": "Next",
+        "back": "Back",
+        "submit": "Apply Stringing",
+        "close": "Close",
+        "remove": "Remove"
+      },
+      "errors": {
+        "load_failed": "Failed to load stringing options. Please refresh the page.",
+        "missing_product": "Please select a string.",
+        "missing_variant": "Please choose a string color.",
+        "missing_tension": "Please select a tension."
       }
     },
     "gripping": {
@@ -32,11 +85,12 @@
         "no_grip": "Factory Grip"
       },
       "description": {
-        "grip_service": "Let our Studio Pros install the grip of your choice before shipment.",
+        "grip_service": "Let our Studio Pros install a grip",
         "no_grip": "Ships with a factory grip, which varies by model. We recommend upgrading to a grip.",
         "grip_application_note": "Please note that Replacement Grips are applied after removing the factory grip, whereas Overgrips are applied over the existing factory grip."
       },
       "labels": {
+        "current_selection": "Current Selection",
         "free": "FREE",
         "service_cost": "Service Cost",
         "variant_price": "Grip"
@@ -44,16 +98,79 @@
       "headings": {
         "choose_grip": "Choose Grip",
         "select_color": "Select Grip Color",
-        "summary": "Grip Summary"
+        "summary": "Applying"
       },
       "messages": {
         "loading": "Loading grip options...",
         "empty": "We couldn't find any grip options right now."
       },
+      "actions": {
+        "add": "Add",
+        "selected": "Selected",
+        "change": "Change",
+        "next": "Next",
+        "back": "Back",
+        "submit": "Apply Grip",
+        "close": "Close",
+        "remove": "Remove"
+      },
       "errors": {
         "load_failed": "Failed to load grip options. Please refresh the page.",
         "missing_product": "Please select a grip option.",
         "missing_variant": "Please select a grip color."
+      }
+    },
+    "remix": {
+      "form_labels": {
+        "personalisation_service": "Add Personalisation"
+      },
+      "description": {
+        "personalisation_service": "Make this {{ product_title }} truly yours and showcase your own style on the court"
+      },
+      "labels": {
+        "free": "FREE"
+      },
+      "actions": {
+        "add": "Add",
+        "change": "Change"
+      },
+      "errors": {
+        "load_failed": "Failed to load personalisation options. Please refresh the page."
+      }
+    },
+    "tshirt_printing": {
+      "form_labels": {
+        "personalisation_service": "Add Personalisation"
+      },
+      "description": {
+        "personalisation_service": "Make this {{ product_title }} truly yours by getting something special printed"
+      },
+      "headings": {
+        "personalise": "Personalise this {{ product_title }}"
+      },
+      "labels": {
+        "free": "FREE",
+        "input": "Your Personalisation",
+        "note": "Note: This is for representation purposes only. The text will be printed on the back of the T-Shirt. Cash on Delivery is not applicable for orders containing Personalised T-Shirts.",
+        "step": "Step",
+        "summary": "Personalising",
+        "summary_html": "Uniquely Yours - You are making this {{ product_title }} truly yours by personalising with",
+        "title": "Make this T-Shirt yours"
+      },
+      "messages": {
+        "invalid_input": "Only letters, periods, and spaces are allowed."
+      },
+      "actions": {
+        "add": "Add",
+        "change": "Change",
+        "next": "Next",
+        "back": "Back",
+        "submit": "Personalise",
+        "close": "Close",
+        "remove": "Remove"
+      },
+      "errors": {
+        "load_failed": "Failed to load T-shirt personalisation options. Please refresh the page."
       }
     }
   },
@@ -108,9 +225,9 @@
       "featured": "Featured"
     },
     "cart": {
-      "view": "View cart ({{ count }})",
-      "view_empty_cart": "View cart",
-      "item_added": "Item added to your cart"
+      "view": "View Shopping Bag ({{ count }})",
+      "view_empty_cart": "View Shopping Bag",
+      "item_added": "Item added to your shopping bag"
     },
     "share": {
       "close": "Close share",
@@ -174,7 +291,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Add to cart",
+      "add_to_cart": "Add to Bag",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
@@ -208,7 +325,7 @@
         "multiples_of": "Increments of {{ quantity }}",
         "min_of": "Min {{ quantity }}",
         "max_of": "Max {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in bag",
         "note": "View quantity rules"
       },
       "volume_pricing": {
@@ -244,11 +361,14 @@
       "view_full_details": "View full details",
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
-      "all_prices_incl_taxes": "(Includes taxes)",
+      "all_prices_incl_taxes": "(incl. taxes)",
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "country_of_origin": "Country of origin",
+      "manufactured_by": "Manufactured by",
+      "imported_marketed_by": "Imported and marketed by"
     },
     "modal": {
       "label": "Media gallery"
@@ -316,7 +436,7 @@
       "pages": "Pages"
     },
     "cart": {
-      "cart": "Cart"
+      "cart": "Bag"
     },
     "contact": {
       "form": {
@@ -361,16 +481,16 @@
       }
     },
     "cart": {
-      "title": "Your cart",
-      "caption": "Cart items",
+      "title": "Your Shopping Bag",
+      "caption": "Bag items",
       "remove_title": "Remove {{ title }}",
       "estimated_total": "Estimated total",
       "new_estimated_total": "New estimated total",
       "note": "Order special instructions",
       "checkout": "Check out",
-      "empty": "Your cart is empty",
-      "cart_error": "There was an error while updating your cart. Please try again.",
-      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+      "empty": "Your Shopping Bag is empty",
+      "cart_error": "There was an error while updating your bag. Please try again.",
+      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your bag.",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
       "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
@@ -393,6 +513,8 @@
       }
     },
     "footer": {
+      "communication_channels": "Communication channels",
+      "social_links": "Social links",
       "payment": "Payment methods"
     },
     "featured_blog": {
@@ -429,7 +551,7 @@
     },
     "quick_order_list": {
       "product_total": "Product subtotal",
-      "view_cart": "View cart",
+      "view_cart": "View Shopping Bag",
       "each": "{{ money }}/ea",
       "product": "Product",
       "variant": "Variant",
@@ -444,8 +566,8 @@
       },
       "product_variants": "Product variants",
       "total_items": "Total items",
-      "remove_all_single_item_confirmation": "Remove 1 item from your cart?",
-      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
+      "remove_all_single_item_confirmation": "Remove 1 item from your bag?",
+      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your bag?",
       "remove_all": "Remove all",
       "cancel": "Cancel",
       "min_error": "This item has a minimum of {{ min }}",

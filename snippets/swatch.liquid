@@ -53,6 +53,7 @@
   elsif featured_image
     assign image_url = featured_image | image_url: width: 300
     assign swatch_value = 'url(' | append: image_url | append: ')'
+    assign swatch_aspect_ratio = featured_image.aspect_ratio
   elsif swatch.image
     assign image_url = swatch.image | image_url: width: 200
     assign swatch_value = 'url(' | append: image_url | append: ')'
@@ -67,8 +68,9 @@
     class="swatch{% if shape == 'square' %} swatch--square{% endif %}"
     style="
       --swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %} {% if featured_image %}
-         --swatch--border-radius: 5px;
-         --swatch--size: 9rem;
+         {% if swatch_aspect_ratio %}
+           --swatch--aspect-ratio: {{ swatch_aspect_ratio }};
+         {% endif %}
       {% endif %}
        {% comment %} {% if hex_from_map %}
          --swatch--size: 4.7rem;

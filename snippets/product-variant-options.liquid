@@ -20,14 +20,17 @@
   assign product_form_id = 'product-form-' | append: section.id
 -%}
 
-{% assign is_size = false %}
+{% assign option_values = option.values %}
 
-{% if option.name == 'Size' %}
-  {% assign is_size = true %}
+{% if picker_type == 'swatch' %}
+  {% assign available_option_values = option.values | where: 'available', true %}
+  {% assign unavailable_option_values = option.values | where: 'available', false %}
+  {% assign option_values = available_option_values | concat: unavailable_option_values %}
 {% endif %}
 
-{%- for value in option.values -%}
+{%- for value in option_values -%}
   {%- liquid
+    assign image_src = null
     assign swatch_focal_point = null
     if value.swatch.image
       assign image_url = value.swatch.image | image_url: width: 50
@@ -104,14 +107,7 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label
-      style="
-        {% if is_size %}
-          width: 100px;
-        {% endif %}
-      "
-      for="{{ input_id }}"
-    >
+    <label for="{{ input_id }}">
       {{ value -}}
       {{ label_unavailable }}
     </label>
