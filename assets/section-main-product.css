@@ -354,7 +354,9 @@ product-info {
   display: none;
   flex-shrink: 0;
   white-space: nowrap;
-  color: rgba(var(--color-foreground), 0.8);
+  color: rgba(var(--color-foreground), 0.7);
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 749px) {
@@ -1050,7 +1052,7 @@ product-info {
   width: 92%;
   position: absolute;
   top: 0;
-  padding: 0 1.5rem 0 3rem;
+  padding: 0 2rem 0 2rem;
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
   border-style: solid;
   border-width: var(--popup-border-width);
@@ -1136,7 +1138,7 @@ product-info {
 
 .product-popup-modal__content-info > * {
   height: auto;
-  margin: 0 auto;
+  margin: 3rem auto;
   max-width: 100%;
   width: 100%;
 }
