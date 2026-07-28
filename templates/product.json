@@ -172,8 +172,8 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Who is it for?",
-            "open_by_default": false,
-            "icon": "check_mark",
+            "open_by_default": true,
+            "icon": "none",
             "content": "<p>{{ product.metafields.custom_but_hidden.ideal_for | metafield_tag }}</p>",
             "page": ""
           }
