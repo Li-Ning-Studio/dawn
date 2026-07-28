@@ -18,8 +18,10 @@
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
   {{ 'component-highlight-badge.css' | asset_url | stylesheet_tag }}
 
-  {% unless product.has_only_default_variant %}
+  {% if product.has_only_default_variant == false or product.metafields.custom_but_hidden.combined_products %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+  {% unless product.has_only_default_variant %}
     {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
     {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
   {% endunless %}

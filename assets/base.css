@@ -3058,12 +3058,13 @@ details-disclosure > details {
   letter-spacing: 2px;
   border-radius: var(--badge-corner-radius);
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   letter-spacing: 0.1rem;
   line-height: 1;
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 0rem;
   text-align: center;
-  background-color: var(--secondary-accent-color);
+  /* background-color: var(--secondary-accent-color); */
+  background-color: transparent;
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: var(--accent-color);
   word-break: break-word;
