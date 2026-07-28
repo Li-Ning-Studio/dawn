@@ -168,6 +168,16 @@
             "page": ""
           }
         },
+        "collapsible_tab_NfaRDf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Who is it for?",
+            "open_by_default": false,
+            "icon": "check_mark",
+            "content": "<p>{{ product.metafields.custom_but_hidden.ideal_for | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "disabled": true,
@@ -218,6 +228,7 @@
         "product_highlight_yCCtLT",
         "description",
         "collapsible_tab_McAyVV",
+        "collapsible_tab_NfaRDf",
         "collapsible-row-1",
         "collapsible_tab_nCtKFG",
         "share"
