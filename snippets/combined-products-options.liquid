@@ -21,60 +21,7 @@
 {% endfor %}
 
 {% if combined_group and product_count > 1 %}
-  <style>
-    .combined-radio {
-      clip: rect(0, 0, 0, 0);
-      overflow: hidden;
-      position: absolute;
-      height: 1px;
-      width: 1px;
-    }
-    .combined-label {
-      background-color: rgb(var(--color-background));
-      border-radius: var(--variant-pills-radius);
-      color: rgb(var(--color-foreground));
-      display: inline-block;
-      margin: 0.7rem 0.5rem 0.2rem 0;
-      padding: 1.4rem 2.4rem;
-      font-size: 1.5rem;
-      line-height: 1;
-      text-align: center;
-      transition: border var(--duration-short) ease;
-      cursor: pointer;
-      position: relative;
-      box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    }
-    .combined-label:before {
-      content: '';
-      position: absolute;
-      top: calc(var(--variant-pills-border-width, 0px) * -1);
-      right: calc(var(--variant-pills-border-width, 0px) * -1);
-      bottom: calc(var(--variant-pills-border-width, 0px) * -1);
-      left: calc(var(--variant-pills-border-width, 0px) * -1);
-      z-index: -1;
-      border-radius: var(--variant-pills-radius);
-      box-shadow: var(--variant-pills-shadow-horizontal-offset, 0px) var(--variant-pills-shadow-vertical-offset, 0px)
-        var(--variant-pills-shadow-blur-radius, 0px) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity, 0));
-    }
-    .combined-label:hover {
-      border-color: rgb(var(--color-foreground));
-    }
-    .combined-radio:checked + .combined-label {
-      color: rgb(var(--color-foreground));
-      outline: 2px solid var(--accent-color);
-    }
-    .combined-radio:focus-visible + .combined-label {
-      box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
-    }
-    .combined-label.unavailable {
-      opacity: 0.5;
-      pointer-events: none;
-      cursor: not-allowed;
-      text-decoration: line-through;
-    }
-  </style>
-
-  <fieldset class="js product-form__input product-form__input--pill combined-products-fieldset">
+  <fieldset class="js product-form__input product-form__input--pill">
     <legend class="form__label">
       {{ combined_group.option_label }}
     </legend>
@@ -93,21 +40,23 @@
       <input
         type="radio"
         id="combined-option-{{ section.id }}-{{ forloop.index0 }}"
-        name="Combined-{{ forloop.index }}"
+        name="Combined-{{ section.id }}"
         value="{{ option_value | escape }}"
         form="product-form-{{ section.id }}"
-        class="combined-radio"
         {% if is_current %}
           checked
         {% endif %}
+        {% unless group_product.available %}
+          class="disabled"
+          disabled
+        {% endunless %}
         {% unless is_current %}
-          onclick="window.location.href='{{ group_product.url }}'"
+          {% if group_product.available %}
+            onclick="window.location.href='{{ group_product.url }}'"
+          {% endif %}
         {% endunless %}
       >
-      <label
-        for="combined-option-{{ section.id }}-{{ forloop.index0 }}"
-        class="combined-label{% unless group_product.available %} unavailable{% endunless %}"
-      >
+      <label for="combined-option-{{ section.id }}-{{ forloop.index0 }}">
         {{ option_value }}
         {% unless group_product.available %}
           <span class="visually-hidden label-unavailable">
