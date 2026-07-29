@@ -565,11 +565,26 @@
                 {%- endif -%}
 
               {%- when 'variant_picker' -%}
+                {% comment %}
+                  Resolve the Remix service product once so its displayed price and submitted
+                  variant always stay aligned for rackets, paddles, and bags.
+                {% endcomment %}
                 {%- liquid
                   assign is_stringing_visible = false
                   assign is_gripping_visible = false
                   assign is_remix_visible = false
                   assign is_tshirt_printing_visible = false
+                  assign remix_service_handle = 'remix'
+
+                  case product.type
+                    when 'Pickleball Paddle'
+                      assign remix_service_handle = 'paddle-remix'
+                    when 'Badminton Kitbags'
+                      assign remix_service_handle = 'bag-remix'
+                  endcase
+
+                  assign remix_service_product = all_products[remix_service_handle]
+                  assign remix_service_variant = remix_service_product.variants.first
 
                   if settings.is_stringing_enabled_globally and product.metafields.custom_but_hidden.studio_pro_stringing and settings.stringing_collection_id != blank and product.available == true
                     assign is_stringing_visible = true
@@ -579,7 +594,7 @@
                     assign is_gripping_visible = true
                   endif
 
-                  if settings.is_remix_enabled_globally and product.metafields.custom_but_hidden.stickers == true and product.available == true and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model
+                  if settings.is_remix_enabled_globally and product.metafields.custom_but_hidden.stickers == true and product.available == true and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model and remix_service_variant.available
                     assign is_remix_visible = true
                   endif
 
@@ -614,7 +629,7 @@
                   {% render 'gripping' %}
                 {% endif %}
                 {% if is_remix_visible %}
-                  {% render 'remix' %}
+                  {% render 'remix', remix_service_product: remix_service_product %}
                 {% endif %}
                 {% if is_tshirt_printing_visible %}
                   {% render 'tshirt-printing' %}
