@@ -1,6 +1,14 @@
+{% comment %}
+  Renders the shared Remix service card and lazy-loaded configurator.
+
+  Accepts:
+  - remix_service_product: {Product} service product resolved for the current product type
+{% endcomment %}
+
 {{ 'services.css' | asset_url | stylesheet_tag }}
 
 {% assign remix_trigger_id = 'remix-trigger-' | append: section.id %}
+{% assign remix_service_variant = remix_service_product.variants.first %}
 
 <section
   id="remix-modal"
@@ -25,10 +33,10 @@
       <div class="service-card__title-row">
         <span>{{ 'studio.remix.form_labels.personalisation_service' | t }}</span>
         <span class="service-card__price">
-          {%- if all_products.remix.price == 0 -%}
+          {%- if remix_service_product.price == 0 -%}
             {{ 'studio.remix.labels.free' | t }}
           {%- else -%}
-            +{{ all_products.remix.price | money }}
+            +{{ remix_service_product.price | money }}
           {%- endif -%}
         </span>
       </div>
@@ -86,9 +94,8 @@
         canOpen: () => Boolean(window?.s3_remix_config?.modelPath),
       });
     }
-
     // Set the remix variant ids on window (for product-form.js)
-    window.s3_remix_service_variant_id = '{{ all_products.remix.variants.first.id  }}';
-    window.s3_paddle_remix_service_variant_id = '{{ all_products['paddle-remix'].variants.first.id  }}';
+    // The service product is resolved by product type before rendering this snippet.
+    window.s3_remix_service_variant_id = '{{ remix_service_variant.id }}';
   });
 </script>
