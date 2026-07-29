@@ -24,6 +24,7 @@ declare global {
     s3_bxgy: unknown;
     s3_bxgy_variants: unknown;
     s3_product_collections: string[] | undefined;
+    s3_remix_service_variant_id: string | undefined;
     s3_remix_modal_controller: ServiceModalController | undefined;
     s3_remix_config:
       | {
@@ -56,7 +57,7 @@ declare global {
   }
 }
 
-export type TRemixProductType = 'Badminton Racket' | 'Pickleball Paddle';
+export type TRemixProductType = 'Badminton Racket' | 'Pickleball Paddle' | 'Badminton Kitbags';
 
 // First, get the type from your GetCollectionByIdQuery
 export type CollectionType = GetCollectionByIdQuery['collection'];

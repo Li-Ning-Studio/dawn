@@ -1,7 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import GraphemeSplitter from 'grapheme-splitter';
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { consumePendingModalOpen } from '../../lib/service-modal-pending';
 import {
   AmbientLight,
   Color,
@@ -14,6 +13,7 @@ import {
 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { consumePendingModalOpen } from '../../lib/service-modal-pending';
 
 const defaultCopy = document.getElementById('remix-description')!.innerHTML;
 
@@ -38,11 +38,158 @@ type RemixProps = {
   };
 };
 
+const defaultValidEmojis: readonly string[] = [
+  '😊',
+  '😘',
+  '😍',
+  '😂',
+  '😎',
+  '🌈',
+  '🔥',
+  '🌊',
+  '🍀',
+  '👽',
+  //   '💀',
+  '👑',
+  '✨',
+  '🪄',
+  '🤍',
+];
+
+const bagsEmoji: readonly string[] = ['😊', '😍', '😎', '🌈', '🔥', '👽', '🤍'];
+
+type CameraPosition = { x: number; y: number; z: number };
+
+type CameraPath = {
+  start: CameraPosition;
+  end: CameraPosition;
+};
+
+type RemixViewport = 'mobile' | 'desktop';
+
+type RemixProductConfig = {
+  label: string;
+  maxStickerLength: number;
+  rotateModel: boolean;
+  validEmojis: readonly string[];
+  emojiTextColor: 'black' | 'white';
+  stickerFontSize: Record<RemixViewport, string>;
+  camera: {
+    duration: number;
+    mobile: CameraPath;
+    desktop: CameraPath;
+  };
+};
+
+const getRemixProductConfig = (productType: string | undefined): RemixProductConfig => {
+  switch (productType) {
+    case 'Badminton Racket':
+      return {
+        label: 'Racket',
+        maxStickerLength: 8,
+        rotateModel: true,
+        validEmojis: defaultValidEmojis,
+        emojiTextColor: 'black',
+        stickerFontSize: {
+          mobile: '5rem',
+          desktop: '5rem',
+        },
+        camera: {
+          duration: 4500,
+          mobile: {
+            start: { x: 0, y: 0, z: 10 },
+            end: { x: -2, y: 1, z: 0 },
+          },
+          desktop: {
+            start: { x: 0, y: 0, z: 10 },
+            end: { x: -2, y: 1, z: 0 },
+          },
+        },
+      };
+    case 'Pickleball Paddle':
+      return {
+        label: 'Paddle',
+        maxStickerLength: 12,
+        rotateModel: false,
+        validEmojis: defaultValidEmojis,
+        emojiTextColor: 'black',
+        stickerFontSize: {
+          mobile: '5rem',
+          desktop: '5rem',
+        },
+        camera: {
+          duration: 3500,
+          mobile: {
+            start: { x: 0, y: 15, z: 2 },
+            end: { x: -1.35, y: 0, z: 2.5 },
+          },
+          desktop: {
+            start: { x: 0, y: 15, z: 2 },
+            end: { x: -1.35, y: 0, z: 2.5 },
+          },
+        },
+      };
+    case 'Badminton Kitbags':
+      return {
+        label: 'Bag',
+        maxStickerLength: 8,
+        rotateModel: false,
+        validEmojis: bagsEmoji,
+        emojiTextColor: 'white',
+        stickerFontSize: {
+          mobile: '4rem',
+          desktop: '5rem',
+        },
+        camera: {
+          duration: 5000,
+          mobile: {
+            start: { x: 3, y: -0.5, z: 10.5 },
+            end: { x: 7, y: -0.7, z: -1.5 },
+          },
+          desktop: {
+            start: { x: 5, y: 0.5, z: 7 },
+            end: { x: 7.9, y: -0.7, z: -0.5 },
+          },
+        },
+      };
+    default:
+      return {
+        label: '',
+        maxStickerLength: 8,
+        rotateModel: false,
+        validEmojis: defaultValidEmojis,
+        emojiTextColor: 'black',
+        stickerFontSize: {
+          mobile: '5rem',
+          desktop: '5rem',
+        },
+        camera: {
+          duration: 4500,
+          mobile: {
+            start: { x: 0, y: 15, z: 2 },
+            end: { x: -1.35, y: 0, z: 2.5 },
+          },
+          desktop: {
+            start: { x: 0, y: 15, z: 2 },
+            end: { x: -1.35, y: 0, z: 2.5 },
+          },
+        },
+      };
+  }
+};
+
+const getRemixViewport = (): RemixViewport => (window.matchMedia('(max-width: 749px)').matches ? 'mobile' : 'desktop');
+
 const Remix = ({ actions, closeConfirm }: RemixProps) => {
   const threeModelPath = window?.s3_remix_config?.modelPath;
   const productType = window?.s3_product_type;
-  const shortType = productType === 'Badminton Racket' ? 'Racket' : productType === 'Pickleball Paddle' ? 'Paddle' : '';
-  const maxStickerLength = productType === 'Pickleball Paddle' ? 12 : 8;
+  const remixProductConfig = getRemixProductConfig(productType);
+  const remixViewport = getRemixViewport();
+  const shortType = remixProductConfig.label;
+  const maxStickerLength = remixProductConfig.maxStickerLength;
+  const validEmojis = remixProductConfig.validEmojis;
+  const emojiTextColor = remixProductConfig.emojiTextColor;
+  const stickerFontSize = remixProductConfig.stickerFontSize[remixViewport];
   const inputRef = useRef<HTMLInputElement>(null);
   const cursorPositionRef = useRef<number | null>(null);
 
@@ -139,6 +286,8 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
         scene.background = new Color(0xfafafa);
 
         // CAMERA SETTINGS 📸
+        const cameraViewport = getRemixViewport();
+        const cameraPath = remixProductConfig.camera[cameraViewport];
         const camera = new PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.lookAt(0, 0, 0);
         camera.position.set(0, 0, 10);
@@ -173,6 +322,12 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
         controls.screenSpacePanning = true;
         controls.minDistance = 1;
         controls.maxDistance = 100;
+
+        if (isCameraDebugEnabled) {
+          controls.addEventListener('change', () => {
+            logCameraCoordinates('controls', cameraViewport, camera);
+          });
+        }
 
         // IMPORT THE 3D MODEL 🫰🏻
         let model: any = null;
@@ -261,7 +416,7 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
                   model.rotation.z = angle;
                 }
 
-                if (t < 1 && productType === 'Badminton Racket') {
+                if (t < 1 && remixProductConfig.rotateModel) {
                   modelAnimationFrame = requestAnimationFrame(updateModel);
                 }
               }
@@ -271,26 +426,10 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
 
             // INITIATE CAMERA MOVEMENTS 🎥
             (() => {
-              const duration = productType === 'Pickleball Paddle' ? 3500 : 4500;
+              const duration = remixProductConfig.camera.duration;
               const startTime = Date.now();
-
-              const getCameraPositions = (productType: string | undefined) => {
-                switch (productType) {
-                  case 'Badminton Racket':
-                    return {
-                      start: new Vector3(0, 0, 10),
-                      end: new Vector3(-2, 1, 0),
-                    };
-                  case 'Pickleball Paddle':
-                  default:
-                    return {
-                      start: new Vector3(0, 15, 2),
-                      end: new Vector3(-1.35, 0, 2.5),
-                    };
-                }
-              };
-
-              const { start: startPosition, end: endPosition } = getCameraPositions(productType);
+              const startPosition = new Vector3(cameraPath.start.x, cameraPath.start.y, cameraPath.start.z);
+              const endPosition = new Vector3(cameraPath.end.x, cameraPath.end.y, cameraPath.end.z);
 
               function updateCamera() {
                 const elapsedTime = Date.now() - startTime;
@@ -304,6 +443,7 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
                 camera.position.x = startPosition.x + (endPosition.x - startPosition.x) * easedT;
                 camera.position.y = startPosition.y + (endPosition.y - startPosition.y) * easedT;
                 camera.position.z = startPosition.z + (endPosition.z - startPosition.z) * easedT;
+                logCameraCoordinates('animation', cameraViewport, camera);
 
                 // camera.position.lerpVectors(startPosition, endPosition, t);
 
@@ -550,7 +690,7 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        fontSize: '5rem',
+                        fontSize: stickerFontSize,
                         transition: 'opacity 0.5s ease',
                         opacity: isAnimating ? 0 : 0.8,
                       }}
@@ -587,7 +727,7 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
                           display: 'flex',
                           flexWrap: 'wrap',
                           justifyContent: 'center',
-                          color: 'black',
+                          color: emojiTextColor,
                         }}
                         onClick={() => {
                           document.getElementById('sticker-name-input')?.focus();
@@ -808,7 +948,7 @@ const Remix = ({ actions, closeConfirm }: RemixProps) => {
                         textAlign: 'center',
                       }}
                     >
-                      No modifications after the order is placed.
+                      For Representational purposes. No modifications after the order.
                     </p>
                   </div>
                 )}
@@ -869,22 +1009,17 @@ enum DefaultColors {
   RacketGrip = 'black',
 }
 
-const validEmojis = [
-  '😊',
-  '😘',
-  '😍',
-  '😂',
-  '😎',
-  '🌈',
-  '🔥',
-  '🌊',
-  '🍀',
-  '👽',
-  //   '💀',
-  '👑',
-  '✨',
-  '🪄',
-  '🤍',
-];
+const isCameraDebugEnabled = false;
+
+const logCameraCoordinates = (source: 'animation' | 'controls', viewport: RemixViewport, camera: PerspectiveCamera) => {
+  if (!isCameraDebugEnabled) return;
+
+  console.log(`[remix camera:${source}:${viewport}]`, {
+    viewport,
+    x: Number(camera.position.x.toFixed(3)),
+    y: Number(camera.position.y.toFixed(3)),
+    z: Number(camera.position.z.toFixed(3)),
+  });
+};
 
 export default Remix;

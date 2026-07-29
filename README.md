@@ -99,7 +99,7 @@ Eligible rackets surface a "Gripping Service" card. Customers can keep the facto
 
 **What shoppers see**
 
-Racket or paddle products with the Remix flag render a "Personalise" line item. Clicking loads a Radix modal powered by `reax/src/components/remix` (`assets/vx-remix.js`) that overlays a 3D model with editable decals.
+Racket, paddle, or bag products with the Remix flag render a "Personalise" line item. Clicking loads a Radix modal powered by `reax/src/components/remix` (`assets/vx-remix.js`) that overlays a 3D model with editable decals.
 
 **Toggle switches**
 
@@ -112,6 +112,7 @@ Racket or paddle products with the Remix flag render a "Personalise" line item. 
 - Hidden service products:
   - Handle `remix` for rackets.
   - Handle `paddle-remix` for pickleball paddles.
+  - Handle `bag-remix` for products whose Shopify product type is exactly `Badminton Kitbags`.
 - Variant-level metafields used to skin the configurator:
   - `rmx_racket_frame_color`
   - `rmx_racket_grip_color`
@@ -121,7 +122,7 @@ Racket or paddle products with the Remix flag render a "Personalise" line item. 
 
 **How it adds to cart**
 
-- `snippets/remix.liquid` writes `window.s3_remix_service_variant_id` and `window.s3_paddle_remix_service_variant_id`.
+- `sections/main-product.liquid` resolves the service product by product type, and `snippets/remix.liquid` writes its first variant id to `window.s3_remix_service_variant_id`.
 - The Preact app exposes `window.s3_remix_modal_controller.openModal()` so the Liquid label can open the modal.
 - `assets/product-form.js` looks for the rendered `#the-sticker` element and adds the correct remix service variant with encoded sticker text.
 
