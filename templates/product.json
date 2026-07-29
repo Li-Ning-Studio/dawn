@@ -272,6 +272,39 @@
         "padding_bottom": 64
       }
     },
+    "grouped_accordions_73M8Y6": {
+      "type": "grouped-accordions",
+      "blocks": {
+        "accordion_row_8qbYAJ": {
+          "type": "accordion_row",
+          "settings": {
+            "heading": "What are Product Specifications?",
+            "open_by_default": true,
+            "content": "{%render 'product-disclosures'%}\nSKU:  <span id=\"sku\">{{ product.selected_or_first_available_variant.sku }}</span>"
+          }
+        },
+        "accordion_row_n7nYQT": {
+          "type": "accordion_row",
+          "settings": {
+            "heading": "How much time it takes to deliver?",
+            "open_by_default": false,
+            "content": "Delivery dates shown at checkout are estimates, not guarantees, based on average courier performance — actual timing can shift due to courier coverage, holidays, weather, or order volume. Hundred offers two shipping tiers: Economy (surface, slower/cheaper) and Express (air, faster where available). Orders can be tracked live once dispatched via their tracking portal. Hundred isn't liable for delays caused by courier or external factors, but support will help resolve issues if a delivery misses its window."
+          }
+        }
+      },
+      "block_order": [
+        "accordion_row_8qbYAJ",
+        "accordion_row_n7nYQT"
+      ],
+      "name": "t:sections.grouped-accordions.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "heading": "Frequently asked questions",
+        "heading_size": "h1",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
     "1749537046e7aecdbc": {
       "type": "apps",
       "blocks": {
@@ -343,40 +376,7 @@
         "show_vendor": false,
         "show_rating": false,
         "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "grouped_accordions_73M8Y6": {
-      "type": "grouped-accordions",
-      "blocks": {
-        "accordion_row_8qbYAJ": {
-          "type": "accordion_row",
-          "settings": {
-            "heading": "What are Product Specifications?",
-            "open_by_default": true,
-            "content": "{%render 'product-disclosures'%}\nSKU:  <span id=\"sku\">{{ product.selected_or_first_available_variant.sku }}</span>"
-          }
-        },
-        "accordion_row_n7nYQT": {
-          "type": "accordion_row",
-          "settings": {
-            "heading": "How much time it takes to deliver?",
-            "open_by_default": false,
-            "content": "Delivery dates shown at checkout are estimates, not guarantees, based on average courier performance — actual timing can shift due to courier coverage, holidays, weather, or order volume. Hundred offers two shipping tiers: Economy (surface, slower/cheaper) and Express (air, faster where available). Orders can be tracked live once dispatched via their tracking portal. Hundred isn't liable for delays caused by courier or external factors, but support will help resolve issues if a delivery misses its window."
-          }
-        }
-      },
-      "block_order": [
-        "accordion_row_8qbYAJ",
-        "accordion_row_n7nYQT"
-      ],
-      "name": "t:sections.grouped-accordions.presets.name",
-      "settings": {
-        "color_scheme": "",
-        "heading": "Frequently asked questions",
-        "heading_size": "h1",
-        "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 52
       }
     }
   },
@@ -384,10 +384,10 @@
     "main",
     "product_specifications_ygFx6W",
     "product_s_plus_9EmbcA",
+    "grouped_accordions_73M8Y6",
     "1749537046e7aecdbc",
     "pairs-well-with",
     "related-products",
-    "recently-viewed",
-    "grouped_accordions_73M8Y6"
+    "recently-viewed"
   ]
 }
