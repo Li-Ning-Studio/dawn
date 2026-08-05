@@ -19,6 +19,7 @@
     },
     "hero_component_mJaWfn": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/2a.png",
@@ -29,6 +30,17 @@
         "button_text": "",
         "link_to": "/",
         "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "media_e7UyVn": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/2a.png",
+        "mobile_image": "shopify://shop_images/1a.png",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -185,6 +197,7 @@
   "order": [
     "main",
     "hero_component_mJaWfn",
+    "media_e7UyVn",
     "custom_liquid_H6AJRc",
     "media_7RBRPY",
     "rich_text_D7AiMp",
