@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { fetchCollectionQuery } from '../../lib/gql';
 import { consumePendingModalOpen } from '../../lib/service-modal-pending';
 import client from '../../lib/shopify-client';
-import { getFreeablePrice } from '../../lib/utils';
+import { formatCurrency, getFreeablePrice } from '../../lib/utils';
 import { ProductNodes, SingleProductNode, TConfig } from '../../types';
 import MultiStepForm, { MultiStepFormStep, MultiStepFormStepControls } from '../shared/MultiStepForm';
 
@@ -536,10 +536,23 @@ const Stringing2 = ({
                                 margin: 0,
                                 fontSize: bodyFontSize,
                                 color: 'var(--color-foreground)',
-                                fontWeight: 500,
+                                fontWeight: 600,
                               }}
                             >
-                              {stringProduct.title}
+                              <span>{stringProduct.title}</span>
+                              <span
+                                style={{
+                                  marginLeft: '0.6rem',
+                                  color: 'rgba(var(--color-foreground), 0.55)',
+                                  fontWeight: 400,
+                                  whiteSpace: 'nowrap',
+                                }}
+                              >
+                                {`+${formatCurrency(
+                                  stringProduct.priceRange.minVariantPrice.amount,
+                                  stringProduct.priceRange.minVariantPrice.currencyCode,
+                                )}`}
+                              </span>
                             </p>
                             <span
                               style={{
