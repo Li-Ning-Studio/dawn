@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { fetchCollectionQuery } from '../../lib/gql';
 import { consumePendingModalOpen } from '../../lib/service-modal-pending';
 import client from '../../lib/shopify-client';
+import { formatCurrency } from '../../lib/utils';
 import { ProductNodes, SingleProductNode, TGripConfig } from '../../types';
 import MultiStepForm, { MultiStepFormStep, MultiStepFormStepControls } from '../shared/MultiStepForm';
 
@@ -414,11 +415,24 @@ const Gripping2 = ({
                             style={{
                               margin: 0,
                               fontSize: '1.6rem',
-                              color: '#1a1a1a',
-                              fontWeight: 500,
+                              color: 'var(--color-foreground)',
+                              fontWeight: 600,
                             }}
                           >
-                            {product.title}
+                            <span>{product.title}</span>
+                            <span
+                              style={{
+                                marginLeft: '0.6rem',
+                                color: 'rgba(var(--color-foreground), 0.55)',
+                                fontWeight: 400,
+                                whiteSpace: 'nowrap',
+                              }}
+                            >
+                              {`+${formatCurrency(
+                                product.priceRange.minVariantPrice.amount,
+                                product.priceRange.minVariantPrice.currencyCode,
+                              )}`}
+                            </span>
                           </p>
                           {product.metafield?.value ? (
                             <p
