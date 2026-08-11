@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { fetchCollectionQuery } from '../../lib/gql';
 import { consumePendingModalOpen } from '../../lib/service-modal-pending';
 import client from '../../lib/shopify-client';
-import { formatCurrency } from '../../lib/utils';
 import { ProductNodes, SingleProductNode, TGripConfig } from '../../types';
 import MultiStepForm, { MultiStepFormStep, MultiStepFormStepControls } from '../shared/MultiStepForm';
 
@@ -59,6 +58,29 @@ const HIDDEN_RADIO_INPUT_STYLE = {
 } as const;
 const AUTO_ADVANCE_DELAY_MS = 120;
 const MAX_VISIBLE_GRIP_OPTIONS = 7;
+
+// Keep this formatter local to the gripping entrypoint. Sharing it with another entrypoint moves it into a
+// stable-name Rollup chunk, which can break cached storefronts when theme assets are deployed at different times.
+const formatCurrency = (amount: string, currencyCode: string) => {
+  const numericAmount = Number.parseFloat(amount);
+
+  if (Number.isNaN(numericAmount)) {
+    return `${amount} ${currencyCode}`.trim();
+  }
+
+  try {
+    return new Intl.NumberFormat(
+      typeof document !== 'undefined' ? document.documentElement.lang || undefined : undefined,
+      {
+        style: 'currency',
+        currency: currencyCode,
+        maximumFractionDigits: Number.isInteger(numericAmount) ? 0 : 2,
+      },
+    ).format(numericAmount);
+  } catch (error) {
+    return `${amount} ${currencyCode}`.trim();
+  }
+};
 
 const resolveColorValue = (candidate: string | null | undefined): string | null => {
   if (!candidate) return null;
