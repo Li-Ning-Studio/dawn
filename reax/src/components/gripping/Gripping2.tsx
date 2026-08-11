@@ -59,6 +59,29 @@ const HIDDEN_RADIO_INPUT_STYLE = {
 const AUTO_ADVANCE_DELAY_MS = 120;
 const MAX_VISIBLE_GRIP_OPTIONS = 7;
 
+// Keep this formatter local to the gripping entrypoint. Sharing it with another entrypoint moves it into a
+// stable-name Rollup chunk, which can break cached storefronts when theme assets are deployed at different times.
+const formatCurrency = (amount: string, currencyCode: string) => {
+  const numericAmount = Number.parseFloat(amount);
+
+  if (Number.isNaN(numericAmount)) {
+    return `${amount} ${currencyCode}`.trim();
+  }
+
+  try {
+    return new Intl.NumberFormat(
+      typeof document !== 'undefined' ? document.documentElement.lang || undefined : undefined,
+      {
+        style: 'currency',
+        currency: currencyCode,
+        maximumFractionDigits: Number.isInteger(numericAmount) ? 0 : 2,
+      },
+    ).format(numericAmount);
+  } catch (error) {
+    return `${amount} ${currencyCode}`.trim();
+  }
+};
+
 const resolveColorValue = (candidate: string | null | undefined): string | null => {
   if (!candidate) return null;
   const value = candidate.trim();
@@ -414,11 +437,24 @@ const Gripping2 = ({
                             style={{
                               margin: 0,
                               fontSize: '1.6rem',
-                              color: '#1a1a1a',
-                              fontWeight: 500,
+                              color: 'var(--color-foreground)',
+                              fontWeight: 600,
                             }}
                           >
-                            {product.title}
+                            <span>{product.title}</span>
+                            <span
+                              style={{
+                                marginLeft: '0.6rem',
+                                color: 'rgba(var(--color-foreground), 0.55)',
+                                fontWeight: 400,
+                                whiteSpace: 'nowrap',
+                              }}
+                            >
+                              {`+${formatCurrency(
+                                product.priceRange.minVariantPrice.amount,
+                                product.priceRange.minVariantPrice.currencyCode,
+                              )}`}
+                            </span>
                           </p>
                           {product.metafield?.value ? (
                             <p

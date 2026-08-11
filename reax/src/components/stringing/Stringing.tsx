@@ -2,9 +2,25 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { useEffect, useState } from 'preact/hooks';
 import { fetchCollectionQuery } from '../../lib/gql';
 import client from '../../lib/shopify-client';
-import { getFreeablePrice } from '../../lib/utils';
 import { ProductNodes, TConfig } from '../../types';
 import StringGuide from './StringGuide';
+
+const getFreeablePrice = (alreadyFormattedPrice: string | null) => {
+  try {
+    if (!alreadyFormattedPrice) return alreadyFormattedPrice;
+
+    const numericMatch = alreadyFormattedPrice.replace(/[^0-9.-]/g, '');
+    const numericValue = Number.parseFloat(numericMatch);
+
+    if (!Number.isNaN(numericValue) && numericValue === 0) {
+      return 'FREE';
+    }
+
+    return alreadyFormattedPrice;
+  } catch (error) {
+    return alreadyFormattedPrice;
+  }
+};
 
 function Stringing({
   stringingCollectionId,

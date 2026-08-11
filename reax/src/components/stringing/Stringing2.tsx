@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { fetchCollectionQuery } from '../../lib/gql';
 import { consumePendingModalOpen } from '../../lib/service-modal-pending';
 import client from '../../lib/shopify-client';
-import { getFreeablePrice } from '../../lib/utils';
 import { ProductNodes, SingleProductNode, TConfig } from '../../types';
 import MultiStepForm, { MultiStepFormStep, MultiStepFormStepControls } from '../shared/MultiStepForm';
 
@@ -81,6 +80,46 @@ const HIDDEN_RADIO_INPUT_STYLE = {
 } as const;
 const AUTO_ADVANCE_DELAY_MS = 320;
 const MAX_VISIBLE_STRING_OPTIONS = 6;
+
+const getFreeablePrice = (alreadyFormattedPrice: string | null) => {
+  try {
+    if (!alreadyFormattedPrice) return alreadyFormattedPrice;
+
+    const numericMatch = alreadyFormattedPrice.replace(/[^0-9.-]/g, '');
+    const numericValue = Number.parseFloat(numericMatch);
+
+    if (!Number.isNaN(numericValue) && numericValue === 0) {
+      return 'FREE';
+    }
+
+    return alreadyFormattedPrice;
+  } catch (error) {
+    return alreadyFormattedPrice;
+  }
+};
+
+// Keep this formatter local to the stringing entrypoint. Sharing it with another entrypoint moves it into a
+// stable-name Rollup chunk, which can break cached storefronts when theme assets are deployed at different times.
+const formatCurrency = (amount: string, currencyCode: string) => {
+  const numericAmount = Number.parseFloat(amount);
+
+  if (Number.isNaN(numericAmount)) {
+    return `${amount} ${currencyCode}`.trim();
+  }
+
+  try {
+    return new Intl.NumberFormat(
+      typeof document !== 'undefined' ? document.documentElement.lang || undefined : undefined,
+      {
+        style: 'currency',
+        currency: currencyCode,
+        maximumFractionDigits: Number.isInteger(numericAmount) ? 0 : 2,
+      },
+    ).format(numericAmount);
+  } catch (error) {
+    return `${amount} ${currencyCode}`.trim();
+  }
+};
 
 const resolveColorValue = (candidate: string | null | undefined): string | null => {
   if (!candidate) return null;
@@ -536,10 +575,23 @@ const Stringing2 = ({
                                 margin: 0,
                                 fontSize: bodyFontSize,
                                 color: 'var(--color-foreground)',
-                                fontWeight: 500,
+                                fontWeight: 600,
                               }}
                             >
-                              {stringProduct.title}
+                              <span>{stringProduct.title}</span>
+                              <span
+                                style={{
+                                  marginLeft: '0.6rem',
+                                  color: 'rgba(var(--color-foreground), 0.55)',
+                                  fontWeight: 400,
+                                  whiteSpace: 'nowrap',
+                                }}
+                              >
+                                {`+${formatCurrency(
+                                  stringProduct.priceRange.minVariantPrice.amount,
+                                  stringProduct.priceRange.minVariantPrice.currencyCode,
+                                )}`}
+                              </span>
                             </p>
                             <span
                               style={{
