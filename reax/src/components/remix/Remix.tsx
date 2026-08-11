@@ -56,7 +56,7 @@ const defaultValidEmojis: readonly string[] = [
   '🤍',
 ];
 
-const bagsEmoji: readonly string[] = ['😊', '😍', '😎', '🌈', '🔥', '👽', '🤍'];
+const bagsEmoji: readonly string[] = ['😍', '😎', '🌈', '🔥', '👽', '🤍'];
 
 type CameraPosition = { x: number; y: number; z: number };
 
