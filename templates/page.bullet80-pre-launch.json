@@ -36,13 +36,72 @@
     },
     "media_e7UyVn": {
       "type": "media",
+      "disabled": true,
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/2a.png",
         "mobile_image": "shopify://shop_images/1a.png",
         "color_scheme": "scheme-4",
         "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "hero_video_component_DEwWhh": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Yt_e39b79ee-3511-457c-ba18-962211bc35f0.mp4",
+        "mobile_video": "shopify://files/videos/Sq_2184813b-f51b-40e0-a0c3-92a14289fa25.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "custom_liquid_hU7aVF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&display=swap');\n\n.chase-copy{\n  font-family:\"Figtree\",sans-serif;\n  text-align:center;\n  background:#000;\n  padding:10px 20px 24px;\n}\n\n.chase-title{\n  margin:0;\n  font-size:30px;\n  font-weight:800;\n  line-height:1.15;\n  letter-spacing:-1px;\n  display:inline-block;\n  background:linear-gradient(#3da8bf);\n  background-clip:text;\n  -webkit-background-clip:text;\n  color:transparent;\n  -webkit-text-fill-color:transparent;\n}\n\n.chase-offer{\n  margin:28px 0 0;\n  color:#ced4da;\n  font-size:22px;\n  font-weight:600;\n  line-height:1.4;\n}\n\n.chase-amount{\n  color:#FFFFFF;\n  font-weight:700;\n}\n\n@media(max-width:749px){\n  .chase-title{font-size:24px}\n  .chase-offer{font-size:16px;margin-top:20px}\n}\n</style>\n\n<div class=\"chase-copy\">\n  <div class=\"chase-title\">LOCKED AND LOADED!</div>\n\n  <p class=\"chase-offer\"><strong>\n Register to receive early-access discounts.</strong>\n  </p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "17660440281b5ca5ed": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_Ay6kEQ": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1097233",
+            "text_color": "#ffffff",
+            "button_background_color": "#2d889d",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 11,
+            "padding_left": 11
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_Ay6kEQ"
+      ],
+      "custom_css": [
+        "div {background: black;}",
+        "._textHeading_2aowh_35P {color: yellow;}"
+      ],
+      "settings": {
+        "include_margins": false
       }
     },
     "custom_liquid_H6AJRc": {
@@ -115,8 +174,25 @@
         "padding_bottom": 0
       }
     },
+    "hero_video_component_aNQKkW": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Yt_6921baa8-bec2-41bf-b42b-629d85b966b6.mp4",
+        "mobile_video": "shopify://files/videos/Sq_f6e02316-6a5b-4305-9549-2e38a31cc105.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-4",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
     "media_zRpHqC": {
       "type": "media",
+      "disabled": true,
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/ChatGPT_Image_Aug_11_2026_11_20_14_AM.png",
@@ -151,52 +227,26 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');\n\n.bullet-engineering{\n  --accent:#80efff;\n  --accent-soft:rgba(128,239,255,.14);\n  --text:#f4f8f9;\n  --muted:#89969c;\n  position:relative;\n  width:100%;\n  overflow:hidden;\n  isolation:isolate;\n  padding:96px 24px 82px;\n  color:var(--text);\n  font-family:\"Oxanium\",sans-serif;\n  background:#000;\n}\n\n.bullet-engineering::before{\n  display:none;\n}\n\n.bullet-engineering::after{\n  content:\"\";\n  position:absolute;\n  top:0;\n  left:50%;\n  width:min(1080px,86vw);\n  height:1px;\n  transform:translateX(-50%);\n  background:linear-gradient(90deg,transparent,rgba(128,239,255,.46),transparent);\n}\n\n.be-header{\n  width:min(760px,100%);\n  margin:0 auto 68px;\n  text-align:center;\n}\n\n.be-eyebrow{\n  margin:0 0 18px;\n  color:var(--accent);\n  font-size:11px;\n  font-weight:600;\n  line-height:1.3;\n  letter-spacing:.28em;\n  text-transform:uppercase;\n}\n\n.be-title{\n  margin:0;\n  color:#fff;\n  font-size:clamp(40px,5.8vw,78px);\n  font-weight:500;\n  line-height:.94;\n  letter-spacing:-.055em;\n  text-transform:uppercase;\n}\n\n.be-title strong{\n  color:var(--accent);\n  font-weight:600;\n  text-shadow:0 0 32px rgba(128,239,255,.24);\n}\n\n.be-intro{\n  max-width:560px;\n  margin:24px auto 0;\n  color:#9eaaaf;\n  font-size:clamp(13px,1.25vw,16px);\n  font-weight:400;\n  line-height:1.7;\n  letter-spacing:.015em;\n}\n\n.be-layout{\n  position:relative;\n  width:min(1240px,100%);\n  min-height:650px;\n  margin:0 auto;\n  display:grid;\n  grid-template-columns:minmax(240px,1fr) minmax(360px,440px) minmax(240px,1fr);\n  gap:34px 58px;\n  align-items:center;\n}\n\n.be-specs{\n  position:relative;\n  z-index:3;\n  display:flex;\n  flex-direction:column;\n  gap:58px;\n}\n\n.be-card{\n  position:relative;\n  min-height:142px;\n  padding:24px 24px 22px;\n  overflow:hidden;\n  border:1px solid rgba(255,255,255,.09);\n  border-radius:18px;\n  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));\n  box-shadow:0 22px 70px rgba(0,0,0,.2);\n  backdrop-filter:blur(10px);\n  -webkit-backdrop-filter:blur(10px);\n  transition:transform .35s ease,border-color .35s ease,background .35s ease;\n}\n\n.be-card::before{\n  content:\"\";\n  position:absolute;\n  top:0;\n  width:58px;\n  height:1px;\n  background:var(--accent);\n  box-shadow:0 0 14px rgba(128,239,255,.7);\n}\n\n.be-specs--left .be-card::before{right:22px}\n.be-specs--right .be-card::before{left:22px}\n\n.be-card:hover{\n  transform:translateY(-4px);\n  border-color:rgba(128,239,255,.28);\n  background:linear-gradient(145deg,rgba(128,239,255,.075),rgba(255,255,255,.02));\n}\n\n.be-specs--left .be-card{text-align:right}\n.be-specs--right .be-card{text-align:left}\n\n.be-value{\n  margin:0;\n  color:#fff;\n  font-size:clamp(21px,2vw,30px);\n  font-weight:600;\n  line-height:1;\n  letter-spacing:-.025em;\n  text-transform:uppercase;\n}\n\n.be-label{\n  margin:10px 0 0;\n  color:var(--accent);\n  font-size:9px;\n  font-weight:600;\n  line-height:1.4;\n  letter-spacing:.2em;\n  text-transform:uppercase;\n}\n\n.be-copy{\n  margin:13px 0 0;\n  color:var(--muted);\n  font-size:11px;\n  font-weight:400;\n  line-height:1.55;\n}\n\n.be-product{\n  position:relative;\n  z-index:2;\n  min-height:650px;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n}\n\n.be-product::before{\n  display:none;\n}\n\n.be-racket{\n  position:relative;\n  z-index:2;\n  display:block;\n  width:440px;\n  max-width:none;\n  height:auto;\n  object-fit:contain;\n  filter:brightness(1.13) contrast(1.1) saturate(.68) drop-shadow(0 34px 40px rgba(0,0,0,.45));\n  animation:none;\n  pointer-events:none;\n  user-select:none;\n  -webkit-user-drag:none;\n}\n.be-footer{\n  width:min(760px,100%);\n  margin:70px auto 0;\n  text-align:center;\n}\n\n.be-footer-line{\n  width:70px;\n  height:1px;\n  margin:0 auto 22px;\n  background:var(--accent);\n  box-shadow:0 0 14px rgba(128,239,255,.6);\n}\n\n.be-footer-title{\n  margin:0;\n  color:#fff;\n  font-size:clamp(18px,2vw,26px);\n  font-weight:500;\n  line-height:1.3;\n  letter-spacing:.18em;\n  text-transform:uppercase;\n}\n\n.be-footer-copy{\n  margin:12px 0 0;\n  color:#7f8b90;\n  font-size:10px;\n  font-weight:500;\n  line-height:1.5;\n  letter-spacing:.19em;\n  text-transform:uppercase;\n}\n\n@keyframes beFloat{\n  0%,100%{transform:translateY(0)}\n  50%{transform:translateY(-9px)}\n}\n\n@media(max-width:980px){\n  .bullet-engineering{padding:78px 18px 68px}\n  .be-header{margin-bottom:50px}\n  .be-layout{\n    min-height:630px;\n    grid-template-columns:minmax(190px,1fr) minmax(280px,340px) minmax(190px,1fr);\n    gap:24px 20px;\n  }\n  .be-product{min-height:630px}\n  .be-racket{width:350px}\n  .be-card{min-height:136px;padding:21px 18px 19px}\n  .be-copy{font-size:10px}\n}\n\n@media(max-width:720px){\n  .bullet-engineering{padding:64px 16px 56px}\n  .be-header{margin-bottom:18px}\n  .be-eyebrow{margin-bottom:14px;font-size:9px;letter-spacing:.24em}\n  .be-title{font-size:clamp(38px,13vw,58px);line-height:.98}\n  .be-intro{margin-top:18px;font-size:12px;line-height:1.65}\n  .be-layout{\n    min-height:0;\n    display:flex;\n    flex-direction:column;\n    gap:0;\n  }\n  .be-product{\n    order:1;\n    width:100%;\n    min-height:480px;\n  }\n  .be-racket{width:320px}\n  .be-specs{\n    width:100%;\n    display:grid;\n    grid-template-columns:repeat(2,minmax(0,1fr));\n    gap:12px;\n  }\n  .be-specs--left{order:2}\n  .be-specs--right{order:3;margin-top:12px}\n  .be-card,\n  .be-specs--left .be-card,\n  .be-specs--right .be-card{\n    min-height:138px;\n    padding:20px 17px 18px;\n    text-align:left;\n    border-radius:15px;\n  }\n  .be-specs--left .be-card::before,\n  .be-specs--right .be-card::before{right:auto;left:17px}\n  .be-value{font-size:21px}\n  .be-label{font-size:7.5px;letter-spacing:.14em}\n  .be-copy{margin-top:11px;font-size:9.5px;line-height:1.5}\n  .be-footer{margin-top:48px}\n  .be-footer-title{font-size:17px;letter-spacing:.13em}\n  .be-footer-copy{font-size:8px;letter-spacing:.13em}\n}\n\n@media(max-width:420px){\n  .bullet-engineering{padding-left:12px;padding-right:12px}\n  .be-product{min-height:430px}\n  .be-racket{width:285px}\n  .be-card,\n  .be-specs--left .be-card,\n  .be-specs--right .be-card{min-height:142px;padding:18px 14px 16px}\n  .be-value{font-size:18px}\n  .be-copy{font-size:8.8px}\n}\n\n@media(prefers-reduced-motion:reduce){\n  .be-racket{animation:none}\n  .be-card{transition:none}\n}\n</style>\n\n<section class=\"bullet-engineering\" aria-labelledby=\"bullet-engineering-title\">\n  <header class=\"be-header\">\n    <p class=\"be-eyebrow\">Nitrix 80 Bullet Engineering</p>\n    <h2 class=\"be-title\" id=\"bullet-engineering-title\">\n      <strong>5.9 mm</strong> shaft\n    </h2>\n    <p class=\"be-intro\">\n      A thinner, faster shaft engineered to whip through the swing and hold its line at contact.\n    </p>\n  </header>\n\n  <div class=\"be-layout\">\n    <div class=\"be-specs be-specs--left\">\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">T-Fuse</h3>\n        <p class=\"be-label\">Torsion control</p>\n        <p class=\"be-copy\">Controls twisting where the frame meets the shaft, keeping the racket stable through full-power swings.</p>\n      </article>\n\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">CNTRL Foam</h3>\n        <p class=\"be-label\">Impact absorption</p>\n        <p class=\"be-copy\">Foam inside the frame absorbs shock at the point of contact before it reaches the hand.</p>\n      </article>\n\n    </div>\n\n    <div class=\"be-product\">\n      <img\n        class=\"be-racket\"\n        src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/ca4ce39e-c171-45d0-918c-3592edd19853.png?v=1786429859\"\n        alt=\"Nitrix 80 Bullet badminton racket\"\n        loading=\"eager\"\n        fetchpriority=\"high\"\n      >\n    </div>\n\n    <div class=\"be-specs be-specs--right\">\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">Curve²</h3>\n        <p class=\"be-label\">Expanded sweet spot</p>\n        <p class=\"be-copy\">Reshaped frame geometry widens the sweet spot for a larger, cleaner contact zone.</p>\n      </article>\n\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">M46X</h3>\n        <p class=\"be-label\">Responsive carbon</p>\n        <p class=\"be-copy\">Highly refined carbon balances density and responsiveness for immediate feedback on every hit.</p>\n      </article>\n    </div>\n  </div>\n\n  <footer class=\"be-footer\">\n    <div class=\"be-footer-line\" aria-hidden=\"true\"></div>\n    <p class=\"be-footer-title\">Speaks fluent power</p>\n    <p class=\"be-footer-copy\">Force. Power. Attack.</p>\n  </footer>\n</section>",
+        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');\n\n.bullet-engineering{\n  --accent:#80efff;\n  --accent-soft:rgba(128,239,255,.14);\n  --text:#f4f8f9;\n  --muted:#89969c;\n  position:relative;\n  width:100%;\n  overflow:hidden;\n  isolation:isolate;\n  padding:96px 24px 82px;\n  color:var(--text);\n  font-family:\"Oxanium\",sans-serif;\n  background:#000;\n}\n\n.bullet-engineering::before{\n  display:none;\n}\n\n.bullet-engineering::after{\n  content:\"\";\n  position:absolute;\n  top:0;\n  left:50%;\n  width:min(1080px,86vw);\n  height:1px;\n  transform:translateX(-50%);\n  background:linear-gradient(90deg,transparent,rgba(128,239,255,.46),transparent);\n}\n\n.be-header{\n  width:min(760px,100%);\n  margin:0 auto 68px;\n  text-align:center;\n}\n\n.be-eyebrow{\n  margin:0 0 18px;\n  color:var(--accent);\n  font-size:11px;\n  font-weight:600;\n  line-height:1.3;\n  letter-spacing:.28em;\n  text-transform:uppercase;\n}\n\n.be-title{\n  margin:0;\n  color:#fff;\n  font-size:clamp(40px,5.8vw,78px);\n  font-weight:500;\n  line-height:.94;\n  letter-spacing:-.055em;\n  text-transform:uppercase;\n}\n\n.be-title strong{\n  color:var(--accent);\n  font-weight:600;\n  text-shadow:0 0 32px rgba(128,239,255,.24);\n}\n\n.be-intro{\n  max-width:560px;\n  margin:24px auto 0;\n  color:#9eaaaf;\n  font-size:clamp(13px,1.25vw,16px);\n  font-weight:400;\n  line-height:1.7;\n  letter-spacing:.015em;\n}\n\n.be-layout{\n  position:relative;\n  width:min(1240px,100%);\n  min-height:650px;\n  margin:0 auto;\n  display:grid;\n  grid-template-columns:minmax(240px,1fr) minmax(360px,440px) minmax(240px,1fr);\n  gap:34px 58px;\n  align-items:center;\n}\n\n.be-specs{\n  position:relative;\n  z-index:3;\n  display:flex;\n  flex-direction:column;\n  gap:58px;\n}\n\n.be-card{\n  position:relative;\n  min-height:142px;\n  padding:24px 24px 22px;\n  overflow:hidden;\n  border:1px solid rgba(255,255,255,.09);\n  border-radius:18px;\n  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));\n  box-shadow:0 22px 70px rgba(0,0,0,.2);\n  backdrop-filter:blur(10px);\n  -webkit-backdrop-filter:blur(10px);\n  transition:transform .35s ease,border-color .35s ease,background .35s ease;\n}\n\n.be-card::before{\n  content:\"\";\n  position:absolute;\n  top:0;\n  width:58px;\n  height:1px;\n  background:var(--accent);\n  box-shadow:0 0 14px rgba(128,239,255,.7);\n}\n\n.be-specs--left .be-card::before{right:22px}\n.be-specs--right .be-card::before{left:22px}\n\n.be-card:hover{\n  transform:translateY(-4px);\n  border-color:rgba(128,239,255,.28);\n  background:linear-gradient(145deg,rgba(128,239,255,.075),rgba(255,255,255,.02));\n}\n\n.be-specs--left .be-card{text-align:right}\n.be-specs--right .be-card{text-align:left}\n\n.be-value{\n  margin:0;\n  color:#fff;\n  font-size:clamp(21px,2vw,30px);\n  font-weight:600;\n  line-height:1;\n  letter-spacing:-.025em;\n  text-transform:uppercase;\n}\n\n.be-label{\n  margin:10px 0 0;\n  color:var(--accent);\n  font-size:9px;\n  font-weight:600;\n  line-height:1.4;\n  letter-spacing:.2em;\n  text-transform:uppercase;\n}\n\n.be-copy{\n  margin:13px 0 0;\n  color:var(--muted);\n  font-size:11px;\n  font-weight:400;\n  line-height:1.55;\n}\n\n.be-product{\n  position:relative;\n  z-index:2;\n  min-height:650px;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n}\n\n.be-product::before{\n  display:none;\n}\n\n.be-racket{\n  position:relative;\n  z-index:2;\n  display:block;\n  width:440px;\n  max-width:none;\n  height:auto;\n  object-fit:contain;\n  filter:brightness(1.13) contrast(1.1) saturate(.68) drop-shadow(0 34px 40px rgba(0,0,0,.45));\n  animation:none;\n  pointer-events:none;\n  user-select:none;\n  -webkit-user-drag:none;\n}\n.be-footer{\n  width:min(760px,100%);\n  margin:70px auto 0;\n  text-align:center;\n}\n\n.be-footer-line{\n  width:70px;\n  height:1px;\n  margin:0 auto 22px;\n  background:var(--accent);\n  box-shadow:0 0 14px rgba(128,239,255,.6);\n}\n\n.be-footer-title{\n  margin:0;\n  color:#fff;\n  font-size:clamp(18px,2vw,26px);\n  font-weight:500;\n  line-height:1.3;\n  letter-spacing:.18em;\n  text-transform:uppercase;\n}\n\n.be-footer-copy{\n  margin:12px 0 0;\n  color:#7f8b90;\n  font-size:10px;\n  font-weight:500;\n  line-height:1.5;\n  letter-spacing:.19em;\n  text-transform:uppercase;\n}\n\n@keyframes beFloat{\n  0%,100%{transform:translateY(0)}\n  50%{transform:translateY(-9px)}\n}\n\n@media(max-width:980px){\n  .bullet-engineering{padding:78px 18px 68px}\n  .be-header{margin-bottom:50px}\n  .be-layout{\n    min-height:630px;\n    grid-template-columns:minmax(190px,1fr) minmax(280px,340px) minmax(190px,1fr);\n    gap:24px 20px;\n  }\n  .be-product{min-height:630px}\n  .be-racket{width:350px}\n  .be-card{min-height:136px;padding:21px 18px 19px}\n  .be-copy{font-size:10px}\n}\n\n@media(max-width:720px){\n  .bullet-engineering{padding:64px 16px 56px}\n  .be-header{margin-bottom:18px}\n  .be-eyebrow{margin-bottom:14px;font-size:9px;letter-spacing:.24em}\n  .be-title{font-size:clamp(38px,13vw,58px);line-height:.98}\n  .be-intro{margin-top:18px;font-size:12px;line-height:1.65}\n  .be-layout{\n    min-height:0;\n    display:flex;\n    flex-direction:column;\n    gap:0;\n  }\n  .be-product{\n    order:1;\n    width:100%;\n    min-height:480px;\n  }\n  .be-racket{width:320px}\n  .be-specs{\n    width:100%;\n    display:grid;\n    grid-template-columns:repeat(2,minmax(0,1fr));\n    gap:12px;\n  }\n  .be-specs--left{order:2}\n  .be-specs--right{order:3;margin-top:12px}\n  .be-card,\n  .be-specs--left .be-card,\n  .be-specs--right .be-card{\n    min-height:138px;\n    padding:20px 17px 18px;\n    text-align:left;\n    border-radius:15px;\n  }\n  .be-specs--left .be-card::before,\n  .be-specs--right .be-card::before{right:auto;left:17px}\n  .be-value{font-size:21px}\n  .be-label{font-size:7.5px;letter-spacing:.14em}\n  .be-copy{margin-top:11px;font-size:9.5px;line-height:1.5}\n  .be-footer{margin-top:48px}\n  .be-footer-title{font-size:17px;letter-spacing:.13em}\n  .be-footer-copy{font-size:8px;letter-spacing:.13em}\n}\n\n@media(max-width:420px){\n  .bullet-engineering{padding-left:12px;padding-right:12px}\n  .be-product{min-height:430px}\n  .be-racket{width:285px}\n  .be-card,\n  .be-specs--left .be-card,\n  .be-specs--right .be-card{min-height:142px;padding:18px 14px 16px}\n  .be-value{font-size:18px}\n  .be-copy{font-size:8.8px}\n}\n\n@media(prefers-reduced-motion:reduce){\n  .be-racket{animation:none}\n  .be-card{transition:none}\n}\n</style>\n\n<section class=\"bullet-engineering\" aria-labelledby=\"bullet-engineering-title\">\n  <header class=\"be-header\">\n    <p class=\"be-eyebrow\">Nitrix 80 Bullet Engineering</p>\n    <h2 class=\"be-title\" id=\"bullet-engineering-title\">\n      <strong>5.9 mm</strong> shaft\n    </h2>\n    <p class=\"be-intro\">\n      A thinner, faster shaft engineered to whip through the swing and hold its line at contact.\n    </p>\n  </header>\n\n  <div class=\"be-layout\">\n    <div class=\"be-specs be-specs--left\">\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">T-Fuse</h3>\n        <p class=\"be-label\">Torsion control</p>\n        <p class=\"be-copy\">Controls twisting where the frame meets the shaft, keeping the racket stable through full-power swings.</p>\n      </article>\n\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">CNTRL Foam</h3>\n        <p class=\"be-label\">Impact absorption</p>\n        <p class=\"be-copy\">Foam inside the frame absorbs shock at the point of contact before it reaches the hand.</p>\n      </article>\n\n    </div>\n\n    <div class=\"be-product\">\n      <video\n        class=\"be-racket\"\n        src=\"https://cdn.shopify.com/videos/c/vp/d5ebe429829144c78fd8be7d3df249ba/d5ebe429829144c78fd8be7d3df249ba.HD-1080p-7.2Mbps-91310021.mp4\" autoplay loop\n.\n        alt=\"Nitrix 80 Bullet badminton racket\"\n        loading=\"eager\"\n        fetchpriority=\"high\"\nstyle=\"border-radius:20px;\"\n      >\n    </div>\n\n    <div class=\"be-specs be-specs--right\">\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">Curve²</h3>\n        <p class=\"be-label\">Expanded sweet spot</p>\n        <p class=\"be-copy\">Reshaped frame geometry widens the sweet spot for a larger, cleaner contact zone.</p>\n      </article>\n\n      <article class=\"be-card\">\n        <h3 class=\"be-value\">M46X</h3>\n        <p class=\"be-label\">Responsive carbon</p>\n        <p class=\"be-copy\">Highly refined carbon balances density and responsiveness for immediate feedback on every hit.</p>\n      </article>\n    </div>\n  </div>\n\n  <footer class=\"be-footer\">\n    <div class=\"be-footer-line\" aria-hidden=\"true\"></div>\n    <p class=\"be-footer-title\">Speaks fluent power</p>\n    <p class=\"be-footer-copy\">Force. Power. Attack.</p>\n  </footer>\n</section>",
         "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "custom_liquid_hU7aVF": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "hero_video_component_HPR9xz": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
       "settings": {
-        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&display=swap');\n\n.chase-copy{\n  font-family:\"Figtree\",sans-serif;\n  text-align:center;\n  background:#000;\n  padding:10px 20px 24px;\n}\n\n.chase-title{\n  margin:0;\n  font-size:30px;\n  font-weight:800;\n  line-height:1.15;\n  letter-spacing:-1px;\n  display:inline-block;\n  background:linear-gradient(#3da8bf);\n  background-clip:text;\n  -webkit-background-clip:text;\n  color:transparent;\n  -webkit-text-fill-color:transparent;\n}\n\n.chase-offer{\n  margin:28px 0 0;\n  color:#ced4da;\n  font-size:22px;\n  font-weight:600;\n  line-height:1.4;\n}\n\n.chase-amount{\n  color:#FFFFFF;\n  font-weight:700;\n}\n\n@media(max-width:749px){\n  .chase-title{font-size:24px}\n  .chase-offer{font-size:16px;margin-top:20px}\n}\n</style>\n\n<div class=\"chase-copy\">\n  <div class=\"chase-title\">YOUR LICENSE TO KILL</div>\n\n  <p class=\"chase-offer\"><strong>\n Register to receive early-access discounts.</strong>\n  </p>\n</div>",
+        "video": "shopify://files/videos/Yt_9b45e777-c439-423b-9c92-44940dd1c80a.mp4",
+        "mobile_video": "shopify://files/videos/Sq_743cb38d-b579-468f-8488-fb0ef2d179d7.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
         "color_scheme": "scheme-4",
-        "padding_top": 0,
+        "padding_top": 32,
         "padding_bottom": 0
-      }
-    },
-    "17660440281b5ca5ed": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_Ay6kEQ": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "1097233",
-            "text_color": "#ffffff",
-            "button_background_color": "#2d889d",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 11,
-            "padding_left": 11
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_Ay6kEQ"
-      ],
-      "custom_css": [
-        "div {background: black;}",
-        "._textHeading_2aowh_35P {color: yellow;}"
-      ],
-      "settings": {
-        "include_margins": false
       }
     },
     "hero_component_xWDaFr": {
@@ -241,16 +291,19 @@
     "main",
     "hero_component_mJaWfn",
     "media_e7UyVn",
+    "hero_video_component_DEwWhh",
+    "custom_liquid_hU7aVF",
+    "17660440281b5ca5ed",
     "custom_liquid_H6AJRc",
     "media_7RBRPY",
     "rich_text_D7AiMp",
     "custom_liquid_wMf7tb",
+    "hero_video_component_aNQKkW",
     "media_zRpHqC",
     "custom_liquid_9YHKi7",
     "custom_liquid_BFPHhN",
     "custom_liquid_QXdP8V",
-    "custom_liquid_hU7aVF",
-    "17660440281b5ca5ed",
+    "hero_video_component_HPR9xz",
     "hero_component_xWDaFr",
     "hero_video_component_KpAibb"
   ]
