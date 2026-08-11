@@ -45,6 +45,16 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_PeGtkp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">THE BULLET</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\nLOCKED AND LOADED  </h1>\n  <p style=\"margin-top: 3px\">Grab your weapon before anyone else!</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>GET YOUR LICENSE</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #3da8bf;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #3da8bf 0%, #3da8bf 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 12,
+        "padding_bottom": 28
+      }
+    },
     "hero_video_component_DEwWhh": {
       "type": "hero-video-component",
       "disabled": true,
@@ -60,48 +70,6 @@
         "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 32
-      }
-    },
-    "custom_liquid_hU7aVF": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&display=swap');\n\n.chase-copy{\n  font-family:\"Figtree\",sans-serif;\n  text-align:center;\n  background:#000;\n  padding:10px 20px 24px;\n}\n\n.chase-title{\n  margin:0;\n  font-size:30px;\n  font-weight:800;\n  line-height:1.15;\n  letter-spacing:-1px;\n  display:inline-block;\n  background:linear-gradient(#3da8bf);\n  background-clip:text;\n  -webkit-background-clip:text;\n  color:transparent;\n  -webkit-text-fill-color:transparent;\n}\n\n.chase-offer{\n  margin:28px 0 0;\n  color:#ced4da;\n  font-size:22px;\n  font-weight:600;\n  line-height:1.4;\n}\n\n.chase-amount{\n  color:#FFFFFF;\n  font-weight:700;\n}\n\n@media(max-width:749px){\n  .chase-title{font-size:24px}\n  .chase-offer{font-size:16px;margin-top:20px}\n}\n</style>\n\n<div class=\"chase-copy\">\n  <div class=\"chase-title\">LOCKED AND LOADED!</div>\n\n  <p class=\"chase-offer\"><strong>\n Register to receive early-access discounts.</strong>\n  </p>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "17660440281b5ca5ed": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_Ay6kEQ": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "1097233",
-            "text_color": "#ffffff",
-            "button_background_color": "#2d889d",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 11,
-            "padding_left": 11
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_Ay6kEQ"
-      ],
-      "custom_css": [
-        "div {background: black;}",
-        "._textHeading_2aowh_35P {color: yellow;}"
-      ],
-      "settings": {
-        "include_margins": false
       }
     },
     "custom_liquid_H6AJRc": {
@@ -233,6 +201,48 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_hU7aVF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&display=swap');\n\n.chase-copy{\n  font-family:\"Figtree\",sans-serif;\n  text-align:center;\n  background:#000;\n  padding:10px 20px 24px;\n}\n\n.chase-title{\n  margin:0;\n  font-size:30px;\n  font-weight:800;\n  line-height:1.15;\n  letter-spacing:-1px;\n  display:inline-block;\n  background:linear-gradient(#3da8bf);\n  background-clip:text;\n  -webkit-background-clip:text;\n  color:transparent;\n  -webkit-text-fill-color:transparent;\n}\n\n.chase-offer{\n  margin:28px 0 0;\n  color:#ced4da;\n  font-size:22px;\n  font-weight:600;\n  line-height:1.4;\n}\n\n.chase-amount{\n  color:#FFFFFF;\n  font-weight:700;\n}\n\n@media(max-width:749px){\n  .chase-title{font-size:24px}\n  .chase-offer{font-size:16px;margin-top:20px}\n}\n</style>\n\n<div class=\"chase-copy\">\n  <div class=\"chase-title\">LOCKED AND LOADED!</div>\n\n  <p class=\"chase-offer\"><strong>\n Register to receive early-access discounts.</strong>\n  </p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "17660440281b5ca5ed": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_Ay6kEQ": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1097233",
+            "text_color": "#ffffff",
+            "button_background_color": "#2d889d",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 11,
+            "padding_left": 11
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_Ay6kEQ"
+      ],
+      "custom_css": [
+        "div {background: black;}",
+        "._textHeading_2aowh_35P {color: yellow;}"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
     "hero_video_component_HPR9xz": {
       "type": "hero-video-component",
       "disabled": true,
@@ -292,9 +302,8 @@
     "main",
     "hero_component_mJaWfn",
     "media_e7UyVn",
+    "custom_liquid_PeGtkp",
     "hero_video_component_DEwWhh",
-    "custom_liquid_hU7aVF",
-    "17660440281b5ca5ed",
     "custom_liquid_H6AJRc",
     "media_7RBRPY",
     "rich_text_D7AiMp",
@@ -304,6 +313,8 @@
     "custom_liquid_9YHKi7",
     "custom_liquid_BFPHhN",
     "custom_liquid_QXdP8V",
+    "custom_liquid_hU7aVF",
+    "17660440281b5ca5ed",
     "hero_video_component_HPR9xz",
     "hero_component_xWDaFr",
     "hero_video_component_KpAibb"
