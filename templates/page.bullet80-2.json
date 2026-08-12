@@ -19,6 +19,7 @@
     },
     "custom_liquid_LW3CjH": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Phenom</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Crafted for Perfectionists\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>shop</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
@@ -29,6 +30,7 @@
     },
     "hero_video_component_e8X8PY": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/Phenom - Serving Dining Youtube Video low qualitymp4.mp4",
@@ -43,508 +45,15 @@
         "padding_bottom": 0
       }
     },
-    "media_pXzJ7f": {
-      "type": "media",
-      "disabled": true,
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_15.png",
-        "mobile_image": "shopify://shop_images/Banner_15.1.png",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_whHTcA": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> HNDRD Phenom </p>\n  <h2 class=\"second-title\">Grip Born on the Tracks,</h2>\n  <h2 class=\"second-title\"> Made for the Court</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "media_hiBFN9": {
-      "type": "media",
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_16_R.png",
-        "mobile_image": "shopify://shop_images/Banner_16_0047bd77-aca9-406c-b881-05ac3185d199.png",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_pX3CYh": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Racing Grade Rubber</p>\n  <p class=\"longcopy\">\n    For Phenom, we worked with <span class=\"highlight\">Goodyear</span>, the world leader in tire technology, to bring <span class=\"highlight\">racing-grade rubber</span> to the Badminton court, ending the age-long <span class=\"highlight\">traditional trade-off</span> between <span class=\"highlight\">grip and longevity</span>.\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 80,
-        "padding_bottom": 20
-      }
-    },
-    "media_gxHEbG": {
-      "type": "media",
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
-        "mobile_image": "shopify://shop_images/Banner_2.1.png",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_rhUah4": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Nothing Held Back</p>\n  <p class=\"longcopy\">What happens when you mix years of obsessive engineering with the <span class=\"highlight\">best rubber technology on the planet?</span>. You get the <span class=\"highlight\">HNDRD Phenom</span>—the first badminton shoe powered by Goodyear traction</p>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 36
-      }
-    },
-    "hero_component_MaVYaG": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
-        "mobile_image": "shopify://shop_images/Banner_3.1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_pMCXET": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Best of Both Worlds</p>\n  <p class=\"longcopy\">Performance Shoes usually force a choice - <span class=\"highlight\">hard rubber</span> for durability or <span class=\"highlight\">soft rubber</span> for grip. Together with Goodyear, we developed the <span class=\"highlight\">DuraGrip</span> tech - a specialized racing-grade rubber compound, which makes the Phenom both <span class=\"highlight\">extremely durable and relentlessly grippy</span>.</p>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 96,
-        "padding_bottom": 52
-      }
-    },
-    "media_Fp4xqn": {
-      "type": "media",
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_10.png",
-        "mobile_image": "shopify://shop_images/Banner_10.1.png",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_kcf9aP": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n<p style=\"font-size: 1.4rem\"> Tech inside Phenom</p>\n  <h2 class=\"second-title\">Overengineered Performance</h2>\n\n</section>",
-        "color_scheme": "scheme-4",
-        "padding_top": 60,
-        "padding_bottom": 24
-      }
-    },
-    "image_with_text_YGQ3Pa": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_jBfRN7": {
-          "type": "heading",
-          "settings": {
-            "heading": "DuraGrip Outsole",
-            "heading_size": "h1"
-          }
-        },
-        "text_gTP4VP": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Developed with GOODYEAR, The DuraGrip outsole features a specialised rubber blend unlike any other. It is both durable yet grippy, balancing harness to traction. The patterned grip supports quick directional changes while resisting abrasion over extended use.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_9yyg3q": {
-          "type": "button",
-          "settings": {
-            "button_label": "SHOP Phenom",
-            "button_link": "shopify://products/phenom",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_jBfRN7",
-        "text_gTP4VP",
-        "button_9yyg3q"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_12.1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_AAWtCq": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_B3aNhQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Thrust Foam",
-            "heading_size": "h1"
-          }
-        },
-        "text_HbHRGA": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A super critical foam that sits at the heel to absorb heavy landings and return energy instantly. It gives a subtle air-bubble feel underfoot. While making it, a chamber is used where the shoe is pressurized with Nitrogen to make it fluff. </p>",
-            "text_style": "body"
-          }
-        },
-        "button_YrXPTB": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Phenom",
-            "button_link": "shopify://products/phenom",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_B3aNhQ",
-        "text_HbHRGA",
-        "button_YrXPTB"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_5.1_9ace0529-c8f4-4854-a37e-c26869dcf004.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "zoom-in",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 12,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_7dYiHP": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_djyQAw": {
-          "type": "heading",
-          "settings": {
-            "heading": "ArmorMesh + DuraCore",
-            "heading_size": "h1"
-          }
-        },
-        "text_8DwhUp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Armormesh creates a breathable, lightweight upper, while Duracore improves abrasion resistance. The result is an airy yet resilient shell that holds to heavy sessions. Armormesh is also known for being extremely durable as it doesn't wear out even after heavy training.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_Ec86eP": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Phenom",
-            "button_link": "shopify://products/phenom",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_djyQAw",
-        "text_8DwhUp",
-        "button_Ec86eP"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_6.1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_Kxdy9z": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JqxLWT": {
-          "type": "heading",
-          "settings": {
-            "heading": "Carbon-Kinetic Support Plate",
-            "heading_size": "h1"
-          }
-        },
-        "text_e6Kqxq": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting torsion. It maintains alignment, even during multidirectional play.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_wGHPkT": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Phenom",
-            "button_link": "https://in.hndrd.co/products/phenom",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_JqxLWT",
-        "text_e6Kqxq",
-        "button_wGHPkT"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_8.1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_c6RhH7": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_YGkTfC": {
-          "type": "heading",
-          "settings": {
-            "heading": "Skeletal Insole",
-            "heading_size": "h1"
-          }
-        },
-        "text_dftkKY": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This is a sculpted insole shaped to the natural contours of the foot with built-in arch support. Foam-padded forefoot ridges prevent sliding internally. The fit is intentionally snug, not constrictive, giving your foot a lock-down feel. The elevated heel-to-toe profile shifts your stance forward, placing you in speed's favor.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_czAQMr": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://products/phenom",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_YGkTfC",
-        "text_dftkKY",
-        "button_czAQMr"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_8.2.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_Ybrgkt": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_Fqt8nY": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Z-Lock",
-            "heading_size": "h1"
-          }
-        },
-        "text_7prTpU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A Z-Shaped, specially stiffened foam at the base of the foot to increase torsional resistance. It acts similar to the support plate but double-downs on the anti-torsion value. The result is a firm, anchored feel during lateral shifts.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_Fnwf6p": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Phenom",
-            "button_link": "shopify://products/phenom",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_Fqt8nY",
-        "text_7prTpU",
-        "button_Fnwf6p"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Banner_7.1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_KKwXjx": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n<p style=\"font-size: 1.4rem\"> Champion's Choice</p>\n  <h2 class=\"second-title\">Preferred by Pros</h2>\n\n</section>",
-        "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 64
-      }
-    },
-    "multicolumn_zieGnW": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_AatUqt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_e6c304c8-69dc-44c3-a47e-26cfc1d184b6.png",
-            "title": "",
-            "text": "<p> \"I found exactly the performance I was looking for, and more\" - Alexandra Boje, Danish Badminton Player</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6QDLmL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Banner_2_1aa53ea2-ed0d-4cab-be07-72bba14d473d.png",
-            "title": "",
-            "text": "<p> \"Most shoes start peeling quickly, Phenom did not\" - Mathias Christiansen, Danish Badminton Player</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_n7FRgW": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Banner_7_3755d7c3-1e26-4556-aaab-6f3013572eb2.png",
-            "title": "",
-            "text": "<p> \"The first thing I look for in a shoe is trust and I found it in Phenom\" - Armaan Bhatia, India's #1 Ranked Pickleball Player</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_H98z3q": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Banner_4_45c36765-9058-44ff-a718-158b7ee021f9.png",
-            "title": "",
-            "text": "<p> \"It made the hard days feel a little easier\" - Estelle Van Leeuwen</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_N3g4Gz": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Banner_5_91415f2f-2a90-4692-8e2c-7c41998b3075.png",
-            "title": "",
-            "text": "<p> </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_MxgJat": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Banner_6_474f3a6d-9ce0-4d6b-a769-8e68d4bae484.png",
-            "title": "",
-            "text": "<p> </p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_AatUqt",
-        "column_6QDLmL",
-        "column_n7FRgW",
-        "column_H98z3q",
-        "column_N3g4Gz",
-        "column_MxgJat"
-      ],
-      "custom_css": [],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 4,
-        "padding_bottom": 36
       }
     },
     "rich_text_3d3gL3": {
@@ -596,6 +105,7 @@
     },
     "media_ag6DY6": {
       "type": "media",
+      "disabled": true,
       "name": "Media",
       "settings": {
         "color_scheme": "",
@@ -605,6 +115,7 @@
     },
     "custom_liquid_NypUWg": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">The Everything Shoe</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Overbuilt. Overpowered.\n  </h1>\n  <p style=\"margin-top: 3px\">Leave No Stones Unturned with HNDRD Phenom</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>Shop Phenom</span>\n  </a>\n</section>",
@@ -612,33 +123,27 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "custom_liquid_xdhThj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"bullet-loader\" class=\"bl-loader\">\n\n  <div class=\"bl-grid\"></div>\n  <div class=\"bl-scan\"></div>\n\n  <div class=\"bl-top-left\">HNDRD // N80</div>\n  <div class=\"bl-top-right\">ACCESS PROTOCOL</div>\n\n  <!-- CENTER -->\n  <div class=\"bl-center\">\n\n    <div class=\"bl-status\">\n      <span class=\"bl-dot\"></span>\n      SECURE ACCESS\n    </div>\n\n    <div class=\"bl-label\">\n      DOCUMENT STATUS\n    </div>\n\n    <div class=\"bl-classified-wrap\">\n      <h1 class=\"bl-title\" data-text=\"CLASSIFIED\">\n        CLASSIFIED\n      </h1>\n    </div>\n\n    <div class=\"bl-redacted\">\n      <i></i>\n      <i></i>\n      <i></i>\n    </div>\n\n    <div class=\"bl-file\">\n      NITRIX 80 // RESTRICTED FILE\n    </div>\n\n  </div>\n\n\n  <!-- BOTTOM LIVE LOADING -->\n  <div class=\"bl-loader-bottom\">\n\n    <div class=\"bl-load-info\">\n\n      <span id=\"bl-status-text\">\n        VERIFYING CLEARANCE\n      </span>\n\n      <div class=\"bl-number\">\n        <span id=\"bl-number\">10</span><small>%</small>\n      </div>\n\n    </div>\n\n\n    <div class=\"bl-progress-track\">\n\n      <div\n        id=\"bl-progress\"\n        class=\"bl-progress\"\n      >\n        <div class=\"bl-progress-glow\"></div>\n      </div>\n\n    </div>\n\n\n    <div class=\"bl-meta\">\n\n      <span>FILE 080</span>\n\n      <span id=\"bl-stage\">\n        INITIALIZING\n      </span>\n\n      <span>LEVEL 05</span>\n\n    </div>\n\n  </div>\n\n</div>\n\n\n<style>\n\nhtml,\nbody{\n  margin:0;\n}\n\n#bullet-loader,\n#bullet-loader *{\n  box-sizing:border-box;\n}\n\nbody.bl-locked{\n  overflow:hidden!important;\n}\n\n\n/* =====================================\nLOADER\n===================================== */\n\n.bl-loader{\n  position:fixed;\n  inset:0;\n\n  width:100%;\n  height:100dvh;\n\n  background:#000;\n\n  color:#fff;\n\n  z-index:2147483647;\n\n  overflow:hidden;\n\n  font-family:\n    Arial,\n    Helvetica,\n    sans-serif;\n\n  transform:translateY(0);\n\n  transition:\n    transform .5s\n    cubic-bezier(.76,0,.24,1);\n}\n\n\n/* =====================================\nGRID\n===================================== */\n\n.bl-grid{\n  position:absolute;\n  inset:0;\n\n  z-index:1;\n\n  pointer-events:none;\n\n  background:\n    linear-gradient(\n      rgba(255,255,255,.025) 1px,\n      transparent 1px\n    ),\n    linear-gradient(\n      90deg,\n      rgba(255,255,255,.025) 1px,\n      transparent 1px\n    );\n\n  background-size:\n    56px 56px;\n}\n\n\n/* VIGNETTE */\n\n.bl-loader:before{\n  content:\"\";\n\n  position:absolute;\n  inset:0;\n\n  z-index:2;\n\n  pointer-events:none;\n\n  background:\n    radial-gradient(\n      circle at center,\n      transparent 10%,\n      rgba(0,0,0,.25) 55%,\n      rgba(0,0,0,.82) 100%\n    );\n}\n\n\n/* =====================================\nSCANNER\n===================================== */\n\n.bl-scan{\n  position:absolute;\n\n  z-index:3;\n\n  left:0;\n  top:-180px;\n\n  width:100%;\n  height:180px;\n\n  pointer-events:none;\n\n  background:\n    linear-gradient(\n      to bottom,\n      transparent,\n      rgba(255,255,255,.02),\n      rgba(255,255,255,.08),\n      rgba(255,255,255,.02),\n      transparent\n    );\n\n  animation:\n    blScanMove 2.5s linear forwards;\n}\n\n\n@keyframes blScanMove{\n\n  from{\n    transform:\n      translateY(0);\n  }\n\n  to{\n    transform:\n      translateY(calc(100vh + 360px));\n  }\n\n}\n\n\n/* =====================================\nTOP INFORMATION\n===================================== */\n\n.bl-top-left,\n.bl-top-right{\n  position:absolute;\n\n  top:26px;\n\n  z-index:20;\n\n  font-size:7px;\n\n  font-weight:700;\n\n  letter-spacing:.27em;\n\n  color:\n    rgba(255,255,255,.45);\n}\n\n\n.bl-top-left{\n  left:30px;\n}\n\n\n.bl-top-right{\n  right:30px;\n}\n\n\n/* =====================================\nCENTER AREA\n===================================== */\n\n.bl-center{\n  position:absolute;\n\n  z-index:30;\n\n  left:50%;\n  top:45%;\n\n  width:92%;\n\n  max-width:1100px;\n\n  transform:\n    translate(-50%,-50%);\n\n  text-align:center;\n}\n\n\n/* =====================================\nSECURE ACCESS\n===================================== */\n\n.bl-status{\n  display:flex;\n\n  align-items:center;\n  justify-content:center;\n\n  gap:10px;\n\n  margin-bottom:16px;\n\n  font-size:9px;\n\n  font-weight:700;\n\n  letter-spacing:.38em;\n\n  color:\n    rgba(255,255,255,.7);\n}\n\n\n.bl-dot{\n  width:6px;\n  height:6px;\n\n  border-radius:50%;\n\n  background:#fff;\n\n  box-shadow:\n    0 0 10px\n    rgba(255,255,255,.7);\n\n  animation:\n    blBlink .4s steps(1) infinite;\n}\n\n\n@keyframes blBlink{\n\n  50%{\n    opacity:.15;\n  }\n\n}\n\n\n/* =====================================\nDOCUMENT STATUS\n===================================== */\n\n.bl-label{\n  margin-bottom:8px;\n\n  font-size:8px;\n\n  font-weight:700;\n\n  letter-spacing:.58em;\n\n  color:\n    rgba(255,255,255,.45);\n}\n\n\n/* =====================================\nCLASSIFIED\n===================================== */\n\n.bl-classified-wrap{\n  overflow:visible;\n}\n\n\n.bl-title{\n  position:relative;\n\n  display:inline-block;\n\n  margin:0;\n\n  color:#fff!important;\n\n  opacity:1!important;\n  visibility:visible!important;\n\n  font-size:\n    clamp(60px,10vw,155px);\n\n  font-weight:900;\n\n  line-height:.88;\n\n  letter-spacing:-.06em;\n\n  text-shadow:\n    0 0 1px #fff,\n    0 0 20px\n    rgba(255,255,255,.12);\n\n  animation:\n    blTitleIn .55s\n    cubic-bezier(.15,.85,.3,1)\n    forwards;\n}\n\n\n@keyframes blTitleIn{\n\n  0%{\n    opacity:0;\n    transform:\n      translateY(20px)\n      scaleX(.96);\n\n    filter:blur(8px);\n  }\n\n  100%{\n    opacity:1;\n    transform:\n      translateY(0)\n      scaleX(.96);\n\n    filter:blur(0);\n  }\n\n}\n\n\n/* GLITCH */\n\n.bl-title:before,\n.bl-title:after{\n  content:\n    attr(data-text);\n\n  position:absolute;\n  inset:0;\n\n  color:#fff;\n\n  pointer-events:none;\n\n  opacity:0;\n}\n\n\n.bl-title.bl-glitch:before{\n  opacity:.35;\n\n  transform:\n    translateX(-6px);\n\n  clip-path:\n    inset(15% 0 65% 0);\n}\n\n\n.bl-title.bl-glitch:after{\n  opacity:.22;\n\n  transform:\n    translateX(6px);\n\n  clip-path:\n    inset(68% 0 10% 0);\n}\n\n\n/* =====================================\nREDACTED BARS\n===================================== */\n\n.bl-redacted{\n  display:flex;\n\n  align-items:center;\n  justify-content:center;\n\n  gap:6px;\n\n  width:min(500px,70vw);\n\n  margin:\n    23px auto 0;\n}\n\n\n.bl-redacted i{\n  display:block;\n\n  height:5px;\n\n  background:#fff;\n\n  opacity:.9;\n}\n\n\n.bl-redacted i:nth-child(1){\n  width:20%;\n}\n\n\n.bl-redacted i:nth-child(2){\n  width:58%;\n}\n\n\n.bl-redacted i:nth-child(3){\n  width:12%;\n}\n\n\n/* =====================================\nFILE NAME\n===================================== */\n\n.bl-file{\n  margin-top:14px;\n\n  font-size:7px;\n\n  font-weight:700;\n\n  letter-spacing:.34em;\n\n  color:\n    rgba(255,255,255,.44);\n}\n\n\n/* =====================================\nBOTTOM LOADER\n===================================== */\n\n.bl-loader-bottom{\n  position:absolute;\n\n  z-index:50;\n\n  left:50%;\n  bottom:42px;\n\n  width:min(800px,88vw);\n\n  transform:\n    translateX(-50%);\n}\n\n\n/* =====================================\nLOAD INFO\n===================================== */\n\n.bl-load-info{\n  display:flex;\n\n  align-items:flex-end;\n\n  justify-content:\n    space-between;\n\n  margin-bottom:10px;\n}\n\n\n#bl-status-text{\n  font-size:8px;\n\n  font-weight:700;\n\n  letter-spacing:.27em;\n\n  color:\n    rgba(255,255,255,.65);\n}\n\n\n/* =====================================\nPERCENTAGE\n===================================== */\n\n.bl-number{\n  display:flex;\n\n  align-items:flex-start;\n\n  color:#fff;\n\n  font-size:26px;\n\n  font-weight:800;\n\n  line-height:1;\n\n  font-variant-numeric:\n    tabular-nums;\n}\n\n\n.bl-number small{\n  margin-top:2px;\n  margin-left:2px;\n\n  font-size:10px;\n\n  color:\n    rgba(255,255,255,.55);\n}\n\n\n/* =====================================\nREAL-TIME PROGRESS TRACK\n===================================== */\n\n.bl-progress-track{\n  position:relative;\n\n  width:100%;\n  height:5px;\n\n  background:\n    rgba(255,255,255,.12);\n\n  overflow:hidden;\n}\n\n\n/* ACTUAL MOVING BAR */\n\n.bl-progress{\n  position:absolute;\n\n  left:0;\n  top:0;\n\n  width:100%;\n  height:100%;\n\n  background:#fff;\n\n  transform:\n    scaleX(.1);\n\n  transform-origin:\n    left center;\n\n  will-change:\n    transform;\n}\n\n\n/* MOVING BRIGHT EDGE */\n\n.bl-progress-glow{\n  position:absolute;\n\n  right:-1px;\n  top:-7px;\n\n  width:3px;\n  height:19px;\n\n  background:#fff;\n\n  box-shadow:\n    0 0 8px #fff,\n    0 0 18px\n    rgba(255,255,255,.8);\n}\n\n\n/* =====================================\nBOTTOM META\n===================================== */\n\n.bl-meta{\n  display:flex;\n\n  justify-content:\n    space-between;\n\n  align-items:center;\n\n  margin-top:10px;\n\n  font-size:7px;\n\n  font-weight:700;\n\n  letter-spacing:.24em;\n\n  color:\n    rgba(255,255,255,.35);\n}\n\n\n#bl-stage{\n  color:\n    rgba(255,255,255,.55);\n}\n\n\n/* =====================================\nACCESS GRANTED\n===================================== */\n\n.bl-loader.bl-complete\n.bl-progress{\n  box-shadow:\n    0 0 18px\n    rgba(255,255,255,.65);\n}\n\n\n.bl-loader.bl-complete\n.bl-title{\n  animation:\n    blCompleteFlash\n    .18s ease;\n}\n\n\n@keyframes blCompleteFlash{\n\n  0%{\n    opacity:1;\n  }\n\n  40%{\n    opacity:.45;\n  }\n\n  100%{\n    opacity:1;\n  }\n\n}\n\n\n/* =====================================\nEXIT\n===================================== */\n\n.bl-loader.bl-exit{\n  transform:\n    translateY(-105%);\n}\n\n\n/* =====================================\nMOBILE\n===================================== */\n\n@media(max-width:600px){\n\n  .bl-center{\n    top:43%;\n  }\n\n  .bl-title{\n    font-size:\n      clamp(\n        46px,\n        16vw,\n        76px\n      );\n  }\n\n  .bl-status{\n    font-size:7px;\n\n    letter-spacing:.28em;\n  }\n\n  .bl-label{\n    font-size:6px;\n\n    letter-spacing:.42em;\n  }\n\n  .bl-redacted{\n    width:73vw;\n\n    margin-top:18px;\n  }\n\n  .bl-file{\n    font-size:6px;\n\n    letter-spacing:.22em;\n  }\n\n  .bl-loader-bottom{\n    bottom:30px;\n\n    width:89vw;\n  }\n\n  #bl-status-text{\n    font-size:6px;\n\n    letter-spacing:.16em;\n  }\n\n  .bl-number{\n    font-size:22px;\n  }\n\n  .bl-progress-track{\n    height:4px;\n  }\n\n  .bl-meta{\n    font-size:5px;\n\n    letter-spacing:.16em;\n  }\n\n  .bl-top-left,\n  .bl-top-right{\n    top:18px;\n\n    font-size:5px;\n\n    letter-spacing:.18em;\n  }\n\n  .bl-top-left{\n    left:18px;\n  }\n\n  .bl-top-right{\n    right:18px;\n  }\n\n}\n\n</style>\n\n\n<script>\n\n(function(){\n\n  const loader =\n    document.getElementById(\n      'bullet-loader'\n    );\n\n  if(!loader) return;\n\n\n  const number =\n    document.getElementById(\n      'bl-number'\n    );\n\n  const progress =\n    document.getElementById(\n      'bl-progress'\n    );\n\n  const statusText =\n    document.getElementById(\n      'bl-status-text'\n    );\n\n  const stage =\n    document.getElementById(\n      'bl-stage'\n    );\n\n  const title =\n    loader.querySelector(\n      '.bl-title'\n    );\n\n\n  document.body.classList.add(\n    'bl-locked'\n  );\n\n\n  /*\n  ==============================\n  TIMING\n\n  Counter:\n  2.5 seconds\n\n  Hold:\n  .20 seconds\n\n  Exit:\n  .50 seconds\n  ==============================\n  */\n\n  const duration = 2500;\n\n  const startPercent = 10;\n\n  const endPercent = 100;\n\n  let startTime = null;\n\n  let lastGlitch = 0;\n\n\n  /*\n  ==============================\n  ANIMATION LOOP\n  ==============================\n  */\n\n  function animate(time){\n\n\n    if(!startTime){\n      startTime = time;\n    }\n\n\n    const elapsed =\n      time - startTime;\n\n\n    /*\n    TRUE REAL-TIME PROGRESS\n\n    0.0 -> 1.0\n\n    NO FAKE EASING\n    */\n\n    const timeline =\n      Math.min(\n        elapsed / duration,\n        1\n      );\n\n\n    /*\n    10 -> 100\n    */\n\n    const exactPercent =\n      startPercent +\n      (\n        endPercent -\n        startPercent\n      )\n      *\n      timeline;\n\n\n    /*\n    NUMBER\n    */\n\n    const displayedPercent =\n      Math.floor(\n        exactPercent\n      );\n\n\n    number.textContent =\n      displayedPercent;\n\n\n    /*\n    BAR\n\n    IMPORTANT:\n\n    Uses exact decimal percentage,\n    not rounded number.\n\n    Example:\n\n    number = 47%\n\n    actual bar may be 47.68432%\n\n    This creates perfectly smooth\n    movement at 60/120fps.\n    */\n\n    progress.style.transform =\n      'scaleX(' +\n      (\n        exactPercent / 100\n      ) +\n      ')';\n\n\n    /*\n    ==============================\n    LIVE STATUS\n    ==============================\n    */\n\n    if(timeline < .20){\n\n      statusText.textContent =\n        'VERIFYING CLEARANCE';\n\n      stage.textContent =\n        'IDENTITY CHECK';\n\n    }\n\n    else if(timeline < .42){\n\n      statusText.textContent =\n        'DECRYPTING FILE';\n\n      stage.textContent =\n        'DECRYPTING';\n\n    }\n\n    else if(timeline < .66){\n\n      statusText.textContent =\n        'READING BALLISTICS';\n\n      stage.textContent =\n        'BALLISTICS';\n\n    }\n\n    else if(timeline < .88){\n\n      statusText.textContent =\n        'AUTHORIZING ACCESS';\n\n      stage.textContent =\n        'CLEARANCE';\n\n    }\n\n    else{\n\n      statusText.textContent =\n        'ACCESS GRANTED';\n\n      stage.textContent =\n        'AUTHORIZED';\n\n    }\n\n\n    /*\n    ==============================\n    CONTROLLED GLITCH\n    ==============================\n    */\n\n    if(\n      time - lastGlitch > 260 &&\n      timeline < .88\n    ){\n\n      lastGlitch = time;\n\n\n      title.classList.add(\n        'bl-glitch'\n      );\n\n\n      setTimeout(\n        function(){\n\n          title.classList.remove(\n            'bl-glitch'\n          );\n\n        },\n        45\n      );\n\n    }\n\n\n    /*\n    CONTINUE\n    */\n\n    if(timeline < 1){\n\n      requestAnimationFrame(\n        animate\n      );\n\n      return;\n    }\n\n\n    /*\n    ==============================\n    FORCE EXACT FINAL STATE\n    ==============================\n    */\n\n    number.textContent =\n      '100';\n\n\n    progress.style.transform =\n      'scaleX(1)';\n\n\n    statusText.textContent =\n      'ACCESS GRANTED';\n\n\n    stage.textContent =\n      'AUTHORIZED';\n\n\n    loader.classList.add(\n      'bl-complete'\n    );\n\n\n    /*\n    HOLD 100%\n    */\n\n    setTimeout(\n      function(){\n\n\n        /*\n        SLIDE LOADER AWAY\n        */\n\n        loader.classList.add(\n          'bl-exit'\n        );\n\n\n        document.body.classList.remove(\n          'bl-locked'\n        );\n\n\n        /*\n        DELETE AFTER EXIT\n        */\n\n        setTimeout(\n          function(){\n\n            loader.remove();\n\n          },\n          520\n        );\n\n\n      },\n      200\n    );\n\n  }\n\n\n  /*\n  START\n  */\n\n  requestAnimationFrame(\n    animate\n  );\n\n})();\n\n</script>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
     "custom_liquid_LW3CjH",
     "hero_video_component_e8X8PY",
-    "media_pXzJ7f",
     "custom_liquid_whHTcA",
-    "media_hiBFN9",
-    "custom_liquid_pX3CYh",
-    "media_gxHEbG",
-    "custom_liquid_rhUah4",
-    "hero_component_MaVYaG",
-    "custom_liquid_pMCXET",
-    "media_Fp4xqn",
-    "custom_liquid_kcf9aP",
-    "image_with_text_YGQ3Pa",
-    "image_with_text_AAWtCq",
-    "image_with_text_7dYiHP",
-    "image_with_text_Kxdy9z",
-    "image_with_text_c6RhH7",
-    "image_with_text_Ybrgkt",
-    "custom_liquid_KKwXjx",
-    "multicolumn_zieGnW",
     "rich_text_3d3gL3",
     "media_QE4AML",
     "media_ag6DY6",
-    "custom_liquid_NypUWg"
+    "custom_liquid_NypUWg",
+    "custom_liquid_xdhThj"
   ]
 }
