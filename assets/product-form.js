@@ -24,6 +24,7 @@ if (!customElements.get('product-form')) {
 
         // validate the stringing form too, if the validation fails, highlight it and  return early
         const stringingForm = document.getElementById('stringing-form');
+        const stringingRoot = document.getElementById('stringing-root');
         if (stringingForm && document.querySelector('input[name="frame"]:checked')?.id === 'pro-stringing') {
           if (!stringingForm.checkValidity()) {
             const radioButtons = stringingForm.querySelectorAll('input[type="radio"]');
@@ -31,11 +32,11 @@ if (!customElements.get('product-form')) {
 
             const errorMessage =
               invalidRadioName === 'string-product'
-                ? 'Please select a String'
+                ? stringingRoot?.dataset?.errorMissingProduct || 'Please select a String'
                 : invalidRadioName === 'string-variant'
-                  ? 'Please choose a String Color'
+                  ? stringingRoot?.dataset?.errorMissingVariant || 'Please choose a String Color'
                   : invalidRadioName === 'string-tension'
-                    ? 'Please select a tension'
+                    ? stringingRoot?.dataset?.errorMissingTension || 'Please select a tension'
                     : 'Please select all required options';
 
             this.handleErrorMessage(errorMessage);
@@ -220,12 +221,7 @@ if (!customElements.get('product-form')) {
           }
 
           items.push({
-            id:
-              window.s3_product_type === 'Pickleball Paddle'
-                ? window.s3_paddle_remix_service_variant_id
-                : window.s3_product_type === 'Badminton Racket'
-                  ? window.s3_remix_service_variant_id
-                  : window.s3_remix_service_variant_id,
+            id: window.s3_remix_service_variant_id,
             quantity: 1,
             properties: {
               _stickerText: textToBeStickered,

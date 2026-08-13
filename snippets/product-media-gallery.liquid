@@ -11,8 +11,6 @@
   {% render 'product-media-gallery' %}
 {% endcomment %}
 
-{{ 'component-slider-dots.css' | asset_url | stylesheet_tag }}
-
 {%- liquid
   assign selected_variant = product.selected_or_first_available_variant
 
@@ -69,7 +67,32 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+  # Key highlights start
+
+  assign key_highlights_metafield = product.metafields.custom_but_hidden.key_highlights
+  if key_highlights_metafield and key_highlights_metafield.value != blank
+    assign key_highlight_keys = key_highlights_metafield.value
+  endif
+
+  assign highlight_image = product.media | where: 'media_type', 'image' | first
+  assign key_highlights_count = 0
+
+  if key_highlight_keys != blank
+    for highlight_key in key_highlight_keys
+      assign highlight_key_normalized = highlight_key | strip | downcase | replace: ' ', '_' | replace: '-', '_'
+      assign highlight_metafield = product.metafields.custom[highlight_key_normalized] | default: product.metafields.custom[highlight_key]
+
+      if highlight_metafield and highlight_metafield.value != blank
+        assign key_highlights_count = key_highlights_count | plus: 1
+      endif
+    endfor
+  endif
+
+  if highlight_image != blank and key_highlights_count > 0
+    assign should_render_highlights_slide = true
+  endif
 -%}
+{% comment %} Key highlights end {% endcomment %}
 
 <media-gallery
   id="MediaGallery-{{ section.id }}"
@@ -81,7 +104,11 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
+  <slider-component
+    id="GalleryViewer-{{ section.id }}"
+    class="slider-mobile-gutter"
+    data-gallery-counter-target="#ProductGalleryCounter-{{ section.id }}"
+  >
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
@@ -150,8 +177,69 @@
           {%- endif -%}
         {%- endunless -%}
       {% endfor %}
+
+      {% comment %}  KEy highlights start 2 {% endcomment %}
+
+      {% comment %} Mobile-only slide that repeats the first image with key highlight metafields layered on top {% endcomment %}
+      {%- if should_render_highlights_slide -%}
+        {%- liquid
+          assign media_position = media_position | default: 0 | plus: 1
+        -%}
+        <li
+          id="Slide-{{ section.id }}-key-highlights"
+          class="product__media-item grid__item slider__slide product__media-item--highlights{% if single_media_visible %} product__media-item--single{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          data-media-id="{{ section.id }}-key-highlights"
+        >
+          {% render 'product-thumbnail',
+            media: highlight_image,
+            media_count: media_count,
+            position: media_position,
+            desktop_layout: section.settings.gallery_layout,
+            mobile_layout: section.settings.mobile_thumbnails,
+            loop: section.settings.enable_video_looping,
+            modal_id: section.id,
+            xr_button: true,
+            media_width: media_width,
+            media_fit: section.settings.media_fit,
+            constrain_to_viewport: section.settings.constrain_to_viewport,
+            lazy_load: true
+          %}
+          <div class="product__media-highlights">
+            <div class="product__media-highlights__body">
+              <p class="product__media-highlights__title">{{ 'products.product.key_highlights' | t }}</p>
+              <ul class="product__media-highlights__list">
+                {% for highlight_key in key_highlight_keys %}
+                  {%- assign highlight_key_normalized = highlight_key
+                    | strip
+                    | downcase
+                    | replace: ' ', '_'
+                    | replace: '-', '_'
+                  -%}
+                  {%- assign highlight_metafield = product.metafields.custom[highlight_key_normalized]
+                    | default: product.metafields.custom[highlight_key]
+                  -%}
+                  {% if highlight_metafield and highlight_metafield.value != blank %}
+                    {%- assign highlight_label = highlight_metafield.definition.name
+                      | default: highlight_key_normalized
+                      | replace: '_', ' '
+                      | capitalize
+                    -%}
+                    <li class="product__media-highlights__item">
+                      <span class="product__media-highlights__label">{{ highlight_label }}</span>
+                      <span class="product__media-highlights__value">{{ highlight_metafield | metafield_text }}</span>
+                      <hr class="product__media-highlights__divider">
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </li>
+      {%- endif -%}
+
+      {% comment %}  KEy highlights end 2 {% endcomment %}
     </ul>
-    <div class="slider-buttons quick-add-hidden">
+    <div class="slider-buttons product__media-slider-buttons quick-add-hidden">
       <button
         style="opacity: 0; visibility: hidden"
         type="button"
@@ -163,34 +251,6 @@
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </span>
       </button>
-      <div class="slider-dots-container">
-        {% comment %} Debug media_count value {% endcomment %}
-        <span class="visually-hidden">Media count: {{ media_count }}</span>
-
-        {% comment %} Explicitly loop through media references instead of using media_count {% endcomment %}
-        {% assign dot_index = 0 %}
-        {% if selected_variant.featured_media != null %}
-          {% assign dot_index = dot_index | plus: 1 %}
-          <button
-            type="button"
-            class="slider-dot slider-dot--active"
-            data-index="{{ dot_index }}"
-            aria-label="{{ 'general.slider.name' | t: number: dot_index }}"
-          ></button>
-        {% endif %}
-
-        {% for media in media_references %}
-          {% unless media == empty or media.id == selected_variant.featured_media.id %}
-            {% assign dot_index = dot_index | plus: 1 %}
-            <button
-              type="button"
-              class="slider-dot"
-              data-index="{{ dot_index }}"
-              aria-label="{{ 'general.slider.name' | t: number: dot_index }}"
-            ></button>
-          {% endunless %}
-        {% endfor %}
-      </div>
       <button
         style="opacity: 0; visibility: hidden"
         type="button"

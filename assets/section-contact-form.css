@@ -24,6 +24,28 @@
   margin-top: 3rem;
 }
 
+.contact__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.contact__consent-checkbox {
+  flex: 0 0 auto;
+  width: 1.8rem;
+  height: 1.8rem;
+  /* margin: 0.3rem 0 0; */
+  cursor: pointer;
+  accent-color: rgb(var(--color-foreground));
+}
+
+.contact__consent-label {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 750px) {
   .contact__button {
     margin-top: 4rem;

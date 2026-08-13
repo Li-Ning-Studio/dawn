@@ -1,0 +1,37 @@
+{%- comment -%}
+  Renders the PDP eyebrow above the product title.
+  Product tag is treated as the stronger merchandising label, while product type
+  is the plain fallback when no tag label is configured. Vendor is the final
+  fallback so the eyebrow row does not disappear for products without either
+  merchandising label.
+{%- endcomment -%}
+{%- liquid
+  assign product_tag = product.metafields.custom_but_hidden.product_tag
+  assign product_type = product.metafields.custom.product_type
+  assign eyebrow_text = blank
+  assign eyebrow_class = blank
+
+  if product_tag != blank
+    assign eyebrow_text = product_tag | metafield_text
+    assign eyebrow_class = 'product__eyebrow--tag'
+  elsif product_type != blank
+    assign eyebrow_text = product_type | metafield_text
+    assign eyebrow_class = 'product__eyebrow--type'
+  elsif product.vendor != blank
+    assign eyebrow_text = product.vendor
+    assign eyebrow_class = 'product__eyebrow--vendor'
+  endif
+-%}
+
+{%- if eyebrow_text != blank -%}
+  <h5 class="product__eyebrow {{ eyebrow_class }} s3_caption">
+    <span>{{ eyebrow_text | escape }}</span>
+    {%- if gallery_counter_id != blank -%}
+      <span
+        id="{{ gallery_counter_id }}"
+        class="product__gallery-counter"
+        hidden
+      ></span>
+    {%- endif -%}
+  </h5>
+{%- endif -%}

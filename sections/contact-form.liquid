@@ -127,6 +127,20 @@
         </label>
       </div>
       <div class="contact__button">
+        <div class="contact__consent">
+          <input
+            type="checkbox"
+            id="ContactForm-consent-{{ section.id }}"
+            class="contact__consent-checkbox"
+            name="contact[Consent]"
+            value="{{ 'templates.contact.form.consent_value' | t }}"
+            required
+            aria-required="true"
+          >
+          <label class="contact__consent-label " for="ContactForm-consent-{{ section.id }}">
+            {{- 'templates.contact.form.consent' | t -}}
+          </label>
+        </div>
         <button type="submit" class="button">
           {{ 'templates.contact.form.send' | t }}
         </button>

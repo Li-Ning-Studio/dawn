@@ -1,0 +1,31 @@
+{% comment %}
+  Renders a reusable highlight badge with an optional SVG icon from /assets.
+
+  Accepts:
+  - icon: {String} icon identifier or svg filename (e.g. 'icon-price-tag' or 'icon-price-tag.svg')
+  - text: {String} text/html content to render
+  - badge_class: {String} optional extra classes for the wrapper
+{% endcomment %}
+
+{%- liquid
+  assign resolved_icon = icon | default: ''
+  assign resolved_text = text | default: ''
+  assign resolved_badge_class = badge_class | default: ''
+
+  if resolved_icon != blank
+    unless resolved_icon contains '.svg'
+      assign resolved_icon = resolved_icon | append: '.svg'
+    endunless
+  endif
+-%}
+
+{%- if resolved_text != blank -%}
+  <span class="highlight-badge{% if resolved_badge_class != blank %} {{ resolved_badge_class }}{% endif %}">
+    {%- if resolved_icon != blank -%}
+      <span class="svg-wrapper">
+        {{ resolved_icon | inline_asset_content }}
+      </span>
+    {%- endif -%}
+    <span class="highlight-badge__text">{{ resolved_text }}</span>
+  </span>
+{%- endif -%}

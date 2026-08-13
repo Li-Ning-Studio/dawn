@@ -1,50 +1,56 @@
+{% comment %}
+  Renders the shared Remix service card and lazy-loaded configurator.
+
+  Accepts:
+  - remix_service_product: {Product} service product resolved for the current product type
+{% endcomment %}
+
 {{ 'services.css' | asset_url | stylesheet_tag }}
 
-{% assign domain = shop.domain | split: 'www.' %}
-
-{% if domain[0] contains 'hndrd' %}
-  {% assign brand_name = 'Hundred' %}
-{% else %}
-  {% assign brand_name = 'Studio' %}
-{% endif %}
+{% assign remix_trigger_id = 'remix-trigger-' | append: section.id %}
+{% assign remix_service_variant = remix_service_product.variants.first %}
 
 <section
   id="remix-modal"
   style="display: none;"
+  data-action-add="{{ 'studio.remix.actions.add' | t }}"
+  data-action-change="{{ 'studio.remix.actions.change' | t }}"
+  data-message-error="{{ 'studio.remix.errors.load_failed' | t }}"
+  data-close-confirm-message="{{ 'studio.modal_close_guard.message' | t }}"
+  data-close-confirm-keep-editing="{{ 'studio.modal_close_guard.keep_editing' | t }}"
+  data-close-confirm-discard="{{ 'studio.modal_close_guard.discard' | t }}"
 ></section>
 
-<section class="remix-container">
-  <legend class="form__label">
-    <span>Personalise</span>
-  </legend>
-
-  {% capture remix_type %}
-    {%- if product.type == "Pickleball Paddle" -%}
-      Paddle Remix
-    {%- elsif product.type == "Badminton Racket" -%}
-      Racket Remix
-    {%- else -%}
-      Racket Remix
-    {%- endif -%}
-  {% endcapture %}
-
-  <label class="frame-option sheet" for="remix">
-    <input type="radio" name="customisation" id="remix">
-    <div class="frame-name" style="display: flex; justify-content: space-between; align-items: center;">
-      <span id="remix-title">{{ remix_type }} by {{ brand_name }} </span>
-      <span style="color: var(--gray-50); font-size: 1.3rem;">
-        {%- if all_products.remix.price == 0 -%}
-          FREE
-        {%- else -%}
-          {{ all_products.remix.price | money }}
-        {%- endif -%}
+<section class="remix-container service-container">
+  {% comment %} <hr style="margin: 1.9rem 0;"> {% endcomment %}
+  <div
+    id="{{ remix_trigger_id }}"
+    class="service-card s3_paragraph"
+    role="button"
+    tabindex="0"
+  >
+    <div class="service-card__content">
+      <div class="service-card__title-row">
+        <span>{{ 'studio.remix.form_labels.personalisation_service' | t }}</span>
+        <span class="service-card__price">
+          {%- if remix_service_product.price == 0 -%}
+            {{ 'studio.remix.labels.free' | t }}
+          {%- else -%}
+            +{{ remix_service_product.price | money }}
+          {%- endif -%}
+        </span>
+      </div>
+      <p class="service-card__description" id="remix-description">
+        {{ 'studio.remix.description.personalisation_service' | t: product_title: product.title | escape }}
+      </p>
+    </div>
+    <div class="service-card__cta">
+      <span class="service-card__cta-text" id="remix-cta-label">{{ 'studio.remix.actions.add' | t }}</span>
+      <span class="service-card__cta-icon">
+        {{- 'icon-plus.svg' | inline_asset_content -}}
       </span>
     </div>
-    <span class="frame-description" id="remix-description">
-      Personalize this {{ product.title | escape }} with our optional premium offering, designed to showcase your unique
-      style on the court.
-    </span>
-  </label>
+  </div>
 </section>
 
 <style>
@@ -68,33 +74,28 @@
   }
 </style>
 
+<script defer="defer" src="{{ 'service-modal-trigger.js' | asset_url }}"></script>
 <script defer="defer">
   document.addEventListener('DOMContentLoaded', () => {
-    const remixLabel = document.querySelector('label[for="remix"]');
+    const remixTrigger = document.getElementById('{{ remix_trigger_id }}');
     const remixRoot = document.getElementById('remix-modal');
+    const remixDescription = document.getElementById('remix-description');
 
-    if (remixLabel && remixRoot) {
-      remixLabel.addEventListener('click', () => {
-        if (window?.s3_remix_modal_controller?.openModal) {
-          window.s3_remix_modal_controller.openModal();
-        }
-        if (window?.s3_remix_config?.modelPath) {
-          remixRoot.style.display = 'block';
-
-          // Check if script already loaded
-          if (!document.querySelector('script[src*="vx-remix"]')) {
-            const script = document.createElement('script');
-            script.src = "{{ 'vx-remix.js' | asset_url }}";
-            script.defer = true;
-            script.type = 'module';
-            document.body.appendChild(script);
-          }
-        }
+    if (remixTrigger && remixRoot && window.s3_initServiceModalTrigger) {
+      window.s3_initServiceModalTrigger({
+        serviceKey: 'remix',
+        triggerEl: remixTrigger,
+        scriptSrc: "{{ 'vx-remix.js' | asset_url }}",
+        controllerPath: 's3_remix_modal_controller',
+        errorTarget: remixDescription,
+        errorMessage: remixRoot.dataset.messageError || '',
+        idlePreload: true,
+        enableKeyboard: true,
+        canOpen: () => Boolean(window?.s3_remix_config?.modelPath),
       });
-
-      // set the remix variant id on window (for product-form.js)
-      window.s3_remix_service_variant_id = '{{ all_products.remix.variants.first.id  }}';
-      window.s3_paddle_remix_service_variant_id = '{{ all_products['paddle-remix'].variants.first.id  }}';
     }
+    // Set the remix variant ids on window (for product-form.js)
+    // The service product is resolved by product type before rendering this snippet.
+    window.s3_remix_service_variant_id = '{{ remix_service_variant.id }}';
   });
 </script>

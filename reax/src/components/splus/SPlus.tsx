@@ -173,6 +173,61 @@ const SPlusContent = ({ referenceIds }: TProps) => {
     })();
   }, [referenceIds]);
 
+  const renderFiftyFifty = ({
+    title,
+    description,
+    media,
+    imageSide,
+  }: {
+    title?: string | null;
+    description?: string | null;
+    media?: TMediaData | null;
+    imageSide: 'Left' | 'Right';
+  }) => {
+    if (!media) return null;
+
+    return (
+      <section
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: isMobile ? 'column' : imageSide === 'Left' ? 'row' : 'row-reverse',
+          margin: isMobile ? '3rem 0' : '1rem 0',
+        }}
+      >
+        <img
+          style={{
+            width: isMobile ? '100%' : '50%',
+          }}
+          src={media.image?.url}
+          alt={media.image?.altText || ''}
+        />
+        <div
+          className={'page-width'}
+          style={{ maxWidth: isMobile ? '100%' : '50%', paddingTop: isMobile ? '2rem' : '3rem' }}
+        >
+          <h2
+            className={'s3_subheading'}
+            style={{
+              margin: 0,
+            }}
+          >
+            {title}
+          </h2>
+          <p
+            className={'s3_paragraph'}
+            style={{
+              color: 'var(--gray-80)',
+              marginTop: '1rem',
+            }}
+          >
+            {description}
+          </p>
+        </div>
+      </section>
+    );
+  };
+
   return (
     <div
       style={{
@@ -200,129 +255,32 @@ const SPlusContent = ({ referenceIds }: TProps) => {
           }
 
           case 'ui_fifty_fifty': {
-            const side = comp.fields.find((x) => x.key === 'image_side')?.value;
-            return comp.actualMedia ? (
-              <section
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexDirection: isMobile ? 'column' : side === 'Left' ? 'row' : 'row-reverse',
-                  margin: isMobile ? '2rem 0' : '1rem 0',
-                }}
-              >
-                <img
-                  style={{
-                    width: isMobile ? '100%' : '50%',
-                  }}
-                  src={comp.actualMedia[0]?.image?.url}
-                  alt=""
-                />
-                <div style={{ maxWidth: isMobile ? '100%' : '50%', padding: isMobile ? '2rem 0' : '0rem 3rem' }}>
-                  <h2
-                    style={{
-                      fontSize: isMobile ? '2rem' : '4rem',
-                      letterSpacing: isMobile ? '-1px' : '-1.5px',
-                      fontWeight: 'bold',
-                      margin: 0,
-                    }}
-                  >
-                    {comp.fields.find((x) => x.key === 'title')?.value}
-                  </h2>
-                  <p
-                    style={{
-                      letterSpacing: '0px',
-                      fontSize: isMobile ? '1.5rem' : '1.8rem',
-                      color: 'var(--gray-80)',
-                      marginTop: '5px',
-                      lineHeight: '180%',
-                    }}
-                  >
-                    {comp.fields.find((x) => x.key === 'description')?.value}
-                  </p>
-                </div>
-              </section>
-            ) : null;
+            const side = comp.fields.find((x) => x.key === 'image_side')?.value === 'Left' ? 'Left' : 'Right';
+
+            return renderFiftyFifty({
+              title: comp.fields.find((x) => x.key === 'title')?.value,
+              description: comp.fields.find((x) => x.key === 'description')?.value,
+              media: comp.actualMedia?.[0],
+              imageSide: side,
+            });
           }
 
           case 'ui_swipeable': {
-            // TODO: account for more than 3 on desktop
             return (
-              <div
-                style={{
-                  margin: '4rem 0',
-                }}
-              >
-                <h3
-                  style={{
-                    margin: '0rem',
-                    padding: '1rem 0.5rem',
-                  }}
-                >
-                  {comp.fields.find((x) => x.key === 'title')?.value}
-                </h3>
-                <div
-                  style={{
-                    display: 'flex',
-                    gap: '1.5rem',
-                    overflowX: 'scroll',
-                    scrollSnapType: 'x mandatory',
-                    width: '100%',
-                    padding: '1rem 0.5rem',
-                  }}
-                >
-                  {comp.actualBlockDataList?.map((block) => {
-                    const image = comp.actualMediaList?.find(
-                      (x) => x.id === block.fields.find((y) => y.key === 'media')?.value,
-                    );
-                    return (
-                      <div
-                        className="sheet"
-                        style={{
-                          minWidth: isMobile ? '75%' : comp.actualBlockDataList?.length == 3 ? '32%' : '24%',
-                          overflow: 'hidden',
-                        }}
-                      >
-                        <img
-                          style={{
-                            width: '100%',
-                            maxHeight: '80%',
-                            objectFit: 'cover',
-                          }}
-                          src={image?.image.url}
-                          alt={image?.image.altText}
-                        />
-                        <div
-                          style={{
-                            padding: '1.5rem',
-                          }}
-                        >
-                          <h3
-                            style={{
-                              margin: '0rem',
-                              textTransform: 'uppercase',
-                              fontWeight: 800,
-                              letterSpacing: '0px',
-                            }}
-                          >
-                            {block.fields.find((x) => x.key === 'title')?.value}
-                          </h3>
-                          <p
-                            style={{
-                              margin: '0.5rem 0',
-                              letterSpacing: '0px',
-                              lineHeight: '157%',
-                              fontSize: '1.5rem',
-                              color: 'var(--gray-70)',
-                            }}
-                          >
-                            {block.fields.find((x) => x.key === 'description')?.value}
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+              <>
+                {comp.actualBlockDataList?.map((block, index) => {
+                  const image = comp.actualMediaList?.find(
+                    (x) => x.id === block.fields.find((y) => y.key === 'media')?.value,
+                  );
+
+                  return renderFiftyFifty({
+                    title: block.fields.find((x) => x.key === 'title')?.value,
+                    description: block.fields.find((x) => x.key === 'description')?.value,
+                    media: image,
+                    imageSide: index % 2 === 0 ? 'Left' : 'Right',
+                  });
+                })}
+              </>
             );
           }
 

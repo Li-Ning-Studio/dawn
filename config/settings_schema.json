@@ -126,13 +126,6 @@
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
       {
-        "type": "font_picker",
-        "id": "type_header_font",
-        "default": "assistant_n4",
-        "label": "t:settings_schema.typography.settings.type_header_font.label",
-        "info": "t:settings_schema.typography.settings.type_header_font.info"
-      },
-      {
         "type": "range",
         "id": "heading_scale",
         "min": 100,
@@ -1440,12 +1433,25 @@
         "id": "currency_code_enabled",
         "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_prices_incl_taxes_message",
+        "label": "t:settings_schema.currency_format.settings.show_prices_incl_taxes_message.label",
+        "default": true
       }
     ]
   },
   {
     "name": "t:settings_schema.cart.name",
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "catalog_mode_enabled",
+        "label": "t:settings_schema.cart.settings.catalog_mode_enabled.label",
+        "info": "t:settings_schema.cart.settings.catalog_mode_enabled.info",
+        "default": false
+      },
       {
         "type": "select",
         "id": "cart_type",

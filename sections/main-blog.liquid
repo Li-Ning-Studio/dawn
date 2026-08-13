@@ -17,12 +17,13 @@
 {%- endstyle -%}
 
 {%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ blog.title | escape }}
-    </h1>
+  <div class="main-blog color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+    <div class="page-width">
+      <h1 class="title--primary color-foreground{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ blog.title | escape }}
+      </h1>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+      <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -31,22 +32,35 @@
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
         >
+          {%- liquid
+            assign article_ratio = 1.66
+            assign media_height = section.settings.image_height
+            if section.settings.image_ratio == 'adapt' and article.image
+              assign article_ratio = article.image.aspect_ratio
+            elsif section.settings.image_ratio == '16-9'
+              assign article_ratio = 1.7778
+            endif
+            if section.settings.image_ratio != 'adapt'
+              assign media_height = 'adapt'
+            endif
+          -%}
           {%- render 'article-card',
             article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
+            media_height: media_height,
+            media_aspect_ratio: article_ratio,
             show_image: section.settings.show_image,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
             show_excerpt: true
           -%}
-        </div>
-      {%- endfor -%}
-    </div>
+          </div>
+        {%- endfor -%}
+      </div>
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    </div>
   </div>
 {%- endpaginate -%}
 
@@ -56,6 +70,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
     {
       "type": "select",
       "id": "layout",
@@ -101,6 +121,22 @@
       ],
       "default": "medium",
       "label": "t:sections.main-blog.settings.image_height.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.featured-blog.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "16-9",
+          "label": "t:sections.featured-blog.settings.image_ratio.options__2.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.featured-blog.settings.image_ratio.label"
     },
     {
       "type": "checkbox",

@@ -216,25 +216,16 @@ slider-component.slider-component-full-width {
   }
 }
 
-/* Scrollbar */
-
+/* Keep sliders scrollable while hiding native scrollbar chrome across browsers. */
 .slider {
-  scrollbar-color: rgba(var(--color-foreground), 0.45) rgba(var(--color-foreground), 0.08);
   -ms-overflow-style: none;
-  scrollbar-width: var(--scrollbar-width);
+  scrollbar-width: none;
 }
+
 .slider::-webkit-scrollbar {
-  height: 6px;
-  width: 6px;
-}
-.slider::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-foreground), 0.45);
-  border-radius: 16px;
-  border: 0;
-}
-.slider::-webkit-scrollbar-track {
-  background: rgba(var(--color-foreground), 0.04);
-  border-radius: 16px;
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .slider-counter {

@@ -1,120 +1,122 @@
 {{ 'services.css' | asset_url | stylesheet_tag }}
 
 {% assign is_product_factory_strung = false %}
+{% assign stringing_trigger_id = 'stringing-trigger-' | append: section.id %}
 
 {% if product.metafields.custom_but_hidden.studio_pro_stringing == 'strung' %}
   {% assign is_product_factory_strung = true %}
 {% endif %}
 
-<section class="frame" id="stringing-frame">
-  <legend class="form__label">
-    <span>{{ 'studio.stringing.form_labels.frame' | t }}</span>
-  </legend>
-  <label class="frame-option sheet" for="unstrung">
-    <input checked type="radio" name="frame" id="unstrung">
-    <span class="frame-name">
-      {% if is_product_factory_strung %}
-        Factory Strung
-      {% else %}
-        {{ 'studio.stringing.form_labels.unstrung' | t }}
-      {% endif %}
-    </span>
-    <span class="frame-description">
-      {% if is_product_factory_strung %}
-        This racket will be pre-strung with our standard factory stringing. Decent for casual games.
-      {% else %}
-        {{ 'studio.stringing.description.unstrung' | t }}
-      {% endif %}
-    </span>
-  </label>
-  <label class="frame-option sheet" for="pro-stringing">
-    <input type="radio" name="frame" id="pro-stringing">
-    <div class="frame-name" style="display: flex; justify-content: space-between; align-items: center;">
-      <span>{{ 'studio.stringing.form_labels.pro_stringing' | t }}</span>
-      <span style="color: var(--gray-50); font-size: 1.3rem;">
-        {%- if all_products['studio-pro-stringing'].price == 0 -%}
-          FREE
-        {%- else -%}
-          {{ all_products['studio-pro-stringing'].price | money }}
-        {%- endif -%}
+{% comment %} <hr style="margin: 2rem 0;"> {% endcomment %}
+<section class="stringing-container service-container">
+  <div
+    id="{{ stringing_trigger_id }}"
+    class="service-card"
+    role="button"
+    tabindex="0"
+  >
+    <div class="service-card__content s3_paragraph">
+      <div class="service-card__title-row">
+        <span>{{ 'studio.stringing.form_labels.pro_stringing' | t }}</span>
+        <span class="service-card__price">
+          {%- if all_products['studio-pro-stringing'].price == 0 -%}
+            {{ 'studio.stringing.labels.free' | t }}
+          {%- else -%}
+            +{{ all_products['studio-pro-stringing'].price | money }}
+          {%- endif -%}
+        </span>
+      </div>
+      <p class="service-card__description" id="stringing-description">
+        {{ 'studio.stringing.description.pro_stringing' | t }}
+      </p>
+      <p class="service-card__selection" id="stringing-current-selection">
+        <span>{{ 'studio.stringing.labels.current_selection' | t }}</span>
+        <span aria-hidden="true">—</span>
+        <span>
+          {%- if is_product_factory_strung -%}
+            {{ 'studio.stringing.form_labels.strung' | t }}
+          {%- else -%}
+            {{ 'studio.stringing.form_labels.unstrung' | t }}
+          {%- endif -%}
+        </span>
+      </p>
+    </div>
+    <div class="service-card__cta">
+      <span class="service-card__cta-text" id="stringing-cta-label">{{ 'studio.stringing.actions.add' | t }}</span>
+      <span class="service-card__cta-icon">
+        {{- 'icon-plus.svg' | inline_asset_content -}}
       </span>
     </div>
-    <span class="frame-description">
-      {{ 'studio.stringing.description.pro_stringing' | t }}
-    </span>
-  </label>
-
-  <section
-    id="stringing-root"
-    style="display: none;"
-    data-stringing-collection-id="{{ settings.stringing_collection_id | default: '' }}"
-    data-tennis-stringing-collection-id="{{ settings.tennis_stringing_collection_id | default: '' }}"
-    data-is-knotting-enabled="{{ settings.is_knotting_enabled_globally | default: false }}"
-    data-stringing-cost="{{ all_products['studio-pro-stringing'].price | money }}"
-    data-knotting-cost="{{ all_products['studio-four-knots-service'].price | money }}"
-    data-max-tension="{{product.metafields.custom.maximum_racket_tension}}"
-  ></section>
+  </div>
 </section>
 
+<section
+  id="stringing-root"
+  style="display: none;"
+  data-stringing-collection-id="{{ settings.stringing_collection_id | default: '' }}"
+  data-is-knotting-enabled="{{ settings.is_knotting_enabled_globally | default: false }}"
+  data-stringing-cost="{{ all_products['studio-pro-stringing'].price | money }}"
+  data-knotting-cost="{{ all_products['studio-four-knots-service'].price | money }}"
+  data-max-tension="{{ product.metafields.custom.maximum_racket_tension }}"
+  data-label-choose-string="{{ 'studio.stringing.headings.choose_string' | t }}"
+  data-label-select-color="{{ 'studio.stringing.headings.select_color' | t }}"
+  data-label-select-tension="{{ 'studio.stringing.headings.select_tension' | t }}"
+  data-label-select-method="{{ 'studio.stringing.headings.select_method' | t }}"
+  data-label-summary="{{ 'studio.stringing.headings.summary' | t }}"
+  data-label-tension-unit="{{ 'studio.stringing.labels.tension_unit' | t }}"
+  data-label-low-tension="{{ 'studio.stringing.labels.low_tension' | t }}"
+  data-label-high-tension="{{ 'studio.stringing.labels.high_tension' | t }}"
+  data-label-strings-guide="{{ 'studio.stringing.labels.strings_guide' | t }}"
+  data-label-no-string="{% if is_product_factory_strung %}{{ 'studio.stringing.form_labels.strung' | t }}{% else %}{{ 'studio.stringing.form_labels.unstrung' | t }}{% endif %}"
+  data-label-two-knots="{{ 'studio.stringing.labels.two_knots' | t }}"
+  data-label-four-knots="{{ 'studio.stringing.labels.four_knots' | t }}"
+  data-label-two-knots-note="{{ 'studio.stringing.description.two_knots' | t }}"
+  data-label-four-knots-note="{{ 'studio.stringing.description.four_knots' | t }}"
+  data-description-service="{{ 'studio.stringing.description.pro_stringing' | t }}"
+  data-filter-all="{{ 'studio.stringing.filters.all' | t }}"
+  data-filter-power="{{ 'studio.stringing.filters.power' | t }}"
+  data-filter-durable="{{ 'studio.stringing.filters.durable' | t }}"
+  data-filter-balanced="{{ 'studio.stringing.filters.balanced' | t }}"
+  data-message-loading="{{ 'studio.stringing.messages.loading' | t }}"
+  data-message-empty="{{ 'studio.stringing.messages.empty' | t }}"
+  data-message-error="{{ 'studio.stringing.errors.load_failed' | t }}"
+  data-error-missing-product="{{ 'studio.stringing.errors.missing_product' | t }}"
+  data-error-missing-variant="{{ 'studio.stringing.errors.missing_variant' | t }}"
+  data-error-missing-tension="{{ 'studio.stringing.errors.missing_tension' | t }}"
+  data-action-add="{{ 'studio.stringing.actions.add' | t }}"
+  data-action-selected="{{ 'studio.stringing.actions.selected' | t }}"
+  data-action-change="{{ 'studio.stringing.actions.change' | t }}"
+  data-action-next="{{ 'studio.stringing.actions.next' | t }}"
+  data-action-back="{{ 'studio.stringing.actions.back' | t }}"
+  data-action-submit="{{ 'studio.stringing.actions.submit' | t }}"
+  data-action-close="{{ 'studio.stringing.actions.close' | t }}"
+  data-action-remove="{{ 'studio.stringing.actions.remove' | t }}"
+  data-close-confirm-message="{{ 'studio.modal_close_guard.message' | t }}"
+  data-close-confirm-keep-editing="{{ 'studio.modal_close_guard.keep_editing' | t }}"
+  data-close-confirm-discard="{{ 'studio.modal_close_guard.discard' | t }}"
+></section>
+
+<script defer="defer" src="{{ 'service-modal-trigger.js' | asset_url }}"></script>
 <script defer="defer">
   document.addEventListener('DOMContentLoaded', () => {
+    const stringingTrigger = document.getElementById('{{ stringing_trigger_id }}');
     const root = document.getElementById('stringing-root');
-    const proStringing = document.getElementById('pro-stringing');
-    let scriptLoaded = false;
-    let scriptLoading = false;
+    const cardDescription = document.getElementById('stringing-description');
 
-    // Function to load the script
-    const loadScript = () => {
-      if (scriptLoaded || scriptLoading) return;
+    window.s3_stringing_service_variant_id = '{{ all_products['studio-pro-stringing'].variants.first.id }}';
+    window.s3_four_knots_service_variant_id = '{{ all_products['studio-four-knots-service'].variants.first.id }}';
 
-      scriptLoading = true;
-      const script = document.createElement('script');
-      script.src = "{{ 'vx-stringing.js' | asset_url }}";
-      script.defer = true;
-      script.type = 'module';
+    if (!stringingTrigger || !root || !window.s3_initServiceModalTrigger) return;
 
-      script.onload = () => {
-        scriptLoaded = true;
-        scriptLoading = false;
-      };
-
-      script.onerror = () => {
-        scriptLoading = false;
-        root.innerHTML = 'Failed to load stringing options. Please refresh the page.';
-      };
-
-      document.body.appendChild(script);
-    };
-
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => loadScript(), { timeout: 4000 });
-    } else {
-      setTimeout(loadScript, 2000);
-    }
-
-    const frameContainer = document.getElementById('stringing-frame');
-    frameContainer?.addEventListener('change', (e) => {
-      if (e.target.name === 'frame') {
-        root.style.display = e.target.id === 'pro-stringing' ? 'block' : 'none';
-
-        if (e.target.id === 'pro-stringing') {
-        document.getElementsByClassName('product-form__submit button')[0]?.classList?.add('glowing');
-          loadScript();
-            setTimeout(() => {
-                window.scrollBy({
-                top: 222,
-                left: 0,
-                behavior: 'smooth'
-            });
-          }, 300)
-        } else {
-          document.getElementsByClassName('product-form__submit button')[0]?.classList?.remove('glowing');
-        }
-      }
+    window.s3_initServiceModalTrigger({
+      serviceKey: 'stringing',
+      triggerEl: stringingTrigger,
+      scriptSrc: "{{ 'vx-stringing.js' | asset_url }}",
+      controllerPath: 's3_stringing_modal_controller',
+      errorTarget: cardDescription,
+      errorMessage: root.dataset.messageError || '',
+      idlePreload: true,
+      enableKeyboard: true,
     });
   });
-
-    // set the services variant id on window
-      window.s3_stringing_service_variant_id = '{{ all_products['studio-pro-stringing'].variants.first.id  }}';
-      window.s3_four_knots_service_variant_id = '{{ all_products['studio-four-knots-service'].variants.first.id  }}';
 </script>

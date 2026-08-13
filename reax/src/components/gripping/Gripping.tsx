@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import { fetchCollectionQuery } from '../../lib/gql';
 import client from '../../lib/shopify-client';
-import { getFreeablePrice } from '../../lib/utils';
 import { ProductNodes, SingleProductNode, TGripConfig } from '../../types';
 
 type GrippingProps = {
@@ -19,6 +18,7 @@ type GrippingProps = {
   };
   descriptions: {
     noGrip: string;
+    applicationNote: string;
   };
   messages: {
     loading: string;
@@ -30,6 +30,23 @@ type GrippingProps = {
 const EMPTY_CONFIG: TGripConfig = {
   grippingProduct: null,
   grippingVariant: null,
+};
+
+const getFreeablePrice = (alreadyFormattedPrice: string | null) => {
+  try {
+    if (!alreadyFormattedPrice) return alreadyFormattedPrice;
+
+    const numericMatch = alreadyFormattedPrice.replace(/[^0-9.-]/g, '');
+    const numericValue = Number.parseFloat(numericMatch);
+
+    if (!Number.isNaN(numericValue) && numericValue === 0) {
+      return 'FREE';
+    }
+
+    return alreadyFormattedPrice;
+  } catch (error) {
+    return alreadyFormattedPrice;
+  }
 };
 
 const Gripping = ({
@@ -315,6 +332,10 @@ const Gripping = ({
             })}
           </div>
         </div>
+      ) : null}
+
+      {descriptions.applicationNote ? (
+        <p style={{ opacity: 0.8, fontSize: '1.45rem', lineHeight: '1.6' }}>{descriptions.applicationNote}</p>
       ) : null}
 
       {/* SUMMARY */}

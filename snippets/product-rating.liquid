@@ -1,0 +1,35 @@
+{% comment %}
+  Renders product rating block for main product section.
+
+  Accepts:
+  - product: {Object} current product
+  - block: {Object} main-product block instance
+{% endcomment %}
+
+{%- if product.metafields.reviews.rating.value != blank -%}
+  {%- liquid
+    assign rating_value = product.metafields.reviews.rating.value.rating
+    assign rating_value_text = rating_value | round: 1
+  -%}
+  <div class="rating-wrapper" {{ block.shopify_attributes }}>
+    <div
+      class="rating"
+      role="img"
+      aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+    >
+      <span style="color: var(--accent-color)" aria-hidden="true" class="rating-star-icon">
+        {{- 'icon-star.svg' | inline_asset_content -}}
+      </span>
+    </div>
+    <span class="product-rating__value">
+      {{- rating_value_text -}}
+    </span>
+    <a class="product-rating__count" href="#judge_product_reviews">
+      ({{ product.metafields.reviews.rating_count }})
+      <span class="visually-hidden">
+        {{- product.metafields.reviews.rating_count }}
+        {{ 'accessibility.total_reviews' | t -}}
+      </span>
+    </a>
+  </div>
+{%- endif -%}
