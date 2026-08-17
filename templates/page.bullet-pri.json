@@ -47,7 +47,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\">\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n   \n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\">\n    <h3 class=\"vaporshaft\">Our Thinnest Shaft yet</h3>\n   \n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 0
@@ -61,7 +61,7 @@
         "subtext": "",
         "text": "<p>Nitrix 80 <strong>Bullet</strong> runs on a <strong>5.9mm</strong> shaft to whip through the swing and still hold its line at contact</p>",
         "max_width": 800,
-        "font_size_desktop": 23,
+        "font_size_desktop": 22,
         "font_size_mobile": 16,
         "letter_spacing": -0.5,
         "font_weight": 600,
@@ -71,7 +71,7 @@
         "button_label": "",
         "button_link": "",
         "padding_top": 12,
-        "padding_bottom": 100
+        "padding_bottom": 40
       }
     },
     "hero_video_component_aThmcz": {
@@ -248,54 +248,6 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_4rCKVt": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_hEhtH9": {
-          "type": "heading",
-          "settings": {
-            "heading": "Resist the Twist",
-            "heading_size": "h1"
-          }
-        },
-        "text_TxmDiP": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Positioned where the frame meets the shaft, T Fuse controls torsion so the racket holds its line even under full-power swings.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_nf7Rnd": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_hEhtH9",
-        "text_TxmDiP",
-        "button_nf7Rnd"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/01_1.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_nVAgUM": {
       "type": "image-with-text",
       "blocks": {
@@ -333,6 +285,54 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_4rCKVt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hEhtH9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Resist the Twist",
+            "heading_size": "h1"
+          }
+        },
+        "text_TxmDiP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Positioned where the frame meets the shaft, T Fuse controls torsion so the racket holds its line even under full-power swings.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_nf7Rnd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hEhtH9",
+        "text_TxmDiP",
+        "button_nf7Rnd"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/01_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
