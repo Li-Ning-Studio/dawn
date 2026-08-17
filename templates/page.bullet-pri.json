@@ -11,9 +11,171 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "custom_liquid_YhDNCt": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"display: flex; flex-direction: column; justify-content: center; align-items: center;\">\n  <p style=\"margin: 6px;\">Introducing</p>\n  <img \n  src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitrix_4xCopy_1.png?v=1786949803\" \n  alt=\"Nitrix Logo\" \n  style=\"max-width: 500px; width: 100%; height: auto; margin: 6px 0; padding: 0 2.5rem\"\n/>\n<p style=\"margin: 6px;\">Crafted for heavy smashes and offensive play</p>\n<a href=\"/products/nitrix-70-venom\" class=\"cta\">\n  <span>SHOP NITRIX</span>\n</a>\n</section>\n\n<style>\n  .cta {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #46a706;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  \n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_video_component_AtzpU8": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Yt_6a944b59-dd02-4e20-a48e-6de5b005ef99.mp4",
+        "mobile_video": "shopify://files/videos/Reel_84c5cc1b-95c7-475c-8d7c-ed7e50bb313b.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "https://in.hndrd.co/products/nitrix-80-bullet-4u",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_EMFnNm": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     Thin hits harder.\n\n    </p>\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 52
+      }
+    },
+    "hero_video_component_aThmcz": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/New project (1).mp4",
+        "mobile_video": "shopify://files/videos/New project (2).mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "studio_text_Aze4Fr": {
+      "type": "studio-text",
+      "name": "t:sections.studio-text.presets.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "subtext": "",
+        "text": "<p>Nitrix 80 <strong>Bullet</strong> runs on a <strong>5.9mm</strong> shaft to whip through the swing and still hold its line at contact</p>",
+        "max_width": 800,
+        "font_size_desktop": 30,
+        "font_size_mobile": 16,
+        "letter_spacing": -1,
+        "font_weight": 700,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "center",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "custom_liquid_CnjbRA": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     Thin hits harder.\n\n    </p>\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_video_component_3zWEnH": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/New project (3).mp4",
+        "mobile_video": "shopify://files/videos/New project (5).mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_YQ8LaD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     Thin hits harder.\n\n    </p>\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_video_component_xQf7Le": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Hyperweave.mp4",
+        "mobile_video": "shopify://files/videos/Hyperweave Sq.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_EyemRh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     6.9mm Vaporshaft\n\n    </p>\n    <h3 class=\"vaporshaft\">T-Fuse</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hero_video_component_qbiReH": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/New project (7).mp4",
+        "mobile_video": "shopify://files/videos/New project (6).mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_cGrrcC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     6.9mm Vaporshaft\n\n    </p>\n    <h3 class=\"vaporshaft\">Thin hits harder.</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "custom_liquid_9bJQen": {
@@ -41,6 +203,18 @@
   },
   "order": [
     "main",
+    "custom_liquid_YhDNCt",
+    "hero_video_component_AtzpU8",
+    "custom_liquid_EMFnNm",
+    "hero_video_component_aThmcz",
+    "studio_text_Aze4Fr",
+    "custom_liquid_CnjbRA",
+    "hero_video_component_3zWEnH",
+    "custom_liquid_YQ8LaD",
+    "hero_video_component_xQf7Le",
+    "custom_liquid_EyemRh",
+    "hero_video_component_qbiReH",
+    "custom_liquid_cGrrcC",
     "custom_liquid_9bJQen",
     "custom_liquid_eXJLmf"
   ]
