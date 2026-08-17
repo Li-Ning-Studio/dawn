@@ -69,7 +69,7 @@
         "muted_opacity": 0.6,
         "text_align": "center",
         "button_label": "",
-        "button_link": "",
+        "button_link": "/",
         "padding_top": 12,
         "padding_bottom": 40
       }
@@ -94,7 +94,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    \n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">Strength borrowed from Aerospace</h3>\n    \n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 0
@@ -106,7 +106,7 @@
       "settings": {
         "color_scheme": "scheme-4",
         "subtext": "",
-        "text": "<p>Nitrix 80 <strong>Bullet</strong> runs on a <strong>5.9mm</strong> shaft to whip through the swing and still hold its line at contact</p>",
+        "text": "<p>AECG+ brings space grade carbon graphite into the frame, adding durability without a gram you'd notice.</p>",
         "max_width": 800,
         "font_size_desktop": 23,
         "font_size_mobile": 16,
@@ -118,7 +118,7 @@
         "button_label": "",
         "button_link": "",
         "padding_top": 12,
-        "padding_bottom": 100
+        "padding_bottom": 40
       }
     },
     "hero_video_component_3zWEnH": {
@@ -141,10 +141,31 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">Woven to Whip</h3>\n    \n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
-        "padding_bottom": 52
+        "padding_bottom": 0
+      }
+    },
+    "studio_text_f6QR7B": {
+      "type": "studio-text",
+      "name": "t:sections.studio-text.presets.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "subtext": "",
+        "text": "<p>The shaft is wrapped in woven carbon strands through <strong>Hyperweave</strong>, giving it a flex that holds its strength.</p>",
+        "max_width": 800,
+        "font_size_desktop": 23,
+        "font_size_mobile": 16,
+        "letter_spacing": -0.5,
+        "font_weight": 600,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "center",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 12,
+        "padding_bottom": 40
       }
     },
     "hero_video_component_xQf7Le": {
@@ -153,33 +174,6 @@
       "settings": {
         "video": "shopify://files/videos/Hyperweave.mp4",
         "mobile_video": "shopify://files/videos/Hyperweave Sq.mp4",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "/",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_EyemRh": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">T-Fuse</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "hero_video_component_qbiReH": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/New project (7).mp4",
-        "mobile_video": "shopify://files/videos/New project (6).mp4",
         "subtitle": "",
         "title": "",
         "description": "",
@@ -378,9 +372,8 @@
     "studio_text_pjDCG4",
     "hero_video_component_3zWEnH",
     "custom_liquid_YQ8LaD",
+    "studio_text_f6QR7B",
     "hero_video_component_xQf7Le",
-    "custom_liquid_EyemRh",
-    "hero_video_component_qbiReH",
     "custom_liquid_cGrrcC",
     "image_with_text_JVfCFp",
     "image_with_text_nVAgUM",
