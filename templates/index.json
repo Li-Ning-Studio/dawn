@@ -9,6 +9,38 @@
  */
 {
   "sections": {
+    "hero_component_mGMHCw": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/2_f7d49388-07f3-4367-8b6a-dc8286802285.jpg",
+        "mobile_image": "shopify://shop_images/1_3bb13bec-f4d7-4f49-9d26-874b9bbb9c60.jpg",
+        "subtitle": "Introducing",
+        "title": "Nitrix 80 Bullet",
+        "description": "HNDRD's thinnest professional racket yet",
+        "button_text": "CLAIM NOW",
+        "link_to": "shopify://pages/bullet80",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "swipeable_products_7CkaLw": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "nitrix-80-bullet",
+          "nitrix-80-bullet-4u",
+          "nitrix-80-bullet-5u"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 20
+      }
+    },
     "custom_liquid_3gkjyw": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -424,6 +456,8 @@
     }
   },
   "order": [
+    "hero_component_mGMHCw",
+    "swipeable_products_7CkaLw",
     "custom_liquid_3gkjyw",
     "hero_component_F6qDKQ",
     "swipeable_products_A6gXg4",
