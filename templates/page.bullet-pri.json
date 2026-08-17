@@ -47,7 +47,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     Thin hits harder.\n\n    </p>\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\">\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 52
@@ -71,6 +71,7 @@
     },
     "studio_text_Aze4Fr": {
       "type": "studio-text",
+      "disabled": true,
       "name": "t:sections.studio-text.presets.name",
       "settings": {
         "color_scheme": "scheme-4",
@@ -94,9 +95,9 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     Thin hits harder.\n\n    </p>\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
-        "padding_top": 40,
+        "padding_top": 100,
         "padding_bottom": 52
       }
     },
@@ -120,9 +121,9 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     Thin hits harder.\n\n    </p>\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
-        "padding_top": 40,
+        "padding_top": 100,
         "padding_bottom": 52
       }
     },
@@ -144,9 +145,10 @@
     },
     "custom_liquid_EyemRh": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <p style=\"margin: 3px 0;\">\n     6.9mm Vaporshaft\n\n    </p>\n    <h3 class=\"vaporshaft\">T-Fuse</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">T-Fuse</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 40,
         "padding_bottom": 52
