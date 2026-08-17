@@ -47,10 +47,31 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\">\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\">\n    <h3 class=\"vaporshaft\">6.1mm Vaporshaft</h3>\n   \n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
         "color_scheme": "scheme-4",
         "padding_top": 100,
-        "padding_bottom": 52
+        "padding_bottom": 0
+      }
+    },
+    "studio_text_Aze4Fr": {
+      "type": "studio-text",
+      "name": "t:sections.studio-text.presets.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "subtext": "",
+        "text": "<p>Nitrix 80 <strong>Bullet</strong> runs on a <strong>5.9mm</strong> shaft to whip through the swing and still hold its line at contact</p>",
+        "max_width": 800,
+        "font_size_desktop": 23,
+        "font_size_mobile": 16,
+        "letter_spacing": -0.5,
+        "font_weight": 600,
+        "line_height": 1.6,
+        "muted_opacity": 0.6,
+        "text_align": "center",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 12,
+        "padding_bottom": 100
       }
     },
     "hero_video_component_aThmcz": {
@@ -69,36 +90,35 @@
         "padding_bottom": 0
       }
     },
-    "studio_text_Aze4Fr": {
+    "custom_liquid_CnjbRA": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    \n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "studio_text_pjDCG4": {
       "type": "studio-text",
-      "disabled": true,
       "name": "t:sections.studio-text.presets.name",
       "settings": {
         "color_scheme": "scheme-4",
         "subtext": "",
         "text": "<p>Nitrix 80 <strong>Bullet</strong> runs on a <strong>5.9mm</strong> shaft to whip through the swing and still hold its line at contact</p>",
         "max_width": 800,
-        "font_size_desktop": 30,
+        "font_size_desktop": 23,
         "font_size_mobile": 16,
-        "letter_spacing": -1,
-        "font_weight": 700,
+        "letter_spacing": -0.5,
+        "font_weight": 600,
         "line_height": 1.6,
         "muted_opacity": 0.6,
         "text_align": "center",
         "button_label": "",
         "button_link": "",
-        "padding_top": 100,
+        "padding_top": 12,
         "padding_bottom": 100
-      }
-    },
-    "custom_liquid_CnjbRA": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem\" >\n    <h3 class=\"vaporshaft\">AECG+</h3>\n    <p style=\"margin: 3px 0;\"> \n      Engineered to cut drag, load quicker, and generate a powerful whip.\n    </p>\n  </section>\n  \n  <style>\n    .vaporshaft {\n      letter-spacing: -1px;\n      margin: 0;\n      font-weight: 800;\n      font-size: 3rem;\n      background-image: linear-gradient(-225deg, #46a706 0%, #39F3BB 100%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      -webkit-text-fill-color: transparent;\n      color: transparent; \n    }\n  \n    @media screen and (min-width: 750px) {\n      .vaporshaft {\n        font-size: 4rem;\n        padding: 0 8rem\n      }\n    }\n  </style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 52
       }
     },
     "hero_video_component_3zWEnH": {
@@ -180,6 +200,150 @@
         "padding_bottom": 52
       }
     },
+    "image_with_text_JVfCFp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7HHTRg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Curve² Frame",
+            "heading_size": "h1"
+          }
+        },
+        "text_j46mwB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Curve2 reshapes the frame to widen the sweet spot, turning a large area of the head into a clean contact zone.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_3FgdmW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7HHTRg",
+        "text_j46mwB",
+        "button_3FgdmW"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/03_1fe58d76-96bf-4459-b032-c811be576887.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_4rCKVt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hEhtH9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Resist the Twist",
+            "heading_size": "h1"
+          }
+        },
+        "text_TxmDiP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Positioned where the frame meets the shaft, T Fuse controls torsion so the racket holds its line even under full-power swings.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_nf7Rnd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hEhtH9",
+        "text_TxmDiP",
+        "button_nf7Rnd"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/01_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_nVAgUM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_38Wihe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shock Stops Here",
+            "heading_size": "h1"
+          }
+        },
+        "text_hxPHmR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CNTRL foam sits inside the frame, absorbing shock at the point of contact so it never reaches your hand.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_VWBMip": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_38Wihe",
+        "text_hxPHmR",
+        "button_VWBMip"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/02_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_liquid_9bJQen": {
       "type": "custom-liquid",
       "disabled": true,
@@ -208,15 +372,19 @@
     "custom_liquid_YhDNCt",
     "hero_video_component_AtzpU8",
     "custom_liquid_EMFnNm",
-    "hero_video_component_aThmcz",
     "studio_text_Aze4Fr",
+    "hero_video_component_aThmcz",
     "custom_liquid_CnjbRA",
+    "studio_text_pjDCG4",
     "hero_video_component_3zWEnH",
     "custom_liquid_YQ8LaD",
     "hero_video_component_xQf7Le",
     "custom_liquid_EyemRh",
     "hero_video_component_qbiReH",
     "custom_liquid_cGrrcC",
+    "image_with_text_JVfCFp",
+    "image_with_text_nVAgUM",
+    "image_with_text_4rCKVt",
     "custom_liquid_9bJQen",
     "custom_liquid_eXJLmf"
   ]
