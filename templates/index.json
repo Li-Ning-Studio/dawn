@@ -9,6 +9,34 @@
  */
 {
   "sections": {
+    "hero_video_component_wbfyNC": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/68c035a7370f4e9a9f629820ea132d4c.HD-1080p-7.2Mbps-91728757.mp4",
+        "mobile_video": "shopify://files/videos/40a5a5d7de1a41f68877e5928a594336.HD-1080p-7.2Mbps-91729024.mp4",
+        "subtitle": "Introducing",
+        "title": "Nitrix 80 Bullet",
+        "description": "HNDRD's thinnest professional racket yet",
+        "button_text": "CLAIM NOW",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_Mcmfew": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Swipeable Products",
+        "products": [],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_n9R8Ji": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -269,6 +297,8 @@
     }
   },
   "order": [
+    "hero_video_component_wbfyNC",
+    "swipeable_products_Mcmfew",
     "hero_component_n9R8Ji",
     "swipeable_products_qF6iTW",
     "hero_component_gKmhp8",
