@@ -9,6 +9,91 @@
  */
 {
   "sections": {
+    "responsive_slideshow_iH6DVM": {
+      "type": "responsive-slideshow",
+      "blocks": {
+        "slide_rHCyVx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/01_851b27f2-9207-45b4-88ca-69aa6e7c8fed.jpg",
+            "mobile_image": "shopify://shop_images/02_696a7b53-963d-493d-babe-0dff06b22867.jpg",
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": ""
+          }
+        },
+        "slide_TWn4Lm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_e6cd7699-fe86-4bd8-b5b4-9c9d9ec61a8e.png",
+            "mobile_image": "shopify://shop_images/Banner_Responsive_9bb705d6-ba2c-4138-bd2b-988c89249d05.jpg",
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": ""
+          }
+        },
+        "slide_9LYRUq": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_rHCyVx",
+        "slide_TWn4Lm",
+        "slide_9LYRUq"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {}
+    },
+    "hero_component_xTDVjV": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01_851b27f2-9207-45b4-88ca-69aa6e7c8fed.jpg",
+        "mobile_image": "shopify://shop_images/02_696a7b53-963d-493d-babe-0dff06b22867.jpg",
+        "subtitle": "BLADEX 880 | SHIDA EDITION",
+        "title": "SPEED HAS A SIGNATURE",
+        "description": "Light in the hand. Sharp through the air. Precise at every strike.",
+        "button_text": "Get Yours Now!",
+        "link_to": "shopify://products/bladex-880-shida-4ug6",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_zQQwqq": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Bladex 880 Shida Edition",
+        "products": [
+          "bladex-880-shida",
+          "bladex-880-shida-4ug6"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_wCCxbf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"cat-premium\">\n  <div class=\"cat-premium__inner\">\n\n    <!-- HEADER -->\n    <div class=\"cat-premium__header\">\n\n      <span class=\"cat-premium__eyebrow\">\n        SHOP BY CATEGORY\n      </span>\n\n      <h2 class=\"cat-premium__title\">\n        Find Your Gear\n      </h2>\n\n      <p class=\"cat-premium__intro\">\n        Everything you need for the court, all in one place.\n      </p>\n\n    </div>\n\n\n    <!-- GRID -->\n    <div class=\"cat-premium__grid\">\n\n\n      <!-- =====================================================\n           RACKETS\n      ====================================================== -->\n      <a\n        href=\"/collections/best-selling-rackets\"\n        class=\"cat-card cat-card--rackets cat-card--wide\"\n      >\n\n        <div class=\"cat-card__media\">\n\n          <picture>\n\n            <!-- MOBILE -->\n            <source\n              media=\"(max-width: 600px)\"\n              srcset=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Screenshot_2026-08-28_at_2.45.13_PM.png?v=1787908576\"\n            >\n\n            <!-- DESKTOP / TABLET -->\n            <img\n              src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2c0937f2-18f2-48bd-8fb7-80d6d1d6a503.png?v=1787901616\"\n              alt=\"Badminton rackets\"\n              loading=\"lazy\"\n            >\n\n          </picture>\n\n        </div>\n\n        <div class=\"cat-card__info\">\n\n          <div class=\"cat-card__text\">\n\n            <span class=\"cat-card__kicker\">\n              Performance Rackets\n            </span>\n\n            <h3 class=\"cat-card__title\">\n              Rackets\n            </h3>\n\n          </div>\n\n          <span class=\"cat-card__action\">\n\n            <span class=\"cat-card__action-text\">\n              Shop\n            </span>\n\n            <span class=\"cat-card__arrow\">\n              <svg viewBox=\"0 0 24 24\">\n                <path d=\"M5 12h13M13 6l6 6-6 6\"/>\n              </svg>\n            </span>\n\n          </span>\n\n        </div>\n\n      </a>\n\n\n      <!-- =====================================================\n           SHOES\n      ====================================================== -->\n      <a\n        href=\"/collections/best-selling-shoes\"\n        class=\"cat-card cat-card--shoes\"\n      >\n\n        <div class=\"cat-card__media\">\n\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Artboard_4_a047769a-d42e-4ee3-ba7d-1fd4e93e4056.jpg?v=1780033607\"\n            alt=\"Badminton shoes\"\n            loading=\"lazy\"\n          >\n\n        </div>\n\n        <div class=\"cat-card__info\">\n\n          <div class=\"cat-card__text\">\n\n            <span class=\"cat-card__kicker\">\n              Court Essentials\n            </span>\n\n            <h3 class=\"cat-card__title\">\n              Shoes\n            </h3>\n\n          </div>\n\n          <span class=\"cat-card__arrow\">\n            <svg viewBox=\"0 0 24 24\">\n              <path d=\"M5 12h13M13 6l6 6-6 6\"/>\n            </svg>\n          </span>\n\n        </div>\n\n      </a>\n\n\n      <!-- =====================================================\n           KITBAGS\n      ====================================================== -->\n      <a\n        href=\"/collections/best-selling-kit-bags\"\n        class=\"cat-card cat-card--kitbags\"\n      >\n\n        <div class=\"cat-card__media\">\n\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/ChatGPT_Image_Aug_28_2026_12_01_35_PM.png?v=1787898722\"\n            alt=\"Badminton kitbags\"\n            loading=\"lazy\"\n          >\n\n        </div>\n\n        <div class=\"cat-card__info\">\n\n          <div class=\"cat-card__text\">\n\n            <span class=\"cat-card__kicker\">\n              Carry Your Game\n            </span>\n\n            <h3 class=\"cat-card__title\">\n              Kitbags\n            </h3>\n\n          </div>\n\n          <span class=\"cat-card__arrow\">\n            <svg viewBox=\"0 0 24 24\">\n              <path d=\"M5 12h13M13 6l6 6-6 6\"/>\n            </svg>\n          </span>\n\n        </div>\n\n      </a>\n\n\n      <!-- =====================================================\n           BACKPACKS\n      ====================================================== -->\n      <a\n        href=\"/collections/backpacks\"\n        class=\"cat-card cat-card--backpacks\"\n      >\n\n        <div class=\"cat-card__media\">\n\n          <img\n            src=\"https://in.lining.studio/cdn/shop/files/Template_01_cf56ccc791.jpg?v=1749900031&width=1200\"\n            alt=\"Backpacks\"\n            loading=\"lazy\"\n          >\n\n        </div>\n\n        <div class=\"cat-card__info\">\n\n          <div class=\"cat-card__text\">\n\n            <span class=\"cat-card__kicker\">\n              Everyday Carry\n            </span>\n\n            <h3 class=\"cat-card__title\">\n              Backpacks\n            </h3>\n\n          </div>\n\n          <span class=\"cat-card__arrow\">\n            <svg viewBox=\"0 0 24 24\">\n              <path d=\"M5 12h13M13 6l6 6-6 6\"/>\n            </svg>\n          </span>\n\n        </div>\n\n      </a>\n\n\n      <!-- =====================================================\n           APPAREL\n      ====================================================== -->\n      <a\n        href=\"/collections/apparels\"\n        class=\"cat-card cat-card--apparel\"\n      >\n\n        <div class=\"cat-card__media\">\n\n          <img\n            src=\"https://in.lining.studio/cdn/shop/files/1_5b9d2aa3-c709-4811-8150-9119b330a67c.jpg?v=1752900767&width=1200\"\n            alt=\"Badminton apparel\"\n            loading=\"lazy\"\n          >\n\n        </div>\n\n        <div class=\"cat-card__info\">\n\n          <div class=\"cat-card__text\">\n\n            <span class=\"cat-card__kicker\">\n              Built To Move\n            </span>\n\n            <h3 class=\"cat-card__title\">\n              Apparel\n            </h3>\n\n          </div>\n\n          <span class=\"cat-card__arrow\">\n            <svg viewBox=\"0 0 24 24\">\n              <path d=\"M5 12h13M13 6l6 6-6 6\"/>\n            </svg>\n          </span>\n\n        </div>\n\n      </a>\n\n\n      <!-- =====================================================\n           SHUTTLECOCKS\n      ====================================================== -->\n      <a\n        href=\"/collections/shuttlecocks\"\n        class=\"cat-card cat-card--shuttlecocks\"\n      >\n\n        <div class=\"cat-card__media\">\n\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/2d85adc0-c888-48c1-b43a-215aa91b93c5.png?v=1787909578\"\n            alt=\"Badminton shuttlecocks\"\n            loading=\"lazy\"\n          >\n\n        </div>\n\n        <div class=\"cat-card__info\">\n\n          <div class=\"cat-card__text\">\n\n            <span class=\"cat-card__kicker\">\n              Built For Flight\n            </span>\n\n            <h3 class=\"cat-card__title\">\n              Shuttlecocks\n            </h3>\n\n          </div>\n\n          <span class=\"cat-card__arrow\">\n            <svg viewBox=\"0 0 24 24\">\n              <path d=\"M5 12h13M13 6l6 6-6 6\"/>\n            </svg>\n          </span>\n\n        </div>\n\n      </a>\n\n\n      <!-- =====================================================\n           ACCESSORIES\n      ====================================================== -->\n      <a\n        href=\"/collections/accessories\"\n        class=\"cat-card cat-card--accessories\"\n      >\n\n        <div class=\"cat-card__media\">\n\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/9a6e1c36-e0f4-441f-a63e-3ea8140c510a.png?v=1787909655\"\n            alt=\"Badminton accessories\"\n            loading=\"lazy\"\n          >\n\n        </div>\n\n        <div class=\"cat-card__info\">\n\n          <div class=\"cat-card__text\">\n\n            <span class=\"cat-card__kicker\">\n              Finish The Setup\n            </span>\n\n            <h3 class=\"cat-card__title\">\n              Accessories\n            </h3>\n\n          </div>\n\n          <span class=\"cat-card__arrow\">\n            <svg viewBox=\"0 0 24 24\">\n              <path d=\"M5 12h13M13 6l6 6-6 6\"/>\n            </svg>\n          </span>\n\n        </div>\n\n      </a>\n\n\n    </div>\n\n  </div>\n</section>\n\n\n<style>\n\n/* =========================================================\n   SECTION\n========================================================= */\n\n.cat-premium {\n  width: 100%;\n  overflow: hidden;\n\n  padding: 74px 24px 88px;\n\n  background: #ffffff;\n}\n\n.cat-premium *,\n.cat-premium *::before,\n.cat-premium *::after {\n  box-sizing: border-box;\n}\n\n.cat-premium__inner {\n  width: 100%;\n  max-width: 1460px;\n\n  margin: 0 auto;\n}\n\n\n/* =========================================================\n   HEADER\n========================================================= */\n\n.cat-premium__header {\n  max-width: 660px;\n\n  margin: 0 auto 40px;\n\n  text-align: center;\n}\n\n.cat-premium__eyebrow {\n  display: block;\n\n  margin-bottom: 10px;\n\n  color: #8d939c;\n\n  font-size: 10px;\n  font-weight: 700;\n\n  line-height: 1;\n\n  letter-spacing: 2.1px;\n}\n\n.cat-premium__title {\n  margin: 0;\n\n  color: #101216;\n\n  font-size: clamp(38px, 4vw, 56px);\n\n  line-height: .96;\n\n  font-weight: 750;\n\n  letter-spacing: -2.6px;\n}\n\n.cat-premium__intro {\n  max-width: 500px;\n\n  margin: 14px auto 0;\n\n  color: #747a83;\n\n  font-size: 14px;\n  line-height: 1.5;\n}\n\n\n/* =========================================================\n   DESKTOP GRID\n========================================================= */\n\n.cat-premium__grid {\n  display: grid;\n\n  grid-template-columns:\n    repeat(12, minmax(0, 1fr));\n\n  grid-template-rows:\n    repeat(2, 345px);\n\n  gap: 14px;\n}\n\n\n/* =========================================================\n   DESKTOP POSITIONS\n========================================================= */\n\n/* TOP ROW */\n\n.cat-card--rackets {\n  grid-column: 1 / span 6;\n  grid-row: 1;\n}\n\n.cat-card--shoes {\n  grid-column: 7 / span 3;\n  grid-row: 1;\n}\n\n.cat-card--kitbags {\n  grid-column: 10 / span 3;\n  grid-row: 1;\n}\n\n\n/* BOTTOM ROW */\n\n.cat-card--backpacks {\n  grid-column: 1 / span 3;\n  grid-row: 2;\n}\n\n.cat-card--apparel {\n  grid-column: 4 / span 3;\n  grid-row: 2;\n}\n\n.cat-card--shuttlecocks {\n  grid-column: 7 / span 3;\n  grid-row: 2;\n}\n\n.cat-card--accessories {\n  grid-column: 10 / span 3;\n  grid-row: 2;\n}\n\n\n/* =========================================================\n   UNIFIED PREMIUM COLOR\n========================================================= */\n\n.cat-card--rackets,\n.cat-card--shoes,\n.cat-card--kitbags,\n.cat-card--backpacks,\n.cat-card--apparel,\n.cat-card--shuttlecocks,\n.cat-card--accessories {\n  --card-bg: #f5f8fc;\n}\n\n\n/* =========================================================\n   CARD\n========================================================= */\n\n.cat-card {\n  position: relative;\n\n  min-width: 0;\n\n  display: flex;\n  flex-direction: column;\n\n  overflow: hidden;\n\n  border-radius: 20px;\n\n  background: #ffffff;\n\n  color: #11151a;\n\n  text-decoration: none;\n\n  border:\n    1px solid\n    rgba(35, 65, 105, .07);\n\n  box-shadow:\n    0 2px 10px\n    rgba(20, 35, 55, .022);\n\n  -webkit-tap-highlight-color:\n    transparent;\n\n  transition:\n    transform .35s cubic-bezier(.2,.7,.2,1),\n    box-shadow .35s ease,\n    border-color .35s ease;\n}\n\n\n/* =========================================================\n   MEDIA\n========================================================= */\n\n.cat-card__media {\n  position: relative;\n\n  flex: 1;\n\n  min-height: 0;\n\n  overflow: hidden;\n\n  background: #ffffff;\n}\n\n.cat-card__media img {\n  position: absolute;\n\n  inset: 0;\n\n  display: block;\n\n  width: 100%;\n  height: 100%;\n\n  object-fit: cover;\n\n  object-position: center;\n\n  transition:\n    transform\n    .75s\n    cubic-bezier(.2,.72,.2,1);\n}\n\n\n/* =========================================================\n   PICTURE SUPPORT\n========================================================= */\n\n.cat-card__media picture {\n  position: absolute;\n\n  inset: 0;\n\n  display: block;\n\n  width: 100%;\n  height: 100%;\n}\n\n.cat-card__media picture img {\n  position: absolute;\n\n  inset: 0;\n\n  width: 100%;\n  height: 100%;\n\n  object-fit: cover;\n\n  object-position: center;\n}\n\n\n/* =========================================================\n   INDIVIDUAL IMAGE POSITION\n========================================================= */\n\n.cat-card--rackets\n.cat-card__media img {\n  object-position: center center;\n}\n\n.cat-card--shoes\n.cat-card__media img {\n  object-position: center center;\n}\n\n.cat-card--kitbags\n.cat-card__media img {\n  object-position: center center;\n}\n\n.cat-card--backpacks\n.cat-card__media img {\n  object-position: center center;\n}\n\n.cat-card--apparel\n.cat-card__media img {\n  object-position: center center;\n}\n\n.cat-card--shuttlecocks\n.cat-card__media img {\n  object-position: center center;\n}\n\n.cat-card--accessories\n.cat-card__media img {\n  object-position: center center;\n}\n\n\n/* =========================================================\n   SMALL PREMIUM FADE\n========================================================= */\n\n.cat-card__media::after {\n  content: \"\";\n\n  position: absolute;\n\n  left: 0;\n  right: 0;\n  bottom: 0;\n\n  height: 20px;\n\n  pointer-events: none;\n\n  background:\n    linear-gradient(\n      to bottom,\n      rgba(245, 248, 252, 0),\n      rgba(245, 248, 252, .58) 62%,\n      #f5f8fc 100%\n    );\n}\n\n\n/* =========================================================\n   INFO BAR\n========================================================= */\n\n.cat-card__info {\n  position: relative;\n\n  z-index: 3;\n\n  flex: 0 0 auto;\n\n  min-height: 74px;\n\n  display: flex;\n\n  align-items: center;\n  justify-content: space-between;\n\n  gap: 12px;\n\n  padding:\n    11px\n    15px\n    12px\n    17px;\n\n  background: #f5f8fc;\n}\n\n\n/* RACKETS FEATURE */\n\n.cat-card--wide\n.cat-card__info {\n  min-height: 78px;\n\n  padding-left: 22px;\n  padding-right: 17px;\n}\n\n\n/* =========================================================\n   TEXT\n========================================================= */\n\n.cat-card__text {\n  min-width: 0;\n}\n\n.cat-card__kicker {\n  display: block;\n\n  margin-bottom: 4px;\n\n  color:\n    rgba(31, 45, 61, .50);\n\n  font-size: 8.5px;\n\n  line-height: 1.15;\n\n  font-weight: 600;\n\n  letter-spacing: .15px;\n}\n\n.cat-card__title {\n  margin: 0;\n\n  color: #11151a;\n\n  font-size:\n    clamp(\n      18px,\n      1.55vw,\n      24px\n    );\n\n  line-height: 1;\n\n  font-weight: 750;\n\n  letter-spacing: -.7px;\n}\n\n.cat-card--wide\n.cat-card__title {\n  font-size:\n    clamp(\n      24px,\n      2vw,\n      30px\n    );\n}\n\n\n/* =========================================================\n   ACTION\n========================================================= */\n\n.cat-card__action {\n  flex: 0 0 auto;\n\n  display: flex;\n\n  align-items: center;\n\n  gap: 9px;\n}\n\n.cat-card__action-text {\n  color: #292929;\n\n  font-size: 8.5px;\n\n  line-height: 1;\n\n  font-weight: 700;\n\n  text-transform: uppercase;\n\n  letter-spacing: .8px;\n}\n\n\n/* =========================================================\n   ARROW\n========================================================= */\n\n.cat-card__arrow {\n  flex: 0 0 36px;\n\n  width: 36px;\n  height: 36px;\n\n  display: flex;\n\n  align-items: center;\n  justify-content: center;\n\n  border-radius: 50%;\n\n  background: #ffffff;\n\n  color: #11151a;\n\n  border:\n    1px solid\n    rgba(24, 49, 80, .07);\n\n  box-shadow:\n    0 3px 10px\n    rgba(20, 35, 55, .03);\n\n  transition:\n    transform .3s ease,\n    background .3s ease,\n    color .3s ease,\n    box-shadow .3s ease;\n}\n\n.cat-card__arrow svg {\n  width: 14px;\n  height: 14px;\n\n  fill: none;\n\n  stroke: currentColor;\n\n  stroke-width: 1.7;\n\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n\n\n/* =========================================================\n   DESKTOP HOVER\n========================================================= */\n\n@media\n(hover:hover)\nand\n(pointer:fine) {\n\n  .cat-card:hover {\n    transform:\n      translateY(-4px);\n\n    border-color:\n      rgba(27,60,100,.12);\n\n    box-shadow:\n      0 16px 38px\n      rgba(25,45,70,.065);\n  }\n\n  .cat-card:hover\n  .cat-card__media img {\n    transform:\n      scale(1.025);\n  }\n\n  .cat-card:hover\n  .cat-card__arrow {\n    transform:\n      translateX(2px);\n\n    background: #11151a;\n\n    color: #ffffff;\n\n    box-shadow:\n      0 5px 14px\n      rgba(17,21,26,.12);\n  }\n\n}\n\n\n/* =========================================================\n   TABLET\n========================================================= */\n\n@media\nscreen and\n(max-width: 1000px) {\n\n  .cat-premium {\n    padding:\n      62px\n      18px\n      70px;\n  }\n\n  .cat-premium__grid {\n    grid-template-columns:\n      repeat(\n        2,\n        minmax(0,1fr)\n      );\n\n    grid-template-rows: none;\n\n    gap: 12px;\n  }\n\n  .cat-card,\n  .cat-card--wide {\n    grid-column:\n      auto !important;\n\n    grid-row:\n      auto !important;\n\n    height: 320px;\n  }\n\n\n  /* RACKETS FULL WIDTH */\n\n  .cat-card--rackets {\n    grid-column:\n      1 / -1 !important;\n\n    height: 355px;\n  }\n\n}\n\n\n/* =========================================================\n   MOBILE\n========================================================= */\n\n@media\nscreen and\n(max-width: 600px) {\n\n  .cat-premium {\n    padding:\n      46px\n      12px\n      54px;\n  }\n\n\n  /* HEADER */\n\n  .cat-premium__header {\n    margin-bottom: 26px;\n  }\n\n  .cat-premium__eyebrow {\n    margin-bottom: 9px;\n\n    font-size: 8px;\n\n    letter-spacing: 1.6px;\n  }\n\n  .cat-premium__title {\n    font-size: 34px;\n\n    letter-spacing: -1.7px;\n  }\n\n  .cat-premium__intro {\n    max-width: 290px;\n\n    margin-top: 11px;\n\n    font-size: 12px;\n  }\n\n\n  /* GRID */\n\n  .cat-premium__grid {\n    grid-template-columns:\n      repeat(\n        2,\n        minmax(0,1fr)\n      );\n\n    gap: 8px;\n  }\n\n\n  /* CARDS */\n\n  .cat-card,\n  .cat-card--wide {\n    height: 265px;\n\n    border-radius: 15px;\n\n    grid-column:\n      auto !important;\n  }\n\n\n  /* RACKETS FEATURE */\n\n  .cat-card--rackets {\n    grid-column:\n      1 / -1 !important;\n\n    height: 310px;\n  }\n\n\n  /* MOBILE RACKET IMAGE */\n\n  .cat-card--rackets\n  .cat-card__media picture img {\n    object-position: center center;\n  }\n\n\n  /* FADE */\n\n  .cat-card__media::after {\n    height: 14px;\n  }\n\n\n  /* INFO */\n\n  .cat-card__info,\n  .cat-card--wide\n  .cat-card__info {\n\n    min-height: 64px;\n\n    padding:\n      9px\n      9px\n      10px\n      11px;\n  }\n\n\n  /* TEXT */\n\n  .cat-card__kicker {\n    margin-bottom: 3px;\n\n    font-size: 7px;\n  }\n\n  .cat-card__title,\n  .cat-card--wide\n  .cat-card__title {\n\n    font-size: 15px;\n\n    letter-spacing: -.45px;\n  }\n\n  .cat-card--rackets\n  .cat-card__title {\n\n    font-size: 21px;\n  }\n\n\n  /* HIDE SHOP TEXT */\n\n  .cat-card__action-text {\n    display: none;\n  }\n\n\n  /* ARROW */\n\n  .cat-card__arrow {\n    flex-basis: 30px;\n\n    width: 30px;\n    height: 30px;\n  }\n\n  .cat-card__arrow svg {\n    width: 12px;\n    height: 12px;\n  }\n\n}\n\n\n/* =========================================================\n   SMALL MOBILE\n========================================================= */\n\n@media\nscreen and\n(max-width: 370px) {\n\n  .cat-premium {\n    padding-left: 9px;\n    padding-right: 9px;\n  }\n\n  .cat-premium__grid {\n    gap: 7px;\n  }\n\n  .cat-card,\n  .cat-card--wide {\n    height: 245px;\n  }\n\n  .cat-card--rackets {\n    height: 290px;\n  }\n\n  .cat-card__title,\n  .cat-card--wide\n  .cat-card__title {\n    font-size: 14px;\n  }\n\n  .cat-card--rackets\n  .cat-card__title {\n    font-size: 20px;\n  }\n\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
     "hero_component_ErFhK9": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -39,51 +124,17 @@
         "padding_bottom": 20
       }
     },
-    "hero_component_xTDVjV": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/1_39d291b3-67aa-4415-8fbd-6425052f2209.png",
-        "mobile_image": "shopify://shop_images/1R_72c2f25a-c82a-4b72-824d-10cde889e1d1.png",
-        "subtitle": "BladeX Series",
-        "title": "Swings & Slays!",
-        "description": "Ultra mobility redesigned; makes you feel its a part of you",
-        "button_text": "Get Yours Now!",
-        "link_to": "shopify://pages/bladex-assassin",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_zQQwqq": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "BladeX Series",
-        "products": [
-          "bladex-assassin-5u",
-          "bladex-800-speed-5u",
-          "bladex-600-5u",
-          "bladex-200-4u",
-          "bladex-700-4u"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "hero_component_D4bCLN": {
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/1_1144d809-5607-49d2-837c-b76e28b501ce.png",
-        "mobile_image": "shopify://shop_images/1R.png",
-        "subtitle": "Ranger Force",
-        "title": "May the Force be with you",
-        "description": "Experience grip that pulls you in",
+        "image": "shopify://shop_images/Banner_e6cd7699-fe86-4bd8-b5b4-9c9d9ec61a8e.png",
+        "mobile_image": "shopify://shop_images/Banner_Responsive_9bb705d6-ba2c-4138-bd2b-988c89249d05.jpg",
+        "subtitle": "Axforce Warrior",
+        "title": "MAKE THE COURT HEAR IT",
+        "description": "Head-heavy power. A flexible shaft. Smashes that announce themselves.",
         "button_text": "CHECK IT OUT",
-        "link_to": "shopify://pages/ranger-force",
+        "link_to": "shopify://products/axforce-warrior-5u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -93,9 +144,10 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Feel the force",
+        "title": "AxForce Warrior Edition",
         "products": [
-          "ranger-force"
+          "axforce-warrior",
+          "axforce-warrior-5u"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -103,11 +155,55 @@
         "padding_bottom": 20
       }
     },
-    "custom_liquid_wCCxbf": {
+    "hero_component_NrAraR": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Category-Banner_0e0cc0d7-68b4-42d6-b23b-4fc3b417067e.jpg",
+        "mobile_image": "shopify://shop_images/Category-Banner-Responsive_e8ff5690-e9cd-4bfa-9292-97c5d94589b9.jpg",
+        "subtitle": "Kit Bags",
+        "title": "Gear Up. Move Strong.",
+        "description": "Whether you're heading to practice or a tournament, carry your gear in style with bags that blend function and flair.",
+        "button_text": "Bag It Today",
+        "link_to": "shopify://collections/badminton-bags",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_BcAtaU": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "KitBag Collections",
+        "products": [
+          "mercury-kit-bag",
+          "constance-kit-bag-1",
+          "noir-kit-bag",
+          "freestyle-kit-bag",
+          "kiro-backpack",
+          "monarch-kit-bag",
+          "dolph-kit-bag",
+          "raider-max-badminton-kit-bag",
+          "panther-badminton-kit-bag",
+          "maximus-lite-badminton-kit-bag",
+          "all-star-badminton-kit-bag",
+          "abdp372-2-zipper-kit-bag",
+          "2-in-1-racket-bag",
+          "titan-badminton-backpack"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
+    "custom_liquid_yLVFUK": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"spotlight\">\n  <div class=\"spotlight-container\">\n\n    <h2 class=\"spotlight-title\">Best Sellers</h2>\n    <p class=\"spotlight-subtitle\">\n      The most popular picks across rackets, shoes, bags, apparel, and accessories. <b>Loved by players everywhere.</b>\n    </p>\n\n    <div class=\"spotlight-grid\">\n\n     <a class=\"spotlight-item\" href=\"/collections/best-selling-rackets\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/1-7.jpg?v=1772877984&width=1000\" alt=\"badminton racket\">\n        <p>Rackets</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-shoes\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template-01_6d3c9bd5-61b6-4767-a1fc-5ff451f51e6a.jpg?v=1772878262&width=1000\" alt=\"\">\n        <p>Shoes</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-kit-bags\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template_02.jpg?v=1772878259&width=1000\" alt=\"\">\n        <p>Kitbags</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/backpacks\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/Template_01_cf56ccc791.jpg?v=1749900031&width=1600\" alt=\"\">\n        <p>Backpacks</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/apparels\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/1_5b9d2aa3-c709-4811-8150-9119b330a67c.jpg?v=1752900767&width=1600\" alt=\"\">\n        <p>Apparels</p>\n      </a>\n\n      <a class=\"spotlight-item\" href=\"/collections/accessories\">\n        <img src=\"https://in.lining.studio/cdn/shop/files/01_e94e005a0f.jpg?v=1749896398&width=1600\" alt=\"\">\n        <p>Accessories</p>\n      </a>\n\n\n    </div>\n  </div>\n</section>\n<style>\n/* From Uiverse.io by SteveBloX */ \n.spotlight {\n  padding: 0 20px;\n  background: #fff;\n  text-align: center;\n}\n\n.spotlight-container {\n  max-width: 900px;\n  margin: auto;\n}\n\n.spotlight-title {\n  font-size: 48px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  margin-bottom: 10px;\n}\n\n.spotlight-subtitle {\n  font-size: 16px;\n  color: #555;\n  max-width: 500px;\n  margin: 0 auto 40px;\n  line-height: 1.5;\n}\n\n.spotlight-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 40px 0px;\n    max-width: 610px;\n    margin: 0 auto;\n}\n\n.spotlight-item img {\n  width: 120px;\n  height: auto;\n  margin-bottom: 5px;\n}\n.spotlight-item{\n  text-decoration:none;\n  color:black;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-end;\n  row-gap: 15px;\n}\n\n.spotlight-item p {\n  font-size: 14px;\n  font-weight: 500;\nmargin-top:-10px;\n}\n\n/* Mobile */\n@media (max-width: 600px) {\n  .spotlight-title {\n    font-size: 36px;\n  }\n\n  .spotlight-grid {\n    gap: 30px 10px;\n  }\n\n  .spotlight-item img {\n    width: 70px;\n  }\n}\n</style>",
+        "custom_liquid": "<section class=\"spotlight\">\n  <div class=\"spotlight-container\">\n\n    <div class=\"spotlight-head\">\n      <h2 class=\"spotlight-title\">Best Sellers</h2>\n\n      <p class=\"spotlight-subtitle\">\n        The most popular picks across rackets, shoes, bags, apparel, and accessories.\n        <b>Loved by players everywhere.</b>\n      </p>\n    </div>\n\n    <div class=\"spotlight-grid\">\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-rackets\">\n        <div class=\"spotlight-image-wrap\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/1-7.jpg?v=1772877984&width=1000\"\n            alt=\"Badminton rackets\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <div class=\"spotlight-label\">\n          <span>Rackets</span>\n          <span class=\"spotlight-arrow\">→</span>\n        </div>\n      </a>\n\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-shoes\">\n        <div class=\"spotlight-image-wrap\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template-01_6d3c9bd5-61b6-4767-a1fc-5ff451f51e6a.jpg?v=1772878262&width=1000\"\n            alt=\"Badminton shoes\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <div class=\"spotlight-label\">\n          <span>Shoes</span>\n          <span class=\"spotlight-arrow\">→</span>\n        </div>\n      </a>\n\n\n      <a class=\"spotlight-item\" href=\"/collections/best-selling-kit-bags\">\n        <div class=\"spotlight-image-wrap\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0707/5836/7332/files/Template_02.jpg?v=1772878259&width=1000\"\n            alt=\"Badminton kitbags\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <div class=\"spotlight-label\">\n          <span>Kitbags</span>\n          <span class=\"spotlight-arrow\">→</span>\n        </div>\n      </a>\n\n\n      <a class=\"spotlight-item\" href=\"/collections/backpacks\">\n        <div class=\"spotlight-image-wrap\">\n          <img\n            src=\"https://in.lining.studio/cdn/shop/files/Template_01_cf56ccc791.jpg?v=1749900031&width=1600\"\n            alt=\"Backpacks\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <div class=\"spotlight-label\">\n          <span>Backpacks</span>\n          <span class=\"spotlight-arrow\">→</span>\n        </div>\n      </a>\n\n\n      <a class=\"spotlight-item\" href=\"/collections/apparels\">\n        <div class=\"spotlight-image-wrap\">\n          <img\n            src=\"https://in.lining.studio/cdn/shop/files/1_5b9d2aa3-c709-4811-8150-9119b330a67c.jpg?v=1752900767&width=1600\"\n            alt=\"Badminton apparel\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <div class=\"spotlight-label\">\n          <span>Apparels</span>\n          <span class=\"spotlight-arrow\">→</span>\n        </div>\n      </a>\n\n\n      <a class=\"spotlight-item\" href=\"/collections/accessories\">\n        <div class=\"spotlight-image-wrap\">\n          <img\n            src=\"https://in.lining.studio/cdn/shop/files/01_e94e005a0f.jpg?v=1749896398&width=1600\"\n            alt=\"Badminton accessories\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <div class=\"spotlight-label\">\n          <span>Accessories</span>\n          <span class=\"spotlight-arrow\">→</span>\n        </div>\n      </a>\n\n    </div>\n\n  </div>\n</section>\n\n\n<style>\n\n  /* ================================\n     BEST SELLERS\n  ================================== */\n\n  .spotlight {\n    width: 100%;\n    padding: 70px 30px 80px;\n    background: #ffffff;\n    box-sizing: border-box;\n  }\n\n  .spotlight *,\n  .spotlight *::before,\n  .spotlight *::after {\n    box-sizing: border-box;\n  }\n\n\n  /* Container */\n\n  .spotlight-container {\n    width: 100%;\n    max-width: 1450px;\n    margin: 0 auto;\n  }\n\n\n  /* Heading */\n\n  .spotlight-head {\n    text-align: center;\n    margin-bottom: 46px;\n  }\n\n  .spotlight-title {\n    margin: 0 0 12px;\n    color: #111111;\n    font-size: clamp(36px, 4vw, 54px);\n    line-height: 1;\n    font-weight: 800;\n    letter-spacing: -1.8px;\n  }\n\n  .spotlight-subtitle {\n    max-width: 650px;\n    margin: 0 auto;\n    color: #646464;\n    font-size: 15px;\n    line-height: 1.6;\n  }\n\n  .spotlight-subtitle b {\n    color: #242424;\n    font-weight: 600;\n  }\n\n\n  /* ================================\n     6 ITEMS IN ONE ROW\n  ================================== */\n\n  .spotlight-grid {\n    display: grid;\n    grid-template-columns: repeat(6, minmax(0, 1fr));\n    gap: 14px;\n    width: 100%;\n  }\n\n\n  /* Card */\n\n  .spotlight-item {\n    min-width: 0;\n    position: relative;\n\n    display: flex;\n    flex-direction: column;\n\n    padding: 10px 10px 13px;\n\n    background: #f7f8fa;\n\n    border: 1px solid rgba(0, 0, 0, 0.045);\n    border-radius: 20px;\n\n    color: #111111;\n    text-decoration: none;\n\n    overflow: hidden;\n\n    transition:\n      transform 0.3s ease,\n      background-color 0.3s ease,\n      box-shadow 0.3s ease,\n      border-color 0.3s ease;\n  }\n\n\n  /* Image Area */\n\n  .spotlight-image-wrap {\n    width: 100%;\n    aspect-ratio: 1 / 0.88;\n\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    overflow: hidden;\n\n    border-radius: 15px;\n\n    background:\n      radial-gradient(\n        circle at center,\n        #ffffff 0%,\n        #f9fafb 58%,\n        #f4f5f7 100%\n      );\n  }\n\n  .spotlight-image-wrap img {\n    display: block;\n\n    width: 78%;\n    height: 78%;\n\n    object-fit: contain;\n\n    mix-blend-mode: multiply;\n\n    transition: transform 0.4s cubic-bezier(.2,.7,.2,1);\n  }\n\n\n  /* Bottom label */\n\n  .spotlight-label {\n    width: 100%;\n\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n\n    gap: 8px;\n\n    padding: 14px 7px 2px;\n\n    font-size: 14px;\n    font-weight: 600;\n    line-height: 1.2;\n\n    letter-spacing: -0.15px;\n  }\n\n\n  /* Arrow */\n\n  .spotlight-arrow {\n    flex: 0 0 auto;\n\n    width: 29px;\n    height: 29px;\n\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    border-radius: 50%;\n\n    background: #ffffff;\n    border: 1px solid rgba(0, 0, 0, 0.06);\n\n    font-size: 15px;\n    line-height: 1;\n\n    transition:\n      transform 0.3s ease,\n      background-color 0.3s ease,\n      color 0.3s ease;\n  }\n\n\n  /* ================================\n     DESKTOP HOVER\n  ================================== */\n\n  @media (hover: hover) and (pointer: fine) {\n\n    .spotlight-item:hover {\n      transform: translateY(-5px);\n\n      background: #ffffff;\n\n      border-color: rgba(0, 0, 0, 0.07);\n\n      box-shadow:\n        0 15px 35px rgba(0, 0, 0, 0.07);\n    }\n\n    .spotlight-item:hover .spotlight-image-wrap img {\n      transform: scale(1.055);\n    }\n\n    .spotlight-item:hover .spotlight-arrow {\n      transform: translateX(2px);\n      background: #111111;\n      color: #ffffff;\n    }\n\n  }\n\n\n  /* ================================\n     TABLET\n  ================================== */\n\n  @media (max-width: 1050px) {\n\n    .spotlight {\n      padding: 60px 22px 70px;\n    }\n\n    .spotlight-grid {\n      grid-template-columns: repeat(3, minmax(0, 1fr));\n      gap: 14px;\n    }\n\n    .spotlight-item {\n      border-radius: 18px;\n    }\n\n  }\n\n\n  /* ================================\n     MOBILE\n  ================================== */\n\n  @media (max-width: 600px) {\n\n    .spotlight {\n      padding: 48px 14px 55px;\n    }\n\n    .spotlight-head {\n      margin-bottom: 30px;\n    }\n\n    .spotlight-title {\n      font-size: 36px;\n      letter-spacing: -1.2px;\n      margin-bottom: 10px;\n    }\n\n    .spotlight-subtitle {\n      max-width: 340px;\n      font-size: 13px;\n      line-height: 1.5;\n    }\n\n\n    /* Keep 3 per row on mobile */\n\n    .spotlight-grid {\n      grid-template-columns: repeat(3, minmax(0, 1fr));\n      gap: 8px;\n    }\n\n\n    .spotlight-item {\n      padding: 6px 6px 9px;\n      border-radius: 14px;\n    }\n\n\n    .spotlight-image-wrap {\n      border-radius: 11px;\n      aspect-ratio: 1 / 0.95;\n    }\n\n\n    .spotlight-image-wrap img {\n      width: 82%;\n      height: 82%;\n    }\n\n\n    .spotlight-label {\n      padding: 9px 3px 0;\n\n      justify-content: center;\n\n      font-size: 11px;\n      text-align: center;\n    }\n\n\n    /* Hide arrow on small screens\n       to keep the cards clean */\n\n    .spotlight-arrow {\n      display: none;\n    }\n\n  }\n\n\n  /* Very small phones */\n\n  @media (max-width: 370px) {\n\n    .spotlight {\n      padding-left: 10px;\n      padding-right: 10px;\n    }\n\n    .spotlight-grid {\n      gap: 6px;\n    }\n\n    .spotlight-item {\n      border-radius: 12px;\n    }\n\n    .spotlight-label {\n      font-size: 10px;\n    }\n\n  }\n\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 100
@@ -115,6 +211,7 @@
     },
     "hero_video_component_rjR7UX": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/HALBERD STRIKE - HORIZONTAL.mp4",
@@ -131,6 +228,7 @@
     },
     "swipeable_products_qfYdBf": {
       "type": "swipeable-products",
+      "disabled": true,
       "name": "Swipeable Products",
       "settings": {
         "title": "Comfort Meets Control",
@@ -162,6 +260,7 @@
     },
     "hero_component_Nd47g8": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/home_banner_bd10a3a6-8198-4122-bf3c-417c10e994da.jpg",
@@ -178,6 +277,7 @@
     },
     "swipeable_products_h9aq4L": {
       "type": "swipeable-products",
+      "disabled": true,
       "name": "Swipeable Products",
       "settings": {
         "title": "Ignite Series",
@@ -189,50 +289,6 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 52
-      }
-    },
-    "hero_component_NrAraR": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Category-Banner_0e0cc0d7-68b4-42d6-b23b-4fc3b417067e.jpg",
-        "mobile_image": "shopify://shop_images/Category-Banner-Responsive_e8ff5690-e9cd-4bfa-9292-97c5d94589b9.jpg",
-        "subtitle": "Kit Bags",
-        "title": "Gear Up. Move Strong.",
-        "description": "Whether you're heading to practice or a tournament, carry your gear in style with bags that blend function and flair.",
-        "button_text": "Bag It Today",
-        "link_to": "shopify://collections/badminton-bags",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_BcAtaU": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "KitBag Collections",
-        "products": [
-          "monarch-kit-bag",
-          "raider-max-badminton-kit-bag",
-          "birdie-kit-bag",
-          "stripe-kit-bag",
-          "panther-badminton-kit-bag",
-          "parallel-kit-bag",
-          "motion-pro-backpack",
-          "sportshift-backpack",
-          "prime-vault-square-bag",
-          "nimbus-square-bag",
-          "eclipse-kit-bag",
-          "axis-kit-bag",
-          "axtrox-kit-bag",
-          "velocity-backpack",
-          "kit-bag-6-in-1"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 60
       }
     },
     "hero_component_iq8qEP": {
@@ -340,6 +396,7 @@
         "column_ckazza",
         "column_Ux4WkB"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Gear Made Just For You!",
@@ -387,20 +444,22 @@
     }
   },
   "order": [
-    "hero_component_ErFhK9",
-    "swipeable_products_TPy6Ug",
+    "responsive_slideshow_iH6DVM",
     "hero_component_xTDVjV",
     "swipeable_products_zQQwqq",
+    "custom_liquid_wCCxbf",
+    "hero_component_ErFhK9",
+    "swipeable_products_TPy6Ug",
     "hero_component_D4bCLN",
     "swipeable_products_XYKJa8",
-    "custom_liquid_wCCxbf",
+    "hero_component_NrAraR",
+    "swipeable_products_BcAtaU",
+    "custom_liquid_yLVFUK",
     "hero_video_component_rjR7UX",
     "swipeable_products_qfYdBf",
     "hero_component_bryecW",
     "hero_component_Nd47g8",
     "swipeable_products_h9aq4L",
-    "hero_component_NrAraR",
-    "swipeable_products_BcAtaU",
     "hero_component_iq8qEP",
     "swipeable_products_Dx3YhK",
     "hero_component_8aGUPp",
