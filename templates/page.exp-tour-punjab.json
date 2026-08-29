@@ -1,0 +1,436 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_dF4Kan": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\nsection{\nbackground:black;\n}\n#shopify-section-template--27174708871461__1757582427791457ea{\nbackground: url(https://cdn.shopify.com/s/files/1/0933/9378/1029/files/oie_611136p5vaERQZ_a239cfe1-4346-490e-aeac-3d5608a2dfc8.jpg?v=1778059271&width=535);\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    background-attachment: fixed;\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_3mFtqf": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/WhatsApp_Image_2025-09-11_at_2.51.19_PM.jpg",
+        "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-09-11_at_2.51.19_PM_1.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_LqDdTM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n\n  <h2 class=\"second-title\"></h2>\n  <h2 class=\"second-title\">Hundred's Official India Tour is coming to Rajasthan!</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 2.8rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0 10px;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 4rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 56,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_wEr9EG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  \n   <p class=\"longcopy\">Get ready to experience  our <span class=\"highlight\">Professional Rackets and Shoes </span> like never before!<br></p> <!--Join us for <span class=\"highlight\"> Hundred's India Tour </span> and be a part of the action.\n  </p> -->\n  <a href=\"#shopify-section-template--26344715682085__1757582427791457ea\" class=\"ctax\">\n    <span>Register Now</span>\n  </a>\n</div>\n\n<style>\nhtml {\n  scroll-behavior: smooth;\n}\n.ctax {\ndisplay:none;\n    margin-top: 3rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n.longcopy {\n  font-size: 1.6rem; \n  font-weight: 800; \n  letter-spacing: px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \nmargin: 0px 20px 50px 20px;\n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 16,
+        "padding_bottom": 28
+      }
+    },
+    "1757582427791457ea": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_YgrnmV": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1034498",
+            "text_color": "#ffffff",
+            "button_background_color": "#ffa300",
+            "button_label_color": "#121212",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 13,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_YgrnmV"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_UGHTwX": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- ============================================================\n  HNDRD Experience Tour — Rajasthan Schedule Section (v8 · 3D Cards)\n  City cards with real depth: perspective tilt that follows the\n  cursor, layered children that visibly lift via translateZ, a\n  cursor-tracking glare, drifting ambient light behind the grid,\n  and a staggered 3D flip-in on scroll. Date + time stay the\n  boldest thing in every row. Touch devices get a floating idle\n  animation instead of tilt (no mouse to track).\n  Scoped under .hxad- namespace.\n============================================================= -->\n\n<section class=\"hxad-section\" id=\"hndrd-rajasthan-tour\">\n  <style>\n    #hndrd-rajasthan-tour {\n      --black: #08070a;\n      --panel: #16130f;\n      --panel-2: #1c1812;\n      --white: #f6f4ef;\n      --white-dim: #948c7e;\n      --gold: #cda45e;\n      --gold-hi: #f4dda0;\n      --crimson: #a8232c;\n      --line: rgba(246,244,239,0.1);\n\n      position: relative;\n      background: var(--black);\n      color: var(--white);\n      \n      padding: clamp(56px, 9vw, 130px) 0;\n      overflow: hidden;\n    }\n    #hndrd-rajasthan-tour, #hndrd-rajasthan-tour *, #hndrd-rajasthan-tour *::before, #hndrd-rajasthan-tour *::after { box-sizing: border-box; }\n\n    /* ---------- ambient drifting light + grain ---------- */\n    #hndrd-rajasthan-tour .hxad-glow-a,\n    #hndrd-rajasthan-tour .hxad-glow-b {\n      position: absolute;\n      border-radius: 50%;\n      filter: blur(80px);\n      pointer-events: none;\n      opacity: 0.55;\n      z-index: 0;\n    }\n    #hndrd-rajasthan-tour .hxad-glow-a {\n      width: 46vw; height: 46vw; max-width: 560px; max-height: 560px;\n      top: -14%; left: -10%;\n      background: radial-gradient(circle, rgba(205,164,94,0.35), transparent 70%);\n      animation: hxad-drift-a 22s ease-in-out infinite;\n    }\n    #hndrd-rajasthan-tour .hxad-glow-b {\n      width: 40vw; height: 40vw; max-width: 480px; max-height: 480px;\n      bottom: -16%; right: -8%;\n      background: radial-gradient(circle, rgba(168,35,44,0.3), transparent 70%);\n      animation: hxad-drift-b 26s ease-in-out infinite;\n    }\n    @keyframes hxad-drift-a { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(5%, 8%) scale(1.15); } }\n    @keyframes hxad-drift-b { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-6%, -6%) scale(1.1); } }\n\n    #hndrd-rajasthan-tour::after {\n      content: '';\n      position: absolute; inset: 0; z-index: 0;\n      background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E\");\n      pointer-events: none;\n    }\n\n    #hndrd-rajasthan-tour .hxad-wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 20px; }\n    @media (min-width: 640px) { #hndrd-rajasthan-tour .hxad-wrap { padding: 0 clamp(24px, 5vw, 56px); } }\n\n    /* ---------- header ---------- */\n    #hndrd-rajasthan-tour .hxad-eyebrow {\n     \n      font-size: 10.5px;\n      letter-spacing: 0.28em;\n      text-transform: uppercase;\n      color: var(--gold);\n      margin: 0 0 16px;\n      opacity: 0;\n      animation: hxad-fade-up 0.7s ease forwards;\n    }\n    #hndrd-rajasthan-tour h2.hxad-title {\n     \n      font-weight: 800;\n      text-transform: uppercase;\n      font-size: clamp(34px, 8.5vw, 64px);\n      line-height: 0.96;\n      margin: 0 0 14px;\n      background: linear-gradient(100deg, var(--white) 20%, var(--gold-hi) 55%, var(--gold) 85%);\n      -webkit-background-clip: text;\n      background-clip: text;\n      color: transparent;\n      text-shadow: 0 8px 30px rgba(205,164,94,0.18);\n      opacity: 0;\n      animation: hxad-fade-up 0.7s ease 0.08s forwards;\n    }\n    #hndrd-rajasthan-tour .hxad-sub {\n      font-size: 14.5px;\n      line-height: 1.6;\n      color: var(--white-dim);\n      max-width: 480px;\n      margin: 0 0 40px;\n      font-weight: 300;\n      opacity: 0;\n      animation: hxad-fade-up 0.7s ease 0.16s forwards;\n    }\n    @keyframes hxad-fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }\n\n    /* ---------- grid ---------- */\n    #hndrd-rajasthan-tour .hxad-grid {\n      display: grid;\n      grid-template-columns: 1fr;\n      gap: 22px;\n    }\n    @media (min-width: 620px) { #hndrd-rajasthan-tour .hxad-grid { grid-template-columns: repeat(2, 1fr); } }\n    @media (min-width: 1000px) { #hndrd-rajasthan-tour .hxad-grid { grid-template-columns: repeat(3, 1fr); } }\n\n    /* ---------- card: outer handles entrance, perspective ---------- */\n    #hndrd-rajasthan-tour .hxad-card {\n      perspective: 1100px;\n      opacity: 0;\n      transform: translateY(30px) rotateX(-10deg);\n      transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);\n    }\n    #hndrd-rajasthan-tour .hxad-card.hxad-in { opacity: 1; transform: translateY(0) rotateX(0); }\n    #hndrd-rajasthan-tour .hxad-card.hxad-idle-float .hxad-inner { animation: hxad-idle-float 5s ease-in-out infinite; }\n    @keyframes hxad-idle-float { 0%,100% { transform: translateY(0) rotateX(0) rotateY(0); } 50% { transform: translateY(-6px) rotateX(1.5deg) rotateY(-1.5deg); } }\n\n    /* ---------- card: inner handles live tilt + preserve-3d ---------- */\n    #hndrd-rajasthan-tour .hxad-inner {\n      position: relative;\n      transform-style: preserve-3d;\n      background: linear-gradient(165deg, var(--panel-2), var(--panel) 70%);\n      border: 1px solid var(--line);\n      border-radius: 18px;\n      padding: 26px 22px 22px;\n      height: 100%;\n      transition: transform 0.35s cubic-bezier(.2,.8,.2,1), border-color 0.35s ease, box-shadow 0.35s ease;\n      box-shadow: 0 30px 60px -30px rgba(0,0,0,0.7);\n      overflow: hidden;\n    }\n    #hndrd-rajasthan-tour .hxad-card:hover .hxad-inner {\n      border-color: rgba(205,164,94,0.4);\n      box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75), 0 0 40px -10px rgba(205,164,94,0.25);\n    }\n\n    /* cursor-tracking glare */\n    #hndrd-rajasthan-tour .hxad-glare {\n      position: absolute; inset: 0;\n      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(246,244,239,0.14), transparent 45%);\n      opacity: 0;\n      transition: opacity 0.3s ease;\n      pointer-events: none;\n      border-radius: inherit;\n    }\n    #hndrd-rajasthan-tour .hxad-card:hover .hxad-glare { opacity: 1; }\n\n    /* badge — floats above the card surface in 3D */\n    #hndrd-rajasthan-tour .hxad-badge {\n      position: absolute;\n      top: 20px; right: 20px;\n      transform: translateZ(38px);\n    \n      font-size: 11px;\n      color: var(--gold);\n      border: 1px solid rgba(205,164,94,0.35);\n      border-radius: 999px;\n      padding: 4px 10px;\n      background: rgba(205,164,94,0.08);\n      backdrop-filter: blur(4px);\n    }\n\n    #hndrd-rajasthan-tour .hxad-city {\n      transform: translateZ(26px);\n      \n      font-weight: 800;\n      text-transform: uppercase;\n      font-size: clamp(26px, 4vw, 32px);\n      line-height: 1;\n      color: var(--white);\n      margin: 0 0 8px;\n      max-width: calc(100% - 70px);\n    }\n    #hndrd-rajasthan-tour .hxad-range {\n      transform: translateZ(20px);\n     \n      font-size: 10.5px;\n      letter-spacing: 0.08em;\n      text-transform: uppercase;\n      color: var(--gold-hi);\n      margin: 0 0 20px;\n      display: flex;\n      align-items: center;\n      gap: 8px;\n    }\n    #hndrd-rajasthan-tour .hxad-range::before {\n      content: '';\n      width: 5px; height: 5px;\n      border-radius: 50%;\n      background: var(--gold);\n      box-shadow: 0 0 8px 1px rgba(205,164,94,0.6);\n    }\n\n    #hndrd-rajasthan-tour .hxad-events { transform: translateZ(12px); display: grid; gap: 12px; }\n\n    #hndrd-rajasthan-tour .hxad-event {\n      display: flex;\n      align-items: center;\n      gap: 12px;\n      background: rgba(0,0,0,0.22);\n      border: 1px solid var(--line);\n      border-radius: 12px;\n      padding: 11px 12px;\n      transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;\n    }\n    #hndrd-rajasthan-tour .hxad-event:hover {\n      border-color: rgba(205,164,94,0.3);\n      background: rgba(205,164,94,0.06);\n      transform: translateX(3px);\n    }\n\n    #hndrd-rajasthan-tour .hxad-event-when {\n      flex: 0 0 auto;\n      text-align: center;\n      min-width: 52px;\n    }\n    #hndrd-rajasthan-tour .hxad-event-date {\n     \n      font-weight: 700;\n      font-size: 1.9rem;\n      color: var(--gold-hi);\n      line-height: 1.1;\n    }\n    #hndrd-rajasthan-tour .hxad-event-time {\n     \n      font-size: 1.6rem;\n      color: var(--white-dim);\n      letter-spacing: 0.02em;\n      line-height: 1.3;\n      margin-top: 2px;\n    }\n\n    #hndrd-rajasthan-tour .hxad-event-venue {\n      flex: 1 1 auto;\n      font-size: 2rem;\n      font-weight: 500;\n      color: var(--white);\n      line-height: 1.3;\n      min-width: 0;\n    }\n\n    #hndrd-rajasthan-tour .hxad-event-go {\n      flex: 0 0 auto;\n      width: 50px; height: 50px;\n      border-radius: 50%;\n      border: 1px solid rgba(246,244,239,0.22);\n      display: flex; align-items: center; justify-content: center;\n      color: var(--white);\n      text-decoration: none;\n      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, color 0.25s ease;\n      -webkit-tap-highlight-color: transparent;\n    }\n    #hndrd-rajasthan-tour .hxad-event-go:hover,\n    #hndrd-rajasthan-tour .hxad-event-go:active {\n      background: var(--gold);\n      border-color: var(--gold);\n      color: var(--black);\n      transform: scale(1.08) translateZ(4px);\n    }\n    #hndrd-rajasthan-tour .hxad-event-go svg { width: 12px; height: 12px; }\n\n    @media (prefers-reduced-motion: reduce) {\n      #hndrd-rajasthan-tour * { animation: none !important; transition: none !important; }\n      #hndrd-rajasthan-tour .hxad-card { opacity: 1 !important; transform: none !important; }\n    }\n  </style>\n\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n  <div class=\"hxad-glow-a\"></div>\n  <div class=\"hxad-glow-b\"></div>\n\n  <div class=\"hxad-wrap\">\n\n    <p class=\"hxad-eyebrow\">HNDRD India Tour · September 2026</p>\n    <h2 class=\"hxad-title\">The Rajasthan Experience</h2>\n    <p class=\"hxad-sub\">12 events across 6 cities.</p>\n\n    <div class=\"hxad-grid\" id=\"hxad-grid\">\n\n      <article class=\"hxad-card\" data-idx=\"0\">\n        <div class=\"hxad-inner\">\n          <span class=\"hxad-badge\">01/06</span>\n          <div class=\"hxad-glare\"></div>\n          <h3 class=\"hxad-city\">Jodhpur</h3>\n          <p class=\"hxad-range\">3–4 Sep · 3 Events</p>\n          <div class=\"hxad-events\">\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">03</div><div class=\"hxad-event-time\">7–9<br>PM</div></div>\n              <div class=\"hxad-event-venue\">Dream Badminton Academy</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/SjyGH39Ybm5RXAUt9\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">04</div><div class=\"hxad-event-time\">7–9<br>AM</div></div>\n              <div class=\"hxad-event-venue\">Jodhpur Badminton Academy</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/SUJbdEFkbxGuiFbe9\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">04</div><div class=\"hxad-event-time\">7–9<br>PM</div></div>\n              <div class=\"hxad-event-venue\">Rishi Badminton Academy</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/UjixgQRMQXpua6NF9\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n          </div>\n        </div>\n      </article>\n\n      <article class=\"hxad-card\" data-idx=\"1\">\n        <div class=\"hxad-inner\">\n          <span class=\"hxad-badge\">02/06</span>\n          <div class=\"hxad-glare\"></div>\n          <h3 class=\"hxad-city\">Udaipur</h3>\n          <p class=\"hxad-range\">5 Sep · 1 Event</p>\n          <div class=\"hxad-events\">\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">05</div><div class=\"hxad-event-time\">6–8<br>PM</div></div>\n              <div class=\"hxad-event-venue\">Chawat Sports Academy</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/z82CmaPoSpcL9WFF8\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n          </div>\n        </div>\n      </article>\n\n      <article class=\"hxad-card\" data-idx=\"2\">\n        <div class=\"hxad-inner\">\n          <span class=\"hxad-badge\">03/06</span>\n          <div class=\"hxad-glare\"></div>\n          <h3 class=\"hxad-city\">Nathdwara</h3>\n          <p class=\"hxad-range\">6 Sep · 1 Event</p>\n          <div class=\"hxad-events\">\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">06</div><div class=\"hxad-event-time\">7–9<br>AM</div></div>\n              <div class=\"hxad-event-venue\">RS Badminton Academy</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/oSERBuzUXLHVCCiM8\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n          </div>\n        </div>\n      </article>\n\n      <article class=\"hxad-card\" data-idx=\"3\">\n        <div class=\"hxad-inner\">\n          <span class=\"hxad-badge\">04/06</span>\n          <div class=\"hxad-glare\"></div>\n          <h3 class=\"hxad-city\">Kota</h3>\n          <p class=\"hxad-range\">6-7 Sep · 3 Events</p>\n          <div class=\"hxad-events\">\n<div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">06</div><div class=\"hxad-event-time\">6–8<br>PM</div></div>\n              <div class=\"hxad-event-venue\">Raghurai Endo Sports Complex</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/xywb1kGVaHoEKc7U8\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">07</div><div class=\"hxad-event-time\">7–9<br>AM</div></div>\n              <div class=\"hxad-event-venue\">Raghurai Endo Sports Complex</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/xywb1kGVaHoEKc7U8\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">07</div><div class=\"hxad-event-time\">6–8<br>PM</div></div>\n              <div class=\"hxad-event-venue\">Raghurai Endo Sports Complex</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/xywb1kGVaHoEKc7U8\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n          </div>\n        </div>\n      </article>\n\n      <article class=\"hxad-card\" data-idx=\"4\">\n        <div class=\"hxad-inner\">\n          <span class=\"hxad-badge\">05/06</span>\n          <div class=\"hxad-glare\"></div>\n          <h3 class=\"hxad-city\">Ajmer</h3>\n          <p class=\"hxad-range\">8 Sep · 1 Event</p>\n          <div class=\"hxad-events\">\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">08</div><div class=\"hxad-event-time\">4–6<br>PM</div></div>\n              <div class=\"hxad-event-venue\">Indoor Badminton Academy, Patel Stadium</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/XhraqCzZE2FK6ipe6\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n          </div>\n        </div>\n      </article>\n\n      <article class=\"hxad-card\" data-idx=\"5\">\n        <div class=\"hxad-inner\">\n          <span class=\"hxad-badge\">06/06</span>\n          <div class=\"hxad-glare\"></div>\n          <h3 class=\"hxad-city\">Jaipur</h3>\n          <p class=\"hxad-range\">9–11 Sep · 4 Events</p>\n          <div class=\"hxad-events\">\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">09</div><div class=\"hxad-event-time\">4–6<br>PM</div></div>\n              <div class=\"hxad-event-venue\">Achievers Badminton Academy</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/ecVbzWVCUYHrHjTR7\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">10</div><div class=\"hxad-event-time\">7–9<br>AM</div></div>\n              <div class=\"hxad-event-venue\">Achievers Badminton Academy</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/ecVbzWVCUYHrHjTR7\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">10</div><div class=\"hxad-event-time\">4–6<br>PM</div></div>\n              <div class=\"hxad-event-venue\">AIM Badminton Academy, Jaipur</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/Rqr21DfurbRRaZpr7\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n            <div class=\"hxad-event\">\n              <div class=\"hxad-event-when\"><div class=\"hxad-event-date\">11</div><div class=\"hxad-event-time\">7–9<br>AM</div></div>\n              <div class=\"hxad-event-venue\">AIM Badminton Academy, Jaipur</div>\n              <a class=\"hxad-event-go\" href=\"https://maps.app.goo.gl/Rqr21DfurbRRaZpr7\" target=\"_blank\" rel=\"noopener\" aria-label=\"Get directions\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17L17 7M7 7h10v10\"/></svg></a>\n            </div>\n          </div>\n        </div>\n      </article>\n\n    </div>\n  </div>\n\n  <script>\n    (function () {\n      var root = document.getElementById('hndrd-rajasthan-tour');\n      var cards = Array.prototype.slice.call(root.querySelectorAll('.hxad-card'));\n      var canHover = window.matchMedia && window.matchMedia('(pointer: fine)').matches;\n\n      // staggered 3D flip-in on scroll\n      if ('IntersectionObserver' in window) {\n        var obs = new IntersectionObserver(function (entries) {\n          entries.forEach(function (entry) {\n            if (entry.isIntersecting) {\n              var idx = parseInt(entry.target.getAttribute('data-idx'), 10) || 0;\n              entry.target.style.transitionDelay = (idx * 90) + 'ms';\n              entry.target.classList.add('hxad-in');\n              obs.unobserve(entry.target);\n            }\n          });\n        }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });\n        cards.forEach(function (c) { obs.observe(c); });\n      } else {\n        cards.forEach(function (c) { c.classList.add('hxad-in'); });\n      }\n\n      cards.forEach(function (card) {\n        var inner = card.querySelector('.hxad-inner');\n\n        if (canHover) {\n          card.addEventListener('pointermove', function (e) {\n            var r = card.getBoundingClientRect();\n            var px = (e.clientX - r.left) / r.width;\n            var py = (e.clientY - r.top) / r.height;\n            var rotY = (px - 0.5) * 14;\n            var rotX = (0.5 - py) * 12;\n            inner.style.transition = 'none';\n            inner.style.transform = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(0)';\n            inner.style.setProperty('--mx', (px * 100) + '%');\n            inner.style.setProperty('--my', (py * 100) + '%');\n          });\n          card.addEventListener('pointerleave', function () {\n            inner.style.transition = 'transform 0.5s cubic-bezier(.2,.8,.2,1)';\n            inner.style.transform = 'rotateX(0deg) rotateY(0deg)';\n          });\n        } else {\n          card.classList.add('hxad-idle-float');\n          card.style.animationDelay = (parseInt(card.getAttribute('data-idx'), 10) * 0.3) + 's';\n        }\n      });\n    })();\n  </script>\n\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_RFTCVa": {
+      "type": "multirow",
+      "blocks": {
+        "row_jgyg4n": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/oie_611136p5vaERQZ_a239cfe1-4346-490e-aeac-3d5608a2dfc8.jpg",
+            "caption": "",
+            "heading": "<strong>Event </strong>Schedule",
+            "text": "<h4><strong>Saturday, 7th February 2026</strong><br/><br/>Sport fit JP Nagar 7th Phase<br/>(5:00 PM - 7:00 PM) - <a href=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\" target=\"_blank\" title=\"https://maps.app.goo.gl/JRP9jFHkwtq4FAa68\">View Location↗️</a><br/><br/><strong>Sunday , 8th February 2026</strong><br/><br/>Game theory JP Nagar, 8th phase,<br/>(7:00 PM - 9:00 PM) <a href=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\" target=\"_blank\" title=\"https://maps.app.goo.gl/cNGfpKgTzVXUC7yLA\">View Location↗️</a></h4>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_jgyg4n"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "a {color: orange;}",
+        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "strong {color: #fd524e;}",
+        "@media screen and (min-width: 750px) {h2 {font-size: 5rem; } h4 {font-size: 2rem; }}"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "row_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
+    "image_with_text_UxtnK3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DBhqNa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join us for <strong>Hundred's India Tour</strong> and be a part of the action.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DBhqNa"
+      ],
+      "custom_css": [
+        "strong {color: rgba(255, 255, 255, 0.95);}",
+        "h2 {font-size: 2rem; font-weight: 800; letter-spacing: 0px; line-height: 145%; color: rgba(255, 255, 255, 0.5);}",
+        "@media screen and (min-width: 750px) {h2 {font-size: 3rem; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Comp_1_1.gif",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 64,
+        "padding_bottom": 40
+      }
+    },
+    "multicolumn_x6JCif": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Jpyc4z": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>JODHPUR</strong>",
+            "text": "<h4>Dream Badminton Academy<br/>(3rd Sept, 7PM - 9PM) - <a href=\"https://maps.app.goo.gl/SjyGH39Ybm5RXAUt9\" target=\"_blank\" title=\"https://maps.app.goo.gl/SjyGH39Ybm5RXAUt9\">View Location</a></h4><h4>JODHPUR BADMINTON ACADEMY<br/>(4th Sept, 7AM - 9AM) - <a href=\"https://maps.app.goo.gl/SUJbdEFkbxGuiFbe9\" target=\"_blank\" title=\"https://maps.app.goo.gl/SUJbdEFkbxGuiFbe9\">View Location</a></h4><h4>Rishi Badminton Academy<br/>(4th Sept, 7PM - 9PM) - <a href=\"https://maps.app.goo.gl/UjixgQRMQXpua6NF9\" target=\"_blank\" title=\"https://maps.app.goo.gl/UjixgQRMQXpua6NF9\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Yp8iYp": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>UDAIPUR</strong>",
+            "text": "<h4>Chawat Sports Academy<br/>(5th Sep, 6PM - 8PM) - <a href=\"https://maps.app.goo.gl/z82CmaPoSpcL9WFF8\" target=\"_blank\" title=\"https://maps.app.goo.gl/z82CmaPoSpcL9WFF8\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fwJipr": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>NATHDWARA</strong>",
+            "text": "<h4>RS Badminton Academy<br/>(6th Sep, 7AM - 9AM) - <a href=\"https://maps.app.goo.gl/oSERBuzUXLHVCCiM8\" target=\"_blank\" title=\"https://maps.app.goo.gl/oSERBuzUXLHVCCiM8\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gKA4jw": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>KOTA</strong>",
+            "text": "<h4>RAGHURAI ENDO SPORTS COMPLEX<br/>(7th Sep, 7AM - 9AM) - <a href=\"https://maps.app.goo.gl/xywb1kGVaHoEKc7U8\" target=\"_blank\" title=\"https://maps.app.goo.gl/xywb1kGVaHoEKc7U8\">View Location</a></h4><h4>RAGHURAI ENDO SPORTS COMPLEX<br/>(7th Sep, 6PM - 8PM) - <a href=\"https://maps.app.goo.gl/xywb1kGVaHoEKc7U8\" target=\"_blank\" title=\"https://maps.app.goo.gl/xywb1kGVaHoEKc7U8\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XV7YnQ": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>AJMER</strong>",
+            "text": "<h4>Indoor Badminton Academy, Patel stadium<br/>(8th Sep, 4PM - 6PM) - <a href=\"https://maps.app.goo.gl/XhraqCzZE2FK6ipe6\" target=\"_blank\" title=\"https://maps.app.goo.gl/XhraqCzZE2FK6ipe6\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kGQJV9": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>JAIPUR</strong>",
+            "text": "<h4>Achievers Badminton Academy<br/>(9th Sep, 4PM - 6PM) - <a href=\"https://maps.app.goo.gl/ecVbzWVCUYHrHjTR7\" target=\"_blank\" title=\"https://maps.app.goo.gl/ecVbzWVCUYHrHjTR7\">View Location</a></h4><h4>Achievers Badminton Academy<br/>(10th Sep, 7AM - 9AM) - <a href=\"https://maps.app.goo.gl/ecVbzWVCUYHrHjTR7\" target=\"_blank\" title=\"https://maps.app.goo.gl/ecVbzWVCUYHrHjTR7\">View Location</a></h4><h4>AIM BADMINTON ACADEMY JAIPUR<br/>(10th Sep, 4PM - 6PM) - <a href=\"https://maps.app.goo.gl/Rqr21DfurbRRaZpr7\" target=\"_blank\" title=\"https://maps.app.goo.gl/Rqr21DfurbRRaZpr7\">View Location</a></h4><h4>AIM BADMINTON ACADEMY JAIPUR<br/>(11th Sep, 7AM - 9AM) - <a href=\"https://maps.app.goo.gl/Rqr21DfurbRRaZpr7\" target=\"_blank\" title=\"https://maps.app.goo.gl/Rqr21DfurbRRaZpr7\">View Location</a></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Jpyc4z",
+        "column_Yp8iYp",
+        "column_fwJipr",
+        "column_gKA4jw",
+        "column_XV7YnQ",
+        "column_kGQJV9"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "a {color: orange;}",
+        "h2 {letter-spacing: -1px; font-size: 4rem; font-weight: 800; line-height: 1.1; margin: 0; background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}",
+        "h3 {color: #f69e24;}",
+        "h4 strong {color: grey;}",
+        ".multicolumn-card {background: #170c02; background: linear-gradient( 271deg, rgba(23, 12, 2, 1) 0%, rgba(9, 9, 9, 1) 34% );}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Event </strong>Schedule",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 56
+      }
+    },
+    "rich_text_YUaPWT": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-d27ab943-fb87-45cd-880f-d5fa2e3a3ca4",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_ywGM93": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bKfjRY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Your Tour Benefits At a Glance",
+            "open_by_default": false,
+            "icon": "star",
+            "row_content": "<p>🎯 What's in Store for You</p><p>✅ Free Equipment Trials - Experience our latest high-performance rackets at no cost</p><p>🎁 Exclusive Rewards - Unlock special offers and limited-time coupon codes</p><p>🏆 Competitive Fun - Participate in on-court challenges and win exciting prizes</p><p>🤝 Network & Connect - Meet professional players and fellow badminton enthusiasts</p><p>💬 Meet the Team - Connect with Hundred experts and discover what makes our gear elite</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HhrpyN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Terms and Conditions",
+            "open_by_default": false,
+            "icon": "clipboard",
+            "row_content": "<p>By attending the Hundred Experience Tour, you agree that:</p><ul><li>Your participation was voluntary and you were responsible for your own safety.</li><li>The brand and organizers are not liable for any injuries, accidents, or health issues that may have occurred.</li><li>The brand and organizers are not liable for any lost, stolen, or damaged personal items.</li><li>You consented to photos and videos being taken and used for marketing, promotional, and branding purposes without further approval or compensation.</li><li>Event details and activities may have been subject to change at the organizers' discretion.</li><li>The organizers had the right to deny entry or remove participants for not following guidelines or for disruptive behavior.</li><li>Non Marking Shoes are not provided by us during the event. Please bring your own.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_d8Azcr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Racket Experience Tour?",
+            "open_by_default": false,
+            "icon": "fire",
+            "row_content": "<p>The Racket Experience Tour is a hands-on demo event where players can <strong>try and play with our latest badminton rackets</strong> before deciding which one suits their playing style best.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6PJJLm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who can participate?",
+            "open_by_default": false,
+            "icon": "question_mark",
+            "row_content": "<p>The event is open to <strong>all badminton players</strong> — beginners, intermediate, advanced players, academy trainees, and recreational players.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xU3L8e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the event free to attend?",
+            "open_by_default": false,
+            "icon": "price_tag",
+            "row_content": "<p>Yes, the Racket Experience Tour is <strong>completely free</strong> for all participants.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BfyDx3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will experts be available to help choose the right racket?",
+            "open_by_default": false,
+            "icon": "check_mark",
+            "row_content": "<p>Yes. Our team will be present to <strong>guide you in selecting the right racket</strong> based on your playing style, level, and preferences.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dYfxKE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this event only for badminton?",
+            "open_by_default": false,
+            "icon": "eye",
+            "row_content": "<p>Yes, this particular tour stop in Rajasthan is <strong>focused on badminton rackets only</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qbkH6m": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I purchase rackets at the venue?",
+            "open_by_default": false,
+            "icon": "price_tag",
+            "row_content": "<p>Selected products may be available for <strong>exclusive event offers</strong>.<br/>Our team will also guide you on <strong>where to purchase online or in-store</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CFeGXg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can academy players and coaches attend together?",
+            "open_by_default": false,
+            "icon": "lightning_bolt",
+            "row_content": "<p>Absolutely. <strong>Players, coaches, and academy groups</strong> are welcome to attend and experience the rackets together.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bKfjRY",
+        "collapsible_row_HhrpyN",
+        "collapsible_row_d8Azcr",
+        "collapsible_row_6PJJLm",
+        "collapsible_row_xU3L8e",
+        "collapsible_row_BfyDx3",
+        "collapsible_row_dYfxKE",
+        "collapsible_row_qbkH6m",
+        "collapsible_row_CFeGXg"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-3",
+        "color_scheme": "scheme-4",
+        "image": "shopify://shop_images/Artboard_2_05a69494-985e-4e9f-868d-5423b550f98f.jpg",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 72
+      }
+    },
+    "rich_text_HD493f": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-703f6786-c0ea-4dfa-8497-7ed18d8a28e9",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_dF4Kan",
+    "hero_component_3mFtqf",
+    "custom_liquid_LqDdTM",
+    "custom_liquid_wEr9EG",
+    "1757582427791457ea",
+    "custom_liquid_UGHTwX",
+    "multirow_RFTCVa",
+    "image_with_text_UxtnK3",
+    "multicolumn_x6JCif",
+    "rich_text_YUaPWT",
+    "collapsible_content_ywGM93",
+    "rich_text_HD493f"
+  ]
+}
