@@ -1,0 +1,644 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_LW3CjH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Phenom</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Crafted for Perfectionists\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>shop</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 60,
+        "padding_bottom": 28
+      }
+    },
+    "hero_video_component_e8X8PY": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/Phenom - Serving Dining Youtube Video low qualitymp4.mp4",
+        "mobile_video": "shopify://files/videos/Phenom - Serving Dining Video - Square low mb.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/phenom",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "media_pXzJ7f": {
+      "type": "media",
+      "disabled": true,
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_15.png",
+        "mobile_image": "shopify://shop_images/Banner_15.1.png",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_whHTcA": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n  <p style=\"font-size: 1.4rem\"> HNDRD Phenom </p>\n  <h2 class=\"second-title\">Grip Born on the Tracks,</h2>\n  <h2 class=\"second-title\"> Made for the Court</h2>\n</section>\n\n\n<style>\n  .second-title {\nletter-spacing: -1px;\n    font-size: 3.3rem;\n    font-weight: 800;\nline-height: 1.1;\n    margin: 0;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; \n  }\n\n  @media screen and (min-width: 750px) {\n    .second-title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "media_hiBFN9": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_16_R.png",
+        "mobile_image": "shopify://shop_images/Banner_16_0047bd77-aca9-406c-b881-05ac3185d199.png",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pX3CYh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Racing Grade Rubber</p>\n  <p class=\"longcopy\">\n    For Phenom, we worked with <span class=\"highlight\">Goodyear</span>, the world leader in tire technology, to bring <span class=\"highlight\">racing-grade rubber</span> to the Badminton court, ending the age-long <span class=\"highlight\">traditional trade-off</span> between <span class=\"highlight\">grip and longevity</span>.\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 80,
+        "padding_bottom": 20
+      }
+    },
+    "media_gxHEbG": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
+        "mobile_image": "shopify://shop_images/Banner_2.1.png",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_rhUah4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Nothing Held Back</p>\n  <p class=\"longcopy\">What happens when you mix years of obsessive engineering with the <span class=\"highlight\">best rubber technology on the planet?</span>. You get the <span class=\"highlight\">HNDRD Phenom</span>—the first badminton shoe powered by Goodyear traction</p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_MaVYaG": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
+        "mobile_image": "shopify://shop_images/Banner_3.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pMCXET": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Best of Both Worlds</p>\n  <p class=\"longcopy\">Performance Shoes usually force a choice - <span class=\"highlight\">hard rubber</span> for durability or <span class=\"highlight\">soft rubber</span> for grip. Together with Goodyear, we developed the <span class=\"highlight\">DuraGrip</span> tech - a specialized racing-grade rubber compound, which makes the Phenom both <span class=\"highlight\">extremely durable and relentlessly grippy</span>.</p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 96,
+        "padding_bottom": 52
+      }
+    },
+    "media_Fp4xqn": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_10.png",
+        "mobile_image": "shopify://shop_images/Banner_10.1.png",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_kcf9aP": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n<p style=\"font-size: 1.4rem\"> Tech inside Phenom</p>\n  <h2 class=\"second-title\">Overengineered Performance</h2>\n\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 60,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_YGQ3Pa": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jBfRN7": {
+          "type": "heading",
+          "settings": {
+            "heading": "DuraGrip Outsole",
+            "heading_size": "h1"
+          }
+        },
+        "text_gTP4VP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Developed with GOODYEAR, The DuraGrip outsole features a specialised rubber blend unlike any other. It is both durable yet grippy, balancing harness to traction. The patterned grip supports quick directional changes while resisting abrasion over extended use.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_9yyg3q": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP Phenom",
+            "button_link": "shopify://products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_jBfRN7",
+        "text_gTP4VP",
+        "button_9yyg3q"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_12.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_AAWtCq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_B3aNhQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Thrust Foam",
+            "heading_size": "h1"
+          }
+        },
+        "text_HbHRGA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A super critical foam that sits at the heel to absorb heavy landings and return energy instantly. It gives a subtle air-bubble feel underfoot. While making it, a chamber is used where the shoe is pressurized with Nitrogen to make it fluff. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_YrXPTB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Phenom",
+            "button_link": "shopify://products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_B3aNhQ",
+        "text_HbHRGA",
+        "button_YrXPTB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_5.1_9ace0529-c8f4-4854-a37e-c26869dcf004.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "zoom-in",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_7dYiHP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_djyQAw": {
+          "type": "heading",
+          "settings": {
+            "heading": "ArmorMesh + DuraCore",
+            "heading_size": "h1"
+          }
+        },
+        "text_8DwhUp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Armormesh creates a breathable, lightweight upper, while Duracore improves abrasion resistance. The result is an airy yet resilient shell that holds to heavy sessions. Armormesh is also known for being extremely durable as it doesn't wear out even after heavy training.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Ec86eP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Phenom",
+            "button_link": "shopify://products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_djyQAw",
+        "text_8DwhUp",
+        "button_Ec86eP"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_6.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_Kxdy9z": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JqxLWT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Carbon-Kinetic Support Plate",
+            "heading_size": "h1"
+          }
+        },
+        "text_e6Kqxq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting torsion. It maintains alignment, even during multidirectional play.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wGHPkT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Phenom",
+            "button_link": "https://in.hndrd.co/products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_JqxLWT",
+        "text_e6Kqxq",
+        "button_wGHPkT"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_8.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_c6RhH7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YGkTfC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Skeletal Insole",
+            "heading_size": "h1"
+          }
+        },
+        "text_dftkKY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This is a sculpted insole shaped to the natural contours of the foot with built-in arch support. Foam-padded forefoot ridges prevent sliding internally. The fit is intentionally snug, not constrictive, giving your foot a lock-down feel. The elevated heel-to-toe profile shifts your stance forward, placing you in speed's favor.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_czAQMr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_YGkTfC",
+        "text_dftkKY",
+        "button_czAQMr"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_8.2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_Ybrgkt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Fqt8nY": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Z-Lock",
+            "heading_size": "h1"
+          }
+        },
+        "text_7prTpU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A Z-Shaped, specially stiffened foam at the base of the foot to increase torsional resistance. It acts similar to the support plate but double-downs on the anti-torsion value. The result is a firm, anchored feel during lateral shifts.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Fnwf6p": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Phenom",
+            "button_link": "shopify://products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fqt8nY",
+        "text_7prTpU",
+        "button_Fnwf6p"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_7.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_KKwXjx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n<p style=\"font-size: 1.4rem\"> Champion's Choice</p>\n  <h2 class=\"second-title\">Preferred by Pros</h2>\n\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 64
+      }
+    },
+    "multicolumn_zieGnW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AatUqt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_e6c304c8-69dc-44c3-a47e-26cfc1d184b6.png",
+            "title": "",
+            "text": "<p> \"I found exactly the performance I was looking for, and more\" - Alexandra Boje, Danish Badminton Player</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6QDLmL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2_1aa53ea2-ed0d-4cab-be07-72bba14d473d.png",
+            "title": "",
+            "text": "<p> \"Most shoes start peeling quickly, Phenom did not\" - Mathias Christiansen, Danish Badminton Player</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_n7FRgW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_7_3755d7c3-1e26-4556-aaab-6f3013572eb2.png",
+            "title": "",
+            "text": "<p> \"The first thing I look for in a shoe is trust and I found it in Phenom\" - Armaan Bhatia, India's #1 Ranked Pickleball Player</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H98z3q": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_4_45c36765-9058-44ff-a718-158b7ee021f9.png",
+            "title": "",
+            "text": "<p> \"It made the hard days feel a little easier\" - Estelle Van Leeuwen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_N3g4Gz": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_5_91415f2f-2a90-4692-8e2c-7c41998b3075.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MxgJat": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_6_474f3a6d-9ce0-4d6b-a769-8e68d4bae484.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_AatUqt",
+        "column_6QDLmL",
+        "column_n7FRgW",
+        "column_H98z3q",
+        "column_N3g4Gz",
+        "column_MxgJat"
+      ],
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 4,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_3d3gL3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_f9kEnV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Adaptive <strong>Fit</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_eVRtxY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The fit is intentionally snug, not constrictive, giving your foot a lock-down feel. The elevated heel-to-toe profile shifts your stance forward, placing you in speed's favor.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_f9kEnV",
+        "text_eVRtxY"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "media_QE4AML": {
+      "type": "media",
+      "disabled": true,
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_15_710ebbe0-e2b7-43ea-a170-b80467003c85.png",
+        "mobile_image": "shopify://shop_images/Banner_15.1_c234eebe-1117-44a1-9581-30aea0675c97.png",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 24,
+        "padding_bottom": 92
+      }
+    },
+    "media_ag6DY6": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_NypUWg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">The Everything Shoe</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Overbuilt. Overpowered.\n  </h1>\n  <p style=\"margin-top: 3px\">Leave No Stones Unturned with HNDRD Phenom</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>Shop Phenom</span>\n  </a>\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_LW3CjH",
+    "hero_video_component_e8X8PY",
+    "media_pXzJ7f",
+    "custom_liquid_whHTcA",
+    "media_hiBFN9",
+    "custom_liquid_pX3CYh",
+    "media_gxHEbG",
+    "custom_liquid_rhUah4",
+    "hero_component_MaVYaG",
+    "custom_liquid_pMCXET",
+    "media_Fp4xqn",
+    "custom_liquid_kcf9aP",
+    "image_with_text_YGQ3Pa",
+    "image_with_text_AAWtCq",
+    "image_with_text_7dYiHP",
+    "image_with_text_Kxdy9z",
+    "image_with_text_c6RhH7",
+    "image_with_text_Ybrgkt",
+    "custom_liquid_KKwXjx",
+    "multicolumn_zieGnW",
+    "rich_text_3d3gL3",
+    "media_QE4AML",
+    "media_ag6DY6",
+    "custom_liquid_NypUWg"
+  ]
+}
