@@ -9,6 +9,36 @@
  */
 {
   "sections": {
+    "hero_component_fD7abf": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/01_3076aa86-4dd5-4a06-8097-060bc8657a40.webp",
+        "mobile_image": "shopify://shop_images/02_802311e0-8aca-4b49-9884-13aa2ee1820e.webp",
+        "subtitle": "BLADEX 880 | SHIDA EDITION",
+        "title": "SPEED HAS A SIGNATURE",
+        "description": "Light in the hand. Sharp through the air. Precise at every strike.",
+        "button_text": "Get Yours Now!",
+        "link_to": "shopify://collections/bladex-880-shida",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_YbHjCk": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "Bladex 880 Shida Edition",
+        "products": [
+          "bladex-880-shida-4u-g5",
+          "bladex-880-shida-4u-g6"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_XcQqXm": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -278,6 +308,8 @@
     }
   },
   "order": [
+    "hero_component_fD7abf",
+    "swipeable_products_YbHjCk",
     "hero_component_XcQqXm",
     "swipeable_products_BNkLCX",
     "hero_component_GhhRa7",
