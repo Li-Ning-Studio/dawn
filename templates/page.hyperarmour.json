@@ -21,7 +21,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section\n  style=\"\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\ntext-align:center;\n  \"\n>\n  <p style=\"margin-bottom: 0\">Introducing, Phenom</p>\n  <h1 style=\"margin: 0; font-weight: 900; letter-spacing: -1.5px\" class=\"title\">\n    Crafted for Perfectionists\n  </h1>\n  <p style=\"margin-top: 3px\">The Over Engineered Badminton Shoe by HNDRD</p>\n  <a href=\"/products/phenom\" class=\"ctax\">\n    <span>shop</span>\n  </a>\n</section>\n\n<style>\n  .ctax {\n    margin-top: 2rem;\n    background: transparent;\n    border: 1.5px solid #f9d423;\n    font-weight: 700;\n    padding: 1.6rem 3.1rem;\n    border-radius: 500px;\n    cursor: pointer;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n  }\n\n  .title {\n    font-size: 3.3rem;\n    background-image: linear-gradient(to right, #d5db16 0%, #ff4e50 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent; /* Fallback for unsupported browsers */\n  }\n\n  @media screen and (min-width: 750px) {\n    .title {\n      font-size: 5rem;\n    }\n  }\n</style>",
+        "custom_liquid": "",
         "color_scheme": "scheme-4",
         "padding_top": 60,
         "padding_bottom": 28
@@ -45,7 +45,6 @@
     },
     "media_pXzJ7f": {
       "type": "media",
-      "disabled": true,
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/Banner_15.png",
@@ -160,14 +159,14 @@
         "heading_jBfRN7": {
           "type": "heading",
           "settings": {
-            "heading": "DuraGrip Outsole",
+            "heading": "<strong>Shape Held, Heat Out</strong>",
             "heading_size": "h1"
           }
         },
         "text_gTP4VP": {
           "type": "text",
           "settings": {
-            "text": "<p>Developed with GOODYEAR, The DuraGrip outsole features a specialised rubber blend unlike any other. It is both durable yet grippy, balancing harness to traction. The patterned grip supports quick directional changes while resisting abrasion over extended use.</p>",
+            "text": "<p>TPU overlays keep the upper from collapsing through lateral cuts and deep lunges. Mesh and Aerovents pull heat out as it builds so the fit doesn't shift and your feet don't cook, even in long sessions. </p>",
             "text_style": "body"
           }
         },
@@ -187,7 +186,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Banner_12.1.png",
+        "image": "shopify://shop_images/1_cdeb1f9a-f83e-4f4d-8694-c21a8287fa5b.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
