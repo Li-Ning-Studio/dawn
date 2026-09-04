@@ -9,34 +9,98 @@
  */
 {
   "sections": {
-    "hero_video_component_BwJCQi": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
+    "hero_component_FgXrwt": {
+      "type": "hero-component",
+      "name": "Hero Component",
       "settings": {
-        "video": "shopify://files/videos/Main.mp4",
-        "mobile_video": "shopify://files/videos/Main 2.mp4",
-        "subtitle": "Phenom",
-        "title": "THE MOST AWAITED SHOE",
-        "description": "What every professional player dreams of is now ready to be yours.",
-        "button_text": "EXPLORE MORE",
-        "link_to": "/",
+        "image": "shopify://shop_images/2_f7d49388-07f3-4367-8b6a-dc8286802285_1.jpg",
+        "mobile_image": "shopify://shop_images/1_3bb13bec-f4d7-4f49-9d26-874b9bbb9c60_1.jpg",
+        "subtitle": "Introducing",
+        "title": "Nitrix 80 Bullet",
+        "description": "HNDRD's thinnest professional racket yet",
+        "button_text": "CLAIM NOW",
+        "link_to": "",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 60
       }
     },
-    "swipeable_products_VGrBGw": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
+    "custom_liquid_TNKe7n": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "title": "The Over Engineered Shoe",
-        "products": [
-          "phenom"
-        ],
-        "show_color_variants": true,
+        "custom_liquid": "<div class=\"split-banner-container\">\n  <!-- Left Card -->\n  <div class=\"banner-card\">\n    <a href=\"/collections/your-left-collection\" class=\"image-wrapper\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0934/2822/0217/files/trio.jpg?v=1788496834\" alt=\"Peak Performance Trio\" loading=\"lazy\">\n    </a>\n    <div class=\"card-caption\">\n      <a href=\"https://us.hndrd.co › collections › pro-rackets-trio\">\n        PEAK PERFORMANCE TRIO\n      </a>\n    </div>\n  </div>\n\n  <!-- Right Card -->\n  <div class=\"banner-card\">\n    <a href=\"/collections/your-right-collection\" class=\"image-wrapper\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0934/2822/0217/files/Gemini_Generated_Image_h31nhwh31nhwh31n.jpg?v=1788496836\" alt=\"Performance Served Right\" loading=\"lazy\">\n    </a>\n    <div class=\"card-caption\">\n      <a href=\"https://us.hndrd.co › collections › phenom\" class=\"caption-link\">\n        PERFORMANCE SERVED RIGHT\n      </a>\n    </div>\n  </div>\n</div>\n\n<style>\n  .split-banner-container {\n    display: flex;\n    gap: 20px;\n    width: 100%;\n    max-width: 1400px;\n    margin: 0 auto;\n    padding: 0 16px;\n    box-sizing: border-box;\n  }\n\n  .banner-card {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .image-wrapper {\n    position: relative;\n    display: block;\n    width: 100%;\n    aspect-ratio: 1 / 1;\n    background-color: #f5f5f5;\n    overflow: hidden;\n  }\n\n  .image-wrapper img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    object-position: center center;\n    display: block;\n    transition: transform 0.3s ease;\n  }\n\n  .banner-card:hover .image-wrapper img {\n    transform: scale(1.03);\n  }\n\n  .card-caption {\n    margin-top: 14px;\n    text-align: center;\n  }\n\n  .caption-link {\n    display: inline-block;\n    color: #000000;\n    font-size: 14px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 0.05em;\n    font-family: inherit;\n    text-decoration: none;\n    transition: opacity 0.2s ease;\n  }\n\n  .caption-link:hover {\n    opacity: 0.7;\n    text-decoration: underline;\n  }\n\n  @media (max-width: 749px) {\n    .split-banner-container {\n      flex-direction: column;\n      gap: 24px;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_mWCEMh": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TLCk8G": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02_4eb3effb-90b5-4913-adc2-74cf0ebc4a1e.jpg",
+            "title": "<strong>Nitrix 70 Venom</strong>",
+            "text": "<p>Built for heavy smashes and offensive play with an ultra-slim 6.1 mm shaft, delivering raw power and unstoppable dominance on court.<br/></p>",
+            "link_label": "Unleash Your Power",
+            "link": "shopify://products/nitrix-70-venom-4u"
+          }
+        },
+        "column_fLd9MY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02_890512f1-88f0-46d9-9ddb-3ce5d50003b9.jpg",
+            "title": "<strong>Flareon 700</strong>",
+            "text": "<p>Experience lightning-fast hands and blistering speed with a Torsion Stop System that keeps every shot stable, the fastest racket in Hundred’s lineup.</p>",
+            "link_label": "Play Without Limits",
+            "link": "shopify://products/flareon-700-4u"
+          }
+        },
+        "column_R9EJW7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02_24f86582-447f-4c64-a325-f7f1ab856f6f.jpg",
+            "title": "<strong>Nitrix 70 Volta</strong>",
+            "text": "<p>Engineered for clean, aggressive power with an aerodynamic frame for faster swings, built to unleash unstoppable smashes and dominate every rally.<br/></p>",
+            "link_label": "Own the Court",
+            "link": "shopify://products/nitrix-70-volta-4u"
+          }
+        },
+        "column_mLjkVm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02-min_1.png",
+            "title": "<strong>Hyfonic 7</strong>",
+            "text": "<p>Built for ultimate precision and stability, featuring a dual aerodynamic frame that delivers sharp feedback and control on every shot.<br/></p>",
+            "link_label": "Get Yours Now",
+            "link": "shopify://products/hyfonic-7-4u"
+          }
+        }
+      },
+      "block_order": [
+        "column_TLCk8G",
+        "column_fLd9MY",
+        "column_R9EJW7",
+        "column_mLjkVm"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Professional Badminton Rackets",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
         "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 16
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "hero_video_component_hNztTF": {
@@ -71,50 +135,21 @@
         "padding_bottom": 28
       }
     },
-    "responsive_slideshow_9mYhFN": {
-      "type": "responsive-slideshow",
-      "blocks": {
-        "slide_KffCBB": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_53406b24-6e55-4c92-9cff-d8c32c0094e3.jpg",
-            "mobile_image": "shopify://shop_images/Banner_R_4aeab019-486e-4297-aca6-b98e81f27493.jpg",
-            "heading": "Speed in Every Swing",
-            "subheading": "Built for quick reflexes and lightning-fast plays with aerodynamic precision.",
-            "button_label": "Shop Typhoon",
-            "link": "shopify://products/flareon-typhoon-4u"
-          }
-        },
-        "slide_tK6zcD": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Main_93a015de-7c7d-4c56-9cfa-60de16effebf_1.jpg",
-            "mobile_image": "shopify://shop_images/Main_R_35ad5c71-f103-41ee-b2db-6944c0aabdc4_1.jpg",
-            "heading": "All Out Attack",
-            "subheading": "Turn every rally into a statement of power and precision.",
-            "button_label": "Shop Thunder",
-            "link": "shopify://products/nitrix-thunder-4u"
-          }
-        },
-        "slide_tnNnCa": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Main_20db9f80-2904-48ec-9c17-1e3631e52560.jpg",
-            "mobile_image": "shopify://shop_images/Main_R_f30f37aa-c31a-4561-8a3b-57ae1b9adde7.jpg",
-            "heading": "Accuracy in Motion",
-            "subheading": "Crafted for precise strikes and seamless control across every rally.",
-            "button_label": "Shop Lazer",
-            "link": "shopify://products/hyfonic-lazer-4u"
-          }
-        }
-      },
-      "block_order": [
-        "slide_KffCBB",
-        "slide_tK6zcD",
-        "slide_tnNnCa"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {}
+    "hero_component_eRmFyD": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_2_2c3b92c7-6822-45df-a24b-09fce0d852ed.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_R_44cbe24b-92e9-4572-8413-aa10ba776d3e.jpg",
+        "subtitle": "Flareon Series",
+        "title": "MADE TO MOVE FASTER",
+        "description": "",
+        "button_text": "SHOP FLAREON",
+        "link_to": "shopify://collections/flareon-100",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     },
     "swipeable_products_eG7XyV": {
       "type": "swipeable-products",
@@ -122,11 +157,12 @@
       "settings": {
         "title": "",
         "products": [
-          "nitrix-thunder-4u",
+          "flareon-100-4u-strung",
+          "flareon-100-5u-strung",
           "flareon-typhoon-4u",
           "flareon-typhoon-5u",
-          "hyfonic-lazer-4u",
-          "hyfonic-lazer-5u"
+          "flareon-700-3u",
+          "flareon-700-4u"
         ],
         "show_color_variants": false,
         "color_scheme": "",
@@ -134,65 +170,77 @@
         "padding_bottom": 20
       }
     },
-    "responsive_slideshow_qEytbW": {
-      "type": "responsive-slideshow",
+    "hero_component_tKXQ8B": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_f4724484-0dbf-46cc-a612-d6546b8ebdba.jpg",
+        "mobile_image": "shopify://shop_images/Banner_R_e254dd3d-bcac-482c-a0e9-61d582e7f881.jpg",
+        "subtitle": "Prnx",
+        "title": "PHOTON LIKE MOVEMENTS",
+        "description": "Own the court with a limited edition that delivers precise control and premium build quality",
+        "button_text": "BEND YOUR OPPONENT",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_4JAgUd": {
+      "type": "multicolumn",
       "blocks": {
-        "slide_MNxCKU": {
-          "type": "slide",
+        "column_FwHmHM": {
+          "type": "column",
           "settings": {
-            "image": "shopify://shop_images/ba_ccae84e7-85ec-42cc-9300-2ea424a4e433.jpg",
-            "mobile_image": "shopify://shop_images/respo_396658c5-d6ba-4cc9-b7ee-3f3dff519629.jpg",
-            "heading": "Weaponize Your Smash",
-            "subheading": "Bring the intensity of battle with a racket designed for peak attack and crushing impact.",
-            "button_label": "Buy Now",
-            "link": "shopify://products/atomic-x-35-spd"
+            "image": "shopify://shop_images/Banner_R_0dad21ae-0952-47df-ac60-7d974c8a3005.jpg",
+            "title": "Aeris Kitbag",
+            "text": "<p>The Aeris Pack Kitbag combines a sleek, abstract-textured exterior with maximum court-ready organization. It features three spacious compartments with thermal-lined protection, a detachable shoe bag, and quick-access pockets for essentials. Smart, durable, and stylish—it’s built to move effortlessly from the court to everyday use.<br/><br/></p>",
+            "link_label": "",
+            "link": "shopify://products/aeris-pack-kit-bag"
           }
         },
-        "slide_xUM9AX": {
-          "type": "slide",
+        "column_efFgeT": {
+          "type": "column",
           "settings": {
-            "image": "shopify://shop_images/atomicx38_banner.png",
-            "mobile_image": "shopify://shop_images/atomicx38_banner_r.png",
-            "heading": "Rumbling Of High-Volt Smashes",
-            "subheading": "Rackets that significantly absorb shocks from impact and deliver it back for a high-speed smash.",
-            "button_label": "Buy Now",
-            "link": "shopify://products/atomic-x-38-pwr"
+            "image": "shopify://shop_images/Banner_R_563972f0-50af-437b-a696-38b874f0a87a.jpg",
+            "title": "Prism Pack Kitbag",
+            "text": "<p><br/>The Prism Pack Kitbag combines a bold, colorful exterior with smart, court-ready organization. It features two spacious main compartments—including a silver thermal-lined section to protect your gear—and a compact front pocket for your essentials. Vibrant, durable, and stylish, it’s built for players who carry their game with confidence and personality.<br/><br/></p>",
+            "link_label": "",
+            "link": "shopify://products/prism-pack-kit-bag"
           }
         },
-        "slide_Je3rWV": {
-          "type": "slide",
+        "column_tiR3bL": {
+          "type": "column",
           "settings": {
-            "image": "shopify://shop_images/ba_f587bac3-3d1e-4cce-ae84-c999618a75d5.jpg",
-            "mobile_image": "shopify://shop_images/respo_a29cc95b-9934-4a45-aefd-fc059148c4c6.jpg",
-            "heading": "Attack In Light Speed",
-            "subheading": "Be the King of the Court with seamless built T-joint for faster recovery and great attacking power.",
-            "button_label": "Buy Now",
-            "link": "shopify://products/atomic-x-38-ctrl"
+            "image": "shopify://shop_images/Banner_R_ffa21883-7dba-4b87-b4e9-581dc2255c81.jpg",
+            "title": "Nova Pack Kitbag",
+            "text": "<p><br/>The Nova Pack Kitbag combines a durable, scratch-resistant exterior with clean, modern aesthetics. It offers maximum organization with three spacious compartments to neatly store your rackets, shoes, and apparel. Built for longevity and effortless versatility, it moves seamlessly from intense court sessions to everyday life.<br/><br/></p>",
+            "link_label": "",
+            "link": "shopify://products/nova-pack-kit-bag"
           }
         }
       },
       "block_order": [
-        "slide_MNxCKU",
-        "slide_xUM9AX",
-        "slide_Je3rWV"
+        "column_FwHmHM",
+        "column_efFgeT",
+        "column_tiR3bL"
       ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {}
-    },
-    "swipeable_products_tGr6T4": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Atomic X Series",
-        "products": [
-          "atomic-x-38-pwr",
-          "atomic-x-38-ctrl",
-          "atomic-x-35-spd"
-        ],
-        "show_color_variants": true,
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Shop Now",
+        "button_link": "shopify://collections/badminton-kit-bags",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
         "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn_8UWbwF": {
@@ -563,14 +611,15 @@
     }
   },
   "order": [
-    "hero_video_component_BwJCQi",
-    "swipeable_products_VGrBGw",
+    "hero_component_FgXrwt",
+    "custom_liquid_TNKe7n",
+    "multicolumn_mWCEMh",
     "hero_video_component_hNztTF",
     "swipeable_products_ekha9p",
-    "responsive_slideshow_9mYhFN",
+    "hero_component_eRmFyD",
     "swipeable_products_eG7XyV",
-    "responsive_slideshow_qEytbW",
-    "swipeable_products_tGr6T4",
+    "hero_component_tKXQ8B",
+    "multicolumn_4JAgUd",
     "multicolumn_8UWbwF",
     "multicolumn_jDkRrY",
     "hero_video_component_7wjHEH",
