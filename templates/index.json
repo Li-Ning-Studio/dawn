@@ -9,36 +9,42 @@
  */
 {
   "sections": {
-    "media_LnVYnh": {
-      "type": "media",
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_1e561a2c-73a9-4785-9195-85d5f806aa72.jpg",
-        "mobile_image": "shopify://shop_images/02_8f6010b6-c976-4a38-99f7-4af0aa794cf4.jpg",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_component_F6qDKQ": {
       "type": "hero-component",
-      "disabled": true,
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_1e561a2c-73a9-4785-9195-85d5f806aa72.jpg",
-        "mobile_image": "shopify://shop_images/02_8f6010b6-c976-4a38-99f7-4af0aa794cf4.jpg",
+        "image": "shopify://shop_images/Banner_fa0ee417-e2c0-415d-b064-8b8c849bc612.png",
+        "mobile_image": "shopify://shop_images/Banner_R_c3473a97-6e3a-412b-9668-909777083bb3.png",
         "subtitle": "HYPERARMOUR SERIES",
-        "title": "BUILT FOR EVERY DIRECTION",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
+        "title": "BUILT TO OUTLAST",
+        "description": "An upper made to endure the game itself.",
+        "button_text": "EXPERIENCE THE HYPERARMOUR",
+        "link_to": "shopify://products/hyper-armour",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 20
       }
     },
+    "swipeable_products_7CkaLw": {
+      "type": "swipeable-products",
+      "disabled": true,
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "",
+        "products": [
+          "nitrix-80-bullet",
+          "nitrix-80-bullet-4u",
+          "nitrix-80-bullet-5u"
+        ],
+        "show_color_variants": false,
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 20
+      }
+    },
     "custom_liquid_jebebN": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"launch-wrapper\">\n\n  <div class=\"launch-container\">\n\n    <div class=\"launch-status\">\n      <span class=\"pulse-dot\"></span>\n      LAUNCHING SOON\n    </div>\n\n    <div class=\"countdown\">\n\n      <div class=\"time-box\">\n        <div class=\"number\" id=\"days\">00</div>\n        <div class=\"label\">DAYS</div>\n      </div>\n\n      <div class=\"divider\">:</div>\n\n      <div class=\"time-box\">\n        <div class=\"number\" id=\"hours\">00</div>\n        <div class=\"label\">HOURS</div>\n      </div>\n\n      <div class=\"divider\">:</div>\n\n      <div class=\"time-box\">\n        <div class=\"number\" id=\"minutes\">00</div>\n        <div class=\"label\">MINUTES</div>\n      </div>\n\n      <div class=\"divider\">:</div>\n\n      <div class=\"time-box\">\n        <div class=\"number\" id=\"seconds\">00</div>\n        <div class=\"label\">SECONDS</div>\n      </div>\n\n    </div>\n\n  </div>\n\n</div>\n\n<style>\n* { box-sizing: border-box; }\n\n.launch-wrapper {\n  width: 100%;\n  padding: 25px 20px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: transparent;\n  font-family: \"Helvetica Neue\", Arial, sans-serif;\n  overflow: hidden;\n}\n\n.launch-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.launch-status {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n  font-size: 11px;\n  font-weight: 700;\n  letter-spacing: .45em;\n  color: #788285;\n  margin-bottom: 25px;\n}\n\n.pulse-dot {\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: #32d5c7;\n  box-shadow: 0 0 18px #32d5c7;\n  animation: pulse 1.5s infinite;\n}\n\n@keyframes pulse {\n  50% { transform: scale(1.5); opacity: .5; }\n}\n\n.countdown {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 15px;\n}\n\n.time-box {\n  width: 115px;\n  height: 110px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  border-radius: 24px;\n  background: linear-gradient(145deg, rgba(255,255,255,.85), rgba(230,248,246,.55));\n  border: 1px solid rgba(0,0,0,.06);\n  backdrop-filter: blur(25px);\n  box-shadow: 0 20px 45px rgba(0,0,0,.08), inset 0 1px 10px rgba(255,255,255,.8);\n  overflow: hidden;\n}\n\n.number {\n  position: relative;\n  width: 100%;\n  height: 60px;\n  font-size: 52px;\n  font-weight: 800;\n  line-height: 60px;\n  color: #111;\n  overflow: hidden;\n  /* fixed-width digit grid so nothing shifts horizontally on change */\n  text-align: center;\n  font-variant-numeric: tabular-nums;\n}\n\n.number span {\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  will-change: transform, opacity;\n}\n\n.old-number {\n  animation: fadeOut .25s ease forwards;\n}\n\n.new-number {\n  animation: fadeIn .35s ease forwards;\n}\n\n@keyframes fadeOut {\n  0%   { opacity: 1; transform: translateY(0); }\n  100% { opacity: 0; transform: translateY(-8px); }\n}\n\n@keyframes fadeIn {\n  0%   { opacity: 0; transform: translateY(8px); }\n  100% { opacity: 1; transform: translateY(0); }\n}\n\n.label {\n  margin-top: 10px;\n  font-size: 8px;\n  font-weight: 700;\n  letter-spacing: .25em;\n  color: #8b9598;\n}\n\n.divider {\n  font-size: 38px;\n  font-weight: 500;\n  color: #32d5c7;\n}\n\n@media (max-width: 700px) {\n  .launch-wrapper { padding: 20px 8px; }\n  .launch-status { font-size: 9px; margin-bottom: 20px; }\n  .countdown { gap: 7px; }\n  .time-box { width: 78px; height: 100px; border-radius: 20px; }\n  .number { font-size: 34px; height: 45px; line-height: 45px; }\n  .divider { font-size: 26px; }\n  .label { font-size: 7px; letter-spacing: .15em; }\n}\n\n@media (max-width: 380px) {\n  .launch-wrapper { padding: 15px 8px; }\n  .time-box { width: 72px; height: 95px; }\n  .number { font-size: 30px; }\n  .divider { font-size: 22px; }\n}\n</style>\n\n<script>\n(function () {\n  const launchDate = new Date(\"2026-09-05T12:00:00+05:30\").getTime();\n\n  // Track current value + pending animation timeout PER element,\n  // instead of reading it back out of textContent (which was the\n  // source of the glitch: an old setTimeout could fire after a\n  // newer one and stomp the digit back to a stale value).\n  const state = {};\n\n  function updateTimer() {\n    let distance = launchDate - Date.now();\n    if (distance < 0) distance = 0;\n\n    const days = Math.floor(distance / (1000 * 60 * 60 * 24));\n    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n    const seconds = Math.floor((distance % (1000 * 60)) / 1000);\n\n    change(\"days\", days);\n    change(\"hours\", hours);\n    change(\"minutes\", minutes);\n    change(\"seconds\", seconds);\n  }\n\n  function change(id, value) {\n    const element = document.getElementById(id);\n    const formatted = String(value).padStart(2, \"0\");\n\n    if (!state[id]) {\n      state[id] = { current: element.textContent.trim() || \"00\", timeoutId: null };\n    }\n    const s = state[id];\n\n    if (s.current === formatted) return;\n\n    // Cancel any in-flight animation for this digit so an older\n    // callback can't overwrite the value with a stale number.\n    if (s.timeoutId) {\n      clearTimeout(s.timeoutId);\n      s.timeoutId = null;\n    }\n\n    const previous = s.current;\n    s.current = formatted;\n\n    element.innerHTML = `\n      <span class=\"old-number\">${previous}</span>\n      <span class=\"new-number\">${formatted}</span>\n    `;\n\n    s.timeoutId = setTimeout(() => {\n      // Only commit if this is still the latest value for this element\n      if (s.current === formatted) {\n        element.textContent = formatted;\n      }\n      s.timeoutId = null;\n    }, 350);\n  }\n\n  updateTimer();\n  setInterval(updateTimer, 1000);\n})();\n</script>",
@@ -61,23 +67,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 60
-      }
-    },
-    "swipeable_products_7CkaLw": {
-      "type": "swipeable-products",
-      "disabled": true,
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "",
-        "products": [
-          "nitrix-80-bullet",
-          "nitrix-80-bullet-4u",
-          "nitrix-80-bullet-5u"
-        ],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 8,
-        "padding_bottom": 20
       }
     },
     "custom_liquid_3gkjyw": {
@@ -444,11 +433,10 @@
     }
   },
   "order": [
-    "media_LnVYnh",
     "hero_component_F6qDKQ",
+    "swipeable_products_7CkaLw",
     "custom_liquid_jebebN",
     "hero_component_mGMHCw",
-    "swipeable_products_7CkaLw",
     "custom_liquid_3gkjyw",
     "custom_liquid_ReR9YN",
     "custom_liquid_Q7GHFb",
