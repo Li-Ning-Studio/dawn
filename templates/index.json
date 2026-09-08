@@ -178,7 +178,7 @@
           "settings": {
             "image": "shopify://shop_images/4-4.jpg",
             "title": "Hypercourt",
-            "text": "<p>Unleash relentless speed, ultimate stability, and total court dominance with the Hyper Court.</p>",
+            "text": "<p>Unleash relentless speed, ultimate stability, and total court dominance with the Hyper Court.</p><p></p>",
             "link_label": "",
             "link": "shopify://products/hypercourt"
           }
@@ -196,9 +196,19 @@
         "column_iCdGV6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Banner_1_Responsive_3d24259295_904b81ac-5561-4a12-a6b6-f583f4805366.jpg",
-            "title": "Velocity",
+            "image": "shopify://shop_images/4_3d7d8818-243b-4cfe-a967-7be03d3447c8.jpg",
+            "title": "Beast Armour PBX",
             "text": "<p>Elevate your game with sleek, premium cushioning built for effortless sprints, jumps, and lunges.</p>",
+            "link_label": "",
+            "link": "shopify://products/beast-armor-pbx"
+          }
+        },
+        "column_jad6iq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_4bea24ee-06b5-4f41-acc8-a531445ebf80.jpg",
+            "title": "Velocity Z PBX",
+            "text": "<p>Pure, relentless speed. Powered by ultra-light, hyper-responsive cushioning for explosive takeoffs and effortless, seamless transitions.</p>",
             "link_label": "",
             "link": "shopify://products/velocity-z-pbx"
           }
@@ -207,7 +217,8 @@
       "block_order": [
         "column_bCMBRc",
         "column_8bjHht",
-        "column_iCdGV6"
+        "column_iCdGV6",
+        "column_jad6iq"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -217,7 +228,7 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "",
