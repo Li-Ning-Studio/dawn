@@ -79,7 +79,41 @@
 
               <tbody>
                 {%- for item in cart.items -%}
-                  <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                  {%- liquid
+                    # Keep every Shopify cart line in the DOM. The native relationship
+                    # controls grouping; _customisationId is never used as structure.
+                    assign nested_parent = item.parent_relationship.parent
+                    assign has_nested_children = false
+                    assign has_customisation_group = false
+                    assign is_customised_parent = false
+                    assign grouped_original_line_price = item.original_line_price
+                    assign grouped_final_line_price = item.final_line_price
+
+                    if nested_parent == blank and item.properties._customisationId != blank
+                      assign is_customised_parent = true
+                    endif
+
+                    if nested_parent == blank
+                      for candidate in cart.items
+                        if candidate.parent_relationship.parent.key == item.key
+                          assign has_nested_children = true
+                          assign grouped_original_line_price = grouped_original_line_price | plus: candidate.original_line_price
+                          assign grouped_final_line_price = grouped_final_line_price | plus: candidate.final_line_price
+                        endif
+                      endfor
+                    endif
+
+                    if item.item_components.size > 0 or has_nested_children
+                      assign has_customisation_group = true
+                    endif
+                  -%}
+                  <tr
+                    class="cart-item"
+                    id="CartItem-{{ item.index | plus: 1 }}"
+                    {% if nested_parent != blank %}
+                      hidden
+                    {% endif %}
+                  >
                     <td class="cart-item__media">
                       {% if item.image %}
                         {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -103,12 +137,35 @@
                       {%- endif -%}
 
                       {% if item.item_components.size > 0 %}
-                        <div class="cart-item__name h4 break">
+                        <div class="cart-item__name{% if is_customised_parent %} cart-item__name--customised{% endif %} h4 break">
                           {{ item.title }}
+                          {% if is_customised_parent %}
+                            <img
+                              class="cart-item__customisation-icon"
+                              src="{{ 'icon-spark.svg' | asset_url }}"
+                              alt=""
+                              width="16"
+                              height="16"
+                              aria-hidden="true"
+                            >
+                          {% endif %}
                         </div>
                       {% else %}
-                        <a href="{{ item.url }}" class="cart-item__name h4 break">
+                        <a
+                          href="{{ item.url }}"
+                          class="cart-item__name{% if is_customised_parent %} cart-item__name--customised{% endif %} h4 break"
+                        >
                           {{ item.product.title | escape }}
+                          {% if is_customised_parent %}
+                            <img
+                              class="cart-item__customisation-icon"
+                              src="{{ 'icon-spark.svg' | asset_url }}"
+                              alt=""
+                              width="16"
+                              height="16"
+                              aria-hidden="true"
+                            >
+                          {% endif %}
                         </a>
                       {% endif %}
 
@@ -169,6 +226,49 @@
                         <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                       {%- endif -%}
 
+                      {%- if has_customisation_group -%}
+                        {%- assign item_position = item.index | plus: 1 -%}
+                        {%- assign bundle_items_id = 'CartBundleItems-' | append: item_position -%}
+                        <button
+                          type="button"
+                          class="bundle-toggle product-option"
+                          data-bundle-toggle
+                          data-show-label="{{ 'sections.cart.show_bundle' | t | escape }}"
+                          data-hide-label="{{ 'sections.cart.hide_bundle' | t | escape }}"
+                          aria-controls="{{ bundle_items_id }}"
+                          aria-expanded="false"
+                        >
+                          {{- 'sections.cart.show_bundle' | t -}}
+                        </button>
+
+                        <div id="{{ bundle_items_id }}" class="bundle-items" aria-hidden="true">
+                          {%- for component in item.item_components -%}
+                            <div>
+                              <span class="bundle-item__name product-option">
+                                {{ component.product.title | escape }} -
+                              </span>
+                              <span class="bundle-item__price product-option">
+                                {{ component.original_price | money }}
+                              </span>
+                            </div>
+                          {%- endfor -%}
+                          {%- if has_nested_children -%}
+                            {%- for candidate in cart.items -%}
+                              {%- if candidate.parent_relationship.parent.key == item.key -%}
+                                <div>
+                                  <span class="bundle-item__name product-option">
+                                    {{ candidate.product.title | escape }} -
+                                  </span>
+                                  <span class="bundle-item__price product-option">
+                                    {{ candidate.final_line_price | money }}
+                                  </span>
+                                </div>
+                              {%- endif -%}
+                            {%- endfor -%}
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+
                       <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                         {%- for discount in item.line_level_discount_allocations -%}
                           <li class="discounts__discount">
@@ -182,26 +282,26 @@
                     <td class="cart-item__totals right medium-hide large-up-hide">
                       {%- render 'loading-spinner' -%}
                       <div class="cart-item__price-wrapper">
-                        {%- if item.original_line_price != item.final_line_price -%}
+                        {%- if grouped_original_line_price != grouped_final_line_price -%}
                           <dl class="cart-item__discounted-prices">
                             <dt class="visually-hidden">
                               {{ 'products.product.price.regular_price' | t }}
                             </dt>
                             <dd>
                               <s class="cart-item__old-price price price--end">
-                                {{ item.original_line_price | money }}
+                                {{ grouped_original_line_price | money }}
                               </s>
                             </dd>
                             <dt class="visually-hidden">
                               {{ 'products.product.price.sale_price' | t }}
                             </dt>
                             <dd class="price price--end">
-                              {{ item.final_line_price | money }}
+                              {{ grouped_final_line_price | money }}
                             </dd>
                           </dl>
                         {%- else -%}
                           <span class="price price--end">
-                            {{ item.original_line_price | money }}
+                            {{ grouped_original_line_price | money }}
                           </span>
                         {%- endif -%}
 
@@ -231,6 +331,19 @@
                       if item.variant.quantity_price_breaks.size > 0
                         assign has_vol_pricing = true
                       endif
+
+                      assign can_update_quantity = true
+                      if item.instructions and item.instructions.can_update_quantity == false
+                        assign can_update_quantity = false
+                      endif
+                      if has_customisation_group
+                        assign can_update_quantity = false
+                      endif
+
+                      assign can_remove = true
+                      if item.instructions and item.instructions.can_remove == false
+                        assign can_remove = false
+                      endif
                     -%}
                     <td class="cart-item__quantity{% if has_qty_rules or has_vol_pricing %} cart-item__quantity--info{% endif %}">
                       <quantity-popover>
@@ -249,7 +362,14 @@
                               </button>
                             {%- endif -%}
                             <quantity-input class="quantity cart-quantity">
-                              <button class="quantity__button" name="minus" type="button">
+                              <button
+                                class="quantity__button"
+                                name="minus"
+                                type="button"
+                                {% unless can_update_quantity %}
+                                  disabled
+                                {% endunless %}
+                              >
                                 <span class="visually-hidden">
                                   {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
                                 </span>
@@ -259,9 +379,12 @@
                               </button>
                               <input
                                 class="quantity__input"
+                                {% unless can_update_quantity %}
+                                  disabled
+                                {% endunless %}
                                 data-quantity-variant-id="{{ item.variant.id }}"
                                 type="number"
-                                name="updates[]"
+                                name="updates[{{ item.key | escape }}]"
                                 value="{{ item.quantity }}"
                                 {% # theme-check-disable %}
                                 data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
@@ -276,7 +399,14 @@
                                 id="Quantity-{{ item.index | plus: 1 }}"
                                 data-index="{{ item.index | plus: 1 }}"
                               >
-                              <button class="quantity__button" name="plus" type="button">
+                              <button
+                                class="quantity__button"
+                                name="plus"
+                                type="button"
+                                {% unless can_update_quantity %}
+                                  disabled
+                                {% endunless %}
+                              >
                                 <span class="visually-hidden">
                                   {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
                                 </span>
@@ -289,6 +419,9 @@
                           <cart-remove-button
                             id="Remove-{{ item.index | plus: 1 }}"
                             data-index="{{ item.index | plus: 1 }}"
+                            {% unless can_remove %}
+                              class="hidden"
+                            {% endunless %}
                           >
                             <a
                               href="{{ item.url_to_remove }}"
@@ -398,26 +531,26 @@
                     <td class="cart-item__totals right small-hide">
                       {%- render 'loading-spinner' -%}
                       <div class="cart-item__price-wrapper">
-                        {%- if item.original_line_price != item.final_line_price -%}
+                        {%- if grouped_original_line_price != grouped_final_line_price -%}
                           <dl class="cart-item__discounted-prices">
                             <dt class="visually-hidden">
                               {{ 'products.product.price.regular_price' | t }}
                             </dt>
                             <dd>
                               <s class="cart-item__old-price price price--end">
-                                {{ item.original_line_price | money }}
+                                {{ grouped_original_line_price | money }}
                               </s>
                             </dd>
                             <dt class="visually-hidden">
                               {{ 'products.product.price.sale_price' | t }}
                             </dt>
                             <dd class="price price--end">
-                              {{ item.final_line_price | money }}
+                              {{ grouped_final_line_price | money }}
                             </dd>
                           </dl>
                         {%- else -%}
                           <span class="price price--end">
-                            {{ item.original_line_price | money }}
+                            {{ grouped_original_line_price | money }}
                           </span>
                         {%- endif -%}
 

@@ -65,6 +65,7 @@
       "labels": {
         "free": "FREE",
         "input": "Your Personalisation",
+        "second_input": "देश",
         "note": "Note: This is for representation purposes only. The text will be printed on the back of the T-Shirt. Cash on Delivery is not applicable for orders containing Personalised T-Shirts.",
         "step": "Step",
         "summary": "Personalising",
@@ -72,7 +73,17 @@
         "title": "Make this T-Shirt yours"
       },
       "messages": {
-        "invalid_input": "Only letters, periods, and spaces are allowed."
+        "invalid_input": "Only letters, periods, and spaces are allowed.",
+        "logo_unavailable": "देश और लोगो का विकल्प उपलब्ध नहीं है। केवल नाम प्रिंट करवाने के लिए इसे हटाएँ।",
+        "logo_loading": "आपका शामिल ब्रांड लोगो लोड हो रहा है…"
+      },
+      "countries": {
+        "india": "भारत",
+        "indonesia": "इंडोनेशिया",
+        "china": "चीन",
+        "japan": "जापान",
+        "malaysia": "मलेशिया",
+        "denmark": "डेनमार्क"
       },
       "actions": {
         "add": "Add",
@@ -81,7 +92,9 @@
         "back": "Back",
         "submit": "Personalise",
         "close": "Close",
-        "remove": "Remove"
+        "remove": "Remove",
+        "add_second_line": "{{ price }} में देश और लोगो जोड़ें",
+        "clear_second_line": "देश और लोगो हटाएँ"
       },
       "errors": {
         "load_failed": "Failed to load T-shirt personalisation options. Please refresh the page."
