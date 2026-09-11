@@ -66,6 +66,47 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
     },
+    "collection_list_9eLrHG": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_QMdMX7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-rackets"
+          }
+        },
+        "featured_collection_Ft7FNq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-shoes"
+          }
+        },
+        "featured_collection_yirADF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-bags"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_QMdMX7",
+        "featured_collection_Ft7FNq",
+        "featured_collection_yirADF"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "SHOP BY CATEGORY",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "featured_collection_VRmapC": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -230,6 +271,7 @@
   },
   "order": [
     "responsive_slideshow_fB8Wfk",
+    "collection_list_9eLrHG",
     "featured_collection_VRmapC",
     "hero_component_KwnPtD",
     "swipeable_products_RQ3tHx",
