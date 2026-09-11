@@ -17,10 +17,18 @@
           "settings": {
             "image": "shopify://shop_images/Main_L_84ccbfa3-14bd-41d6-9f54-e5588d99e004.jpg",
             "mobile_image": "shopify://shop_images/Main_R_049d8c0f-b900-4799-b464-1c3fa5c0c872.jpg",
-            "heading": "NITRIX 70 VOLTA",
-            "subheading": "Play like a champion with the most powerful racket in your hand",
+            "heading": "",
+            "subheading": "",
+            "heading_size": "h0",
+            "text_color": "#ffffff",
+            "content_position_vertical": "bottom",
+            "content_position_horizontal": "center",
+            "overlay_opacity": 20,
             "button_label": "See More",
             "link": "shopify://products/nitrix-70-volta",
+            "button_background": "#000000",
+            "button_text_color": "#FFFFFF",
+            "button_border_color": "#ffffff",
             "duration": 0
           }
         },
@@ -31,8 +39,16 @@
             "mobile_image": "shopify://shop_images/Main_R_84527e55-c3e0-41ec-a069-bbe9004c5be4.jpg",
             "heading": "HYFONIC 7",
             "subheading": "Sharp, deliberate feedback on every stroke",
+            "heading_size": "h0",
+            "text_color": "#ffffff",
+            "content_position_vertical": "middle",
+            "content_position_horizontal": "center",
+            "overlay_opacity": 20,
             "button_label": "Explore Now",
             "link": "shopify://products/hyfonic-7-4u",
+            "button_background": "rgba(0,0,0,0)",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#ffffff",
             "duration": 0
           }
         },
@@ -43,8 +59,16 @@
             "mobile_image": "shopify://shop_images/Main_R_cbd9d0c4-1725-4066-b8fd-4ac5ae39f751.jpg",
             "heading": "FLAREON 700",
             "subheading": "Fastest Racket in HNDRD’s lineup",
+            "heading_size": "h0",
+            "text_color": "#ffffff",
+            "content_position_vertical": "middle",
+            "content_position_horizontal": "center",
+            "overlay_opacity": 20,
             "button_label": "Check It Out",
             "link": "shopify://products/flareon-700",
+            "button_background": "rgba(0,0,0,0)",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#ffffff",
             "duration": 0
           }
         },
@@ -55,8 +79,16 @@
             "mobile_image": "shopify://shop_images/Main_R_e6e24cc0-3fc5-4f50-acd1-e0ce5991b59a.jpg",
             "heading": "NITRIX 70 VENOM",
             "subheading": "Crafted for heavy smashes and offensive play",
+            "heading_size": "h0",
+            "text_color": "#ffffff",
+            "content_position_vertical": "middle",
+            "content_position_horizontal": "center",
+            "overlay_opacity": 20,
             "button_label": "Explore Now",
             "link": "shopify://products/nitrix-70-venom",
+            "button_background": "rgba(0,0,0,0)",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#ffffff",
             "duration": 0
           }
         }
@@ -71,6 +103,10 @@
       "settings": {
         "autorotate": true,
         "autorotate_speed": 5,
+        "show_counter": true,
+        "controls_color": "#ffffff",
+        "controls_background": "#ffffff",
+        "controls_arrow_color": "#000000",
         "video_autoplay": true,
         "video_controls": false
       }
