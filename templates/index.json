@@ -20,7 +20,8 @@
             "heading": "NITRIX 70 VOLTA",
             "subheading": "Play like a champion with the most powerful racket in your hand",
             "button_label": "See More",
-            "link": "shopify://products/nitrix-70-volta"
+            "link": "shopify://products/nitrix-70-volta",
+            "duration": 0
           }
         },
         "slide_HjJpwr": {
@@ -31,7 +32,8 @@
             "heading": "HYFONIC 7",
             "subheading": "Sharp, deliberate feedback on every stroke",
             "button_label": "Explore Now",
-            "link": "shopify://products/hyfonic-7-4u"
+            "link": "shopify://products/hyfonic-7-4u",
+            "duration": 0
           }
         },
         "slide_yyVJtc": {
@@ -42,7 +44,8 @@
             "heading": "FLAREON 700",
             "subheading": "Fastest Racket in HNDRD’s lineup",
             "button_label": "Check It Out",
-            "link": "shopify://products/flareon-700"
+            "link": "shopify://products/flareon-700",
+            "duration": 0
           }
         },
         "slide_W4TjcE": {
@@ -53,7 +56,8 @@
             "heading": "NITRIX 70 VENOM",
             "subheading": "Crafted for heavy smashes and offensive play",
             "button_label": "Explore Now",
-            "link": "shopify://products/nitrix-70-venom"
+            "link": "shopify://products/nitrix-70-venom",
+            "duration": 0
           }
         }
       },
@@ -64,7 +68,12 @@
         "slide_W4TjcE"
       ],
       "name": "t:sections.slideshow.presets.name",
-      "settings": {}
+      "settings": {
+        "autorotate": true,
+        "autorotate_speed": 5,
+        "video_autoplay": true,
+        "video_controls": false
+      }
     },
     "collection_list_9eLrHG": {
       "type": "collection-list",
@@ -72,19 +81,25 @@
         "featured_collection_QMdMX7": {
           "type": "featured_collection",
           "settings": {
-            "collection": "badminton-rackets"
+            "collection": "badminton-rackets",
+            "heading": "",
+            "text": ""
           }
         },
         "featured_collection_Ft7FNq": {
           "type": "featured_collection",
           "settings": {
-            "collection": "badminton-shoes"
+            "collection": "badminton-shoes",
+            "heading": "",
+            "text": ""
           }
         },
         "featured_collection_yirADF": {
           "type": "featured_collection",
           "settings": {
-            "collection": "badminton-bags"
+            "collection": "badminton-bags",
+            "heading": "",
+            "text": ""
           }
         }
       },
@@ -99,10 +114,18 @@
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "card_radius": 0,
         "color_scheme": "scheme-1",
-        "show_view_all": false,
+        "text_position_vertical": "bottom",
+        "text_position_horizontal": "left",
+        "card_heading_size": "medium",
+        "card_heading_style": "h3",
+        "overlay_text_color": "#ffffff",
+        "overlay_opacity": 40,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
+        "show_view_all": false,
         "padding_top": 0,
         "padding_bottom": 0
       }
