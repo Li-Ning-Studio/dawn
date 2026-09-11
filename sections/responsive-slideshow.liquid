@@ -1,7 +1,14 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign autorotate_delay = section.settings.autorotate_speed | times: 1000
+  assign video_autoplay = section.settings.video_autoplay
+  assign video_controls = section.settings.video_controls
+-%}
+
 {%- style -%}
-  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__image {
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__image,
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__video video {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -26,6 +33,20 @@
     margin: 0 0 1.2rem;
     color: rgb(var(--color-foreground));
   }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media--mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media--mobile {
+      display: block;
+    }
+
+    #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media--desktop.has-mobile-alt {
+      display: none;
+    }
+  }
 {%- endstyle -%}
 
 <slider-component
@@ -40,6 +61,7 @@
       <div
         class="responsive-slideshow__slide slider__slide grid__item"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
+        data-duration="{{ block.settings.duration }}"
         {{ block.shopify_attributes }}
       >
         <div class="responsive-slideshow__media">
@@ -54,7 +76,35 @@
               assign fetch_priority = 'high'
             endif
           -%}
-          {%- if fallback_image -%}
+
+          {%- if block.settings.video != blank -%}
+            <div class="responsive-slideshow__video responsive-slideshow__media--desktop{% if block.settings.mobile_video != blank %} has-mobile-alt{% endif %}">
+              {{
+                block.settings.video
+                | video_tag:
+                  image_size: '1100x',
+                  autoplay: video_autoplay,
+                  loop: true,
+                  muted: true,
+                  controls: video_controls
+              }}
+            </div>
+
+            {%- if block.settings.mobile_video != blank -%}
+              <div class="responsive-slideshow__video responsive-slideshow__media--mobile">
+                {{
+                  block.settings.mobile_video
+                  | video_tag:
+                    image_size: '750x',
+                    autoplay: video_autoplay,
+                    loop: true,
+                    muted: true,
+                    controls: video_controls
+                }}
+              </div>
+            {%- endif -%}
+
+          {%- elsif fallback_image -%}
             <picture>
               {%- if mobile_image != blank -%}
                 <source
@@ -73,10 +123,12 @@
                   sizes: '100vw'
               }}
             </picture>
+
           {%- else -%}
             {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
         </div>
+
         <div class="responsive-slideshow__content">
           {%- if block.settings.heading != blank -%}
             <h2 class="responsive-slideshow__heading">
@@ -89,7 +141,7 @@
             </p>
           {%- endif -%}
           {%- if block.settings.button_label != blank -%}
-            <a
+            
               {% if block.settings.link != blank %}
                 href="{{ block.settings.link }}"
               {% else %}
@@ -133,18 +185,148 @@
   {%- endif -%}
 </slider-component>
 
+{%- if section.settings.autorotate and section.blocks.size > 1 -%}
+  <script>
+    (function () {
+      var sectionId = {{ section.id | json }};
+      var defaultDelay = {{ autorotate_delay }};
+
+      window.responsiveSlideshowTimers = window.responsiveSlideshowTimers || {};
+
+      function initResponsiveSlideshow() {
+        var wrapper = document.getElementById('ResponsiveSlideshow-' + sectionId);
+        if (!wrapper) return;
+
+        var slider = wrapper.querySelector('.slider');
+        if (!slider) return;
+
+        var slides = Array.prototype.slice.call(slider.querySelectorAll('.slider__slide'));
+        if (slides.length < 2) return;
+
+        clearTimeout(window.responsiveSlideshowTimers[sectionId]);
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var index = 0;
+        var paused = false;
+        var syncTimer;
+
+        function delayFor(i) {
+          var custom = parseFloat(slides[i].dataset.duration);
+          return custom > 0 ? custom * 1000 : defaultDelay;
+        }
+
+        function goTo(i) {
+          var offset = slides[i].offsetLeft - slides[0].offsetLeft;
+          slider.scrollTo({ left: offset, behavior: 'smooth' });
+        }
+
+        function tick() {
+          if (!paused) {
+            index = (index + 1) % slides.length;
+            goTo(index);
+          }
+          schedule();
+        }
+
+        function schedule() {
+          clearTimeout(window.responsiveSlideshowTimers[sectionId]);
+          window.responsiveSlideshowTimers[sectionId] = setTimeout(tick, delayFor(index));
+        }
+
+        slider.addEventListener('scroll', function () {
+          clearTimeout(syncTimer);
+          syncTimer = setTimeout(function () {
+            var position = slider.scrollLeft;
+            var nearest = 0;
+            var best = Infinity;
+            slides.forEach(function (slide, i) {
+              var distance = Math.abs(slide.offsetLeft - slides[0].offsetLeft - position);
+              if (distance < best) {
+                best = distance;
+                nearest = i;
+              }
+            });
+            index = nearest;
+          }, 120);
+        });
+
+        wrapper.addEventListener('mouseenter', function () { paused = true; });
+        wrapper.addEventListener('mouseleave', function () { paused = false; });
+        wrapper.addEventListener('focusin', function () { paused = true; });
+        wrapper.addEventListener('focusout', function () { paused = false; });
+        document.addEventListener('visibilitychange', function () { paused = document.hidden; });
+
+        schedule();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initResponsiveSlideshow);
+      } else {
+        initResponsiveSlideshow();
+      }
+
+      document.addEventListener('shopify:section:load', function (event) {
+        if (event.detail.sectionId === sectionId) initResponsiveSlideshow();
+      });
+    })();
+  </script>
+{%- endif -%}
+
 {% schema %}
 {
   "name": "Responsive Slideshow",
   "tag": "section",
   "class": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Automatisk skift"
+    },
+    {
+      "type": "checkbox",
+      "id": "autorotate",
+      "label": "Skift slide automatisk",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autorotate_speed",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "unit": "s",
+      "label": "Sekunder pr. slide",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay",
+      "label": "Afspil videoer automatisk",
+      "info": "Videoer afspilles altid uden lyd. Det er et krav i browsere.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "video_controls",
+      "label": "Vis afspilningsknapper",
+      "default": false
+    }
+  ],
   "blocks": [
     {
       "type": "slide",
       "name": "t:sections.slideshow.blocks.slide.name",
       "limit": 5,
       "settings": [
+        {
+          "type": "header",
+          "content": "Billede"
+        },
         {
           "type": "image_picker",
           "id": "image",
@@ -155,6 +337,26 @@
           "id": "mobile_image",
           "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label",
           "info": "t:sections.slideshow.blocks.slide.settings.mobile_image.info"
+        },
+        {
+          "type": "header",
+          "content": "Video",
+          "info": "Video vises i stedet for billedet, hvis du vælger en."
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "video",
+          "id": "mobile_video",
+          "label": "Video til mobil",
+          "info": "Valgfri. Bruges kun på skærme under 750px."
+        },
+        {
+          "type": "header",
+          "content": "Tekst"
         },
         {
           "type": "text",
@@ -178,6 +380,21 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+        },
+        {
+          "type": "header",
+          "content": "Visningstid"
+        },
+        {
+          "type": "range",
+          "id": "duration",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "unit": "s",
+          "label": "Visningstid for denne slide",
+          "info": "0 betyder, at sektionens standardtid bruges. Sæt en længere tid på videoslides.",
+          "default": 0
         }
       ]
     }
