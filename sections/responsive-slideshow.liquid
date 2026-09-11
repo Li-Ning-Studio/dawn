@@ -4,34 +4,73 @@
   assign autorotate_delay = section.settings.autorotate_speed | times: 1000
   assign video_autoplay = section.settings.video_autoplay
   assign video_controls = section.settings.video_controls
+
+  case section.settings.content_position_vertical
+    when 'top'
+      assign justify = 'flex-start'
+    when 'bottom'
+      assign justify = 'flex-end'
+    else
+      assign justify = 'center'
+  endcase
+
+  case section.settings.content_position_horizontal
+    when 'left'
+      assign align = 'flex-start'
+      assign text_align = 'left'
+    when 'right'
+      assign align = 'flex-end'
+      assign text_align = 'right'
+    else
+      assign align = 'center'
+      assign text_align = 'center'
+  endcase
 -%}
 
 {%- style -%}
+  #ResponsiveSlideshow-{{ section.id }} {
+    position: relative;
+    display: block;
+  }
+
+  #Slider-{{ section.id }} {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #Slider-{{ section.id }}::-webkit-scrollbar {
+    height: 0;
+    display: none;
+  }
+
+  #Slider-{{ section.id }} > .responsive-slideshow__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media {
+    position: relative;
+    width: 100%;
+  }
+
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__image,
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__video video {
     width: 100%;
     height: auto;
-    object-fit: contain;
     display: block;
-  }
-
-  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__slide {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__content {
-    text-align: center;
-    padding-bottom: 2rem;
-  }
-
-  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__heading {
-    margin: 0 0 0.8rem;
-  }
-
-  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__subheading {
-    margin: 0 0 1.2rem;
-    color: rgb(var(--color-foreground));
   }
 
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media--mobile {
@@ -47,19 +86,145 @@
       display: none;
     }
   }
+
+  {%- if section.settings.overlay_opacity > 0 -%}
+    #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+      pointer-events: none;
+    }
+  {%- endif -%}
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: {{ justify }};
+    align-items: {{ align }};
+    text-align: {{ text_align }};
+    padding: 4rem 2.4rem 8rem;
+    color: {{ section.settings.text_color }};
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__heading {
+    margin: 0;
+    color: inherit;
+    text-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.35);
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__subheading {
+    margin: 1rem 0 0;
+    color: inherit;
+    max-width: 46ch;
+    text-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.35);
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__button {
+    pointer-events: auto;
+    margin-top: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 3.2rem;
+    border: 0.1rem solid {{ section.settings.button_border_color }};
+    border-radius: 4rem;
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__button:hover {
+    opacity: 0.85;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__controls {
+    position: absolute;
+    right: 2.4rem;
+    bottom: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 3;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__counter {
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    border: 0.1rem solid {{ section.settings.controls_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: {{ section.settings.controls_color }};
+    letter-spacing: 0.02em;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__arrow {
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    background: {{ section.settings.controls_background }};
+    color: {{ section.settings.controls_arrow_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__arrow:hover {
+    opacity: 0.8;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__arrow svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__arrow--prev svg {
+    transform: rotate(90deg);
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__arrow--next svg {
+    transform: rotate(-90deg);
+  }
+
+  @media screen and (max-width: 749px) {
+    #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__content {
+      padding: 3rem 2rem 9rem;
+    }
+
+    #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__controls {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #Slider-{{ section.id }} {
+      scroll-behavior: auto;
+    }
+  }
 {%- endstyle -%}
 
-<slider-component
-  id="ResponsiveSlideshow-{{ section.id }}"
-  class="responsive-slideshow slider-mobile-gutter"
-  role="region"
-  aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
-  aria-label="Slideshow"
->
-  <div class="slider slider--everywhere grid grid--1-col" id="Slider-{{ section.id }}">
+<div id="ResponsiveSlideshow-{{ section.id }}" class="responsive-slideshow">
+  <div class="slider" id="Slider-{{ section.id }}">
     {%- for block in section.blocks -%}
       <div
-        class="responsive-slideshow__slide slider__slide grid__item"
+        class="responsive-slideshow__slide"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         data-duration="{{ block.settings.duration }}"
         {{ block.shopify_attributes }}
@@ -79,49 +244,20 @@
 
           {%- if block.settings.video != blank -%}
             <div class="responsive-slideshow__video responsive-slideshow__media--desktop{% if block.settings.mobile_video != blank %} has-mobile-alt{% endif %}">
-              {{
-                block.settings.video
-                | video_tag:
-                  image_size: '1100x',
-                  autoplay: video_autoplay,
-                  loop: true,
-                  muted: true,
-                  controls: video_controls
-              }}
+              {{ block.settings.video | video_tag: image_size: '1100x', autoplay: video_autoplay, loop: true, muted: true, controls: video_controls }}
             </div>
-
             {%- if block.settings.mobile_video != blank -%}
               <div class="responsive-slideshow__video responsive-slideshow__media--mobile">
-                {{
-                  block.settings.mobile_video
-                  | video_tag:
-                    image_size: '750x',
-                    autoplay: video_autoplay,
-                    loop: true,
-                    muted: true,
-                    controls: video_controls
-                }}
+                {{ block.settings.mobile_video | video_tag: image_size: '750x', autoplay: video_autoplay, loop: true, muted: true, controls: video_controls }}
               </div>
             {%- endif -%}
 
           {%- elsif fallback_image -%}
             <picture>
               {%- if mobile_image != blank -%}
-                <source
-                  media="(max-width: 749px)"
-                  srcset="{{ mobile_image | image_url: width: 750 }} 750w, {{ mobile_image | image_url: width: 1500 }} 1500w"
-                  sizes="100vw"
-                >
+                <source media="(max-width: 749px)" srcset="{{ mobile_image | image_url: width: 750 }} 750w, {{ mobile_image | image_url: width: 1500 }} 1500w" sizes="100vw">
               {%- endif -%}
-              {{
-                fallback_image
-                | image_url: width: 3840
-                | image_tag:
-                  class: 'responsive-slideshow__image',
-                  loading: loading,
-                  fetchpriority: fetch_priority,
-                  sizes: '100vw'
-              }}
+              {{ fallback_image | image_url: width: 3840 | image_tag: class: 'responsive-slideshow__image', loading: loading, fetchpriority: fetch_priority, sizes: '100vw' }}
             </picture>
 
           {%- else -%}
@@ -131,20 +267,16 @@
 
         <div class="responsive-slideshow__content">
           {%- if block.settings.heading != blank -%}
-            <h2 class="responsive-slideshow__heading">
-              {{ block.settings.heading }}
-            </h2>
+            <h2 class="responsive-slideshow__heading {{ section.settings.heading_size }}">{{ block.settings.heading }}</h2>
           {%- endif -%}
           {%- if block.settings.subheading != blank -%}
-            <p class="responsive-slideshow__subheading">
-              {{ block.settings.subheading }}
-            </p>
+            <p class="responsive-slideshow__subheading">{{ block.settings.subheading }}</p>
           {%- endif -%}
-                    {%- if block.settings.button_label != blank -%}
+          {%- if block.settings.button_label != blank -%}
             {%- if block.settings.link != blank -%}
-              <a href="{{ block.settings.link }}" class="button">{{ block.settings.button_label | escape }}</a>
+              <a href="{{ block.settings.link }}" class="responsive-slideshow__button">{{ block.settings.button_label | escape }}</a>
             {%- else -%}
-              <span class="button" role="link" aria-disabled="true">{{ block.settings.button_label | escape }}</span>
+              <span class="responsive-slideshow__button" role="link" aria-disabled="true">{{ block.settings.button_label | escape }}</span>
             {%- endif -%}
           {%- endif -%}
         </div>
@@ -153,120 +285,108 @@
   </div>
 
   {%- if section.blocks.size > 1 -%}
-    <div class="slider-buttons">
-      <button
-        type="button"
-        class="slider-button slider-button--prev"
-        name="previous"
-        aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
-        aria-controls="Slider-{{ section.id }}"
-      >
-        <span class="svg-wrapper">
-          {{ 'icon-caret.svg' | inline_asset_content }}
-        </span>
+    <div class="responsive-slideshow__controls">
+      {%- if section.settings.show_counter -%}
+        <div class="responsive-slideshow__counter">
+          <span class="responsive-slideshow__counter-current">1</span>/<span>{{ section.blocks.size }}</span>
+        </div>
+      {%- endif -%}
+      <button type="button" class="responsive-slideshow__arrow responsive-slideshow__arrow--prev" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}">
+        {{- 'icon-caret.svg' | inline_asset_content -}}
       </button>
-      <button
-        type="button"
-        class="slider-button slider-button--next"
-        name="next"
-        aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
-        aria-controls="Slider-{{ section.id }}"
-      >
-        <span class="svg-wrapper">
-          {{ 'icon-caret.svg' | inline_asset_content }}
-        </span>
+      <button type="button" class="responsive-slideshow__arrow responsive-slideshow__arrow--next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}">
+        {{- 'icon-caret.svg' | inline_asset_content -}}
       </button>
     </div>
   {%- endif -%}
-</slider-component>
+</div>
 
-{%- if section.settings.autorotate and section.blocks.size > 1 -%}
-  <script>
-    (function () {
-      var sectionId = {{ section.id | json }};
-      var defaultDelay = {{ autorotate_delay }};
+<script>
+  (function () {
+    var sectionId = {{ section.id | json }};
+    var defaultDelay = {{ autorotate_delay }};
+    var autorotate = {{ section.settings.autorotate | json }};
 
-      window.responsiveSlideshowTimers = window.responsiveSlideshowTimers || {};
+    window.responsiveSlideshowTimers = window.responsiveSlideshowTimers || {};
 
-      function initResponsiveSlideshow() {
-        var wrapper = document.getElementById('ResponsiveSlideshow-' + sectionId);
-        if (!wrapper) return;
+    function initSlideshow() {
+      var wrapper = document.getElementById('ResponsiveSlideshow-' + sectionId);
+      if (!wrapper) return;
 
-        var slider = wrapper.querySelector('.slider');
-        if (!slider) return;
+      var slider = document.getElementById('Slider-' + sectionId);
+      if (!slider) return;
 
-        var slides = Array.prototype.slice.call(slider.querySelectorAll('.slider__slide'));
-        if (slides.length < 2) return;
+      var slides = Array.prototype.slice.call(slider.querySelectorAll('.responsive-slideshow__slide'));
+      if (slides.length < 2) return;
 
+      var prev = wrapper.querySelector('.responsive-slideshow__arrow--prev');
+      var next = wrapper.querySelector('.responsive-slideshow__arrow--next');
+      var counter = wrapper.querySelector('.responsive-slideshow__counter-current');
+
+      var index = 0;
+      var paused = false;
+      var syncTimer;
+
+      clearTimeout(window.responsiveSlideshowTimers[sectionId]);
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        slider.scrollTo({ left: slides[index].offsetLeft - slides[0].offsetLeft, behavior: 'smooth' });
+        if (counter) counter.textContent = index + 1;
+      }
+
+      function delayFor(i) {
+        var custom = parseFloat(slides[i].dataset.duration);
+        return custom > 0 ? custom * 1000 : defaultDelay;
+      }
+
+      function schedule() {
+        if (!autorotate) return;
         clearTimeout(window.responsiveSlideshowTimers[sectionId]);
-
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-        var index = 0;
-        var paused = false;
-        var syncTimer;
-
-        function delayFor(i) {
-          var custom = parseFloat(slides[i].dataset.duration);
-          return custom > 0 ? custom * 1000 : defaultDelay;
-        }
-
-        function goTo(i) {
-          var offset = slides[i].offsetLeft - slides[0].offsetLeft;
-          slider.scrollTo({ left: offset, behavior: 'smooth' });
-        }
-
-        function tick() {
-          if (!paused) {
-            index = (index + 1) % slides.length;
-            goTo(index);
-          }
+        window.responsiveSlideshowTimers[sectionId] = setTimeout(function () {
+          if (!paused) goTo(index + 1);
           schedule();
-        }
-
-        function schedule() {
-          clearTimeout(window.responsiveSlideshowTimers[sectionId]);
-          window.responsiveSlideshowTimers[sectionId] = setTimeout(tick, delayFor(index));
-        }
-
-        slider.addEventListener('scroll', function () {
-          clearTimeout(syncTimer);
-          syncTimer = setTimeout(function () {
-            var position = slider.scrollLeft;
-            var nearest = 0;
-            var best = Infinity;
-            slides.forEach(function (slide, i) {
-              var distance = Math.abs(slide.offsetLeft - slides[0].offsetLeft - position);
-              if (distance < best) {
-                best = distance;
-                nearest = i;
-              }
-            });
-            index = nearest;
-          }, 120);
-        });
-
-        wrapper.addEventListener('mouseenter', function () { paused = true; });
-        wrapper.addEventListener('mouseleave', function () { paused = false; });
-        wrapper.addEventListener('focusin', function () { paused = true; });
-        wrapper.addEventListener('focusout', function () { paused = false; });
-        document.addEventListener('visibilitychange', function () { paused = document.hidden; });
-
-        schedule();
+        }, delayFor(index));
       }
 
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initResponsiveSlideshow);
-      } else {
-        initResponsiveSlideshow();
-      }
+      if (prev) prev.addEventListener('click', function () { goTo(index - 1); schedule(); });
+      if (next) next.addEventListener('click', function () { goTo(index + 1); schedule(); });
 
-      document.addEventListener('shopify:section:load', function (event) {
-        if (event.detail.sectionId === sectionId) initResponsiveSlideshow();
+      slider.addEventListener('scroll', function () {
+        clearTimeout(syncTimer);
+        syncTimer = setTimeout(function () {
+          var position = slider.scrollLeft;
+          var nearest = 0;
+          var best = Infinity;
+          slides.forEach(function (slide, i) {
+            var distance = Math.abs(slide.offsetLeft - slides[0].offsetLeft - position);
+            if (distance < best) { best = distance; nearest = i; }
+          });
+          index = nearest;
+          if (counter) counter.textContent = index + 1;
+        }, 120);
       });
-    })();
-  </script>
-{%- endif -%}
+
+      wrapper.addEventListener('mouseenter', function () { paused = true; });
+      wrapper.addEventListener('mouseleave', function () { paused = false; });
+      wrapper.addEventListener('focusin', function () { paused = true; });
+      wrapper.addEventListener('focusout', function () { paused = false; });
+      document.addEventListener('visibilitychange', function () { paused = document.hidden; });
+
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) schedule();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSlideshow);
+    } else {
+      initSlideshow();
+    }
+
+    document.addEventListener('shopify:section:load', function (event) {
+      if (event.detail.sectionId === sectionId) initSlideshow();
+    });
+  })();
+</script>
 
 {% schema %}
 {
@@ -274,10 +394,7 @@
   "tag": "section",
   "class": "section",
   "settings": [
-    {
-      "type": "header",
-      "content": "Automatisk skift"
-    },
+    { "type": "header", "content": "Automatisk skift" },
     {
       "type": "checkbox",
       "id": "autorotate",
@@ -294,10 +411,102 @@
       "label": "Sekunder pr. slide",
       "default": 5
     },
+    { "type": "header", "content": "Tekst på billedet" },
     {
-      "type": "header",
-      "content": "Video"
+      "type": "select",
+      "id": "content_position_vertical",
+      "options": [
+        { "value": "top", "label": "Øverst" },
+        { "value": "middle", "label": "Midt" },
+        { "value": "bottom", "label": "Nederst" }
+      ],
+      "default": "middle",
+      "label": "Lodret placering"
     },
+    {
+      "type": "select",
+      "id": "content_position_horizontal",
+      "options": [
+        { "value": "left", "label": "Venstre" },
+        { "value": "center", "label": "Midt" },
+        { "value": "right", "label": "Højre" }
+      ],
+      "default": "center",
+      "label": "Vandret placering"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Lille" },
+        { "value": "h1", "label": "Mellem" },
+        { "value": "h0", "label": "Stor" },
+        { "value": "hxl", "label": "Meget stor" }
+      ],
+      "default": "h0",
+      "label": "Overskriftstørrelse"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#ffffff",
+      "label": "Tekstfarve"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 20,
+      "label": "Mørkt slør over billedet"
+    },
+    { "type": "header", "content": "Knap" },
+    {
+      "type": "color",
+      "id": "button_background",
+      "default": "#00000000",
+      "label": "Baggrund"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "default": "#ffffff",
+      "label": "Tekstfarve"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "default": "#ffffff",
+      "label": "Kantfarve"
+    },
+    { "type": "header", "content": "Pile og tæller" },
+    {
+      "type": "checkbox",
+      "id": "show_counter",
+      "default": true,
+      "label": "Vis tæller"
+    },
+    {
+      "type": "color",
+      "id": "controls_color",
+      "default": "#ffffff",
+      "label": "Tællerfarve"
+    },
+    {
+      "type": "color",
+      "id": "controls_background",
+      "default": "#ffffff",
+      "label": "Pileknappens baggrund"
+    },
+    {
+      "type": "color",
+      "id": "controls_arrow_color",
+      "default": "#000000",
+      "label": "Pilens farve"
+    },
+    { "type": "header", "content": "Video" },
     {
       "type": "checkbox",
       "id": "video_autoplay",
@@ -316,12 +525,9 @@
     {
       "type": "slide",
       "name": "t:sections.slideshow.blocks.slide.name",
-      "limit": 5,
+      "limit": 8,
       "settings": [
-        {
-          "type": "header",
-          "content": "Billede"
-        },
+        { "type": "header", "content": "Billede" },
         {
           "type": "image_picker",
           "id": "image",
@@ -330,56 +536,38 @@
         {
           "type": "image_picker",
           "id": "mobile_image",
-          "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label",
-          "info": "t:sections.slideshow.blocks.slide.settings.mobile_image.info"
+          "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label"
         },
-        {
-          "type": "header",
-          "content": "Video",
-          "info": "Video vises i stedet for billedet, hvis du vælger en."
-        },
-        {
-          "type": "video",
-          "id": "video",
-          "label": "Video"
-        },
+        { "type": "header", "content": "Video", "info": "Video vises i stedet for billedet, hvis du vælger en." },
+        { "type": "video", "id": "video", "label": "Video" },
         {
           "type": "video",
           "id": "mobile_video",
           "label": "Video til mobil",
           "info": "Valgfri. Bruges kun på skærme under 750px."
         },
-        {
-          "type": "header",
-          "content": "Tekst"
-        },
+        { "type": "header", "content": "Tekst" },
         {
           "type": "text",
           "id": "heading",
-          "label": "t:sections.slideshow.blocks.slide.settings.heading.label",
-          "default": "t:sections.slideshow.blocks.slide.settings.heading.default"
+          "label": "Overskrift"
         },
         {
           "type": "text",
           "id": "subheading",
-          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label",
-          "default": "t:sections.slideshow.blocks.slide.settings.subheading.default"
+          "label": "Underoverskrift"
         },
         {
           "type": "text",
           "id": "button_label",
-          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
-          "default": "t:sections.slideshow.blocks.slide.settings.button_label.default"
+          "label": "Knaptekst"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+          "label": "Link"
         },
-        {
-          "type": "header",
-          "content": "Visningstid"
-        },
+        { "type": "header", "content": "Visningstid" },
         {
           "type": "range",
           "id": "duration",
@@ -397,11 +585,7 @@
   "presets": [
     {
       "name": "t:sections.slideshow.presets.name",
-      "blocks": [
-        {
-          "type": "slide"
-        }
-      ]
+      "blocks": [{ "type": "slide" }]
     }
   ]
 }
