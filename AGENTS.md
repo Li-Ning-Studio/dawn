@@ -56,6 +56,14 @@ Current Preact-backed features
 - Manual QA: Verify key flows (home, product, collection, cart, checkout link) in `shopify theme dev`.
 - Conventions: For new features, include demo content/settings so reviewers can reproduce.
 
+## Todo Tracking
+
+- `TODO.md` is the canonical backlog for this theme. Read it when the user asks to show, add, move, complete, or work on theme todos.
+- Update `TODO.md` only when the user explicitly requests a todo change or selects a listed item for implementation. Do not add incidental findings or import inline code `TODO` comments automatically.
+- Put new tasks in `Next` unless the user names another section. Within each section, keep the highest-priority item first.
+- When the user selects a listed task for implementation, move it to `Now`. Move it to `Done` only after the requested work and relevant verification succeed; mark it checked and append the completion date as `YYYY-MM-DD`.
+- Keep blocked or partially completed work in `Now` with a short status note. Use Codex goals only for a single bounded active task, not as the backlog.
+
 ## Commit & Pull Request Guidelines
 
 - Commits: Write clear, imperative messages (for example, "Add predictive search section"). Group related changes.

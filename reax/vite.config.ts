@@ -17,10 +17,15 @@ export default defineConfig({
       output: {
         dir: '../assets/',
         entryFileNames: 'vx-[name].js',
-        chunkFileNames: 'vx-[name].js',
+        // Liquid resolves stable entry names through asset_url. Their imports
+        // need immutable URLs too: cached entries must keep their exact Preact
+        // dependency graph even when a later build changes internal exports.
+        chunkFileNames: 'vx-[name]-[hash].js',
         assetFileNames: 'vx-[name].[ext]',
       },
     },
+    // Retain legacy/unversioned and older hashed chunks for cached pages.
+    // Never empty the theme asset directory as part of a bundle build.
     emptyOutDir: false,
     watch: {},
   },

@@ -1,0 +1,15 @@
+{% comment %}
+  Returns the shopper-facing cart count. Shopify keeps native nested lines as
+  separate cart items, but the theme counts only their top-level parent.
+{% endcomment %}
+
+{%- liquid
+  assign display_item_count = 0
+
+  for item in cart.items
+    if item.parent_relationship.parent == blank
+      assign display_item_count = display_item_count | plus: item.quantity
+    endif
+  endfor
+-%}
+{{- display_item_count -}}
