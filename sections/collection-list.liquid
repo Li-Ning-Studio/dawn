@@ -226,8 +226,7 @@
     {%- endunless -%}
 
     <slider-component class="slider-mobile-gutter">
-      <ul class="collection-list slider" id="Slider-{{ section.id }}" role="list">
-        {%- for block in section.blocks -%}
+      <ul class="collection-list slider slider--tablet slider--desktop" id="Slider-{{ section.id }}" role="list">        {%- for block in section.blocks -%}
           {%- liquid
             assign card_collection = block.settings.collection
             assign card_image = block.settings.image | default: card_collection.featured_image
