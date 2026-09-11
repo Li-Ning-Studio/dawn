@@ -1,19 +1,16 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign cols_mobile = section.settings.columns_mobile | plus: 0
+  assign cols_desktop = section.settings.columns_desktop | plus: 0
 
-  assign show_mobile_slider = false
-  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
-    assign show_mobile_slider = true
+  assign cols_tablet = 3
+  if cols_desktop < 3
+    assign cols_tablet = cols_desktop
   endif
 
-  assign show_desktop_slider = false
-  if section.settings.enable_desktop_slider and section.blocks.size > section.settings.columns_desktop
-    assign show_desktop_slider = true
-  endif
+  assign gap = section.settings.card_gap
 
   case section.settings.image_ratio
     when 'portrait'
@@ -49,14 +46,14 @@
 
   case section.settings.card_heading_size
     when 'small'
-      assign heading_font = '1.8rem'
-      assign heading_font_desktop = '2.2rem'
+      assign heading_font = '1.6rem'
+      assign heading_font_desktop = '2.0rem'
     when 'large'
-      assign heading_font = '2.6rem'
-      assign heading_font_desktop = '3.6rem'
+      assign heading_font = '2.4rem'
+      assign heading_font_desktop = '3.4rem'
     else
-      assign heading_font = '2.2rem'
-      assign heading_font_desktop = '2.8rem'
+      assign heading_font = '2.0rem'
+      assign heading_font_desktop = '2.6rem'
   endcase
 -%}
 
@@ -71,6 +68,58 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
+
+  #Slider-{{ section.id }} {
+    --card-gap: {{ gap }}px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--card-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #Slider-{{ section.id }}::-webkit-scrollbar {
+    height: 0;
+    display: none;
+  }
+
+  #Slider-{{ section.id }} > li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 0;
+    padding: 0;
+    {%- if cols_mobile == 1 -%}
+      width: 84%;
+    {%- else -%}
+      width: calc(46% - (var(--card-gap) / 2));
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 750px) {
+    #Slider-{{ section.id }} > li {
+      width: calc((100% - ({{ cols_tablet | minus: 1 }} * var(--card-gap))) / {{ cols_tablet }});
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    #Slider-{{ section.id }} > li {
+      width: calc((100% - ({{ cols_desktop | minus: 1 }} * var(--card-gap))) / {{ cols_desktop }});
+    }
+
+    {%- unless section.settings.enable_desktop_slider -%}
+      #Slider-{{ section.id }} {
+        flex-wrap: wrap;
+        overflow: visible;
+        row-gap: var(--card-gap);
+      }
+    {%- endunless -%}
   }
 
   #Slider-{{ section.id }} .collection-card {
@@ -108,11 +157,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 0%,
-        rgba(0, 0, 0, 0) 65%
-      );
+      background: linear-gradient(to top, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 0%, rgba(0, 0, 0, 0) 65%);
       pointer-events: none;
     }
   {%- endif -%}
@@ -125,20 +170,23 @@
     justify-content: {{ justify }};
     align-items: {{ align }};
     text-align: {{ text_align }};
-    padding: 2rem;
+    padding: 1.8rem;
     pointer-events: none;
     color: {{ section.settings.overlay_text_color }};
   }
 
   #Slider-{{ section.id }} .collection-card__heading {
+    display: block;
     margin: 0;
     font-size: {{ heading_font }};
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: inherit;
+    {% if section.settings.card_heading_style == 'uppercase' %}text-transform: uppercase;{% endif %}
   }
 
   #Slider-{{ section.id }} .collection-card__text {
+    display: block;
     margin: 0.6rem 0 0;
     font-size: 1.4rem;
     line-height: 1.4;
@@ -146,14 +194,9 @@
     color: inherit;
   }
 
-  #Slider-{{ section.id }} .collection-card:focus-visible {
-    outline: 0.2rem solid rgb(var(--color-foreground));
-    outline-offset: 0.3rem;
-  }
-
   @media screen and (min-width: 750px) {
     #Slider-{{ section.id }} .collection-card__content {
-      padding: 2.8rem;
+      padding: 2.4rem;
     }
 
     #Slider-{{ section.id }} .collection-card__heading {
@@ -173,35 +216,17 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="collection-list-wrapper page-width isolate{% if show_mobile_slider or show_desktop_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %} section-{{ section.id }}-padding">
+  <div class="collection-list-wrapper page-width isolate{% if section.settings.title == blank %} no-heading{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link{% if show_mobile_slider or show_desktop_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
-        <h2
-          id="SectionHeading-{{ section.id }}"
-          class="collection-list-title inline-richtext {{ section.settings.heading_size }}"
-        >
+      <div class="title-wrapper-with-link title-wrapper--no-top-margin">
+        <h2 id="SectionHeading-{{ section.id }}" class="collection-list-title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
-
-        {%- if section.settings.show_view_all and show_mobile_slider -%}
-          
-            href="{{ routes.collections_url }}"
-            id="ViewAll-{{ section.id }}"
-            class="link underlined-link large-up-hide"
-            aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
-          >
-            {{- 'sections.collection_list.view_all' | t -}}
-          </a>
-        {%- endif -%}
       </div>
     {%- endunless -%}
 
     <slider-component class="slider-mobile-gutter">
-      <ul
-        class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if show_mobile_slider or show_desktop_slider %} slider slider--tablet grid--peek{% endif %}{% if show_desktop_slider %} slider--desktop{% endif %}"
-        id="Slider-{{ section.id }}"
-        role="list"
-      >
+      <ul class="collection-list slider" id="Slider-{{ section.id }}" role="list">
         {%- for block in section.blocks -%}
           {%- liquid
             assign card_collection = block.settings.collection
@@ -212,32 +237,20 @@
               assign card_heading = card_collection.title
             endif
 
+            assign card_url = '#'
+            if card_collection != blank
+              assign card_url = card_collection.url
+            endif
+
             assign placeholder_index = forloop.index0 | modulo: 4 | plus: 1
             assign placeholder_image = 'collection-apparel-' | append: placeholder_index
           -%}
 
-          <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="collection-list__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}"
-            {{ block.shopify_attributes }}
-          >
-            
-              href="{{ card_collection.url | default: '#' }}"
-              class="collection-card"
-              {% if card_collection == blank %}
-                role="link" aria-disabled="true"
-              {% endif %}
-            >
+          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="collection-list__item" {{ block.shopify_attributes }}>
+            <a href="{{ card_url }}" class="collection-card">
               <div class="collection-card__media">
                 {%- if card_image != blank -%}
-                  {{
-                    card_image
-                    | image_url: width: 1500
-                    | image_tag:
-                      loading: 'lazy',
-                      widths: '275,400,550,700,900,1100,1500',
-                      sizes: '(min-width: 990px) 25vw, (min-width: 750px) 50vw, 80vw'
-                  }}
+                  {{ card_image | image_url: width: 1500 | image_tag: loading: 'lazy', widths: '275,400,550,700,900,1100,1500', sizes: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 84vw' }}
                 {%- else -%}
                   {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
@@ -245,9 +258,7 @@
 
               <div class="collection-card__content">
                 {%- if card_heading != blank -%}
-                  <span class="collection-card__heading {{ section.settings.card_heading_style }}">
-                    {{- card_heading -}}
-                  </span>
+                  <span class="collection-card__heading">{{ card_heading }}</span>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <span class="collection-card__text">{{ block.settings.text }}</span>
@@ -258,18 +269,10 @@
         {%- endfor -%}
       </ul>
 
-      {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="slider-buttons{% unless show_mobile_slider %} small-hide medium-hide{% endunless %}{% unless show_desktop_slider %} large-up-hide{% endunless %}">
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
+      {%- if section.blocks.size > 1 -%}
+        <div class="slider-buttons">
+          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}">
+            <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
           </button>
           <div class="slider-counter caption">
             <span class="slider-counter--current">1</span>
@@ -277,33 +280,12 @@
             <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
             <span class="slider-counter--total">{{ section.blocks.size }}</span>
           </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
+          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}">
+            <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
           </button>
         </div>
       {%- endif -%}
     </slider-component>
-
-    {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
-      <div class="center collection-list-view-all{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
-        
-          href="{{ routes.collections_url }}"
-          class="button"
-          id="ViewAllButton-{{ section.id }}"
-          aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}"
-        >
-          {{- 'sections.collection_list.view_all' | t -}}
-        </a>
-      </div>
-    {%- endif -%}
   </div>
 </div>
 
@@ -336,10 +318,7 @@
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
     },
-    {
-      "type": "header",
-      "content": "Layout"
-    },
+    { "type": "header", "content": "Layout" },
     {
       "type": "select",
       "id": "image_ratio",
@@ -365,8 +344,17 @@
       "type": "checkbox",
       "id": "enable_desktop_slider",
       "default": true,
-      "label": "Swipe med pile på desktop",
-      "info": "Tilføj så mange kollektioner du vil. Kortene beholder deres størrelse, og resten kan man bladre til."
+      "label": "Swipe med pile på desktop"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16,
+      "label": "Mellemrum mellem kort"
     },
     {
       "type": "range",
@@ -384,10 +372,7 @@
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
     },
-    {
-      "type": "header",
-      "content": "Tekst på billedet"
-    },
+    { "type": "header", "content": "Tekst på billedet" },
     {
       "type": "select",
       "id": "text_position_vertical",
@@ -425,10 +410,10 @@
       "type": "select",
       "id": "card_heading_style",
       "options": [
-        { "value": "h3", "label": "Normal" },
-        { "value": "h3 uppercase", "label": "Versaler" }
+        { "value": "normal", "label": "Normal" },
+        { "value": "uppercase", "label": "Versaler" }
       ],
-      "default": "h3",
+      "default": "uppercase",
       "label": "Tekststil"
     },
     {
@@ -445,43 +430,20 @@
       "step": 5,
       "unit": "%",
       "default": 40,
-      "label": "Mørk overgang bag teksten",
-      "info": "Gør teksten læsbar på lyse billeder. Sæt til 0 for at fjerne den."
+      "label": "Mørk overgang bag teksten"
     },
-    {
-      "type": "header",
-      "content": "t:sections.collection-list.settings.header_mobile.content"
-    },
+    { "type": "header", "content": "Mobil" },
     {
       "type": "select",
       "id": "columns_mobile",
       "options": [
-        { "value": "1", "label": "t:sections.collection-list.settings.columns_mobile.options__1.label" },
-        { "value": "2", "label": "t:sections.collection-list.settings.columns_mobile.options__2.label" }
+        { "value": "1", "label": "1 kolonne" },
+        { "value": "2", "label": "2 kolonner" }
       ],
       "default": "1",
-      "label": "t:sections.collection-list.settings.columns_mobile.label"
+      "label": "Antal kort på mobil"
     },
-    {
-      "type": "checkbox",
-      "id": "swipe_on_mobile",
-      "default": true,
-      "label": "t:sections.collection-list.settings.swipe_on_mobile.label"
-    },
-    {
-      "type": "header",
-      "content": "Knap"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_view_all",
-      "default": false,
-      "label": "t:sections.collection-list.settings.show_view_all.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
+    { "type": "header", "content": "t:sections.all.padding.section_padding_heading" },
     {
       "type": "range",
       "id": "padding_top",
