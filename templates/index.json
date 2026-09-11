@@ -66,25 +66,33 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
     },
-    "swipeable_products_L3mpAD": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
+    "featured_collection_VRmapC": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Professional Rackets",
-        "products": [
-          "nitrix-70-venom",
-          "nitrix-70-venom-3u",
-          "nitrix-70-volta",
-          "nitrix-70-volta-3u",
-          "flareon-700",
-          "flareon-700-3u",
-          "hyfonic-7-4u",
-          "hyfonic-7"
-        ],
-        "show_color_variants": false,
+        "collection": "badminton",
+        "products_to_show": 4,
+        "title": "LATEST PRODUCTS",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
         "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "hero_component_KwnPtD": {
@@ -222,7 +230,7 @@
   },
   "order": [
     "responsive_slideshow_fB8Wfk",
-    "swipeable_products_L3mpAD",
+    "featured_collection_VRmapC",
     "hero_component_KwnPtD",
     "swipeable_products_RQ3tHx",
     "hero_component_Vj4bP9",
