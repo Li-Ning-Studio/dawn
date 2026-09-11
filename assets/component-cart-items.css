@@ -79,6 +79,35 @@ cart-items .title-wrapper-with-link {
   font-size: 1.4rem;
 }
 
+.cart-item__name--customised {
+  align-items: center;
+  display: inline-flex;
+}
+
+.cart-item__customisation-icon {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 0.4rem;
+}
+
+.cart-item .bundle-toggle {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: currentColor;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  margin-top: 0.6rem;
+  padding: 0;
+  text-align: left;
+}
+
+.cart-items .cart-item[hidden] {
+  display: none;
+}
+
 .cart-item__name:hover {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
