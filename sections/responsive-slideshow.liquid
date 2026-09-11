@@ -4,27 +4,6 @@
   assign autorotate_delay = section.settings.autorotate_speed | times: 1000
   assign video_autoplay = section.settings.video_autoplay
   assign video_controls = section.settings.video_controls
-
-  case section.settings.content_position_vertical
-    when 'top'
-      assign justify = 'flex-start'
-    when 'bottom'
-      assign justify = 'flex-end'
-    else
-      assign justify = 'center'
-  endcase
-
-  case section.settings.content_position_horizontal
-    when 'left'
-      assign align = 'flex-start'
-      assign text_align = 'left'
-    when 'right'
-      assign align = 'flex-end'
-      assign text_align = 'right'
-    else
-      assign align = 'center'
-      assign text_align = 'center'
-  endcase
 -%}
 
 {%- style -%}
@@ -87,26 +66,12 @@
     }
   }
 
-  {%- if section.settings.overlay_opacity > 0 -%}
-    #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
-      pointer-events: none;
-    }
-  {%- endif -%}
-
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__content {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: {{ justify }};
-    align-items: {{ align }};
-    text-align: {{ text_align }};
     padding: 4rem 2.4rem 8rem;
-    color: {{ section.settings.text_color }};
     pointer-events: none;
     z-index: 2;
   }
@@ -131,10 +96,7 @@
     align-items: center;
     justify-content: center;
     padding: 1.2rem 3.2rem;
-    border: 0.1rem solid {{ section.settings.button_border_color }};
     border-radius: 4rem;
-    background: {{ section.settings.button_background }};
-    color: {{ section.settings.button_text_color }};
     text-decoration: none;
     font-size: 1.4rem;
     letter-spacing: 0.1em;
@@ -166,7 +128,6 @@
     justify-content: center;
     font-size: 1.3rem;
     color: {{ section.settings.controls_color }};
-    letter-spacing: 0.02em;
   }
 
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__arrow {
@@ -218,6 +179,54 @@
       scroll-behavior: auto;
     }
   }
+
+  {%- for block in section.blocks -%}
+    {%- liquid
+      case block.settings.content_position_vertical
+        when 'top'
+          assign justify = 'flex-start'
+        when 'bottom'
+          assign justify = 'flex-end'
+        else
+          assign justify = 'center'
+      endcase
+
+      case block.settings.content_position_horizontal
+        when 'left'
+          assign align = 'flex-start'
+          assign text_align = 'left'
+        when 'right'
+          assign align = 'flex-end'
+          assign text_align = 'right'
+        else
+          assign align = 'center'
+          assign text_align = 'center'
+      endcase
+    -%}
+
+    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__content {
+      justify-content: {{ justify }};
+      align-items: {{ align }};
+      text-align: {{ text_align }};
+      color: {{ block.settings.text_color }};
+    }
+
+    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__button {
+      background: {{ block.settings.button_background }};
+      color: {{ block.settings.button_text_color }};
+      border: 0.1rem solid {{ block.settings.button_border_color }};
+    }
+
+    {%- if block.settings.overlay_opacity > 0 -%}
+      #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }});
+        pointer-events: none;
+      }
+    {%- endif -%}
+  {%- endfor -%}
 {%- endstyle -%}
 
 <div id="ResponsiveSlideshow-{{ section.id }}" class="responsive-slideshow">
@@ -267,7 +276,7 @@
 
         <div class="responsive-slideshow__content">
           {%- if block.settings.heading != blank -%}
-            <h2 class="responsive-slideshow__heading {{ section.settings.heading_size }}">{{ block.settings.heading }}</h2>
+            <h2 class="responsive-slideshow__heading {{ block.settings.heading_size }}">{{ block.settings.heading }}</h2>
           {%- endif -%}
           {%- if block.settings.subheading != blank -%}
             <p class="responsive-slideshow__subheading">{{ block.settings.subheading }}</p>
@@ -411,76 +420,6 @@
       "label": "Sekunder pr. slide",
       "default": 5
     },
-    { "type": "header", "content": "Tekst på billedet" },
-    {
-      "type": "select",
-      "id": "content_position_vertical",
-      "options": [
-        { "value": "top", "label": "Øverst" },
-        { "value": "middle", "label": "Midt" },
-        { "value": "bottom", "label": "Nederst" }
-      ],
-      "default": "middle",
-      "label": "Lodret placering"
-    },
-    {
-      "type": "select",
-      "id": "content_position_horizontal",
-      "options": [
-        { "value": "left", "label": "Venstre" },
-        { "value": "center", "label": "Midt" },
-        { "value": "right", "label": "Højre" }
-      ],
-      "default": "center",
-      "label": "Vandret placering"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        { "value": "h2", "label": "Lille" },
-        { "value": "h1", "label": "Mellem" },
-        { "value": "h0", "label": "Stor" },
-        { "value": "hxl", "label": "Meget stor" }
-      ],
-      "default": "h0",
-      "label": "Overskriftstørrelse"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "default": "#ffffff",
-      "label": "Tekstfarve"
-    },
-    {
-      "type": "range",
-      "id": "overlay_opacity",
-      "min": 0,
-      "max": 80,
-      "step": 5,
-      "unit": "%",
-      "default": 20,
-      "label": "Mørkt slør over billedet"
-    },
-    { "type": "header", "content": "Knap" },
-    {
-      "type": "color",
-      "id": "button_background",
-      "default": "#00000000",
-      "label": "Baggrund"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "default": "#ffffff",
-      "label": "Tekstfarve"
-    },
-    {
-      "type": "color",
-      "id": "button_border_color",
-      "default": "#ffffff",
-      "label": "Kantfarve"
-    },
     { "type": "header", "content": "Pile og tæller" },
     {
       "type": "checkbox",
@@ -524,19 +463,20 @@
   "blocks": [
     {
       "type": "slide",
-      "name": "t:sections.slideshow.blocks.slide.name",
+      "name": "Slide",
       "limit": 8,
       "settings": [
         { "type": "header", "content": "Billede" },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "Billede"
         },
         {
           "type": "image_picker",
           "id": "mobile_image",
-          "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label"
+          "label": "Billede til mobil",
+          "info": "Erstatter hovedbilledet på små skærme."
         },
         { "type": "header", "content": "Video", "info": "Video vises i stedet for billedet, hvis du vælger en." },
         { "type": "video", "id": "video", "label": "Video" },
@@ -558,6 +498,58 @@
           "label": "Underoverskrift"
         },
         {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            { "value": "h2", "label": "Lille" },
+            { "value": "h1", "label": "Mellem" },
+            { "value": "h0", "label": "Stor" },
+            { "value": "hxl", "label": "Meget stor" }
+          ],
+          "default": "h0",
+          "label": "Overskriftstørrelse"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "default": "#ffffff",
+          "label": "Tekstfarve"
+        },
+        { "type": "header", "content": "Placering" },
+        {
+          "type": "select",
+          "id": "content_position_vertical",
+          "options": [
+            { "value": "top", "label": "Øverst" },
+            { "value": "middle", "label": "Midt" },
+            { "value": "bottom", "label": "Nederst" }
+          ],
+          "default": "middle",
+          "label": "Lodret"
+        },
+        {
+          "type": "select",
+          "id": "content_position_horizontal",
+          "options": [
+            { "value": "left", "label": "Venstre" },
+            { "value": "center", "label": "Midt" },
+            { "value": "right", "label": "Højre" }
+          ],
+          "default": "center",
+          "label": "Vandret"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 80,
+          "step": 5,
+          "unit": "%",
+          "default": 20,
+          "label": "Mørkt slør over billedet"
+        },
+        { "type": "header", "content": "Knap" },
+        {
           "type": "text",
           "id": "button_label",
           "label": "Knaptekst"
@@ -566,6 +558,24 @@
           "type": "url",
           "id": "link",
           "label": "Link"
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "default": "rgba(0,0,0,0)",
+          "label": "Knapbaggrund"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "default": "#ffffff",
+          "label": "Knaptekstfarve"
+        },
+        {
+          "type": "color",
+          "id": "button_border_color",
+          "default": "#ffffff",
+          "label": "Knapkantfarve"
         },
         { "type": "header", "content": "Visningstid" },
         {
@@ -576,7 +586,7 @@
           "step": 1,
           "unit": "s",
           "label": "Visningstid for denne slide",
-          "info": "0 betyder, at sektionens standardtid bruges. Sæt en længere tid på videoslides.",
+          "info": "0 betyder, at sektionens standardtid bruges.",
           "default": 0
         }
       ]
@@ -584,7 +594,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.slideshow.presets.name",
+      "name": "Responsive Slideshow",
       "blocks": [{ "type": "slide" }]
     }
   ]
