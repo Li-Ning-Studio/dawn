@@ -112,14 +112,6 @@
     #Slider-{{ section.id }} > li {
       width: calc((100% - ({{ cols_desktop | minus: 1 }} * var(--card-gap))) / {{ cols_desktop }});
     }
-
-    {%- unless section.settings.enable_desktop_slider -%}
-      #Slider-{{ section.id }} {
-        flex-wrap: wrap;
-        overflow: visible;
-        row-gap: var(--card-gap);
-      }
-    {%- endunless -%}
   }
 
   #Slider-{{ section.id }} .collection-card {
@@ -204,6 +196,72 @@
     }
   }
 
+  #ResponsiveCollectionList-{{ section.id }} {
+    position: relative;
+    display: block;
+  }
+
+  @media screen and (min-width: 750px) {
+    #ResponsiveCollectionList-{{ section.id }} .slider-buttons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    #ResponsiveCollectionList-{{ section.id }} .slider-counter {
+      display: none;
+    }
+
+    #ResponsiveCollectionList-{{ section.id }} .slider-button {
+      pointer-events: auto;
+      width: 4.4rem;
+      height: 4.4rem;
+      min-width: 4.4rem;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: rgb(var(--color-background));
+      box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.2s ease, background 0.2s ease;
+    }
+
+    #ResponsiveCollectionList-{{ section.id }} .slider-button:hover {
+      background: rgb(var(--color-background));
+      box-shadow: 0 0.3rem 1.4rem rgba(0, 0, 0, 0.24);
+    }
+
+    #ResponsiveCollectionList-{{ section.id }} .slider-button--prev {
+      transform: translateX(-50%);
+    }
+
+    #ResponsiveCollectionList-{{ section.id }} .slider-button--next {
+      transform: translateX(50%);
+    }
+
+    #ResponsiveCollectionList-{{ section.id }} .slider-button[disabled] {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #ResponsiveCollectionList-{{ section.id }} .slider-button .svg-wrapper {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     #Slider-{{ section.id }} .collection-card__media img {
       transition: none;
@@ -225,8 +283,9 @@
       </div>
     {%- endunless -%}
 
-    <slider-component class="slider-mobile-gutter">
-      <ul class="collection-list slider slider--tablet slider--desktop" id="Slider-{{ section.id }}" role="list">        {%- for block in section.blocks -%}
+    <slider-component id="ResponsiveCollectionList-{{ section.id }}" class="slider-mobile-gutter">
+      <ul class="collection-list slider slider--tablet slider--desktop" id="Slider-{{ section.id }}" role="list">
+        {%- for block in section.blocks -%}
           {%- liquid
             assign card_collection = block.settings.collection
             assign card_image = block.settings.image | default: card_collection.featured_image
@@ -245,7 +304,8 @@
             assign placeholder_image = 'collection-apparel-' | append: placeholder_index
           -%}
 
-          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="collection-list__item slider__slide" {{ block.shopify_attributes }}>            <a href="{{ card_url }}" class="collection-card">
+          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="collection-list__item slider__slide" {{ block.shopify_attributes }}>
+            <a href="{{ card_url }}" class="collection-card">
               <div class="collection-card__media">
                 {%- if card_image != blank -%}
                   {{ card_image | image_url: width: 1500 | image_tag: loading: 'lazy', widths: '275,400,550,700,900,1100,1500', sizes: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 84vw' }}
@@ -336,13 +396,8 @@
       "max": 6,
       "step": 1,
       "default": 4,
-      "label": "Antal synlige kort på desktop"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_desktop_slider",
-      "default": true,
-      "label": "Swipe med pile på desktop"
+      "label": "Kortbredde",
+      "info": "Hvor mange kort der er synlige ad gangen. Tilføj gerne flere kollektioner — resten bladrer man til med pilene."
     },
     {
       "type": "range",
