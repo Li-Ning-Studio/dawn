@@ -36,6 +36,8 @@ declare global {
         }
       | undefined;
     s3_tshirt_printing_controller: ServiceModalController | undefined;
+    s3_tshirt_printing_second_line_enabled: boolean | undefined;
+    s3_tshirt_printing_plus_service_variant_id: string | undefined;
     s3_tshirt_printing_config:
       | { tshirtColor: string; tshirtTextColor: string; texturePath: string | undefined }
       | undefined;

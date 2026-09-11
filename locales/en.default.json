@@ -151,6 +151,7 @@
       "labels": {
         "free": "FREE",
         "input": "Your Personalisation",
+        "second_input": "Country",
         "note": "Note: This is for representation purposes only. The text will be printed on the back of the T-Shirt. Cash on Delivery is not applicable for orders containing Personalised T-Shirts.",
         "step": "Step",
         "summary": "Personalising",
@@ -158,7 +159,17 @@
         "title": "Make this T-Shirt yours"
       },
       "messages": {
-        "invalid_input": "Only letters, periods, and spaces are allowed."
+        "invalid_input": "Only letters, periods, and spaces are allowed.",
+        "logo_unavailable": "The country and logo option is unavailable. Remove it to continue with name-only printing.",
+        "logo_loading": "Loading your included brand logo…"
+      },
+      "countries": {
+        "india": "India",
+        "indonesia": "Indonesia",
+        "china": "China",
+        "japan": "Japan",
+        "malaysia": "Malaysia",
+        "denmark": "Denmark"
       },
       "actions": {
         "add": "Add",
@@ -167,7 +178,9 @@
         "back": "Back",
         "submit": "Personalise",
         "close": "Close",
-        "remove": "Remove"
+        "remove": "Remove",
+        "add_second_line": "Add country and logo for {{ price }}",
+        "clear_second_line": "Remove country and logo"
       },
       "errors": {
         "load_failed": "Failed to load T-shirt personalisation options. Please refresh the page."
@@ -485,6 +498,8 @@
       "title": "Your Shopping Bag",
       "caption": "Bag items",
       "remove_title": "Remove {{ title }}",
+      "show_bundle": "Show bundle",
+      "hide_bundle": "Hide bundle",
       "estimated_total": "Estimated total",
       "new_estimated_total": "New estimated total",
       "note": "Order special instructions",

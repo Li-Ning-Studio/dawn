@@ -294,11 +294,17 @@
         {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
+          {%- capture cart_display_item_count -%}
+            {%- render 'cart-display-item-count' -%}
+          {%- endcapture -%}
+          {%- assign cart_display_item_count = cart_display_item_count | plus: 0 -%}
           <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- if cart_display_item_count < 100 -%}
+              <span aria-hidden="true">{{ cart_display_item_count }}</span>
             {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+            <span class="visually-hidden">
+              {{- 'sections.header.cart_count' | t: count: cart_display_item_count -}}
+            </span>
           </div>
         {%- endif -%}
       </a>

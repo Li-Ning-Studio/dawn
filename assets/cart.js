@@ -23,6 +23,7 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
+    this.addEventListener('click', this.onBundleToggle.bind(this));
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -40,6 +41,20 @@ class CartItems extends HTMLElement {
     if (this.cartUpdateUnsubscriber) {
       this.cartUpdateUnsubscriber();
     }
+  }
+
+  onBundleToggle(event) {
+    const button = event.target.closest('[data-bundle-toggle]');
+    if (!button || !this.contains(button)) return;
+
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    const bundleItems = document.getElementById(button.getAttribute('aria-controls'));
+    if (!bundleItems) return;
+
+    bundleItems.classList.toggle('expanded', !isExpanded);
+    bundleItems.setAttribute('aria-hidden', String(isExpanded));
+    button.setAttribute('aria-expanded', String(!isExpanded));
+    button.textContent = isExpanded ? button.dataset.showLabel : button.dataset.hideLabel;
   }
 
   resetQuantityInput(id) {
@@ -78,7 +93,7 @@ class CartItems extends HTMLElement {
         inputValue,
         event,
         document.activeElement.getAttribute('name'),
-        event.target.dataset.quantityVariantId
+        event.target.dataset.quantityVariantId,
       );
     }
   }
@@ -165,7 +180,7 @@ class CartItems extends HTMLElement {
         CartPerformance.measure(`${eventTarget}:paint-updated-sections"`, () => {
           const quantityElement =
             document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
-          const items = document.querySelectorAll('.cart-item');
+          const items = this.querySelectorAll('.cart-item');
 
           if (parsedState.errors) {
             quantityElement.value = quantityElement.getAttribute('value');
@@ -182,10 +197,11 @@ class CartItems extends HTMLElement {
 
           this.getSectionsToRender().forEach((section) => {
             const elementToReplace =
-              document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+              document.getElementById(section.id).querySelector(section.selector) ||
+              document.getElementById(section.id);
             elementToReplace.innerHTML = this.getSectionInnerHTML(
               parsedState.sections[section.section],
-              section.selector
+              section.selector,
             );
           });
           const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
@@ -284,11 +300,12 @@ if (!customElements.get('cart-note')) {
           'input',
           debounce((event) => {
             const body = JSON.stringify({ note: event.target.value });
-            fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } })
-              .then(() => CartPerformance.measureFromEvent('note-update:user-action', event));
-          }, ON_CHANGE_DEBOUNCE_TIMER)
+            fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } }).then(() =>
+              CartPerformance.measureFromEvent('note-update:user-action', event),
+            );
+          }, ON_CHANGE_DEBOUNCE_TIMER),
         );
       }
-    }
+    },
   );
 }

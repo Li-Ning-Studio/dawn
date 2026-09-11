@@ -17,6 +17,121 @@ if (!customElements.get('product-form')) {
         this.hideErrors = this.dataset.hideErrors === 'true';
       }
 
+      getCustomisationItemId(item) {
+        return String(item.variant_id || item.id);
+      }
+
+      // Shopify's native parent_relationship is the source of truth. The
+      // private customisation property only correlates this submission so an
+      // incomplete response can be identified and removed without touching
+      // another customised product already in the cart.
+      hasValidAddResponse(response, mainVariantId, customisationItems, customisationId) {
+        const responseItems = Array.isArray(response.items) ? response.items : [];
+        const hasCustomisations = customisationItems.length > 0;
+        const addedMainItem = responseItems.find(
+          (item) =>
+            this.getCustomisationItemId(item) === String(mainVariantId) &&
+            (!hasCustomisations || item.properties?._customisationId === customisationId),
+        );
+
+        if (!addedMainItem || Number(addedMainItem.quantity) <= 0) return false;
+        if (!hasCustomisations) return true;
+
+        const remainingResponseQuantities = responseItems.map((item) => ({
+          item,
+          quantity: Number(item.quantity),
+        }));
+
+        return customisationItems.every((expectedItem) => {
+          const matchingItem = remainingResponseQuantities.find(
+            ({ item, quantity }) =>
+              quantity >= Number(expectedItem.quantity) &&
+              this.getCustomisationItemId(item) === String(expectedItem.id) &&
+              item.properties?._customisationId === customisationId &&
+              item.parent_relationship?.parent_key === addedMainItem.key,
+          );
+
+          if (!matchingItem) return false;
+          matchingItem.quantity -= Number(expectedItem.quantity);
+          return true;
+        });
+      }
+
+      async rollbackCustomisation(customisationId, sections) {
+        const cartResponse = await fetch(`${routes.cart_url}.js`, {
+          headers: { Accept: 'application/json' },
+        });
+        if (!cartResponse.ok) throw new Error('Unable to read the cart before rolling back the customisation.');
+
+        const cart = await cartResponse.json();
+        const updates = {};
+        // Line keys target the exact lines created by this attempt. Variant IDs
+        // are not safe here because a shopper can already have the same
+        // product or service variant in their cart.
+        // Promotional items share this attempt's ID under _offerInstanceId,
+        // but have no native parent relationship to remove them with the parent.
+        cart.items
+          .filter(
+            (item) =>
+              item.properties?._customisationId === customisationId ||
+              item.properties?._offerInstanceId === customisationId,
+          )
+          .forEach((item) => {
+            updates[item.key] = 0;
+          });
+
+        if (Object.keys(updates).length === 0) return null;
+
+        const rollbackResponse = await fetch(routes.cart_update_url, {
+          ...fetchConfig(),
+          body: JSON.stringify({
+            updates,
+            sections,
+            sections_url: window.location.pathname,
+          }),
+        });
+        const rollbackCart = await rollbackResponse.json();
+
+        if (!rollbackResponse.ok || rollbackCart.errors) {
+          throw new Error('Unable to roll back the incomplete customisation.');
+        }
+
+        return rollbackCart;
+      }
+
+      showAddError(response, mainVariantId) {
+        publish(PUB_SUB_EVENTS.cartError, {
+          source: 'product-form',
+          productVariantId: mainVariantId,
+          errors: response?.errors || response?.description || window.cartStrings.error,
+          message: response?.message,
+        });
+        this.handleErrorMessage(response?.description || window.cartStrings.error);
+
+        if (response?.status) {
+          const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
+          if (soldOutMessage) {
+            this.submitButton.setAttribute('aria-disabled', true);
+            this.submitButtonText.classList.add('hidden');
+            soldOutMessage.classList.remove('hidden');
+          }
+        }
+
+        this.error = true;
+      }
+
+      async handleIncompleteCustomisation(response, mainVariantId, customisationId, sections) {
+        this.showAddError(response, mainVariantId);
+
+        try {
+          const rollbackCart = await this.rollbackCustomisation(customisationId, sections);
+          if (rollbackCart && this.cart) this.cart.renderContents(rollbackCart);
+        } catch (rollbackError) {
+          console.error(rollbackError);
+          window.location = window.routes.cart_url;
+        }
+      }
+
       onSubmitHandler(evt) {
         let selectedVariantSku = window?.s3_current_variant_sku || null;
 
@@ -76,6 +191,28 @@ if (!customElements.get('product-form')) {
 
         this.handleErrorMessage();
 
+        const theTshirtText = document.getElementById('the-tshirt-text');
+        const theTshirtSecondLine = document.getElementById('the-tshirt-second-line');
+        const tshirtSecondLineText = theTshirtSecondLine?.innerText.trim() || '';
+        const tshirtLogoId = theTshirtSecondLine?.dataset.logoId || '';
+        const hasTshirtSecondLine =
+          window.s3_tshirt_printing_second_line_enabled === true && tshirtSecondLineText.length > 0;
+        // Validate the applied package before locking the form or sending any
+        // cart request. A stale modal must never sell country printing without
+        // the included logo, or silently downgrade it to the one-line service.
+        if (
+          hasTshirtSecondLine &&
+          (!['lining', 'hndrd'].includes(tshirtLogoId) ||
+            !['INDIA', 'INDONESIA', 'CHINA', 'JAPAN', 'MALAYSIA', 'DENMARK'].includes(tshirtSecondLineText) ||
+            !window.s3_tshirt_printing_plus_service_variant_id)
+        ) {
+          this.handleErrorMessage(
+            document.getElementById('tshirt-printing-modal')?.dataset.messageLogoUnavailable ||
+              window.cartStrings.error,
+          );
+          return;
+        }
+
         this.submitButton.setAttribute('aria-disabled', true);
         this.submitButton.classList.add('loading');
         this.querySelector('.loading__spinner').classList.remove('hidden');
@@ -86,35 +223,30 @@ if (!customElements.get('product-form')) {
 
         const formData = new FormData(this.form);
 
-        // Generate a unique, per-submission bundle id. This stays stable
-        // within a single add-to-cart event and avoids collisions across
-        // submissions. Prefer crypto.randomUUID and append a base36 timestamp
-        // for traceability.
-        let bundleId;
+        // Keep each customised product configuration distinct, even when the
+        // same product variant is added more than once with different options.
+        let customisationId;
         try {
           const __ts = Date.now().toString(36);
           const __base =
             window.crypto && typeof window.crypto.randomUUID === 'function'
               ? window.crypto.randomUUID()
               : Math.random().toString(36).slice(2, 10);
-          bundleId = `${__base}-${__ts}`;
+          customisationId = `${__base}-${__ts}`;
         } catch (error) {
-          console.error('Bundle ID generation failed:', error);
-          bundleId = `fallback-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+          console.error('Customisation ID generation failed:', error);
+          customisationId = `fallback-${Date.now()}-${Math.random().toString(36).slice(2)}`;
         }
 
         const sections = this.cart ? this.cart.getSectionsToRender().map((section) => section.id) : [];
+        const mainVariantId = formData.get('id');
 
-        const items = [
-          {
-            id: formData.get('id'),
-            quantity: formData.get('quantity') || 1,
-            properties: {
-              _bundleId: bundleId,
-              _bundleRole: 'main',
-            },
-          },
-        ];
+        const mainItem = {
+          id: mainVariantId,
+          quantity: formData.get('quantity') || 1,
+        };
+        const items = [mainItem];
+        const customisationItems = [];
 
         // check if stringing service is selected
         const frameSelected = document.querySelector('input[name="frame"]:checked')?.id;
@@ -132,7 +264,7 @@ if (!customElements.get('product-form')) {
           const fourKnotsServiceVariantId = window.s3_four_knots_service_variant_id;
 
           if (variantSelected && stringVariantSku && tensionSelected && stringingServiceVariantId) {
-            items.push(
+            customisationItems.push(
               {
                 id: stringingServiceVariantId,
                 quantity: 1,
@@ -143,31 +275,24 @@ if (!customElements.get('product-form')) {
                   _stringName: document.querySelector('input[name="string-variant"]:checked')?.dataset?.string || '',
                   _tension: `${tensionSelected}lbs`,
                   _knot: selectedKnot ?? '2_knot',
-                  _bundleId: bundleId,
-                  _bundleRole: 'component',
                 },
               },
               {
                 id: variantSelected,
                 quantity: 1,
-                properties: {
-                  _bundleId: bundleId,
-                  _bundleRole: 'component',
-                },
+                properties: {},
               },
             );
           }
 
           if (selectedKnot === '4_knot' && fourKnotsServiceVariantId) {
-            items.push({
+            customisationItems.push({
               id: fourKnotsServiceVariantId,
               quantity: 1,
               properties: {
                 _knot: selectedKnot,
                 _racket: selectedVariantSku,
                 _string: stringVariantSku,
-                _bundleId: bundleId,
-                _bundleRole: 'component',
               },
             });
           }
@@ -179,15 +304,13 @@ if (!customElements.get('product-form')) {
             document.getElementById('selected-grip-variant-id')?.dataset?.currentGripSelection;
 
           if (selectedGripVariant) {
-            items.push(
+            customisationItems.push(
               {
                 id: window.s3_gripping_service_variant_id,
                 quantity: 1,
                 properties: {
                   _racket: selectedVariantSku,
                   _grip: document.getElementById('selected-grip-variant-id')?.dataset?.currentGripSku,
-                  _bundleId: bundleId,
-                  _bundleRole: 'component',
                 },
               },
               {
@@ -195,8 +318,6 @@ if (!customElements.get('product-form')) {
                 quantity: 1,
                 properties: {
                   _racket: selectedVariantSku,
-                  _bundleId: bundleId,
-                  _bundleRole: 'component',
                 },
               },
             );
@@ -220,7 +341,7 @@ if (!customElements.get('product-form')) {
             }
           }
 
-          items.push({
+          customisationItems.push({
             id: window.s3_remix_service_variant_id,
             quantity: 1,
             properties: {
@@ -228,28 +349,41 @@ if (!customElements.get('product-form')) {
               _textColor: window.s3_remix_config.stickerTextColor || 'UNKNOWN',
               _productSKU: window?.s3_current_variant_sku || '',
               _productName: window?.s3_product_name || '',
-              _bundleId: bundleId,
-              _bundleRole: 'component',
             },
           });
         }
 
         //  check if printing is selected
-        const theTshirtText = document.getElementById('the-tshirt-text');
+        const tshirtPrintingServiceVariantId = hasTshirtSecondLine
+          ? window.s3_tshirt_printing_plus_service_variant_id
+          : window.s3_tshirt_printing_service_variant_id;
 
-        if (theTshirtText && window.s3_tshirt_printing_service_variant_id && selectedVariantSku) {
-          items.push({
-            id: window.s3_tshirt_printing_service_variant_id,
+        if (theTshirtText && tshirtPrintingServiceVariantId && selectedVariantSku) {
+          customisationItems.push({
+            id: tshirtPrintingServiceVariantId,
             quantity: 1,
             properties: {
               _tshirtText: theTshirtText.innerText,
+              ...(hasTshirtSecondLine ? { _tshirtSecondLine: tshirtSecondLineText, _tshirtLogo: tshirtLogoId } : {}),
               _textColor: window.s3_tshirt_printing_config.tshirtTextColor || 'UNKNOWN',
               _productSKU: window?.s3_current_variant_sku || '',
               _productName: window?.s3_product_name || '',
-              _bundleId: bundleId,
-              _bundleRole: 'component',
             },
           });
+        }
+
+        if (customisationItems.length > 0) {
+          mainItem.quantity = 1;
+          mainItem.properties = { _customisationId: customisationId };
+
+          customisationItems.forEach((item) => {
+            item.parent_id = mainVariantId;
+            item.properties = {
+              ...item.properties,
+              _customisationId: customisationId,
+            };
+          });
+          items.push(...customisationItems);
         }
 
         // check for buy X get Y
@@ -269,7 +403,7 @@ if (!customElements.get('product-form')) {
                   quantity: 1,
                   properties: {
                     _offer: matchingOffer.offer_name,
-                    _bundleId: Math.random().toString(36).slice(2),
+                    _offerInstanceId: customisationId,
                   },
                 });
               }
@@ -279,6 +413,8 @@ if (!customElements.get('product-form')) {
           }
         }
         // Single combined request with sections
+        let addAccepted = false;
+
         fetch(`${routes.cart_add_url}`, {
           ...config,
           method: 'POST',
@@ -287,43 +423,42 @@ if (!customElements.get('product-form')) {
             ...config.headers,
           },
           body: JSON.stringify({
-            items: items?.reverse(),
+            items,
             sections: sections,
             sections_url: window.location.pathname,
           }),
         })
-          .then((response) => response.json())
-          .then((response) => {
-            if (response.status) {
-              publish(PUB_SUB_EVENTS.cartError, {
-                source: 'product-form',
-                productVariantId: formData.get('id'),
-                errors: response.errors || response.description,
-                message: response.message,
-              });
-              this.handleErrorMessage(response.description);
+          .then(async (response) => ({ ok: response.ok, data: await response.json() }))
+          .then(async ({ ok, data: response }) => {
+            const hasInvalidAddResponse = !this.hasValidAddResponse(
+              response,
+              mainVariantId,
+              customisationItems,
+              customisationId,
+            );
 
-              const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
-              if (!soldOutMessage) return;
-              this.submitButton.setAttribute('aria-disabled', true);
-              this.submitButtonText.classList.add('hidden');
-              soldOutMessage.classList.remove('hidden');
-              this.error = true;
+            if (!ok || response.status || hasInvalidAddResponse) {
+              if (customisationItems.length > 0) {
+                await this.handleIncompleteCustomisation(response, mainVariantId, customisationId, sections);
+              } else {
+                this.showAddError(response, mainVariantId);
+              }
               return;
             } else if (!this.cart) {
+              addAccepted = true;
               window.location = window.routes.cart_url;
               return;
             }
 
+            addAccepted = true;
             const startMarker = CartPerformance.createStartingMarker('add:wait-for-subscribers');
-            if (!this.error)
-              publish(PUB_SUB_EVENTS.cartUpdate, {
-                source: 'product-form',
-                productVariantId: formData.get('id'),
-                cartData: response,
-              }).then(() => {
-                CartPerformance.measureFromMarker('add:wait-for-subscribers', startMarker);
-              });
+            publish(PUB_SUB_EVENTS.cartUpdate, {
+              source: 'product-form',
+              productVariantId: mainVariantId,
+              cartData: response,
+            }).then(() => {
+              CartPerformance.measureFromMarker('add:wait-for-subscribers', startMarker);
+            });
             this.error = false;
             const quickAddModal = this.closest('quick-add-modal');
             if (quickAddModal) {
@@ -345,13 +480,24 @@ if (!customElements.get('product-form')) {
               });
             }
           })
-          .catch((e) => {
+          .catch(async (e) => {
             console.error(e);
+            if (addAccepted) {
+              window.location = window.routes.cart_url;
+            } else if (customisationItems.length > 0) {
+              await this.handleIncompleteCustomisation({}, mainVariantId, customisationId, sections);
+            } else {
+              this.showAddError({}, mainVariantId);
+            }
           })
           .finally(() => {
             this.submitButton.classList.remove('loading');
-            if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
-            if (!this.error) this.submitButton.removeAttribute('aria-disabled');
+            if (!this.error && this.cart && this.cart.classList.contains('is-empty')) {
+              this.cart.classList.remove('is-empty');
+            }
+            if (!this.submitButton.querySelector('.sold-out-message:not(.hidden)')) {
+              this.submitButton.removeAttribute('aria-disabled');
+            }
             this.querySelector('.loading__spinner').classList.add('hidden');
 
             CartPerformance.measureFromEvent('add:user-action', evt);

@@ -1,5 +1,51 @@
 {{ 'services.css' | asset_url | stylesheet_tag }}
-{% assign tshirt_trigger_id = 'tshirt-printing-trigger-' | append: section.id %}
+{%- liquid
+  assign tshirt_trigger_id = 'tshirt-printing-trigger-' | append: section.id
+  assign tshirt_printing_product = all_products['t-shirt-printing']
+  assign tshirt_printing_variant = tshirt_printing_product.variants.first
+  assign tshirt_printing_plus_product = all_products['t-shirt-printing-plus']
+  assign tshirt_printing_plus_variant = null
+  # Shopify SKUs can use uppercase letters even though product handles are lowercase.
+  # Normalize only the comparison; retain the actual variant for pricing and cart submission.
+  for service_variant in tshirt_printing_plus_product.variants
+    assign normalized_service_sku = service_variant.sku | downcase
+    if normalized_service_sku == 't-shirt-printing-plus'
+      assign tshirt_printing_plus_variant = service_variant
+      break
+    endif
+  endfor
+  assign second_line_flag = metaobjects.theme_feature_flag['tshirt-printing-second-line']
+  assign is_second_line_enabled = false
+
+  if second_line_flag.enabled.value == true and tshirt_printing_plus_variant.available
+    assign is_second_line_enabled = true
+    # Compare numeric prices before formatting; a non-positive upgrade is free.
+    assign second_line_additional_price = tshirt_printing_plus_variant.price | minus: tshirt_printing_variant.price
+    if second_line_additional_price <= 0
+      assign second_line_additional_price = 'studio.tshirt_printing.labels.free' | t
+    else
+      assign second_line_additional_price = second_line_additional_price | money
+    endif
+  endif
+-%}
+
+{%- capture tshirt_printing_price -%}
+  {%- if tshirt_printing_variant.price <= 0 -%}
+    {{ 'studio.tshirt_printing.labels.free' | t }}
+  {%- else -%}
+    +{{ tshirt_printing_variant.price | money }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture tshirt_printing_plus_price -%}
+  {%- if tshirt_printing_plus_variant -%}
+    {%- if tshirt_printing_plus_variant.price <= 0 -%}
+      {{ 'studio.tshirt_printing.labels.free' | t }}
+    {%- else -%}
+      +{{ tshirt_printing_plus_variant.price | money }}
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
 
 <style>
   @font-face {
@@ -13,6 +59,162 @@
     font-family: 'segui', sans-serif !important;
     /* letter-spacing: -1px; */
   }
+
+  {%- if is_second_line_enabled -%}
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url("{{ 'BarlowCondensed-SemiBold.ttf' | asset_url }}") format('truetype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .tshirt-printing-font--plus {
+      font-family: 'Barlow Condensed', sans-serif !important;
+      font-weight: 600;
+      font-synthesis: none;
+    }
+
+    .tshirt-printing-preview-artwork {
+      position: relative;
+      width: min(100%, 458.9px);
+      margin: 0 auto;
+    }
+
+    .tshirt-printing-preview-artwork svg {
+      display: block;
+    }
+
+    .tshirt-printing-preview-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .tshirt-printing-input {
+      box-sizing: border-box;
+      width: min(calc(100% - 3.2rem), 374px);
+      min-width: 0;
+    }
+
+    .tshirt-printing-input,
+    .tshirt-printing-country-controls .services-input {
+      font-family: var(--font-body-family);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: normal;
+      color: var(--gray-90);
+      text-transform: uppercase;
+    }
+
+    .tshirt-printing-country-field {
+      width: min(calc(100% - 3.2rem), 374px);
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .tshirt-printing-country-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tshirt-printing-country-controls .services-input {
+      box-sizing: border-box;
+      flex: 1;
+      width: 100%;
+      min-width: 0;
+      min-height: 4.9rem;
+      margin-top: 0;
+      padding: 1.5rem 4.5rem 1.5rem 2.5rem;
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: transparent;
+      background-image: url("{{ 'icon-caret.svg' | asset_url }}");
+      background-repeat: no-repeat;
+      background-position: right 1.8rem center;
+      background-size: 1.6rem 1.6rem;
+    }
+
+    .tshirt-printing-second-line-clear {
+      display: grid;
+      flex: 0 0 4.4rem;
+      width: 4.4rem;
+      height: 4.9rem;
+      padding: 0;
+      border: 0;
+      color: var(--gray-70);
+      background: transparent;
+      cursor: pointer;
+      place-items: center;
+    }
+
+    .tshirt-printing-logo-status {
+      width: min(calc(100% - 3.2rem), 374px);
+      margin: 0.8rem 0 0;
+      font-size: 1.4rem;
+    }
+
+    .tshirt-printing-second-line-clear img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .tshirt-printing-add-line {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      max-width: min(calc(100% - 3.2rem), 374px);
+      min-height: 4.4rem;
+      margin-top: 1.6rem;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .tshirt-printing-add-line span {
+      min-width: 0;
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
+
+    .tshirt-printing-add-line svg {
+      flex-shrink: 0;
+    }
+
+    .tshirt-printing-add-line:focus-visible,
+    .tshirt-printing-second-line-clear:focus-visible,
+    .tshirt-printing-country-controls select:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+
+    .tshirt-printing-actions {
+      width: min(calc(100% - 3.2rem), 374px);
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 639px) {
+      .tshirt-printing-add-line {
+        width: min(calc(100% - 3.2rem), 374px);
+      }
+
+      .tshirt-printing-actions .button {
+        min-width: 0;
+        flex: 1;
+      }
+    }
+  {%- endif -%}
 </style>
 
 <section
@@ -23,16 +225,33 @@
   data-action-submit="{{ 'studio.tshirt_printing.actions.submit' | t }}"
   data-action-close="{{ 'studio.tshirt_printing.actions.close' | t }}"
   data-action-remove="{{ 'studio.tshirt_printing.actions.remove' | t }}"
+  data-action-add-second-line="{{ 'studio.tshirt_printing.actions.add_second_line' | t: price: second_line_additional_price | escape }}"
+  data-action-clear-second-line="{{ 'studio.tshirt_printing.actions.clear_second_line' | t }}"
   data-heading-personalise="{{ 'studio.tshirt_printing.headings.personalise' | t: product_title: product.title | escape }}"
   data-label-title="{{ 'studio.tshirt_printing.labels.title' | t | escape }}"
   data-label-input="{{ 'studio.tshirt_printing.labels.input' | t | escape }}"
+  data-label-second-input="{{ 'studio.tshirt_printing.labels.second_input' | t | escape }}"
   data-label-note="{{ 'studio.tshirt_printing.labels.note' | t | escape }}"
   data-label-summary-html="{{ 'studio.tshirt_printing.labels.summary_html' | t: product_title: product.title | escape }}"
   data-message-invalid-input="{{ 'studio.tshirt_printing.messages.invalid_input' | t | escape }}"
+  data-message-logo-unavailable="{{ 'studio.tshirt_printing.messages.logo_unavailable' | t | escape }}"
+  data-message-logo-loading="{{ 'studio.tshirt_printing.messages.logo_loading' | t | escape }}"
+  data-country-in="{{ 'studio.tshirt_printing.countries.india' | t | escape }}"
+  data-country-id="{{ 'studio.tshirt_printing.countries.indonesia' | t | escape }}"
+  data-country-cn="{{ 'studio.tshirt_printing.countries.china' | t | escape }}"
+  data-country-jp="{{ 'studio.tshirt_printing.countries.japan' | t | escape }}"
+  data-country-my="{{ 'studio.tshirt_printing.countries.malaysia' | t | escape }}"
+  data-country-dk="{{ 'studio.tshirt_printing.countries.denmark' | t | escape }}"
+  data-lining-logo-src="{{ 'lining-logo.svg' | asset_url }}"
+  data-hndrd-logo-src="{{ 'hndrd-logo.svg' | asset_url }}"
   data-message-error="{{ 'studio.tshirt_printing.errors.load_failed' | t }}"
   data-close-confirm-message="{{ 'studio.modal_close_guard.message' | t }}"
   data-close-confirm-keep-editing="{{ 'studio.modal_close_guard.keep_editing' | t }}"
   data-close-confirm-discard="{{ 'studio.modal_close_guard.discard' | t }}"
+  data-second-line-enabled="{{ is_second_line_enabled }}"
+  data-single-line-price="{{ tshirt_printing_price | strip | escape }}"
+  data-plus-price="{{ tshirt_printing_plus_price | strip | escape }}"
+  data-clear-icon-src="{{ 'icon-close-small.svg' | asset_url }}"
 ></section>
 
 <section class="tshirt-printing-container service-container">
@@ -45,20 +264,16 @@
     <div class="service-card__content">
       <div class="service-card__title-row">
         <span>{{ 'studio.tshirt_printing.form_labels.personalisation_service' | t }}</span>
-        <span class="service-card__price">
-          {%- if all_products['t-shirt-printing'].price == 0 -%}
-            {{ 'studio.tshirt_printing.labels.free' | t }}
-          {%- else -%}
-            +{{ all_products['t-shirt-printing'].price | money }}
-          {%- endif -%}
-        </span>
+        <span class="service-card__price" id="tshirt-printing-price">{{ tshirt_printing_price | strip }}</span>
       </div>
       <p class="service-card__description" id="tshirt-printing-description">
         {{- 'studio.tshirt_printing.description.personalisation_service' | t: product_title: product.title -}}
       </p>
     </div>
     <div class="service-card__cta">
-      <span class="service-card__cta-text" id="tshirt-printing-cta-label">{{ 'studio.tshirt_printing.actions.add' | t }}</span>
+      <span class="service-card__cta-text" id="tshirt-printing-cta-label">
+        {{- 'studio.tshirt_printing.actions.add' | t -}}
+      </span>
       <span class="service-card__cta-icon">
         {{- 'icon-plus.svg' | inline_asset_content -}}
       </span>
@@ -86,7 +301,11 @@
       });
     }
 
-    // set the tshirt-printing variant id on window
-    window.s3_tshirt_printing_service_variant_id = '{{ all_products['t-shirt-printing'].variants.first.id  }}';
+    // Product form submission uses variant IDs, while the optional second-line
+    // product is resolved by a case-insensitive SKU match so a missing service fails closed.
+    window.s3_tshirt_printing_service_variant_id = '{{ tshirt_printing_variant.id }}';
+    window.s3_tshirt_printing_second_line_enabled = {{ is_second_line_enabled | json }};
+    window.s3_tshirt_printing_plus_service_variant_id =
+      {% if is_second_line_enabled %}'{{ tshirt_printing_plus_variant.id }}'{% else %}undefined{% endif %};
   });
 </script>
