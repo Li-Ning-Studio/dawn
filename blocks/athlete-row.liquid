@@ -4,8 +4,18 @@
   .ath-row-{{ ai_gen_id }} {
     display: block;
     width: 100%;
+    box-sizing: border-box;
+    background: {{ block.settings.bg_color }};
+    color: {{ block.settings.text_color }};
     padding-top: {{ block.settings.spacing_top }}px;
     padding-bottom: {{ block.settings.spacing_bottom }}px;
+  }
+
+  .ath-row-{{ ai_gen_id }}--full {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
   }
 
   .ath-row-{{ ai_gen_id }}__grid {
@@ -100,7 +110,10 @@
   }
 {% endstyle %}
 
-<div class="ath-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+<div
+  class="ath-row-{{ ai_gen_id }}{% if block.settings.full_width_background %} ath-row-{{ ai_gen_id }}--full{% endif %}"
+  {{ block.shopify_attributes }}
+>
   <div class="ath-row-{{ ai_gen_id }}__grid">
     {% for i in (1..3) %}
       {% liquid
@@ -159,20 +172,24 @@
 {
   "name": "Spillerrække",
   "settings": [
+    {"type":"header","content":"Baggrund"},
+    {"type":"color","id":"bg_color","label":"Baggrundsfarve","default":"#000000"},
+    {"type":"color","id":"text_color","label":"Tekstfarve","default":"#FFFFFF"},
+    {"type":"checkbox","id":"full_width_background","label":"Baggrund i fuld skærmbredde","default":true,"info":"Sort helt ud til kanten af skærmen."},
     {"type":"header","content":"Layout"},
-    {"type":"range","id":"row_width","label":"Bredde på computer","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"range","id":"row_width","label":"Bredde på computer","min":50,"max":100,"step":5,"unit":"%","default":90},
     {"type":"select","id":"columns_mobile","label":"Antal pr. række (mobil)","options":[{"value":"1","label":"1"},{"value":"2","label":"2"}],"default":"1"},
     {"type":"select","id":"image_ratio","label":"Billedformat","options":[{"value":"1 / 1","label":"Kvadratisk"},{"value":"4 / 5","label":"Højformat"},{"value":"3 / 4","label":"Højformat (høj)"}],"default":"4 / 5"},
     {"type":"range","id":"gap","label":"Afstand mellem kort (computer)","min":0,"max":60,"step":4,"unit":"px","default":24},
     {"type":"range","id":"gap_mobile","label":"Afstand mellem kort (mobil)","min":0,"max":40,"step":4,"unit":"px","default":16},
-    {"type":"range","id":"spacing_top","label":"Afstand over","min":0,"max":120,"step":4,"unit":"px","default":0},
+    {"type":"range","id":"spacing_top","label":"Afstand over","min":0,"max":120,"step":4,"unit":"px","default":24},
     {"type":"range","id":"spacing_bottom","label":"Afstand under","min":0,"max":120,"step":4,"unit":"px","default":24},
     {"type":"header","content":"Kort"},
-    {"type":"range","id":"card_padding","label":"Luft inde i kortet","min":0,"max":40,"step":2,"unit":"px","default":16},
-    {"type":"range","id":"card_radius","label":"Runde hjørner på kortet","min":0,"max":40,"step":2,"unit":"px","default":12},
+    {"type":"range","id":"card_padding","label":"Luft inde i kortet","min":0,"max":40,"step":2,"unit":"px","default":0},
+    {"type":"range","id":"card_radius","label":"Runde hjørner på kortet","min":0,"max":40,"step":2,"unit":"px","default":0},
     {"type":"range","id":"image_radius","label":"Runde hjørner på billedet","min":0,"max":40,"step":2,"unit":"px","default":8},
     {"type":"range","id":"image_space","label":"Afstand fra billede til navn","min":4,"max":40,"step":2,"unit":"px","default":16},
-    {"type":"color","id":"card_background","label":"Kortets baggrund","default":"rgba(0,0,0,0)","info":"Gennemsigtig = samme farve som sektionen."},
+    {"type":"color","id":"card_background","label":"Kortets baggrund","default":"rgba(0,0,0,0)","info":"Gennemsigtig = samme som baggrunden."},
     {"type":"range","id":"card_border_width","label":"Kantlinje","min":0,"max":4,"step":1,"unit":"px","default":0},
     {"type":"color","id":"card_border_color","label":"Kantlinjens farve","default":"rgba(0,0,0,0)"},
     {"type":"header","content":"Tekst"},
@@ -181,7 +198,7 @@
     {"type":"select","id":"name_weight","label":"Navnets tykkelse","options":[{"value":"400","label":"Normal"},{"value":"500","label":"Medium"},{"value":"600","label":"Halvfed"},{"value":"700","label":"Fed"}],"default":"500"},
     {"type":"checkbox","id":"name_uppercase","label":"Store bogstaver i navn","default":false},
     {"type":"range","id":"bio_size","label":"Størrelse på beskrivelse","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"range","id":"bio_opacity","label":"Beskrivelsens styrke","min":40,"max":100,"step":5,"unit":"%","default":85,"info":"Lavere tal gør beskrivelsen mere afdæmpet end navnet."},
+    {"type":"range","id":"bio_opacity","label":"Beskrivelsens styrke","min":40,"max":100,"step":5,"unit":"%","default":85},
     {"type":"header","content":"Spiller 1"},
     {"type":"image_picker","id":"image_1","label":"Billede"},
     {"type":"text","id":"name_1","label":"Navn"},
