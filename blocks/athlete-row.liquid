@@ -1,30 +1,11 @@
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
-{% liquid
-  assign name_col = 'inherit'
-  if block.settings.name_color.alpha > 0
-    assign name_col = block.settings.name_color
-  endif
-
-  assign bio_col = 'inherit'
-  if block.settings.bio_color.alpha > 0
-    assign bio_col = block.settings.bio_color
-  endif
-%}
-
 {% style %}
   .ath-row-{{ ai_gen_id }} {
     display: block;
     width: 100%;
     padding-top: {{ block.settings.spacing_top }}px;
     padding-bottom: {{ block.settings.spacing_bottom }}px;
-  }
-
-  .ath-row-{{ ai_gen_id }}--full {
-    position: relative;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
   }
 
   .ath-row-{{ ai_gen_id }}__grid {
@@ -72,7 +53,7 @@
   .ath-row-{{ ai_gen_id }}__name {
     display: block;
     margin: {{ block.settings.image_space }}px 0 0;
-    color: {{ name_col }};
+    color: inherit;
     font-size: {{ block.settings.name_size }}px;
     line-height: 1.25;
     font-weight: {{ block.settings.name_weight }};
@@ -82,7 +63,7 @@
   .ath-row-{{ ai_gen_id }}__meta {
     display: block;
     margin: 5px 0 0;
-    color: {{ name_col }};
+    color: inherit;
     opacity: 0.55;
     font-size: {{ block.settings.bio_size | minus: 1 }}px;
     letter-spacing: 0.08em;
@@ -92,7 +73,8 @@
   .ath-row-{{ ai_gen_id }}__bio {
     display: block;
     margin: 12px 0 0;
-    color: {{ bio_col }};
+    color: inherit;
+    opacity: {{ block.settings.bio_opacity | divided_by: 100.0 }};
     font-size: {{ block.settings.bio_size }}px;
     line-height: 1.6;
   }
@@ -118,10 +100,7 @@
   }
 {% endstyle %}
 
-<div
-  class="ath-row-{{ ai_gen_id }} color-{{ block.settings.color_scheme.id }} gradient{% if block.settings.full_width_background %} ath-row-{{ ai_gen_id }}--full{% endif %}"
-  {{ block.shopify_attributes }}
->
+<div class="ath-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
   <div class="ath-row-{{ ai_gen_id }}__grid">
     {% for i in (1..3) %}
       {% liquid
@@ -180,9 +159,6 @@
 {
   "name": "Spillerrække",
   "settings": [
-    {"type":"header","content":"Baggrund"},
-    {"type":"color_scheme","id":"color_scheme","label":"Farveskema","default":"scheme-1","info":"Vælg det sorte skema for sort baggrund. Skemaerne redigeres under Temaindstillinger → Farver."},
-    {"type":"checkbox","id":"full_width_background","label":"Baggrund i fuld skærmbredde","default":false,"info":"Slå til hvis den sorte flade skal gå helt ud til kanten af skærmen."},
     {"type":"header","content":"Layout"},
     {"type":"range","id":"row_width","label":"Bredde på computer","min":50,"max":100,"step":5,"unit":"%","default":100},
     {"type":"select","id":"columns_mobile","label":"Antal pr. række (mobil)","options":[{"value":"1","label":"1"},{"value":"2","label":"2"}],"default":"1"},
@@ -196,17 +172,16 @@
     {"type":"range","id":"card_radius","label":"Runde hjørner på kortet","min":0,"max":40,"step":2,"unit":"px","default":12},
     {"type":"range","id":"image_radius","label":"Runde hjørner på billedet","min":0,"max":40,"step":2,"unit":"px","default":8},
     {"type":"range","id":"image_space","label":"Afstand fra billede til navn","min":4,"max":40,"step":2,"unit":"px","default":16},
-    {"type":"color","id":"card_background","label":"Kortets baggrund","default":"rgba(255,255,255,0.03)"},
-    {"type":"range","id":"card_border_width","label":"Kantlinje","min":0,"max":4,"step":1,"unit":"px","default":1},
-    {"type":"color","id":"card_border_color","label":"Kantlinjens farve","default":"rgba(255,255,255,0.1)"},
+    {"type":"color","id":"card_background","label":"Kortets baggrund","default":"rgba(0,0,0,0)","info":"Gennemsigtig = samme farve som sektionen."},
+    {"type":"range","id":"card_border_width","label":"Kantlinje","min":0,"max":4,"step":1,"unit":"px","default":0},
+    {"type":"color","id":"card_border_color","label":"Kantlinjens farve","default":"rgba(0,0,0,0)"},
     {"type":"header","content":"Tekst"},
     {"type":"range","id":"name_size","label":"Størrelse på navn (computer)","min":14,"max":36,"step":1,"unit":"px","default":19},
     {"type":"range","id":"name_size_mobile","label":"Størrelse på navn (mobil)","min":12,"max":30,"step":1,"unit":"px","default":18},
     {"type":"select","id":"name_weight","label":"Navnets tykkelse","options":[{"value":"400","label":"Normal"},{"value":"500","label":"Medium"},{"value":"600","label":"Halvfed"},{"value":"700","label":"Fed"}],"default":"500"},
     {"type":"checkbox","id":"name_uppercase","label":"Store bogstaver i navn","default":false},
-    {"type":"color","id":"name_color","label":"Navnets farve","default":"rgba(0,0,0,0)","info":"Gennemsigtig = følger farveskemaet."},
     {"type":"range","id":"bio_size","label":"Størrelse på beskrivelse","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"color","id":"bio_color","label":"Beskrivelsens farve","default":"rgba(0,0,0,0)","info":"Gennemsigtig = følger farveskemaet."},
+    {"type":"range","id":"bio_opacity","label":"Beskrivelsens styrke","min":40,"max":100,"step":5,"unit":"%","default":85,"info":"Lavere tal gør beskrivelsen mere afdæmpet end navnet."},
     {"type":"header","content":"Spiller 1"},
     {"type":"image_picker","id":"image_1","label":"Billede"},
     {"type":"text","id":"name_1","label":"Navn"},
