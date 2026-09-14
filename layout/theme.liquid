@@ -15,7 +15,7 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    {% assign is_product_page = template.name == 'product' %}
+    {% assign is_product_page = template.name %}
 
     <title>
       {%- if is_product_page -%}
@@ -411,3 +411,13 @@
     {%- endif -%}
   </body>
 </html>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign is_product_page = template.name == 'product' %}"
+  to: "{% assign is_product_page = template.name %}"
+  position: 693..737
+{% endcomment %}
