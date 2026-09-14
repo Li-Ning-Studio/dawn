@@ -1,0 +1,220 @@
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% liquid
+  assign name_col = 'inherit'
+  if block.settings.name_color.alpha > 0
+    assign name_col = block.settings.name_color
+  endif
+
+  assign bio_col = 'inherit'
+  if block.settings.bio_color.alpha > 0
+    assign bio_col = block.settings.bio_color
+  endif
+%}
+
+{% style %}
+  .ath-row-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding-top: {{ block.settings.spacing_top }}px;
+    padding-bottom: {{ block.settings.spacing_bottom }}px;
+  }
+
+  .ath-row-{{ ai_gen_id }}__grid {
+    width: {{ block.settings.row_width }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: {{ block.settings.gap }}px;
+    align-items: stretch;
+  }
+
+  .ath-row-{{ ai_gen_id }}__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding: {{ block.settings.card_padding }}px;
+    border-radius: {{ block.settings.card_radius }}px;
+    background: {{ block.settings.card_background }};
+    border: {{ block.settings.card_border_width }}px solid {{ block.settings.card_border_color }};
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ath-row-{{ ai_gen_id }}__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: {{ block.settings.image_ratio }};
+    overflow: hidden;
+    border-radius: {{ block.settings.image_radius }}px;
+    background: rgba(127, 127, 127, 0.15);
+  }
+
+  .ath-row-{{ ai_gen_id }}__media img,
+  .ath-row-{{ ai_gen_id }}__media svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ath-row-{{ ai_gen_id }}__name {
+    display: block;
+    margin: {{ block.settings.image_space }}px 0 0;
+    color: {{ name_col }};
+    font-size: {{ block.settings.name_size }}px;
+    line-height: 1.25;
+    font-weight: {{ block.settings.name_weight }};
+    {% if block.settings.name_uppercase %}text-transform: uppercase;{% endif %}
+  }
+
+  .ath-row-{{ ai_gen_id }}__meta {
+    display: block;
+    margin: 5px 0 0;
+    color: {{ name_col }};
+    opacity: 0.55;
+    font-size: {{ block.settings.bio_size | minus: 1 }}px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .ath-row-{{ ai_gen_id }}__bio {
+    display: block;
+    margin: 12px 0 0;
+    color: {{ bio_col }};
+    font-size: {{ block.settings.bio_size }}px;
+    line-height: 1.6;
+  }
+
+  .ath-row-{{ ai_gen_id }}__bio > * {
+    margin: 0 0 0.7em;
+  }
+
+  .ath-row-{{ ai_gen_id }}__bio > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ath-row-{{ ai_gen_id }}__grid {
+      width: 100%;
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, minmax(0, 1fr));
+      gap: {{ block.settings.gap_mobile }}px;
+    }
+
+    .ath-row-{{ ai_gen_id }}__name {
+      font-size: {{ block.settings.name_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ath-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ath-row-{{ ai_gen_id }}__grid">
+    {% for i in (1..3) %}
+      {% liquid
+        assign image_key = 'image_' | append: i
+        assign name_key = 'name_' | append: i
+        assign meta_key = 'meta_' | append: i
+        assign bio_key = 'bio_' | append: i
+        assign url_key = 'url_' | append: i
+        assign image = block.settings[image_key]
+        assign name = block.settings[name_key]
+        assign meta = block.settings[meta_key]
+        assign bio = block.settings[bio_key]
+        assign url = block.settings[url_key]
+      %}
+      {% if image != blank or name != blank %}
+        {% if url != blank %}
+          <a class="ath-row-{{ ai_gen_id }}__card" href="{{ url }}">
+        {% else %}
+          <div class="ath-row-{{ ai_gen_id }}__card">
+        {% endif %}
+          <div class="ath-row-{{ ai_gen_id }}__media">
+            {% if image != blank %}
+              <img
+                srcset="{{ image | image_url: width: 300 }} 300w, {{ image | image_url: width: 450 }} 450w, {{ image | image_url: width: 600 }} 600w, {{ image | image_url: width: 900 }} 900w"
+                sizes="(max-width: 749px) 90vw, 33vw"
+                src="{{ image | image_url: width: 600 }}"
+                alt="{{ image.alt | default: name | escape }}"
+                loading="lazy"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+              >
+            {% else %}
+              {{ 'image' | placeholder_svg_tag }}
+            {% endif %}
+          </div>
+          {% if name != blank %}
+            <span class="ath-row-{{ ai_gen_id }}__name">{{ name }}</span>
+          {% endif %}
+          {% if meta != blank %}
+            <span class="ath-row-{{ ai_gen_id }}__meta">{{ meta }}</span>
+          {% endif %}
+          {% if bio != blank %}
+            <div class="ath-row-{{ ai_gen_id }}__bio">{{ bio }}</div>
+          {% endif %}
+        {% if url != blank %}
+          </a>
+        {% else %}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Spillerrække",
+  "settings": [
+    {"type":"header","content":"Layout"},
+    {"type":"range","id":"row_width","label":"Bredde på computer","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"select","id":"columns_mobile","label":"Antal pr. række (mobil)","options":[{"value":"1","label":"1"},{"value":"2","label":"2"}],"default":"1"},
+    {"type":"select","id":"image_ratio","label":"Billedformat","options":[{"value":"1 / 1","label":"Kvadratisk"},{"value":"4 / 5","label":"Højformat"},{"value":"3 / 4","label":"Højformat (høj)"}],"default":"4 / 5"},
+    {"type":"range","id":"gap","label":"Afstand mellem kort (computer)","min":0,"max":60,"step":4,"unit":"px","default":24},
+    {"type":"range","id":"gap_mobile","label":"Afstand mellem kort (mobil)","min":0,"max":40,"step":4,"unit":"px","default":16},
+    {"type":"range","id":"spacing_top","label":"Afstand over","min":0,"max":120,"step":4,"unit":"px","default":0},
+    {"type":"range","id":"spacing_bottom","label":"Afstand under","min":0,"max":120,"step":4,"unit":"px","default":24},
+    {"type":"header","content":"Kort"},
+    {"type":"range","id":"card_padding","label":"Luft inde i kortet","min":0,"max":40,"step":2,"unit":"px","default":16},
+    {"type":"range","id":"card_radius","label":"Runde hjørner på kortet","min":0,"max":40,"step":2,"unit":"px","default":12},
+    {"type":"range","id":"image_radius","label":"Runde hjørner på billedet","min":0,"max":40,"step":2,"unit":"px","default":8},
+    {"type":"range","id":"image_space","label":"Afstand fra billede til navn","min":4,"max":40,"step":2,"unit":"px","default":16},
+    {"type":"color","id":"card_background","label":"Kortets baggrund","default":"rgba(255,255,255,0.03)"},
+    {"type":"range","id":"card_border_width","label":"Kantlinje","min":0,"max":4,"step":1,"unit":"px","default":1},
+    {"type":"color","id":"card_border_color","label":"Kantlinjens farve","default":"rgba(255,255,255,0.1)"},
+    {"type":"header","content":"Tekst"},
+    {"type":"range","id":"name_size","label":"Størrelse på navn (computer)","min":14,"max":36,"step":1,"unit":"px","default":19},
+    {"type":"range","id":"name_size_mobile","label":"Størrelse på navn (mobil)","min":12,"max":30,"step":1,"unit":"px","default":18},
+    {"type":"select","id":"name_weight","label":"Navnets tykkelse","options":[{"value":"400","label":"Normal"},{"value":"500","label":"Medium"},{"value":"600","label":"Halvfed"},{"value":"700","label":"Fed"}],"default":"500"},
+    {"type":"checkbox","id":"name_uppercase","label":"Store bogstaver i navn","default":false},
+    {"type":"color","id":"name_color","label":"Navnets farve","default":"rgba(0,0,0,0)","info":"Gennemsigtig = følger farveskemaet i sektionen."},
+    {"type":"range","id":"bio_size","label":"Størrelse på beskrivelse","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"color","id":"bio_color","label":"Beskrivelsens farve","default":"rgba(0,0,0,0)","info":"Gennemsigtig = følger farveskemaet i sektionen."},
+    {"type":"header","content":"Spiller 1"},
+    {"type":"image_picker","id":"image_1","label":"Billede"},
+    {"type":"text","id":"name_1","label":"Navn"},
+    {"type":"text","id":"meta_1","label":"Linje under navnet","info":"Fx 'Denmark'. Valgfri."},
+    {"type":"richtext","id":"bio_1","label":"Beskrivelse"},
+    {"type":"url","id":"url_1","label":"Link","info":"Valgfri. Gør hele kortet klikbart."},
+    {"type":"header","content":"Spiller 2"},
+    {"type":"image_picker","id":"image_2","label":"Billede"},
+    {"type":"text","id":"name_2","label":"Navn"},
+    {"type":"text","id":"meta_2","label":"Linje under navnet"},
+    {"type":"richtext","id":"bio_2","label":"Beskrivelse"},
+    {"type":"url","id":"url_2","label":"Link"},
+    {"type":"header","content":"Spiller 3"},
+    {"type":"image_picker","id":"image_3","label":"Billede"},
+    {"type":"text","id":"name_3","label":"Navn"},
+    {"type":"text","id":"meta_3","label":"Linje under navnet"},
+    {"type":"richtext","id":"bio_3","label":"Beskrivelse"},
+    {"type":"url","id":"url_3","label":"Link"}
+  ],
+  "presets":[{"name":"Spillerrække"}],
+  "tag":null,
+  "class":"athlete-row-block"
+}
+{% endschema %}
