@@ -1,6 +1,242 @@
+{% doc %}
+  @prompt
+    Jeg har et Shopify-tema bygget på Dawn (dawn/eu-hundred).
+    Jeg skal have lavet en ny sektion.
+    
+    HVAD DEN SKAL GØRE
+    Tre felter side om side, der ligger centreret på siden med samme
+    bredde som resten af indholdet (page-width). Hvert felt er bygget
+    på en kollektion — fx badminton, padel og pickleball.
+    
+    I hvert felt:
+    - Et billede der fylder hele feltet
+    - Navnet på sporten som tekst oven på billedet
+    - Hele feltet er klikbart og fører ind på kollektionen
+    - Samme runde hjørner som de øvrige kort på sitet
+    
+    OPSÆTNING I TEMAEDITOREN
+    Sektionen skal laves med blokke, så jeg selv kan tilføje eller
+    fjerne felter. På hver blok vil jeg kunne vælge:
+    - Kollektion (linket følger automatisk med)
+    - Billede (og hvis jeg lader det stå tomt, bruges kollektionens
+      eget billede)
+    - Tekst på billedet (tomt = kollektionens navn)
+    - Eventuel undertekst
+    
+    På hele sektionen vil jeg kunne indstille:
+    - Antal felter pr. række på computer og på mobil
+    - Billedformat (kvadratisk, højformat, liggende)
+    - Runde hjørner i px
+    - Afstand mellem felterne
+    - Hvor teksten sidder på billedet, dens farve og størrelse
+      (særskilt størrelse til mobil)
+    - Hvor kraftigt et mørkt slør der ligger bag teksten, så den
+      kan læses på lyse billeder
+    - Afstand over og under sektionen
+    
+    KRAV
+    - Den skal virke på mobil
+    - Billederne skal indlæses responsivt (srcset), ikke ét stort
+      billede til alle skærme
+    - Den skal kunne tilføjes fra temaeditoren som en færdig sektion
+      med tre blokke fra start
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-sport-tiles-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    margin-top: {{ block.settings.spacing_top }}px;
+    margin-bottom: {{ block.settings.spacing_bottom }}px;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__grid {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, minmax(0, 1fr));
+    gap: {{ block.settings.gap }}px;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__tile {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.corner_radius }}px;
+    aspect-ratio: {{ block.settings.aspect_ratio }};
+    background: #f4f4f4;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__tile:focus-visible {
+    outline: 3px solid {{ block.settings.text_color }};
+    outline-offset: 3px;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__image,
+  .ai-sport-tiles-{{ ai_gen_id }}__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__image {
+    object-fit: cover;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__placeholder svg {
+    width: 45%;
+    height: 45%;
+    color: #777;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: {{ block.settings.text_position }};
+    justify-content: flex-start;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }}) 0%, rgba(0, 0, 0, 0) 65%);
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__content {
+    max-width: 100%;
+    padding: 10px 14px;
+    background: rgba(0, 0, 0, {{ block.settings.text_background_opacity | divided_by: 100.0 }});
+    border-radius: 6px;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__title {
+    margin: 0;
+    font-size: {{ block.settings.title_size }}px;
+    line-height: 1.15;
+    color: inherit;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__subtitle {
+    margin: 6px 0 0;
+    font-size: {{ block.settings.subtitle_size }}px;
+    line-height: 1.3;
+    color: inherit;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-sport-tiles-{{ ai_gen_id }}__grid {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, minmax(0, 1fr));
+      gap: {{ block.settings.gap_mobile }}px;
+    }
+
+    .ai-sport-tiles-{{ ai_gen_id }}__overlay {
+      padding: 14px;
+    }
+
+    .ai-sport-tiles-{{ ai_gen_id }}__title {
+      font-size: {{ block.settings.title_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-sport-tiles-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-sport-tiles-{{ ai_gen_id }}__grid">
+    {% for i in (1..3) %}
+      {% liquid
+        assign collection_key = 'collection_' | append: i
+        assign image_key = 'image_' | append: i
+        assign title_key = 'title_' | append: i
+        assign subtitle_key = 'subtitle_' | append: i
+        assign collection = block.settings[collection_key]
+        assign image = block.settings[image_key]
+        assign title = block.settings[title_key]
+        assign subtitle = block.settings[subtitle_key]
+        if image == blank and collection != blank
+          assign image = collection.featured_image
+        endif
+        if title == blank and collection != blank
+          assign title = collection.title
+        endif
+      %}
+      {% if collection != blank %}
+        <a class="ai-sport-tiles-{{ ai_gen_id }}__tile" href="{{ collection.url }}" aria-label="{{ title | escape }}">
+          {% if image != blank %}
+            <img
+              class="ai-sport-tiles-{{ ai_gen_id }}__image"
+              srcset="{{ image | image_url: width: 360 }} 360w, {{ image | image_url: width: 540 }} 540w, {{ image | image_url: width: 720 }} 720w, {{ image | image_url: width: 1000 }} 1000w"
+              sizes="(max-width: 749px) 50vw, 33vw"
+              src="{{ image | image_url: width: 720 }}"
+              alt="{{ image.alt | default: title | escape }}"
+              loading="lazy"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+            >
+          {% else %}
+            <div class="ai-sport-tiles-{{ ai_gen_id }}__placeholder">
+              {{ 'collection-apparel-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+          <span class="ai-sport-tiles-{{ ai_gen_id }}__overlay">
+            <span class="ai-sport-tiles-{{ ai_gen_id }}__content">
+              <span class="ai-sport-tiles-{{ ai_gen_id }}__title">{{ title }}</span>
+              {% if subtitle != blank %}<span class="ai-sport-tiles-{{ ai_gen_id }}__subtitle">{{ subtitle }}</span>{% endif %}
+            </span>
+          </span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Sport tiles",
+  "settings": [
+    {"type":"header","content":"Layout"},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"select","id":"columns_desktop","label":"Columns on desktop","options":[{"value":"2","label":"2"},{"value":"3","label":"3"}],"default":"3"},
+    {"type":"select","id":"columns_mobile","label":"Columns on mobile","options":[{"value":"1","label":"1"},{"value":"2","label":"2"}],"default":"1"},
+    {"type":"select","id":"aspect_ratio","label":"Image format","options":[{"value":"1 / 1","label":"Square"},{"value":"4 / 5","label":"Portrait"},{"value":"16 / 10","label":"Landscape"}],"default":"1 / 1"},
+    {"type":"range","id":"gap","label":"Desktop gap","min":0,"max":40,"step":4,"unit":"px","default":8},
+    {"type":"range","id":"gap_mobile","label":"Mobile gap","min":0,"max":32,"step":4,"unit":"px","default":8},
+    {"type":"range","id":"corner_radius","label":"Corner radius","min":0,"max":40,"step":2,"unit":"px","default":0},
+    {"type":"range","id":"spacing_top","label":"Space above","min":0,"max":120,"step":4,"unit":"px","default":36},
+    {"type":"range","id":"spacing_bottom","label":"Space below","min":0,"max":120,"step":4,"unit":"px","default":36},
+    {"type":"header","content":"Text"},
+    {"type":"select","id":"text_position","label":"Text position","options":[{"value":"flex-start","label":"Top"},{"value":"center","label":"Center"},{"value":"flex-end","label":"Bottom"}],"default":"flex-end"},
+    {"type":"color","id":"text_color","label":"Text","default":"#FFFFFF"},
+    {"type":"range","id":"title_size","label":"Title size","min":14,"max":48,"step":2,"unit":"px","default":28},
+    {"type":"range","id":"title_size_mobile","label":"Mobile title size","min":12,"max":36,"step":2,"unit":"px","default":20},
+    {"type":"range","id":"subtitle_size","label":"Subtitle size","min":10,"max":24,"step":2,"unit":"px","default":14},
+    {"type":"range","id":"overlay_opacity","label":"Overlay strength","min":0,"max":100,"step":5,"unit":"%","default":55},
+    {"type":"range","id":"text_background_opacity","label":"Text background","min":0,"max":100,"step":5,"unit":"%","default":25},
+    {"type":"header","content":"Tile 1"},
+    {"type":"collection","id":"collection_1","label":"Collection"},
+    {"type":"image_picker","id":"image_1","label":"Image"},
+    {"type":"text","id":"title_1","label":"Title"},
+    {"type":"text","id":"subtitle_1","label":"Subtitle"},
+    {"type":"header","content":"Tile 2"},
+    {"type":"collection","id":"collection_2","label":"Collection"},
+    {"type":"image_picker","id":"image_2","label":"Image"},
+    {"type":"text","id":"title_2","label":"Title"},
+    {"type":"text","id":"subtitle_2","label":"Subtitle"},
+    {"type":"header","content":"Tile 3"},
+    {"type":"collection","id":"collection_3","label":"Collection"},
+    {"type":"image_picker","id":"image_3","label":"Image"},
+    {"type":"text","id":"title_3","label":"Title"},
+    {"type":"text","id":"subtitle_3","label":"Subtitle"}
+  ],
+  "presets":[{"name":"Sport tiles"}],
+  "tag":null,
+  "class":"sport-tiles-block"
+}
 {% endschema %}
