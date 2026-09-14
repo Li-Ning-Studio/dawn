@@ -65,10 +65,63 @@
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
+    },
+    "178938773795bfb7b6": {
+      "type": "_blocks",
+      "blocks": {
+        "athlete_row_xtrTz7": {
+          "type": "athlete-row",
+          "name": "Spillerrække",
+          "settings": {
+            "row_width": 90,
+            "columns_mobile": "1",
+            "image_ratio": "4 / 5",
+            "gap": 20,
+            "gap_mobile": 16,
+            "spacing_top": 36,
+            "spacing_bottom": 24,
+            "card_padding": 16,
+            "card_radius": 12,
+            "image_radius": 8,
+            "image_space": 16,
+            "card_background": "rgba(255,255,255,0.03)",
+            "card_border_width": 1,
+            "card_border_color": "rgba(255,255,255,0.1)",
+            "name_size": 19,
+            "name_size_mobile": 18,
+            "name_weight": "500",
+            "name_uppercase": false,
+            "name_color": "rgba(0,0,0,0)",
+            "bio_size": 15,
+            "bio_color": "#000000",
+            "image_1": "shopify://shop_images/Meet_THE_PLAYER.png",
+            "name_1": "Alexandra Boje",
+            "meta_1": "",
+            "bio_1": "<p>A prominent Danish badminton player who specializes in doubles and has reached a career-high world ranking in the top ten for mixed doubles. Known for her tactical skill at the net, she has secured multiple BWF World Tour titles and represented Denmark at the Tokyo 2020 and Paris 2024 Olympic Games.</p>",
+            "url_1": "",
+            "image_2": "shopify://shop_images/Meet_THE_PLAYER_3.jpg",
+            "name_2": "Line Kjærsfeldt",
+            "meta_2": "",
+            "bio_2": "<p>She is a top-ranked Danish badminton player who won the gold medal in women's singles at the 2015 European Games and more recently claimed the title at the 2025 European Championships. A key figure in European badminton, she has represented Denmark at the Olympic Games and reached a career-high world ranking within the top 20.</p>",
+            "url_2": "",
+            "image_3": "shopify://shop_images/Meet_THE_PLAYER_4.jpg",
+            "name_3": "Callum Hemming",
+            "meta_3": "",
+            "bio_3": "<p>An English badminton player known for his success in doubles, he has won multiple titles including the 2024 Dutch and Irish Opens alongside Estelle van Leeuwen. He reached a career-high world ranking of 25 in mixed doubles in late 2025 and continues to be a key competitor for England on the BWF World Tour.</p>",
+            "url_3": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "athlete_row_xtrTz7"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "image_banner_fz3meY"
+    "image_banner_fz3meY",
+    "178938773795bfb7b6"
   ]
 }
