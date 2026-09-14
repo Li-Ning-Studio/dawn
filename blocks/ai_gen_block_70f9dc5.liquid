@@ -1,54 +1,59 @@
-{% doc %}
-  @prompt
-    Jeg har et Shopify-tema bygget på Dawn (dawn/eu-hundred).
-    Jeg skal have lavet en ny sektion.
-    
-    HVAD DEN SKAL GØRE
-    Tre felter side om side, der ligger centreret på siden med samme
-    bredde som resten af indholdet (page-width). Hvert felt er bygget
-    på en kollektion — fx badminton, padel og pickleball.
-    
-    I hvert felt:
-    - Et billede der fylder hele feltet
-    - Navnet på sporten som tekst oven på billedet
-    - Hele feltet er klikbart og fører ind på kollektionen
-    - Samme runde hjørner som de øvrige kort på sitet
-    
-    OPSÆTNING I TEMAEDITOREN
-    Sektionen skal laves med blokke, så jeg selv kan tilføje eller
-    fjerne felter. På hver blok vil jeg kunne vælge:
-    - Kollektion (linket følger automatisk med)
-    - Billede (og hvis jeg lader det stå tomt, bruges kollektionens
-      eget billede)
-    - Tekst på billedet (tomt = kollektionens navn)
-    - Eventuel undertekst
-    
-    På hele sektionen vil jeg kunne indstille:
-    - Antal felter pr. række på computer og på mobil
-    - Billedformat (kvadratisk, højformat, liggende)
-    - Runde hjørner i px
-    - Afstand mellem felterne
-    - Hvor teksten sidder på billedet, dens farve og størrelse
-      (særskilt størrelse til mobil)
-    - Hvor kraftigt et mørkt slør der ligger bag teksten, så den
-      kan læses på lyse billeder
-    - Afstand over og under sektionen
-    
-    KRAV
-    - Den skal virke på mobil
-    - Billederne skal indlæses responsivt (srcset), ikke ét stort
-      billede til alle skærme
-    - Den skal kunne tilføjes fra temaeditoren som en færdig sektion
-      med tre blokke fra start
-{% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% liquid
+  assign heading_col = 'inherit'
+  if block.settings.heading_color.alpha > 0
+    assign heading_col = block.settings.heading_color
+  endif
+
+  assign eyebrow_col = 'inherit'
+  if block.settings.eyebrow_color.alpha > 0
+    assign eyebrow_col = block.settings.eyebrow_color
+  endif
+%}
 
 {% style %}
   .ai-sport-tiles-{{ ai_gen_id }} {
     display: block;
     width: 100%;
-    margin-top: {{ block.settings.spacing_top }}px;
-    margin-bottom: {{ block.settings.spacing_bottom }}px;
+    padding-top: {{ block.settings.spacing_top }}px;
+    padding-bottom: {{ block.settings.spacing_bottom }}px;
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}--full {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__header {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto {{ block.settings.heading_space }}px;
+    text-align: {{ block.settings.heading_alignment }};
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__eyebrow {
+    display: block;
+    margin: 0 0 14px;
+    color: {{ eyebrow_col }};
+    font-size: {{ block.settings.eyebrow_size }}px;
+    letter-spacing: {{ block.settings.eyebrow_spacing }}em;
+    line-height: 1.4;
+    font-weight: 500;
+    {% if block.settings.eyebrow_uppercase %}text-transform: uppercase;{% endif %}
+  }
+
+  .ai-sport-tiles-{{ ai_gen_id }}__heading {
+    display: block;
+    margin: 0;
+    color: {{ heading_col }};
+    font-size: {{ block.settings.heading_size_mobile }}px;
+    line-height: 1.05;
+    letter-spacing: {{ block.settings.heading_spacing }}px;
+    font-weight: {{ block.settings.heading_weight }};
+    {% if block.settings.heading_uppercase %}text-transform: uppercase;{% endif %}
   }
 
   .ai-sport-tiles-{{ ai_gen_id }}__grid {
@@ -113,29 +118,56 @@
 
   .ai-sport-tiles-{{ ai_gen_id }}__content {
     max-width: 100%;
-    padding: 10px 14px;
+    padding: {% if block.settings.text_background_opacity > 0 %}10px 14px{% else %}0{% endif %};
     background: rgba(0, 0, 0, {{ block.settings.text_background_opacity | divided_by: 100.0 }});
     border-radius: 6px;
   }
 
   .ai-sport-tiles-{{ ai_gen_id }}__title {
+    display: block;
     margin: 0;
     font-size: {{ block.settings.title_size }}px;
     line-height: 1.15;
     color: inherit;
+    font-weight: {{ block.settings.title_weight }};
+    {% if block.settings.title_uppercase %}text-transform: uppercase;{% endif %}
   }
 
   .ai-sport-tiles-{{ ai_gen_id }}__subtitle {
+    display: block;
     margin: 6px 0 0;
     font-size: {{ block.settings.subtitle_size }}px;
     line-height: 1.3;
     color: inherit;
   }
 
+  @media screen and (min-width: 750px) {
+    .ai-sport-tiles-{{ ai_gen_id }}__heading {
+      font-size: {{ block.settings.heading_size }}px;
+    }
+  }
+
   @media screen and (max-width: 749px) {
     .ai-sport-tiles-{{ ai_gen_id }}__grid {
-      grid-template-columns: repeat({{ block.settings.columns_mobile }}, minmax(0, 1fr));
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
       gap: {{ block.settings.gap_mobile }}px;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .ai-sport-tiles-{{ ai_gen_id }}__grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ai-sport-tiles-{{ ai_gen_id }}__tile {
+      flex: 0 0 {{ block.settings.card_width_mobile }}%;
+      scroll-snap-align: start;
     }
 
     .ai-sport-tiles-{{ ai_gen_id }}__overlay {
@@ -148,7 +180,21 @@
   }
 {% endstyle %}
 
-<div class="ai-sport-tiles-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+<div
+  class="ai-sport-tiles-{{ ai_gen_id }} color-{{ block.settings.color_scheme.id }} gradient{% if block.settings.full_width_background %} ai-sport-tiles-{{ ai_gen_id }}--full{% endif %}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.eyebrow != blank or block.settings.heading != blank %}
+    <div class="ai-sport-tiles-{{ ai_gen_id }}__header">
+      {% if block.settings.eyebrow != blank %}
+        <span class="ai-sport-tiles-{{ ai_gen_id }}__eyebrow">{{ block.settings.eyebrow }}</span>
+      {% endif %}
+      {% if block.settings.heading != blank %}
+        <span class="ai-sport-tiles-{{ ai_gen_id }}__heading">{{ block.settings.heading }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+
   <div class="ai-sport-tiles-{{ ai_gen_id }}__grid">
     {% for i in (1..3) %}
       {% liquid
@@ -172,8 +218,8 @@
           {% if image != blank %}
             <img
               class="ai-sport-tiles-{{ ai_gen_id }}__image"
-              srcset="{{ image | image_url: width: 360 }} 360w, {{ image | image_url: width: 540 }} 540w, {{ image | image_url: width: 720 }} 720w, {{ image | image_url: width: 1000 }} 1000w"
-              sizes="(max-width: 749px) 50vw, 33vw"
+              srcset="{{ image | image_url: width: 360 }} 360w, {{ image | image_url: width: 540 }} 540w, {{ image | image_url: width: 720 }} 720w, {{ image | image_url: width: 1000 }} 1000w, {{ image | image_url: width: 1400 }} 1400w"
+              sizes="(max-width: 749px) {{ block.settings.card_width_mobile }}vw, 33vw"
               src="{{ image | image_url: width: 720 }}"
               alt="{{ image.alt | default: title | escape }}"
               loading="lazy"
@@ -201,39 +247,59 @@
 {
   "name": "Sport tiles",
   "settings": [
+    {"type":"header","content":"Overskrift"},
+    {"type":"text","id":"eyebrow","label":"Lille tekst øverst","default":"Built for the game you play","info":"Tøm feltet for at fjerne linjen."},
+    {"type":"checkbox","id":"eyebrow_uppercase","label":"Store bogstaver i lille tekst","default":true},
+    {"type":"range","id":"eyebrow_size","label":"Størrelse på lille tekst","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"eyebrow_spacing","label":"Bogstavafstand i lille tekst","min":0,"max":0.4,"step":0.1,"unit":"em","default":0.2},
+    {"type":"color","id":"eyebrow_color","label":"Farve på lille tekst","default":"rgba(0,0,0,0)","info":"Lad den være gennemsigtig for at følge farveskemaet."},
+    {"type":"text","id":"heading","label":"Overskrift","default":"Shop by sport"},
+    {"type":"checkbox","id":"heading_uppercase","label":"Store bogstaver i overskrift","default":true},
+    {"type":"range","id":"heading_size","label":"Overskriftstørrelse (computer)","min":24,"max":80,"step":2,"unit":"px","default":54},
+    {"type":"range","id":"heading_size_mobile","label":"Overskriftstørrelse (mobil)","min":20,"max":52,"step":2,"unit":"px","default":32},
+    {"type":"select","id":"heading_weight","label":"Overskriftens tykkelse","options":[{"value":"400","label":"Normal"},{"value":"600","label":"Halvfed"},{"value":"700","label":"Fed"},{"value":"800","label":"Ekstra fed"}],"default":"800"},
+    {"type":"range","id":"heading_spacing","label":"Bogstavafstand i overskrift","min":-3,"max":4,"step":1,"unit":"px","default":-1},
+    {"type":"color","id":"heading_color","label":"Overskriftfarve","default":"rgba(0,0,0,0)","info":"Lad den være gennemsigtig for at følge farveskemaet."},
+    {"type":"select","id":"heading_alignment","label":"Overskriftens placering","options":[{"value":"left","label":"Venstre"},{"value":"center","label":"Midten"},{"value":"right","label":"Højre"}],"default":"center"},
+    {"type":"range","id":"heading_space","label":"Afstand ned til felterne","min":8,"max":80,"step":4,"unit":"px","default":40},
+    {"type":"header","content":"Baggrund"},
+    {"type":"color_scheme","id":"color_scheme","label":"Farveskema","default":"scheme-1","info":"Vælg det sorte skema for sort baggrund. Skemaerne redigeres under Temaindstillinger → Farver."},
+    {"type":"checkbox","id":"full_width_background","label":"Baggrund i fuld skærmbredde","default":false,"info":"Slå til hvis baggrundsfarven skal gå helt ud til kanten af skærmen."},
     {"type":"header","content":"Layout"},
-    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
-    {"type":"select","id":"columns_desktop","label":"Columns on desktop","options":[{"value":"2","label":"2"},{"value":"3","label":"3"}],"default":"3"},
-    {"type":"select","id":"columns_mobile","label":"Columns on mobile","options":[{"value":"1","label":"1"},{"value":"2","label":"2"}],"default":"1"},
-    {"type":"select","id":"aspect_ratio","label":"Image format","options":[{"value":"1 / 1","label":"Square"},{"value":"4 / 5","label":"Portrait"},{"value":"16 / 10","label":"Landscape"}],"default":"1 / 1"},
-    {"type":"range","id":"gap","label":"Desktop gap","min":0,"max":40,"step":4,"unit":"px","default":8},
-    {"type":"range","id":"gap_mobile","label":"Mobile gap","min":0,"max":32,"step":4,"unit":"px","default":8},
-    {"type":"range","id":"corner_radius","label":"Corner radius","min":0,"max":40,"step":2,"unit":"px","default":0},
-    {"type":"range","id":"spacing_top","label":"Space above","min":0,"max":120,"step":4,"unit":"px","default":36},
-    {"type":"range","id":"spacing_bottom","label":"Space below","min":0,"max":120,"step":4,"unit":"px","default":36},
-    {"type":"header","content":"Text"},
-    {"type":"select","id":"text_position","label":"Text position","options":[{"value":"flex-start","label":"Top"},{"value":"center","label":"Center"},{"value":"flex-end","label":"Bottom"}],"default":"flex-end"},
-    {"type":"color","id":"text_color","label":"Text","default":"#FFFFFF"},
-    {"type":"range","id":"title_size","label":"Title size","min":14,"max":48,"step":2,"unit":"px","default":28},
-    {"type":"range","id":"title_size_mobile","label":"Mobile title size","min":12,"max":36,"step":2,"unit":"px","default":20},
-    {"type":"range","id":"subtitle_size","label":"Subtitle size","min":10,"max":24,"step":2,"unit":"px","default":14},
-    {"type":"range","id":"overlay_opacity","label":"Overlay strength","min":0,"max":100,"step":5,"unit":"%","default":55},
-    {"type":"range","id":"text_background_opacity","label":"Text background","min":0,"max":100,"step":5,"unit":"%","default":25},
-    {"type":"header","content":"Tile 1"},
-    {"type":"collection","id":"collection_1","label":"Collection"},
-    {"type":"image_picker","id":"image_1","label":"Image"},
-    {"type":"text","id":"title_1","label":"Title"},
-    {"type":"text","id":"subtitle_1","label":"Subtitle"},
-    {"type":"header","content":"Tile 2"},
-    {"type":"collection","id":"collection_2","label":"Collection"},
-    {"type":"image_picker","id":"image_2","label":"Image"},
-    {"type":"text","id":"title_2","label":"Title"},
-    {"type":"text","id":"subtitle_2","label":"Subtitle"},
-    {"type":"header","content":"Tile 3"},
-    {"type":"collection","id":"collection_3","label":"Collection"},
-    {"type":"image_picker","id":"image_3","label":"Image"},
-    {"type":"text","id":"title_3","label":"Title"},
-    {"type":"text","id":"subtitle_3","label":"Subtitle"}
+    {"type":"range","id":"desktop_width_percent","label":"Bredde på computer","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"select","id":"columns_desktop","label":"Antal pr. række (computer)","options":[{"value":"2","label":"2"},{"value":"3","label":"3"}],"default":"3"},
+    {"type":"range","id":"card_width_mobile","label":"Kortbredde på mobil","min":55,"max":100,"step":5,"unit":"%","default":80,"info":"På mobil ligger felterne på en vandret linje man swiper igennem. Under 100% ses kanten af det næste kort."},
+    {"type":"select","id":"aspect_ratio","label":"Billedformat","options":[{"value":"1 / 1","label":"Kvadratisk"},{"value":"4 / 5","label":"Højformat"},{"value":"16 / 10","label":"Liggende"}],"default":"1 / 1"},
+    {"type":"range","id":"gap","label":"Afstand mellem felter (computer)","min":0,"max":40,"step":4,"unit":"px","default":8},
+    {"type":"range","id":"gap_mobile","label":"Afstand mellem felter (mobil)","min":0,"max":32,"step":4,"unit":"px","default":8},
+    {"type":"range","id":"corner_radius","label":"Runde hjørner","min":0,"max":40,"step":2,"unit":"px","default":0},
+    {"type":"range","id":"spacing_top","label":"Afstand over","min":0,"max":120,"step":4,"unit":"px","default":36},
+    {"type":"range","id":"spacing_bottom","label":"Afstand under","min":0,"max":120,"step":4,"unit":"px","default":36},
+    {"type":"header","content":"Tekst på billedet"},
+    {"type":"select","id":"text_position","label":"Tekstens placering","options":[{"value":"flex-start","label":"Øverst"},{"value":"center","label":"Midten"},{"value":"flex-end","label":"Nederst"}],"default":"flex-end"},
+    {"type":"color","id":"text_color","label":"Tekstfarve","default":"#FFFFFF"},
+    {"type":"checkbox","id":"title_uppercase","label":"Store bogstaver i sportens navn","default":true},
+    {"type":"select","id":"title_weight","label":"Tykkelse på sportens navn","options":[{"value":"400","label":"Normal"},{"value":"600","label":"Halvfed"},{"value":"700","label":"Fed"},{"value":"800","label":"Ekstra fed"}],"default":"800"},
+    {"type":"range","id":"title_size","label":"Tekststørrelse (computer)","min":14,"max":48,"step":2,"unit":"px","default":28},
+    {"type":"range","id":"title_size_mobile","label":"Tekststørrelse (mobil)","min":12,"max":36,"step":2,"unit":"px","default":22},
+    {"type":"range","id":"subtitle_size","label":"Størrelse på undertekst","min":10,"max":24,"step":2,"unit":"px","default":14},
+    {"type":"range","id":"overlay_opacity","label":"Mørkt slør bag teksten","min":0,"max":100,"step":5,"unit":"%","default":55},
+    {"type":"range","id":"text_background_opacity","label":"Kasse bag teksten","min":0,"max":100,"step":5,"unit":"%","default":0,"info":"0% fjerner kassen helt."},
+    {"type":"header","content":"Felt 1"},
+    {"type":"collection","id":"collection_1","label":"Kollektion"},
+    {"type":"image_picker","id":"image_1","label":"Billede"},
+    {"type":"text","id":"title_1","label":"Tekst"},
+    {"type":"text","id":"subtitle_1","label":"Undertekst"},
+    {"type":"header","content":"Felt 2"},
+    {"type":"collection","id":"collection_2","label":"Kollektion"},
+    {"type":"image_picker","id":"image_2","label":"Billede"},
+    {"type":"text","id":"title_2","label":"Tekst"},
+    {"type":"text","id":"subtitle_2","label":"Undertekst"},
+    {"type":"header","content":"Felt 3"},
+    {"type":"collection","id":"collection_3","label":"Kollektion"},
+    {"type":"image_picker","id":"image_3","label":"Billede"},
+    {"type":"text","id":"title_3","label":"Tekst"},
+    {"type":"text","id":"subtitle_3","label":"Undertekst"}
   ],
   "presets":[{"name":"Sport tiles"}],
   "tag":null,
