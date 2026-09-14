@@ -1,6 +1,303 @@
+{% doc %}
+  @prompt
+    {%- liquid
+      assign name_col = 'inherit'
+      if section.settings.name_color.alpha > 0
+        assign name_col = section.settings.name_color
+      endif
+    
+      assign bio_col = 'inherit'
+      if section.settings.bio_color.alpha > 0
+        assign bio_col = section.settings.bio_color
+      endif
+    
+      assign heading_col = 'inherit'
+      if section.settings.heading_color.alpha > 0
+        assign heading_col = section.settings.heading_color
+      endif
+    -%}
+    
+    <style>
+      #shopify-section-{{ section.id }} .ath {
+        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__inner {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: {{ section.settings.max_width }}px;
+        margin: 0 auto;
+        padding-left: {{ section.settings.side_padding }}px;
+        padding-right: {{ section.settings.side_padding }}px;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__header {
+        text-align: {{ section.settings.heading_alignment }};
+        margin-bottom: {{ section.settings.heading_space }}px;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__eyebrow {
+        display: block;
+        margin: 0 0 14px;
+        color: {{ heading_col }};
+        opacity: 0.6;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__heading {
+        margin: 0;
+        color: {{ heading_col }};
+        font-size: {{ section.settings.heading_size_mobile }}px;
+        line-height: 1.05;
+        font-weight: {{ section.settings.heading_weight }};
+        {% if section.settings.heading_uppercase %}text-transform: uppercase;{% endif %}
+      }
+    
+      #shopify-section-{{ section.id }} .ath__intro {
+        max-width: 62ch;
+        margin: 20px auto 0;
+        color: {{ bio_col }};
+        font-size: {{ section.settings.bio_size | plus: 2 }}px;
+        line-height: 1.6;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__intro > * {
+        margin: 0 0 0.8em;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__grid {
+        display: grid;
+        grid-template-columns: repeat({{ section.settings.columns_mobile }}, minmax(0, 1fr));
+        gap: {{ section.settings.gap | divided_by: 2 }}px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    
+      @media screen and (min-width: 750px) {
+        #shopify-section-{{ section.id }} .ath {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    
+        #shopify-section-{{ section.id }} .ath__heading {
+          font-size: {{ section.settings.heading_size }}px;
+        }
+    
+        #shopify-section-{{ section.id }} .ath__grid {
+          grid-template-columns: repeat({{ section.settings.columns_desktop }}, minmax(0, 1fr));
+          gap: {{ section.settings.gap }}px;
+        }
+      }
+    
+      #shopify-section-{{ section.id }} .ath__card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        border-radius: {{ section.settings.card_radius }}px;
+        background: {{ section.settings.card_background }};
+        border: {{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }};
+        text-decoration: none;
+        color: inherit;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__media {
+        position: relative;
+        width: 100%;
+        aspect-ratio: {{ section.settings.image_ratio }};
+        overflow: hidden;
+        background: rgba(127, 127, 127, 0.15);
+        border-radius: {{ section.settings.image_radius }}px;
+        margin: {{ section.settings.card_padding }}px {{ section.settings.card_padding }}px 0;
+        width: calc(100% - {{ section.settings.card_padding | times: 2 }}px);
+      }
+    
+      #shopify-section-{{ section.id }} .ath__media img,
+      #shopify-section-{{ section.id }} .ath__media svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__body {
+        padding: {{ section.settings.card_padding }}px;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__name {
+        margin: 0;
+        color: {{ name_col }};
+        font-size: {{ section.settings.name_size }}px;
+        line-height: 1.2;
+        font-weight: {{ section.settings.name_weight }};
+        {% if section.settings.name_uppercase %}text-transform: uppercase;{% endif %}
+      }
+    
+      #shopify-section-{{ section.id }} .ath__meta {
+        margin: 6px 0 0;
+        color: {{ name_col }};
+        opacity: 0.6;
+        font-size: {{ section.settings.bio_size | minus: 1 }}px;
+        letter-spacing: 0.05em;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__bio {
+        margin: 12px 0 0;
+        color: {{ bio_col }};
+        font-size: {{ section.settings.bio_size }}px;
+        line-height: 1.55;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__bio > * {
+        margin: 0 0 0.7em;
+      }
+    
+      #shopify-section-{{ section.id }} .ath__bio > *:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+    
+    <div class="ath color-{{ section.settings.color_scheme.id }} gradient">
+      <div class="ath__inner">
+        {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.intro != blank -%}
+          <div clas
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-player-card-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: {{ block.settings.text_color }};
+    background: {{ block.settings.card_color }};
+    border: 1px solid {{ block.settings.border_color }};
+    border-radius: {{ block.settings.card_radius }}px;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__media {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #eef2f8;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__media img,
+  .ai-player-card-{{ ai_gen_id }}__media svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__media svg { color: #9aa9bf; }
+
+  .ai-player-card-{{ ai_gen_id }}__content {
+    padding: {{ block.settings.card_padding }}px;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__name {
+    margin: 0;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.name_size }}px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__nationality {
+    margin: 6px 0 18px;
+    color: {{ block.settings.muted_color }};
+    font-size: 13px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__details {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 10px;
+    border-top: 1px solid {{ block.settings.border_color }};
+    font-size: 14px;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__label { color: {{ block.settings.muted_color }}; }
+  .ai-player-card-{{ ai_gen_id }}__value { color: {{ block.settings.text_color }}; font-weight: 600; text-align: right; }
+
+  .ai-player-card-{{ ai_gen_id }}__link {
+    display: inline-flex;
+    margin-top: 18px;
+    color: {{ block.settings.link_color }};
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .ai-player-card-{{ ai_gen_id }}__link:focus-visible {
+    outline: 2px solid {{ block.settings.link_color }};
+    outline-offset: 3px;
+  }
+{% endstyle %}
+
+<article class="ai-player-card-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-player-card-{{ ai_gen_id }}__media">
+    {% if block.settings.player_image != blank %}
+      <img src="{{ block.settings.player_image | image_url: width: 900 }}" alt="{{ block.settings.player_image.alt | default: block.settings.player_name | escape }}" loading="lazy" width="900" height="1125">
+    {% else %}
+      {{ 'image' | placeholder_svg_tag }}
+    {% endif %}
+  </div>
+  <div class="ai-player-card-{{ ai_gen_id }}__content">
+    {% if block.settings.player_name != blank %}<h2 class="ai-player-card-{{ ai_gen_id }}__name">{{ block.settings.player_name | escape }}</h2>{% endif %}
+    {% if block.settings.nationality != blank %}<p class="ai-player-card-{{ ai_gen_id }}__nationality">{{ block.settings.nationality | escape }}</p>{% endif %}
+    <dl class="ai-player-card-{{ ai_gen_id }}__details">
+      {% if block.settings.career_high != blank %}<div class="ai-player-card-{{ ai_gen_id }}__detail"><dt class="ai-player-card-{{ ai_gen_id }}__label">Career high</dt><dd class="ai-player-card-{{ ai_gen_id }}__value">{{ block.settings.career_high | escape }}</dd></div>{% endif %}
+      {% if block.settings.racket_name != blank %}<div class="ai-player-card-{{ ai_gen_id }}__detail"><dt class="ai-player-card-{{ ai_gen_id }}__label">Racket</dt><dd class="ai-player-card-{{ ai_gen_id }}__value">{{ block.settings.racket_name | escape }}</dd></div>{% endif %}
+    </dl>
+    {% if block.settings.racket_link != blank and block.settings.racket_name != blank %}<a class="ai-player-card-{{ ai_gen_id }}__link" href="{{ block.settings.racket_link }}">Shop racket</a>{% endif %}
+  </div>
+</article>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Sponsored player",
+  "settings": [
+    {"type":"header","content":"Player"},
+    {"type":"image_picker","id":"player_image","label":"Player image"},
+    {"type":"text","id":"player_name","label":"Name","default":"Player name"},
+    {"type":"text","id":"nationality","label":"Nationality","default":"Denmark"},
+    {"type":"text","id":"career_high","label":"Career high","default":"World ranking"},
+    {"type":"text","id":"racket_name","label":"Racket","default":"Racket model"},
+    {"type":"url","id":"racket_link","label":"Racket link"},
+    {"type":"header","content":"Style"},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"range","id":"card_padding","label":"Card padding","min":12,"max":40,"step":4,"unit":"px","default":24},
+    {"type":"range","id":"card_radius","label":"Corner radius","min":0,"max":24,"step":2,"unit":"px","default":8},
+    {"type":"range","id":"name_size","label":"Name size","min":16,"max":36,"step":2,"unit":"px","default":24},
+    {"type":"color","id":"card_color","label":"Card","default":"#FFFFFF"},
+    {"type":"color","id":"text_color","label":"Text","default":"#121212"},
+    {"type":"color","id":"heading_color","label":"Heading","default":"#121212"},
+    {"type":"color","id":"muted_color","label":"Muted text","default":"#4A5568"},
+    {"type":"color","id":"border_color","label":"Border","default":"#D9E1EC"},
+    {"type":"color","id":"link_color","label":"Link","default":"#1D4ED8"}
+  ],
+  "presets": [{"name":"Sponsored player"}],
+  "tag": null,
+  "class": "sponsored-player-block"
+}
 {% endschema %}
