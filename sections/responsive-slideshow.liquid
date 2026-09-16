@@ -40,15 +40,33 @@
     padding: 0;
   }
 
+  /* Fast format: slidet bestemmer højden, ikke filen */
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media {
     position: relative;
     width: 100%;
+    aspect-ratio: {{ section.settings.aspect_ratio_desktop }};
+    overflow: hidden;
+    background: {{ section.settings.media_background }};
+  }
+
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media--desktop,
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media--mobile,
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media picture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__image,
-  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__video video {
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media img,
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media video,
+  #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media .placeholder-svg {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: {{ section.settings.media_fit }};
     display: block;
   }
 
@@ -57,6 +75,10 @@
   }
 
   @media screen and (max-width: 749px) {
+    #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media {
+      aspect-ratio: {{ section.settings.aspect_ratio_mobile }};
+    }
+
     #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media--mobile {
       display: block;
     }
@@ -211,6 +233,20 @@
       color: {{ block.settings.text_color }};
     }
 
+    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media img,
+    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media video {
+      object-position: {{ block.settings.focus }};
+      transform: scale({{ block.settings.zoom | divided_by: 100.0 }});
+    }
+
+    @media screen and (max-width: 749px) {
+      #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media img,
+      #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media video {
+        object-position: {{ block.settings.focus_mobile }};
+        transform: scale({{ block.settings.zoom_mobile | divided_by: 100.0 }});
+      }
+    }
+
     #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__button {
       background: {{ block.settings.button_background }};
       color: {{ block.settings.button_text_color }};
@@ -224,6 +260,7 @@
         inset: 0;
         background: rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }});
         pointer-events: none;
+        z-index: 1;
       }
     {%- endif -%}
   {%- endfor -%}
@@ -403,6 +440,52 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    { "type": "header", "content": "Format" },
+    {
+      "type": "select",
+      "id": "aspect_ratio_desktop",
+      "label": "Format på computer",
+      "options": [
+        { "value": "21 / 9", "label": "Meget bredt (21:9)" },
+        { "value": "2 / 1", "label": "Bredt (2:1)" },
+        { "value": "16 / 9", "label": "Bredformat (16:9)" },
+        { "value": "3 / 2", "label": "Klassisk (3:2)" },
+        { "value": "4 / 3", "label": "Liggende (4:3)" },
+        { "value": "1 / 1", "label": "Kvadratisk (1:1)" }
+      ],
+      "default": "16 / 9"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio_mobile",
+      "label": "Format på mobil",
+      "options": [
+        { "value": "16 / 9", "label": "Bredformat (16:9)" },
+        { "value": "4 / 3", "label": "Liggende (4:3)" },
+        { "value": "1 / 1", "label": "Kvadratisk (1:1)" },
+        { "value": "4 / 5", "label": "Højformat (4:5)" },
+        { "value": "3 / 4", "label": "Højformat (3:4)" },
+        { "value": "9 / 16", "label": "Fuld højde (9:16)" }
+      ],
+      "default": "4 / 5"
+    },
+    {
+      "type": "select",
+      "id": "media_fit",
+      "label": "Sådan tilpasses billede og video",
+      "options": [
+        { "value": "cover", "label": "Fyld rammen ud (beskærer kanterne)" },
+        { "value": "contain", "label": "Vis det hele (kan give kanter)" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "color",
+      "id": "media_background",
+      "label": "Baggrund bag mediet",
+      "default": "#000000",
+      "info": "Ses kun hvis du vælger 'Vis det hele'."
+    },
     { "type": "header", "content": "Automatisk skift" },
     {
       "type": "checkbox",
@@ -485,6 +568,54 @@
           "id": "mobile_video",
           "label": "Video til mobil",
           "info": "Valgfri. Bruges kun på skærme under 750px."
+        },
+        { "type": "header", "content": "Beskæring" },
+        {
+          "type": "select",
+          "id": "focus",
+          "label": "Fokuspunkt på computer",
+          "info": "Bestemmer hvilken del af billedet der bevares når det beskæres.",
+          "options": [
+            { "value": "center center", "label": "Midten" },
+            { "value": "center top", "label": "Toppen" },
+            { "value": "center bottom", "label": "Bunden" },
+            { "value": "left center", "label": "Venstre" },
+            { "value": "right center", "label": "Højre" }
+          ],
+          "default": "center center"
+        },
+        {
+          "type": "select",
+          "id": "focus_mobile",
+          "label": "Fokuspunkt på mobil",
+          "options": [
+            { "value": "center center", "label": "Midten" },
+            { "value": "center top", "label": "Toppen" },
+            { "value": "center bottom", "label": "Bunden" },
+            { "value": "left center", "label": "Venstre" },
+            { "value": "right center", "label": "Højre" }
+          ],
+          "default": "center center"
+        },
+        {
+          "type": "range",
+          "id": "zoom",
+          "min": 100,
+          "max": 160,
+          "step": 5,
+          "unit": "%",
+          "label": "Zoom på computer",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "zoom_mobile",
+          "min": 100,
+          "max": 200,
+          "step": 5,
+          "unit": "%",
+          "label": "Zoom på mobil",
+          "default": 100
         },
         { "type": "header", "content": "Tekst" },
         {
