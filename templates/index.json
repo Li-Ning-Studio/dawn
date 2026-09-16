@@ -224,6 +224,11 @@
     },
     "featured_collection_VRmapC": {
       "type": "featured-collection",
+      "custom_css": [
+        ".card__inner,.card__media {border-radius: 12px; overflow: hidden;}",
+        ".card__heading a,.price__regular,.price-item {color: #fff;}",
+        ".card__content .caption {color: #8a8a8a;}"
+      ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "badminton-clothing",
