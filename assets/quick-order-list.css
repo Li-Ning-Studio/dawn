@@ -655,3 +655,32 @@ quick-order-list .tax-note {
   display: block;
   width: 100%;
 }
+@media screen and (min-width: 990px) {
+  .variant-item__info {
+    width: auto;
+    min-width: 18rem;
+  }
+
+  .variant-item__details > * {
+    max-width: none;
+  }
+
+  .variant-item__name {
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+  }
+
+  .quick-order-list__table th + th {
+    padding-left: 2rem;
+  }
+
+  .quick-order-list__table .quick-order-list__table-heading--wide + .quick-order-list__table-heading--wide {
+    padding-left: 2rem;
+  }
+
+  .quick-order-list__table thead th:first-child,
+  .quick-order-list-total__column {
+    width: auto;
+  }
+}
