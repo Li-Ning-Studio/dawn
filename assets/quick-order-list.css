@@ -868,68 +868,60 @@ quick-order-list .tax-note {
     white-space: nowrap;
     width: calc(11rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   }
-}@media screen and (min-width: 990px) {
+@media screen and (min-width: 990px) {
+  quick-order-list .tax-note {
+    display: none;
+  }
+
   .quick-order-list-total__info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
+    display: table;
+    width: 100%;
     min-height: auto;
     padding-top: 1rem;
+    table-layout: fixed;
   }
 
   .quick-order-list-total__column {
-    width: auto;
-    flex: 0 0 auto;
+    display: table-cell;
+    width: 24rem;
+    vertical-align: top;
+    text-align: left;
   }
 
   .quick-order-list-total__price {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 4rem;
-    width: auto;
-    flex-wrap: nowrap;
-    text-align: left;
+    display: contents;
   }
 
   .quick-order-list__total-items {
+    display: table-cell;
     width: auto;
-    margin-left: 0;
+    margin: 0;
+    padding-left: 0;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.2rem;
-  }
-
-  .quick-order-list__total-items p,
-  .totals__subtotal {
-    margin: 0;
-    font-size: 1.3rem;
-    white-space: nowrap;
     text-align: left;
+    vertical-align: top;
   }
 
   .totals__product-total {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.2rem;
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
   }
 
-  .totals__subtotal-value,
-  .quick-order-list__total-items span {
+  .quick-order-list__total-items span,
+  .totals__subtotal-value {
+    display: block;
     font-size: 1.8rem;
     margin: 0;
   }
 
-  quick-order-list .tax-note {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 22rem;
-    margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.4;
+  .quick-order-list__total-items p,
+  .totals__subtotal {
+    display: block;
+    margin: 0.2rem 0 0;
+    font-size: 1.3rem;
     text-align: left;
-    color: rgba(var(--color-foreground), 0.6);
+    white-space: nowrap;
   }
 }
