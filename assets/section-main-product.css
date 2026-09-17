@@ -1834,3 +1834,94 @@ product-info {
     gap: 0.6rem;
   }
 }
+@media screen and (min-width: 990px) {
+  .product--thumbnail .product__media-wrapper media-gallery {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+
+  .product--thumbnail .product__media-wrapper media-gallery > slider-component:first-of-type {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+  }
+
+  .product--thumbnail .thumbnail-slider {
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+    max-height: 640px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .product--thumbnail .thumbnail-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product--thumbnail .thumbnail-slider .slider-button {
+    display: none;
+  }
+
+  .product--thumbnail .thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-template-columns: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product--thumbnail .thumbnail-list__item {
+    width: 90px;
+    flex: 0 0 auto;
+  }
+
+  .product--thumbnail .thumbnail {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .product--thumbnail .product__media-list {
+    display: block;
+  }
+
+  .product--thumbnail .product__media-item {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product--thumbnail .product__media-item.is-active {
+    display: block;
+  }
+
+  .product--thumbnail .product__media-item .product__media {
+    max-height: 640px;
+  }
+
+  .product--thumbnail .product__media-item img {
+    max-height: 640px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .product--thumbnail .product__media-slider-buttons {
+    display: flex !important;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .product--thumbnail .product__media-slider-buttons .slider-button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(var(--color-foreground), 0.15);
+    border-radius: 50%;
+    background: rgb(var(--color-background));
+  }
+}
