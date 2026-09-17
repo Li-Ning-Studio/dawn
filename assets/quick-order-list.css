@@ -815,4 +815,13 @@ quick-order-list .tax-note {
     display: block;
     text-align: left;
   }
+}@media screen and (min-width: 990px) {
+  .quick-order-list__table th:first-child,
+  .variant-item__info {
+    min-width: 30rem;
+  }
+
+  .variant-item__name {
+    padding-right: 3rem;
+  }
 }
