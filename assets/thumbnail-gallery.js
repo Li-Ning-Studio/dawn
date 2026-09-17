@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const viewer = gallery.querySelector('slider-component');
     if (slides.length < 2 || !viewer) return;
 
-    slides.forEach(function (slide) {
+    slides.forEach(function (slide, n) {
+      if (n > 2) return;
       slide.querySelectorAll('img').forEach(function (img) {
         img.setAttribute('loading', 'eager');
         img.style.opacity = '1';
