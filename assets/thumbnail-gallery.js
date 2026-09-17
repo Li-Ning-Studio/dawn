@@ -60,8 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
     nav.appendChild(makeBtn(180, function () { show(index - 1); }));
     nav.appendChild(makeBtn(0, function () { show(index + 1); }));
 
-    viewer.style.position = 'relative';
-    viewer.appendChild(nav);
+     const host = viewer.parentElement || viewer;
+    host.style.position = 'relative';
+    host.appendChild(nav);
 
     show(index);
   });
