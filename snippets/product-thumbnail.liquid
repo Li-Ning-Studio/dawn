@@ -97,9 +97,7 @@
           class="{{ image_class }}"
           loading="{{ lazy }}"
           fetchpriority="{{ fetch_priority }}"
-          style="opacity: 0; transform: scale(1.04); transition: opacity 0.2s ease-out, transform 0.2s ease-out;"
-          onload="this.style.opacity='1'; this.style.transform='scale(1)'; this.parentElement.classList.remove('product-thumbnail-skeleton');"
-          alt="{{ media.alt | escape }}"
+          onload="this.parentElement.classList.remove('product-thumbnail-skeleton');"          alt="{{ media.alt | escape }}"
           width="{{ media.preview_image.width }}"
           height="{{ media.preview_image.height }}"
         >
