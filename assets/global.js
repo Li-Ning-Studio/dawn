@@ -1231,7 +1231,7 @@ class AccountIcon extends HTMLElement {
 customElements.define('account-icon', AccountIcon);
 
 class BulkAdd extends HTMLElement {
-  static ASYNC_REQUEST_DELAY = 250;
+  static ASYNC_REQUEST_DELAY = 100;
 
   constructor() {
     super();
@@ -1242,6 +1242,11 @@ class BulkAdd extends HTMLElement {
 
   startQueue(id, quantity) {
     this.queue.push({ id, quantity });
+
+    if (!this.requestStarted) {
+      this.sendRequest(this.queue);
+      return;
+    }
 
     const interval = setInterval(() => {
       if (this.queue.length > 0) {
