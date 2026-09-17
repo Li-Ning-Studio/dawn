@@ -221,7 +221,11 @@
             {% # theme-check-disable %}
             {% assign cart_qty = cart | item_count_for_variant: variant.id %}
             {% # theme-check-enable %}
-            {% render 'quantity-input', variant: variant, min: 0 %}
+            {%- if variant.inventory_management == 'shopify' and variant.inventory_policy != 'continue' -%}
+              {% render 'quantity-input', variant: variant, min: 0, max: variant.inventory_quantity %}
+            {%- else -%}
+              {% render 'quantity-input', variant: variant, min: 0 %}
+            {%- endif -%}
             {%- if variant.inventory_management == 'shopify' and variant.inventory_quantity > 0 -%}
               <span class="variant-item__stock">{{ variant.inventory_quantity }} in stock</span>
             {%- endif -%}
