@@ -22,14 +22,10 @@
     assign single_media_visible = true
   endif
 
-  # Check if variant has specific media through metafields
   if selected_variant.metafields.custom_but_hidden.media.value != blank
     assign variant_media_references = selected_variant.metafields.custom_but_hidden.media.value
   else
-    # Fallback behavior - display media that matches the selected variant's first option (usually color)
-    # Iterate through variants to find matching color variant and its media
     assign selected_option_1 = selected_variant.options.first | downcase
-    # this assumes the first option is color
     for variant in product.variants
       assign current_option_1 = variant.options.first | downcase
 
@@ -40,25 +36,19 @@
     endfor
   endif
 
-  # If no variant-specific media was found, use the selected variant's featured media
   if variant_media_references == blank and selected_variant.featured_media != blank
     assign media_references = product.media | where: 'id', selected_variant.featured_media.id
   elsif variant_media_references != blank
     assign media_references = variant_media_references
   else
-    # Last resort - just use all product media
     assign media_references = product.media
   endif
 
-  # Count media items for display purposes
   assign media_count = media_references.size
 
-  # Make sure we have a valid count, even if it's just one media item
   if media_count < 1 and selected_variant.featured_media != blank
     assign media_count = 1
   endif
-
-  # We're removing the hide_mobile_slider logic to ensure dots always show on mobile
 
   if section.settings.media_size == 'large'
     assign media_width = 0.65
@@ -67,7 +57,6 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
-  # Key highlights start
 
   assign key_highlights_metafield = product.metafields.custom_but_hidden.key_highlights
   if key_highlights_metafield and key_highlights_metafield.value != blank
@@ -91,8 +80,15 @@
   if highlight_image != blank and key_highlights_count > 0
     assign should_render_highlights_slide = true
   endif
+
+  assign show_thumbnails = false
+  if section.settings.gallery_layout == 'thumbnail' or section.settings.gallery_layout == 'thumbnail_slider'
+    assign show_thumbnails = true
+  endif
+  if section.settings.mobile_thumbnails == 'show'
+    assign show_thumbnails = true
+  endif
 -%}
-{% comment %} Key highlights end {% endcomment %}
 
 <media-gallery
   id="MediaGallery-{{ section.id }}"
@@ -142,7 +138,6 @@
         </li>
       {%- endif -%}
 
-      {% comment %} Show media specific to the selected variant {% endcomment %}
       {% for media in media_references %}
         {%- unless media == empty -%}
           {% assign media_object = product.media | where: 'id', media.id | first %}
@@ -178,9 +173,6 @@
         {%- endunless -%}
       {% endfor %}
 
-      {% comment %}  KEy highlights start 2 {% endcomment %}
-
-      {% comment %} Mobile-only slide that repeats the first image with key highlight metafields layered on top {% endcomment %}
       {%- if should_render_highlights_slide -%}
         {%- liquid
           assign media_position = media_position | default: 0 | plus: 1
@@ -236,8 +228,6 @@
           </div>
         </li>
       {%- endif -%}
-
-      {% comment %}  KEy highlights end 2 {% endcomment %}
     </ul>
     <div class="slider-buttons product__media-slider-buttons quick-add-hidden">
       <button
@@ -264,4 +254,114 @@
       </button>
     </div>
   </slider-component>
+
+  {%- if show_thumbnails and single_media_visible != true -%}
+    <slider-component
+      id="GalleryThumbnails-{{ section.id }}"
+      class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout == 'thumbnail_slider' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}"
+    >
+      <button
+        type="button"
+        class="slider-button slider-button--prev{% unless section.settings.gallery_layout == 'thumbnail_slider' %} small-hide{% endunless %}"
+        name="previous"
+        aria-label="{{ 'general.slider.previous_slide' | t }}"
+        aria-controls="Slider-Thumbnails-{{ section.id }}"
+        data-step="3"
+      >
+        <span class="svg-wrapper">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </span>
+      </button>
+      <ul
+        id="Slider-Thumbnails-{{ section.id }}"
+        class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}"
+      >
+        {%- assign thumb_position = 0 -%}
+
+        {%- if selected_variant.featured_media != null -%}
+          {%- assign thumb_position = thumb_position | plus: 1 -%}
+          <li
+            id="Slide-Thumbnails-{{ section.id }}-{{ thumb_position }}"
+            class="thumbnail-list__item slider__slide"
+            data-target="{{ section.id }}-{{ selected_variant.featured_media.id }}"
+            data-media-position="{{ thumb_position }}"
+          >
+            <button
+              class="thumbnail global-media-settings global-media-settings--no-shadow"
+              aria-label="{{ 'products.product.media.load_image' | t: index: thumb_position }}"
+              aria-current="true"
+              aria-controls="GalleryViewer-{{ section.id }}"
+            >
+              {{
+                selected_variant.featured_media.preview_image
+                | image_url: width: 416
+                | image_tag: loading: 'lazy', widths: '54,74,104,162,208,324,416'
+              }}
+            </button>
+          </li>
+        {%- endif -%}
+
+        {% for media in media_references %}
+          {%- unless media == empty -%}
+            {% assign media_object = product.media | where: 'id', media.id | first %}
+            {%- if media_object != null and media_object.id != selected_variant.featured_media.id -%}
+              {%- assign thumb_position = thumb_position | plus: 1 -%}
+              <li
+                id="Slide-Thumbnails-{{ section.id }}-{{ thumb_position }}"
+                class="thumbnail-list__item slider__slide"
+                data-target="{{ section.id }}-{{ media_object.id }}"
+                data-media-position="{{ thumb_position }}"
+              >
+                <button
+                  class="thumbnail global-media-settings global-media-settings--no-shadow"
+                  aria-label="{{ 'products.product.media.load_image' | t: index: thumb_position }}"
+                  aria-controls="GalleryViewer-{{ section.id }}"
+                >
+                  {{
+                    media_object.preview_image
+                    | image_url: width: 416
+                    | image_tag: loading: 'lazy', widths: '54,74,104,162,208,324,416'
+                  }}
+                </button>
+              </li>
+            {%- endif -%}
+          {%- endunless -%}
+        {% endfor %}
+
+        {%- if should_render_highlights_slide -%}
+          {%- assign thumb_position = thumb_position | plus: 1 -%}
+          <li
+            id="Slide-Thumbnails-{{ section.id }}-{{ thumb_position }}"
+            class="thumbnail-list__item slider__slide"
+            data-target="{{ section.id }}-key-highlights"
+            data-media-position="{{ thumb_position }}"
+          >
+            <button
+              class="thumbnail global-media-settings global-media-settings--no-shadow"
+              aria-label="{{ 'products.product.media.load_image' | t: index: thumb_position }}"
+              aria-controls="GalleryViewer-{{ section.id }}"
+            >
+              {{
+                highlight_image.preview_image
+                | image_url: width: 416
+                | image_tag: loading: 'lazy', widths: '54,74,104,162,208,324,416'
+              }}
+            </button>
+          </li>
+        {%- endif -%}
+      </ul>
+      <button
+        type="button"
+        class="slider-button slider-button--next{% unless section.settings.gallery_layout == 'thumbnail_slider' %} small-hide{% endunless %}"
+        name="next"
+        aria-label="{{ 'general.slider.next_slide' | t }}"
+        aria-controls="Slider-Thumbnails-{{ section.id }}"
+        data-step="3"
+      >
+        <span class="svg-wrapper">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </span>
+      </button>
+    </slider-component>
+  {%- endif -%}
 </media-gallery>
