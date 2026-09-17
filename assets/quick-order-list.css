@@ -773,4 +773,26 @@ quick-order-list .tax-note {
   .variant-item__quantity-wrapper {
     justify-content: flex-start;
   }
+}@media screen and (min-width: 990px) {
+  .variant-item__image-container,
+  .variant-item__media {
+    display: none;
+  }
+
+  .variant-item__inner {
+    display: block;
+  }
+
+  .quick-order-list__table th:first-child {
+    padding-left: 0;
+  }
+
+  .variant-item__info {
+    padding-left: 0;
+    min-width: 24rem;
+  }
+
+  .quick-order-list__table td:first-child {
+    padding-left: 0;
+  }
 }
