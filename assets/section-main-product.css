@@ -1886,16 +1886,25 @@ product-info {
 
   .product--thumbnail .product__media-list {
     display: block;
+    position: relative;
   }
 
   .product--thumbnail .product__media-item {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     max-width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
   }
 
   .product--thumbnail .product__media-item.is-active {
-    display: block;
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
   }
 
   .product--thumbnail .product__media-item .product__media {
