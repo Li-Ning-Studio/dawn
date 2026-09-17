@@ -59,89 +59,32 @@
     </div>
 
     {%- assign item_price = item.price | money -%}
-    {%- if item.compare_at_price -%}
-      <dl class="variant-item__discounted-prices">
-        <dt class="visually-hidden">
-          {{ 'products.product.price.regular_price' | t }}
-        </dt>
-        <dd>
-          <s class="variant-item__old-price price price--end">
-            {{ item.compare_at_price | money }}
-          </s>
-        </dd>
-        <dt class="visually-hidden">
-          {{ 'products.product.price.sale_price' | t }}
-        </dt>
-        <dd class="price">
-          {%- if variant.quantity_price_breaks.size > 0 -%}
-            {%- liquid
-              assign volume_pricing_array = variant.quantity_price_breaks | sort: 'quantity' | reverse
-            -%}
-            <price-per-item
-              class="variant-item__price-per-item"
-              id="Price-Per-Item-{{ variant.id }}"
-              data-variant-id="{{ variant.id }}"
-            >
-              <div class="price-per-item">
-                {%- if cart_qty < volume_pricing_array.last.minimum_quantity -%}
-                  {%- assign variant_price = variant.price | money -%}
-                  <span class="price-per-item--current price">
-                    {{- 'sections.quick_order_list.each' | t: money: variant_price -}}
-                  </span>
-                {%- else -%}
-                  {%- for price_break in volume_pricing_array -%}
-                    {%- if cart_qty >= price_break.minimum_quantity -%}
-                      {%- assign price_break_price = price_break.price | money -%}
-                      <span class="price-per-item--current price">
-                        {{- 'sections.quick_order_list.each' | t: money: price_break_price -}}
-                      </span>
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-                {%- endif -%}
-              </div>
-            </price-per-item>
+    {%- if variant.quantity_price_breaks.size > 0 -%}
+      {%- liquid
+        assign volume_pricing_array = variant.quantity_price_breaks | sort: 'quantity' | reverse
+      -%}
+      <price-per-item
+        class="variant-item__price-per-item"
+        id="Price-Per-Item-{{ variant.id }}"
+        data-variant-id="{{ variant.id }}"
+      >
+        <div class="price-per-item">
+          {%- if cart_qty < volume_pricing_array.last.minimum_quantity -%}
+            {%- assign variant_price = variant.price | money -%}
+            <span class="price-per-item--current price">{{- variant_price -}}</span>
           {%- else -%}
-            <span class="price">
-              {{- 'sections.quick_order_list.each' | t: money: item_price -}}
-            </span>
+            {%- for price_break in volume_pricing_array -%}
+              {%- if cart_qty >= price_break.minimum_quantity -%}
+                {%- assign price_break_price = price_break.price | money -%}
+                <span class="price-per-item--current price">{{- price_break_price -}}</span>
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
           {%- endif -%}
-        </dd>
-      </dl>
+        </div>
+      </price-per-item>
     {%- else -%}
-      {%- if variant.quantity_price_breaks.size > 0 -%}
-        {%- liquid
-          assign volume_pricing_array = variant.quantity_price_breaks | sort: 'quantity' | reverse
-        -%}
-        <price-per-item
-          class="variant-item__price-per-item"
-          id="Price-Per-Item-{{ variant.id }}"
-          data-variant-id="{{ variant.id }}"
-        >
-          <div class="price-per-item">
-            {%- if cart_qty < volume_pricing_array.last.minimum_quantity -%}
-              {%- assign variant_price = variant.price | money -%}
-              <span class="price-per-item--current price">
-                {{- 'sections.quick_order_list.each' | t: money: variant_price -}}
-              </span>
-            {%- else -%}
-              {%- for price_break in volume_pricing_array -%}
-                {%- if cart_qty >= price_break.minimum_quantity -%}
-                  {%- assign price_break_price = price_break.price | money -%}
-                  <span class="price-per-item--current price">
-                    {{- 'sections.quick_order_list.each' | t: money: price_break_price -}}
-                  </span>
-                  {%- break -%}
-                {%- endif -%}
-              {%- endfor -%}
-            {%- endif -%}
-          </div>
-        </price-per-item>
-      {%- else -%}
-        <span class="price">
-          {{- 'sections.quick_order_list.each' | t: money: item_price -}}
-        </span>
-      {%- endif -%}
+      <span class="price">{{- item_price -}}</span>
     {%- endif -%}
 
     {%- if item.available and item.unit_price_measurement -%}
@@ -160,7 +103,6 @@
 
   <td class="variant-item__totals right large-up-hide">
     {%- render 'loading-spinner' -%}
-    {% comment %} TODO: enable theme-check once `line_items_for` is accepted as valid filter {% endcomment %}
     {% # theme-check-disable %}
     <span class="price">{{ cart | line_items_for: item | sum: 'original_line_price' | money }}</span>
     {% # theme-check-enable %}
@@ -256,7 +198,7 @@
                     <li>
                       <span>{{ variant.quantity_rule.min }}+</span>
                       {%- assign price = variant.price | money_with_currency -%}
-                      <span>{{ 'sections.quick_order_list.each' | t: money: price }}</span>
+                      <span>{{ price }}</span>
                     </li>
                     {%- for price_break in variant.quantity_price_breaks -%}
                       <li>
@@ -265,7 +207,7 @@
                           <span aria-hidden="true">+</span></span
                         >
                         {%- assign price = price_break.price | money_with_currency -%}
-                        <span> {{ 'sections.quick_order_list.each' | t: money: price }}</span>
+                        <span> {{ price }}</span>
                       </li>
                     {%- endfor -%}
                   </ul>
@@ -276,11 +218,13 @@
           {%- if variant.available == false or quantity_rule_soldout -%}
             <span class="variant-item__sold-out"> {{ 'products.product.sold_out' | t }} </span>
           {%- else -%}
-            {% comment %} TODO: Remove theme check {% endcomment %}
             {% # theme-check-disable %}
             {% assign cart_qty = cart | item_count_for_variant: variant.id %}
             {% # theme-check-enable %}
             {% render 'quantity-input', variant: variant, min: 0 %}
+            {%- if variant.inventory_management == 'shopify' and variant.inventory_quantity > 0 -%}
+              <span class="variant-item__stock">{{ variant.inventory_quantity }} in stock</span>
+            {%- endif -%}
           {%- endif -%}
         </div>
         {% if cart_qty > 0 %}
@@ -329,91 +273,35 @@
       </div>
     </quantity-popover>
   </td>
+
   {%- assign item_price = item.price | money -%}
   <td class="variant-item__price small-hide medium-hide">
-    {%- if item.compare_at_price -%}
-      <dl class="variant-item__discounted-prices">
-        <dt class="visually-hidden">
-          {{ 'products.product.price.regular_price' | t }}
-        </dt>
-        <dd>
-          <s class="variant-item__old-price price price--end">
-            {{ item.compare_at_price | money }}
-          </s>
-        </dd>
-        <dt class="visually-hidden">
-          {{ 'products.product.price.sale_price' | t }}
-        </dt>
-        <dd class="price">
-          {%- if variant.quantity_price_breaks.size > 0 -%}
-            {%- liquid
-              assign volume_pricing_array = variant.quantity_price_breaks | sort: 'quantity' | reverse
-            -%}
-            <price-per-item
-              class="variant-item__price-per-item"
-              id="Price-Per-Item-{{ variant.id }}"
-              data-variant-id="{{ variant.id }}"
-            >
-              <div class="price-per-item">
-                {%- if cart_qty < volume_pricing_array.last.minimum_quantity -%}
-                  {%- assign variant_price = variant.price | money -%}
-                  <span class="price-per-item--current price">
-                    {{- 'sections.quick_order_list.each' | t: money: variant_price -}}
-                  </span>
-                {%- else -%}
-                  {%- for price_break in volume_pricing_array -%}
-                    {%- if cart_qty >= price_break.minimum_quantity -%}
-                      {%- assign price_break_price = price_break.price | money -%}
-                      <span class="price-per-item--current price">
-                        {{- 'sections.quick_order_list.each' | t: money: price_break_price -}}
-                      </span>
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-                {%- endif -%}
-              </div>
-            </price-per-item>
+    {%- if variant.quantity_price_breaks.size > 0 -%}
+      {%- liquid
+        assign volume_pricing_array = variant.quantity_price_breaks | sort: 'quantity' | reverse
+      -%}
+      <price-per-item
+        class="variant-item__price-per-item"
+        id="Price-Per-Item-{{ variant.id }}"
+        data-variant-id="{{ variant.id }}"
+      >
+        <div class="price-per-item">
+          {%- if cart_qty < volume_pricing_array.last.minimum_quantity -%}
+            {%- assign variant_price = variant.price | money -%}
+            <span class="price-per-item--current price">{{- variant_price -}}</span>
           {%- else -%}
-            <span class="price">
-              {{- 'sections.quick_order_list.each' | t: money: item_price -}}
-            </span>
+            {%- for price_break in volume_pricing_array -%}
+              {%- if cart_qty >= price_break.minimum_quantity -%}
+                {%- assign price_break_price = price_break.price | money -%}
+                <span class="price-per-item--current price">{{- price_break_price -}}</span>
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
           {%- endif -%}
-        </dd>
-      </dl>
+        </div>
+      </price-per-item>
     {%- else -%}
-      {%- if variant.quantity_price_breaks.size > 0 -%}
-        {%- liquid
-          assign volume_pricing_array = variant.quantity_price_breaks | sort: 'quantity' | reverse
-        -%}
-        <price-per-item
-          class="variant-item__price-per-item"
-          id="Price-Per-Item-{{ variant.id }}"
-          data-variant-id="{{ variant.id }}"
-        >
-          <div class="price-per-item">
-            {%- if cart_qty < volume_pricing_array.last.minimum_quantity -%}
-              {%- assign variant_price = variant.price | money -%}
-              <span class="price-per-item--current price">
-                {{- 'sections.quick_order_list.each' | t: money: variant_price -}}
-              </span>
-            {%- else -%}
-              {%- for price_break in volume_pricing_array -%}
-                {%- if cart_qty >= price_break.minimum_quantity -%}
-                  {%- assign price_break_price = price_break.price | money -%}
-                  <span class="price-per-item--current price">
-                    {{- 'sections.quick_order_list.each' | t: money: price_break_price -}}
-                  </span>
-                  {%- break -%}
-                {%- endif -%}
-              {%- endfor -%}
-            {%- endif -%}
-          </div>
-        </price-per-item>
-      {%- else -%}
-        <span class="price">
-          {{- 'sections.quick_order_list.each' | t: money: item_price -}}
-        </span>
-      {%- endif -%}
+      <span class="price">{{- item_price -}}</span>
     {%- endif -%}
 
     {%- if item.available and item.unit_price_measurement -%}
@@ -429,9 +317,9 @@
       </div>
     {%- endif -%}
   </td>
+
   <td class="variant-item__totals right small-hide medium-hide">
     {%- render 'loading-spinner' -%}
-    {% comment %} TODO: enable theme-check once `line_items_for` is accepted as valid filter {% endcomment %}
     {% # theme-check-disable %}
     <span class="price">{{ cart | line_items_for: item | sum: 'original_line_price' | money }}</span>
     {% # theme-check-enable %}
