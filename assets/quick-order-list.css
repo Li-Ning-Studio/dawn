@@ -783,4 +783,15 @@ quick-order-list .tax-note {
   }
 }.quick-order-list-remove-button {
   display: none !important;
+}@media screen and (min-width: 990px) {
+  .quick-order-list-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.2rem;
+  }
+
+  quick-order-list-remove-all-button {
+    margin-left: 0 !important;
+  }
 }
