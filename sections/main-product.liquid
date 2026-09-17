@@ -586,19 +586,19 @@
                   assign remix_service_product = all_products[remix_service_handle]
                   assign remix_service_variant = remix_service_product.variants.first
 
-                  if settings.is_stringing_enabled_globally and product.metafields.custom_but_hidden.studio_pro_stringing and settings.stringing_collection_id != blank and product.available == true
+                  if settings.is_stringing_enabled_globally and product.metafields.custom_but_hidden.studio_pro_stringing and settings.stringing_collection_id != blank and product.available == true and customer.b2b? != true
                     assign is_stringing_visible = true
                   endif
 
-                  if settings.is_gripping_enabled_globally and product.metafields.custom_but_hidden.studio_grip_service and settings.gripping_collection_id != blank and product.available == true
+                  if settings.is_gripping_enabled_globally and product.metafields.custom_but_hidden.studio_grip_service and settings.gripping_collection_id != blank and product.available == true and customer.b2b? != true
                     assign is_gripping_visible = true
                   endif
 
-                  if settings.is_remix_enabled_globally and product.metafields.custom_but_hidden.stickers == true and product.available == true and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model and remix_service_variant.available
+                  if settings.is_remix_enabled_globally and product.metafields.custom_but_hidden.stickers == true and product.available == true and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model and remix_service_variant.available  and customer.b2b? != true
                     assign is_remix_visible = true
                   endif
 
-                  if settings.is_tshirt_printing_enabled_globally and product.available == true and product.metafields.custom_but_hidden.customise == true
+                  if settings.is_tshirt_printing_enabled_globally and product.available == true and product.metafields.custom_but_hidden.customise == true  and customer.b2b? != true
                     assign is_tshirt_printing_visible = true
                   endif
 
@@ -610,12 +610,23 @@
                 {% if product.metafields.custom_but_hidden.combined_products %}
                   {% render 'combined-products-options', product: product, block: block %}
                 {% endif %}
-                {% if product.available == true %}
-                  {% render 'product-variant-picker',
-                    product: product,
-                    block: block,
-                    product_form_id: product_form_id
-                  %}
+                                {% if product.available == true %}
+                  {%- if customer.b2b? -%}
+                    {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
+                    <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
+                    {% render 'quick-order-list',
+                      product: product,
+                      show_image: true,
+                      show_sku: true,
+                      is_modal: false
+                    %}
+                  {%- else -%}
+                    {% render 'product-variant-picker',
+                      product: product,
+                      block: block,
+                      product_form_id: product_form_id
+                    %}
+                  {%- endif -%}
                 {% endif %}
                 {% if has_visible_customisations %}
                   <p class="form__label product__customisations-label">
@@ -635,7 +646,8 @@
                   {% render 'tshirt-printing' %}
                 {% endif %}
               {%- when 'buy_buttons' -%}
-                {% if product.tags contains 'Service' %}
+                {% if customer.b2b? %}
+                {% elsif product.tags contains 'Service' %}
                   <p>This service cannot be purchased seperately.</p>
                 {% elsif settings.catalog_mode_enabled != true %}
                   {%- render 'buy-buttons',
