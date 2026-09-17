@@ -795,4 +795,24 @@ quick-order-list .tax-note {
   .quick-order-list__table td:first-child {
     padding-left: 0;
   }
+}@media screen and (min-width: 990px) {
+  .quick-order-list__table th:nth-child(2) {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .quick-order-list__table td.variant-item__quantity {
+    padding-left: 0;
+  }
+
+  .variant-item__quantity-wrapper,
+  .variant-item__quantity-wrapper--no-info {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+
+  .variant-item__sold-out {
+    display: block;
+    text-align: left;
+  }
 }
