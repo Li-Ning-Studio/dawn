@@ -144,9 +144,10 @@
                     </h2>
                   </a>
                 </div>
-                {%- if customer.b2b? and product.metafields.custom.recommended_retail_price != blank -%}
+                {%- assign rrp = product.selected_or_first_available_variant.compare_at_price | default: product.selected_or_first_available_variant.price -%}
+                {%- if customer.b2b? and rrp > 0 -%}
                   <p class="product__rrp">
-                    <strong>Recommended Retail Price incl. VAT.</strong> - {{ product.metafields.custom.recommended_retail_price | metafield_text }}
+                    <strong>Recommended Retail Price incl. VAT.</strong> - {{ rrp | money_with_currency }}
                   </p>
                 {%- endif -%}
               {%- when 'price' -%}
