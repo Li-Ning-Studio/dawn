@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('media-gallery[data-desktop-layout="thumbnail"]').forEach(function (gallery) {
     const slides = Array.from(gallery.querySelectorAll('.product__media-item'));
     const thumbs = Array.from(gallery.querySelectorAll('.thumbnail-list__item'));
-    const viewer = gallery.querySelector('slider-component');
+    const viewer = gallery.querySelector('.product__media-list');
     if (slides.length < 2 || !viewer) return;
 
     slides.forEach(function (slide, n) {
