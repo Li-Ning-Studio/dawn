@@ -7,7 +7,11 @@
   assign hidden_weight = product.metafields.custom_but_hidden.weight
 
   for spec in product.metafields.custom
+    assign spec_key = spec[0]
     assign spec_field = spec[1]
+    if spec_key == 'recommended_retail_price'
+      continue
+    endif
     if spec_field and spec_field.value != blank
       assign has_custom_specs = true
       break
@@ -69,7 +73,7 @@
                   assign spec_key = spec[0]
                   assign spec_field = spec[1]
                 -%}
-                {%- if spec_field and spec_field.value != blank -%}
+                {%- if spec_field and spec_field.value != blank and spec_key != 'recommended_retail_price' -%}
                   {%- liquid
                     # Use the metafield definition label when available; fallback to a readable key.
                     assign spec_label = spec_field.definition.name
