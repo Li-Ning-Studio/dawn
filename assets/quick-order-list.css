@@ -769,31 +769,3 @@ quick-order-list .tax-note {
   .quick-order-list-total__confirmation span {
     margin-right: 3rem;
   }
-}@media screen and (min-width: 990px) {
-  .quick-order-list-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.2rem;
-  }
-
-  quick-order-list-remove-all-button {
-    margin-left: 0;
-  }
-}.quick-order-list-remove-button {
-  display: none !important;
-}@media screen and (min-width: 990px) {
-  .variant-item__quantity-wrapper {
-    display: block !important;
-    width: calc(11rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
-  }
-
-  .quantity-popover-container {
-    display: block !important;
-    width: 100%;
-  }
-
-  quick-order-list .quantity {
-    margin: 0;
-  }
-}
