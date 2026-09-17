@@ -893,20 +893,15 @@ quick-order-list .tax-note {
     width: auto;
     flex: 0 0 auto;
     flex-wrap: nowrap;
-    text-align: left;
   }
 
-  .quick-order-list__total-items {
-    display: block;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
-
+  .quick-order-list__total-items,
   .totals__product-total {
     display: block;
-    text-align: left;
+    width: calc(11rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 
   .quick-order-list__total-items span,
@@ -914,14 +909,15 @@ quick-order-list .tax-note {
     display: block;
     font-size: 1.8rem;
     margin: 0;
+    text-align: center;
   }
 
   .quick-order-list__total-items p,
   .totals__subtotal {
     display: block;
     margin: 0.2rem 0 0;
-    font-size: 1.3rem;
-    text-align: left;
+    font-size: 1.25rem;
+    text-align: center;
     white-space: nowrap;
   }
 }
