@@ -684,3 +684,38 @@ quick-order-list .tax-note {
     width: auto;
   }
 }
+@media screen and (min-width: 990px) {
+  .quick-order-list__total {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .quick-order-list-total__info,
+  .quick-order-list-total__confirmation {
+    min-height: auto;
+  }
+
+  .quick-order-list-total__column {
+    align-items: center;
+  }
+
+  .quick-order-list-total__price {
+    flex-wrap: nowrap;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .totals__product-total {
+    white-space: nowrap;
+  }
+
+  .variant-item__sku {
+    opacity: 0.6;
+  }
+
+  .quick-order-list__table td {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    vertical-align: middle;
+  }
+}
