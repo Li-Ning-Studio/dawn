@@ -144,6 +144,17 @@
                     </h2>
                   </a>
                 </div>
+                                  <a href="{{ product.url }}" class="product__title">
+                    <h2 class="h1">
+                      {{ product.title | escape }}
+                    </h2>
+                  </a>
+                </div>
+                {%- if customer.b2b? and product.metafields.custom.recommended_retail_price != blank -%}
+                  <p class="product__rrp">
+                    <strong>Recommended Retail Price incl. VAT.</strong> - {{ product.metafields.custom.recommended_retail_price | metafield_text }}
+                  </p>
+                {%- endif -%}
               {%- when 'price' -%}
                 {%- if product.available or section.settings.display_price_out_of_stock -%}
                   <div
