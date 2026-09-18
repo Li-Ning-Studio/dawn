@@ -1,0 +1,356 @@
+{%- liquid
+  if section.settings.knockout_mode == 'light'
+    assign blend = 'screen'
+  else
+    assign blend = 'multiply'
+  endif
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} .msk {
+    box-sizing: border-box;
+    background: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  #shopify-section-{{ section.id }} .msk__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    padding-left: {{ section.settings.side_padding }}px;
+    padding-right: {{ section.settings.side_padding }}px;
+    display: flex;
+    flex-direction: column;
+    align-items: {{ section.settings.align }};
+    text-align: {{ section.settings.text_align }};
+    gap: {{ section.settings.stack_gap }}px;
+  }
+
+  #shopify-section-{{ section.id }} .msk__eyebrow {
+    margin: 0;
+    font-family: var(--font-heading-family, inherit);
+    font-size: {{ section.settings.eyebrow_size }}px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: {{ section.settings.accent_color }};
+  }
+
+  /* --- Udskæringen --- */
+
+  #shopify-section-{{ section.id }} .msk__cut {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+    background: {{ section.settings.knockout_color }};
+  }
+
+  #shopify-section-{{ section.id }} .msk__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  #shopify-section-{{ section.id }} .msk__media video,
+  #shopify-section-{{ section.id }} .msk__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: {{ section.settings.media_focus }};
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .msk__media--mobile {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .msk__knockout {
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: {{ blend }};
+    background: {{ section.settings.knockout_color }};
+    padding: {{ section.settings.word_padding_mobile }}px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .msk__word {
+    display: block;
+    margin: 0;
+    font-family: var(--font-heading-family, inherit);
+    font-size: {{ section.settings.word_size_mobile }}vw;
+    font-weight: {{ section.settings.word_weight }};
+    line-height: 0.88;
+    letter-spacing: {{ section.settings.word_spacing }}em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: {{ section.settings.word_color }};
+    transform: scale(var(--msk-scale, 1));
+    transform-origin: 50% 50%;
+    will-change: transform;
+    {% if section.settings.word_italic %}font-style: italic;{% endif %}
+  }
+
+  #shopify-section-{{ section.id }} .msk__lead {
+    margin: 0;
+    max-width: {{ section.settings.text_width }}ch;
+    font-size: {{ section.settings.lead_size }}px;
+    line-height: 1.7;
+    color: inherit;
+    opacity: {{ section.settings.lead_opacity | divided_by: 100.0 }};
+  }
+
+  #shopify-section-{{ section.id }} .msk__lead > * {
+    margin: 0 0 0.8em;
+  }
+
+  #shopify-section-{{ section.id }} .msk__lead > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .msk__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 40px;
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_text_color }};
+    border: 1px solid {{ section.settings.button_border_color }};
+    font-family: var(--font-heading-family, inherit);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .msk__button:hover {
+    opacity: 0.85;
+  }
+
+  #shopify-section-{{ section.id }} .msk__button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  #shopify-section-{{ section.id }} .msk__note {
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: inherit;
+    opacity: 0.4;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .msk {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    #shopify-section-{{ section.id }} .msk__word {
+      font-size: {{ section.settings.word_size }}vw;
+    }
+
+    #shopify-section-{{ section.id }} .msk__knockout {
+      padding: {{ section.settings.word_padding }}px 0;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .msk__media--mobile {
+      display: block;
+    }
+
+    #shopify-section-{{ section.id }} .msk__media--desktop.has-mobile-alt {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} .msk__word {
+      transform: none !important;
+    }
+  }
+</style>
+
+<div class="msk">
+  <div class="msk__inner">
+
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="msk__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {%- endif -%}
+
+    <div class="msk__cut" data-msk>
+      <div class="msk__media msk__media--desktop{% if section.settings.mobile_video != blank or section.settings.mobile_image != blank %} has-mobile-alt{% endif %}">
+        {%- if section.settings.video != blank -%}
+          {{ section.settings.video | video_tag: image_size: '1600x', autoplay: true, loop: true, muted: true, controls: false }}
+        {%- elsif section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 2400 | image_tag: loading: 'lazy', widths: '750, 1100, 1500, 2000, 2400', sizes: '100vw', alt: '' }}
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.mobile_video != blank or section.settings.mobile_image != blank -%}
+        <div class="msk__media msk__media--mobile">
+          {%- if section.settings.mobile_video != blank -%}
+            {{ section.settings.mobile_video | video_tag: image_size: '900x', autoplay: true, loop: true, muted: true, controls: false }}
+          {%- else -%}
+            {{ section.settings.mobile_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '450, 750, 1000, 1200', sizes: '100vw', alt: '' }}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="msk__knockout">
+        <h2 class="msk__word" data-msk-word>{{ section.settings.word | escape }}</h2>
+      </div>
+    </div>
+
+    {%- if section.settings.lead != blank -%}
+      <div class="msk__lead">{{ section.settings.lead }}</div>
+    {%- endif -%}
+
+    {%- if section.settings.button_label != blank -%}
+      <a href="{{ section.settings.button_link | default: '#' }}" class="msk__button">
+        {{ section.settings.button_label | escape }}
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5"></path></svg>
+      </a>
+    {%- endif -%}
+
+    {%- if section.settings.note != blank -%}
+      <p class="msk__note">{{ section.settings.note | escape }}</p>
+    {%- endif -%}
+
+  </div>
+</div>
+
+<script>
+  (function () {
+    var sectionId = {{ section.id | json }};
+    var zoom = {{ section.settings.scroll_zoom }} / 100;
+
+    function initMasked() {
+      var root = document.querySelector('#shopify-section-' + sectionId + ' [data-msk]');
+      if (!root) return;
+
+      root.querySelectorAll('video').forEach(function (v) {
+        v.muted = true;
+        v.setAttribute('muted', '');
+        v.setAttribute('playsinline', '');
+        v.setAttribute('webkit-playsinline', '');
+        v.loop = true;
+        var play = v.play();
+        if (play && play.catch) play.catch(function () {});
+      });
+
+      var word = root.querySelector('[data-msk-word]');
+      if (!word || !zoom) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var ticking = false;
+
+      function update() {
+        ticking = false;
+        var box = root.getBoundingClientRect();
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        if (box.bottom < 0 || box.top > vh) return;
+
+        // 0 når sektionen lige kommer ind nedefra, 1 når den er på vej ud foroven
+        var progress = (vh - box.top) / (vh + box.height);
+        progress = Math.max(0, Math.min(1, progress));
+
+        var scale = 1 - zoom / 2 + progress * zoom;
+        word.style.setProperty('--msk-scale', scale.toFixed(4));
+      }
+
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMasked);
+    } else {
+      initMasked();
+    }
+
+    document.addEventListener('shopify:section:load', function (event) {
+      if (event.detail.sectionId === sectionId) initMasked();
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Video i bogstaverne",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "header", "content": "Ordet" },
+    { "type": "text", "id": "word", "label": "Ord", "default": "HNDRD", "info": "Ét ord uden mellemrum virker bedst." },
+    { "type": "range", "id": "word_size", "label": "Størrelse (computer)", "min": 6, "max": 30, "step": 1, "unit": "vw", "default": 19, "info": "Måles i procent af skærmbredden, så ordet fylder ens på alle skærme." },
+    { "type": "range", "id": "word_size_mobile", "label": "Størrelse (mobil)", "min": 10, "max": 40, "step": 1, "unit": "vw", "default": 23 },
+    { "type": "select", "id": "word_weight", "label": "Tykkelse", "options": [{ "value": "700", "label": "Fed" }, { "value": "800", "label": "Ekstra fed" }, { "value": "900", "label": "Sort" }], "default": "800" },
+    { "type": "checkbox", "id": "word_italic", "label": "Kursiv", "default": true },
+    { "type": "range", "id": "word_spacing", "label": "Bogstavafstand", "min": -1, "max": 1, "step": 1, "unit": "em", "default": 0 },
+    { "type": "range", "id": "word_padding", "label": "Luft over og under (computer)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 60 },
+    { "type": "range", "id": "word_padding_mobile", "label": "Luft over og under (mobil)", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 32 },
+    { "type": "range", "id": "scroll_zoom", "label": "Zoom under scroll", "min": 0, "max": 30, "step": 1, "unit": "%", "default": 12, "info": "0 slår bevægelsen fra." },
+
+    { "type": "header", "content": "Udskæring" },
+    { "type": "select", "id": "knockout_mode", "label": "Baggrund bag ordet", "options": [{ "value": "dark", "label": "Mørk" }, { "value": "light", "label": "Lys" }], "default": "dark", "info": "Mørk kræver en næsten sort farve nedenfor. Lys kræver en næsten hvid." },
+    { "type": "color", "id": "knockout_color", "label": "Udskæringens farve", "default": "#000000", "info": "Skal matche sektionens baggrund. Jo tættere på ren sort eller ren hvid, jo renere bliver kanten." },
+    { "type": "color", "id": "word_color", "label": "Ordets farve", "default": "#ffffff", "info": "Mørk baggrund: hvid. Lys baggrund: sort." },
+
+    { "type": "header", "content": "Video og billede" },
+    { "type": "video", "id": "video", "label": "Video", "info": "Kort loop uden lyd. Tætte optagelser med bevægelse og farve virker bedst — hele personer forsvinder i beskæringen." },
+    { "type": "video", "id": "mobile_video", "label": "Video til mobil", "info": "Valgfri." },
+    { "type": "image_picker", "id": "image", "label": "Billede", "info": "Bruges hvis der ikke er valgt en video." },
+    { "type": "image_picker", "id": "mobile_image", "label": "Billede til mobil" },
+    { "type": "select", "id": "media_focus", "label": "Fokuspunkt", "options": [{ "value": "center center", "label": "Midten" }, { "value": "center top", "label": "Toppen" }, { "value": "center bottom", "label": "Bunden" }, { "value": "left center", "label": "Venstre" }, { "value": "right center", "label": "Højre" }], "default": "center center" },
+
+    { "type": "header", "content": "Tekst" },
+    { "type": "text", "id": "eyebrow", "label": "Lille tekst øverst", "default": "The story behind" },
+    { "type": "range", "id": "eyebrow_size", "label": "Størrelse på lille tekst", "min": 9, "max": 18, "step": 1, "unit": "px", "default": 11 },
+    { "type": "richtext", "id": "lead", "label": "Brødtekst", "default": "<p>Skriv historien her. Hold den kort — bogstaverne gør arbejdet, teksten skal bare lande pointen.</p>" },
+    { "type": "range", "id": "lead_size", "label": "Brødtekstens størrelse", "min": 13, "max": 24, "step": 1, "unit": "px", "default": 18 },
+       { "type": "range", "id": "lead_opacity", "label": "Brødtekstens styrke", "min": 40, "max": 100, "step": 5, "unit": "%", "default": 70 },
+    { "type": "range", "id": "text_width", "label": "Tekstens bredde", "min": 30, "max": 90, "step": 2, "unit": "ch", "default": 62 },
+    { "type": "text", "id": "note", "label": "Lille note nederst", "info": "Valgfri. Lad den stå tom." },
+
+    { "type": "header", "content": "Knap" },
+    { "type": "text", "id": "button_label", "label": "Knaptekst", "default": "Read the full story" },
+    { "type": "url", "id": "button_link", "label": "Link" },
+    { "type": "color", "id": "button_background", "label": "Knapbaggrund", "default": "rgba(0,0,0,0)" },
+    { "type": "color", "id": "button_text_color", "label": "Knaptekstfarve", "default": "#ffffff" },
+    { "type": "color", "id": "button_border_color", "label": "Knapkant", "default": "rgba(255,255,255,0.4)" },
+
+    { "type": "header", "content": "Sektion" },
+    { "type": "color", "id": "bg_color", "label": "Baggrundsfarve", "default": "#000000" },
+    { "type": "color", "id": "text_color", "label": "Tekstfarve", "default": "#ffffff" },
+    { "type": "color", "id": "accent_color", "label": "Accentfarve", "default": "#e4661f" },
+    { "type": "select", "id": "align", "label": "Justering", "options": [{ "value": "flex-start", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "flex-end", "label": "Højre" }], "default": "center" },
+    { "type": "select", "id": "text_align", "label": "Tekstjustering", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "right", "label": "Højre" }], "default": "center" },
+    { "type": "range", "id": "stack_gap", "label": "Afstand mellem elementerne", "min": 8, "max": 60, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "max_width", "label": "Indholdets maksbredde", "min": 800, "max": 1800, "step": 20, "unit": "px", "default": 1280 },
+    { "type": "range", "id": "side_padding", "label": "Luft ud til kanten", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding_top", "label": "Afstand over", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Afstand under", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "presets": [{ "name": "Video i bogstaverne" }]
+}
+{% endschema %}
