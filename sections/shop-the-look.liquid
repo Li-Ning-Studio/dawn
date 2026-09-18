@@ -1,7 +1,11 @@
 {%- liquid
-  assign look_image = product.metafields.custom.look_image.value
-  assign p1 = product.metafields.custom.look_product_1.value
-  assign p2 = product.metafields.custom.look_product_2.value
+  assign img_parts = section.settings.mf_image | split: '.'
+  assign p1_parts = section.settings.mf_product_1 | split: '.'
+  assign p2_parts = section.settings.mf_product_2 | split: '.'
+
+  assign look_image = product.metafields[img_parts[0]][img_parts[1]].value
+  assign p1 = product.metafields[p1_parts[0]][p1_parts[1]].value
+  assign p2 = product.metafields[p2_parts[0]][p2_parts[1]].value
 
   assign image_is_file = false
   if look_image.src != blank or look_image.url != blank
@@ -25,13 +29,15 @@
 -%}
 
 {%- if request.design_mode and has_look == false -%}
-  <div style="padding:24px;background:#fff3cd;color:#664d03;font-size:14px;line-height:1.6;border:1px solid #ffe69c;">
-    <strong>Shop looket kan ikke vises endnu.</strong><br>
-    Billede fundet som fil: {{ image_is_file }}<br>
-    Billede fundet som adresse: {{ image_is_url }}<br>
-    Rå værdi af metafeltet: {{ product.metafields.custom.look_image }}<br>
-    Produkt 1: {% if p1 != blank %}{{ p1.title }}{% else %}ikke fundet{% endif %}<br>
-    Produkt 2: {% if p2 != blank %}{{ p2.title }}{% else %}ikke fundet{% endif %}
+  <div style="padding:24px;background:#fff3cd;color:#664d03;font-size:14px;line-height:1.7;border:1px solid #ffe69c;">
+    <strong>Shop looket kan ikke vises endnu.</strong><br><br>
+    Kopier de rigtige navne herunder ind i sektionens indstillinger under "Metafelter".<br>
+    Findes der ingen navne, er metafelterne ikke udfyldt på dette produkt.<br><br>
+    {%- for namespace in product.metafields -%}
+      {%- for field in namespace[1] -%}
+        <code style="background:#fff;padding:2px 6px;border-radius:4px;">{{ namespace[0] }}.{{ field[0] }}</code><br>
+      {%- endfor -%}
+    {%- endfor -%}
   </div>
 {%- endif -%}
 
@@ -308,6 +314,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    { "type": "header", "content": "Metafelter", "info": "Skriv navnene præcis som de står i den gule kasse på produktsiden." },
+    { "type": "text", "id": "mf_image", "label": "Metafelt til look-billedet", "default": "custom.look_image" },
+    { "type": "text", "id": "mf_product_1", "label": "Metafelt til produkt 1", "default": "custom.look_product_1" },
+    { "type": "text", "id": "mf_product_2", "label": "Metafelt til produkt 2", "default": "custom.look_product_2" },
+
     { "type": "header", "content": "Prikkernes placering", "info": "Måles i procent af billedet. Venstre kant er 0, højre kant er 100. Top er 0, bund er 100." },
     { "type": "range", "id": "dot1_x", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Prik 1 — vandret", "default": 50 },
     { "type": "range", "id": "dot1_y", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Prik 1 — lodret", "default": 42 },
