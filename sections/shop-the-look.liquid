@@ -3,9 +3,24 @@
   assign p1 = product.metafields.custom.look_product_1.value
   assign p2 = product.metafields.custom.look_product_2.value
 
+  assign image_is_file = false
+  if look_image.src != blank or look_image.url != blank
+    assign image_is_file = true
+  endif
+
+  assign image_is_url = false
+  unless image_is_file
+    assign image_string = look_image | strip
+    if image_string contains '//'
+      assign image_is_url = true
+    endif
+  endunless
+
   assign has_look = false
-  if look_image != blank and p1 != blank
-    assign has_look = true
+  if image_is_file or image_is_url
+    if p1 != blank or p2 != blank
+      assign has_look = true
+    endif
   endif
 -%}
 
@@ -43,7 +58,7 @@
     margin: 0 auto;
   }
 
-  #shopify-section-{{ section.id }} .stl__stage img {
+  #shopify-section-{{ section.id }} .stl__stage > img {
     display: block;
     width: 100%;
     height: auto;
@@ -59,8 +74,6 @@
   #shopify-section-{{ section.id }} .stl__dot {
     width: {{ section.settings.dot_size }}px;
     height: {{ section.settings.dot_size }}px;
-    min-width: 44px;
-    min-height: 44px;
     padding: 0;
     border: 0;
     border-radius: 50%;
@@ -69,6 +82,16 @@
     cursor: pointer;
     display: block;
     position: relative;
+  }
+
+  #shopify-section-{{ section.id }} .stl__dot::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%);
   }
 
   #shopify-section-{{ section.id }} .stl__dot::after {
@@ -178,15 +201,19 @@
     {%- endif -%}
 
     <div class="stl__stage" data-stl>
-      {{
-        look_image
-        | image_url: width: 1600
-        | image_tag:
-          loading: 'lazy',
-          widths: '400, 600, 800, 1100, 1400, 1600',
-          sizes: '(min-width: 750px) 50vw, 92vw',
-          alt: product.title
-      }}
+      {%- if image_is_file -%}
+        {{
+          look_image
+          | image_url: width: 1600
+          | image_tag:
+            loading: 'lazy',
+            widths: '400, 600, 800, 1100, 1400, 1600',
+            sizes: '(min-width: 750px) 50vw, 92vw',
+            alt: product.title
+        }}
+      {%- else -%}
+        <img src="{{ look_image | strip }}" alt="{{ product.title | escape }}" loading="lazy">
+      {%- endif -%}
 
       {%- for n in (1..2) -%}
         {%- liquid
