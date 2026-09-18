@@ -120,7 +120,12 @@
       margin-right: {{ section.settings.side_padding_mobile }}px;
     }
   }
-
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .title-wrapper-with-link {
+      padding-left: {{ section.settings.side_padding_mobile }}px;
+      padding-right: {{ section.settings.side_padding_mobile }}px;
+    }
+  }
   @media screen and (min-width: 750px) {
     #Slider-{{ section.id }} > li {
       width: calc((100% - ({{ cols_tablet }} * var(--card-gap)) - var(--peek)) / {{ cols_tablet }});
