@@ -1,0 +1,633 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_LW3CjH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  HYPERARMOUR HERO BANNER\n  Hyperarmour hero with gradient headline\n  and teal outline CTA.\n{% endcomment %}\n\n{% assign hyperarmour_product = all_products['hyperarmour'] %}\n\n<style>\n\n  #hah-hero,\n  #hah-hero * {\n    box-sizing: border-box;\n  }\n\n\n  #hah-hero {\n    width: 100%;\n    padding: clamp(64px, 9vw, 130px) 20px;\n    background: #000;\n    color: #fff;\n    font-family: inherit;\n    text-align: center;\n    overflow: hidden;\n  }\n\n\n  #hah-hero * {\n    font-family: inherit;\n  }\n\n\n  .hah-inner {\n    width: 100%;\n    max-width: 1250px;\n    margin: 0 auto;\n  }\n\n\n  /* KICKER */\n\n  .hah-kicker {\n    margin: 0 0 14px;\n    color: rgba(255,255,255,.55);\n    font-size: clamp(13px, 1.2vw, 15px);\n    font-weight: 500;\n    letter-spacing: .01em;\n  }\n\n\n  /* HEADLINE */\n\n  .hah-headline {\n    display: block;\n    width: 100%;\n\n    margin: 0;\n    padding: 0 16px 8px;\n\n    font-size: clamp(40px, 5.8vw, 88px);\n    line-height: 1.08;\n\n    font-weight: 800;\n    letter-spacing: -.035em;\n\n    background: linear-gradient(\n      92deg,\n      #c9f24d 0%,\n      #6fe6a8 32%,\n      #2fe0c2 55%,\n      #35c2e0 72%,\n      #ff8a3d 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n\n    overflow: visible;\n  }\n\n\n  /* SUBHEAD */\n\n  .hah-subhead {\n    max-width: 720px;\n\n    margin: 20px auto 0;\n\n    color: rgba(255,255,255,.62);\n\n    font-size: clamp(14px, 1.5vw, 18px);\n\n    line-height: 1.5;\n\n    font-weight: 450;\n  }\n\n\n  /* CTA */\n\n  .hah-cta {\n    display: inline-flex;\n\n    align-items: center;\n\n    justify-content: center;\n\n    margin-top: clamp(28px, 3.4vw, 40px);\n\n    padding: 15px 40px;\n\n    border: 1.5px solid #2fe0c2;\n\n    border-radius: 999px;\n\n    background: transparent;\n\n    color: #fff;\n\n    font-size: 13px;\n\n    font-weight: 700;\n\n    letter-spacing: .12em;\n\n    text-transform: uppercase;\n\n    text-decoration: none;\n\n    transition:\n      border-color .2s ease,\n      transform .2s ease,\n      box-shadow .2s ease;\n  }\n\n\n  .hah-cta:hover {\n    background: transparent;\n\n    border-color: #2fe0c2;\n\n    color: #fff;\n\n    transform: translateY(-1px);\n  }\n\n\n  /* TABLET */\n\n  @media screen and (max-width: 1100px) {\n\n    .hah-headline {\n      font-size: clamp(44px, 7vw, 74px);\n      letter-spacing: -.03em;\n    }\n\n  }\n\n\n  /* MOBILE */\n\n  @media screen and (max-width: 560px) {\n\n    #hah-hero {\n      padding: 64px 18px;\n    }\n\n\n    .hah-inner {\n      max-width: 100%;\n    }\n\n\n    .hah-headline {\n      padding: 0 4px 6px;\n\n      font-size: clamp(40px, 12vw, 58px);\n\n      line-height: 1.05;\n\n      letter-spacing: -.035em;\n    }\n\n\n    .hah-subhead {\n      max-width: 340px;\n\n      margin-top: 18px;\n\n      font-size: 14px;\n\n      line-height: 1.55;\n    }\n\n\n    .hah-cta {\n      padding: 13px 34px;\n\n      font-size: 12px;\n    }\n\n  }\n\n</style>\n\n\n<section id=\"hah-hero\">\n\n  <div class=\"hah-inner\">\n\n\n    <p class=\"hah-kicker\">\n      Introducing Hyperarmour\n    </p>\n\n\n    <h1 class=\"hah-headline\">\n      The Last One Standing\n    </h1>\n\n\n    <p class=\"hah-subhead\">\n      Built with carbon plating, honeycomb grip, and made to survive every rally, by HNDRD.\n    </p>\n\n\n    <a\n      class=\"hah-cta\"\n      href=\"https://in.hndrd.co/products/hyper-armour\"\n    >\n      Shop HyperArmour\n    </a>\n\n\n  </div>\n\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "media_pXzJ7f": {
+      "type": "media",
+      "disabled": true,
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_fa0ee417-e2c0-415d-b064-8b8c849bc612.png",
+        "mobile_image": "shopify://shop_images/Banner_15.1.png",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_video_component_e8X8PY": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/DATE REMOVED FOR BANNER.mp4",
+        "mobile_video": "shopify://files/videos/DATE REMOVED POTRAIT.mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://products/hyper-armour",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_whHTcA": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hyper-title-section\">\n\n  <p class=\"hyper-kicker\">\n    HNDRD Hyperarmour\n  </p>\n\n\n  <h2 class=\"second-title\">\n    Built to Outlast Every Rally,\n    <br class=\"mobile-break\">\n    Ready for Every Move\n  </h2>\n\n\n  \n\n\n</section>\n\n\n\n<style>\n\n\n.hyper-title-section{\n\n  text-align:center;\n\n  letter-spacing:0px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.4rem;\n\n  margin:0 0 10px;\n\n  color:rgba(255,255,255,.8);\n\n}\n\n\n\n.second-title {\n\n  letter-spacing:-1px;\n\n  font-size:3.3rem;\n\n  font-weight:800;\n\n  line-height:1.1;\n\n  margin:0;\n\n  background-image:\n\n  linear-gradient(\n    to right,\n    #c9f24d 0%,\n    #2fe0c2 50%,\n    #ff8a3d 100%\n  );\n\n  -webkit-background-clip:text;\n\n  background-clip:text;\n\n  -webkit-text-fill-color:transparent;\n\n  color:transparent;\n\n}\n\n\n\n.second-copy {\n\n  max-width:520px;\n\n  margin:20px auto 0;\n\n  color:rgba(255,255,255,.55);\n\n  font-size:1.05rem;\n\n  line-height:1.55;\n\n  font-weight:450;\n\n}\n\n\n\n.mobile-break{\n\n  display:none;\n\n}\n\n\n\n\n\n@media screen and (min-width:750px){\n\n\n.second-title{\n\n  font-size:5.9rem;\n\n}\n\n\n.second-copy{\n\n  font-size:1.2rem;\n\n}\n\n\n}\n\n\n\n\n\n@media screen and (max-width:750px){\n\n\n.hyper-title-section{\n\n  padding:0 16px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.2rem;\n\n}\n\n\n\n.second-title{\n\n\n  font-size:2.9rem;\n\n  line-height:1.08;\n\n  letter-spacing:-1.5px;\n\n  max-width:100%;\n\n}\n\n\n\n.mobile-break{\n\n  display:block;\n\n}\n\n\n\n.second-copy{\n\n\n  max-width:330px;\n\n  margin-top:18px;\n\n  font-size:.95rem;\n\n  line-height:1.45;\n\n}\n\n\n\n}\n\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "media_hiBFN9": {
+      "type": "media",
+      "disabled": true,
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_fa0ee417-e2c0-415d-b064-8b8c849bc612.png",
+        "mobile_image": "shopify://shop_images/Banner_R_c3473a97-6e3a-412b-9668-909777083bb3.png",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pX3CYh": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Racing Grade Rubber</p>\n  <p class=\"longcopy\">\n    For Phenom, we worked with <span class=\"highlight\">Goodyear</span>, the world leader in tire technology, to bring <span class=\"highlight\">racing-grade rubber</span> to the Badminton court, ending the age-long <span class=\"highlight\">traditional trade-off</span> between <span class=\"highlight\">grip and longevity</span>.\n  </p>\n</div>\n\n<style>\n.longcopy {\n  font-size: 2.2rem; \n  font-weight: 800; \n  letter-spacing: -1px; \n  line-height: 145%; \n  color: rgba(255, 255, 255, 0.5); \n}\n\n.highlight {\n  color: rgba(255, 255, 255, 0.95);\n}\n\n@media screen and (min-width: 750px) {\n  .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 80,
+        "padding_bottom": 20
+      }
+    },
+    "media_gxHEbG": {
+      "type": "media",
+      "disabled": true,
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_2_77a36b86-2e5a-46dc-9a53-eed256e02d16.png",
+        "mobile_image": "shopify://shop_images/Banner_2.1.png",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_rhUah4": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Nothing Held Back</p>\n  <p class=\"longcopy\">What happens when you mix years of obsessive engineering with the <span class=\"highlight\">best rubber technology on the planet?</span>. You get the <span class=\"highlight\">HNDRD Phenom</span>—the first badminton shoe powered by Goodyear traction</p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "hero_component_MaVYaG": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
+        "mobile_image": "shopify://shop_images/Banner_3.1.png",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pMCXET": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Best of Both Worlds</p>\n  <p class=\"longcopy\">Performance Shoes usually force a choice - <span class=\"highlight\">hard rubber</span> for durability or <span class=\"highlight\">soft rubber</span> for grip. Together with Goodyear, we developed the <span class=\"highlight\">DuraGrip</span> tech - a specialized racing-grade rubber compound, which makes the Phenom both <span class=\"highlight\">extremely durable and relentlessly grippy</span>.</p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 96,
+        "padding_bottom": 52
+      }
+    },
+    "media_Fp4xqn": {
+      "type": "media",
+      "disabled": true,
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_10.png",
+        "mobile_image": "shopify://shop_images/Banner_10.1.png",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_kcf9aP": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hyper-title-section\">\n\n  <p class=\"hyper-kicker\">\n    HNDRD HYPERARMOUR\n  </p>\n\n\n  <h2 class=\"second-title\">\n    Over Engineered Performance\n    <br class=\"mobile-break\">\n  </h2>\n\n\n  \n\n\n</section>\n\n\n\n<style>\n\n\n.hyper-title-section{\n\n  text-align:center;\n\n  letter-spacing:0px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.4rem;\n\n  margin:0 0 10px;\n\n  color:rgba(255,255,255,.8);\n\n}\n\n\n\n.second-title {\n\n  letter-spacing:-1px;\n\n  font-size:3.3rem;\n\n  font-weight:800;\n\n  line-height:1.1;\n\n  margin:0;\n\n  background-image:\n\n  linear-gradient(\n    to right,\n    #c9f24d 0%,\n    #2fe0c2 50%,\n    #ff8a3d 100%\n  );\n\n  -webkit-background-clip:text;\n\n  background-clip:text;\n\n  -webkit-text-fill-color:transparent;\n\n  color:transparent;\n\n}\n\n\n\n.second-copy {\n\n  max-width:520px;\n\n  margin:20px auto 0;\n\n  color:rgba(255,255,255,.55);\n\n  font-size:1.05rem;\n\n  line-height:1.55;\n\n  font-weight:450;\n\n}\n\n\n\n.mobile-break{\n\n  display:none;\n\n}\n\n\n\n\n\n@media screen and (min-width:750px){\n\n\n.second-title{\n\n  font-size:5.9rem;\n\n}\n\n\n.second-copy{\n\n  font-size:1.2rem;\n\n}\n\n\n}\n\n\n\n\n\n@media screen and (max-width:750px){\n\n\n.hyper-title-section{\n\n  padding:0 16px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.2rem;\n\n}\n\n\n\n.second-title{\n\n\n  font-size:2.9rem;\n\n  line-height:1.08;\n\n  letter-spacing:-1.5px;\n\n  max-width:100%;\n\n}\n\n\n\n.mobile-break{\n\n  display:block;\n\n}\n\n\n\n.second-copy{\n\n\n  max-width:330px;\n\n  margin-top:18px;\n\n  font-size:.95rem;\n\n  line-height:1.45;\n\n}\n\n\n\n}\n\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_YGQ3Pa": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jBfRN7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Shape Held, Heat Out</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_gTP4VP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TPU overlays keep the upper from collapsing through lateral cuts and deep lunges. Mesh and Aerovents pull heat out as it builds so the fit doesn't shift and your feet don't cook, even in long sessions. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_9yyg3q": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP HYPERARMOUR",
+            "button_link": "shopify://products/hyper-armour",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_jBfRN7",
+        "text_gTP4VP",
+        "button_9yyg3q"
+      ],
+      "custom_css": [
+        ".button {border-color: #48bfd8 !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1_cdeb1f9a-f83e-4f4d-8694-c21a8287fa5b.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_AAWtCq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_B3aNhQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Traction Upheld (ActiveGRIP)</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_HbHRGA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Honeycomb nonmarking outsole features pivot points placed for badminton's six-direction movement. Grips on the push, rotates on the pivot so there is no slipping, no sticking. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_YrXPTB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop HYPERARMOUR",
+            "button_link": "shopify://products/hyper-armour",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_B3aNhQ",
+        "text_HbHRGA",
+        "button_YrXPTB"
+      ],
+      "custom_css": [
+        ".button {border-color: #48bfd8 !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/2_351fb856-a21f-41af-8a57-e759e41170ba.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "zoom-in",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 12,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_7dYiHP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_djyQAw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Hard Landings, Handled (X-Cushion)</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_8DwhUp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Heel-zone cushioning that targets jump and lunge impact specifically. It takes the force before your joints do. You still feel the court, just not the punishment.  </p>",
+            "text_style": "body"
+          }
+        },
+        "button_Ec86eP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop HYPERARMOUR",
+            "button_link": "shopify://products/hyper-armour",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_djyQAw",
+        "text_8DwhUp",
+        "button_Ec86eP"
+      ],
+      "custom_css": [
+        ".button {border-color: #48bfd8 !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/3_74718eff-81b3-42c9-ba58-dc8d259e911b.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_Kxdy9z": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JqxLWT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Carbon-Kinetic Support Plate",
+            "heading_size": "h1"
+          }
+        },
+        "text_e6Kqxq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting torsion. It maintains alignment, even during multidirectional play.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wGHPkT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Phenom",
+            "button_link": "https://in.hndrd.co/products/phenom",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_JqxLWT",
+        "text_e6Kqxq",
+        "button_wGHPkT"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Banner_8.1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_c6RhH7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YGkTfC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Every Step, Deliberate</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_dftkKY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A TPU support structure in the midfoot reduces unwanted flex during fast direction changes, helping improve stability and reduce injury risk.  </p>",
+            "text_style": "body"
+          }
+        },
+        "button_czAQMr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/hyper-armour",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_YGkTfC",
+        "text_dftkKY",
+        "button_czAQMr"
+      ],
+      "custom_css": [
+        ".button {border-color: #48bfd8 !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/4_ea23f50e-e59c-4600-8e42-da269b170963.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_KKwXjx": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n<p style=\"font-size: 1.4rem\"> Champion's Choice</p>\n  <h2 class=\"second-title\">Preferred by Pros</h2>\n\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 100,
+        "padding_bottom": 64
+      }
+    },
+    "multicolumn_zieGnW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AatUqt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_e6c304c8-69dc-44c3-a47e-26cfc1d184b6.png",
+            "title": "",
+            "text": "<p> \"I found exactly the performance I was looking for, and more\" - Alexandra Boje, Danish Badminton Player</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6QDLmL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2_1aa53ea2-ed0d-4cab-be07-72bba14d473d.png",
+            "title": "",
+            "text": "<p> \"Most shoes start peeling quickly, Phenom did not\" - Mathias Christiansen, Danish Badminton Player</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_n7FRgW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_7_3755d7c3-1e26-4556-aaab-6f3013572eb2.png",
+            "title": "",
+            "text": "<p> \"The first thing I look for in a shoe is trust and I found it in Phenom\" - Armaan Bhatia, India's #1 Ranked Pickleball Player</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H98z3q": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_4_45c36765-9058-44ff-a718-158b7ee021f9.png",
+            "title": "",
+            "text": "<p> \"It made the hard days feel a little easier\" - Estelle Van Leeuwen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_N3g4Gz": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_5_91415f2f-2a90-4692-8e2c-7c41998b3075.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MxgJat": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_6_474f3a6d-9ce0-4d6b-a769-8e68d4bae484.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_AatUqt",
+        "column_6QDLmL",
+        "column_n7FRgW",
+        "column_H98z3q",
+        "column_N3g4Gz",
+        "column_MxgJat"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 4,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_3d3gL3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_f9kEnV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Adaptive <strong>Fit</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_eVRtxY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The fit is intentionally snug, not constrictive, giving your foot a lock-down feel. The elevated heel-to-toe profile shifts your stance forward, placing you in speed's favor.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_f9kEnV",
+        "text_eVRtxY"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "strong {letter-spacing: -1px; margin: 0; font-weight: 800; background-image: linear-gradient(-225deg, #e3be5f 0%, #d29700 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "media_QE4AML": {
+      "type": "media",
+      "disabled": true,
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_15_710ebbe0-e2b7-43ea-a170-b80467003c85.png",
+        "mobile_image": "shopify://shop_images/Banner_15.1_c234eebe-1117-44a1-9581-30aea0675c97.png",
+        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "padding_top": 24,
+        "padding_bottom": 92
+      }
+    },
+    "media_ag6DY6": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_NypUWg": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  HYPERARMOUR COMPARISON\n  Premium Apple-style text-only comparison — matches the Nitrix comparison\n  section pattern, adapted for the Hyperarmour badminton shoe.\n\n  RIGHT SIDE (fixed): Hyperarmour\n  LEFT SIDE (dropdown): Hyperspeed / Raze Pro II / Raze Pro / Blade Pro / Court Star Pro\n\n  All specs below (materials, positioning) were pulled from the live\n  product pages on in.hndrd.co on 2026-09-04.\n\n  Images are pulled live via Liquid (all_products['handle']) so this stays\n  correct automatically once the Hyperarmour product page goes live.\n  Until then, Hyperarmour falls back to the uploaded CDN image below.\n\n  LAYOUT NOTE: the two shoe photos and the VS badge now live in their own\n  \"media row\", separate from the name/badge/note text below them. Both\n  media boxes are locked to the same aspect-ratio (not a fixed pixel\n  height), so a real photo and a fallback/placeholder are always\n  identically sized — no more mismatched box heights between the two\n  sides, and no more manually-tuned margin-top hacks to center the VS\n  badge (it's just grid-centered against the media row now).\n{% endcomment %}\n\n{% assign hyperarmour_product = all_products['hyperarmour'] %}\n{% assign hyperspeed_product = all_products['hyperspeed'] %}\n{% assign razeproii_product = all_products['raze-pro-ii'] %}\n{% assign razepro_product = all_products['raze-pro'] %}\n{% assign bladepro_product = all_products['blade-pro'] %}\n{% assign courtstarpro_product = all_products['court-star-pro'] %}\n\n{% assign hac_fallback_image = 'https://cdn.shopify.com/s/files/1/0933/9378/1029/files/1_8415d2f8-2761-4b35-a8ae-36f2105643ca.png?v=1788508362' %}\n\n{% assign hac_left_has_image = false %}\n{% if hyperspeed_product != blank and hyperspeed_product.featured_image != blank %}\n  {% assign hac_left_has_image = true %}\n{% endif %}\n\n{% assign hac_right_has_image = false %}\n{% if hyperarmour_product != blank and hyperarmour_product.featured_image != blank %}\n  {% assign hac_right_has_image = true %}\n{% endif %}\n\n<style>\n  #hac-compare,\n  #hac-compare * {\n    box-sizing: border-box;\n  }\n\n  #hac-compare {\n    width: 100%;\n    padding: clamp(76px, 8vw, 120px) 20px clamp(82px, 8vw, 126px);\n    background: #000;\n    color: #fff;\n    font-family: inherit;\n  }\n\n  #hac-compare * {\n    font-family: inherit;\n  }\n\n  .hac-inner {\n    width: 100%;\n    max-width: 1180px;\n    margin: 0 auto;\n  }\n\n  /* =========================\n     HEADING\n  ========================= */\n\n  .hac-heading {\n    max-width: 780px;\n    margin: 0 auto 34px;\n    text-align: center;\n  }\n\n  .hac-kicker {\n    margin: 0 0 12px;\n    color: rgba(255,255,255,.38);\n    font-size: 11px;\n    line-height: 1;\n    font-weight: 650;\n    letter-spacing: .16em;\n    text-transform: uppercase;\n  }\n\n  .hac-heading h2 {\n    margin: 0;\n    color: #fff;\n    font-size: clamp(40px, 5.4vw, 72px);\n    line-height: .95;\n    font-weight: 650;\n    letter-spacing: -.06em;\n  }\n\n  .hac-heading-copy {\n    max-width: 560px;\n    margin: 18px auto 0;\n    color: rgba(255,255,255,.48);\n    font-size: clamp(14px, 1.3vw, 17px);\n    line-height: 1.5;\n  }\n\n  /* =========================\n     DROPDOWN\n  ========================= */\n\n  .hac-selector {\n    width: min(100%, 360px);\n    margin: 0 auto 28px;\n  }\n\n  .hac-selector-label {\n    margin: 0 0 10px 15px;\n    color: rgba(255,255,255,.9);\n    font-size: 13px;\n    line-height: 1.2;\n    font-weight: 600;\n  }\n\n  .hac-select-shell {\n    position: relative;\n    width: 100%;\n  }\n\n  .hac-select {\n    width: 100%;\n    height: 52px;\n    appearance: none;\n    -webkit-appearance: none;\n    padding: 0 52px 0 18px;\n    border: 1px solid rgba(255,255,255,.28);\n    border-radius: 999px;\n    outline: none;\n    background:\n      linear-gradient(\n        180deg,\n        rgba(255,255,255,.05),\n        rgba(255,255,255,.015)\n      ),\n      #0b0c0e;\n    color: #fff;\n    font-size: 14px;\n    line-height: 1;\n    font-weight: 600;\n    cursor: pointer;\n    box-shadow:\n      inset 0 1px 0 rgba(255,255,255,.05),\n      0 10px 26px rgba(0,0,0,.22);\n    transition:\n      border-color .2s ease,\n      background .2s ease,\n      transform .2s ease;\n  }\n\n  .hac-select:hover,\n  .hac-select:focus {\n    border-color: rgba(255,255,255,.42);\n    background:\n      linear-gradient(\n        180deg,\n        rgba(255,255,255,.075),\n        rgba(255,255,255,.02)\n      ),\n      #0d0e10;\n  }\n\n  .hac-select-shell::after {\n    content: \"\";\n    position: absolute;\n    top: 50%;\n    right: 20px;\n    width: 8px;\n    height: 8px;\n    border-right: 1.5px solid #2fe0c2;\n    border-bottom: 1.5px solid #2fe0c2;\n    transform: translateY(-68%) rotate(45deg);\n    pointer-events: none;\n  }\n\n  /* =========================\n     MAIN CARD\n  ========================= */\n\n  .hac-card {\n    position: relative;\n    overflow: hidden;\n    border: 1px solid rgba(255,255,255,.13);\n    border-radius: 32px;\n    background:\n      radial-gradient(\n        ellipse at 50% 0%,\n        rgba(47,224,194,.06),\n        transparent 38%\n      ),\n      linear-gradient(\n        145deg,\n        #111316 0%,\n        #08090b 48%,\n        #030405 100%\n      );\n    box-shadow:\n      inset 0 1px 0 rgba(255,255,255,.04),\n      0 34px 90px rgba(0,0,0,.3);\n  }\n\n  /* =========================\n     PRODUCT TOP — single unified grid\n     (media + copy used to be two separate grids kept in sync by\n     matching CSS values — safer as one grid with named areas, so\n     there's exactly one source of truth for column widths.)\n  ========================= */\n\n  .hac-products {\n    padding: clamp(34px, 4vw, 54px) clamp(18px, 4vw, 48px) 24px;\n  }\n\n  .hac-row-grid {\n    display: grid;\n    grid-template-columns: minmax(0, 1fr) 70px minmax(0, 1fr);\n    grid-template-areas:\n      \"leftmedia   vs  rightmedia\"\n      \"leftcopy    .   rightcopy\";\n    align-items: start;\n    gap: clamp(14px, 3vw, 34px);\n  }\n\n  .hac-media-left  { grid-area: leftmedia; }\n  .hac-media-right { grid-area: rightmedia; }\n\n  .hac-copy-col {\n    min-width: 0;\n    width: 100%;\n    text-align: center;\n    margin-top: 17px;\n  }\n\n  .hac-copy-col--left  { grid-area: leftcopy; }\n  .hac-copy-col--right { grid-area: rightcopy; }\n\n  .hac-product-media {\n    position: relative;\n    aspect-ratio: 4 / 3;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    overflow: hidden;\n    border-radius: 14px;\n    background: #ffffff;\n    isolation: isolate;\n  }\n\n  .hac-product-media::before {\n    content: \"\";\n    position: absolute;\n    z-index: 0;\n    left: 50%;\n    bottom: 2%;\n    width: 70%;\n    height: 28px;\n    transform: translateX(-50%);\n    border-radius: 50%;\n    background: transparent;\n    filter: none;\n    opacity: 0;\n  }\n\n  .hac-product-media img {\n    position: absolute;\n    z-index: 1;\n    inset: 0;\n    display: block;\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n    object-position: center center;\n    border-radius: inherit;\n    transition: transform .55s cubic-bezier(.16,1,.3,1);\n  }\n\n  .hac-product-media:hover img {\n    transform: scale(1.02);\n  }\n\n  .hac-placeholder {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 10px;\n    border-radius: inherit;\n    background:\n      radial-gradient(\n        ellipse at 50% 40%,\n        rgba(47,224,194,.10),\n        transparent 70%\n      ),\n      linear-gradient(\n        180deg,\n        rgba(255,255,255,.045),\n        rgba(255,255,255,.01)\n      );\n  }\n\n  .hac-placeholder-icon {\n    width: 38px;\n    height: 38px;\n    color: rgba(47,224,194,.5);\n  }\n\n  .hac-placeholder-text {\n    color: rgba(255,255,255,.36);\n    font-size: 11px;\n    font-weight: 650;\n    letter-spacing: .08em;\n    text-transform: uppercase;\n  }\n\n  .hac-product-name {\n    margin: 0;\n    color: #fff;\n    font-size: clamp(20px, 2.2vw, 29px);\n    line-height: 1;\n    font-weight: 650;\n    letter-spacing: -.04em;\n  }\n\n  .hac-product-badge {\n    display: inline-block;\n    margin: 10px 0 0;\n    padding: 4px 12px;\n    border: 1px solid rgba(47,224,194,.4);\n    border-radius: 999px;\n    background: rgba(47,224,194,.08);\n    color: #2fe0c2;\n    font-size: 10px;\n    font-weight: 700;\n    letter-spacing: .1em;\n    text-transform: uppercase;\n  }\n\n  .hac-product-note {\n    max-width: 320px;\n    min-height: 42px;\n    margin: 10px auto 0;\n    color: rgba(255,255,255,.42);\n    font-size: 12px;\n    line-height: 1.42;\n  }\n\n  .hac-vs {\n    grid-area: vs;\n    align-self: center;\n    color: rgba(255,255,255,.34);\n    font-size: 11px;\n    font-weight: 650;\n    letter-spacing: .18em;\n    text-transform: uppercase;\n    text-align: center;\n  }\n\n  /* =========================\n     COMPARISON TABLE\n  ========================= */\n\n  .hac-table {\n    padding: 12px clamp(18px, 4vw, 48px) 50px;\n  }\n\n  .hac-row {\n    display: grid;\n    grid-template-columns:\n      minmax(0, 1fr)\n      minmax(120px, 170px)\n      minmax(0, 1fr);\n    align-items: center;\n    gap: clamp(12px, 3vw, 34px);\n    min-height: 74px;\n    border-top: 1px solid rgba(255,255,255,.085);\n  }\n\n  .hac-value {\n    color: #fff;\n    font-size: clamp(15px, 1.7vw, 20px);\n    line-height: 1.2;\n    font-weight: 560;\n    letter-spacing: -.02em;\n  }\n\n  .hac-value--left {\n    text-align: right;\n    color: rgba(255,255,255,.62);\n  }\n\n  .hac-value--right {\n    text-align: left;\n  }\n\n  .hac-value--muted {\n    color: rgba(255,255,255,.34);\n    font-weight: 500;\n  }\n\n  .hac-label {\n    color: rgba(255,255,255,.38);\n    font-size: 10px;\n    line-height: 1.1;\n    font-weight: 650;\n    letter-spacing: .14em;\n    text-align: center;\n    text-transform: uppercase;\n  }\n\n  /* =========================\n     BOTTOM MESSAGE\n  ========================= */\n\n  .hac-bottom {\n    padding: 12px 18px 52px;\n    text-align: center;\n  }\n\n  .hac-bottom-label {\n    margin: 0 0 12px;\n    color: rgba(255,255,255,.34);\n    font-size: 15px;\n    line-height: 1;\n    font-weight: 650;\n    letter-spacing: .15em;\n    text-transform: uppercase;\n  }\n\n  .hac-bottom h3 {\n    margin: 0;\n    color: #fff;\n    font-size: clamp(30px, 4vw, 52px);\n    line-height: .98;\n    font-weight: 620;\n    letter-spacing: -.05em;\n  }\n\n  .hac-bottom h3 span {\n    color: #2fe0c2;\n  }\n\n  .hac-bottom p {\n    max-width: 460px;\n    margin: 14px auto 0;\n    color: rgba(255,255,255,.4);\n    font-size: 13px;\n    line-height: 1.5;\n  }\n\n  /* =========================\n     SWITCH ANIMATION\n  ========================= */\n\n  .hac-switching {\n    opacity: .28 !important;\n    transform: translateY(5px) !important;\n  }\n\n  .hac-change {\n    transition:\n      opacity .18s ease,\n      transform .24s cubic-bezier(.16,1,.3,1);\n  }\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    #hac-compare {\n      padding: 64px 12px 72px;\n    }\n\n    .hac-heading {\n      margin-bottom: 28px;\n    }\n\n    .hac-heading h2 {\n      font-size: clamp(36px, 11vw, 48px);\n    }\n\n    .hac-heading-copy {\n      padding: 0 8px;\n      font-size: 13px;\n    }\n\n    .hac-selector {\n      width: 100%;\n      max-width: none;\n      margin-bottom: 18px;\n    }\n\n    .hac-selector-label {\n      margin-left: 15px;\n      font-size: 12px;\n    }\n\n    .hac-select {\n      height: 48px;\n      font-size: 13px;\n    }\n\n    .hac-card {\n      border-radius: 24px;\n    }\n\n    .hac-products {\n      padding: 27px 10px 18px;\n    }\n\n    .hac-row-grid {\n      grid-template-columns: minmax(0,1fr) 34px minmax(0,1fr);\n      gap: 7px;\n    }\n\n    .hac-copy-col {\n      margin-top: 12px;\n    }\n\n    .hac-product-media {\n      aspect-ratio: 2 / 3;\n      border-radius: 12px;\n    }\n\n    .hac-product-name {\n      font-size: 17px;\n    }\n\n    .hac-product-badge {\n      font-size: 10px;\n      padding: 4px 10px;\n    }\n\n    .hac-product-note {\n      min-height: 58px;\n      padding: 0 2px;\n      font-size: 11.5px;\n      line-height: 1.45;\n    }\n\n    .hac-vs {\n      font-size: 9px;\n    }\n\n    .hac-table {\n      padding: 8px 11px 34px;\n    }\n\n    .hac-row {\n      grid-template-columns:\n        minmax(0, 1fr)\n        minmax(88px, 102px)\n        minmax(0, 1fr);\n      gap: 8px;\n      min-height: 78px;\n    }\n\n    .hac-value {\n      font-size: 14px;\n      line-height: 1.3;\n    }\n\n    .hac-label {\n      font-size: 10px;\n      line-height: 1.25;\n      letter-spacing: .075em;\n      font-weight: 700;\n    }\n\n    .hac-bottom {\n      padding: 8px 12px 38px;\n    }\n\n    .hac-bottom h3 {\n      font-size: 34px;\n    }\n\n    .hac-bottom p {\n      font-size: 13px;\n    }\n  }\n\n  @media screen and (max-width: 420px) {\n    .hac-placeholder-icon {\n      width: 30px;\n      height: 30px;\n    }\n\n    .hac-placeholder-text {\n      font-size: 9.5px;\n    }\n\n    .hac-product-name {\n      font-size: 15px;\n    }\n\n    .hac-product-note {\n      font-size: 10.5px;\n      line-height: 1.45;\n    }\n\n    .hac-row {\n      grid-template-columns:\n        minmax(0, 1fr)\n        84px\n        minmax(0, 1fr);\n      min-height: 74px;\n    }\n\n    .hac-value {\n      font-size: 13px;\n    }\n\n    .hac-label {\n      font-size: 9.5px;\n      line-height: 1.3;\n      letter-spacing: .07em;\n    }\n  }\n</style>\n\n<section id=\"hac-compare\">\n  <div class=\"hac-inner\">\n\n    <div class=\"hac-heading\">\n      <p class=\"hac-kicker\">HYPERARMOUR VS THE LINEUP</p>\n\n      <h2>The last one standing.</h2>\n\n      <p class=\"hac-heading-copy\">\n        Most shoes hold up for a match or two. Hyperarmour is the one still gripping,\n        still cushioning, still locked in by the third game.\n      </p>\n    </div>\n\n    <div class=\"hac-selector\">\n      <p class=\"hac-selector-label\">\n        Select a shoe to compare to Hyperarmour:\n      </p>\n\n      <div class=\"hac-select-shell\">\n        <select\n          class=\"hac-select\"\n          id=\"hac-model-select\"\n          aria-label=\"Select a shoe to compare against Hyperarmour\"\n        >\n          <option value=\"hyperspeed\">Hyperspeed</option>\n          <option value=\"razeproii\">Raze Pro II</option>\n          <option value=\"razepro\">Raze Pro</option>\n          <option value=\"bladepro\">Blade Pro</option>\n          <option value=\"courtstarpro\">Court Star Pro</option>\n        </select>\n      </div>\n    </div>\n\n    <div class=\"hac-card\">\n\n      <!-- =========================\n           PRODUCT TOP\n      ========================== -->\n\n      <div class=\"hac-products\">\n\n        <div class=\"hac-row-grid\">\n\n          <div class=\"hac-product-media hac-media-left hac-change\" id=\"hac-left-media\">\n            {% if hac_left_has_image %}\n              <img\n                id=\"hac-left-image\"\n                src=\"{{ hyperspeed_product.featured_image | image_url: width: 900 }}\"\n                srcset=\"\n                  {{ hyperspeed_product.featured_image | image_url: width: 400 }} 400w,\n                  {{ hyperspeed_product.featured_image | image_url: width: 700 }} 700w,\n                  {{ hyperspeed_product.featured_image | image_url: width: 1000 }} 1000w\n                \"\n                sizes=\"(max-width: 749px) 42vw, 42vw\"\n                alt=\"Hyperspeed\"\n                loading=\"eager\"\n                fetchpriority=\"high\"\n                decoding=\"async\"\n              >\n            {% else %}\n              <div class=\"hac-placeholder\">\n                <svg class=\"hac-placeholder-icon\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">\n                  <path d=\"M6 33c1.5-6.5 7-11 14-11h5.5l11 6.2c3.3 1.9 5.5 3.3 5.5 6 0 2.2-2.3 3.8-5.5 3.8H11c-3.3 0-5.6-1.9-5-5z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"/>\n                  <path d=\"M15 22c1.2-3.2 4.3-5.5 8-5.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n                  <path d=\"M13 33.5h27\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" opacity=\".5\"/>\n                </svg>\n                <span class=\"hac-placeholder-text\">Photo coming soon</span>\n              </div>\n            {% endif %}\n          </div>\n\n          <div class=\"hac-vs\">VS</div>\n\n          <div class=\"hac-product-media hac-media-right\">\n            {% if hac_right_has_image %}\n              <img\n                src=\"{{ hyperarmour_product.featured_image | image_url: width: 900 }}\"\n                srcset=\"\n                  {{ hyperarmour_product.featured_image | image_url: width: 400 }} 400w,\n                  {{ hyperarmour_product.featured_image | image_url: width: 700 }} 700w,\n                  {{ hyperarmour_product.featured_image | image_url: width: 1000 }} 1000w\n                \"\n                sizes=\"(max-width: 749px) 42vw, 42vw\"\n                alt=\"Hyperarmour\"\n                loading=\"eager\"\n                fetchpriority=\"high\"\n                decoding=\"async\"\n              >\n            {% else %}\n              <img\n                src=\"{{ hac_fallback_image }}\"\n                alt=\"Hyperarmour\"\n                loading=\"eager\"\n                fetchpriority=\"high\"\n                decoding=\"async\"\n              >\n            {% endif %}\n          </div>\n\n          <div class=\"hac-copy-col hac-copy-col--left hac-change\">\n            <h3 class=\"hac-product-name\" id=\"hac-left-name\">Hyperspeed</h3>\n            <p class=\"hac-product-note\" id=\"hac-left-note\">\n              Comfort-first ride. Not built for hard, repeated grinding.\n            </p>\n          </div>\n\n          <div class=\"hac-copy-col hac-copy-col--right\">\n            <h3 class=\"hac-product-name\">Hyperarmour</h3>\n            <span class=\"hac-product-badge\">New Launch</span>\n            <p class=\"hac-product-note\">\n              Built to hold its shape, grip, and cushioning through the last rally,\n              not just the first.\n            </p>\n          </div>\n\n        </div>\n\n      </div>\n\n\n      <!-- =========================\n           TEXT-ONLY SPECS\n      ========================== -->\n\n      <div class=\"hac-table\">\n\n        <div class=\"hac-row\">\n          <div class=\"hac-value hac-value--left hac-change\" id=\"hac-bestfor\">\n            Comfort, casual sessions\n          </div>\n          <div class=\"hac-label\">Best For</div>\n          <div class=\"hac-value hac-value--right\">\n            Extended, multi-game sessions\n          </div>\n        </div>\n\n        <div class=\"hac-row\">\n          <div class=\"hac-value hac-value--left hac-change\" id=\"hac-midsole\">\n            Comfort-tuned cushioning\n          </div>\n          <div class=\"hac-label\">Midsole</div>\n          <div class=\"hac-value hac-value--right\">\n            Hexafoam + heel-zone X-Cushion\n          </div>\n        </div>\n\n        <div class=\"hac-row\">\n          <div class=\"hac-value hac-value--left hac-change hac-value--muted\" id=\"hac-midfoot\">\n            Not featured\n          </div>\n          <div class=\"hac-label\">Midfoot Support</div>\n          <div class=\"hac-value hac-value--right\">\n            Carbon plate cuts flex, lowers injury risk\n          </div>\n        </div>\n\n        <div class=\"hac-row\">\n          <div class=\"hac-value hac-value--left hac-change\" id=\"hac-outsole\">\n            Non-marking outsole\n          </div>\n          <div class=\"hac-label\">Outsole &amp; Traction</div>\n          <div class=\"hac-value hac-value--right\">\n            Honeycomb, 6-direction pivot points\n          </div>\n        </div>\n\n        <div class=\"hac-row\">\n          <div class=\"hac-value hac-value--left hac-change\" id=\"hac-upper\">\n            Standard breathable mesh\n          </div>\n          <div class=\"hac-label\">Upper</div>\n          <div class=\"hac-value hac-value--right\">\n            TPU overlays + mesh + Aerovents\n          </div>\n        </div>\n\n      </div>\n\n\n      <!-- =========================\n           BOTTOM\n      ========================== -->\n\n      <div class=\"hac-bottom\">\n\n        <p class=\"hac-bottom-label\">THE DIFFERENCE</p>\n\n        <h3>\n          Built for one match.<br>\n          <span>Or built for the whole session.</span>\n        </h3>\n\n        <p>\n          Every shoe in the lineup grips well on rally one. Hyperarmour is the\n          only one engineered carbon plate, heel-zone cushioning, honeycomb\n          pivot outsole - to still be gripping exactly the same way on rally\n          two hundred.\n        </p>\n\n      </div>\n\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n\n  var section = document.getElementById('hac-compare');\n  if (!section) { return; }\n\n  var select = section.querySelector('#hac-model-select');\n  if (!select) { return; }\n\n  var data = {\n\n    hyperspeed: {\n      name: 'Hyperspeed',\n      note: 'Comfort-first ride. Not built for hard, repeated grinding.',\n      bestfor: 'Comfort, casual sessions',\n      midsole: 'Comfort-tuned cushioning',\n      midfoot: 'Not featured',\n      outsole: 'Non-marking outsole',\n      upper: 'Standard breathable mesh',\n      image: {{ hyperspeed_product.featured_image | image_url: width: 900 | json }}\n    },\n\n    razeproii: {\n      name: 'Raze Pro II',\n      note: 'Solid cushioning on day one-ages fast under repeated load.',\n      bestfor: 'Standard club play',\n      midsole: 'X-Cushion sole + HexaFoam Pro',\n      midfoot: 'Not featured',\n      outsole: 'Multi-layer outsole, Active Grip, heel lock',\n      upper: 'Standard mesh upper',\n      image: {{ razeproii_product.featured_image | image_url: width: 900 | json }}\n    },\n\n    razepro: {\n      name: 'Raze Pro',\n      note: 'Same core cushioning tech as Pro II, earlier-generation build.',\n      bestfor: 'Standard club play',\n      midsole: 'X-Cushion sole + HexaFoam Pro',\n      midfoot: 'Not featured',\n      outsole: 'Multi-layer outsole, Active Grip, heel lock',\n      upper: 'Standard mesh upper',\n      image: {{ razepro_product.featured_image | image_url: width: 900 | json }}\n    },\n\n    bladepro: {\n      name: 'Blade Pro',\n      note: 'Light and flexible-trades away lateral lockdown for it.',\n      bestfor: 'Light, fast footwork',\n      midsole: 'X-Cushion midsole',\n      midfoot: 'Not featured',\n      outsole: 'Hexagonal sole design',\n      upper: 'TPU + mesh upper',\n      image: {{ bladepro_product.featured_image | image_url: width: 900 | json }}\n    },\n\n    courtstarpro: {\n      name: 'Court Star Pro',\n      note: 'The budget pick:general-purpose cushioning, no standout tech.',\n      bestfor: 'Entry-level, casual play',\n      midsole: 'Cushioned midsole',\n      midfoot: 'Not featured',\n      outsole: 'Reinforced Active Grip, heel lock',\n      upper: 'Mesh + PU upper',\n      image: {{ courtstarpro_product.featured_image | image_url: width: 900 | json }}\n    }\n\n  };\n\n\n  function srcSetFor(url) {\n    if (!url) { return ''; }\n    var base = url.split('?')[0];\n    var params = url.indexOf('?') > -1 ? url.split('?')[1] : '';\n    function withWidth(w) {\n      var sep = params ? '&' : '';\n      return base + '?' + params + sep + 'width=' + w;\n    }\n    return [\n      withWidth(400) + ' 400w',\n      withWidth(700) + ' 700w',\n      withWidth(1000) + ' 1000w'\n    ].join(', ');\n  }\n\n  var preloadCache = {};\n\n  function warmImage(url) {\n    if (!url || preloadCache[url]) {\n      return preloadCache[url] || Promise.resolve();\n    }\n    var preloader = new Image();\n    preloader.decoding = 'async';\n    preloader.srcset = srcSetFor(url);\n    preloader.sizes = '(max-width: 749px) 42vw, 42vw';\n    preloader.src = url;\n\n    var ready = preloader.decode\n      ? preloader.decode().catch(function () {})\n      : new Promise(function (resolve) {\n          preloader.onload = resolve;\n          preloader.onerror = resolve;\n        });\n\n    preloadCache[url] = ready;\n    return ready;\n  }\n\n  Object.keys(data).forEach(function (key) {\n    warmImage(data[key].image);\n  });\n\n  var image = section.querySelector('#hac-left-image');\n  var name = section.querySelector('#hac-left-name');\n  var note = section.querySelector('#hac-left-note');\n  var bestfor = section.querySelector('#hac-bestfor');\n  var midsole = section.querySelector('#hac-midsole');\n  var midfoot = section.querySelector('#hac-midfoot');\n  var outsole = section.querySelector('#hac-outsole');\n  var upper = section.querySelector('#hac-upper');\n  var changing = section.querySelectorAll('.hac-change');\n\n  function setSwitching(state) {\n    changing.forEach(function (el) {\n      el.classList.toggle('hac-switching', state);\n    });\n  }\n\n  var compareRequest = 0;\n\n  function updateCompare(key) {\n    var requestId = ++compareRequest;\n    var item = data[key];\n    if (!item) { return; }\n\n    setSwitching(true);\n\n    warmImage(item.image).then(function () {\n      if (requestId !== compareRequest) { return; }\n\n      if (name) { name.textContent = item.name; }\n      if (note) { note.textContent = item.note; }\n      if (bestfor) { bestfor.textContent = item.bestfor; }\n      if (midsole) { midsole.textContent = item.midsole; }\n      if (midfoot) { midfoot.textContent = item.midfoot; }\n      if (outsole) { outsole.textContent = item.outsole; }\n      if (upper) { upper.textContent = item.upper; }\n\n      if (image && item.image) {\n        image.srcset = srcSetFor(item.image);\n        image.sizes = '(max-width: 749px) 42vw, 42vw';\n        image.src = item.image;\n        image.alt = item.name;\n      }\n\n      requestAnimationFrame(function () {\n        setSwitching(false);\n      });\n    });\n  }\n\n  select.addEventListener('change', function () {\n    updateCompare(this.value);\n  });\n\n})();\n</script>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_ceFCac": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hyper-cta\">\n\n  <p class=\"hyper-cta-kicker\">\n    THE ENDURANCE SHOE\n  </p>\n\n  <h2 class=\"hyper-cta-title\">\n    Over Engineered. Undefeated.\n  </h2>\n\n  <p class=\"hyper-cta-description\">\n    Leave Nothing on the Court with HNDRD Hyperarmour\n  </p>\n\n  <a href=\"https://in.hndrd.co/products/hyper-armour\" class=\"hyper-cta-button\">\n    SHOP HYPERARMOUR\n  </a>\n\n</section>\n\n<style>\n\n  .hyper-cta,\n  .hyper-cta * {\n    box-sizing: border-box;\n  }\n\n  .hyper-cta {\n    width: 100%;\n    padding: 80px 20px 90px;\n    text-align: center;\n    background: #000;\n    font-family: inherit;\n  }\n\n\n  .hyper-cta-kicker {\n    margin: 0 0 16px;\n    color: rgba(255,255,255,.42);\n\n    font-size: 14px;\n    line-height: 1;\n\n    font-weight: 750;\n\n    letter-spacing: .16em;\n    text-transform: uppercase;\n  }\n\n\n  .hyper-cta-title {\n    max-width: 900px;\n    margin: 0 auto;\n\n    font-size: clamp(48px, 5.6vw, 8px);\n    line-height: .95;\n\n    font-weight: 800;\n\n    letter-spacing: -.055em;\n\n    background-image: linear-gradient(\n      to right,\n      #8CEB8A 0%,\n      #5DDFB7 48%,\n      #48BFD8 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  .hyper-cta-description {\n    max-width: 620px;\n\n    margin: 28px auto 0;\n\n    color: rgba(255,255,255,.43);\n\n    font-size: 18px;\n    line-height: 1.5;\n\n    font-weight: 450;\n\n    letter-spacing: -.015em;\n  }\n\n\n  .hyper-cta-button {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    margin-top: 34px;\n\n    min-height: 52px;\n\n    padding: 0 34px;\n\n    border: 1.5px solid #2fe0c2;\n    border-radius: 999px;\n\n    background: transparent;\n    color: #fff;\n\n    font-size: 12px;\n    line-height: 1;\n\n    font-weight: 750;\n\n    letter-spacing: .09em;\n\n    text-decoration: none;\n\n    transition:\n      background .25s ease,\n      color .25s ease,\n      transform .25s ease,\n      box-shadow .25s ease;\n  }\n\n\n  \n\n    transform: translateY(-2px);\n\n    box-shadow:\n      0 10px 30px rgba(47,224,194,.15);\n  }\n\n\n  @media screen and (max-width: 749px) {\n\n    .hyper-cta {\n      padding: 64px 16px 72px;\n    }\n\n\n    .hyper-cta-kicker {\n      margin-bottom: 13px;\n\n      font-size: 11px;\n      font-weight: 750;\n\n      letter-spacing: .15em;\n    }\n\n\n    .hyper-cta-title {\n      max-width: 390px;\n\n      font-size: clamp(40px, 12vw, 54px);\n      line-height: .96;\n\n      font-weight: 800;\n\n      letter-spacing: -.055em;\n    }\n\n\n    .hyper-cta-description {\n      max-width: 340px;\n\n      margin-top: 23px;\n\n      font-size: 15px;\n      line-height: 1.5;\n\n      font-weight: 450;\n    }\n\n\n    .hyper-cta-button {\n      margin-top: 28px;\n\n      min-height: 50px;\n\n      padding: 0 29px;\n\n      font-size: 11px;\n      font-weight: 750;\n    }\n\n  }\n\n\n  @media screen and (max-width: 420px) {\n\n    .hyper-cta-title {\n      font-size: 39px;\n    }\n\n  }\n\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_LW3CjH",
+    "media_pXzJ7f",
+    "hero_video_component_e8X8PY",
+    "custom_liquid_whHTcA",
+    "media_hiBFN9",
+    "custom_liquid_pX3CYh",
+    "media_gxHEbG",
+    "custom_liquid_rhUah4",
+    "hero_component_MaVYaG",
+    "custom_liquid_pMCXET",
+    "media_Fp4xqn",
+    "custom_liquid_kcf9aP",
+    "image_with_text_YGQ3Pa",
+    "image_with_text_AAWtCq",
+    "image_with_text_7dYiHP",
+    "image_with_text_Kxdy9z",
+    "image_with_text_c6RhH7",
+    "custom_liquid_KKwXjx",
+    "multicolumn_zieGnW",
+    "rich_text_3d3gL3",
+    "media_QE4AML",
+    "media_ag6DY6",
+    "custom_liquid_NypUWg",
+    "custom_liquid_ceFCac"
+  ]
+}
