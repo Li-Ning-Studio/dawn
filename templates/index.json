@@ -472,7 +472,7 @@
         "scroll_boost": 125,
         "veil_strength": 90,
         "veil_spread": 70,
-        "bg_color": "#362929",
+        "bg_color": "#000000",
         "text_color": "#ffffff",
         "accent_color": "#e79c1f",
         "min_height": 660,
@@ -480,6 +480,59 @@
         "side_padding": 24,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "featured_blog_UD8AUf": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "",
+        "post_limit": 3,
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "image_ratio": "adapt",
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_E36XMe": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_kawD9M": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_ENh4tR": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_xJtt3j": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_kawD9M",
+        "paragraph_ENh4tR",
+        "email_form_xJtt3j"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -490,6 +543,8 @@
     "featured_collection_VRmapC",
     "178937964221a5e8a3",
     "players_a6MmMr",
-    "story_columns_piHic9"
+    "story_columns_piHic9",
+    "featured_blog_UD8AUf",
+    "newsletter_E36XMe"
   ]
 }
