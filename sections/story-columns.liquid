@@ -1,6 +1,7 @@
 {%- liquid
   assign columns = section.settings.columns | plus: 0
   assign columns_mobile = section.settings.columns_mobile | plus: 0
+  assign brightness = 100 | minus: section.settings.dim_strength | divided_by: 100.0
 -%}
 
 <style>
@@ -53,39 +54,20 @@
     aspect-ratio: {{ section.settings.image_ratio }};
   }
 
+  /* Dæmpningen ligger direkte på billederne */
   #shopify-section-{{ section.id }} .cols__item img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  /* Dæmper alle billeder ensartet */
-  #shopify-section-{{ section.id }} .cols__blur {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    {%- if section.settings.tint_blur > 0 -%}
-    -webkit-backdrop-filter: blur({{ section.settings.tint_blur }}px);
-    backdrop-filter: blur({{ section.settings.tint_blur }}px);
-    {%- endif -%}
-  }
-
-  #shopify-section-{{ section.id }} .cols__tint {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    background-color: {{ section.settings.tint_color }};
-    opacity: {{ section.settings.tint_strength | divided_by: 100.0 }};
+    filter: brightness({{ brightness }}) saturate({{ section.settings.dim_saturation | divided_by: 100.0 }}){% if section.settings.dim_blur > 0 %} blur({{ section.settings.dim_blur }}px){% endif %};
   }
 
   #shopify-section-{{ section.id }} .cols__veil {
     position: absolute;
     inset: 0;
-    pointer-events: none;
     z-index: 1;
+    pointer-events: none;
     background:
       linear-gradient(to bottom, {{ section.settings.bg_color }} 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, {{ section.settings.bg_color }} 100%),
       radial-gradient(ellipse {{ section.settings.veil_spread }}% 70% at 50% 50%, {{ section.settings.bg_color }} 0%, {{ section.settings.bg_color }} 30%, rgba(0,0,0,0) 100%);
@@ -126,7 +108,7 @@
     text-transform: uppercase;
     color: {{ section.settings.heading_color }};
     opacity: {{ section.settings.heading_opacity | divided_by: 100.0 }};
-    text-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 10px 50px rgba(0, 0, 0, 0.85);
     {% if section.settings.heading_italic %}font-style: italic;{% endif %}
   }
 
@@ -136,7 +118,7 @@
     line-height: 1.7;
     color: {{ section.settings.body_color }};
     opacity: {{ section.settings.body_opacity | divided_by: 100.0 }};
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75);
   }
 
   #shopify-section-{{ section.id }} .cols__body > * {
@@ -251,8 +233,6 @@
     {%- endfor -%}
   </div>
 
-  <div class="cols__blur" aria-hidden="true"></div>
-  <div class="cols__tint" aria-hidden="true"></div>
   <div class="cols__veil" aria-hidden="true"></div>
 
   <div class="cols__card">
@@ -383,6 +363,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    { "type": "header", "content": "Dæmp billederne", "info": "Lægges direkte på hvert billede." },
+    { "type": "range", "id": "dim_strength", "label": "Hvor meget mørkere", "min": 0, "max": 90, "step": 5, "unit": "%", "default": 55 },
+    { "type": "range", "id": "dim_saturation", "label": "Farvemætning", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 100, "info": "Skru ned for et mere afdæmpet, ensartet udtryk. 0 giver sort-hvid." },
+    { "type": "range", "id": "dim_blur", "label": "Slør billederne", "min": 0, "max": 12, "step": 1, "unit": "px", "default": 0 },
+
     { "type": "header", "content": "Spalte 1" },
     { "type": "image_picker", "id": "col1_image1", "label": "Billede 1" },
     { "type": "image_picker", "id": "col1_image2", "label": "Billede 2" },
@@ -412,11 +397,6 @@
     { "type": "image_picker", "id": "col6_image1", "label": "Billede 1" },
     { "type": "image_picker", "id": "col6_image2", "label": "Billede 2" },
     { "type": "image_picker", "id": "col6_image3", "label": "Billede 3" },
-
-    { "type": "header", "content": "Overlay på billederne", "info": "Dæmper alle billeder ensartet, så teksten træder frem." },
-    { "type": "color", "id": "tint_color", "label": "Overlayets farve", "default": "#000000" },
-    { "type": "range", "id": "tint_strength", "label": "Overlayets styrke", "min": 0, "max": 90, "step": 5, "unit": "%", "default": 45 },
-    { "type": "range", "id": "tint_blur", "label": "Slør billederne", "min": 0, "max": 12, "step": 1, "unit": "px", "default": 0, "info": "0 holder billederne skarpe." },
 
     { "type": "header", "content": "Tekst" },
     { "type": "text", "id": "eyebrow", "label": "Lille tekst øverst", "default": "The story behind" },
