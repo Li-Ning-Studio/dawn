@@ -59,10 +59,25 @@
     object-fit: cover;
   }
 
+  /* Dæmper alle billeder ensartet */
+  #shopify-section-{{ section.id }} .cols__tint {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: {{ section.settings.tint_color }};
+    opacity: {{ section.settings.tint_strength | divided_by: 100.0 }};
+    {%- if section.settings.tint_blur > 0 -%}
+    -webkit-backdrop-filter: blur({{ section.settings.tint_blur }}px);
+    backdrop-filter: blur({{ section.settings.tint_blur }}px);
+    {%- endif -%}
+  }
+
   #shopify-section-{{ section.id }} .cols__veil {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    z-index: 1;
     background:
       linear-gradient(to bottom, {{ section.settings.bg_color }} 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, {{ section.settings.bg_color }} 100%),
       radial-gradient(ellipse {{ section.settings.veil_spread }}% 70% at 50% 50%, {{ section.settings.bg_color }} 0%, {{ section.settings.bg_color }} 30%, rgba(0,0,0,0) 100%);
@@ -113,6 +128,7 @@
     line-height: 1.7;
     color: {{ section.settings.body_color }};
     opacity: {{ section.settings.body_opacity | divided_by: 100.0 }};
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
   }
 
   #shopify-section-{{ section.id }} .cols__body > * {
@@ -227,6 +243,7 @@
     {%- endfor -%}
   </div>
 
+  <div class="cols__tint" aria-hidden="true"></div>
   <div class="cols__veil" aria-hidden="true"></div>
 
   <div class="cols__card">
@@ -387,6 +404,11 @@
     { "type": "image_picker", "id": "col6_image2", "label": "Billede 2" },
     { "type": "image_picker", "id": "col6_image3", "label": "Billede 3" },
 
+    { "type": "header", "content": "Overlay på billederne", "info": "Dæmper alle billeder ensartet, så teksten træder frem." },
+    { "type": "color", "id": "tint_color", "label": "Overlayets farve", "default": "#000000" },
+    { "type": "range", "id": "tint_strength", "label": "Overlayets styrke", "min": 0, "max": 90, "step": 5, "unit": "%", "default": 45 },
+    { "type": "range", "id": "tint_blur", "label": "Slør billederne", "min": 0, "max": 12, "step": 1, "unit": "px", "default": 0, "info": "0 holder billederne skarpe." },
+
     { "type": "header", "content": "Tekst" },
     { "type": "text", "id": "eyebrow", "label": "Lille tekst øverst", "default": "The story behind" },
     { "type": "text", "id": "heading", "label": "Overskrift", "default": "HNDRD" },
@@ -400,7 +422,7 @@
     { "type": "richtext", "id": "body", "label": "Brødtekst", "default": "<p>Skriv historien her. Bag teksten kører alt det du har skudt — spillere, baner, lager.</p>" },
     { "type": "color", "id": "body_color", "label": "Brødtekstens farve", "default": "#ffffff" },
     { "type": "range", "id": "body_size", "label": "Brødtekstens størrelse", "min": 13, "max": 24, "step": 1, "unit": "px", "default": 17 },
-    { "type": "range", "id": "body_opacity", "label": "Brødtekstens styrke", "min": 40, "max": 100, "step": 5, "unit": "%", "default": 80 },
+    { "type": "range", "id": "body_opacity", "label": "Brødtekstens styrke", "min": 40, "max": 100, "step": 5, "unit": "%", "default": 90 },
     { "type": "select", "id": "align", "label": "Justering", "options": [{ "value": "flex-start", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "flex-end", "label": "Højre" }], "default": "center" },
     { "type": "select", "id": "text_align", "label": "Tekstjustering", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "right", "label": "Højre" }], "default": "center" },
     { "type": "range", "id": "card_width", "label": "Tekstens bredde", "min": 320, "max": 900, "step": 20, "unit": "px", "default": 620 },
@@ -422,7 +444,7 @@
     { "type": "range", "id": "scroll_boost", "label": "Ekstra fart ved scroll", "min": 0, "max": 600, "step": 25, "unit": "px", "default": 250, "info": "0 giver en jævn, rolig bevægelse." },
 
     { "type": "header", "content": "Slør bag teksten" },
-    { "type": "range", "id": "veil_strength", "label": "Slørets styrke", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 90 },
+    { "type": "range", "id": "veil_strength", "label": "Slørets styrke", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 60 },
     { "type": "range", "id": "veil_spread", "label": "Slørets bredde", "min": 30, "max": 120, "step": 5, "unit": "%", "default": 70 },
 
     { "type": "header", "content": "Sektion" },
