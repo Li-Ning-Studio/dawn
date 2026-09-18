@@ -60,17 +60,24 @@
   }
 
   /* Dæmper alle billeder ensartet */
+  #shopify-section-{{ section.id }} .cols__blur {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    {%- if section.settings.tint_blur > 0 -%}
+    -webkit-backdrop-filter: blur({{ section.settings.tint_blur }}px);
+    backdrop-filter: blur({{ section.settings.tint_blur }}px);
+    {%- endif -%}
+  }
+
   #shopify-section-{{ section.id }} .cols__tint {
     position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: 1;
-    background: {{ section.settings.tint_color }};
+    background-color: {{ section.settings.tint_color }};
     opacity: {{ section.settings.tint_strength | divided_by: 100.0 }};
-    {%- if section.settings.tint_blur > 0 -%}
-    -webkit-backdrop-filter: blur({{ section.settings.tint_blur }}px);
-    backdrop-filter: blur({{ section.settings.tint_blur }}px);
-    {%- endif -%}
   }
 
   #shopify-section-{{ section.id }} .cols__veil {
