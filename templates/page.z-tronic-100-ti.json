@@ -261,9 +261,9 @@
         "button_9yyg3q"
       ],
       "custom_css": [
-        "/* BUTTON GRADIENT BORDER */.button {border: 1.5px solid transparent !important; background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(180deg, #7c7872 50%, #37322c 100%) border-box !important;}",
-        ".button::after {box-shadow: none !important;}",
-        "/* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient(180deg, #7c7872 50%, #37322c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
+        "/* CTA - SINGLE COLOR BORDER */.button {border: 1.5px solid #7C7872 !important; background: transparent !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #7C7872 !important;}",
+        "/* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient( 180deg, #7C7872 50%, #37322C 100% ); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -314,8 +314,8 @@
         "button_YrXPTB"
       ],
       "custom_css": [
-        "/* BUTTON GRADIENT BORDER */.button {border: 1.5px solid transparent !important; background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(180deg, #7c7872 50%, #37322c 100%) border-box !important;}",
-        ".button::after {box-shadow: none !important;}",
+        "/* CTA - SINGLE COLOR BORDER */.button {border: 1.5px solid #7c7872 !important; background: transparent !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #7c7872 !important;}",
         "/* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient(180deg, #7c7872 50%, #37322c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
