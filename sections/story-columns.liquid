@@ -1,6 +1,5 @@
 {%- liquid
   assign columns = section.settings.columns | plus: 0
-  assign total = section.blocks.size
 -%}
 
 <style>
@@ -169,18 +168,44 @@
 
 <div class="cols" data-cols>
   <div class="cols__bg" aria-hidden="true">
-    {%- for i in (1..6) -%}
-      {%- assign col_index = forloop.index0 -%}
+    {%- for col in (1..6) -%}
+      {%- liquid
+        assign col_index = forloop.index0
+
+        case col_index
+          when 0
+            assign dir = '-1'
+            assign speed = 26
+          when 1
+            assign dir = '1'
+            assign speed = 34
+          when 2
+            assign dir = '-1'
+            assign speed = 22
+          when 3
+            assign dir = '1'
+            assign speed = 38
+          when 4
+            assign dir = '-1'
+            assign speed = 30
+          else
+            assign dir = '1'
+            assign speed = 42
+        endcase
+      -%}
       <div class="cols__col">
-        <div class="cols__track" data-cols-track data-dir="{% cycle '-1', '1', '-1', '1', '-1', '1' %}" data-speed="{% cycle 26, 34, 22, 38, 30, 42 %}">
+        <div class="cols__track" data-cols-track data-dir="{{ dir }}" data-speed="{{ speed }}">
           {%- for pass in (1..2) -%}
-            {%- for block in section.blocks -%}
-              {%- assign pos = forloop.index0 | modulo: 6 -%}
-              {%- if pos == col_index -%}
-                <div class="cols__item" {{ block.shopify_attributes }}>
-                  {%- if block.settings.image != blank -%}
+            {%- assign counter = 0 -%}
+            {%- for i in (1..18) -%}
+              {%- assign key = 'image_' | append: i -%}
+              {%- assign img = section.settings[key] -%}
+              {%- if img != blank -%}
+                {%- assign pos = counter | modulo: 6 -%}
+                {%- if pos == col_index -%}
+                  <div class="cols__item">
                     {{
-                      block.settings.image
+                      img
                       | image_url: width: 900
                       | image_tag:
                         loading: 'lazy',
@@ -188,8 +213,9 @@
                         sizes: '(min-width: 750px) 25vw, 50vw',
                         alt: ''
                     }}
-                  {%- endif -%}
-                </div>
+                  </div>
+                {%- endif -%}
+                {%- assign counter = counter | plus: 1 -%}
               {%- endif -%}
             {%- endfor -%}
           {%- endfor -%}
@@ -247,13 +273,14 @@
       function measure() {
         tracks.forEach(function (t) {
           t.half = t.el.scrollHeight / 2;
-          if (t.dir > 0) t.offset = -t.half;
+          if (t.dir > 0 && t.offset === 0) t.offset = -t.half;
         });
       }
 
       measure();
       window.addEventListener('resize', measure);
       window.setTimeout(measure, 600);
+      window.setTimeout(measure, 1500);
 
       var boost = 0;
       var lastY = window.scrollY;
@@ -322,8 +349,27 @@
   "name": "Billedspalter",
   "tag": "section",
   "class": "section",
-  "max_blocks": 30,
   "settings": [
+    { "type": "header", "content": "Billeder", "info": "Udfyld så mange du vil. De fordeles automatisk ud over spalterne. Mindst 12 giver det bedste resultat." },
+    { "type": "image_picker", "id": "image_1", "label": "Billede 1" },
+    { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
+    { "type": "image_picker", "id": "image_3", "label": "Billede 3" },
+    { "type": "image_picker", "id": "image_4", "label": "Billede 4" },
+    { "type": "image_picker", "id": "image_5", "label": "Billede 5" },
+    { "type": "image_picker", "id": "image_6", "label": "Billede 6" },
+    { "type": "image_picker", "id": "image_7", "label": "Billede 7" },
+    { "type": "image_picker", "id": "image_8", "label": "Billede 8" },
+    { "type": "image_picker", "id": "image_9", "label": "Billede 9" },
+    { "type": "image_picker", "id": "image_10", "label": "Billede 10" },
+    { "type": "image_picker", "id": "image_11", "label": "Billede 11" },
+    { "type": "image_picker", "id": "image_12", "label": "Billede 12" },
+    { "type": "image_picker", "id": "image_13", "label": "Billede 13" },
+    { "type": "image_picker", "id": "image_14", "label": "Billede 14" },
+    { "type": "image_picker", "id": "image_15", "label": "Billede 15" },
+    { "type": "image_picker", "id": "image_16", "label": "Billede 16" },
+    { "type": "image_picker", "id": "image_17", "label": "Billede 17" },
+    { "type": "image_picker", "id": "image_18", "label": "Billede 18" },
+
     { "type": "header", "content": "Tekst" },
     { "type": "text", "id": "eyebrow", "label": "Lille tekst øverst", "default": "The story behind" },
     { "type": "text", "id": "heading", "label": "Overskrift", "default": "HNDRD" },
@@ -347,7 +393,7 @@
     { "type": "color", "id": "button_text_color", "label": "Knaptekstfarve", "default": "#0a0a0a" },
     { "type": "color", "id": "button_border_color", "label": "Knapkant", "default": "rgba(0,0,0,0)" },
 
-    { "type": "header", "content": "Billedspalter" },
+    { "type": "header", "content": "Spalter" },
     { "type": "range", "id": "columns", "label": "Antal spalter (computer)", "min": 2, "max": 6, "step": 1, "default": 4 },
     { "type": "range", "id": "columns_mobile", "label": "Antal spalter (mobil)", "min": 1, "max": 3, "step": 1, "default": 2 },
     { "type": "select", "id": "image_ratio", "label": "Billedformat", "options": [{ "value": "1 / 1", "label": "Kvadratisk" }, { "value": "4 / 5", "label": "Højformat" }, { "value": "3 / 4", "label": "Højformat (høj)" }, { "value": "2 / 3", "label": "Højformat (meget høj)" }], "default": "3 / 4" },
@@ -356,7 +402,7 @@
     { "type": "range", "id": "scroll_boost", "label": "Ekstra fart ved scroll", "min": 0, "max": 600, "step": 25, "unit": "px", "default": 250, "info": "0 giver en jævn, rolig bevægelse." },
 
     { "type": "header", "content": "Slør bag teksten" },
-    { "type": "range", "id": "veil_strength", "label": "Slørets styrke", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 90, "info": "Skru ned hvis billederne må træde tydeligere frem." },
+    { "type": "range", "id": "veil_strength", "label": "Slørets styrke", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 90 },
     { "type": "range", "id": "veil_spread", "label": "Slørets bredde", "min": 30, "max": 120, "step": 5, "unit": "%", "default": 70 },
 
     { "type": "header", "content": "Sektion" },
@@ -369,24 +415,6 @@
     { "type": "range", "id": "padding_top", "label": "Afstand over", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 0 },
     { "type": "range", "id": "padding_bottom", "label": "Afstand under", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 0 }
   ],
-  "blocks": [
-    {
-      "type": "image",
-      "name": "Billede",
-      "settings": [
-        { "type": "image_picker", "id": "image", "label": "Billede" }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Billedspalter",
-      "blocks": [
-        { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" },
-        { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" },
-        { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" }
-      ]
-    }
-  ]
+  "presets": [{ "name": "Billedspalter" }]
 }
 {% endschema %}
