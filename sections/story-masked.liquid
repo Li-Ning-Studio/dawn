@@ -1,9 +1,18 @@
 {%- liquid
+  assign has_media = false
+  if section.settings.video != blank or section.settings.image != blank or section.settings.mobile_video != blank or section.settings.mobile_image != blank
+    assign has_media = true
+  endif
+
   if section.settings.knockout_mode == 'light'
     assign blend = 'screen'
   else
     assign blend = 'multiply'
   endif
+
+  unless has_media
+    assign blend = 'normal'
+  endunless
 -%}
 
 <style>
