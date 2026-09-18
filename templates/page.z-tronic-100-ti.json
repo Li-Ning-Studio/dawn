@@ -17,40 +17,34 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_LW3CjH": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "{% comment %}\n  HYPERARMOUR HERO BANNER\n  Hyperarmour hero with gradient headline\n  and teal outline CTA.\n{% endcomment %}\n\n{% assign hyperarmour_product = all_products['hyperarmour'] %}\n\n<style>\n\n  #hah-hero,\n  #hah-hero * {\n    box-sizing: border-box;\n  }\n\n\n  #hah-hero {\n    width: 100%;\n    padding: clamp(64px, 9vw, 130px) 20px;\n    background: #000;\n    color: #fff;\n    font-family: inherit;\n    text-align: center;\n    overflow: hidden;\n  }\n\n\n  #hah-hero * {\n    font-family: inherit;\n  }\n\n\n  .hah-inner {\n    width: 100%;\n    max-width: 1250px;\n    margin: 0 auto;\n  }\n\n\n  /* KICKER */\n\n  .hah-kicker {\n    margin: 0 0 14px;\n    color: rgba(255,255,255,.55);\n    font-size: clamp(13px, 1.2vw, 15px);\n    font-weight: 500;\n    letter-spacing: .01em;\n  }\n\n\n  /* HEADLINE */\n\n  .hah-headline {\n    display: block;\n    width: 100%;\n\n    margin: 0;\n    padding: 0 16px 8px;\n\n    font-size: clamp(40px, 5.8vw, 88px);\n    line-height: 1.08;\n\n    font-weight: 800;\n    letter-spacing: -.035em;\n\n    background: linear-gradient(\n      92deg,\n      #c9f24d 0%,\n      #6fe6a8 32%,\n      #2fe0c2 55%,\n      #35c2e0 72%,\n      #ff8a3d 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n\n    overflow: visible;\n  }\n\n\n  /* SUBHEAD */\n\n  .hah-subhead {\n    max-width: 720px;\n\n    margin: 20px auto 0;\n\n    color: rgba(255,255,255,.62);\n\n    font-size: clamp(14px, 1.5vw, 18px);\n\n    line-height: 1.5;\n\n    font-weight: 450;\n  }\n\n\n  /* CTA */\n\n  .hah-cta {\n    display: inline-flex;\n\n    align-items: center;\n\n    justify-content: center;\n\n    margin-top: clamp(28px, 3.4vw, 40px);\n\n    padding: 15px 40px;\n\n    border: 1.5px solid #2fe0c2;\n\n    border-radius: 999px;\n\n    background: transparent;\n\n    color: #fff;\n\n    font-size: 13px;\n\n    font-weight: 700;\n\n    letter-spacing: .12em;\n\n    text-transform: uppercase;\n\n    text-decoration: none;\n\n    transition:\n      border-color .2s ease,\n      transform .2s ease,\n      box-shadow .2s ease;\n  }\n\n\n  .hah-cta:hover {\n    background: transparent;\n\n    border-color: #2fe0c2;\n\n    color: #fff;\n\n    transform: translateY(-1px);\n  }\n\n\n  /* TABLET */\n\n  @media screen and (max-width: 1100px) {\n\n    .hah-headline {\n      font-size: clamp(44px, 7vw, 74px);\n      letter-spacing: -.03em;\n    }\n\n  }\n\n\n  /* MOBILE */\n\n  @media screen and (max-width: 560px) {\n\n    #hah-hero {\n      padding: 64px 18px;\n    }\n\n\n    .hah-inner {\n      max-width: 100%;\n    }\n\n\n    .hah-headline {\n      padding: 0 4px 6px;\n\n      font-size: clamp(40px, 12vw, 58px);\n\n      line-height: 1.05;\n\n      letter-spacing: -.035em;\n    }\n\n\n    .hah-subhead {\n      max-width: 340px;\n\n      margin-top: 18px;\n\n      font-size: 14px;\n\n      line-height: 1.55;\n    }\n\n\n    .hah-cta {\n      padding: 13px 34px;\n\n      font-size: 12px;\n    }\n\n  }\n\n</style>\n\n\n<section id=\"hah-hero\">\n\n  <div class=\"hah-inner\">\n\n\n    <p class=\"hah-kicker\">\n      Introducing Hyperarmour\n    </p>\n\n\n    <h1 class=\"hah-headline\">\n      The Last One Standing\n    </h1>\n\n\n    <p class=\"hah-subhead\">\n      Built with carbon plating, honeycomb grip, and made to survive every rally, by HNDRD.\n    </p>\n\n\n    <a\n      class=\"hah-cta\"\n      href=\"https://in.hndrd.co/products/hyper-armour\"\n    >\n      Shop HyperArmour\n    </a>\n\n\n  </div>\n\n</section>",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "media_pXzJ7f": {
       "type": "media",
-      "disabled": true,
       "name": "Media",
       "settings": {
-        "desktop_image": "shopify://shop_images/Banner_fa0ee417-e2c0-415d-b064-8b8c849bc612.png",
-        "mobile_image": "shopify://shop_images/Banner_15.1.png",
+        "desktop_image": "shopify://shop_images/Banner_1_ab975366-c752-4f31-8eb5-71e7d8e1291a.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_666442bb-0bec-40f9-8d7e-237458982f98.jpg",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "hero_video_component_e8X8PY": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
+    "custom_liquid_LW3CjH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "video": "shopify://files/videos/DATE REMOVED FOR BANNER.mp4",
-        "mobile_video": "shopify://files/videos/DATE REMOVED POTRAIT.mp4",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "shopify://products/hyper-armour",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "custom_liquid": "{% comment %}\n  Z-TRONIC 100 TI HERO\n\n  IMPORTANT:\n  - Desktop artwork already contains rocks + text + CTA\n  - Mobile artwork will also contain everything\n  - Only ONE image is shown at a time\n  - No duplicated text\n  - No duplicated rocks\n  - No duplicated visible CTA\n{% endcomment %}\n\n\n<style>\n\n  /* =========================================\n     SECTION\n  ========================================= */\n\n  #ztronic-100ti-hero,\n  #ztronic-100ti-hero * {\n    box-sizing: border-box;\n  }\n\n\n  #ztronic-100ti-hero {\n    position: relative;\n\n    width: 100%;\n\n    margin: 0;\n    padding: 0;\n\n    background: #000000;\n\n    overflow: hidden;\n\n    line-height: 0;\n  }\n\n\n  /* =========================================\n     PICTURE\n  ========================================= */\n\n  #ztronic-100ti-hero picture {\n    display: block;\n\n    width: 100%;\n\n    margin: 0;\n    padding: 0;\n  }\n\n\n  /* =========================================\n     HERO IMAGE\n  ========================================= */\n\n  .ztronic-100ti-image {\n    display: block;\n\n    width: 100%;\n    height: auto;\n\n    margin: 0;\n    padding: 0;\n\n    border: 0;\n  }\n\n\n  /* =========================================\n     INVISIBLE CTA LINK\n\n     The visible button is already inside\n     your artwork.\n\n     This simply makes that area clickable.\n  ========================================= */\n\n  .ztronic-100ti-click {\n    position: absolute;\n\n    z-index: 10;\n\n    left: 50%;\n\n    /*\n      Adjust this only if your button\n      position changes inside the artwork.\n    */\n    top: 68%;\n\n    transform: translate(-50%, -50%);\n\n    /*\n      Clickable area over EXPLORE NOW\n    */\n    width: 22%;\n    height: 13%;\n\n    min-width: 200px;\n\n    border-radius: 999px;\n\n    cursor: pointer;\n\n    background: transparent;\n\n    text-decoration: none;\n  }\n\n\n  .ztronic-100ti-click:focus-visible {\n    outline: 2px solid rgba(255,255,255,.9);\n\n    outline-offset: 4px;\n  }\n\n\n\n  /* =========================================\n     MOBILE\n  ========================================= */\n\n  @media screen and (max-width: 749px) {\n\n    #ztronic-100ti-hero {\n      width: 100%;\n    }\n\n\n    .ztronic-100ti-image {\n      width: 100%;\n      height: auto;\n    }\n\n\n    /*\n      Mobile CTA position can be controlled\n      separately after mobile artwork is added.\n    */\n\n    .ztronic-100ti-click {\n      top: 68%;\n\n      width: 52%;\n      height: 13%;\n\n      min-width: 160px;\n    }\n\n  }\n\n</style>\n\n\n\n<section id=\"ztronic-100ti-hero\">\n\n\n  <picture>\n\n\n    {% comment %}\n      MOBILE IMAGE\n\n      When you send the mobile Shopify URL,\n      replace MOBILE-IMAGE-LINK-HERE\n    {% endcomment %}\n\n    <source\n      media=\"(max-width: 749px)\"\n      srcset=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Screenshot_2026-09-18_at_2.48.46_PM.png?v=1789723137\"\n    >\n\n\n\n    {% comment %}\n      DESKTOP IMAGE\n    {% endcomment %}\n\n    <img\n\n      class=\"ztronic-100ti-image\"\n\n      src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Screenshot_2026-09-18_at_1.07.49_PM.png?v=1789717090\"\n\n      alt=\"Z-Tronic 100 Ti - Strikes With Titanium Power\"\n\n      loading=\"eager\"\n\n      fetchpriority=\"high\"\n\n      width=\"1920\"\n\n      height=\"auto\"\n\n    >\n\n\n  </picture>\n\n\n\n  {% comment %}\n    CLICKABLE CTA\n\n    There is NO visible second button here.\n\n    This transparent link sits over the\n    EXPLORE NOW button already present\n    inside your image.\n  {% endcomment %}\n\n  <a\n\n    class=\"ztronic-100ti-click\"\n\n    href=\"/products/z-tronic-100-ti\"\n\n    aria-label=\"Explore Z-Tronic 100 Ti\"\n\n  ></a>\n\n\n</section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "media_hiBFN9": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_2_9f74e2ed-03f0-4491-8e51-9ff6806f49f1.jpg",
+        "mobile_image": "shopify://shop_images/Banner_2_9f74e2ed-03f0-4491-8e51-9ff6806f49f1.jpg",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -64,18 +58,6 @@
         "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "media_hiBFN9": {
-      "type": "media",
-      "disabled": true,
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_fa0ee417-e2c0-415d-b064-8b8c849bc612.png",
-        "mobile_image": "shopify://shop_images/Banner_R_c3473a97-6e3a-412b-9668-909777083bb3.png",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "custom_liquid_pX3CYh": {
@@ -156,10 +138,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hyper-title-section\">\n\n  <p class=\"hyper-kicker\">\n    HNDRD HYPERARMOUR\n  </p>\n\n\n  <h2 class=\"second-title\">\n    Over Engineered Performance\n    <br class=\"mobile-break\">\n  </h2>\n\n\n  \n\n\n</section>\n\n\n\n<style>\n\n\n.hyper-title-section{\n\n  text-align:center;\n\n  letter-spacing:0px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.4rem;\n\n  margin:0 0 10px;\n\n  color:rgba(255,255,255,.8);\n\n}\n\n\n\n.second-title {\n\n  letter-spacing:-1px;\n\n  font-size:3.3rem;\n\n  font-weight:800;\n\n  line-height:1.1;\n\n  margin:0;\n\n  background-image:\n\n  linear-gradient(\n    to right,\n    #c9f24d 0%,\n    #2fe0c2 50%,\n    #ff8a3d 100%\n  );\n\n  -webkit-background-clip:text;\n\n  background-clip:text;\n\n  -webkit-text-fill-color:transparent;\n\n  color:transparent;\n\n}\n\n\n\n.second-copy {\n\n  max-width:520px;\n\n  margin:20px auto 0;\n\n  color:rgba(255,255,255,.55);\n\n  font-size:1.05rem;\n\n  line-height:1.55;\n\n  font-weight:450;\n\n}\n\n\n\n.mobile-break{\n\n  display:none;\n\n}\n\n\n\n\n\n@media screen and (min-width:750px){\n\n\n.second-title{\n\n  font-size:5.9rem;\n\n}\n\n\n.second-copy{\n\n  font-size:1.2rem;\n\n}\n\n\n}\n\n\n\n\n\n@media screen and (max-width:750px){\n\n\n.hyper-title-section{\n\n  padding:0 16px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.2rem;\n\n}\n\n\n\n.second-title{\n\n\n  font-size:2.9rem;\n\n  line-height:1.08;\n\n  letter-spacing:-1.5px;\n\n  max-width:100%;\n\n}\n\n\n\n.mobile-break{\n\n  display:block;\n\n}\n\n\n\n.second-copy{\n\n\n  max-width:330px;\n\n  margin-top:18px;\n\n  font-size:.95rem;\n\n  line-height:1.45;\n\n}\n\n\n\n}\n\n</style>",
+        "custom_liquid": "{% comment %}\n  Z-TRONIC 100 TI\n  FAST FLEX. FASTER RECOVERY.\n  Custom Liquid section\n{% endcomment %}\n\n<style>\n\n  #zt-fast-flex,\n  #zt-fast-flex * {\n    box-sizing: border-box;\n  }\n\n  #zt-fast-flex {\n    width: 100%;\n    margin: 0;\n    padding: 0;\n\n    background: #0f0f0f;\n    color: #ffffff;\n\n    font-family: inherit;\n\n    text-align: center;\n\n    overflow: hidden;\n  }\n\n  .zt-fast-flex-inner {\n    width: 100%;\n    max-width: 1200px;\n\n    margin: 0 auto;\n\n    padding:\n      78px\n      24px\n      72px;\n  }\n\n\n  /* =========================\n     HEADLINE\n  ========================= */\n\n  .zt-fast-flex-title {\n    margin: 0;\n\n    color: #7a7672;\n\n    font-size: clamp(\n      32px,\n      4.1vw,\n      58px\n    );\n\n    line-height: 1;\n\n    font-weight: 800;\n\n    letter-spacing: -0.035em;\n\n    text-transform: uppercase;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .zt-fast-flex-copy {\n    max-width: 680px;\n\n    margin:\n      12px\n      auto\n      0;\n\n    color: #c7c7c7;\n\n    font-size: clamp(\n      14px,\n      1.4vw,\n      18px\n    );\n\n    line-height: 1.25;\n\n    font-weight: 500;\n\n    letter-spacing: -0.01em;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 900px) {\n\n    .zt-fast-flex-inner {\n      padding:\n        68px\n        22px\n        64px;\n    }\n\n    .zt-fast-flex-title {\n      font-size: clamp(\n        30px,\n        6vw,\n        48px\n      );\n    }\n\n    .zt-fast-flex-copy {\n      max-width: 620px;\n\n      font-size: 15px;\n    }\n\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 560px) {\n\n    .zt-fast-flex-inner {\n      padding:\n        52px\n        18px\n        50px;\n    }\n\n    .zt-fast-flex-title {\n      font-size: clamp(\n        28px,\n        9vw,\n        38px\n      );\n\n      line-height: 1.02;\n\n      letter-spacing: -0.03em;\n    }\n\n    .zt-fast-flex-copy {\n      max-width: 340px;\n\n      margin-top: 12px;\n\n      font-size: 14px;\n\n      line-height: 1.35;\n    }\n\n  }\n\n</style>\n\n\n<section id=\"zt-fast-flex\">\n\n  <div class=\"zt-fast-flex-inner\">\n\n    <h2 class=\"zt-fast-flex-title\">\n      Fast Flex. Faster Recovery.\n    </h2>\n\n    <p class=\"zt-fast-flex-copy\">\n      A small titanium wire helps the shaft snap back 11.8% faster, getting you to the next shot way quicker than a regular racket.\n    </p>\n\n  </div>\n\n</section>",
         "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_with_text_YGQ3Pa": {
@@ -605,11 +587,10 @@
   },
   "order": [
     "main",
-    "custom_liquid_LW3CjH",
     "media_pXzJ7f",
-    "hero_video_component_e8X8PY",
-    "custom_liquid_whHTcA",
+    "custom_liquid_LW3CjH",
     "media_hiBFN9",
+    "custom_liquid_whHTcA",
     "custom_liquid_pX3CYh",
     "media_gxHEbG",
     "custom_liquid_rhUah4",
