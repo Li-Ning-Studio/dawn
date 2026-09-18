@@ -70,7 +70,7 @@
   #shopify-section-{{ section.id }} .stl__layout {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 20px;
   }
 
   #shopify-section-{{ section.id }} .stl__stage {
@@ -89,8 +89,8 @@
   #shopify-section-{{ section.id }} .stl__dot {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: {{ section.settings.dot_size }}px;
-    height: {{ section.settings.dot_size }}px;
+    width: {{ section.settings.dot_size_mobile }}px;
+    height: {{ section.settings.dot_size_mobile }}px;
     padding: 0;
     border: 0;
     border-radius: 50%;
@@ -130,19 +130,23 @@
     #shopify-section-{{ section.id }} .stl__dot::after { animation: none; }
   }
 
-  /* Produktkolonnen til højre */
-
   #shopify-section-{{ section.id }} .stl__panel {
     position: relative;
-    flex: 1;
-    min-height: {{ section.settings.panel_min_height }}px;
   }
 
+  /* --- MOBIL: kompakt vandret kort --- */
+
   #shopify-section-{{ section.id }} .stl__product {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid {{ section.settings.card_border_color }};
+    border-radius: {{ section.settings.card_radius }}px;
+    background: {{ section.settings.card_background }};
     text-decoration: none;
     color: inherit;
-    text-align: {{ section.settings.panel_align }};
   }
 
   #shopify-section-{{ section.id }} .stl__product:not(.is-active) {
@@ -151,11 +155,8 @@
 
   #shopify-section-{{ section.id }} .stl__product-media {
     position: relative;
-    width: 100%;
-    max-width: {{ section.settings.panel_image_width }}px;
-    margin-bottom: 20px;
-    {% if section.settings.panel_align == 'center' %}margin-left: auto; margin-right: auto;{% endif %}
-    {% if section.settings.panel_align == 'right' %}margin-left: auto;{% endif %}
+    flex: 0 0 {{ section.settings.thumb_size }}px;
+    width: {{ section.settings.thumb_size }}px;
   }
 
   #shopify-section-{{ section.id }} .stl__product-media img {
@@ -165,21 +166,45 @@
     border-radius: {{ section.settings.panel_image_radius }}px;
   }
 
-  #shopify-section-{{ section.id }} .stl__badges {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  #shopify-section-{{ section.id }} .stl__product-text {
+    flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     gap: 6px;
-    z-index: 2;
+  }
+
+  #shopify-section-{{ section.id }} .stl__product-name {
+    font-size: {{ section.settings.panel_name_size_mobile }}px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  #shopify-section-{{ section.id }} .stl__product-price {
+    font-size: {{ section.settings.panel_price_size_mobile }}px;
+    font-weight: 600;
+    color: {{ section.settings.price_color }};
+  }
+
+  #shopify-section-{{ section.id }} .stl__product-compare {
+    margin-left: 8px;
+    text-decoration: line-through;
+    opacity: 0.5;
+    font-weight: 400;
+    color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .stl__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 2px;
   }
 
   #shopify-section-{{ section.id }} .stl__badge {
-    padding: 6px 12px;
+    padding: 4px 9px;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -196,37 +221,15 @@
     color: {{ section.settings.stock_badge_color }};
   }
 
-  #shopify-section-{{ section.id }} .stl__product-name {
-    display: block;
-    margin: 0;
-    font-size: {{ section.settings.panel_name_size }}px;
-    font-weight: 700;
-    line-height: 1.35;
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-price {
-    display: block;
-    margin-top: 8px;
-    font-size: {{ section.settings.panel_price_size }}px;
-    font-weight: 600;
-    color: {{ section.settings.price_color }};
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-compare {
-    margin-left: 10px;
-    text-decoration: line-through;
-    opacity: 0.5;
-    font-weight: 400;
-    color: {{ section.settings.text_color }};
-  }
-
   #shopify-section-{{ section.id }} .stl__hint {
-    margin-top: 14px;
+    margin: 12px 0 0;
     font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     opacity: 0.45;
   }
+
+  /* --- COMPUTER: stor kolonne til højre --- */
 
   @media screen and (min-width: 750px) {
     #shopify-section-{{ section.id }} .stl {
@@ -246,6 +249,68 @@
 
     #shopify-section-{{ section.id }} .stl__stage {
       flex: 0 0 {{ section.settings.image_column_width }}%;
+    }
+
+    #shopify-section-{{ section.id }} .stl__dot {
+      width: {{ section.settings.dot_size }}px;
+      height: {{ section.settings.dot_size }}px;
+    }
+
+    #shopify-section-{{ section.id }} .stl__panel {
+      flex: 1;
+      min-height: {{ section.settings.panel_min_height }}px;
+    }
+
+    #shopify-section-{{ section.id }} .stl__product {
+      display: block;
+      padding: 0;
+      border: 0;
+      background: none;
+      border-radius: 0;
+      text-align: {{ section.settings.panel_align }};
+    }
+
+    #shopify-section-{{ section.id }} .stl__product:not(.is-active) {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .stl__product-media {
+      flex: none;
+      width: 100%;
+      max-width: {{ section.settings.panel_image_width }}px;
+      margin-bottom: 20px;
+      {% if section.settings.panel_align == 'center' %}margin-left: auto; margin-right: auto;{% endif %}
+      {% if section.settings.panel_align == 'right' %}margin-left: auto;{% endif %}
+    }
+
+    #shopify-section-{{ section.id }} .stl__badges {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 0;
+      z-index: 2;
+    }
+
+    #shopify-section-{{ section.id }} .stl__badge {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    #shopify-section-{{ section.id }} .stl__product-text {
+      display: block;
+    }
+
+    #shopify-section-{{ section.id }} .stl__product-name {
+      display: block;
+      font-size: {{ section.settings.panel_name_size }}px;
+    }
+
+    #shopify-section-{{ section.id }} .stl__product-price {
+      display: block;
+      margin-top: 8px;
+      font-size: {{ section.settings.panel_price_size }}px;
     }
   }
 </style>
@@ -299,24 +364,26 @@
             <a class="stl__product" href="{{ item.url }}" data-stl-product="{{ n }}">
               <div class="stl__product-media">
                 {%- if item.featured_image != blank -%}
-                  {{ item.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '300, 500, 700, 900', sizes: '(min-width: 750px) 30vw, 80vw', alt: item.title }}
+                  {{ item.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '200, 400, 600, 900', sizes: '(min-width: 750px) 30vw, 100px', alt: item.title }}
                 {%- endif -%}
-                <div class="stl__badges">
+              </div>
+              <div class="stl__product-text">
+                <span class="stl__product-name">{{ item.title }}</span>
+                <span class="stl__product-price">
+                  {{ item.price | money }}
+                  {%- if item.compare_at_price > item.price -%}
+                    <span class="stl__product-compare">{{ item.compare_at_price | money }}</span>
+                  {%- endif -%}
+                </span>
+                <span class="stl__badges">
                   {%- if saving > 0 and section.settings.show_save_badge -%}
                     <span class="stl__badge stl__badge--save">{{ section.settings.save_badge_text }} {{ saving | money_without_trailing_zeros }}</span>
                   {%- endif -%}
                   {%- if section.settings.show_stock_badge and item.available and item.selected_or_first_available_variant.inventory_quantity > 0 and item.selected_or_first_available_variant.inventory_quantity <= section.settings.stock_threshold -%}
                     <span class="stl__badge stl__badge--stock">{{ section.settings.stock_badge_text }}</span>
                   {%- endif -%}
-                </div>
+                </span>
               </div>
-              <span class="stl__product-name">{{ item.title }}</span>
-              <span class="stl__product-price">
-                {{ item.price | money }}
-                {%- if item.compare_at_price > item.price -%}
-                  <span class="stl__product-compare">{{ item.compare_at_price | money }}</span>
-                {%- endif -%}
-              </span>
             </a>
           {%- endif -%}
         {%- endfor -%}
@@ -390,20 +457,31 @@
     { "type": "range", "id": "dot2_y", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Prik 2 — lodret", "default": 89 },
 
     { "type": "header", "content": "Prikkernes udseende" },
-    { "type": "range", "id": "dot_size", "min": 10, "max": 50, "step": 2, "unit": "px", "label": "Størrelse", "default": 28 },
+    { "type": "range", "id": "dot_size", "min": 10, "max": 50, "step": 2, "unit": "px", "label": "Størrelse (computer)", "default": 28 },
+    { "type": "range", "id": "dot_size_mobile", "min": 10, "max": 40, "step": 2, "unit": "px", "label": "Størrelse (mobil)", "default": 22 },
     { "type": "color", "id": "dot_color", "label": "Farve", "default": "#ffffff" },
     { "type": "range", "id": "dot_ring", "min": 0, "max": 6, "step": 1, "unit": "px", "label": "Ring omkring", "default": 2 },
     { "type": "color", "id": "dot_ring_color", "label": "Ringens farve", "default": "rgba(0,0,0,0.25)" },
 
-    { "type": "header", "content": "Produktet til højre" },
+    { "type": "header", "content": "Produktet — computer" },
     { "type": "range", "id": "panel_image_width", "min": 200, "max": 600, "step": 10, "unit": "px", "label": "Produktbilledets bredde", "default": 420 },
-    { "type": "range", "id": "panel_image_radius", "min": 0, "max": 30, "step": 2, "unit": "px", "label": "Runde hjørner", "default": 0 },
     { "type": "range", "id": "panel_min_height", "min": 200, "max": 700, "step": 20, "unit": "px", "label": "Mindste højde", "default": 420, "info": "Holder højden ens når du skifter mellem produkterne." },
     { "type": "select", "id": "panel_align", "label": "Justering", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "right", "label": "Højre" }], "default": "left" },
     { "type": "range", "id": "panel_name_size", "min": 14, "max": 30, "step": 1, "unit": "px", "label": "Navnets størrelse", "default": 18 },
     { "type": "range", "id": "panel_price_size", "min": 12, "max": 28, "step": 1, "unit": "px", "label": "Prisens størrelse", "default": 17 },
-    { "type": "color", "id": "price_color", "label": "Prisens farve", "default": "#c8102e" },
-    { "type": "text", "id": "hint", "label": "Lille hjælpetekst", "default": "Hold musen over prikkerne", "info": "Tøm feltet for at fjerne den." },
+
+    { "type": "header", "content": "Produktet — mobil", "info": "På mobil vises produktet som en kompakt linje under billedet." },
+    { "type": "range", "id": "thumb_size", "min": 60, "max": 160, "step": 5, "unit": "px", "label": "Billedets størrelse", "default": 90 },
+    { "type": "range", "id": "panel_name_size_mobile", "min": 12, "max": 22, "step": 1, "unit": "px", "label": "Navnets størrelse", "default": 15 },
+    { "type": "range", "id": "panel_price_size_mobile", "min": 11, "max": 20, "step": 1, "unit": "px", "label": "Prisens størrelse", "default": 14 },
+    { "type": "range", "id": "card_radius", "min": 0, "max": 24, "step": 2, "unit": "px", "label": "Kortets runde hjørner", "default": 8 },
+    { "type": "color", "id": "card_background", "label": "Kortets baggrund", "default": "rgba(0,0,0,0)" },
+    { "type": "color", "id": "card_border_color", "label": "Kortets kantlinje", "default": "rgba(0,0,0,0.12)" },
+
+    { "type": "header", "content": "Fælles" },
+    { "type": "range", "id": "panel_image_radius", "min": 0, "max": 30, "step": 2, "unit": "px", "label": "Produktbilledets runde hjørner", "default": 0 },
+    { "type": "color", "id": "price_color", "label": "Prisens farve", "default": "#121212" },
+    { "type": "text", "id": "hint", "label": "Lille hjælpetekst", "info": "Lad feltet stå tomt for ikke at vise nogen tekst." },
 
     { "type": "header", "content": "Mærkater" },
     { "type": "checkbox", "id": "show_save_badge", "label": "Vis besparelse", "default": true },
