@@ -452,84 +452,29 @@
     },
     "story_columns_piHic9": {
       "type": "story-columns",
-      "blocks": {
-        "image_LVWznz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/cr_20260818_1736_WorldChampionships2026_BPGE8413.jpg"
-          }
-        },
-        "image_LgbiVk": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/b_20260819_1703_WorldChampionships2026_BPJS5007.jpg"
-          }
-        },
-        "image_PkJRpF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/b_20260821_1436_WorldChampionships2026_BPJS9819.jpg"
-          }
-        },
-        "image_apceBN": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/b_20260819_1635_WorldChampionships2026_BPJS1428.jpg"
-          }
-        },
-        "image_pjcnP8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/b_20260901_1640_ChinaMasters2026_BPGE5529.jpg"
-          }
-        },
-        "image_bR3wpe": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Design_uden_navn_22.png"
-          }
-        },
-        "image_bcVUUW": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_PDtect": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_XHDYLr": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_YW8qey": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/cr_20260818_1736_WorldChampionships2026_BPGE8413.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_LVWznz",
-        "image_LgbiVk",
-        "image_PkJRpF",
-        "image_apceBN",
-        "image_pjcnP8",
-        "image_bR3wpe",
-        "image_bcVUUW",
-        "image_PDtect",
-        "image_XHDYLr",
-        "image_YW8qey"
-      ],
       "name": "Billedspalter",
       "settings": {
+        "col1_image1": "shopify://shop_images/b_20260819_1703_WorldChampionships2026_BPJS5007.jpg",
+        "col1_image2": "shopify://shop_images/b_20260820_1250_WorldChampionships2026_BPJS6761.jpg",
+        "col1_image3": "shopify://shop_images/b_20260819_1635_WorldChampionships2026_BPJS1428.jpg",
+        "col2_image1": "shopify://shop_images/b_20260901_1640_ChinaMasters2026_BPGE5529.jpg",
+        "col2_image2": "shopify://shop_images/b_20260821_1436_WorldChampionships2026_BPJS9819.jpg",
+        "col3_image2": "shopify://shop_images/cr_20260818_1736_WorldChampionships2026_BPGE8413.jpg",
+        "col3_image3": "shopify://shop_images/Design_uden_navn_22.png",
+        "col4_image1": "shopify://shop_images/b_20260820_1250_WorldChampionships2026_BPJS6761.jpg",
+        "col4_image2": "shopify://shop_images/b_20260819_1703_WorldChampionships2026_BPJS5007.jpg",
+        "col4_image3": "shopify://shop_images/b_20260819_1635_WorldChampionships2026_BPJS1428.jpg",
         "eyebrow": "The story behind",
         "heading": "HNDRD",
+        "heading_color": "#E79C1F",
+        "heading_opacity": 100,
         "heading_italic": true,
         "heading_size": 90,
         "heading_size_mobile": 48,
         "heading_weight": "800",
         "eyebrow_size": 11,
         "body": "<p>Skriv historien her. Bag teksten kører alt det du har skudt — spillere, baner, lager.</p>",
+        "body_color": "#ffffff",
         "body_size": 17,
         "body_opacity": 80,
         "align": "center",
@@ -538,7 +483,7 @@
         "card_padding": 40,
         "button_label": "Read the full story",
         "button_link": "",
-        "button_background": "#E79C1F",
+        "button_background": "#e79c1f",
         "button_text_color": "#362929",
         "button_border_color": "rgba(0,0,0,0)",
         "columns": 4,
@@ -551,7 +496,7 @@
         "veil_spread": 70,
         "bg_color": "#362929",
         "text_color": "#ffffff",
-        "accent_color": "#E79C1F",
+        "accent_color": "#e79c1f",
         "min_height": 880,
         "min_height_mobile": 640,
         "side_padding": 24,
