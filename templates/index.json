@@ -453,12 +453,6 @@
     "story_columns_piHic9": {
       "type": "story-columns",
       "blocks": {
-        "image_CEtMwN": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/b_20260820_1250_WorldChampionships2026_BPJS6761.jpg"
-          }
-        },
         "image_LVWznz": {
           "type": "image",
           "settings": {
@@ -485,11 +479,15 @@
         },
         "image_pjcnP8": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/b_20260901_1640_ChinaMasters2026_BPGE5529.jpg"
+          }
         },
         "image_bR3wpe": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Design_uden_navn_22.png"
+          }
         },
         "image_bcVUUW": {
           "type": "image",
@@ -511,7 +509,6 @@
         }
       },
       "block_order": [
-        "image_CEtMwN",
         "image_LVWznz",
         "image_LgbiVk",
         "image_PkJRpF",
@@ -542,7 +539,7 @@
         "button_label": "Read the full story",
         "button_link": "",
         "button_background": "#E79C1F",
-        "button_text_color": "#0a0a0a",
+        "button_text_color": "#362929",
         "button_border_color": "rgba(0,0,0,0)",
         "columns": 4,
         "columns_mobile": 2,
@@ -552,7 +549,7 @@
         "scroll_boost": 250,
         "veil_strength": 90,
         "veil_spread": 70,
-        "bg_color": "#0a0a0a",
+        "bg_color": "#362929",
         "text_color": "#ffffff",
         "accent_color": "#E79C1F",
         "min_height": 880,
