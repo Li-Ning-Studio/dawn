@@ -32,10 +32,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Z-TRONIC 100 TI HERO\n\n  IMPORTANT:\n  - Desktop artwork already contains rocks + text + CTA\n  - Mobile artwork will also contain everything\n  - Only ONE image is shown at a time\n  - No duplicated text\n  - No duplicated rocks\n  - No duplicated visible CTA\n{% endcomment %}\n\n\n<style>\n\n  /* =========================================\n     SECTION\n  ========================================= */\n\n  #ztronic-100ti-hero,\n  #ztronic-100ti-hero * {\n    box-sizing: border-box;\n  }\n\n\n  #ztronic-100ti-hero {\n    position: relative;\n\n    width: 100%;\n\n    margin: 0;\n    padding: 0;\n\n    background: #000000;\n\n    overflow: hidden;\n\n    line-height: 0;\n  }\n\n\n  /* =========================================\n     PICTURE\n  ========================================= */\n\n  #ztronic-100ti-hero picture {\n    display: block;\n\n    width: 100%;\n\n    margin: 0;\n    padding: 0;\n  }\n\n\n  /* =========================================\n     HERO IMAGE\n  ========================================= */\n\n  .ztronic-100ti-image {\n    display: block;\n\n    width: 100%;\n    height: auto;\n\n    margin: 0;\n    padding: 0;\n\n    border: 0;\n  }\n\n\n  /* =========================================\n     INVISIBLE CTA LINK\n\n     The visible button is already inside\n     your artwork.\n\n     This simply makes that area clickable.\n  ========================================= */\n\n  .ztronic-100ti-click {\n    position: absolute;\n\n    z-index: 10;\n\n    left: 50%;\n\n    /*\n      Adjust this only if your button\n      position changes inside the artwork.\n    */\n    top: 68%;\n\n    transform: translate(-50%, -50%);\n\n    /*\n      Clickable area over EXPLORE NOW\n    */\n    width: 22%;\n    height: 13%;\n\n    min-width: 200px;\n\n    border-radius: 999px;\n\n    cursor: pointer;\n\n    background: transparent;\n\n    text-decoration: none;\n  }\n\n\n  .ztronic-100ti-click:focus-visible {\n    outline: 2px solid rgba(255,255,255,.9);\n\n    outline-offset: 4px;\n  }\n\n\n\n  /* =========================================\n     MOBILE\n  ========================================= */\n\n  @media screen and (max-width: 749px) {\n\n    #ztronic-100ti-hero {\n      width: 100%;\n    }\n\n\n    .ztronic-100ti-image {\n      width: 100%;\n      height: auto;\n    }\n\n\n    /*\n      Mobile CTA position can be controlled\n      separately after mobile artwork is added.\n    */\n\n    .ztronic-100ti-click {\n      top: 68%;\n\n      width: 52%;\n      height: 13%;\n\n      min-width: 160px;\n    }\n\n  }\n\n</style>\n\n\n\n<section id=\"ztronic-100ti-hero\">\n\n\n  <picture>\n\n\n    {% comment %}\n      MOBILE IMAGE\n\n      When you send the mobile Shopify URL,\n      replace MOBILE-IMAGE-LINK-HERE\n    {% endcomment %}\n\n    <source\n      media=\"(max-width: 749px)\"\n      srcset=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Screenshot_2026-09-18_at_2.48.46_PM.png?v=1789723137\"\n    >\n\n\n\n    {% comment %}\n      DESKTOP IMAGE\n    {% endcomment %}\n\n    <img\n\n      class=\"ztronic-100ti-image\"\n\n      src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Landing-Page_02_d5d9fe2e-617d-4e29-85d1-befb09df7fdb.jpg?v=1789733978\"\n\n      alt=\"Z-Tronic 100 Ti - Strikes With Titanium Power\"\n\n      loading=\"eager\"\n\n      fetchpriority=\"high\"\n\n      width=\"1920\"\n\n      height=\"auto\"\n\n    >\n\n\n  </picture>\n\n\n\n  {% comment %}\n    CLICKABLE CTA\n\n    There is NO visible second button here.\n\n    This transparent link sits over the\n    EXPLORE NOW button already present\n    inside your image.\n  {% endcomment %}\n\n  <a\n\n    class=\"ztronic-100ti-click\"\n\n    href=\"/products/z-tronic-100-ti\"\n\n    aria-label=\"Explore Z-Tronic 100 Ti\"\n\n  ></a>\n\n\n</section>",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<style>\n  .ztronic-hero {\n    width: 100%;\n    min-height: 480px;\n    background: #0d0d0d;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 65px 24px;\n    box-sizing: border-box;\n    overflow: hidden;\n  }\n\n  .ztronic-hero__content {\n    width: 100%;\n    max-width: 1250px;\n    margin: 0 auto;\n  }\n\n  /* INTRO */\n  .ztronic-hero__eyebrow {\n    margin: 0 0 17px;\n    color: #aaa8a5;\n    font-family: \"Figtree\", sans-serif;\n    font-size: 21px;\n    font-weight: 500;\n    line-height: 1.35;\n    letter-spacing: -0.2px;\n  }\n\n  /* PRODUCT NAME */\n  .ztronic-hero__title {\n    margin: 0;\n    white-space: nowrap;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(64px, 6.5vw, 108px);\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: -3.5px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 0%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  /* TAGLINE */\n  .ztronic-hero__subtitle {\n    margin: 15px 0 0;\n    color: #d0cfcd;\n    font-family: \"Figtree\", sans-serif;\n    font-size: 25px;\n    font-weight: 600;\n    line-height: 1.25;\n    letter-spacing: 0;\n    text-transform: uppercase;\n  }\n\n  /* CTA SPACING */\n  .ztronic-hero__cta-wrap {\n    margin-top: 34px;\n  }\n\n  /* CTA */\n  .ztronic-hero__cta {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    min-width: 325px;\n    min-height: 66px;\n    padding: 0 40px;\n\n    border: 2px solid #7C7872;\n    border-radius: 999px;\n\n    /* ALWAYS TRANSPARENT */\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 14px;\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: 2.2px;\n    text-transform: uppercase;\n    text-decoration: none;\n\n    box-sizing: border-box;\n\n    transition:\n      transform 0.3s ease,\n      border-color 0.3s ease,\n      color 0.3s ease;\n  }\n\n  /* REMOVE ALL CTA FILL LAYERS */\n  .ztronic-hero__cta::before,\n  .ztronic-hero__cta::after {\n    content: none !important;\n    display: none !important;\n  }\n\n  .ztronic-hero__cta span {\n    position: relative;\n  }\n\n  /* HOVER - NO FILL */\n  .ztronic-hero__cta:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n    border-color: #7C7872;\n\n    transform: translateY(-2px);\n  }\n\n  .ztronic-hero__cta:focus,\n  .ztronic-hero__cta:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #7C7872;\n    border-color: #7C7872;\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .ztronic-hero {\n      min-height: auto;\n      padding: 48px 16px 50px;\n    }\n\n    .ztronic-hero__content {\n      max-width: 100%;\n    }\n\n    .ztronic-hero__eyebrow {\n      margin-bottom: 14px;\n      font-size: 15px;\n      line-height: 1.35;\n      letter-spacing: -0.1px;\n    }\n\n    .ztronic-hero__title {\n      white-space: nowrap;\n      font-size: clamp(28px, 9.2vw, 44px);\n      line-height: 1;\n      letter-spacing: -1.5px;\n    }\n\n    .ztronic-hero__subtitle {\n      margin-top: 16px;\n      font-size: 15px;\n      line-height: 1.3;\n      letter-spacing: 0;\n    }\n\n    .ztronic-hero__cta-wrap {\n      margin-top: 30px;\n    }\n\n    .ztronic-hero__cta {\n      min-width: 260px;\n      min-height: 56px;\n      padding: 0 28px;\n\n      border-width: 1.5px;\n\n      font-size: 12px;\n      letter-spacing: 1.8px;\n    }\n  }\n\n\n  /* VERY SMALL MOBILE */\n  @media screen and (max-width: 390px) {\n\n    .ztronic-hero {\n      padding-left: 12px;\n      padding-right: 12px;\n    }\n\n    .ztronic-hero__title {\n      font-size: 8.7vw;\n      letter-spacing: -1px;\n    }\n\n    .ztronic-hero__eyebrow {\n      font-size: 14px;\n    }\n\n    .ztronic-hero__subtitle {\n      font-size: 14px;\n    }\n\n    .ztronic-hero__cta {\n      min-width: 245px;\n      min-height: 54px;\n      font-size: 11px;\n      letter-spacing: 1.6px;\n    }\n  }\n</style>\n\n\n<section class=\"ztronic-hero\">\n\n  <div class=\"ztronic-hero__content\">\n\n    <p class=\"ztronic-hero__eyebrow\">\n      Built for fast attacking power.\n    </p>\n\n    <h2 class=\"ztronic-hero__title\">\n      Z-TRONIC 100 TI\n    </h2>\n\n    <p class=\"ztronic-hero__subtitle\">\n      STRIKES WITH TITANIUM POWER\n    </p>\n\n    <div class=\"ztronic-hero__cta-wrap\">\n\n      <a\n        href=\"/products/z-tronic-100-ti\"\n        class=\"ztronic-hero__cta\"\n      >\n        <span>EXPLORE Z-TRONIC 100 TI</span>\n      </a>\n\n    </div>\n\n  </div>\n\n</section>",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "padding_top": 8,
+        "padding_bottom": 8
       }
     },
     "media_hiBFN9": {
@@ -44,7 +44,7 @@
       "settings": {
         "desktop_image": "shopify://shop_images/Banner_2_9f74e2ed-03f0-4491-8e51-9ff6806f49f1.jpg",
         "mobile_image": "shopify://shop_images/Banner_2_9f74e2ed-03f0-4491-8e51-9ff6806f49f1.jpg",
-        "color_scheme": "",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -94,54 +94,139 @@
         "padding_bottom": 36
       }
     },
-    "hero_component_MaVYaG": {
-      "type": "hero-component",
-      "disabled": true,
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/Banner_3_a30142f4-f487-495d-80a2-7e068e3afd48.png",
-        "mobile_image": "shopify://shop_images/Banner_3.1.png",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_pMCXET": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"max-width: 1000px; margin: 0 auto; padding: 0 12px; text-align: center; background-color: #000;\">\n  <p style=\"font-size: 1.4rem; color: white;\">Best of Both Worlds</p>\n  <p class=\"longcopy\">Performance Shoes usually force a choice - <span class=\"highlight\">hard rubber</span> for durability or <span class=\"highlight\">soft rubber</span> for grip. Together with Goodyear, we developed the <span class=\"highlight\">DuraGrip</span> tech - a specialized racing-grade rubber compound, which makes the Phenom both <span class=\"highlight\">extremely durable and relentlessly grippy</span>.</p>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 96,
-        "padding_bottom": 52
-      }
-    },
-    "media_Fp4xqn": {
-      "type": "media",
-      "disabled": true,
-      "name": "Media",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Banner_10.png",
-        "mobile_image": "shopify://shop_images/Banner_10.1.png",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_kcf9aP": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %}\n  Z-TRONIC 100 TI\n  FAST FLEX. FASTER RECOVERY.\n  Custom Liquid section\n{% endcomment %}\n\n<style>\n\n  #zt-fast-flex,\n  #zt-fast-flex * {\n    box-sizing: border-box;\n  }\n\n  #zt-fast-flex {\n    width: 100%;\n    margin: 0;\n    padding: 0;\n\n    background: #0f0f0f;\n    color: #ffffff;\n\n    font-family: inherit;\n\n    text-align: center;\n\n    overflow: hidden;\n  }\n\n  .zt-fast-flex-inner {\n    width: 100%;\n    max-width: 1200px;\n\n    margin: 0 auto;\n\n    padding:\n      78px\n      24px\n      72px;\n  }\n\n\n  /* =========================\n     HEADLINE\n  ========================= */\n\n  .zt-fast-flex-title {\n    margin: 0;\n\n    color: #7a7672;\n\n    font-size: clamp(\n      32px,\n      4.1vw,\n      58px\n    );\n\n    line-height: 1;\n\n    font-weight: 800;\n\n    letter-spacing: -0.035em;\n\n    text-transform: uppercase;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .zt-fast-flex-copy {\n    max-width: 680px;\n\n    margin:\n      12px\n      auto\n      0;\n\n    color: #c7c7c7;\n\n    font-size: clamp(\n      14px,\n      1.4vw,\n      18px\n    );\n\n    line-height: 1.25;\n\n    font-weight: 500;\n\n    letter-spacing: -0.01em;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 900px) {\n\n    .zt-fast-flex-inner {\n      padding:\n        68px\n        22px\n        64px;\n    }\n\n    .zt-fast-flex-title {\n      font-size: clamp(\n        30px,\n        6vw,\n        48px\n      );\n    }\n\n    .zt-fast-flex-copy {\n      max-width: 620px;\n\n      font-size: 15px;\n    }\n\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 560px) {\n\n    .zt-fast-flex-inner {\n      padding:\n        52px\n        18px\n        50px;\n    }\n\n    .zt-fast-flex-title {\n      font-size: clamp(\n        28px,\n        9vw,\n        38px\n      );\n\n      line-height: 1.02;\n\n      letter-spacing: -0.03em;\n    }\n\n    .zt-fast-flex-copy {\n      max-width: 340px;\n\n      margin-top: 12px;\n\n      font-size: 14px;\n\n      line-height: 1.35;\n    }\n\n  }\n\n</style>\n\n\n<section id=\"zt-fast-flex\">\n\n  <div class=\"zt-fast-flex-inner\">\n\n    <h2 class=\"zt-fast-flex-title\">\n      Fast Flex. Faster Recovery.\n    </h2>\n\n    <p class=\"zt-fast-flex-copy\">\n      A small titanium wire helps the shaft snap back 11.8% faster, getting you to the next shot way quicker than a regular racket.\n    </p>\n\n  </div>\n\n</section>",
-        "color_scheme": "scheme-4",
+        "custom_liquid": "<style>\n  .ti-flex-section {\n    width: 100%;\n    background: #0d0d0d;\n    text-align: center;\n    box-sizing: border-box;\n    overflow: hidden;\n\n    padding: 62px 24px 58px;\n  }\n\n  .ti-flex-inner {\n    width: 100%;\n    max-width: 1300px;\n    margin: 0 auto;\n  }\n\n  /* MAIN HEADLINE */\n  .ti-flex-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(50px, 5.1vw, 82px);\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: -2.8px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  /* DESCRIPTION */\n  .ti-flex-description {\n    max-width: 850px;\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n    line-height: 1.45;\n    letter-spacing: -0.15px;\n\n    color: #b9b7b4;\n  }\n\n\n  /* =========================\n     CTA\n  ========================= */\n\n  .ti-flex-cta-wrap {\n    margin-top: 32px;\n  }\n\n  .ti-flex-cta {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    min-width: 300px;\n    height: 62px;\n    padding: 0 38px;\n\n    /* ALWAYS TRANSPARENT */\n    background: transparent !important;\n    background-image: none !important;\n\n    border: 1.5px solid #7C7872;\n    border-radius: 999px;\n\n    color: #FFFFFF;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1;\n\n    letter-spacing: 2.1px;\n    text-transform: uppercase;\n    text-decoration: none;\n\n    box-sizing: border-box;\n\n    transition:\n      transform 0.3s ease,\n      border-color 0.3s ease,\n      color 0.3s ease;\n  }\n\n  /* REMOVE ALL FILL LAYERS */\n  .ti-flex-cta::before,\n  .ti-flex-cta::after {\n    content: none !important;\n    display: none !important;\n    background: none !important;\n  }\n\n  .ti-flex-cta span {\n    position: relative;\n  }\n\n  /* HOVER — STILL TRANSPARENT */\n  .ti-flex-cta:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n    border-color: #7C7872;\n\n    transform: translateY(-2px);\n  }\n\n  /* CLICK / FOCUS — STILL TRANSPARENT */\n  .ti-flex-cta:focus,\n  .ti-flex-cta:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #7C7872;\n    border-color: #7C7872;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .ti-flex-section {\n      padding: 55px 22px 52px;\n    }\n\n    .ti-flex-title {\n      font-size: clamp(43px, 6vw, 65px);\n      letter-spacing: -2px;\n    }\n\n    .ti-flex-description {\n      max-width: 720px;\n      font-size: 18px;\n    }\n\n    .ti-flex-cta-wrap {\n      margin-top: 30px;\n    }\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .ti-flex-section {\n      padding: 42px 18px 40px;\n    }\n\n    .ti-flex-inner {\n      max-width: 100%;\n    }\n\n    .ti-flex-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n      line-height: 1.02;\n      letter-spacing: -1.6px;\n    }\n\n    .ti-flex-description {\n      max-width: 355px;\n      margin-top: 15px;\n\n      font-size: 15px;\n      font-weight: 500;\n      line-height: 1.45;\n      letter-spacing: 0;\n    }\n\n    .ti-flex-cta-wrap {\n      margin-top: 27px;\n    }\n\n    .ti-flex-cta {\n      min-width: 260px;\n      height: 56px;\n      padding: 0 28px;\n\n      border-width: 1.5px;\n\n      font-size: 12px;\n      letter-spacing: 1.8px;\n    }\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .ti-flex-section {\n      padding: 38px 14px 36px;\n    }\n\n    .ti-flex-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .ti-flex-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n\n    .ti-flex-cta {\n      min-width: 245px;\n      height: 54px;\n      padding: 0 24px;\n\n      font-size: 11px;\n      letter-spacing: 1.6px;\n    }\n  }\n</style>\n\n\n<section class=\"ti-flex-section\">\n\n  <div class=\"ti-flex-inner\">\n\n    <h2 class=\"ti-flex-title\">\n      FAST FLEX. FASTER RECOVERY.\n    </h2>\n\n    <p class=\"ti-flex-description\">\n      A small titanium wire helps the shaft snap back 11.8% faster,\n      getting you to the next shot way quicker than a regular racket.\n    </p>\n\n    <div class=\"ti-flex-cta-wrap\">\n\n      <a\n        href=\"/products/z-tronic-100-ti\"\n        class=\"ti-flex-cta\"\n      >\n        <span>SHOP Z-TRONIC 100 TI</span>\n      </a>\n\n    </div>\n\n  </div>\n\n</section>",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "media_Fp4xqn": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_4_1b484f7f-eaac-469d-bacd-233a09a7025a.jpg",
+        "mobile_image": "shopify://shop_images/Banner_4_1b484f7f-eaac-469d-bacd-233a09a7025a.jpg",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_KKwXjx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .whip-section {\n    width: 100%;\n    overflow: hidden;\n    box-sizing: border-box;\n\n    background: #0D0D0D !important;\n    background-image: none !important;\n\n    text-align: center;\n    padding: 60px 24px 62px;\n\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  /* FORCE REMOVE ANY GLOW / OVERLAY */\n  .whip-section::before,\n  .whip-section::after {\n    content: none !important;\n    display: none !important;\n    background: none !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  .whip-inner {\n    width: 100%;\n    max-width: 1350px;\n    margin: 0 auto;\n\n    background: transparent !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  /* HEADLINE */\n  .whip-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(54px, 5.8vw, 94px);\n    font-weight: 700;\n\n    line-height: 0.98;\n    letter-spacing: -3.5px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n\n    text-shadow: none !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  .whip-title::before,\n  .whip-title::after {\n    content: none !important;\n    display: none !important;\n  }\n\n  /* DESCRIPTION */\n  .whip-description {\n    width: 100%;\n    max-width: 920px;\n\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n\n    line-height: 1.45;\n    letter-spacing: -0.2px;\n\n    color: #c1bfbd;\n\n    text-shadow: none !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  /* TABLET */\n  @media screen and (max-width: 990px) {\n\n    .whip-section {\n      padding: 54px 22px 56px;\n    }\n\n    .whip-title {\n      font-size: clamp(45px, 6.5vw, 66px);\n      letter-spacing: -2.5px;\n    }\n\n    .whip-description {\n      max-width: 760px;\n      margin-top: 17px;\n      font-size: 18px;\n    }\n  }\n\n  /* MOBILE */\n  @media screen and (max-width: 749px) {\n\n    .whip-section {\n      padding: 43px 16px 45px;\n    }\n\n    .whip-inner {\n      max-width: 100%;\n    }\n\n    .whip-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n      line-height: 1;\n      letter-spacing: -1.6px;\n    }\n\n    .whip-description {\n      max-width: 355px;\n      margin-top: 15px;\n\n      font-size: 15px;\n      line-height: 1.45;\n      letter-spacing: 0;\n\n      color: #bbb9b7;\n    }\n  }\n\n  /* SMALL MOBILE */\n  @media screen and (max-width: 390px) {\n\n    .whip-section {\n      padding: 39px 12px 41px;\n    }\n\n    .whip-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .whip-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n  }\n</style>\n\n\n<section class=\"whip-section\">\n\n  <div class=\"whip-inner\">\n\n    <h2 class=\"whip-title\">\n      WHIP WITHOUT <br> WARNING\n    </h2>\n\n    <p class=\"whip-description\">\n      A 6.2mm shaft flexes fast and recovers faster. That extra snap at the point of\n      contact is what makes the smash feel loaded.\n    </p>\n\n  </div>\n\n</section>",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_zieGnW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AatUqt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_1_c9f7826d-4918-4ffc-b2ea-f13c277a7b36.jpg",
+            "title": "<strong>M46X Nano Graphite</strong>",
+            "text": "<p>The highest grade carbon used in racket construction. Rigid under load, snaps back instantly.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6QDLmL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_2_8a3e4d3d-81d9-41b9-8146-13e4106e3d84.jpg",
+            "title": "<strong>Head Heavy Balance</strong>",
+            "text": "<p>Weight forward means smashes drop steeper and drives land deeper. The shuttle goes where it has no business coming back from.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_n7FRgW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_3_3fcd416a-31ac-426d-96d7-4637e99c0f62.jpg",
+            "title": "CURVE²",
+            "text": "<p>Foam inserts inside the frame cut vibration at contact. Your hand feels the hit but not the aftermath.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H98z3q": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_4_45c36765-9058-44ff-a718-158b7ee021f9.png",
+            "title": "",
+            "text": "<p> \"It made the hard days feel a little easier\" - Estelle Van Leeuwen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_N3g4Gz": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_5_91415f2f-2a90-4692-8e2c-7c41998b3075.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MxgJat": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_6_474f3a6d-9ce0-4d6b-a769-8e68d4bae484.png",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_AatUqt",
+        "column_6QDLmL",
+        "column_n7FRgW",
+        "column_H98z3q",
+        "column_N3g4Gz",
+        "column_MxgJat"
+      ],
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "custom_liquid_zCkmDN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .rattle-section {\n    width: 100%;\n    overflow: hidden;\n    box-sizing: border-box;\n\n    background: #0D0D0D;\n    text-align: center;\n\n    padding: 60px 24px 68px;\n  }\n\n  .rattle-inner {\n    width: 100%;\n    max-width: 1300px;\n\n    margin: 0 auto;\n  }\n\n\n  /* =========================\n     HEADLINE\n  ========================= */\n\n  .rattle-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(54px, 5.8vw, 94px);\n    font-weight: 700;\n\n    line-height: 0.98;\n    letter-spacing: -3.5px;\n\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .rattle-description {\n    width: 100%;\n    max-width: 920px;\n\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n\n    line-height: 1.45;\n    letter-spacing: -0.2px;\n\n    color: #c1bfbd;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .rattle-section {\n      padding: 54px 22px 60px;\n    }\n\n    .rattle-title {\n      font-size: clamp(45px, 6.5vw, 66px);\n      letter-spacing: -2.5px;\n    }\n\n    .rattle-description {\n      max-width: 760px;\n\n      margin-top: 17px;\n\n      font-size: 18px;\n    }\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .rattle-section {\n      padding: 43px 16px 50px;\n    }\n\n    .rattle-inner {\n      max-width: 100%;\n    }\n\n    .rattle-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n\n      line-height: 1;\n      letter-spacing: -1.6px;\n\n      white-space: nowrap;\n    }\n\n    .rattle-description {\n      max-width: 355px;\n\n      margin-top: 15px;\n\n      font-size: 15px;\n      line-height: 1.45;\n\n      letter-spacing: 0;\n\n      color: #bbb9b7;\n    }\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .rattle-section {\n      padding: 39px 12px 46px;\n    }\n\n    .rattle-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .rattle-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n  }\n\n</style>\n\n\n<section class=\"rattle-section\">\n\n  <div class=\"rattle-inner\">\n\n    <h2 class=\"rattle-title\">\n      FEEL NO RATTLE\n    </h2>\n\n    <p class=\"rattle-description\">\n      Foam intercepts vibration before it travels, leaving a controlled\n      and connected feel.\n    </p>\n\n  </div>\n\n</section>",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_YGQ3Pa": {
@@ -150,21 +235,21 @@
         "heading_jBfRN7": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Shape Held, Heat Out</strong>",
+            "heading": "<strong>Nano Power Tech</strong>",
             "heading_size": "h1"
           }
         },
         "text_gTP4VP": {
           "type": "text",
           "settings": {
-            "text": "<p>TPU overlays keep the upper from collapsing through lateral cuts and deep lunges. Mesh and Aerovents pull heat out as it builds so the fit doesn't shift and your feet don't cook, even in long sessions. </p>",
+            "text": "<p>Nano reinforcement across the frame adds structural strength without adding weight for the racket to stay sturdy under repeated hard hits.</p>",
             "text_style": "body"
           }
         },
         "button_9yyg3q": {
           "type": "button",
           "settings": {
-            "button_label": "SHOP HYPERARMOUR",
+            "button_label": "Shop Z-Tronic 100ti",
             "button_link": "shopify://products/hyper-armour",
             "button_style_secondary": true
           }
@@ -176,24 +261,25 @@
         "button_9yyg3q"
       ],
       "custom_css": [
-        ".button {border-color: #48bfd8 !important;}",
-        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+        "/* BUTTON GRADIENT BORDER */.button {border: 1.5px solid transparent !important; background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(180deg, #7c7872 50%, #37322c 100%) border-box !important;}",
+        ".button::after {box-shadow: none !important;}",
+        "/* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient(180deg, #7c7872 50%, #37322c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/1_cdeb1f9a-f83e-4f4d-8694-c21a8287fa5b.png",
+        "image": "shopify://shop_images/A_4_b636b294-ca51-4da9-9212-5842cc6a39a7.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 36
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "padding_top": 8,
+        "padding_bottom": 20
       }
     },
     "image_with_text_AAWtCq": {
@@ -202,21 +288,21 @@
         "heading_B3aNhQ": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Traction Upheld (ActiveGRIP)</strong>",
+            "heading": "<strong>Hyperweave Carbon Fibre</strong>",
             "heading_size": "h1"
           }
         },
         "text_HbHRGA": {
           "type": "text",
           "settings": {
-            "text": "<p>Honeycomb nonmarking outsole features pivot points placed for badminton's six-direction movement. Grips on the push, rotates on the pivot so there is no slipping, no sticking. </p>",
+            "text": "<p>The highest grade carbon used in racket construction. Rigid under load, snaps back instantly.</p>",
             "text_style": "body"
           }
         },
         "button_YrXPTB": {
           "type": "button",
           "settings": {
-            "button_label": "Shop HYPERARMOUR",
+            "button_label": "Shop Z-Tronic 100ti",
             "button_link": "shopify://products/hyper-armour",
             "button_style_secondary": true
           }
@@ -228,22 +314,23 @@
         "button_YrXPTB"
       ],
       "custom_css": [
-        ".button {border-color: #48bfd8 !important;}",
-        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+        "/* BUTTON GRADIENT BORDER */.button {border: 1.5px solid transparent !important; background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(180deg, #7c7872 50%, #37322c 100%) border-box !important;}",
+        ".button::after {box-shadow: none !important;}",
+        "/* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient(180deg, #7c7872 50%, #37322c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/2_351fb856-a21f-41af-8a57-e759e41170ba.png",
+        "image": "shopify://shop_images/A_5_dbe5c0e1-3df6-422b-9bc7-d0b3d266eaea.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "zoom-in",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 12,
         "padding_bottom": 24
       }
@@ -279,6 +366,7 @@
         "text_8DwhUp",
         "button_Ec86eP"
       ],
+      "disabled": true,
       "custom_css": [
         ".button {border-color: #48bfd8 !important;}",
         ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
@@ -380,6 +468,7 @@
         "text_dftkKY",
         "button_czAQMr"
       ],
+      "disabled": true,
       "custom_css": [
         ".button {border-color: #48bfd8 !important;}",
         ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
@@ -398,112 +487,6 @@
         "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-4",
         "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "custom_liquid_KKwXjx": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section style=\"text-align: center; letter-spacing: 0px\">\n<p style=\"font-size: 1.4rem\"> Champion's Choice</p>\n  <h2 class=\"second-title\">Preferred by Pros</h2>\n\n</section>",
-        "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 64
-      }
-    },
-    "multicolumn_zieGnW": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_AatUqt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1_e6c304c8-69dc-44c3-a47e-26cfc1d184b6.png",
-            "title": "",
-            "text": "<p> \"I found exactly the performance I was looking for, and more\" - Alexandra Boje, Danish Badminton Player</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6QDLmL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Banner_2_1aa53ea2-ed0d-4cab-be07-72bba14d473d.png",
-            "title": "",
-            "text": "<p> \"Most shoes start peeling quickly, Phenom did not\" - Mathias Christiansen, Danish Badminton Player</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_n7FRgW": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Banner_7_3755d7c3-1e26-4556-aaab-6f3013572eb2.png",
-            "title": "",
-            "text": "<p> \"The first thing I look for in a shoe is trust and I found it in Phenom\" - Armaan Bhatia, India's #1 Ranked Pickleball Player</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_H98z3q": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Banner_4_45c36765-9058-44ff-a718-158b7ee021f9.png",
-            "title": "",
-            "text": "<p> \"It made the hard days feel a little easier\" - Estelle Van Leeuwen</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_N3g4Gz": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Banner_5_91415f2f-2a90-4692-8e2c-7c41998b3075.png",
-            "title": "",
-            "text": "<p> </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_MxgJat": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Banner_6_474f3a6d-9ce0-4d6b-a769-8e68d4bae484.png",
-            "title": "",
-            "text": "<p> </p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_AatUqt",
-        "column_6QDLmL",
-        "column_n7FRgW",
-        "column_H98z3q",
-        "column_N3g4Gz",
-        "column_MxgJat"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 4,
         "padding_bottom": 36
       }
     },
@@ -578,8 +561,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"hyper-cta\">\n\n  <p class=\"hyper-cta-kicker\">\n    THE ENDURANCE SHOE\n  </p>\n\n  <h2 class=\"hyper-cta-title\">\n    Over Engineered. Undefeated.\n  </h2>\n\n  <p class=\"hyper-cta-description\">\n    Leave Nothing on the Court with HNDRD Hyperarmour\n  </p>\n\n  <a href=\"https://in.hndrd.co/products/hyper-armour\" class=\"hyper-cta-button\">\n    SHOP HYPERARMOUR\n  </a>\n\n</section>\n\n<style>\n\n  .hyper-cta,\n  .hyper-cta * {\n    box-sizing: border-box;\n  }\n\n  .hyper-cta {\n    width: 100%;\n    padding: 80px 20px 90px;\n    text-align: center;\n    background: #000;\n    font-family: inherit;\n  }\n\n\n  .hyper-cta-kicker {\n    margin: 0 0 16px;\n    color: rgba(255,255,255,.42);\n\n    font-size: 14px;\n    line-height: 1;\n\n    font-weight: 750;\n\n    letter-spacing: .16em;\n    text-transform: uppercase;\n  }\n\n\n  .hyper-cta-title {\n    max-width: 900px;\n    margin: 0 auto;\n\n    font-size: clamp(48px, 5.6vw, 8px);\n    line-height: .95;\n\n    font-weight: 800;\n\n    letter-spacing: -.055em;\n\n    background-image: linear-gradient(\n      to right,\n      #8CEB8A 0%,\n      #5DDFB7 48%,\n      #48BFD8 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  .hyper-cta-description {\n    max-width: 620px;\n\n    margin: 28px auto 0;\n\n    color: rgba(255,255,255,.43);\n\n    font-size: 18px;\n    line-height: 1.5;\n\n    font-weight: 450;\n\n    letter-spacing: -.015em;\n  }\n\n\n  .hyper-cta-button {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    margin-top: 34px;\n\n    min-height: 52px;\n\n    padding: 0 34px;\n\n    border: 1.5px solid #2fe0c2;\n    border-radius: 999px;\n\n    background: transparent;\n    color: #fff;\n\n    font-size: 12px;\n    line-height: 1;\n\n    font-weight: 750;\n\n    letter-spacing: .09em;\n\n    text-decoration: none;\n\n    transition:\n      background .25s ease,\n      color .25s ease,\n      transform .25s ease,\n      box-shadow .25s ease;\n  }\n\n\n  \n\n    transform: translateY(-2px);\n\n    box-shadow:\n      0 10px 30px rgba(47,224,194,.15);\n  }\n\n\n  @media screen and (max-width: 749px) {\n\n    .hyper-cta {\n      padding: 64px 16px 72px;\n    }\n\n\n    .hyper-cta-kicker {\n      margin-bottom: 13px;\n\n      font-size: 11px;\n      font-weight: 750;\n\n      letter-spacing: .15em;\n    }\n\n\n    .hyper-cta-title {\n      max-width: 390px;\n\n      font-size: clamp(40px, 12vw, 54px);\n      line-height: .96;\n\n      font-weight: 800;\n\n      letter-spacing: -.055em;\n    }\n\n\n    .hyper-cta-description {\n      max-width: 340px;\n\n      margin-top: 23px;\n\n      font-size: 15px;\n      line-height: 1.5;\n\n      font-weight: 450;\n    }\n\n\n    .hyper-cta-button {\n      margin-top: 28px;\n\n      min-height: 50px;\n\n      padding: 0 29px;\n\n      font-size: 11px;\n      font-weight: 750;\n    }\n\n  }\n\n\n  @media screen and (max-width: 420px) {\n\n    .hyper-cta-title {\n      font-size: 39px;\n    }\n\n  }\n\n</style>",
-        "color_scheme": "scheme-4",
+        "custom_liquid": "<section class=\"zt-final\">\n\n  <div class=\"zt-final__glow\"></div>\n\n  <div class=\"zt-final__inner\">\n\n    <p class=\"zt-final__kicker\">\n      Z-TRONIC 100 TI\n    </p>\n\n    <h2 class=\"zt-final__title\">\n      <span>BUILT TO STRIKE.</span>\n      <span>MADE TO RECOVER.</span>\n    </h2>\n\n    <p class=\"zt-final__description\">\n      Fast flex. Titanium recovery. Power that resets for the next attack.\n    </p>\n\n    <a\n      href=\"/products/z-tronic-100-ti\"\n      class=\"zt-final__button\"\n    >\n      EXPLORE Z-TRONIC 100 TI\n    </a>\n\n  </div>\n\n</section>\n\n\n<style>\n\n  .zt-final,\n  .zt-final * {\n    box-sizing: border-box;\n  }\n\n\n  /* =========================\n     SECTION\n  ========================= */\n\n  .zt-final {\n    position: relative;\n\n    width: 100%;\n    overflow: hidden;\n\n    padding: 92px 24px 98px;\n\n    background: #0D0D0D;\n\n    text-align: center;\n\n    font-family: \"Figtree\", sans-serif;\n  }\n\n\n  /* =========================\n     VERY SUBTLE TITANIUM GLOW\n  ========================= */\n\n  .zt-final__glow {\n    position: absolute;\n\n    left: 50%;\n    bottom: -280px;\n\n    width: 1050px;\n    height: 470px;\n\n    transform: translateX(-50%);\n\n    background: radial-gradient(\n      ellipse at center,\n      rgba(124,120,114,.13) 0%,\n      rgba(90,85,79,.07) 30%,\n      rgba(55,50,44,.035) 50%,\n      rgba(13,13,13,0) 72%\n    );\n\n    pointer-events: none;\n  }\n\n\n  /* =========================\n     CONTENT\n  ========================= */\n\n  .zt-final__inner {\n    position: relative;\n    z-index: 2;\n\n    width: 100%;\n    max-width: 1200px;\n\n    margin: 0 auto;\n  }\n\n\n  /* =========================\n     KICKER\n  ========================= */\n\n  .zt-final__kicker {\n    margin: 0 0 20px;\n\n    color: #77736E;\n\n    font-size: 13px;\n    line-height: 1;\n\n    font-weight: 700;\n\n    letter-spacing: .18em;\n\n    text-transform: uppercase;\n  }\n\n\n  /* =========================\n     MAIN HEADLINE\n  ========================= */\n\n  .zt-final__title {\n    margin: 0 auto;\n\n    font-size: clamp(58px, 6.3vw, 102px);\n\n    line-height: .91;\n\n    font-weight: 700;\n\n    letter-spacing: -4.5px;\n\n    text-transform: uppercase;\n  }\n\n\n  .zt-final__title span {\n    display: block;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  /* SECOND LINE SLIGHTLY DARKER */\n  .zt-final__title span + span {\n    margin-top: 7px;\n\n    opacity: .82;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .zt-final__description {\n    max-width: 650px;\n\n    margin: 27px auto 0;\n\n    color: #A6A39F;\n\n    font-size: 18px;\n\n    line-height: 1.5;\n\n    font-weight: 500;\n\n    letter-spacing: -.15px;\n  }\n\n\n  /* =========================\n     CTA\n  ========================= */\n\n  .zt-final__button {\n    display: inline-flex;\n\n    align-items: center;\n    justify-content: center;\n\n    margin-top: 37px;\n\n    min-width: 310px;\n    min-height: 60px;\n\n    padding: 0 38px;\n\n    border: 1.5px solid #7C7872;\n    border-radius: 999px;\n\n    background: transparent !important;\n\n    color: #FFFFFF;\n\n    font-size: 12px;\n\n    line-height: 1;\n\n    font-weight: 700;\n\n    letter-spacing: .15em;\n\n    text-transform: uppercase;\n\n    text-decoration: none;\n\n    transition:\n      transform .3s ease,\n      border-color .3s ease,\n      color .3s ease;\n  }\n\n\n  /* NO FILL ON HOVER */\n\n  .zt-final__button:hover {\n    background: transparent !important;\n\n    border-color: #A29E98;\n\n    color: #D0CDCA;\n\n    transform: translateY(-2px);\n  }\n\n\n  .zt-final__button::before,\n  .zt-final__button::after {\n    display: none !important;\n    content: none !important;\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .zt-final {\n      padding: 64px 16px 70px;\n    }\n\n\n    .zt-final__kicker {\n      margin-bottom: 17px;\n\n      font-size: 10px;\n\n      letter-spacing: .17em;\n    }\n\n\n    .zt-final__title {\n      max-width: 390px;\n\n      font-size: clamp(39px, 11.5vw, 52px);\n\n      line-height: .94;\n\n      letter-spacing: -2.2px;\n    }\n\n\n    .zt-final__title span + span {\n      margin-top: 5px;\n    }\n\n\n    .zt-final__description {\n      max-width: 340px;\n\n      margin-top: 22px;\n\n      font-size: 15px;\n\n      line-height: 1.5;\n    }\n\n\n    .zt-final__button {\n      margin-top: 30px;\n\n      min-width: 270px;\n      min-height: 55px;\n\n      padding: 0 28px;\n\n      font-size: 11px;\n\n      letter-spacing: .12em;\n    }\n\n\n    .zt-final__glow {\n      bottom: -190px;\n\n      width: 580px;\n      height: 330px;\n    }\n\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .zt-final {\n      padding: 58px 14px 64px;\n    }\n\n\n    .zt-final__title {\n      font-size: 10.8vw;\n\n      letter-spacing: -1.7px;\n    }\n\n\n    .zt-final__description {\n      max-width: 315px;\n\n      font-size: 14px;\n    }\n\n\n    .zt-final__button {\n      min-width: 250px;\n\n      min-height: 53px;\n\n      font-size: 10px;\n    }\n\n  }\n\n</style>",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -594,17 +577,16 @@
     "custom_liquid_pX3CYh",
     "media_gxHEbG",
     "custom_liquid_rhUah4",
-    "hero_component_MaVYaG",
-    "custom_liquid_pMCXET",
-    "media_Fp4xqn",
     "custom_liquid_kcf9aP",
+    "media_Fp4xqn",
+    "custom_liquid_KKwXjx",
+    "multicolumn_zieGnW",
+    "custom_liquid_zCkmDN",
     "image_with_text_YGQ3Pa",
     "image_with_text_AAWtCq",
     "image_with_text_7dYiHP",
     "image_with_text_Kxdy9z",
     "image_with_text_c6RhH7",
-    "custom_liquid_KKwXjx",
-    "multicolumn_zieGnW",
     "rich_text_3d3gL3",
     "media_QE4AML",
     "media_ag6DY6",
