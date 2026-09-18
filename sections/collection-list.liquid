@@ -104,15 +104,20 @@
   }
 
   @media screen and (max-width: 749px) {
+    #ResponsiveCollectionList-{{ section.id }}.slider-mobile-gutter {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     #Slider-{{ section.id }} {
       padding-left: {{ section.settings.side_padding_mobile }}px;
-      padding-right: {{ section.settings.side_padding_mobile }}px;
       scroll-padding-left: {{ section.settings.side_padding_mobile }}px;
     }
 
-    #ResponsiveCollectionList-{{ section.id }} {
-      margin-left: -{{ section.settings.side_padding_mobile }}px;
-      margin-right: -{{ section.settings.side_padding_mobile }}px;
+    #Slider-{{ section.id }} > li:last-child {
+      margin-right: {{ section.settings.side_padding_mobile }}px;
     }
   }
 
