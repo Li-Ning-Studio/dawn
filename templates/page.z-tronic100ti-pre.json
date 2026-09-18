@@ -33,38 +33,53 @@
         "padding_bottom": 0
       }
     },
-    "1789727773b524c1d6": {
+    "custom_liquid_bXDNBC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&display=swap');\n\n.chase-copy{\n  font-family:\"Figtree\",sans-serif;\n  text-align:center;\n  background:#000;\n  padding:10px 20px 24px;\n}\n\n.chase-title{\n  margin:0;\n  font-size:30px;\n  font-weight:800;\n  line-height:1.15;\n  letter-spacing:-1px;\n  display:inline-block;\n\n  /* Top #7c7872 → Bottom #37322c */\n  background:linear-gradient(\n    180deg,\n    #7c7872 50%,\n    #37322c 100%\n  );\n\n  background-clip:text;\n  -webkit-background-clip:text;\n  color:transparent;\n  -webkit-text-fill-color:transparent;\n}\n\n.chase-offer{\n  margin:28px 0 0;\n  color:#ced4da;\n  font-size:22px;\n  font-weight:600;\n  line-height:1.4;\n}\n\n.chase-amount{\n  color:#FFFFFF;\n  font-weight:700;\n}\n\n@media(max-width:749px){\n  .chase-title{\n    font-size:24px;\n  }\n\n  .chase-offer{\n    font-size:16px;\n    margin-top:20px;\n  }\n}\n</style>\n\n<div class=\"chase-copy\">\n\n  <div class=\"chase-title\">Reign to Power</div>\n\n  <p class=\"chase-offer\">\n    <strong>Register to receive early-access discounts.</strong>\n  </p>\n\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "apps_dKPHpm": {
       "type": "apps",
       "blocks": {
-        "forms_inline_PymYhi": {
+        "forms_inline_DXMtzY": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "158805",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "form_id": "1158805",
+            "text_color": "#ffffff",
+            "button_background_color": "#7C7872",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 0,
             "padding_bottom": 24,
-            "padding_right": 0,
-            "padding_left": 0
+            "padding_right": 11,
+            "padding_left": 11
           }
         }
       },
       "block_order": [
-        "forms_inline_PymYhi"
+        "forms_inline_DXMtzY"
+      ],
+      "custom_css": [
+        "div {background: black;}",
+        "._textHeading_2aowh_35P {color: yellow;}"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     }
   },
   "order": [
     "main",
     "hero_video_component_PwreKG",
-    "1789727773b524c1d6"
+    "custom_liquid_bXDNBC",
+    "apps_dKPHpm"
   ]
 }
