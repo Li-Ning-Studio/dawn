@@ -450,45 +450,116 @@
         "padding_bottom": 80
       }
     },
-    "story_masked_KtdpAj": {
-      "type": "story-masked",
-      "name": "Video i bogstaverne",
+    "story_columns_piHic9": {
+      "type": "story-columns",
+      "blocks": {
+        "image_CEtMwN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b_20260820_1250_WorldChampionships2026_BPJS6761.jpg"
+          }
+        },
+        "image_LVWznz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cr_20260818_1736_WorldChampionships2026_BPGE8413.jpg"
+          }
+        },
+        "image_LgbiVk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b_20260819_1703_WorldChampionships2026_BPJS5007.jpg"
+          }
+        },
+        "image_PkJRpF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b_20260821_1436_WorldChampionships2026_BPJS9819.jpg"
+          }
+        },
+        "image_apceBN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b_20260819_1635_WorldChampionships2026_BPJS1428.jpg"
+          }
+        },
+        "image_pjcnP8": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_bR3wpe": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_bcVUUW": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_PDtect": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_XHDYLr": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_YW8qey": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cr_20260818_1736_WorldChampionships2026_BPGE8413.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_CEtMwN",
+        "image_LVWznz",
+        "image_LgbiVk",
+        "image_PkJRpF",
+        "image_apceBN",
+        "image_pjcnP8",
+        "image_bR3wpe",
+        "image_bcVUUW",
+        "image_PDtect",
+        "image_XHDYLr",
+        "image_YW8qey"
+      ],
+      "name": "Billedspalter",
       "settings": {
-        "word": "HNDRD",
-        "fill_width": 75,
-        "word_weight": "800",
-        "word_italic": true,
-        "word_spacing": 0,
-        "word_padding": 60,
-        "word_padding_mobile": 32,
-        "gradient_from": "#FFFFFF",
-        "gradient_to": "#E79C1F",
-        "gradient_angle": 100,
-        "gradient_width": 250,
-        "motion": "auto",
-        "auto_speed": 3,
-        "scroll_zoom": 27,
         "eyebrow": "The story behind",
+        "heading": "HNDRD",
+        "heading_italic": true,
+        "heading_size": 90,
+        "heading_size_mobile": 48,
+        "heading_weight": "800",
         "eyebrow_size": 11,
-        "lead": "<p>Skriv historien her. Hold den kort — bogstaverne gør arbejdet, teksten skal bare lande pointen.</p>",
-        "lead_size": 18,
-        "lead_opacity": 70,
-        "text_width": 62,
-        "button_label": "Read the full story",
-        "button_link": "",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "#ffffff",
-        "button_border_color": "#ffffff66",
-        "bg_color": "#000000",
-        "text_color": "#ffffff",
-        "accent_color": "#E79C1F",
+        "body": "<p>Skriv historien her. Bag teksten kører alt det du har skudt — spillere, baner, lager.</p>",
+        "body_size": 17,
+        "body_opacity": 80,
         "align": "center",
         "text_align": "center",
-        "stack_gap": 28,
-        "max_width": 1360,
-        "side_padding": 100,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "card_width": 620,
+        "card_padding": 40,
+        "button_label": "Read the full story",
+        "button_link": "",
+        "button_background": "#E79C1F",
+        "button_text_color": "#0a0a0a",
+        "button_border_color": "rgba(0,0,0,0)",
+        "columns": 4,
+        "columns_mobile": 2,
+        "image_ratio": "3 / 4",
+        "image_radius": 4,
+        "gap": 18,
+        "scroll_boost": 250,
+        "veil_strength": 90,
+        "veil_spread": 70,
+        "bg_color": "#0a0a0a",
+        "text_color": "#ffffff",
+        "accent_color": "#E79C1F",
+        "min_height": 880,
+        "min_height_mobile": 640,
+        "side_padding": 24,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -499,6 +570,6 @@
     "178937964221a5e8a3",
     "players_a6MmMr",
     "story_kinetic_y7niJR",
-    "story_masked_KtdpAj"
+    "story_columns_piHic9"
   ]
 }
