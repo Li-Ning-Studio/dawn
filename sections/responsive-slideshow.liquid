@@ -4,6 +4,37 @@
   assign autorotate_delay = section.settings.autorotate_speed | times: 1000
   assign video_autoplay = section.settings.video_autoplay
   assign video_controls = section.settings.video_controls
+
+  assign is_b2b = false
+  if customer
+    if customer.b2b?
+      assign is_b2b = true
+    endif
+    assign b2b_tag = section.settings.b2b_tag | downcase | strip
+    if b2b_tag != blank
+      assign customer_tags = customer.tags | join: ',' | downcase
+      if customer_tags contains b2b_tag
+        assign is_b2b = true
+      endif
+    endif
+  endif
+
+  assign visible_count = 0
+  for block in section.blocks
+    assign vis = false
+    if is_b2b
+      if block.settings.show_b2b
+        assign vis = true
+      endif
+    else
+      if block.settings.show_b2c
+        assign vis = true
+      endif
+    endif
+    if vis
+      assign visible_count = visible_count | plus: 1
+    endif
+  endfor
 -%}
 
 {%- style -%}
@@ -97,7 +128,6 @@
     z-index: 2;
   }
 
-  /* Overskrift og undertekst styres nu direkte, ikke via temaets klasser */
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__heading {
     margin: 0;
     color: inherit;
@@ -246,8 +276,6 @@
       endcase
     -%}
 
-    /* --- Slide {{ i }} — computer --- */
-
     #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__content {
       justify-content: {{ justify }};
       align-items: {{ align }};
@@ -303,8 +331,6 @@
       }
     }
 
-    /* --- Slide {{ i }} — mobil --- */
-
     @media screen and (max-width: 749px) {
       #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__content {
         justify-content: {{ justify_m }};
@@ -334,7 +360,31 @@
 
 <div id="ResponsiveSlideshow-{{ section.id }}" class="responsive-slideshow">
   <div class="slider" id="Slider-{{ section.id }}">
+    {%- assign rendered = 0 -%}
     {%- for block in section.blocks -%}
+      {%- liquid
+        assign show_slide = false
+        if is_b2b
+          if block.settings.show_b2b
+            assign show_slide = true
+          endif
+        else
+          if block.settings.show_b2c
+            assign show_slide = true
+          endif
+        endif
+
+        if request.design_mode
+          assign show_slide = true
+        endif
+      -%}
+
+      {%- unless show_slide -%}
+        {%- continue -%}
+      {%- endunless -%}
+
+      {%- assign rendered = rendered | plus: 1 -%}
+
       <div
         class="responsive-slideshow__slide"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
@@ -348,7 +398,7 @@
             assign fallback_image = desktop_image | default: mobile_image
             assign loading = 'lazy'
             assign fetch_priority = 'auto'
-            if forloop.first and section.index == 1
+            if rendered == 1 and section.index == 1
               assign loading = 'eager'
               assign fetch_priority = 'high'
             endif
@@ -396,11 +446,11 @@
     {%- endfor -%}
   </div>
 
-  {%- if section.blocks.size > 1 -%}
+  {%- if visible_count > 1 or request.design_mode -%}
     <div class="responsive-slideshow__controls">
       {%- if section.settings.show_counter -%}
         <div class="responsive-slideshow__counter">
-          <span class="responsive-slideshow__counter-current">1</span>/<span>{{ section.blocks.size }}</span>
+          <span class="responsive-slideshow__counter-current">1</span>/<span class="responsive-slideshow__counter-total">{{ visible_count }}</span>
         </div>
       {%- endif -%}
       <button type="button" class="responsive-slideshow__arrow responsive-slideshow__arrow--prev" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}">
@@ -429,6 +479,10 @@
       if (!slider) return;
 
       var slides = Array.prototype.slice.call(slider.querySelectorAll('.responsive-slideshow__slide'));
+
+      var total = wrapper.querySelector('.responsive-slideshow__counter-total');
+      if (total) total.textContent = slides.length;
+
       if (slides.length < 2) return;
 
       var prev = wrapper.querySelector('.responsive-slideshow__arrow--prev');
@@ -506,6 +560,9 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    { "type": "header", "content": "B2B", "info": "Bestemmer hvornår en kunde regnes som B2B. Slides vælges enkeltvis længere nede." },
+    { "type": "text", "id": "b2b_tag", "label": "Kundetag for B2B", "default": "B2B", "info": "Kunder med dette tag ser B2B-slides. Bruger du Shopifys indbyggede B2B, virker det også uden tag." },
+
     { "type": "header", "content": "Format" },
     { "type": "select", "id": "aspect_ratio_desktop", "label": "Format på computer", "options": [{ "value": "21 / 9", "label": "Meget bredt (21:9)" }, { "value": "2 / 1", "label": "Bredt (2:1)" }, { "value": "16 / 9", "label": "Bredformat (16:9)" }, { "value": "3 / 2", "label": "Klassisk (3:2)" }, { "value": "4 / 3", "label": "Liggende (4:3)" }, { "value": "1 / 1", "label": "Kvadratisk (1:1)" }], "default": "16 / 9" },
     { "type": "select", "id": "aspect_ratio_mobile", "label": "Format på mobil", "options": [{ "value": "16 / 9", "label": "Bredformat (16:9)" }, { "value": "4 / 3", "label": "Liggende (4:3)" }, { "value": "1 / 1", "label": "Kvadratisk (1:1)" }, { "value": "4 / 5", "label": "Højformat (4:5)" }, { "value": "3 / 4", "label": "Højformat (3:4)" }, { "value": "9 / 16", "label": "Fuld højde (9:16)" }], "default": "4 / 5" },
@@ -532,6 +589,10 @@
       "name": "Slide",
       "limit": 8,
       "settings": [
+        { "type": "header", "content": "Vis denne slide for", "info": "Slå begge til hvis den skal vises for alle. Slår du begge fra, vises den ikke." },
+        { "type": "checkbox", "id": "show_b2c", "label": "B2C — almindelige kunder og ikke-loggede", "default": true },
+        { "type": "checkbox", "id": "show_b2b", "label": "B2B — kunder med B2B-tag", "default": true },
+
         { "type": "header", "content": "Billede" },
         { "type": "image_picker", "id": "image", "label": "Billede" },
         { "type": "image_picker", "id": "mobile_image", "label": "Billede til mobil", "info": "Erstatter hovedbilledet på små skærme." },
