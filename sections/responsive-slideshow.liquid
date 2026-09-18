@@ -40,7 +40,6 @@
     padding: 0;
   }
 
-  /* Fast format: slidet bestemmer højden, ikke filen */
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__media {
     position: relative;
     width: 100%;
@@ -98,9 +97,11 @@
     z-index: 2;
   }
 
+  /* Overskrift og undertekst styres nu direkte, ikke via temaets klasser */
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__heading {
     margin: 0;
     color: inherit;
+    line-height: 1.02;
     text-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.35);
   }
 
@@ -108,20 +109,16 @@
     margin: 1rem 0 0;
     color: inherit;
     max-width: 46ch;
+    line-height: 1.55;
     text-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.35);
   }
 
   #ResponsiveSlideshow-{{ section.id }} .responsive-slideshow__button {
     pointer-events: auto;
-    margin-top: 2.4rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1.2rem 3.2rem;
-    border-radius: 4rem;
     text-decoration: none;
-    font-size: 1.4rem;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: opacity 0.2s ease;
   }
@@ -204,6 +201,8 @@
 
   {%- for block in section.blocks -%}
     {%- liquid
+      assign i = forloop.index
+
       case block.settings.content_position_vertical
         when 'top'
           assign justify = 'flex-start'
@@ -224,37 +223,104 @@
           assign align = 'center'
           assign text_align = 'center'
       endcase
+
+      case block.settings.content_position_vertical_mobile
+        when 'top'
+          assign justify_m = 'flex-start'
+        when 'bottom'
+          assign justify_m = 'flex-end'
+        else
+          assign justify_m = 'center'
+      endcase
+
+      case block.settings.content_position_horizontal_mobile
+        when 'left'
+          assign align_m = 'flex-start'
+          assign text_align_m = 'left'
+        when 'right'
+          assign align_m = 'flex-end'
+          assign text_align_m = 'right'
+        else
+          assign align_m = 'center'
+          assign text_align_m = 'center'
+      endcase
     -%}
 
-    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__content {
+    /* --- Slide {{ i }} — computer --- */
+
+    #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__content {
       justify-content: {{ justify }};
       align-items: {{ align }};
       text-align: {{ text_align }};
       color: {{ block.settings.text_color }};
     }
 
-    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media img,
-    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media video {
+    #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__heading {
+      font-size: {{ block.settings.heading_size_mobile }}px;
+      font-weight: {{ block.settings.heading_weight }};
+      letter-spacing: {{ block.settings.heading_spacing }}px;
+      {% if block.settings.heading_uppercase %}text-transform: uppercase;{% endif %}
+      {% if block.settings.heading_italic %}font-style: italic;{% endif %}
+      max-width: {{ block.settings.heading_width }}ch;
+    }
+
+    #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__subheading {
+      font-size: {{ block.settings.subheading_size_mobile }}px;
+      font-weight: {{ block.settings.subheading_weight }};
+      margin-top: {{ block.settings.subheading_space }}px;
+    }
+
+    #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__button {
+      margin-top: {{ block.settings.button_space }}px;
+      padding: {{ block.settings.button_padding_y_mobile }}px {{ block.settings.button_padding_x_mobile }}px;
+      font-size: {{ block.settings.button_size_mobile }}px;
+      font-weight: {{ block.settings.button_weight }};
+      letter-spacing: {{ block.settings.button_spacing }}em;
+      border-radius: {{ block.settings.button_radius }}px;
+      background: {{ block.settings.button_background }};
+      color: {{ block.settings.button_text_color }};
+      border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    }
+
+    #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__media img,
+    #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__media video {
       object-position: {{ block.settings.focus }};
       transform: scale({{ block.settings.zoom | divided_by: 100.0 }});
     }
 
+    @media screen and (min-width: 750px) {
+      #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__heading {
+        font-size: {{ block.settings.heading_size }}px;
+      }
+
+      #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__subheading {
+        font-size: {{ block.settings.subheading_size }}px;
+      }
+
+      #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__button {
+        padding: {{ block.settings.button_padding_y }}px {{ block.settings.button_padding_x }}px;
+        font-size: {{ block.settings.button_size }}px;
+      }
+    }
+
+    /* --- Slide {{ i }} — mobil --- */
+
     @media screen and (max-width: 749px) {
-      #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media img,
-      #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media video {
+      #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__content {
+        justify-content: {{ justify_m }};
+        align-items: {{ align_m }};
+        text-align: {{ text_align_m }};
+      }
+
+      #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__media img,
+      #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__media video {
         object-position: {{ block.settings.focus_mobile }};
         transform: scale({{ block.settings.zoom_mobile | divided_by: 100.0 }});
       }
     }
 
-    #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__button {
-      background: {{ block.settings.button_background }};
-      color: {{ block.settings.button_text_color }};
-      border: 0.1rem solid {{ block.settings.button_border_color }};
-    }
-
     {%- if block.settings.overlay_opacity > 0 -%}
-      #Slide-{{ section.id }}-{{ forloop.index }} .responsive-slideshow__media::after {
+      #Slide-{{ section.id }}-{{ i }} .responsive-slideshow__media::after {
         content: '';
         position: absolute;
         inset: 0;
@@ -313,7 +379,7 @@
 
         <div class="responsive-slideshow__content">
           {%- if block.settings.heading != blank -%}
-            <h2 class="responsive-slideshow__heading {{ block.settings.heading_size }}">{{ block.settings.heading }}</h2>
+            <h2 class="responsive-slideshow__heading">{{ block.settings.heading }}</h2>
           {%- endif -%}
           {%- if block.settings.subheading != blank -%}
             <p class="responsive-slideshow__subheading">{{ block.settings.subheading }}</p>
@@ -441,107 +507,24 @@
   "class": "section",
   "settings": [
     { "type": "header", "content": "Format" },
-    {
-      "type": "select",
-      "id": "aspect_ratio_desktop",
-      "label": "Format på computer",
-      "options": [
-        { "value": "21 / 9", "label": "Meget bredt (21:9)" },
-        { "value": "2 / 1", "label": "Bredt (2:1)" },
-        { "value": "16 / 9", "label": "Bredformat (16:9)" },
-        { "value": "3 / 2", "label": "Klassisk (3:2)" },
-        { "value": "4 / 3", "label": "Liggende (4:3)" },
-        { "value": "1 / 1", "label": "Kvadratisk (1:1)" }
-      ],
-      "default": "16 / 9"
-    },
-    {
-      "type": "select",
-      "id": "aspect_ratio_mobile",
-      "label": "Format på mobil",
-      "options": [
-        { "value": "16 / 9", "label": "Bredformat (16:9)" },
-        { "value": "4 / 3", "label": "Liggende (4:3)" },
-        { "value": "1 / 1", "label": "Kvadratisk (1:1)" },
-        { "value": "4 / 5", "label": "Højformat (4:5)" },
-        { "value": "3 / 4", "label": "Højformat (3:4)" },
-        { "value": "9 / 16", "label": "Fuld højde (9:16)" }
-      ],
-      "default": "4 / 5"
-    },
-    {
-      "type": "select",
-      "id": "media_fit",
-      "label": "Sådan tilpasses billede og video",
-      "options": [
-        { "value": "cover", "label": "Fyld rammen ud (beskærer kanterne)" },
-        { "value": "contain", "label": "Vis det hele (kan give kanter)" }
-      ],
-      "default": "cover"
-    },
-    {
-      "type": "color",
-      "id": "media_background",
-      "label": "Baggrund bag mediet",
-      "default": "#000000",
-      "info": "Ses kun hvis du vælger 'Vis det hele'."
-    },
+    { "type": "select", "id": "aspect_ratio_desktop", "label": "Format på computer", "options": [{ "value": "21 / 9", "label": "Meget bredt (21:9)" }, { "value": "2 / 1", "label": "Bredt (2:1)" }, { "value": "16 / 9", "label": "Bredformat (16:9)" }, { "value": "3 / 2", "label": "Klassisk (3:2)" }, { "value": "4 / 3", "label": "Liggende (4:3)" }, { "value": "1 / 1", "label": "Kvadratisk (1:1)" }], "default": "16 / 9" },
+    { "type": "select", "id": "aspect_ratio_mobile", "label": "Format på mobil", "options": [{ "value": "16 / 9", "label": "Bredformat (16:9)" }, { "value": "4 / 3", "label": "Liggende (4:3)" }, { "value": "1 / 1", "label": "Kvadratisk (1:1)" }, { "value": "4 / 5", "label": "Højformat (4:5)" }, { "value": "3 / 4", "label": "Højformat (3:4)" }, { "value": "9 / 16", "label": "Fuld højde (9:16)" }], "default": "4 / 5" },
+    { "type": "select", "id": "media_fit", "label": "Sådan tilpasses billede og video", "options": [{ "value": "cover", "label": "Fyld rammen ud (beskærer kanterne)" }, { "value": "contain", "label": "Vis det hele (kan give kanter)" }], "default": "cover" },
+    { "type": "color", "id": "media_background", "label": "Baggrund bag mediet", "default": "#000000", "info": "Ses kun hvis du vælger 'Vis det hele'." },
+
     { "type": "header", "content": "Automatisk skift" },
-    {
-      "type": "checkbox",
-      "id": "autorotate",
-      "label": "Skift slide automatisk",
-      "default": true
-    },
-    {
-      "type": "range",
-      "id": "autorotate_speed",
-      "min": 3,
-      "max": 20,
-      "step": 1,
-      "unit": "s",
-      "label": "Sekunder pr. slide",
-      "default": 5
-    },
+    { "type": "checkbox", "id": "autorotate", "label": "Skift slide automatisk", "default": true },
+    { "type": "range", "id": "autorotate_speed", "min": 3, "max": 20, "step": 1, "unit": "s", "label": "Sekunder pr. slide", "default": 5 },
+
     { "type": "header", "content": "Pile og tæller" },
-    {
-      "type": "checkbox",
-      "id": "show_counter",
-      "default": true,
-      "label": "Vis tæller"
-    },
-    {
-      "type": "color",
-      "id": "controls_color",
-      "default": "#ffffff",
-      "label": "Tællerfarve"
-    },
-    {
-      "type": "color",
-      "id": "controls_background",
-      "default": "#ffffff",
-      "label": "Pileknappens baggrund"
-    },
-    {
-      "type": "color",
-      "id": "controls_arrow_color",
-      "default": "#000000",
-      "label": "Pilens farve"
-    },
+    { "type": "checkbox", "id": "show_counter", "default": true, "label": "Vis tæller" },
+    { "type": "color", "id": "controls_color", "default": "#ffffff", "label": "Tællerfarve" },
+    { "type": "color", "id": "controls_background", "default": "#ffffff", "label": "Pileknappens baggrund" },
+    { "type": "color", "id": "controls_arrow_color", "default": "#000000", "label": "Pilens farve" },
+
     { "type": "header", "content": "Video" },
-    {
-      "type": "checkbox",
-      "id": "video_autoplay",
-      "label": "Afspil videoer automatisk",
-      "info": "Videoer afspilles altid uden lyd. Det er et krav i browsere.",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "video_controls",
-      "label": "Vis afspilningsknapper",
-      "default": false
-    }
+    { "type": "checkbox", "id": "video_autoplay", "label": "Afspil videoer automatisk", "info": "Videoer afspilles altid uden lyd. Det er et krav i browsere.", "default": true },
+    { "type": "checkbox", "id": "video_controls", "label": "Vis afspilningsknapper", "default": false }
   ],
   "blocks": [
     {
@@ -550,176 +533,64 @@
       "limit": 8,
       "settings": [
         { "type": "header", "content": "Billede" },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Billede"
-        },
-        {
-          "type": "image_picker",
-          "id": "mobile_image",
-          "label": "Billede til mobil",
-          "info": "Erstatter hovedbilledet på små skærme."
-        },
+        { "type": "image_picker", "id": "image", "label": "Billede" },
+        { "type": "image_picker", "id": "mobile_image", "label": "Billede til mobil", "info": "Erstatter hovedbilledet på små skærme." },
+
         { "type": "header", "content": "Video", "info": "Video vises i stedet for billedet, hvis du vælger en." },
         { "type": "video", "id": "video", "label": "Video" },
-        {
-          "type": "video",
-          "id": "mobile_video",
-          "label": "Video til mobil",
-          "info": "Valgfri. Bruges kun på skærme under 750px."
-        },
+        { "type": "video", "id": "mobile_video", "label": "Video til mobil", "info": "Valgfri. Bruges kun på skærme under 750px." },
+
         { "type": "header", "content": "Beskæring" },
-        {
-          "type": "select",
-          "id": "focus",
-          "label": "Fokuspunkt på computer",
-          "info": "Bestemmer hvilken del af billedet der bevares når det beskæres.",
-          "options": [
-            { "value": "center center", "label": "Midten" },
-            { "value": "center top", "label": "Toppen" },
-            { "value": "center bottom", "label": "Bunden" },
-            { "value": "left center", "label": "Venstre" },
-            { "value": "right center", "label": "Højre" }
-          ],
-          "default": "center center"
-        },
-        {
-          "type": "select",
-          "id": "focus_mobile",
-          "label": "Fokuspunkt på mobil",
-          "options": [
-            { "value": "center center", "label": "Midten" },
-            { "value": "center top", "label": "Toppen" },
-            { "value": "center bottom", "label": "Bunden" },
-            { "value": "left center", "label": "Venstre" },
-            { "value": "right center", "label": "Højre" }
-          ],
-          "default": "center center"
-        },
-        {
-          "type": "range",
-          "id": "zoom",
-          "min": 100,
-          "max": 160,
-          "step": 5,
-          "unit": "%",
-          "label": "Zoom på computer",
-          "default": 100
-        },
-        {
-          "type": "range",
-          "id": "zoom_mobile",
-          "min": 100,
-          "max": 200,
-          "step": 5,
-          "unit": "%",
-          "label": "Zoom på mobil",
-          "default": 100
-        },
-        { "type": "header", "content": "Tekst" },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Overskrift"
-        },
-        {
-          "type": "text",
-          "id": "subheading",
-          "label": "Underoverskrift"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            { "value": "h2", "label": "Lille" },
-            { "value": "h1", "label": "Mellem" },
-            { "value": "h0", "label": "Stor" },
-            { "value": "hxl", "label": "Meget stor" }
-          ],
-          "default": "h0",
-          "label": "Overskriftstørrelse"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "default": "#ffffff",
-          "label": "Tekstfarve"
-        },
-        { "type": "header", "content": "Placering" },
-        {
-          "type": "select",
-          "id": "content_position_vertical",
-          "options": [
-            { "value": "top", "label": "Øverst" },
-            { "value": "middle", "label": "Midt" },
-            { "value": "bottom", "label": "Nederst" }
-          ],
-          "default": "middle",
-          "label": "Lodret"
-        },
-        {
-          "type": "select",
-          "id": "content_position_horizontal",
-          "options": [
-            { "value": "left", "label": "Venstre" },
-            { "value": "center", "label": "Midt" },
-            { "value": "right", "label": "Højre" }
-          ],
-          "default": "center",
-          "label": "Vandret"
-        },
-        {
-          "type": "range",
-          "id": "overlay_opacity",
-          "min": 0,
-          "max": 80,
-          "step": 5,
-          "unit": "%",
-          "default": 20,
-          "label": "Mørkt slør over billedet"
-        },
+        { "type": "select", "id": "focus", "label": "Fokuspunkt på computer", "options": [{ "value": "center center", "label": "Midten" }, { "value": "center top", "label": "Toppen" }, { "value": "center bottom", "label": "Bunden" }, { "value": "left center", "label": "Venstre" }, { "value": "right center", "label": "Højre" }], "default": "center center" },
+        { "type": "select", "id": "focus_mobile", "label": "Fokuspunkt på mobil", "options": [{ "value": "center center", "label": "Midten" }, { "value": "center top", "label": "Toppen" }, { "value": "center bottom", "label": "Bunden" }, { "value": "left center", "label": "Venstre" }, { "value": "right center", "label": "Højre" }], "default": "center center" },
+        { "type": "range", "id": "zoom", "min": 100, "max": 160, "step": 5, "unit": "%", "label": "Zoom på computer", "default": 100 },
+        { "type": "range", "id": "zoom_mobile", "min": 100, "max": 200, "step": 5, "unit": "%", "label": "Zoom på mobil", "default": 100 },
+        { "type": "range", "id": "overlay_opacity", "min": 0, "max": 80, "step": 5, "unit": "%", "default": 20, "label": "Mørkt slør over billedet" },
+
+        { "type": "header", "content": "Overskrift" },
+        { "type": "text", "id": "heading", "label": "Overskrift" },
+        { "type": "range", "id": "heading_size", "min": 20, "max": 120, "step": 2, "unit": "px", "label": "Størrelse (computer)", "default": 56 },
+        { "type": "range", "id": "heading_size_mobile", "min": 16, "max": 72, "step": 2, "unit": "px", "label": "Størrelse (mobil)", "default": 32 },
+        { "type": "select", "id": "heading_weight", "label": "Tykkelse", "options": [{ "value": "300", "label": "Tynd" }, { "value": "400", "label": "Normal" }, { "value": "500", "label": "Medium" }, { "value": "600", "label": "Halvfed" }, { "value": "700", "label": "Fed" }, { "value": "800", "label": "Ekstra fed" }, { "value": "900", "label": "Sort" }], "default": "700" },
+        { "type": "checkbox", "id": "heading_uppercase", "label": "Store bogstaver", "default": false },
+        { "type": "checkbox", "id": "heading_italic", "label": "Kursiv", "default": false },
+        { "type": "range", "id": "heading_spacing", "min": -4, "max": 6, "step": 1, "unit": "px", "label": "Bogstavafstand", "default": -1 },
+        { "type": "range", "id": "heading_width", "min": 10, "max": 40, "step": 1, "unit": "ch", "label": "Hvor bredt den brydes", "default": 22, "info": "Lavere tal giver flere linjer." },
+
+        { "type": "header", "content": "Underoverskrift" },
+        { "type": "text", "id": "subheading", "label": "Underoverskrift" },
+        { "type": "range", "id": "subheading_size", "min": 12, "max": 32, "step": 1, "unit": "px", "label": "Størrelse (computer)", "default": 18 },
+        { "type": "range", "id": "subheading_size_mobile", "min": 11, "max": 24, "step": 1, "unit": "px", "label": "Størrelse (mobil)", "default": 15 },
+        { "type": "select", "id": "subheading_weight", "label": "Tykkelse", "options": [{ "value": "300", "label": "Tynd" }, { "value": "400", "label": "Normal" }, { "value": "500", "label": "Medium" }, { "value": "600", "label": "Halvfed" }, { "value": "700", "label": "Fed" }], "default": "400" },
+        { "type": "range", "id": "subheading_space", "min": 0, "max": 40, "step": 2, "unit": "px", "label": "Afstand til overskriften", "default": 12 },
+
+        { "type": "header", "content": "Tekstens farve og placering" },
+        { "type": "color", "id": "text_color", "default": "#ffffff", "label": "Tekstfarve" },
+        { "type": "select", "id": "content_position_vertical", "label": "Lodret (computer)", "options": [{ "value": "top", "label": "Øverst" }, { "value": "middle", "label": "Midt" }, { "value": "bottom", "label": "Nederst" }], "default": "middle" },
+        { "type": "select", "id": "content_position_horizontal", "label": "Vandret (computer)", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midt" }, { "value": "right", "label": "Højre" }], "default": "center" },
+        { "type": "select", "id": "content_position_vertical_mobile", "label": "Lodret (mobil)", "options": [{ "value": "top", "label": "Øverst" }, { "value": "middle", "label": "Midt" }, { "value": "bottom", "label": "Nederst" }], "default": "middle" },
+        { "type": "select", "id": "content_position_horizontal_mobile", "label": "Vandret (mobil)", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midt" }, { "value": "right", "label": "Højre" }], "default": "center" },
+
         { "type": "header", "content": "Knap" },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Knaptekst"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Link"
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "default": "rgba(0,0,0,0)",
-          "label": "Knapbaggrund"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "default": "#ffffff",
-          "label": "Knaptekstfarve"
-        },
-        {
-          "type": "color",
-          "id": "button_border_color",
-          "default": "#ffffff",
-          "label": "Knapkantfarve"
-        },
+        { "type": "text", "id": "button_label", "label": "Knaptekst" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "range", "id": "button_size", "min": 10, "max": 26, "step": 1, "unit": "px", "label": "Tekststørrelse (computer)", "default": 14 },
+        { "type": "range", "id": "button_size_mobile", "min": 10, "max": 22, "step": 1, "unit": "px", "label": "Tekststørrelse (mobil)", "default": 13 },
+        { "type": "range", "id": "button_padding_y", "min": 8, "max": 36, "step": 2, "unit": "px", "label": "Højde (computer)", "default": 16 },
+        { "type": "range", "id": "button_padding_y_mobile", "min": 6, "max": 30, "step": 2, "unit": "px", "label": "Højde (mobil)", "default": 14 },
+        { "type": "range", "id": "button_padding_x", "min": 16, "max": 96, "step": 4, "unit": "px", "label": "Bredde (computer)", "default": 40 },
+        { "type": "range", "id": "button_padding_x_mobile", "min": 12, "max": 72, "step": 4, "unit": "px", "label": "Bredde (mobil)", "default": 32 },
+        { "type": "select", "id": "button_weight", "label": "Tykkelse", "options": [{ "value": "400", "label": "Normal" }, { "value": "500", "label": "Medium" }, { "value": "600", "label": "Halvfed" }, { "value": "700", "label": "Fed" }, { "value": "800", "label": "Ekstra fed" }], "default": "600" },
+        { "type": "range", "id": "button_spacing", "min": 0, "max": 3, "step": 1, "unit": "em", "label": "Bogstavafstand", "default": 0 },
+        { "type": "range", "id": "button_radius", "min": 0, "max": 40, "step": 2, "unit": "px", "label": "Runde hjørner", "default": 40 },
+        { "type": "range", "id": "button_space", "min": 0, "max": 60, "step": 2, "unit": "px", "label": "Afstand til teksten", "default": 24 },
+        { "type": "color", "id": "button_background", "default": "rgba(0,0,0,0)", "label": "Knapbaggrund" },
+        { "type": "color", "id": "button_text_color", "default": "#ffffff", "label": "Knaptekstfarve" },
+        { "type": "color", "id": "button_border_color", "default": "#ffffff", "label": "Knapkantfarve" },
+        { "type": "range", "id": "button_border_width", "min": 0, "max": 4, "step": 1, "unit": "px", "label": "Kantens tykkelse", "default": 1 },
+
         { "type": "header", "content": "Visningstid" },
-        {
-          "type": "range",
-          "id": "duration",
-          "min": 0,
-          "max": 30,
-          "step": 1,
-          "unit": "s",
-          "label": "Visningstid for denne slide",
-          "info": "0 betyder, at sektionens standardtid bruges.",
-          "default": 0
-        }
+        { "type": "range", "id": "duration", "min": 0, "max": 30, "step": 1, "unit": "s", "label": "Visningstid for denne slide", "info": "0 betyder, at sektionens standardtid bruges.", "default": 0 }
       ]
     }
   ],
