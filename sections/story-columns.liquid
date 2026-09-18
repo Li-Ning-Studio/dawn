@@ -20,6 +20,7 @@
   #shopify-section-{{ section.id }} .cols__bg {
     position: absolute;
     inset: 0;
+    z-index: 0;
     display: grid;
     grid-template-columns: repeat({{ columns_mobile }}, minmax(0, 1fr));
     gap: {{ section.settings.gap }}px;
@@ -250,6 +251,7 @@
     {%- endfor -%}
   </div>
 
+  <div class="cols__blur" aria-hidden="true"></div>
   <div class="cols__tint" aria-hidden="true"></div>
   <div class="cols__veil" aria-hidden="true"></div>
 
