@@ -1,0 +1,392 @@
+{%- liquid
+  assign columns = section.settings.columns | plus: 0
+  assign total = section.blocks.size
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} .cols {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    min-height: {{ section.settings.min_height_mobile }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ section.settings.padding_top | divided_by: 2 }}px {{ section.settings.side_padding }}px {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  #shopify-section-{{ section.id }} .cols__bg {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_mobile }}, minmax(0, 1fr));
+    gap: {{ section.settings.gap }}px;
+    padding: 0 {{ section.settings.gap }}px;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+
+  #shopify-section-{{ section.id }} .cols__col {
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .cols__col:nth-child(n + {{ section.settings.columns_mobile | plus: 1 }}) {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .cols__track {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.gap }}px;
+    will-change: transform;
+  }
+
+  #shopify-section-{{ section.id }} .cols__item {
+    width: 100%;
+    border-radius: {{ section.settings.image_radius }}px;
+    overflow: hidden;
+    background: rgba(127, 127, 127, 0.12);
+    aspect-ratio: {{ section.settings.image_ratio }};
+  }
+
+  #shopify-section-{{ section.id }} .cols__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .cols__veil {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(to bottom, {{ section.settings.bg_color }} 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, {{ section.settings.bg_color }} 100%),
+      radial-gradient(ellipse {{ section.settings.veil_spread }}% 70% at 50% 50%, {{ section.settings.bg_color }} 0%, {{ section.settings.bg_color }} 30%, rgba(0,0,0,0) 100%);
+    opacity: {{ section.settings.veil_strength | divided_by: 100.0 }};
+  }
+
+  #shopify-section-{{ section.id }} .cols__card {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: {{ section.settings.card_width }}px;
+    padding: {{ section.settings.card_padding }}px;
+    display: flex;
+    flex-direction: column;
+    align-items: {{ section.settings.align }};
+    text-align: {{ section.settings.text_align }};
+    gap: 18px;
+  }
+
+  #shopify-section-{{ section.id }} .cols__eyebrow {
+    margin: 0;
+    font-family: var(--font-heading-family, inherit);
+    font-size: {{ section.settings.eyebrow_size }}px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: {{ section.settings.accent_color }};
+  }
+
+  #shopify-section-{{ section.id }} .cols__heading {
+    margin: 0;
+    font-family: var(--font-heading-family, inherit);
+    font-size: {{ section.settings.heading_size_mobile }}px;
+    font-weight: {{ section.settings.heading_weight }};
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+    {% if section.settings.heading_italic %}font-style: italic;{% endif %}
+  }
+
+  #shopify-section-{{ section.id }} .cols__body {
+    margin: 0;
+    font-size: {{ section.settings.body_size }}px;
+    line-height: 1.7;
+    opacity: {{ section.settings.body_opacity | divided_by: 100.0 }};
+  }
+
+  #shopify-section-{{ section.id }} .cols__body > * {
+    margin: 0 0 0.8em;
+  }
+
+  #shopify-section-{{ section.id }} .cols__body > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .cols__button {
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 34px;
+    border-radius: 40px;
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_text_color }};
+    border: 1px solid {{ section.settings.button_border_color }};
+    font-family: var(--font-heading-family, inherit);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .cols__button:hover {
+    opacity: 0.85;
+  }
+
+  #shopify-section-{{ section.id }} .cols__button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .cols {
+      min-height: {{ section.settings.min_height }}px;
+      padding: {{ section.settings.padding_top }}px {{ section.settings.side_padding }}px {{ section.settings.padding_bottom }}px;
+    }
+
+    #shopify-section-{{ section.id }} .cols__bg {
+      grid-template-columns: repeat({{ columns }}, minmax(0, 1fr));
+    }
+
+    #shopify-section-{{ section.id }} .cols__col:nth-child(n + {{ columns | plus: 1 }}) {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .cols__heading {
+      font-size: {{ section.settings.heading_size }}px;
+    }
+  }
+</style>
+
+<div class="cols" data-cols>
+  <div class="cols__bg" aria-hidden="true">
+    {%- for i in (1..6) -%}
+      {%- assign col_index = forloop.index0 -%}
+      <div class="cols__col">
+        <div class="cols__track" data-cols-track data-dir="{% cycle '-1', '1', '-1', '1', '-1', '1' %}" data-speed="{% cycle 26, 34, 22, 38, 30, 42 %}">
+          {%- for pass in (1..2) -%}
+            {%- for block in section.blocks -%}
+              {%- assign pos = forloop.index0 | modulo: 6 -%}
+              {%- if pos == col_index -%}
+                <div class="cols__item" {{ block.shopify_attributes }}>
+                  {%- if block.settings.image != blank -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 900
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '300, 450, 600, 900',
+                        sizes: '(min-width: 750px) 25vw, 50vw',
+                        alt: ''
+                    }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <div class="cols__veil" aria-hidden="true"></div>
+
+  <div class="cols__card">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="cols__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="cols__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+    {%- if section.settings.body != blank -%}
+      <div class="cols__body">{{ section.settings.body }}</div>
+    {%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <a href="{{ section.settings.button_link | default: '#' }}" class="cols__button">
+        {{ section.settings.button_label | escape }}
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5"></path></svg>
+      </a>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (function () {
+    var sectionId = {{ section.id | json }};
+    var scrollBoost = {{ section.settings.scroll_boost }};
+
+    function initColumns() {
+      var root = document.querySelector('#shopify-section-' + sectionId + ' [data-cols]');
+      if (!root) return;
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var tracks = [];
+      root.querySelectorAll('[data-cols-track]').forEach(function (el) {
+        if (!el.children.length) return;
+        tracks.push({
+          el: el,
+          dir: parseFloat(el.dataset.dir) || -1,
+          speed: parseFloat(el.dataset.speed) || 30,
+          offset: 0,
+          half: 0
+        });
+      });
+
+      if (!tracks.length) return;
+
+      function measure() {
+        tracks.forEach(function (t) {
+          t.half = t.el.scrollHeight / 2;
+          if (t.dir > 0) t.offset = -t.half;
+        });
+      }
+
+      measure();
+      window.addEventListener('resize', measure);
+      window.setTimeout(measure, 600);
+
+      var boost = 0;
+      var lastY = window.scrollY;
+      var last = 0;
+      var raf = null;
+      var running = false;
+
+      window.addEventListener('scroll', function () {
+        var delta = Math.abs(window.scrollY - lastY);
+        lastY = window.scrollY;
+        boost = Math.min(scrollBoost, boost + delta * 10);
+      }, { passive: true });
+
+      function step(now) {
+        if (!last) last = now;
+        var dt = Math.min(now - last, 50);
+        last = now;
+        boost *= 0.92;
+
+        tracks.forEach(function (t) {
+          if (!t.half) return;
+          t.offset += t.dir * (t.speed + boost) * dt / 1000;
+          if (t.offset <= -t.half) t.offset += t.half;
+          if (t.offset >= 0) t.offset -= t.half;
+          t.el.style.transform = 'translate3d(0, ' + t.offset + 'px, 0)';
+        });
+
+        raf = window.requestAnimationFrame(step);
+      }
+
+      function start() {
+        if (running) return;
+        running = true;
+        last = 0;
+        raf = window.requestAnimationFrame(step);
+      }
+
+      function stop() {
+        running = false;
+        if (raf) window.cancelAnimationFrame(raf);
+      }
+
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          entries[0].isIntersecting ? start() : stop();
+        }, { rootMargin: '200px' }).observe(root);
+      } else {
+        start();
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initColumns);
+    } else {
+      initColumns();
+    }
+
+    document.addEventListener('shopify:section:load', function (event) {
+      if (event.detail.sectionId === sectionId) initColumns();
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Billedspalter",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 30,
+  "settings": [
+    { "type": "header", "content": "Tekst" },
+    { "type": "text", "id": "eyebrow", "label": "Lille tekst øverst", "default": "The story behind" },
+    { "type": "text", "id": "heading", "label": "Overskrift", "default": "HNDRD" },
+    { "type": "checkbox", "id": "heading_italic", "label": "Kursiv overskrift", "default": true },
+    { "type": "range", "id": "heading_size", "label": "Overskrift (computer)", "min": 30, "max": 140, "step": 2, "unit": "px", "default": 90 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Overskrift (mobil)", "min": 24, "max": 80, "step": 2, "unit": "px", "default": 48 },
+    { "type": "select", "id": "heading_weight", "label": "Tykkelse", "options": [{ "value": "700", "label": "Fed" }, { "value": "800", "label": "Ekstra fed" }, { "value": "900", "label": "Sort" }], "default": "800" },
+    { "type": "range", "id": "eyebrow_size", "label": "Lille tekst", "min": 9, "max": 18, "step": 1, "unit": "px", "default": 11 },
+    { "type": "richtext", "id": "body", "label": "Brødtekst", "default": "<p>Skriv historien her. Bag teksten kører alt det du har skudt — spillere, baner, lager.</p>" },
+    { "type": "range", "id": "body_size", "label": "Brødtekstens størrelse", "min": 13, "max": 24, "step": 1, "unit": "px", "default": 17 },
+    { "type": "range", "id": "body_opacity", "label": "Brødtekstens styrke", "min": 40, "max": 100, "step": 5, "unit": "%", "default": 80 },
+    { "type": "select", "id": "align", "label": "Justering", "options": [{ "value": "flex-start", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "flex-end", "label": "Højre" }], "default": "center" },
+    { "type": "select", "id": "text_align", "label": "Tekstjustering", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "right", "label": "Højre" }], "default": "center" },
+    { "type": "range", "id": "card_width", "label": "Tekstens bredde", "min": 320, "max": 900, "step": 20, "unit": "px", "default": 620 },
+    { "type": "range", "id": "card_padding", "label": "Luft omkring teksten", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 40 },
+
+    { "type": "header", "content": "Knap" },
+    { "type": "text", "id": "button_label", "label": "Knaptekst", "default": "Read the full story" },
+    { "type": "url", "id": "button_link", "label": "Link" },
+    { "type": "color", "id": "button_background", "label": "Knapbaggrund", "default": "#e4661f" },
+    { "type": "color", "id": "button_text_color", "label": "Knaptekstfarve", "default": "#0a0a0a" },
+    { "type": "color", "id": "button_border_color", "label": "Knapkant", "default": "rgba(0,0,0,0)" },
+
+    { "type": "header", "content": "Billedspalter" },
+    { "type": "range", "id": "columns", "label": "Antal spalter (computer)", "min": 2, "max": 6, "step": 1, "default": 4 },
+    { "type": "range", "id": "columns_mobile", "label": "Antal spalter (mobil)", "min": 1, "max": 3, "step": 1, "default": 2 },
+    { "type": "select", "id": "image_ratio", "label": "Billedformat", "options": [{ "value": "1 / 1", "label": "Kvadratisk" }, { "value": "4 / 5", "label": "Højformat" }, { "value": "3 / 4", "label": "Højformat (høj)" }, { "value": "2 / 3", "label": "Højformat (meget høj)" }], "default": "3 / 4" },
+    { "type": "range", "id": "image_radius", "label": "Runde hjørner", "min": 0, "max": 30, "step": 2, "unit": "px", "default": 4 },
+    { "type": "range", "id": "gap", "label": "Afstand mellem billeder", "min": 4, "max": 40, "step": 2, "unit": "px", "default": 18 },
+    { "type": "range", "id": "scroll_boost", "label": "Ekstra fart ved scroll", "min": 0, "max": 600, "step": 25, "unit": "px", "default": 250, "info": "0 giver en jævn, rolig bevægelse." },
+
+    { "type": "header", "content": "Slør bag teksten" },
+    { "type": "range", "id": "veil_strength", "label": "Slørets styrke", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 90, "info": "Skru ned hvis billederne må træde tydeligere frem." },
+    { "type": "range", "id": "veil_spread", "label": "Slørets bredde", "min": 30, "max": 120, "step": 5, "unit": "%", "default": 70 },
+
+    { "type": "header", "content": "Sektion" },
+    { "type": "color", "id": "bg_color", "label": "Baggrundsfarve", "default": "#0a0a0a" },
+    { "type": "color", "id": "text_color", "label": "Tekstfarve", "default": "#ffffff" },
+    { "type": "color", "id": "accent_color", "label": "Accentfarve", "default": "#e4661f" },
+    { "type": "range", "id": "min_height", "label": "Højde (computer)", "min": 500, "max": 1100, "step": 20, "unit": "px", "default": 880 },
+    { "type": "range", "id": "min_height_mobile", "label": "Højde (mobil)", "min": 400, "max": 900, "step": 20, "unit": "px", "default": 640 },
+    { "type": "range", "id": "side_padding", "label": "Luft ud til kanten", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 24 },
+    { "type": "range", "id": "padding_top", "label": "Afstand over", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_bottom", "label": "Afstand under", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 0 }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Billede",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Billede" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Billedspalter",
+      "blocks": [
+        { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" },
+        { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" },
+        { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}
