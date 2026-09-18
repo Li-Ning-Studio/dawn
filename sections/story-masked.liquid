@@ -100,10 +100,22 @@
     letter-spacing: {{ section.settings.word_spacing }}em;
     text-transform: uppercase;
     white-space: nowrap;
-    color: {{ section.settings.word_color }};
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 220% 100%;
+    background-position: var(--msk-pos, 0%) 50%;
+    background-image: linear-gradient(
+      100deg,
+      {{ section.settings.gradient_from }} 0%,
+      {{ section.settings.gradient_from }} 18%,
+      {{ section.settings.gradient_to }} 52%,
+      {{ section.settings.gradient_to }} 68%,
+      {{ section.settings.gradient_from }} 100%
+    );
     transform: scale(var(--msk-scale, 1));
     transform-origin: 50% 50%;
-    will-change: transform;
+    will-change: transform, background-position;
     {% if section.settings.word_italic %}font-style: italic;{% endif %}
   }
 
