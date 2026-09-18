@@ -43,9 +43,9 @@
     display: block;
     margin: 0;
     font-family: var(--font-heading-family, inherit);
-    font-size: {{ section.settings.word_size_mobile }}vw;
+    font-size: var(--msk-size, 14vw);
     font-weight: {{ section.settings.word_weight }};
-    line-height: 0.88;
+    line-height: 0.95;
     letter-spacing: {{ section.settings.word_spacing }}em;
     text-transform: uppercase;
     white-space: nowrap;
@@ -58,9 +58,9 @@
     background-image: linear-gradient(
       {{ section.settings.gradient_angle }}deg,
       {{ section.settings.gradient_from }} 0%,
-      {{ section.settings.gradient_from }} 20%,
-      {{ section.settings.gradient_to }} 50%,
-      {{ section.settings.gradient_to }} 70%,
+      {{ section.settings.gradient_from }} 18%,
+      {{ section.settings.gradient_to }} 48%,
+      {{ section.settings.gradient_to }} 66%,
       {{ section.settings.gradient_from }} 100%
     );
     transform: scale(var(--msk-scale, 1));
@@ -71,8 +71,8 @@
 
   {%- if section.settings.motion == 'auto' -%}
     @keyframes msk-sweep-{{ section.id }} {
-      from { background-position: 0% 50%; }
-      to { background-position: 100% 50%; }
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
 
     #shopify-section-{{ section.id }} .msk__word {
@@ -130,10 +130,6 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
 
-    #shopify-section-{{ section.id }} .msk__word {
-      font-size: {{ section.settings.word_size }}vw;
-    }
-
     #shopify-section-{{ section.id }} .msk__wordwrap {
       padding: {{ section.settings.word_padding }}px 0;
     }
@@ -177,13 +173,36 @@
     var sectionId = {{ section.id | json }};
     var zoom = {{ section.settings.scroll_zoom }} / 100;
     var motion = {{ section.settings.motion | json }};
+    var fill = {{ section.settings.fill_width }};
 
     function initMasked() {
-      var root = document.querySelector('#shopify-section-' + sectionId + ' [data-msk]');
-      if (!root) return;
+      var wrap = document.querySelector('#shopify-section-' + sectionId + ' [data-msk]');
+      if (!wrap) return;
 
-      var word = root.querySelector('[data-msk-word]');
+      var word = wrap.querySelector('[data-msk-word]');
       if (!word) return;
+
+      // Tilpas skriftstørrelsen så ordet altid passer i bredden
+      function fit() {
+        var available = wrap.clientWidth;
+        if (!available) return;
+
+        word.style.setProperty('--msk-size', '100px');
+        var natural = word.scrollWidth;
+        if (!natural) return;
+
+        var target = available * (fill / 100);
+        var size = target / natural * 100;
+        word.style.setProperty('--msk-size', size.toFixed(2) + 'px');
+      }
+
+      fit();
+      window.addEventListener('resize', fit);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fit);
+      }
+      window.setTimeout(fit, 300);
+
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       if (motion !== 'scroll' && !zoom) return;
 
@@ -191,7 +210,7 @@
 
       function update() {
         ticking = false;
-        var box = root.getBoundingClientRect();
+        var box = wrap.getBoundingClientRect();
         var vh = window.innerHeight || document.documentElement.clientHeight;
         if (box.bottom < -200 || box.top > vh + 200) return;
 
@@ -239,8 +258,7 @@
   "settings": [
     { "type": "header", "content": "Ordet" },
     { "type": "text", "id": "word", "label": "Ord", "default": "HNDRD", "info": "Ét ord uden mellemrum virker bedst." },
-    { "type": "range", "id": "word_size", "label": "Størrelse (computer)", "min": 6, "max": 30, "step": 1, "unit": "vw", "default": 19 },
-    { "type": "range", "id": "word_size_mobile", "label": "Størrelse (mobil)", "min": 10, "max": 40, "step": 1, "unit": "vw", "default": 23 },
+    { "type": "range", "id": "fill_width", "label": "Bredde på skærmen", "min": 40, "max": 100, "step": 5, "unit": "%", "default": 90, "info": "Ordet tilpasser selv sin størrelse, så det aldrig bliver skåret af." },
     { "type": "select", "id": "word_weight", "label": "Tykkelse", "options": [{ "value": "700", "label": "Fed" }, { "value": "800", "label": "Ekstra fed" }, { "value": "900", "label": "Sort" }], "default": "800" },
     { "type": "checkbox", "id": "word_italic", "label": "Kursiv", "default": true },
     { "type": "range", "id": "word_spacing", "label": "Bogstavafstand", "min": -1, "max": 1, "step": 1, "unit": "em", "default": 0 },
@@ -251,10 +269,10 @@
     { "type": "color", "id": "gradient_from", "label": "Farve 1", "default": "#f5f5f5" },
     { "type": "color", "id": "gradient_to", "label": "Farve 2", "default": "#e4661f" },
     { "type": "range", "id": "gradient_angle", "label": "Vinkel", "min": 0, "max": 180, "step": 5, "unit": "°", "default": 100 },
-    { "type": "range", "id": "gradient_width", "label": "Overgangens bredde", "min": 100, "max": 400, "step": 10, "unit": "%", "default": 220, "info": "Højere tal giver en blødere, længere overgang." },
-    { "type": "select", "id": "motion", "label": "Bevægelse", "options": [{ "value": "scroll", "label": "Følger scrollet" }, { "value": "auto", "label": "Glider af sig selv" }, { "value": "none", "label": "Står stille" }], "default": "scroll" },
-    { "type": "range", "id": "auto_speed", "label": "Hastighed når den glider selv", "min": 2, "max": 20, "step": 1, "unit": "s", "default": 7 },
-    { "type": "range", "id": "scroll_zoom", "label": "Zoom under scroll", "min": 0, "max": 30, "step": 1, "unit": "%", "default": 8, "info": "0 slår zoom fra." },
+    { "type": "range", "id": "gradient_width", "label": "Overgangens bredde", "min": 100, "max": 400, "step": 10, "unit": "%", "default": 250, "info": "Højere tal giver en blødere, længere overgang." },
+    { "type": "select", "id": "motion", "label": "Bevægelse", "options": [{ "value": "auto", "label": "Skifter af sig selv" }, { "value": "scroll", "label": "Følger scrollet" }, { "value": "none", "label": "Står stille" }], "default": "auto" },
+    { "type": "range", "id": "auto_speed", "label": "Hastighed", "min": 2, "max": 20, "step": 1, "unit": "s", "default": 6 },
+    { "type": "range", "id": "scroll_zoom", "label": "Zoom under scroll", "min": 0, "max": 30, "step": 1, "unit": "%", "default": 0, "info": "0 slår zoom fra." },
 
     { "type": "header", "content": "Tekst" },
     { "type": "text", "id": "eyebrow", "label": "Lille tekst øverst", "default": "The story behind" },
