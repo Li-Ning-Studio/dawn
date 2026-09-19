@@ -43,7 +43,7 @@
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/Banner_2_9f74e2ed-03f0-4491-8e51-9ff6806f49f1.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_9f74e2ed-03f0-4491-8e51-9ff6806f49f1.jpg",
+        "mobile_image": "shopify://shop_images/2.1.jpg",
         "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 0,
         "padding_bottom": 0
@@ -109,7 +109,7 @@
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/Banner_4_1b484f7f-eaac-469d-bacd-233a09a7025a.jpg",
-        "mobile_image": "shopify://shop_images/Banner_4_1b484f7f-eaac-469d-bacd-233a09a7025a.jpg",
+        "mobile_image": "shopify://shop_images/A_4.1.jpg",
         "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 0,
         "padding_bottom": 0
@@ -225,8 +225,8 @@
       "settings": {
         "custom_liquid": "<style>\n  .rattle-section {\n    width: 100%;\n    overflow: hidden;\n    box-sizing: border-box;\n\n    background: #0D0D0D;\n    text-align: center;\n\n    padding: 60px 24px 68px;\n  }\n\n  .rattle-inner {\n    width: 100%;\n    max-width: 1300px;\n\n    margin: 0 auto;\n  }\n\n\n  /* =========================\n     HEADLINE\n  ========================= */\n\n  .rattle-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(54px, 5.8vw, 94px);\n    font-weight: 700;\n\n    line-height: 0.98;\n    letter-spacing: -3.5px;\n\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .rattle-description {\n    width: 100%;\n    max-width: 920px;\n\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n\n    line-height: 1.45;\n    letter-spacing: -0.2px;\n\n    color: #c1bfbd;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .rattle-section {\n      padding: 54px 22px 60px;\n    }\n\n    .rattle-title {\n      font-size: clamp(45px, 6.5vw, 66px);\n      letter-spacing: -2.5px;\n    }\n\n    .rattle-description {\n      max-width: 760px;\n\n      margin-top: 17px;\n\n      font-size: 18px;\n    }\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .rattle-section {\n      padding: 43px 16px 50px;\n    }\n\n    .rattle-inner {\n      max-width: 100%;\n    }\n\n    .rattle-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n\n      line-height: 1;\n      letter-spacing: -1.6px;\n\n      white-space: nowrap;\n    }\n\n    .rattle-description {\n      max-width: 355px;\n\n      margin-top: 15px;\n\n      font-size: 15px;\n      line-height: 1.45;\n\n      letter-spacing: 0;\n\n      color: #bbb9b7;\n    }\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .rattle-section {\n      padding: 39px 12px 46px;\n    }\n\n    .rattle-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .rattle-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n  }\n\n</style>\n\n\n<section class=\"rattle-section\">\n\n  <div class=\"rattle-inner\">\n\n    <h2 class=\"rattle-title\">\n      FEEL NO RATTLE\n    </h2>\n\n    <p class=\"rattle-description\">\n      Foam intercepts vibration before it travels, leaving a controlled\n      and connected feel.\n    </p>\n\n  </div>\n\n</section>",
         "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 28,
+        "padding_bottom": 0
       }
     },
     "image_with_text_YGQ3Pa": {
