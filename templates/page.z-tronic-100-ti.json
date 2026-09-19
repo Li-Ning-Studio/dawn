@@ -117,6 +117,7 @@
     },
     "custom_liquid_KKwXjx": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<style>\n  .whip-section {\n    width: 100%;\n    overflow: hidden;\n    box-sizing: border-box;\n\n    background: #0D0D0D !important;\n    background-image: none !important;\n\n    text-align: center;\n    padding: 60px 24px 62px;\n\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  /* FORCE REMOVE ANY GLOW / OVERLAY */\n  .whip-section::before,\n  .whip-section::after {\n    content: none !important;\n    display: none !important;\n    background: none !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  .whip-inner {\n    width: 100%;\n    max-width: 1350px;\n    margin: 0 auto;\n\n    background: transparent !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  /* HEADLINE */\n  .whip-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(54px, 5.8vw, 94px);\n    font-weight: 700;\n\n    line-height: 0.98;\n    letter-spacing: -3.5px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n\n    text-shadow: none !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  .whip-title::before,\n  .whip-title::after {\n    content: none !important;\n    display: none !important;\n  }\n\n  /* DESCRIPTION */\n  .whip-description {\n    width: 100%;\n    max-width: 920px;\n\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n\n    line-height: 1.45;\n    letter-spacing: -0.2px;\n\n    color: #c1bfbd;\n\n    text-shadow: none !important;\n    box-shadow: none !important;\n    filter: none !important;\n  }\n\n  /* TABLET */\n  @media screen and (max-width: 990px) {\n\n    .whip-section {\n      padding: 54px 22px 56px;\n    }\n\n    .whip-title {\n      font-size: clamp(45px, 6.5vw, 66px);\n      letter-spacing: -2.5px;\n    }\n\n    .whip-description {\n      max-width: 760px;\n      margin-top: 17px;\n      font-size: 18px;\n    }\n  }\n\n  /* MOBILE */\n  @media screen and (max-width: 749px) {\n\n    .whip-section {\n      padding: 43px 16px 45px;\n    }\n\n    .whip-inner {\n      max-width: 100%;\n    }\n\n    .whip-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n      line-height: 1;\n      letter-spacing: -1.6px;\n    }\n\n    .whip-description {\n      max-width: 355px;\n      margin-top: 15px;\n\n      font-size: 15px;\n      line-height: 1.45;\n      letter-spacing: 0;\n\n      color: #bbb9b7;\n    }\n  }\n\n  /* SMALL MOBILE */\n  @media screen and (max-width: 390px) {\n\n    .whip-section {\n      padding: 39px 12px 41px;\n    }\n\n    .whip-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .whip-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n  }\n</style>\n\n\n<section class=\"whip-section\">\n\n  <div class=\"whip-inner\">\n\n    <h2 class=\"whip-title\">\n      WHIP WITHOUT <br> WARNING\n    </h2>\n\n    <p class=\"whip-description\">\n      A 6.2mm shaft flexes fast and recovers faster. That extra snap at the point of\n      contact is what makes the smash feel loaded.\n    </p>\n\n  </div>\n\n</section>",
@@ -200,6 +201,7 @@
         "column_N3g4Gz",
         "column_MxgJat"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -341,14 +343,14 @@
         "heading_djyQAw": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Hard Landings, Handled (X-Cushion)</strong>",
+            "heading": "<strong>M46X Nano Graphite</strong>",
             "heading_size": "h1"
           }
         },
         "text_8DwhUp": {
           "type": "text",
           "settings": {
-            "text": "<p>Heel-zone cushioning that targets jump and lunge impact specifically. It takes the force before your joints do. You still feel the court, just not the punishment.  </p>",
+            "text": "<p>The highest grade carbon used in racket construction. Rigid under load, snaps back instantly.</p>",
             "text_style": "body"
           }
         },
@@ -366,14 +368,14 @@
         "text_8DwhUp",
         "button_Ec86eP"
       ],
-      "disabled": true,
       "custom_css": [
-        ".button {border-color: #48bfd8 !important;}",
-        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+        "/* CTA - SINGLE COLOR BORDER */.button {border: 1.5px solid #7c7872 !important; background: transparent !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #7c7872 !important;}",
+        " /* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient(180deg, #7c7872 50%, #37322c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/3_74718eff-81b3-42c9-ba58-dc8d259e911b.png",
+        "image": "shopify://shop_images/A_1_c9f7826d-4918-4ffc-b2ea-f13c277a7b36.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -382,8 +384,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
+        "section_color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 0,
         "padding_bottom": 36
       }
@@ -394,14 +396,14 @@
         "heading_JqxLWT": {
           "type": "heading",
           "settings": {
-            "heading": "Carbon-Kinetic Support Plate",
+            "heading": "<strong>Head Heavy Balance</strong>",
             "heading_size": "h1"
           }
         },
         "text_e6Kqxq": {
           "type": "text",
           "settings": {
-            "text": "<p>Integrated at the base. It improves midfoot stability, further limiting torsion. It maintains alignment, even during multidirectional play.</p>",
+            "text": "<p>Weight forward means smashes drop steeper and drives land deeper. The shuttle goes where it has no business coming back from.</p>",
             "text_style": "body"
           }
         },
@@ -419,10 +421,14 @@
         "text_e6Kqxq",
         "button_wGHPkT"
       ],
-      "disabled": true,
+      "custom_css": [
+        "/* CTA - SINGLE COLOR BORDER */.button {border: 1.5px solid #7c7872 !important; background: transparent !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #7c7872 !important;}",
+        " /* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient(180deg, #7c7872 50%, #37322c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Banner_8.1.png",
+        "image": "shopify://shop_images/A_2_8a3e4d3d-81d9-41b9-8146-13e4106e3d84.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -431,8 +437,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-548f3a72-aef4-4f68-8a2c-2efe5c584144",
+        "section_color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -443,14 +449,14 @@
         "heading_YGkTfC": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Every Step, Deliberate</strong>",
+            "heading": "<strong>Curve²</strong>",
             "heading_size": "h1"
           }
         },
         "text_dftkKY": {
           "type": "text",
           "settings": {
-            "text": "<p>A TPU support structure in the midfoot reduces unwanted flex during fast direction changes, helping improve stability and reduce injury risk.  </p>",
+            "text": "<p>Foam inserts inside the frame cut vibration at contact. Your hand feels the hit but not the aftermath.</p>",
             "text_style": "body"
           }
         },
@@ -468,24 +474,24 @@
         "text_dftkKY",
         "button_czAQMr"
       ],
-      "disabled": true,
       "custom_css": [
-        ".button {border-color: #48bfd8 !important;}",
-        ".button::after {box-shadow: 0 0 0 1.5px #48bfd8 !important;}"
+        "/* CTA - SINGLE COLOR BORDER */.button {border: 1.5px solid #7c7872 !important; background: transparent !important;}",
+        ".button::after {box-shadow: 0 0 0 1.5px #7c7872 !important;}",
+        " /* TITLE GRADIENT */.title,h1,h2 {background: linear-gradient(180deg, #7c7872 50%, #37322c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/4_ea23f50e-e59c-4600-8e42-da269b170963.png",
+        "image": "shopify://shop_images/A_3_3fcd416a-31ac-426d-96d7-4637e99c0f62.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
+        "section_color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
         "padding_top": 0,
         "padding_bottom": 36
       }
