@@ -22,7 +22,7 @@ if (!customElements.get('product-info')) {
 
         this.onVariantChangeUnsubscriber = subscribe(
           PUB_SUB_EVENTS.optionValueSelectionChange,
-          this.handleOptionValueChange.bind(this)
+          this.handleOptionValueChange.bind(this),
         );
 
         this.initQuantityHandlers();
@@ -52,7 +52,9 @@ if (!customElements.get('product-info')) {
 
       initializeProductSwapUtility() {
         this.preProcessHtmlCallbacks.push((html) =>
-          html.querySelectorAll('.scroll-trigger').forEach((element) => element.classList.add('scroll-trigger--cancel'))
+          html
+            .querySelectorAll('.scroll-trigger')
+            .forEach((element) => element.classList.add('scroll-trigger--cancel')),
         );
         this.postProcessHtmlCallbacks.push((newNode) => {
           window?.Shopify?.PaymentButton?.init();
@@ -80,6 +82,7 @@ if (!customElements.get('product-info')) {
       }
 
       resetProductFormState() {
+        this.querySelector('notify-me')?.suspend?.();
         const productForm = this.productForm;
         productForm?.toggleSubmitButton(true);
         productForm?.handleErrorMessage();
@@ -100,14 +103,14 @@ if (!customElements.get('product-info')) {
               document.querySelector('main'),
               html.querySelector('main'),
               this.preProcessHtmlCallbacks,
-              this.postProcessHtmlCallbacks
+              this.postProcessHtmlCallbacks,
             );
           } else {
             HTMLUpdateUtility.viewTransition(
               this,
               html.querySelector('product-info'),
               this.preProcessHtmlCallbacks,
-              this.postProcessHtmlCallbacks
+              this.postProcessHtmlCallbacks,
             );
           }
         };
@@ -198,8 +201,10 @@ if (!customElements.get('product-info')) {
 
           this.productForm?.toggleSubmitButton(
             html.getElementById(`ProductSubmitButton-${this.sectionId}`)?.hasAttribute('disabled') ?? true,
-            window.variantStrings.soldOut
+            window.variantStrings.soldOut,
           );
+
+          this.querySelector('notify-me')?.setVariant?.(html.getElementById(`NotifyMe-${this.sectionId}`));
 
           publish(PUB_SUB_EVENTS.variantChange, {
             data: {
@@ -213,7 +218,7 @@ if (!customElements.get('product-info')) {
 
       updateVariantInputs(variantId) {
         this.querySelectorAll(
-          `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
+          `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`,
         ).forEach((productForm) => {
           const input = productForm.querySelector('input[name="id"]');
           input.value = variantId ?? '';
@@ -223,7 +228,7 @@ if (!customElements.get('product-info')) {
 
       updateURL(url, variantId) {
         this.querySelector('share-button')?.updateUrl(
-          `${window.shopUrl}${url}${variantId ? `?variant=${variantId}` : ''}`
+          `${window.shopUrl}${url}${variantId ? `?variant=${variantId}` : ''}`,
         );
 
         if (this.dataset.updateUrl === 'false') return;
@@ -231,6 +236,7 @@ if (!customElements.get('product-info')) {
       }
 
       setUnavailable() {
+        this.querySelector('notify-me')?.setVariant?.(null);
         this.productForm?.toggleSubmitButton(true, window.variantStrings.unavailable);
 
         const selectors = ['price', 'Inventory', 'Sku', 'Price-Per-Item', 'Volume-Note', 'Volume', 'Quantity-Rules']
@@ -250,7 +256,7 @@ if (!customElements.get('product-info')) {
           const mediaGallerySourceItems = Array.from(mediaGallerySource.querySelectorAll('li[data-media-id]'));
           const sourceSet = new Set(mediaGallerySourceItems.map((item) => item.dataset.mediaId));
           const sourceMap = new Map(
-            mediaGallerySourceItems.map((item, index) => [item.dataset.mediaId, { item, index }])
+            mediaGallerySourceItems.map((item, index) => [item.dataset.mediaId, { item, index }]),
           );
           return [mediaGallerySourceItems, sourceSet, sourceMap];
         };
@@ -258,7 +264,7 @@ if (!customElements.get('product-info')) {
         if (mediaGallerySource && mediaGalleryDestination) {
           let [mediaGallerySourceItems, sourceSet, sourceMap] = refreshSourceData();
           const mediaGalleryDestinationItems = Array.from(
-            mediaGalleryDestination.querySelectorAll('li[data-media-id]')
+            mediaGalleryDestination.querySelectorAll('li[data-media-id]'),
           );
           const destinationSet = new Set(mediaGalleryDestinationItems.map(({ dataset }) => dataset.mediaId));
           let shouldRefresh = false;
@@ -289,7 +295,7 @@ if (!customElements.get('product-info')) {
             if (sourceData && sourceData.index !== destinationIndex) {
               mediaGallerySource.insertBefore(
                 sourceData.item,
-                mediaGallerySource.querySelector(`li:nth-of-type(${destinationIndex + 1})`)
+                mediaGallerySource.querySelector(`li:nth-of-type(${destinationIndex + 1})`),
               );
 
               // refresh source now that it has been modified
@@ -301,7 +307,7 @@ if (!customElements.get('product-info')) {
         // set featured media as active in the media gallery
         this.querySelector(`media-gallery`)?.setActiveMedia?.(
           `${this.dataset.section}-${variantFeaturedMediaId}`,
-          true
+          true,
         );
 
         // update media modal
@@ -395,7 +401,7 @@ if (!customElements.get('product-info')) {
       get relatedProducts() {
         const relatedProductsSectionId = SectionId.getIdForSection(
           SectionId.parseId(this.sectionId),
-          'related-products'
+          'related-products',
         );
         return document.querySelector(`product-recommendations[data-section-id^="${relatedProductsSectionId}"]`);
       }
@@ -403,7 +409,7 @@ if (!customElements.get('product-info')) {
       get quickOrderList() {
         const quickOrderListSectionId = SectionId.getIdForSection(
           SectionId.parseId(this.sectionId),
-          'quick_order_list'
+          'quick_order_list',
         );
         return document.querySelector(`quick-order-list[data-id^="${quickOrderListSectionId}"]`);
       }
@@ -411,7 +417,7 @@ if (!customElements.get('product-info')) {
       get sectionId() {
         return this.dataset.originalSection || this.dataset.section;
       }
-    }
+    },
   );
 }
 
@@ -424,6 +430,7 @@ if (!customElements.get('mobile-sticky-atc')) {
         this.submitButton = this.querySelector('[data-sticky-atc-submit]');
         this.priceContainer = this.querySelector('[data-sticky-atc-price]');
         this.realSubmitButton = document.getElementById(this.dataset.submitId);
+        this.notifyMe = this.closest('product-info')?.querySelector('notify-me');
         this.mobileQuery = window.matchMedia('(max-width: 749px)');
         this.footerInView = false;
 
@@ -439,13 +446,23 @@ if (!customElements.get('mobile-sticky-atc')) {
         window.addEventListener('scroll', this.onScroll, { passive: true });
         window.addEventListener('resize', this.onScroll);
 
-        this.buttonObserver = new MutationObserver(() => this.syncSubmitState());
+        this.buttonObserver = new MutationObserver(() => {
+          this.syncSubmitState();
+          this.updateVisibility();
+        });
         this.buttonObserver.observe(this.realSubmitButton, {
           attributes: true,
           attributeFilter: ['class', 'disabled', 'aria-disabled'],
           childList: true,
           subtree: true,
         });
+        if (this.notifyMe) {
+          this.buttonObserver.observe(this.notifyMe, {
+            attributes: true,
+            attributeFilter: ['hidden', 'disabled'],
+            subtree: true,
+          });
+        }
 
         this.priceSource = document.getElementById(`price-${this.sectionId}`);
         this.priceObserver = new MutationObserver(() => this.syncPrice());
@@ -486,7 +503,16 @@ if (!customElements.get('mobile-sticky-atc')) {
 
       handleSubmitClick() {
         if (this.submitButton.disabled || this.submitButton.getAttribute('aria-disabled') === 'true') return;
-        this.realSubmitButton.click();
+        if (this.notifyMe && !this.notifyMe.hidden) this.notifyMe.open?.(this.submitButton);
+        else this.realSubmitButton.click();
+      }
+
+      // The original product form always owns add-to-cart. Notification signup
+      // has its own button and form, including when reached from the sticky bar.
+      get activeButton() {
+        return this.notifyMe && !this.notifyMe.hidden
+          ? this.notifyMe.querySelector('[data-notify-open]')
+          : this.realSubmitButton;
       }
 
       handleViewportChange() {
@@ -504,17 +530,22 @@ if (!customElements.get('mobile-sticky-atc')) {
       }
 
       syncSubmitState() {
-        const realText = this.realSubmitButton.querySelector('span')?.textContent?.trim();
+        const activeButton = this.activeButton;
+        const realText = activeButton.querySelector('span')?.textContent?.trim();
         const stickyText = this.submitButton.querySelector('span');
-        const realSpinner = this.realSubmitButton.querySelector('.loading__spinner');
+        const realSpinner = activeButton.querySelector('.loading__spinner');
         const stickySpinner = this.submitButton.querySelector('.loading__spinner');
-        const isDisabled =
-          this.realSubmitButton.disabled || this.realSubmitButton.getAttribute('aria-disabled') === 'true';
-        const isLoading = this.realSubmitButton.classList.contains('loading');
+        const isDisabled = activeButton.disabled || activeButton.getAttribute('aria-disabled') === 'true';
+        const isLoading = activeButton.classList.contains('loading');
 
-        this.submitButton.disabled = this.realSubmitButton.disabled;
+        this.submitButton.disabled = activeButton.disabled;
         this.submitButton.toggleAttribute('aria-disabled', isDisabled);
         this.submitButton.classList.toggle('loading', isLoading);
+        if (activeButton.hasAttribute('aria-haspopup')) {
+          this.submitButton.setAttribute('aria-haspopup', activeButton.getAttribute('aria-haspopup'));
+        } else {
+          this.submitButton.removeAttribute('aria-haspopup');
+        }
 
         if (stickyText && realText) stickyText.textContent = realText;
         stickySpinner?.classList.toggle('hidden', !realSpinner || realSpinner.classList.contains('hidden'));
@@ -545,7 +576,7 @@ if (!customElements.get('mobile-sticky-atc')) {
           return;
         }
 
-        const submitRect = this.realSubmitButton.getBoundingClientRect();
+        const submitRect = this.activeButton.getBoundingClientRect();
         this.classList.toggle('is-visible', submitRect.bottom < 0);
       }
     },
