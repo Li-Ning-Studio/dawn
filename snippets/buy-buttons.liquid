@@ -113,6 +113,10 @@
       {%- endform -%}
     </product-form>
 
+    {%- if show_mobile_sticky_atc and settings.notify_me_enabled -%}
+      {%- render 'notify-me', product: product, section_id: section_id -%}
+    {%- endif -%}
+
     {%- if show_mobile_sticky_atc -%}
       <mobile-sticky-atc
         class="mobile-sticky-atc"
@@ -159,7 +163,6 @@
       </mobile-sticky-atc>
     {%- endif -%}
 
-    
   {%- else -%}
     <div class="product-form">
       <div class="product-form__buttons form">

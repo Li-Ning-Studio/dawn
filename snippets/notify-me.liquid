@@ -1,0 +1,122 @@
+{% comment %}
+  PDP-only restock signup. The purchase button remains the no-JavaScript fallback.
+  Keep the selected variant data in server-rendered markup so product-info can
+  refresh it from the same section response that updates the purchase controls.
+{% endcomment %}
+{%- assign notify_variant = product.selected_or_first_available_variant -%}
+<notify-me
+  id="NotifyMe-{{ section_id }}"
+  class="notify-me"
+  data-submit-id="ProductSubmitButton-{{ section_id }}"
+  data-variant-id="{{ notify_variant.id }}"
+  data-sku="{{ notify_variant.sku | escape }}"
+  data-available="{{ notify_variant.available }}"
+  data-product-title="{{ product.title | escape }}"
+  data-variant-title="{% unless product.has_only_default_variant %}{{ notify_variant.title | escape }}{% endunless %}"
+  data-error-name="{{ 'products.product.notify_me.error_name' | t | escape }}"
+  data-error-number="{{ 'products.product.notify_me.error_number' | t | escape }}"
+  data-error-email="{{ 'products.product.notify_me.error_email' | t | escape }}"
+  hidden
+>
+  <button
+    type="button"
+    class="button button--primary button--xlarge button--full-width"
+    data-notify-open
+    aria-haspopup="dialog"
+    aria-controls="NotifyMeDialog-{{ section_id }}"
+  >
+    <span>{{ 'products.product.notify_me.button' | t }}</span>
+  </button>
+  <dialog
+    id="NotifyMeDialog-{{ section_id }}"
+    class="notify-me__dialog"
+    aria-labelledby="NotifyMeTitle-{{ section_id }}"
+    aria-describedby="NotifyMeProduct-{{ section_id }}"
+  >
+    <button type="button" class="notify-me__close" data-notify-close aria-label="{{ 'accessibility.close' | t }}">
+      {{- 'icon-close.svg' | inline_asset_content -}}
+    </button>
+    <h2 id="NotifyMeTitle-{{ section_id }}" class="h2">{{ 'products.product.notify_me.title' | t }}</h2>
+    <p id="NotifyMeProduct-{{ section_id }}" class="notify-me__product">
+      <span data-notify-product>{{ product.title | escape }}</span>
+      <span data-notify-variant>
+        {%- unless product.has_only_default_variant %}{{ notify_variant.title | escape }}{% endunless -%}
+      </span>
+    </p>
+    <form data-notify-form novalidate>
+      <p>{{ 'products.product.notify_me.description' | t }}</p>
+      <div class="notify-me__field">
+        <label for="NotifyMeName-{{ section_id }}">{{ 'products.product.notify_me.name' | t }}</label>
+        <input
+          id="NotifyMeName-{{ section_id }}"
+          name="name"
+          type="text"
+          autocomplete="name"
+          maxlength="200"
+          required
+          aria-describedby="NotifyMeNameError-{{ section_id }}"
+        >
+        <span
+          id="NotifyMeNameError-{{ section_id }}"
+          class="notify-me__field-error"
+          data-notify-error="name"
+          hidden
+        ></span>
+      </div>
+      <div class="notify-me__field">
+        <label for="NotifyMeNumber-{{ section_id }}">{{ 'products.product.notify_me.number' | t }}</label>
+        <input
+          id="NotifyMeNumber-{{ section_id }}"
+          name="number"
+          type="tel"
+          autocomplete="tel"
+          inputmode="tel"
+          maxlength="30"
+          required
+          aria-describedby="NotifyMeNumberHelp-{{ section_id }} NotifyMeNumberError-{{ section_id }}"
+        >
+        <span id="NotifyMeNumberHelp-{{ section_id }}" class="caption">
+          {{- 'products.product.notify_me.number_help' | t -}}
+        </span>
+        <span
+          id="NotifyMeNumberError-{{ section_id }}"
+          class="notify-me__field-error"
+          data-notify-error="number"
+          hidden
+        ></span>
+      </div>
+      <div class="notify-me__field">
+        <label for="NotifyMeEmail-{{ section_id }}">{{ 'products.product.notify_me.email' | t }}</label>
+        <input
+          id="NotifyMeEmail-{{ section_id }}"
+          name="email"
+          type="email"
+          autocomplete="email"
+          maxlength="200"
+          aria-describedby="NotifyMeEmailError-{{ section_id }}"
+        >
+        <span
+          id="NotifyMeEmailError-{{ section_id }}"
+          class="notify-me__field-error"
+          data-notify-error="email"
+          hidden
+        ></span>
+      </div>
+      <p class="notify-me__error" data-notify-failure role="alert" hidden>
+        {{ 'products.product.notify_me.error' | t }}
+      </p>
+      <p id="NotifyMeConsent-{{ section_id }}" class="notify-me__consent">
+        {{ 'products.product.notify_me.consent' | t }}
+      </p>
+      <button
+        type="submit"
+        class="button button--primary button--full-width"
+        aria-describedby="NotifyMeConsent-{{ section_id }}"
+      >
+        <span data-notify-submit-label>{{ 'products.product.notify_me.button' | t }}</span>
+        <span data-notify-saving hidden>{{ 'products.product.notify_me.saving' | t }}</span>
+      </button>
+    </form>
+    <p data-notify-success role="status" tabindex="-1" hidden>{{ 'products.product.notify_me.success' | t }}</p>
+  </dialog>
+</notify-me>

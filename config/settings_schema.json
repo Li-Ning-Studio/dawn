@@ -1628,6 +1628,13 @@
         "label": "Storefront Public Access Token",
         "info": "This token should have read product and read metaobject permission enabled",
         "default": "AMYGDALA_IS_OUTDATED"
+      },
+      {
+        "type": "checkbox",
+        "id": "notify_me_enabled",
+        "label": "t:settings_schema.notify_me.enabled",
+        "info": "t:settings_schema.notify_me.info",
+        "default": false
       }
     ]
   }

@@ -9,6 +9,10 @@
  */
 {
   "settings_schema": {
+    "notify_me": {
+      "enabled": "Enable back-in-stock signup",
+      "info": "Enable after the signup API accepts this store's public Storefront token and supports registrations without email."
+    },
     "global": {
       "settings": {
         "header__border": {
