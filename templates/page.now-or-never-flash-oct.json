@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "hero_component_ekdqEn": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Pre_1.jpg",
+        "mobile_image": "shopify://shop_images/pre_Mobile_1.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "shopify://pages/bth",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_3gQmGB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"bth-countdown\">\n  <style>\n    .bth-countdown {\n      background: #0F0A00;\n      padding: 72px 20px 80px;\n      text-align: center;\n      position: relative;\n      overflow: hidden;\n    }\n    .bth-countdown::before {\n      content: '';\n      position: absolute;\n      width: 700px;\n      height: 700px;\n      border-radius: 50%;\n      background: radial-gradient(circle, rgba(255,85,0,0.18) 0%, transparent 70%);\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      pointer-events: none;\n    }\n    .bth-cd-label-top {\n      font-family: 'Inter', sans-serif;\n      font-size: 11px;\n      font-weight: 600;\n      letter-spacing: 0.22em;\n      text-transform: uppercase;\n      color: #FF5500;\n      margin-bottom: 14px;\n      position: relative;\n    }\n    .bth-cd-heading {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(38px, 8vw, 76px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.01em;\n      line-height: 1;\n      margin-bottom: 6px;\n      position: relative;\n    }\n    .bth-cd-heading em {\n      font-style: normal;\n      color: #F5C500;\n    }\n    .bth-cd-subline {\n      font-family: 'Inter', sans-serif;\n      font-size: 14px;\n      color: rgba(255,255,255,0.45);\n      margin-bottom: 52px;\n      position: relative;\n    }\n    .bth-cd-units {\n      display: flex;\n      align-items: flex-start;\n      justify-content: center;\n      gap: 10px;\n      flex-wrap: wrap;\n      position: relative;\n    }\n    .bth-cd-block {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 10px;\n    }\n    .bth-cd-num {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(26px, 11vw, 56px);\n      font-weight: 900;\n      color: #F5C500;\n      line-height: 1;\n      background: rgba(255,255,255,0.04);\n      border: 1px solid rgba(255,85,0,0.3);\n      border-radius: 10px;\n      padding: 14px 22px;\n      min-width: 100px;\n      letter-spacing: 0.1em;\n    }\n    .bth-cd-unit-label {\n      font-family: 'Inter', sans-serif;\n      font-size: 10px;\n      font-weight: 600;\n      letter-spacing: 0.18em;\n      text-transform: uppercase;\n      color: rgba(255,255,255,0.4);\n    }\n    .bth-cd-colon {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: 46px;\n      font-weight: 900;\n      color: rgba(255,85,0,0.35);\n      line-height: 1;\n      padding-top: 16px;\n      align-self: flex-start;\n    }\n    .bth-cd-live-cta {\n      display: none;\n      margin-top: 44px;\n      position: relative;\n    }\n    .bth-cd-live-cta a {\n      display: inline-block;\n      background: #FF5500;\n      color: #ffffff;\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: 22px;\n      font-weight: 800;\n      text-transform: uppercase;\n      letter-spacing: 0.08em;\n      padding: 14px 40px;\n      border-radius: 6px;\n      text-decoration: none;\n      transition: background 0.15s ease, transform 0.15s ease;\n    }\n    .bth-cd-live-cta a:hover {\n      background: #FF7733;\n      transform: translateY(-2px);\n    }\n    @media (max-width: 480px) {\n      .bth-cd-num { min-width: 72px; padding: 12px 16px; }\n      .bth-cd-colon { font-size: 26px; }\n    }\n  </style>\n\n  <p class=\"bth-cd-label-top\">The wait is almost over</p>\n  <h2 class=\"bth-cd-heading\">Sale Starts <em>July 5th</em></h2>\n  <p class=\"bth-cd-subline\">Sunday· 12:00 AM IST · Be Ready</p>\n\n  <div class=\"bth-cd-units\">\n    <div class=\"bth-cd-block\">\n      <div class=\"bth-cd-num\" id=\"bth2-days\">00</div>\n      <div class=\"bth-cd-unit-label\">Days</div>\n    </div>\n    <div class=\"bth-cd-colon\">:</div>\n    <div class=\"bth-cd-block\">\n      <div class=\"bth-cd-num\" id=\"bth2-hours\">00</div>\n      <div class=\"bth-cd-unit-label\">Hours</div>\n    </div>\n    <div class=\"bth-cd-colon\">:</div>\n    <div class=\"bth-cd-block\">\n      <div class=\"bth-cd-num\" id=\"bth2-mins\">00</div>\n      <div class=\"bth-cd-unit-label\">Minutes</div>\n    </div>\n    <div class=\"bth-cd-colon\">:</div>\n    <div class=\"bth-cd-block\">\n      <div class=\"bth-cd-num\" id=\"bth2-secs\">00</div>\n      <div class=\"bth-cd-unit-label\">Seconds</div>\n    </div>\n  </div>\n\n  <div class=\"bth-cd-live-cta\" id=\"bth2-cta\">\n    <a href=\"/pages/bth\">🔥 Shop the Sale Now →</a>\n  </div>\n\n  <script>\n    (function () {\n      var target = new Date('2026-07-04T18:30:00Z');\n      function pad(n) { return n < 10 ? '0' + n : String(n); }\n      function tick() {\n        var now = new Date();\n        var diff = target - now;\n        if (diff <= 0) {\n          ['days','hours','mins','secs'].forEach(function(id) {\n            document.getElementById('bth2-' + id).textContent = '00';\n          });\n          document.getElementById('bth2-cta').style.display = 'block';\n          return;\n        }\n        var d = Math.floor(diff / 86400000);\n        var h = Math.floor((diff % 86400000) / 3600000);\n        var m = Math.floor((diff % 3600000)  / 60000);\n        var s = Math.floor((diff % 60000)    / 1000);\n        document.getElementById('bth2-days').textContent  = pad(d);\n        document.getElementById('bth2-hours').textContent = pad(h);\n        document.getElementById('bth2-mins').textContent  = pad(m);\n        document.getElementById('bth2-secs').textContent  = pad(s);\n        setTimeout(tick, 1000);\n      }\n      tick();\n    })();\n  </script>\n</section>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_XXyj4a": {
+      "type": "hero-component",
+      "disabled": true,
+      "custom_css": [
+        "h3,p {color: white !important;}",
+        "h3 {margin-top: 40px !important;}",
+        ".button {background: radial-gradient( circle, var(--main-bg-color) 0%, rgba(0, 0, 0, 0) 95% ), linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px) !important; background-size: cover, 15px 15px, 15px 15px !important; background-position: center center, center center, center center !important; border-radius: 0 !important;}"
+      ],
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/06_d61b35ec-23bc-42cb-9f58-63dc57defe16.jpg",
+        "mobile_image": "shopify://shop_images/06_Copy.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_qPac4z": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HNDRD — Section 8: Combo Kits / Buy More Save More. Paste into a Shopify \"Custom Liquid\" section. -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hb-combo{\n    --orange-1:#ff5a1f; --orange-2:#ff8a1f; --orange-3:#ffc61f;\n    --blue-1:#0a3fb0; --blue-2:#1f6bff; --sky:#8fd7ff;\n    --ink:#0b0b0c; --white:#ffffff;\n    background:var(--ink); padding:90px 24px 20px; font-family:'Inter',sans-serif; box-sizing:border-box;\n    position:relative; overflow:hidden;\n  }\n  .hb-combo *{box-sizing:border-box;}\n  .hb-combo-inner{max-width:1200px; margin:0 auto; position:relative; z-index:2;}\n\n  /* ---- text header (replaces banner) ---- */\n  .hb-combo-header{\n    text-align:center;\n    max-width:640px;\n    margin:0 auto 56px;\n  }\n  .hb-combo-eyebrow{\n    display:inline-flex; align-items:center; gap:8px;\n    font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;\n    color:var(--orange-2); margin-bottom:18px;\n  }\n  .hb-combo-eyebrow .hb-dot{\n    width:7px; height:7px; border-radius:50%; background:var(--orange-1);\n    box-shadow:0 0 0 4px rgba(255,90,31,.22);\n    animation:hb-combo-pulse 1.6s ease-in-out infinite;\n  }\n  @keyframes hb-combo-pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,90,31,.22);} 50%{ box-shadow:0 0 0 8px rgba(255,90,31,.06);} }\n\n  .hb-combo-heading{\n    font-family:'Anton',sans-serif; text-transform:uppercase; line-height:1.2;\n    font-size:clamp(38px,5.5vw,66px); margin:0;\n  }\n  .hb-combo-heading .hb-l1{\n    background:linear-gradient(180deg,#eaf6ff, #ffffff 55%, #cfe9ff);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n  .hb-combo-heading .hb-l2{\n    background:linear-gradient(180deg,#ff8a1f, #ff5a1f 60%, #ffc61f);\n    -webkit-background-clip:text; background-clip:text; color:transparent;\n  }\n  .hb-combo-sub{margin-top:18px; color:#a9a9ad; font-weight:600; font-size:15px; line-height:1.5;}\n  .hb-combo-sub b{color:var(--white); font-weight:800;}\n\n  /* ---- step guide ---- */\n  .hb-steps{\n    display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;\n    margin-bottom:48px;\n  }\n  .hb-step{\n    display:flex; align-items:center; gap:10px;\n    background:#151517; border:1px solid #232326; border-radius:40px;\n    padding:10px 18px 10px 10px;\n  }\n  .hb-step .hb-num{\n    width:26px; height:26px; border-radius:50%; background:var(--orange-1); color:#fff;\n    font-family:'Anton',sans-serif; font-size:13px; display:flex; align-items:center; justify-content:center;\n  }\n  .hb-step p{font-size:13px; font-weight:700; color:#d8d8db; margin:0;}\n  .hb-step p b{color:var(--orange-2);}\n  .hb-step-arrow{color:#3d3d40; font-size:16px;}\n\n \n</style>\n\n<section class=\"hb-combo\">\n  <div class=\"hb-combo-inner\">\n\n    <!-- Text header -->\n    <div class=\"hb-combo-header\">\n      <div class=\"hb-combo-eyebrow\"><span class=\"hb-dot\"></span>Combo Offers</div>\n      <h2 class=\"hb-combo-heading\">\n        <span class=\"hb-l1\">Buy More.</span> <span class=\"hb-l2\">Save More.</span>\n      </h2>\n      <p class=\"hb-combo-sub\">Pick 2 products for exclusive savings. <b>Add a 3rd for even bigger discounts.</b> Mix rackets, shoes &amp; kit bags across 3 combo tiers.</p>\n    </div>\n\n    <!-- Step guide -->\n    <div class=\"hb-steps\">\n      <div class=\"hb-step\"><span class=\"hb-num\">1</span><p>Pick a <b>combo tier</b></p></div>\n      <span class=\"hb-step-arrow\">→</span>\n      <div class=\"hb-step\"><span class=\"hb-num\">2</span><p>Add <b>2 products</b> for the base discount</p></div>\n      <span class=\"hb-step-arrow\">→</span>\n      <div class=\"hb-step\"><span class=\"hb-num\">3</span><p>Add a <b>3rd</b> for +2% extra off</p></div>\n    </div>\n\n   </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_qhfDch": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_8f7PKH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_78e398f8-70bf-4b2c-a86e-83b6ce9c1fb3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3d4zay": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_0453ec4b-f6d2-4a04-bca9-84a320f017ea.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cHMmqh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_a6171ee3-62ea-4e48-9345-3808667757c6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_8f7PKH",
+        "column_3d4zay",
+        "column_cHMmqh"
+      ],
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_7apB4L": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FefKqA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Courtsonic_PBX.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fQGF4M": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blade_armor.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nKxFDw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cosmogear_Max.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FefKqA",
+        "column_fQGF4M",
+        "column_nKxFDw"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".title-wrapper--no-top-margin {justify-content: center;}",
+        ".multicolumn-card__info {padding-top: 10px; padding-bottom: 20px;}",
+        "span {color: #ff8a1f; font-weight: 700; font-size: 1.8rem; letter-spacing: 1px;}",
+        "div {background: #0b0b0c;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1183aca3-ab12-4774-abf0-fce114e24f29",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_4nHRJa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"bth-teaser\">\n  <style>\n    .bth-teaser {\n      background: #110900;\n      padding: 76px 20px;\n    }\n    .bth-teaser-inner {\n      max-width: 1100px;\n      margin: 0 auto;\n      text-align: center;\n    }\n    .bth-teaser-tag {\n      display: inline-block;\n      font-family: 'Inter', sans-serif;\n      font-size: 10px;\n      font-weight: 700;\n      letter-spacing: 0.22em;\n      text-transform: uppercase;\n      color: #FF5500;\n      border: 1px solid rgba(255,85,0,0.35);\n      border-radius: 100px;\n      padding: 4px 14px;\n      margin-bottom: 18px;\n    }\n    .bth-teaser-heading {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(30px, 5.5vw, 54px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.02em;\n      line-height: 1.05;\n      margin-bottom: 10px;\n    }\n    .bth-teaser-heading span {\n      color: #F5C500;\n    }\n    .bth-teaser-sub {\n      font-family: 'Inter', sans-serif;\n      font-size: 14px;\n      color: rgba(255,255,255,0.4);\n      margin-bottom: 48px;\n    }\n    .bth-teaser-grid {\n      display: grid;\n      grid-template-columns: repeat(3, 1fr);\n      gap: 16px;\n    }\n    @media (max-width: 768px) {\n      .bth-teaser-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }\n    }\n    @media (max-width: 420px) {\n      .bth-teaser-grid { grid-template-columns: 1fr; }\n    }\n    .bth-teaser-card {\n      border-radius: 12px;\n      overflow: hidden;\n      position: relative;\n    }\n    .bth-teaser-card img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n      transition: transform 0.4s ease;\n    }\n    .bth-teaser-card:hover img {\n      transform: scale(1.03);\n    }\n    .bth-teaser-overlay {\n      position: absolute;\n      inset: 0;\n      background: rgba(0, 0, 0, 0.45);\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      gap: 10px;\n    }\n    .bth-teaser-lock-icon {\n      font-size: 28px;\n      line-height: 1;\n    }\n    .bth-teaser-lock-text {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(16px, 2.5vw, 22px);\n      font-weight: 900;\n      text-transform: uppercase;\n      letter-spacing: 0.12em;\n      color: #ffffff;\n      line-height: 1;\n    }\n    .bth-teaser-lock-date {\n      font-family: 'Inter', sans-serif;\n      font-size: clamp(10px, 1.5vw, 13px);\n      font-weight: 600;\n      letter-spacing: 0.14em;\n      text-transform: uppercase;\n      color: rgba(255, 255, 255, 0.5);\n    }\n    .bth-teaser-bottom {\n      margin-top: 44px;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 10px;\n    }\n    .bth-teaser-bottom-text {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(20px, 4vw, 32px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.04em;\n    }\n    .bth-teaser-bottom-text span {\n      color: #FF5500;\n    }\n    .bth-teaser-date {\n      font-family: 'Inter', sans-serif;\n      font-size: 13px;\n      color: rgba(255,255,255,0.35);\n      letter-spacing: 0.08em;\n      text-transform: uppercase;\n    }\n  </style>\n\n  <div class=\"bth-teaser-inner\">\n    <span class=\"bth-teaser-tag\">Dropping July 5</span>\n    <h2 class=\"bth-teaser-heading\">Prices So Low,<br>We're <span>Hiding Them</span> Till Sale Day</h2>\n    <p class=\"bth-teaser-sub\">The ₹XX,XX9 is real. Find out midnight July 5.</p>\n\n    <div class=\"bth-teaser-grid\">\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/blade_armor.jpg?v=1783155972\" alt=\"Blade Armor\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Cosmogear_Max.jpg?v=1783155972\" alt=\"Cosmogear Max\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Courtsonic_PBX.jpg?v=1783155972\" alt=\"Courtsonic PBX\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/COURTSTEP_PBX.jpg?v=1783155972\" alt=\"Courtstep PBX\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/NITRIX_70_VENOM_Hyper_Court.jpg?v=1783155972\" alt=\"Flareon 700 + Hyper Spike Combo\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n      <div class=\"bth-teaser-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Nitrix_70_Volta_BEAST_MAX.jpg?v=1783155972\" alt=\"Nitrix 70 Volta + Beast Max Combo\" loading=\"lazy\">\n        <div class=\"bth-teaser-overlay\">\n          <div class=\"bth-teaser-lock-icon\">🔒</div>\n          <div class=\"bth-teaser-lock-text\">Price Revealed</div>\n          <div class=\"bth-teaser-lock-date\">July 5 · Midnight</div>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"bth-teaser-bottom\">\n      <div class=\"bth-teaser-bottom-text\">Prices Drop at <span>Midnight, July 5</span></div>\n      <div class=\"bth-teaser-date\">Saturday · 12:00 AM IST · 24 Hours Only</div>\n    </div>\n  </div>\n</section>",
+        "color_scheme": "scheme-9e02608f-49ba-4fbc-89d0-8b4f16cd453f",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Pke8wy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"bth-cats1\">\n  <style>\n    .bth-cats1 {\n      background: #110900;\n      padding: 26px 20px;\n      padding-bottom: 70px;\n    }\n .bth-cats-inner {\n      max-width: 1000px;\n      margin: 0;\n      text-align: center;\n    }\n    .bth-section-tag {\n      display: inline-block;\n      font-family: 'Inter', sans-serif;\n      font-size: 13px;\n      font-weight: 700;\n      letter-spacing: 0.22em;\n      text-transform: uppercase;\n      color: #FF5500;\n      border: 1px solid rgba(255,85,0,0.35);\n      border-radius: 100px;\n      padding: 4px 14px;\n      margin-bottom: 18px;\n    }\n    .bth-section-heading {\n      font-family: 'Barlow Condensed', sans-serif;\n      font-size: clamp(30px, 5.5vw, 52px);\n      font-weight: 900;\n      color: #ffffff;\n      text-transform: uppercase;\n      letter-spacing: 0.02em;\n      line-height: 1.05;\n    }\n    \n    .bth-cats-inner {\n      max-width: 1000px;\n      margin: 0 auto;\n    }\n    .bth-cats-grid {\n      display: grid;\n      grid-template-columns: repeat(4, 1fr);\n      gap: 14px;\n    }\n    @media (max-width: 768px) {\n      .bth-cats-grid { grid-template-columns: repeat(2, 1fr); }\n    }\n    @media (max-width: 400px) {\n      .bth-cats-grid { grid-template-columns: repeat(2, 1fr); }\n    }\n    .bth-cat-card {\n      position: relative;\n    \n      transition: transform 0.25s ease;\n    }\n    .bth-cat-card:hover {\n      transform: translateY(-4px);\n    }\n    .bth-cat-card img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      object-position: center top;\n      display: block;\n      transition: transform 0.4s ease;\n    }\n    .bth-cat-card:hover img {\n      transform: scale(1.05);\n    }\n  </style>\n<div class=\"bth-cats-inner\">\n    <span class=\"bth-section-tag\">What's On Sale</span>\n    <h2 class=\"bth-section-heading\">Drops Across Every Sport</h2>\n\n    <div class=\"bth-cats-grid\">\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_1_d51aaf71-cc64-4161-b223-46a5d1ff27ae.jpg?v=1782733742&width=535\" alt=\"Rackets\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_2_66bcee79-1432-4364-a1fb-c6bebd046a69.jpg?v=1782733742&width=535\" alt=\"Shoes\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_3_fc9641fb-1fee-4528-88c0-7a7f11311a9b.jpg?v=1782733742&width=535\" alt=\"Kit Bags\" loading=\"lazy\">\n      </div>\n\n      <div class=\"bth-cat-card\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Artboard_4_dac4ebaf-3d3f-4dca-be61-305182916e18.jpg?v=1782733742&width=535\" alt=\"Paddles\" loading=\"lazy\">\n      </div>\n\n    </div>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_component_ekdqEn",
+    "custom_liquid_3gQmGB",
+    "hero_component_XXyj4a",
+    "custom_liquid_qPac4z",
+    "multicolumn_qhfDch",
+    "multicolumn_7apB4L",
+    "custom_liquid_4nHRJa",
+    "custom_liquid_Pke8wy"
+  ]
+}
