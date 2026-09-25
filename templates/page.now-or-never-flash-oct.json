@@ -226,6 +226,38 @@
         "padding_bottom": 0
       }
     },
+    "1790299314fbd219c3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_w3g8ae": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1170106",
+            "text_color": "#FFFFFF",
+            "button_background_color": "#7C7872",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 25,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_w3g8ae"
+      ],
+      "custom_css": [
+        "div {background: black;}",
+        "._textHeading_2aowh_35P {color: yellow;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "custom_liquid_Pke8wy": {
       "type": "custom-liquid",
       "disabled": true,
@@ -258,6 +290,7 @@
     "multicolumn_qhfDch",
     "multicolumn_7apB4L",
     "custom_liquid_4nHRJa",
+    "1790299314fbd219c3",
     "custom_liquid_Pke8wy",
     "custom_liquid_iwUTKB"
   ]
