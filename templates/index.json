@@ -9,7 +9,23 @@
  */
 {
   "sections": {
-    "hero_video_component_wbfyNC": {
+    "hero_video_component_i4cfmH": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/c5ae645f0a0e4af98d1aa847bb1d9777.HD-1080p-4.8Mbps-95053971.mp4",
+        "mobile_video": "shopify://files/videos/70af6d0de3484cf387e36769a65ead92.HD-1080p-4.8Mbps-95053802.mp4",
+        "subtitle": "Z-TRONIC SERIES",
+        "title": "THE REIGN OF POWER",
+        "description": "The War Begins",
+        "button_text": "Experience the Z-Tronic 100Ti",
+        "link_to": "shopify://products/z-tronic-100-ti",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "hero_video_component_nCVBG3": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
       "settings": {
@@ -22,19 +38,7 @@
         "link_to": "shopify://collections/nitrix-80-bullet",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_Mcmfew": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Swipeable Products",
-        "products": [],
-        "show_color_variants": false,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     },
     "hero_component_n9R8Ji": {
@@ -297,8 +301,8 @@
     }
   },
   "order": [
-    "hero_video_component_wbfyNC",
-    "swipeable_products_Mcmfew",
+    "hero_video_component_i4cfmH",
+    "hero_video_component_nCVBG3",
     "hero_component_n9R8Ji",
     "swipeable_products_qF6iTW",
     "hero_component_gKmhp8",
