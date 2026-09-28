@@ -115,6 +115,18 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "countdown_timer_qeF4FW": {
+      "type": "countdown-timer",
+      "custom_css": [],
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Now or Never Sale Starts IN",
+        "end_time": "2026-10-03 00:00",
+        "background": "linear-gradient(90deg, rgba(161, 6, 244, 1) 2%, rgba(231, 7, 250, 1) 100%)",
+        "text_color": "#FFFFFF",
+        "padding_top": 10
+      }
     }
   },
   "order": [
@@ -123,6 +135,7 @@
     "countdown_timer_6zkjxL",
     "custom_liquid_H69tci",
     "custom_liquid_4pYF3x",
-    "custom_liquid_TYDpBY"
+    "custom_liquid_TYDpBY",
+    "countdown_timer_qeF4FW"
   ]
 }
