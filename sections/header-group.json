@@ -11,6 +11,20 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "countdown_timer_qeF4FW": {
+      "type": "countdown-timer",
+      "custom_css": [
+        "h2 {font-weight: 1000;}"
+      ],
+      "name": "Countdown Timer",
+      "settings": {
+        "title": "Now or Never Sale Starts IN",
+        "end_time": "2026-10-03 00:00",
+        "background": "linear-gradient(90deg, rgba(161, 6, 244, 1) 2%, rgba(231, 7, 250, 1) 100%)",
+        "text_color": "#ffffff",
+        "padding_top": 10
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -50,20 +64,6 @@
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
-      }
-    },
-    "countdown_timer_qeF4FW": {
-      "type": "countdown-timer",
-      "custom_css": [
-        "h2 {font-weight: 1000;}"
-      ],
-      "name": "Countdown Timer",
-      "settings": {
-        "title": "Now or Never Sale Starts IN",
-        "end_time": "2026-10-03 00:00",
-        "background": "linear-gradient(90deg, rgba(161, 6, 244, 1) 2%, rgba(231, 7, 250, 1) 100%)",
-        "text_color": "#ffffff",
-        "padding_top": 10
       }
     },
     "header": {
