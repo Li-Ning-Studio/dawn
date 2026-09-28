@@ -118,7 +118,9 @@
     },
     "countdown_timer_qeF4FW": {
       "type": "countdown-timer",
-      "custom_css": [],
+      "custom_css": [
+        "h2{font-weight: 1000;}"
+      ],
       "name": "Countdown Timer",
       "settings": {
         "title": "Now or Never Sale Starts IN",
