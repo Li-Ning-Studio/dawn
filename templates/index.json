@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_video_component_dDy49h": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/16.9.mp4",
+        "mobile_video": "shopify://files/videos/1.1.mp4",
+        "subtitle": "Z-TRONIC SERIES",
+        "title": "THE REIGN OF POWER",
+        "description": "The War Begins",
+        "button_text": "Experience the  Z-Tronic 100Ti",
+        "link_to": "shopify://products/z-tronic-100-ti",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_WAJY7j": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -279,6 +295,7 @@
     }
   },
   "order": [
+    "hero_video_component_dDy49h",
     "hero_component_WAJY7j",
     "custom_liquid_grQUgz",
     "swipeable_products_fnPPyV",
