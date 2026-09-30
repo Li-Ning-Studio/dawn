@@ -11,10 +11,22 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "color_scheme": "scheme-1"
+      }
+    },
+    "media_kRN3M7": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/discount_banner_37e56486-bc4c-42a7-8771-2032d732253b.jpg",
+        "mobile_image": "shopify://shop_images/discount_banner_7d0181ff-6faa-4271-ba7a-c480a7a94a4a.jpg",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "product-grid": {
@@ -238,6 +250,7 @@
   },
   "order": [
     "banner",
+    "media_kRN3M7",
     "product-grid"
   ]
 }
