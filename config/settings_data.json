@@ -424,7 +424,7 @@
       },
       "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa": {
         "settings": {
-          "background": "#16001E",
+          "background": "#16001e",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#0d0d0d",
@@ -624,7 +624,8 @@
   "platform_customizations": {
     "custom_css": [
       ".nn-product__badge {font-size: 10px !important; box-sizing: border-box; max-width: calc(100% - 75px) !important; height: auto !important; min-height: 27px; padding: 7px 11px !important; white-space: normal !important; overflow-wrap: anywhere; text-overflow: clip !important; line-height: 1.25 !important; text-align: center;}",
-      "@media (max-width: 749px) {.nn-product__badge {font-size: 9px !important; max-width: calc(100% - 64px) !important; min-height: 25px; padding: 7px 9px !important; }}"
+      "@media (max-width: 749px) {.nn-product__badge {font-size: 9px !important; max-width: calc(100% - 64px) !important; min-height: 25px; padding: 7px 9px !important; }}",
+      "[id$=\"__custom_liquid_FdHkfj\"] > .gradient,[id$=\"__custom_liquid_B98DjF\"] > .gradient,[id$=\"__custom_liquid_JKQKWf\"] > .gradient,[id$=\"__custom_liquid_Vfp4iM\"] > .gradient,[id$=\"__custom_liquid_9REqXa\"] > .gradient,[id$=\"__custom_liquid_Yd8Vpg\"] > .gradient {background: #16001e;}"
     ]
   }
 }
