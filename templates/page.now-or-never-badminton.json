@@ -107,7 +107,8 @@
     "custom_liquid_B98DjF": {
       "type": "custom-liquid",
       "custom_css": [
-        ".gradient {background: #16001e !important;}"
+        ".gradient,.nn-products,.nncc {background: #16001e !important;}",
+        ".nn-products__glow,.nncc__glow {display: none !important;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
