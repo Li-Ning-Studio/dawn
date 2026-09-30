@@ -132,6 +132,30 @@ if (!customElements.get('product-form')) {
         }
       }
 
+      renderCart(response) {
+        const renderContents = () => {
+          this.cart.renderContents(response);
+          // Only leave the empty-cart layout after its markup was replaced.
+          // Clearing this in finally exposes a blank drawer when refresh fails.
+          this.cart.classList.remove('is-empty');
+        };
+        const quickAddModal = this.closest('quick-add-modal');
+        if (quickAddModal) {
+          document.body.addEventListener(
+            'modalClosed',
+            () => {
+              setTimeout(() => {
+                CartPerformance.measure('add:paint-updated-sections', renderContents);
+              });
+            },
+            { once: true },
+          );
+          quickAddModal.hide(true);
+        } else {
+          CartPerformance.measure('add:paint-updated-sections', renderContents);
+        }
+      }
+
       onSubmitHandler(evt) {
         let selectedVariantSku = window?.s3_current_variant_sku || null;
 
@@ -386,36 +410,20 @@ if (!customElements.get('product-form')) {
           items.push(...customisationItems);
         }
 
-        // check for buy X get Y
-        if (window.s3_bxgy_variants && window.s3_bxgy && window.s3_product_collections) {
-          try {
-            const matchingOffer = window.s3_bxgy.find((offer) =>
-              window.s3_product_collections.includes(offer.trigger_collection),
-            );
-
-            if (matchingOffer) {
-              const productToAdd = matchingOffer.free_product.split('/').pop();
-              const variantToAdd = window.s3_bxgy_variants.find((x) => x?.productId == productToAdd && x.available);
-
-              if (variantToAdd) {
-                items.push({
-                  id: variantToAdd.id,
-                  quantity: 1,
-                  properties: {
-                    _offer: matchingOffer.offer_name,
-                    _offerInstanceId: customisationId,
-                  },
-                });
-              }
-            }
-          } catch (error) {
-            console.error(error);
-          }
-        }
-        // Single combined request with sections
+        // Gifts are independent of native customisation children. Resolve them
+        // using the final purchased quantity, but only add them after the paid
+        // product and its required customisations have been accepted.
+        window.Bxgy.setNotice(null);
+        const gifts = window.Bxgy.selectGifts(
+          window.s3_bxgy,
+          window.s3_product_collections,
+          mainItem.quantity,
+          customisationId,
+        );
         let addAccepted = false;
+        let addedMainItem;
 
-        fetch(`${routes.cart_add_url}`, {
+        return fetch(`${routes.cart_add_url}`, {
           ...config,
           method: 'POST',
           headers: {
@@ -444,13 +452,27 @@ if (!customElements.get('product-form')) {
                 this.showAddError(response, mainVariantId);
               }
               return;
-            } else if (!this.cart) {
-              addAccepted = true;
-              window.location = window.routes.cart_url;
-              return;
             }
 
             addAccepted = true;
+            addedMainItem = response.items.find((item) => this.getCustomisationItemId(item) === String(mainVariantId));
+            if (gifts.unavailable) window.Bxgy.setNotice('unavailable');
+            if (gifts.items.length > 0) {
+              const giftResponse = await window.Bxgy.addGifts(gifts.items, customisationId, sections);
+              response = {
+                ...response,
+                items: [...response.items, ...giftResponse.items],
+                sections: giftResponse.sections,
+              };
+              window.Bxgy.setNotice(giftResponse.notice || (gifts.unavailable ? 'unavailable' : null));
+            }
+            if (!this.cart) {
+              window.location = window.routes.cart_url;
+              return;
+            }
+            // Cart notifications identify the purchased item, even though the
+            // final sections may have come from the later gift request.
+            response.key = addedMainItem?.key;
             const startMarker = CartPerformance.createStartingMarker('add:wait-for-subscribers');
             publish(PUB_SUB_EVENTS.cartUpdate, {
               source: 'product-form',
@@ -460,30 +482,25 @@ if (!customElements.get('product-form')) {
               CartPerformance.measureFromMarker('add:wait-for-subscribers', startMarker);
             });
             this.error = false;
-            const quickAddModal = this.closest('quick-add-modal');
-            if (quickAddModal) {
-              document.body.addEventListener(
-                'modalClosed',
-                () => {
-                  setTimeout(() => {
-                    CartPerformance.measure('add:paint-updated-sections', () => {
-                      this.cart.renderContents(response);
-                    });
-                  });
-                },
-                { once: true },
-              );
-              quickAddModal.hide(true);
-            } else {
-              CartPerformance.measure('add:paint-updated-sections', () => {
-                this.cart.renderContents(response);
-              });
-            }
+            this.renderCart(response);
           })
           .catch(async (e) => {
             console.error(e);
             if (addAccepted) {
-              window.location = window.routes.cart_url;
+              // The purchase succeeded. Quietly refresh and open the drawer;
+              // uncertain gifts stay in the cart at Shopify's current prices.
+              // Never resend items or ask the shopper to review the gifts.
+              this.error = false;
+              if (this.cart) {
+                try {
+                  const refreshedSections = await window.Bxgy.renderSections(sections);
+                  this.renderCart({ ...addedMainItem, sections: refreshedSections });
+                } catch (refreshError) {
+                  // If the read-only refresh also fails, do not replace the
+                  // drawer with the stale pre-gift response.
+                  console.error(refreshError);
+                }
+              }
             } else if (customisationItems.length > 0) {
               await this.handleIncompleteCustomisation({}, mainVariantId, customisationId, sections);
             } else {
@@ -492,9 +509,6 @@ if (!customElements.get('product-form')) {
           })
           .finally(() => {
             this.submitButton.classList.remove('loading');
-            if (!this.error && this.cart && this.cart.classList.contains('is-empty')) {
-              this.cart.classList.remove('is-empty');
-            }
             if (!this.submitButton.querySelector('.sold-out-message:not(.hidden)')) {
               this.submitButton.removeAttribute('aria-disabled');
             }

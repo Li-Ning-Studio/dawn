@@ -1,0 +1,30 @@
+{% comment %}
+  Normalise storefront offer data before JavaScript reads it. A populated
+  free_product always wins, including when it has no available variant.
+  Keep the expected collection size so Liquid's product iteration limit can
+  never turn a large collection into an incomplete gift set silently.
+{% endcomment %}
+{%- capture offers_json -%}
+  [
+    {%- for offer in shop.metaobjects.buy_x_get_y.values -%}
+      {%- assign gift_product = offer.free_product.value -%}
+      {%- assign gift_collection = offer.free_collection.value -%}
+      {
+        "offer_name": {{ offer.offer_name.value | json }},
+        "trigger_collection": {{ offer.trigger_collection.value.id | prepend: 'gid://shopify/Collection/' | json }},
+        "expected_count": {% if gift_product != blank %}1{% else %}{{ gift_collection.all_products_count | default: 0 | json }}{% endif %},
+        "gifts": [
+          {%- if gift_product != blank -%}
+            { "product_id": {{ gift_product.id | json }}, "id": {{ gift_product.first_available_variant.id | json }} }
+          {%- elsif gift_collection != blank -%}
+            {%- for gift in gift_collection.products limit: 50 -%}
+              { "product_id": {{ gift.id | json }}, "id": {{ gift.first_available_variant.id | json }} }
+              {%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          {%- endif -%}
+        ]
+      }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+{%- endcapture -%}
+{{- offers_json | replace: '<', '\u003c' -}}

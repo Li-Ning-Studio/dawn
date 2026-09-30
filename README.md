@@ -23,6 +23,70 @@ This document gives new teammates a map of the theme with a focus on the custom 
 
 ## Services Deep Dive
 
+### BXGY automatic gifts
+
+The theme adds gift merchandise; Shopify's native automatic Buy X Get Y discount
+sets its price. Gifts remain independent cart lines that shoppers can edit or
+remove. Editing the purchased product later does not synchronise its gifts.
+
+**Shopify setup**
+
+- Keep the existing `buy_x_get_y` metaobject fields: `offer_name`,
+  `trigger_collection` (one collection reference), and `free_product` (one product
+  reference). Make `free_product` optional if the definition currently requires it.
+- Add optional `free_collection` with type **Collection**, accepting **one value**
+  (`collection_reference`). Preserve the definition's storefront read access.
+- `free_product` takes priority whenever populated, including when it is sold out.
+  Clear it to use `free_collection`; the sources are never combined. The first
+  matching offer still wins if trigger collections overlap.
+- Use a dedicated manual gift collection. Its products and the trigger collection
+  must be available to the Online Store. Empty collections add nothing. The theme
+  checks the complete product count and omits the gift set if Liquid returns only
+  part of it; keep gift collections at 50 products or fewer.
+- Configure a matching native automatic discount: buy one qualifying product and
+  get one item from `free_product`, or N items from `free_collection`, free. N is
+  the collection's product count when the full set is available. Enable repeat
+  applications per order for multiple qualifying units. Changing collection
+  membership or skipping sold-out gifts does not update this quantity. The theme
+  keeps successfully added gifts even if Shopify leaves them chargeable.
+- Align native discount dates, customer/market eligibility and combinations with
+  the offer's storefront availability. The theme does not read discount settings
+  or enforce free prices. A scheduled, expired or inapplicable discount can leave
+  auto-added merchandise chargeable. Disable the metaobject entry when its offer
+  should stop auto-adding gifts.
+
+**Addition and stock handling**
+
+The theme selects each product's first available variant and adds one of each gift
+per purchased unit in that submission. Customised purchases still use their
+existing quantity of one. Products with no available variant are skipped; the
+remaining gifts are still added. If every gift is sold out, only the purchased
+product is added. A sold-out `free_product` does not fall back to the collection.
+
+Purchased products and required customisations are added and validated first;
+gifts are then added individually in sequential requests. Each gift is attempted
+once. A failed or partially fulfilled request triggers a cart read before moving
+on to the next gift, preserving any units successfully added. The paid purchase
+and failed gift requests are never resent. If the cart cannot be read, remaining
+attempts stop and the theme makes one read-only refresh to open the updated cart
+drawer or notification. Unconfirmed gifts do not show a review message or cause a
+redirect. If the refresh also fails, the theme leaves the current page in place
+without rendering stale cart sections.
+
+The final cart sections are refreshed after gift processing. Skipped or partially
+added gifts produce a notice, without removing successful gifts or checking their
+prices. Existing cart lines remain untouched. Notices persist across page navigation
+for up to five minutes, or until the next add-to-cart submission.
+
+`snippets/bxgy-offers.liquid` prepares the offer data, `assets/bxgy.js` manages gift
+selection/recovery, and `assets/product-form.js` sequences the requests. This
+covers the existing product-form flow, not bulk order controls or accelerated
+checkout buttons. Run `node --test tests/bxgy.test.cjs` for request-flow coverage.
+Before activating a collection offer, verify its metaobject and native discount
+together on staging: quantities 1 and 2, stock failures, cart edits, customisations
+and the final checkout prices. The metaobject definition and discount changes are
+Shopify Admin setup; deploying theme files alone does not create them.
+
 ### Stringing and Knotting
 
 **What shoppers see**
