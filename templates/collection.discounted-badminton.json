@@ -22,8 +22,8 @@
       "type": "media",
       "name": "Media",
       "settings": {
-        "desktop_image": "shopify://shop_images/badminton_discount_banner_5685db8e-b968-4500-aa90-4a32b45ed5c1.jpg",
-        "mobile_image": "shopify://shop_images/badminton_discount_banner_5685db8e-b968-4500-aa90-4a32b45ed5c1.jpg",
+        "desktop_image": "{{ collection.image }}",
+        "mobile_image": "{{ collection.image }}",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
