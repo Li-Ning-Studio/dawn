@@ -17,6 +17,26 @@
         "padding_bottom": 28
       }
     },
+    "hero_video_component_P4d6aX": {
+      "type": "hero-video-component",
+      "custom_css": [
+        ".gradient,.non-closing {background: #16001e !important;}",
+        ".non-closing__glow {display: none !important;}"
+      ],
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/yt (1).mp4",
+        "mobile_video": "shopify://files/videos/sq (1).mp4",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "https://in.hndrd.co/pages/now-or-never-flash-sale",
+        "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_46qYWT": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -340,26 +360,11 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "hero_video_component_P4d6aX": {
-      "type": "hero-video-component",
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/yt (1).mp4",
-        "mobile_video": "shopify://files/videos/sq (1).mp4",
-        "subtitle": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "link_to": "https://in.hndrd.co/pages/now-or-never-flash-sale",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "main",
+    "hero_video_component_P4d6aX",
     "custom_liquid_46qYWT",
     "custom_liquid_YV4VNF",
     "custom_liquid_84DEHd",
@@ -380,7 +385,6 @@
     "custom_liquid_UGFLcT",
     "custom_liquid_Yd8Vpg",
     "custom_liquid_Kxec8W",
-    "custom_liquid_7yh8rg",
-    "hero_video_component_P4d6aX"
+    "custom_liquid_7yh8rg"
   ]
 }
