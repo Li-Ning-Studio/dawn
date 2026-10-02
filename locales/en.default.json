@@ -139,6 +139,25 @@
       }
     },
     "tshirt_printing": {
+      "lighting": {
+        "title": "Preview lighting",
+        "daylight": "Daylight",
+        "off": "Light off",
+        "on": "Light on",
+        "daylight_description": "Soft silver in everyday light.",
+        "off_description": "Low visibility without an external light source.",
+        "on_description": "Incoming light makes the reflective print shine."
+      },
+      "materials": {
+        "title": "Print finish",
+        "standard": "Standard",
+        "gold": "Gold",
+        "hologram": "Hologram",
+        "reflective": "Reflective",
+        "rose_gold": "Rose Gold",
+        "unavailable": "Unavailable",
+        "note": "Finishes are shown for illustration. Actual colour, shine and reflections vary with lighting."
+      },
       "form_labels": {
         "personalisation_service": "Add Personalisation"
       },
@@ -161,7 +180,8 @@
       "messages": {
         "invalid_input": "Only letters, periods, and spaces are allowed.",
         "logo_unavailable": "The country and logo option is unavailable. Remove it to continue with name-only printing.",
-        "logo_loading": "Loading your included brand logo…"
+        "logo_loading": "Loading your included brand logo…",
+        "material_unavailable": "This finish is unavailable for this printing option. Choose another finish or change your country and logo selection."
       },
       "countries": {
         "india": "India",

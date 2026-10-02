@@ -53,6 +53,25 @@
       }
     },
     "tshirt_printing": {
+      "lighting": {
+        "title": "प्रीव्यू की रोशनी",
+        "daylight": "दिन की रोशनी",
+        "off": "लाइट बंद",
+        "on": "लाइट चालू",
+        "daylight_description": "सामान्य रोशनी में हल्का सिल्वर रंग।",
+        "off_description": "बाहरी रोशनी के बिना कम दिखाई देता है।",
+        "on_description": "पड़ने वाली रोशनी से रिफ्लेक्टिव प्रिंट चमकता है।"
+      },
+      "materials": {
+        "title": "प्रिंट फ़िनिश",
+        "standard": "स्टैंडर्ड",
+        "gold": "गोल्ड",
+        "hologram": "होलोग्राम",
+        "reflective": "रिफ्लेक्टिव",
+        "rose_gold": "रोज़ गोल्ड",
+        "unavailable": "उपलब्ध नहीं",
+        "note": "फ़िनिश केवल उदाहरण के लिए दिखाई गई हैं। असली रंग, चमक और प्रतिबिंब रोशनी के अनुसार बदलते हैं।"
+      },
       "form_labels": {
         "personalisation_service": "Personalise"
       },
@@ -75,7 +94,8 @@
       "messages": {
         "invalid_input": "Only letters, periods, and spaces are allowed.",
         "logo_unavailable": "देश और लोगो का विकल्प उपलब्ध नहीं है। केवल नाम प्रिंट करवाने के लिए इसे हटाएँ।",
-        "logo_loading": "आपका शामिल ब्रांड लोगो लोड हो रहा है…"
+        "logo_loading": "आपका शामिल ब्रांड लोगो लोड हो रहा है…",
+        "material_unavailable": "इस प्रिंटिंग विकल्प के लिए यह फ़िनिश उपलब्ध नहीं है। दूसरी फ़िनिश चुनें या देश और लोगो का चयन बदलें।"
       },
       "countries": {
         "india": "भारत",

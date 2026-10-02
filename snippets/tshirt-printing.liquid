@@ -15,6 +15,11 @@
     endif
   endfor
   assign second_line_flag = metaobjects.theme_feature_flag['tshirt-printing-second-line']
+  assign materials_flag = metaobjects.theme_feature_flag['tshirt-printing-materials']
+  assign is_materials_enabled = false
+  if materials_flag.enabled.value == true
+    assign is_materials_enabled = true
+  endif
   assign is_second_line_enabled = false
 
   if second_line_flag.enabled.value == true and tshirt_printing_plus_variant.available
@@ -47,6 +52,75 @@
   {%- endif -%}
 {%- endcapture -%}
 
+{%- comment -%}
+  Resolve the finite service catalogue once, only behind the materials flag.
+  The modal and product form read the same escaped JSON; prices are formatted
+  here in the customer's currency, never inferred from swatches or hardcoded.
+  Keep the legacy globals below unchanged for independently cached modals.
+{%- endcomment -%}
+{%- capture printing_material_options -%}
+  [
+  {%- if is_materials_enabled -%}
+    {%- assign material_ids = 'standard,gold,hologram,reflective,rose-gold' | split: ',' -%}
+    {%- for material_id in material_ids -%}
+      {%- liquid
+        assign material_key = material_id | replace: '-', '_'
+        assign material_label_key = 'studio.tshirt_printing.materials.' | append: material_key
+        assign material_text_color = material_id | replace: '-', ' ' | upcase
+        assign material_base = tshirt_printing_variant
+        assign material_plus = tshirt_printing_plus_variant
+        if material_id != 'standard'
+          assign base_handle = 't-shirt-printing-' | append: material_id
+          assign plus_handle = 't-shirt-printing-plus-' | append: material_id
+          assign material_base_product = all_products[base_handle]
+          assign material_plus_product = all_products[plus_handle]
+          assign material_base = null
+          assign material_plus = null
+          for candidate in material_base_product.variants
+            assign candidate_sku = candidate.sku | downcase
+            if candidate_sku == base_handle
+              assign material_base = candidate
+              break
+            endif
+          endfor
+          for candidate in material_plus_product.variants
+            assign candidate_sku = candidate.sku | downcase
+            if candidate_sku == plus_handle
+              assign material_plus = candidate
+              break
+            endif
+          endfor
+        endif
+        assign upgrade_price = material_plus.price | minus: material_base.price
+        if upgrade_price <= 0
+          assign upgrade_price_label = 'studio.tshirt_printing.labels.free' | t
+        else
+          assign upgrade_price_label = upgrade_price | money
+        endif
+      -%}
+      {
+        "id": {{ material_id | json }},
+        "label": {{ material_label_key | t | json }},
+        "textColor": {{ material_text_color | json }},
+        "addSecondLineLabel": {{ 'studio.tshirt_printing.actions.add_second_line' | t: price: upgrade_price_label | json }},
+        "single": {% if material_base %}{
+          "variantId": {{ material_base.id | append: '' | json }},
+          "available": {{ material_base.available | json }},
+          "price": {{ material_base.price | json }},
+          "priceLabel": {% if material_base.price <= 0 %}{{ 'studio.tshirt_printing.labels.free' | t | json }}{% else %}{{ material_base.price | money | json }}{% endif %}
+        }{% else %}null{% endif %},
+        "plus": {% if material_plus %}{
+          "variantId": {{ material_plus.id | append: '' | json }},
+          "available": {{ material_plus.available | json }},
+          "price": {{ material_plus.price | json }},
+          "priceLabel": {% if material_plus.price <= 0 %}{{ 'studio.tshirt_printing.labels.free' | t | json }}{% else %}{{ material_plus.price | money | json }}{% endif %}
+        }{% else %}null{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  {%- endif -%}
+  ]
+{%- endcapture -%}
+
 <style>
   @font-face {
     font-family: 'segui';
@@ -60,7 +134,7 @@
     /* letter-spacing: -1px; */
   }
 
-  {%- if is_second_line_enabled -%}
+  {%- if is_second_line_enabled or is_materials_enabled -%}
     @font-face {
       font-family: 'Barlow Condensed';
       src: url("{{ 'BarlowCondensed-SemiBold.ttf' | asset_url }}") format('truetype');
@@ -215,6 +289,93 @@
       }
     }
   {%- endif -%}
+
+  {%- if is_materials_enabled -%}
+    .tshirt-printing-reflective-preview {
+      --lighting-surface: #fff;
+      --lighting-border: #e0e1e3;
+      --lighting-text: #62666c;
+      --lighting-selected: #25292f;
+      --lighting-selected-text: #fff;
+      background: #f5f5f5;
+      color: var(--lighting-text);
+    }
+    .tshirt-printing-reflective-preview[data-lighting="off"],
+    .tshirt-printing-reflective-preview[data-lighting="on"] {
+      --lighting-surface: #272b31;
+      --lighting-border: #3c4149;
+      --lighting-text: #b9bec6;
+      --lighting-selected: #f1f3f8;
+      --lighting-selected-text: #15181d;
+      background: #15181d;
+    }
+    /* Dim only the garment: the separate print layer reflects the incoming light. */
+    .tshirt-printing-reflective-preview[data-lighting="off"] .tshirt-printing-preview-garment { filter: brightness(0.62); }
+    .tshirt-printing-reflective-preview[data-lighting="on"] .tshirt-printing-preview-garment { filter: brightness(0.82); }
+    .tshirt-printing-reflective-preview[data-lighting="on"] .tshirt-printing-preview-overlay { filter: drop-shadow(0 0 3px rgb(255 255 255 / 55%)); }
+    .tshirt-printing-reflective-preview[data-lighting="on"] h4 { text-shadow: 0 0 6px rgb(255 255 255 / 55%); }
+    .tshirt-printing-lighting { width: 100%; max-width: 420px; margin: 2.4rem auto 0; }
+    .tshirt-printing-lighting fieldset {
+      display: flex;
+      gap: 0.4rem;
+      margin: 0;
+      padding: 0.5rem;
+      border: 1px solid var(--lighting-border);
+      border-radius: 1.2rem;
+      background: var(--lighting-surface);
+    }
+    .tshirt-printing-lighting label { position: relative; flex: 1; min-width: 0; cursor: pointer; }
+    .tshirt-printing-lighting input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .tshirt-printing-lighting label span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      min-height: 44px;
+      height: 100%;
+      padding: 0.8rem 0.4rem;
+      border-radius: 0.8rem;
+      font-size: 1.5rem;
+      line-height: 1.3;
+    }
+    .tshirt-printing-lighting input:checked + span { background: var(--lighting-selected); color: var(--lighting-selected-text); }
+    .tshirt-printing-lighting input:focus-visible + span { outline: 2px solid currentColor; outline-offset: 2px; }
+    .tshirt-printing-lighting p { min-height: 3em; margin: 1.6rem 0 0; font-size: 1.4rem; line-height: 1.5; }
+    .tshirt-printing-materials {
+      box-sizing: border-box;
+      width: min(calc(100% - 3.2rem), 540px);
+      margin: 2rem 0 0;
+      padding: 0;
+      border: 0;
+      text-align: left;
+    }
+    .tshirt-printing-materials legend { margin-bottom: 1rem; font-size: 1.6rem; }
+    .tshirt-printing-material-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.8rem; }
+    .tshirt-printing-material { position: relative; min-width: 0; cursor: pointer; }
+    .tshirt-printing-material input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .tshirt-printing-material-card {
+      display: flex;
+      height: 100%;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 0.5rem;
+      border: 1px solid var(--gray-30);
+      border-radius: 1rem;
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+    .tshirt-printing-material input:checked + .tshirt-printing-material-card { border-color: var(--gray-90); box-shadow: inset 0 0 0 1px var(--gray-90); }
+    .tshirt-printing-material input:focus-visible + .tshirt-printing-material-card { outline: 2px solid var(--gray-90); outline-offset: 3px; }
+    .tshirt-printing-material input:disabled + .tshirt-printing-material-card { opacity: 0.5; cursor: not-allowed; }
+    .tshirt-printing-material-swatch { width: 3rem; height: 3rem; border: 1px solid rgb(0 0 0 / 20%); border-radius: 50%; }
+    .tshirt-printing-material-note, .tshirt-printing-material-status { font-size: 1.3rem; line-height: 1.5; margin: 1rem 0 0; }
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      .tshirt-printing-material-text { background-image: var(--printing-gradient); background-clip: text; -webkit-background-clip: text; color: transparent !important; }
+    }
+  {%- endif -%}
 </style>
 
 <section
@@ -249,6 +410,20 @@
   data-close-confirm-keep-editing="{{ 'studio.modal_close_guard.keep_editing' | t }}"
   data-close-confirm-discard="{{ 'studio.modal_close_guard.discard' | t }}"
   data-second-line-enabled="{{ is_second_line_enabled }}"
+  data-materials-enabled="{{ is_materials_enabled }}"
+  data-materials-second-line-enabled="{{ second_line_flag.enabled.value | default: false }}"
+  data-material-options="{{ printing_material_options | strip | escape }}"
+  data-label-material="{{ 'studio.tshirt_printing.materials.title' | t | escape }}"
+  data-label-material-note="{{ 'studio.tshirt_printing.materials.note' | t | escape }}"
+  data-label-material-unavailable="{{ 'studio.tshirt_printing.materials.unavailable' | t | escape }}"
+  data-message-material-unavailable="{{ 'studio.tshirt_printing.messages.material_unavailable' | t | escape }}"
+  data-lighting-title="{{ 'studio.tshirt_printing.lighting.title' | t | escape }}"
+  data-lighting-daylight="{{ 'studio.tshirt_printing.lighting.daylight' | t | escape }}"
+  data-lighting-off="{{ 'studio.tshirt_printing.lighting.off' | t | escape }}"
+  data-lighting-on="{{ 'studio.tshirt_printing.lighting.on' | t | escape }}"
+  data-lighting-daylight-description="{{ 'studio.tshirt_printing.lighting.daylight_description' | t | escape }}"
+  data-lighting-off-description="{{ 'studio.tshirt_printing.lighting.off_description' | t | escape }}"
+  data-lighting-on-description="{{ 'studio.tshirt_printing.lighting.on_description' | t | escape }}"
   data-single-line-price="{{ tshirt_printing_price | strip | escape }}"
   data-plus-price="{{ tshirt_printing_plus_price | strip | escape }}"
   data-clear-icon-src="{{ 'icon-close-small.svg' | asset_url }}"

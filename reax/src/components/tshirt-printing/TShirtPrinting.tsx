@@ -16,6 +16,70 @@ const PRINT_COUNTRIES = [
 type CountryCode = (typeof PRINT_COUNTRIES)[number]['code'];
 type LogoId = 'lining' | 'hndrd';
 
+// The service SKU identifies the physical finish. Gradients are illustrative
+// only and must never become fulfilment colours or determine service pricing.
+const PRINT_MATERIALS = {
+  standard: [],
+  gold: ['#8d692c', '#d4b35c', '#fff3b0', '#b48b39', '#e8cf80'],
+  hologram: ['#d8bce9', '#eddcbf', '#e8edb8', '#bce5c8', '#b3dddc', '#b9c8e8', '#e0c3db'],
+  reflective: ['#747e87', '#b7c1c8', '#f3f6f8', '#9da9b3', '#d2dce1'],
+  'rose-gold': ['#875758', '#c68e87', '#f5d2c5', '#b77d79', '#e3b2a4'],
+} satisfies Record<string, string[]>;
+
+type MaterialId = keyof typeof PRINT_MATERIALS;
+const REFLECTIVE_LIGHTING = ['daylight', 'off', 'on'] as const;
+type LightingMode = (typeof REFLECTIVE_LIGHTING)[number];
+const REFLECTIVE_COLORS: Record<LightingMode, string> = { daylight: '#adb2bb', off: '#484d55', on: '#fbfdff' };
+type PrintingService = { variantId: string; available: boolean; price: number; priceLabel: string };
+type PrintingMaterial = {
+  id: MaterialId;
+  label: string;
+  textColor: string;
+  addSecondLineLabel: string;
+  single: PrintingService | null;
+  plus: PrintingService | null;
+};
+
+// Keep malformed or partially deployed catalogue data out of the selector.
+// The product form independently validates the committed selection before add.
+export function parsePrintingMaterials(value: string | undefined): PrintingMaterial[] {
+  try {
+    const options: unknown = JSON.parse(value || '[]');
+    const validService = (service: PrintingService | null) =>
+      service === null ||
+      (service &&
+        typeof service.variantId === 'string' &&
+        /^\d+$/.test(service.variantId) &&
+        typeof service.available === 'boolean' &&
+        Number.isFinite(service.price) &&
+        typeof service.priceLabel === 'string');
+    if (
+      Array.isArray(options) &&
+      options.length === 5 &&
+      new Set(options.map((option) => option?.id)).size === 5 &&
+      options.every(
+        (option) =>
+          option &&
+          Object.prototype.hasOwnProperty.call(PRINT_MATERIALS, option.id) &&
+          typeof option.label === 'string' &&
+          typeof option.textColor === 'string' &&
+          typeof option.addSecondLineLabel === 'string' &&
+          validService(option.single) &&
+          validService(option.plus),
+      )
+    )
+      return options;
+  } catch {
+    // A cached page without the new catalogue continues to offer Standard.
+  }
+  return [];
+}
+
+const getMaterialGradient = (id: MaterialId) => {
+  const stops = PRINT_MATERIALS[id];
+  return stops.length ? `linear-gradient(110deg, ${stops.join(', ')})` : undefined;
+};
+
 const getPrintedCountry = (code: string) => PRINT_COUNTRIES.find((country) => country.code === code)?.text || '';
 
 const resolveLogoId = (brand: string | undefined): LogoId | null => {
@@ -37,13 +101,17 @@ const getPrintLayout = (capHeight: number, nameWidth: number, countryWidth: numb
   return { scale: nominalScale * fit, height: 57.6 * fit, gap: 16 * fit, logoWidth: 120 * fit, logoHeight: 36 * fit };
 };
 
-type PrintingPreviewProps = { name: string; country: string; color: string; logoSrc: string };
+type PrintingPreviewProps = { name: string; country: string; color: string; logoSrc: string; material: MaterialId };
 
-function PrintingPreview({ name, country, color, logoSrc }: PrintingPreviewProps) {
+function PrintingPreview({ name, country, color, logoSrc, material }: PrintingPreviewProps) {
   const capRef = useRef<SVGTextElement>(null);
   const nameRef = useRef<SVGTextElement>(null);
   const countryRef = useRef<SVGTextElement>(null);
   const maskId = `tshirt-logo-${useId()}`;
+  const gradientId = `tshirt-finish-${useId()}`;
+  // Reflective uses the simulated light's flat colour, rather than foil bands.
+  const stops = material === 'reflective' ? [] : PRINT_MATERIALS[material];
+  const printFill = stops.length ? `url(#${gradientId})` : 'currentColor';
   const [fontRevision, setFontRevision] = useState(0);
   const [metrics, setMetrics] = useState({
     capHeight: 0,
@@ -108,6 +176,15 @@ function PrintingPreview({ name, country, color, logoSrc }: PrintingPreviewProps
       letterSpacing="0"
       style={{ color }}
     >
+      {stops.length ? (
+        <defs>
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="20%">
+            {stops.map((stop, index) => (
+              <stop key={index} offset={`${(index / (stops.length - 1)) * 100}%`} stopColor={stop} />
+            ))}
+          </linearGradient>
+        </defs>
+      ) : null}
       {/* Invisible, unscaled glyphs provide stable font metrics in SVG units. */}
       <g visibility="hidden" fontSize="100">
         <text ref={capRef}>H</text>
@@ -115,7 +192,7 @@ function PrintingPreview({ name, country, color, logoSrc }: PrintingPreviewProps
         <text ref={countryRef}>{country}</text>
       </g>
       <g
-        fill="currentColor"
+        fill={printFill}
         textAnchor="middle"
         fontSize={100 * layout.scale}
         visibility={metrics.capHeight ? 'visible' : 'hidden'}
@@ -150,7 +227,7 @@ function PrintingPreview({ name, country, color, logoSrc }: PrintingPreviewProps
               />
             </mask>
           </defs>
-          <rect width={layout.logoWidth} height={layout.logoHeight} fill="currentColor" mask={`url(#${maskId})`} />
+          <rect width={layout.logoWidth} height={layout.logoHeight} fill={printFill} mask={`url(#${maskId})`} />
         </g>
       ) : null}
     </svg>
@@ -203,9 +280,23 @@ type TShirtPrintingProps = {
     logoUrls: Record<LogoId, string>;
     countryLabels: Record<CountryCode, string>;
   };
+  materials: {
+    enabled: boolean;
+    secondLineEnabled: boolean;
+    options: PrintingMaterial[];
+    title: string;
+    note: string;
+    unavailable: string;
+    unavailableMessage: string;
+    lighting: {
+      title: string;
+      labels: Record<LightingMode, string>;
+      descriptions: Record<LightingMode, string>;
+    };
+  };
 };
 
-const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }: TShirtPrintingProps) => {
+const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine, materials }: TShirtPrintingProps) => {
   const [isModalOpen, setIsModalOpen] = useState(() => consumePendingModalOpen('tshirt_printing'));
   const [isCloseConfirmVisible, setIsCloseConfirmVisible] = useState(false);
   const [isInputInvalid, setIsInputInvalid] = useState(false);
@@ -214,16 +305,53 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
   const [appliedName, setAppliedName] = useState('');
   const [appliedCountry, setAppliedCountry] = useState('');
   const [appliedLogo, setAppliedLogo] = useState<LogoId | null>(null);
+  const [draftMaterial, setDraftMaterial] = useState<MaterialId>('standard');
+  const [appliedMaterial, setAppliedMaterial] = useState<MaterialId>('standard');
+  // Ephemeral preview state only: never committed to the order or its price.
+  const [lightingMode, setLightingMode] = useState<LightingMode>('daylight');
+  const [formSupportsMaterials, setFormSupportsMaterials] = useState(false);
   const [logoLoad, setLogoLoad] = useState({ src: '', ready: false, failed: false });
   const countryRef = useRef<HTMLSelectElement>(null);
   const addCountryRef = useRef<HTMLButtonElement>(null);
-  const isSecondLineVisible = secondLine.enabled && Boolean(draftCountry);
+  const materialsEnabled = materials.enabled && materials.options.length === 5 && formSupportsMaterials;
+  const secondLineEnabled = materialsEnabled ? materials.secondLineEnabled : secondLine.enabled;
+  const isSecondLineVisible = secondLineEnabled && Boolean(draftCountry);
+  const activeMaterial = materialsEnabled ? draftMaterial : 'standard';
+  const draftOption = materials.options.find((option) => option.id === activeMaterial);
+  const draftService = isSecondLineVisible ? draftOption?.plus : draftOption?.single;
+  const materialAvailable = !materialsEnabled || Boolean(draftService?.available);
+  const addSecondLineLabel = materialsEnabled
+    ? draftOption?.plus?.available
+      ? draftOption.addSecondLineLabel
+      : materials.unavailableMessage
+    : actions.addSecondLine;
+  const textColor = window.s3_tshirt_printing_config?.tshirtTextColor || '#fff';
+  const isReflective = activeMaterial === 'reflective';
+  const previewColor = isReflective ? REFLECTIVE_COLORS[lightingMode] : textColor;
+  const gradient = isReflective ? undefined : getMaterialGradient(activeMaterial);
   const draftSecondLine = isSecondLineVisible ? getPrintedCountry(draftCountry) : '';
   const appliedSecondLine = getPrintedCountry(appliedCountry);
   const logoId = resolveLogoId(window.s3_brand);
   const logoSrc = logoId ? secondLine.logoUrls[logoId] : '';
   const logoReady = Boolean(logoId && logoSrc && logoLoad.src === logoSrc && logoLoad.ready);
   const logoFailed = !logoId || !logoSrc || (logoLoad.src === logoSrc && logoLoad.failed);
+
+  useEffect(() => {
+    let cancelled = false;
+    // New finish UI must not run with a cached product-form that only knows
+    // Standard. Wait for the actual PDP form's custom-element upgrade first.
+    customElements.whenDefined('product-form').then(() => {
+      const root = document.getElementById('tshirt-printing-modal');
+      const form = root?.closest('product-info')?.querySelector('product-form') as
+        | (HTMLElement & { supportsTshirtMaterials?: boolean })
+        | null
+        | undefined;
+      if (!cancelled) setFormSupportsMaterials(form?.supportsTshirtMaterials === true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     if (!isModalOpen || !isSecondLineVisible || !logoSrc) return;
@@ -249,16 +377,19 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
   const discardDraftChanges = () => {
     setDraftName(appliedName);
     setDraftCountry(appliedCountry);
+    setDraftMaterial(appliedMaterial);
+    setLightingMode('daylight');
     setIsInputInvalid(false);
     closeModalImmediately();
   };
 
   const applySelection = () => {
-    if (!draftName.trim() || (isSecondLineVisible && (!draftSecondLine || !logoReady))) return;
+    if (!draftName.trim() || !materialAvailable || (isSecondLineVisible && (!draftSecondLine || !logoReady))) return;
 
     setAppliedName(draftName);
     setAppliedCountry(isSecondLineVisible ? draftCountry : '');
     setAppliedLogo(isSecondLineVisible ? logoId : null);
+    setAppliedMaterial(activeMaterial);
     closeModalImmediately();
   };
 
@@ -268,6 +399,9 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
     setAppliedName('');
     setAppliedCountry('');
     setAppliedLogo(null);
+    setDraftMaterial('standard');
+    setAppliedMaterial('standard');
+    setLightingMode('daylight');
     setIsInputInvalid(false);
     closeModalImmediately();
   };
@@ -323,7 +457,9 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
     const openModal = () => {
       setIsCloseConfirmVisible(false);
       setDraftName(appliedName);
-      setDraftCountry(secondLine.enabled ? appliedCountry : '');
+      setDraftCountry(secondLineEnabled ? appliedCountry : '');
+      setDraftMaterial(appliedMaterial);
+      setLightingMode('daylight');
       setIsInputInvalid(false);
       setIsModalOpen(true);
     };
@@ -338,7 +474,7 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
     if (consumePendingModalOpen('tshirt_printing')) {
       openModal();
     }
-  }, [appliedName, appliedCountry, isModalOpen, secondLine.enabled]);
+  }, [appliedName, appliedCountry, appliedMaterial, isModalOpen, secondLineEnabled]);
 
   useEffect(() => {
     const ctaLabel = document.getElementById('tshirt-printing-cta-label');
@@ -352,9 +488,10 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
         const primaryLine = document.createElement('span');
         primaryLine.id = 'the-tshirt-text';
         primaryLine.textContent = appliedName;
+        if (materialsEnabled) primaryLine.dataset.materialId = appliedMaterial;
         description.append(primaryLine);
 
-        if (secondLine.enabled && appliedSecondLine) {
+        if (secondLineEnabled && appliedSecondLine) {
           description.append(' / ');
           const secondaryLine = document.createElement('span');
           secondaryLine.id = 'the-tshirt-second-line';
@@ -364,10 +501,21 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
           secondaryLine.dataset.logoId = appliedLogo || '';
           description.append(secondaryLine);
         }
+        if (materialsEnabled) {
+          const option = materials.options.find((material) => material.id === appliedMaterial);
+          description.append(` / ${option?.label || ''}`);
+        }
       }
 
       if (price) {
-        price.textContent = secondLine.enabled && appliedSecondLine ? secondLine.plusPrice : secondLine.singleLinePrice;
+        if (materialsEnabled) {
+          const option = materials.options.find((material) => material.id === appliedMaterial);
+          const service = secondLineEnabled && appliedSecondLine ? option?.plus : option?.single;
+          price.textContent = service ? `${service.price > 0 ? '+' : ''}${service.priceLabel}` : materials.unavailable;
+        } else {
+          price.textContent =
+            secondLineEnabled && appliedSecondLine ? secondLine.plusPrice : secondLine.singleLinePrice;
+        }
       }
       document.getElementsByClassName('product-form__submit button')[0]?.classList?.add('glowing');
       if (ctaLabel) ctaLabel.textContent = actions.change;
@@ -377,7 +525,19 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
       document.getElementsByClassName('product-form__submit button')[0]?.classList?.remove('glowing');
       if (ctaLabel) ctaLabel.textContent = actions.add;
     }
-  }, [actions.add, actions.change, appliedName, appliedSecondLine, appliedLogo, labels.summaryHtml, secondLine]);
+  }, [
+    actions.add,
+    actions.change,
+    appliedName,
+    appliedSecondLine,
+    appliedLogo,
+    appliedMaterial,
+    labels.summaryHtml,
+    secondLine,
+    secondLineEnabled,
+    materialsEnabled,
+    materials,
+  ]);
 
   return (
     <Dialog.Root open={isModalOpen} onOpenChange={handleModalOpenChange}>
@@ -468,26 +628,34 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                   </svg>
                 </div>
 
-                <div style={{ width: '100%', padding: '4rem 2rem', background: '#f5f5f5' }}>
-                  {secondLine.enabled ? (
+                <div
+                  className={isReflective ? 'tshirt-printing-reflective-preview' : undefined}
+                  data-lighting={isReflective ? lightingMode : undefined}
+                  style={{ width: '100%', padding: '4rem 2rem', background: isReflective ? undefined : '#f5f5f5' }}
+                >
+                  {secondLineEnabled ? (
                     <div className="tshirt-printing-preview-artwork">
-                      <Tshirt tshirtColor={window.s3_tshirt_printing_config?.tshirtColor} responsive />
+                      <div className="tshirt-printing-preview-garment">
+                        <Tshirt tshirtColor={window.s3_tshirt_printing_config?.tshirtColor} responsive />
+                      </div>
                       <PrintingPreview
                         name={draftName}
                         country={draftSecondLine}
-                        color={window.s3_tshirt_printing_config?.tshirtTextColor || '#fff'}
+                        color={previewColor}
+                        material={activeMaterial}
                         logoSrc={logoReady ? logoSrc : ''}
                       />
                     </div>
                   ) : (
                     <>
                       <h4
-                        className="tshirt-printing-font"
+                        className={`tshirt-printing-font${gradient ? ' tshirt-printing-material-text' : ''}`}
                         style={{
                           position: 'relative',
                           bottom: '-85px',
                           height: '24px',
-                          color: window.s3_tshirt_printing_config?.tshirtTextColor || '#fff',
+                          color: isReflective ? previewColor : PRINT_MATERIALS[activeMaterial][1] || textColor,
+                          '--printing-gradient': gradient,
                           zIndex: 9999,
                           margin: 0,
                           ...calculateStyles(draftName),
@@ -495,10 +663,78 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                       >
                         {draftName}
                       </h4>
-                      <Tshirt tshirtColor={window.s3_tshirt_printing_config?.tshirtColor} />
+                      <div className="tshirt-printing-preview-garment">
+                        <Tshirt tshirtColor={window.s3_tshirt_printing_config?.tshirtColor} />
+                      </div>
                     </>
                   )}
+                  {isReflective ? (
+                    <div className="tshirt-printing-lighting">
+                      <fieldset aria-describedby="tshirt-printing-lighting-description">
+                        <legend className="visually-hidden">{materials.lighting.title}</legend>
+                        {REFLECTIVE_LIGHTING.map((mode) => (
+                          <label key={mode}>
+                            <input
+                              type="radio"
+                              name="tshirt-printing-lighting"
+                              value={mode}
+                              checked={lightingMode === mode}
+                              onChange={() => setLightingMode(mode)}
+                            />
+                            <span>{materials.lighting.labels[mode]}</span>
+                          </label>
+                        ))}
+                      </fieldset>
+                      <p id="tshirt-printing-lighting-description" role="status">
+                        {materials.lighting.descriptions[lightingMode]}
+                      </p>
+                    </div>
+                  ) : null}
                 </div>
+
+                {materialsEnabled ? (
+                  <fieldset
+                    className="tshirt-printing-materials"
+                    aria-describedby="tshirt-printing-material-note tshirt-printing-material-status"
+                  >
+                    <legend>{materials.title}</legend>
+                    <div className="tshirt-printing-material-options">
+                      {materials.options.map((option) => {
+                        const service = isSecondLineVisible ? option.plus : option.single;
+                        return (
+                          <label key={option.id} className="tshirt-printing-material">
+                            <input
+                              type="radio"
+                              name="tshirt-printing-material"
+                              value={option.id}
+                              checked={draftMaterial === option.id}
+                              disabled={!service?.available}
+                              onChange={() => {
+                                setDraftMaterial(option.id);
+                                setLightingMode('daylight');
+                              }}
+                            />
+                            <span className="tshirt-printing-material-card">
+                              <span
+                                className="tshirt-printing-material-swatch"
+                                aria-hidden="true"
+                                style={{ background: getMaterialGradient(option.id) || textColor }}
+                              />
+                              <span>{option.label}</span>
+                              <span>{service?.available ? service.priceLabel : materials.unavailable}</span>
+                            </span>
+                          </label>
+                        );
+                      })}
+                    </div>
+                    <p id="tshirt-printing-material-note" className="tshirt-printing-material-note">
+                      {materials.note}
+                    </p>
+                    <p id="tshirt-printing-material-status" className="tshirt-printing-material-status" role="status">
+                      {!materialAvailable ? materials.unavailableMessage : ''}
+                    </p>
+                  </fieldset>
+                ) : null}
 
                 <input
                   aria-label={labels.input}
@@ -518,7 +754,7 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                     }
                   }}
                   value={draftName}
-                  className={`services-input${secondLine.enabled ? ' tshirt-printing-input' : ''}`}
+                  className={`services-input${secondLineEnabled || materialsEnabled ? ' tshirt-printing-input' : ''}`}
                   type="text"
                   placeholder={labels.input}
                 />
@@ -526,16 +762,17 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                   {isInputInvalid ? <p style={{ color: 'red', marginTop: '0.5rem' }}>{messages.invalidInput}</p> : null}
                 </div>
 
-                {secondLine.enabled && !isSecondLineVisible ? (
+                {secondLineEnabled && !isSecondLineVisible ? (
                   <button
                     ref={addCountryRef}
                     type="button"
                     className="tshirt-printing-add-line"
                     aria-controls="tshirt-printing-second-line-input"
                     aria-expanded="false"
+                    disabled={materialsEnabled && !draftOption?.plus?.available}
                     onClick={showSecondLine}
                   >
-                    <span>{actions.addSecondLine}</span>
+                    <span>{addSecondLineLabel}</span>
                     <svg
                       width="16"
                       height="16"
@@ -551,7 +788,7 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                   </button>
                 ) : null}
 
-                {secondLine.enabled && isSecondLineVisible ? (
+                {secondLineEnabled && isSecondLineVisible ? (
                   <>
                     <div className="tshirt-printing-country-field">
                       <label className="visually-hidden" htmlFor="tshirt-printing-second-line-input">
@@ -594,7 +831,7 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                 ) : null}
 
                 <div
-                  className={secondLine.enabled ? 'tshirt-printing-actions' : undefined}
+                  className={secondLineEnabled || materialsEnabled ? 'tshirt-printing-actions' : undefined}
                   style={{
                     marginTop: window.innerWidth > 740 ? '3rem' : '2rem',
                     display: 'flex',
@@ -608,6 +845,7 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                       if (
                         draftName.length > 0 ||
                         appliedName.length > 0 ||
+                        draftMaterial !== 'standard' ||
                         draftSecondLine.length > 0 ||
                         appliedSecondLine.length > 0
                       ) {
@@ -619,6 +857,7 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                   >
                     {draftName.length > 0 ||
                     appliedName.length > 0 ||
+                    draftMaterial !== 'standard' ||
                     draftSecondLine.length > 0 ||
                     appliedSecondLine.length > 0
                       ? actions.remove
@@ -626,7 +865,7 @@ const TShirtPrinting = ({ actions, labels, messages, closeConfirm, secondLine }:
                   </button>
                   <button
                     style={{ padding: '1.8rem 2.2rem' }}
-                    disabled={!draftName.trim() || (isSecondLineVisible && !logoReady)}
+                    disabled={!draftName.trim() || !materialAvailable || (isSecondLineVisible && !logoReady)}
                     className="button"
                     onClick={applySelection}
                   >

@@ -213,6 +213,7 @@ Apparel flagged for personalisation shows a "Make this T-Shirt yours" option. Th
 - `settings.is_tshirt_printing_enabled_globally` must be true.
 - Product metafield `custom_but_hidden.customise` must be truthy.
 - The optional second line requires the `theme_feature_flag` metaobject entry with handle `tshirt-printing-second-line` and its `enabled` boolean set to true. A missing flag or missing plus service variant keeps the original one-line experience.
+- The independent `tshirt-printing-materials` entry in that same definition enables Standard, Gold, Hologram, Reflective and Rose Gold swatches on all printing-eligible shirts. Standard remains the default and uses the existing variant colour metafields. When materials are enabled, country/logo availability uses the selected finish's Plus service, not the Standard Plus service. The second-line flag still controls whether country/logo can be added at all.
 
 **Shopify data to create**
 
@@ -231,6 +232,18 @@ Apparel flagged for personalisation shows a "Make this T-Shirt yours" option. Th
 - The Preact modal sets `#the-tshirt-text` and, when applied, `#the-tshirt-second-line` with the applied logo identifier in `data-logo-id`. `assets/product-form.js` adds either the original service or `t-shirt-printing-plus`, never both. The uppercase country is sent as `_tshirtSecondLine`, with `_tshirtLogo` set to `lining` or `hndrd`; both use `_textColor`. Name-only items omit the country and logo properties.
 - The country cross removes the country/logo draft and preserves the name. Apply commits the new package; discard restores the previous package. The bottom Remove button clears all printing. Re-adding the country defaults to India.
 - Complete desktop/mobile visual checks with both actual logos before rollout.
+
+**Optional print finishes**
+
+- Resolve these eight additional product handles and their matching variant SKUs (case-insensitive): `t-shirt-printing-gold`, `t-shirt-printing-hologram`, `t-shirt-printing-reflective`, `t-shirt-printing-rose-gold`, and the corresponding `t-shirt-printing-plus-gold`, `t-shirt-printing-plus-hologram`, `t-shirt-printing-plus-reflective`, `t-shirt-printing-plus-rose-gold`. They must be resolvable by the Online Store theme and purchasable. A missing, mismatched or unavailable variant disables only that finish/package; it never substitutes Standard.
+- Reuse the existing `theme_feature_flag` definition (display name plus boolean field `enabled`, storefront access enabled). Create an **Active** entry named "T-shirt printing materials", handle **`tshirt-printing-materials`**, initially with **Enabled = false**. Liquid reads `metaobjects.theme_feature_flag['tshirt-printing-materials'].enabled.value`; a missing entry or false value preserves the current flow.
+- The selected finish applies to name, country and included logo together. Static gradients approximate the supplied material samples; they do not promise physical reflective or holographic behaviour. Existing print dimensions, country list and logo mapping are unchanged.
+- Swatches show the selected package's total service price, read from Shopify. The country/logo link shows that finish's Plus-minus-single difference. Non-positive prices or upgrade differences display the translated FREE label; no MRP or fixed rupee amount drives the charge.
+- Exactly one printing service variant is added, replacing the Standard service. Material-aware selections include `_tshirtMaterial` (`standard`, `gold`, `hologram`, `reflective`, `rose-gold`). Standard keeps the existing `_textColor`; specialty orders use `GOLD`, `HOLOGRAM`, `REFLECTIVE`, or `ROSE GOLD`. Name, country, logo, SKU, native parent relationship and rollback contracts are retained. Legacy modals omit `_tshirtMaterial` and still resolve Standard.
+- Finish changes are drafts until Apply; Discard restores the committed finish. Removing country/logo retains the finish, while removing personalisation resets Standard. A package change that leaves an unavailable finish selected blocks Apply until the shopper explicitly chooses an available combination.
+- The modal only exposes finishes when the current PDP's `product-form` advertises `supportsTshirtMaterials`. This prevents a newly loaded modal paired with a cached old form from ordering the wrong service. Keep legacy globals and all retained Preact dependency chunks; deploy new dependencies before changed entries.
+- With the flag enabled, printing resolves ten unique product handles (two Standard plus eight specialty). Audit other page features against Shopify's 20-unique-handle `all_products` limit before extending this list.
+- Before enabling, test all ten finish/package combinations, both independent flags, missing/unavailable services, FREE price variations, Apply/Discard/Remove, shirt variant changes, cached/new scripts, mobile/desktop previews and real cart/checkout/order properties. An unpublished theme still shares Shopify product and inventory data. Turning this flag off hides the new selector; existing cart/order service lines are not rewritten.
 
 **New store checklist**
 
