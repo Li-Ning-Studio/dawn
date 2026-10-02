@@ -43,14 +43,16 @@
   .hs-hero-media{aspect-ratio:21/9;max-width:100%}
   .hs-hero-media .hs-parallax{position:absolute;left:0;right:0;top:-14%;height:128%;will-change:transform}
   .hs-hero-media .hs-parallax img{height:100%}
+
   /* rejse-kort */
-  .hs-map{position:relative;aspect-ratio:21/9;max-width:100%}
+  .hs-map{position:relative;aspect-ratio:240/87;max-width:100%}
   .hs-map canvas{position:absolute;inset:0;width:100%;height:100%;display:block;
-    -webkit-mask-image:radial-gradient(ellipse 75% 80% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 75% 80% at 50% 50%,#000 55%,transparent 100%)}
-  .hs-map-label{position:absolute;left:0;top:0;display:grid;gap:4px;pointer-events:none;opacity:0;transition:opacity .6s,translate .6s;translate:0 8px;white-space:nowrap}
-  .hs-map-label.is-on{opacity:1;translate:0 0}
-  .hs-map-label b{font:italic 900 clamp(30px,3.4vw,52px)/.9 var(--hs-display);color:var(--hs-gold)}
-  .hs-map-label span{font:700 12px/1.2 var(--hs-body);letter-spacing:.24em;text-transform:uppercase;color:var(--hs-text)}
+    -webkit-mask-image:radial-gradient(ellipse 85% 90% at 50% 50%,#000 65%,transparent 100%);mask-image:radial-gradient(ellipse 85% 90% at 50% 50%,#000 65%,transparent 100%)}
+  .hs-map-label{position:absolute;left:0;top:0;display:grid;gap:4px;pointer-events:none;opacity:0;transition:opacity .5s;white-space:nowrap}
+  .hs-map-label.is-on{opacity:1}
+  .hs-map-label b{font:italic 900 clamp(28px,3.2vw,48px)/.9 var(--hs-display);color:var(--hs-gold)}
+  .hs-map-label span{font:700 12px/1.2 var(--hs-body);letter-spacing:.22em;text-transform:uppercase;color:var(--hs-text)}
+  .hs-map-label--stop span{font-size:10px;letter-spacing:.18em;color:var(--hs-soft)}
   .hs-map-label--to{text-align:right}
 
   /* kapitler med tidslinje */
@@ -112,9 +114,9 @@
     .hs{font-size:17px}
     .hs-hero-text,.hs-chapter{grid-template-columns:minmax(0,1fr)}
     .hs-hero-media{aspect-ratio:4/3}
-    .hs-map{aspect-ratio:3/2}
-    .hs-map-label b{font-size:26px}
-    .hs-map-label span{font-size:10px;letter-spacing:.18em}
+    .hs-map-label b{font-size:22px}
+    .hs-map-label span{font-size:9px;letter-spacing:.14em}
+    .hs-map-label--stop{display:none}
     .hs-year-sticky{top:var(--hs-header,0px);padding-block:14px;background:linear-gradient(var(--hs-bg) 82%,transparent);z-index:2}
     .hs-year{font-size:92px}
     .hs-steps{padding-top:0;gap:72px}
@@ -371,24 +373,50 @@
       frame();
     }
 
-    /* ---------- Rejse-kort: Indonesien → Europa ---------- */
+    /* ---------- Rejse-kort: Singapore → verden → Europa ---------- */
     var MAP = {
-      lon0: -30, lat0: 72, step: 1, cols: 200, rows: 87,
-      data: '7gAAAAAAAAAAABwAPZ+///////4nv/gAAKIAAAAAAAb4AAAAAH7/v////////////AD8AAAAAAF//AAAADw+///////////////8wAAAAAAF///wMBe/3+///////////////wAAAAAAA////iP///z///////////////8AAAAAAB///n4////z////////////////Av8AAAA/8f+D/////////////////////wD/AAAAf+P/n/////////////////////8AMAAAA3/P////////////////////////AAAAAA//H///////////////////////nwAAAAAf/g//////////////////////4z8AAAAIH/8PX////////////////////4D9AAAAAB9/Ab///////////////////+uDgAAAAGAOfgv//////////////////+AABwAAAAHwAD6L///////////////////AAB+AAAAAYAOeH///////////////////AAA/gAAAAHAD0B///////////////////AAAPwAAAAO4ARO///////////////////4AAD4AAAAPHAX/////////////////////4AA8AAAADz8f/////////////////////+gAMAAAAAA+P//////////////////////oADAAAAAAQP//////////////////////zAAAAAAAAAv//////////////////////8wAAAAAAAB////////////////////////IAAAAAAAAD///////////////////////iAAAAAAAAA/////7z/4f/////////////wQAAAAAAAAH/+//8Y/8H/////////////4AAAAAAAAAB//H/+AP+P/////////////8CAAAAAAAA4/48f/gA/x/////////////+B4AAAAAAAf/gXD/wAD8H////////////4AIAAAAAAAH/wAcf8PB/g////////////8AAAAAAAAAB/4DB3wf//8f//////////7+ADAAAAAAAAf8gwI4f//+H//////////5nAAwAAAAQAAH/AACHP///g//////////8BwAMAAAAAAAB/gAGAh///4P//////////sGAGAAAAAAAACB/4AAGz/////////////+BgPgAAAAAAAAh/+AAAA//////////////A4PwAAAAAAAAf//AAAAP/////////////wIdgAAAAAAAAP//4AAAH/////////////+CPAAAAAAAAAH///4OAB//////////////gBAAAAAAAAAD////D+A//////////////4AgAAAAAAAAA////+////////////////+AAAAAAAAAAAP//////3//H///////////wAAAAAAAAAAH/////////x///////////8AAAAAAAAAAH///////z/+H//////////+AAAAAAAAAAD///////8//wH//////////AAAAAAAAAAB////////n/8Af3////////wAAAAAAAAAAf///////5//hgB////////xAAAAAAAAAAP////////H//+AP///////4gAAAAAAAAAD////////x///wA///////wIAAAAAAAAAB////////+f//4AN//g//8gAAAAAAAAAAAP////////j//+AAf/4H/+IAAAAAAAAAAAD////////4f//AAH/4A//GAAAAAAAAAAAA/////////H//gAB/8AP/xAAAAAAAAAAAAP////////4//gAAf+AB/+AAwAAAAAAAAAD////////+H/gAAH/AAz/wAMAAAAAAAAAB/////////x/wAAA/AAA/+ACAAAAAAAAAAf////////+fgAAAPwAAP/gAwAAAAAAAAAH/////////3gAAAB8AADf4ALAAAAAAAAAB/////////+AEAAAfAAAT+AAIAAAAAAAAAH/////////gIAAADwAAEfgALAAAAAAAAAB/////////9+AAAA8AACDgAQAAAAAAAAAAP//////////gAAAOgAAgQAIEAAAAAAAAAB//////////wAAABIAAMAAAHAAAAAAAAAAP/////////8AAAADAABAAAA4AAAAAAAAAB//v//////+AAAAAwAAMAAwMAAAAAAAAAAP/B///////gAAAAAABDgAeAAAAAAAAAAAAgAJ//////wAAAAAAAMYAPgAAAAAAAAAAAAAAP/////4AAAAAAABmAHgAAAAAAAAAAAAAAD/////8AAAAAAAAMwH8AIAAAAAAAAAAAAA/////8AAAAAAAAB0H/ACAAAAAAAAAAAAAf////+AAAAAAAAAeB/xwgAAAAAAAAAAAAH/////AAAAAAAAADof8ASgAAAAAAAAAAAB/////wAAAAAAAAAcD+cEMAAAAAAAAAAAAP////4AAAAAAAAAH4/nAAPgAAAAAAAAAAB////8AAAAAAAAAA8ARQif/AAAAAAAAAAAP///+AAAAAAAAAAHAAAAA/4AAAAAAAAAAD////gAAAAAAAAAAwAEAAj/LAAAAAAAAAA////4AAAAAAAAAADgAAAIf8BAAAAAAAAAH///+AAAAAAAAAAAfgAAQP+AAAAAAAAAAB////gAAAAAAAAAAAB+yAA4wAAAAAAAAAAf///8AAAAAAAAAAAABCAAAGgAAAAAAAAAD////AAAAAAAAAAAAAAAAAAIAAAAAAAAAA////wAAAAAAAAAAAAAAKAIAQAAAAAAAAAf///+AQAAAAAAAAAAAAB+CAAAAAAAAAAAH////gMAAAAAAAAAAAAA/AwAAAAAAAAAAD////4DAAAAAAAAAAAADPwOAAAA',
-      from: [106.8, -6.2],   // Jakarta
-      to: [12.35, 55.73]     // Herlev
+      lon0: -170, lat0: 75, step: 1.5, cols: 240, rows: 87,
+      data: 'AAAAA6AAAAAAD///8AAAAAAAAwAAH//oAAAAAAAAAAAAA9rns/AAD///4AAAAAAADAHR/////gEAAAAAAAAAAR/wY3/AB///YAAAAAAADgP3f////3/8AABgB//gWR/8MIP4Bv//wAAAAf4AAGP/////////8F4AH/////hgvcL4A//4AAAAL//hH//f///////////gB/////+//+B/A//gAAAAP/75//6////////////+P////////oP6A/4APwAAPz8P///////////////MA///////+bB8AfwADAAA/n////////////////8AH///////4AaIAPgAAAAH+P///////////////f4AH/z/////wAPgAFgAAAAH+P//////////////g/AAB+gH////wAfiAAAAAAAHfH////////////8BjAAAANAA////8AP/AAAAAAIAcD////////////4APAAAAwAB/////gv/AAAAAAMBsf////////////gAfAAACAAAH////+//4AAAAA0BBf///////////+AAeAAAAAAAD////+f/8AAAABvH//////////////+AcAAAAAAAD/////f/8AAAABPP//////////////6AIAAQAAAAD//////4kAAAAAA///////////////6AAAAAAAAAAv/////sOAAAAAD///////////////6AAAAAAAAAAP/////8DAAAAAD///////////////yAAAAAAAAAAf/////+gAAAAAB///mfh/////////gAAAAAAAAAAf/////kAAAAAAD+3/Afn/////////CAAAAAAAAAA//////AAAAAAB/gZ/AHj////////4GAAAAAAAAAAf////+AAAAAAA/gM/vHw////////wEAAAAAAAAAAf////8AAAAAAB+RA5//x///////vAEAAAAAAAAAAf////wAAAAAAB+AAF//x///////BgIAAAAAAAAAAP////4AAAAAAAcfgA9/5///////xw4AAAAAAAAAAH////wAAAAAAAT/gEF/////////gzwAAAAAAAAAAB////gAAAAAAA//gAB/////////wKAAAAAAAAAAAB////AAAAAAAB//8YB/////////wIAAAAAAAAAAAAv//+AAAAAAAB//+f//////////wAAAAAAAAAAAAAX/wCAAAAAAAD////9/n///////4AAAAAAAAAAAAAT/ADAAAAAAAH////9/z///////wAAAAAAAAAAAAAL/ABAAAAAAAP////8/4f//////ggAAAAAAAAAAAAF/AAAAAAAAAf////+/8gP/////IAAAAAAAAAAAAAA/AAAAAAAAAf////+f/4H////+QAAAAAAAAAAAAAAfAAwAAAAAA//////f/4C/+f/wAAAAAAAAAAAAAAAfhgMAAAAAAf/////P/4A/4f8AAAAAAAAAAAAAAAAPjgBwAAAAAf/////H/gA/wP8gAAAAAAAAAAAAAAAD/AAAAAAAAf/////j/AA/AP+AIAAAAAAAAAAAAAAAHYAAAAAAA//////z8AA+AD/AQAAAAAAAAAAAAAAAD8AAAAAAA//////7wAAeAB/AAAAAAAAAAAAAAAAAAcAAAAAAA//////+AAAeABfAAAAAAAAAAAAAAAAAAICwAAAAAf/////8IAAOABPACAAAAAAAAAAAAAAAAMG/AAAAAP//////4AAMAAEAgAAAAAAAAAAAAAAAABf/wAAAAH//////4AABABAAHAAAAAAAAAAAAAAAAAP/4AAAAD//////wAABAAgBCAAAAAAAAAAAAAAAAAP//AAAAB+H////wAAAAEwDgAAAAAAAAAAAAAAAAAP//gAAAAAA////gAAAACRHAAAAAAAAAAAAAAAAAAf//wAAAAAA////AAAAABYfAAAAAAAAAAAAAAAAAA///wAAAAAA///8AAAAADw/cgAAAAAAAAAAAAAACA///8AAAAAB///4AAAAAAw/EmAAAAAAAAAAAAAAAB////AAAAAA///4AAAAAAYeYAwAAAAAAAAAAAAAAB////8AAAAAf//wAAAAAAcAYJ+AAAAAAAAAAAAAAB/////AAAAAf//gAAAAAAEAQAfiAAAAAAAAAAAAAA/////AAAAAP//wAAAAAADQAAPgAAAAAAAAAAAAAAf////AAAAAP//wAAAAAAAcGAWQIAAAAAAAAAAAAAf///+AAAAAP//wAAAAAAAASAAICAAAAAAAAAAAAAP///+AAAAAH//wAAAAAAAAAECAAAAAAAAAAAAAAAP///8AAAAAP//wAAAAAAAAAPCAAAAAAAAAAAAAAAH///4AAAAAP//wYAAAAAAABPiAAAAAAAAAAAAAAAD///4AAAAAf//wwAAAAAAAD/DAAAAAAAAAAAAAAAA///4AAAAAf//hwAAAAAAAH/3gAAAAAAAAAAAAAAA///4AAAAAP//BwAAAAAAAP//gAAAAAAAAAAAAAAAf//wAAAAAP/8BwAAAAAAAf//wAAAAAAAAAAAAAAAf//wAAAAAH/+DgAAAAAAD///4AAAAAAAAAAAAAAA///AAAAAAH/+DgAAAAAAH///8AAAAAAAAAAAAAAA//8AAAAAAH/+BgAAAAAAH////AAAAAAAAAAAAAAA//4AAAAAAH/4AAAAAAAAH///+AAAAAAAAAAAAAAA//4AAAAAAD/4AAAAAAAAH////AAAAAAAAAAAAAAA//wAAAAAAB/wAAAAAAAAD////AAAAAAAAAAAAAAA//gAAAAAAB/wAAAAAAAAD///+AAAAAAAAAAAAAAA//gAAAAAAA/gAAAAAAAAD/D/+AAAAAAAAAAAAAAB//AAAAAAAA+AAAAAAAAAD8B/8AAAAAAAAAAAAAAB/4AAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAB/8AAAAAAAAAAAAAAAAAAAAAH4AAIAAAAAAAAAAAD/4AAAAAAAAAAAAAAAAAAAAADwAAMAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAD8AAAAAAAAAAAAAAAAAAAAAAAwAA4AAAAAAAAAAAB8AAAAAAAAAAAAAAAAAAAAAAAwABgAAAAAAAAAAAB8AAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+AAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+      // Rækkefølgen linjen hopper i. pos: hvor teksten står (r = højre, l = venstre, t = over, b = under)
+      stops: [
+        { lon: 103.82, lat: 1.35,  name: 'Singapore',   pos: 'r', first: true },
+        { lon: 101.69, lat: 3.14,  name: 'Malaysia',    pos: 'tl' },
+        { lon: 106.85, lat: -6.21, name: 'Indonesia',   pos: 'b' },
+        { lon: 78.47,  lat: 17.39, name: 'India',       pos: 'b' },
+        { lon: 55.27,  lat: 25.20, name: 'Middle East', pos: 'l' },
+        { lon: -74.46, lat: 40.55, name: 'USA',         pos: 'b' },
+        { lon: -80.31, lat: 43.36, name: 'Canada',      pos: 'tl' },
+        { lon: 12.35,  lat: 55.73, name: 'Europe',      pos: 't', last: true }
+      ]
     };
 
     function initMap(el, reduce, signal) {
       var cv = el.querySelector('canvas'), ctx = cv.getContext('2d');
-      var lblFrom = el.querySelector('[data-from]'), lblTo = el.querySelector('[data-to]');
       if (!MAP.bits) {
         var raw = atob(MAP.data), bits = new Uint8Array(MAP.cols * MAP.rows);
         for (var i = 0; i < bits.length; i++) bits[i] = (raw.charCodeAt(i >> 3) >> (7 - (i & 7))) & 1;
         MAP.bits = bits;
       }
-      var W, H, s, ox, oy, dots, base, pts, p0, p2, N = 140;
-      var start = null, DUR = 2600, DELAY = 700, raf = 0, visible = true, t = reduce ? 1 : 0;
+      var stops = MAP.stops;
+      var segCount = stops.length - 1, N = 60, HOP = 650, PAUSE = 260, DELAY = 700;
+
+      // tekst ved hvert stop: første og sidste bruger elementerne med årstal
+      var labels = stops.map(function (st) {
+        if (st.first) return el.querySelector('[data-from]');
+        if (st.last) return el.querySelector('[data-to]');
+        var d = document.createElement('div');
+        d.className = 'hs-map-label hs-map-label--stop';
+        d.innerHTML = '<span></span>';
+        d.firstChild.textContent = st.name;
+        el.appendChild(d);
+        return d;
+      });
+      signal.addEventListener('abort', function () {
+        labels.forEach(function (l) { if (l.classList.contains('hs-map-label--stop')) l.remove(); });
+      });
+
+      var W, H, s, ox, oy, dots, base, P, segs, timeline, total, rad, reach;
+      var start = null, raf = 0, visible = true;
 
       function proj(lon, lat) {
         return [ox + ((lon - MAP.lon0) / MAP.step) * s, oy + ((MAP.lat0 - lat) / MAP.step) * s];
@@ -398,106 +426,139 @@
         var r = el.getBoundingClientRect(), d = window.devicePixelRatio || 1;
         W = r.width; H = r.height;
         cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
-        s = Math.max(W / MAP.cols, H / MAP.rows);
-        var fx = ((60 - MAP.lon0) / MAP.step) * s, fy = ((MAP.lat0 - 26) / MAP.step) * s;
-        ox = Math.min(0, Math.max(W - MAP.cols * s, W / 2 - fx));
-        oy = Math.min(0, Math.max(H - MAP.rows * s, H / 2 - fy));
+        s = Math.min(W / MAP.cols, H / MAP.rows);
+        ox = (W - MAP.cols * s) / 2; oy = (H - MAP.rows * s) / 2;
 
-        p0 = proj(MAP.from[0], MAP.from[1]);
-        p2 = proj(MAP.to[0], MAP.to[1]);
-        var mx = (p0[0] + p2[0]) / 2, my = (p0[1] + p2[1]) / 2;
-        var dx = p2[0] - p0[0], dy = p2[1] - p0[1], len = Math.hypot(dx, dy);
-        var nx = dy / len, ny = -dx / len;
-        if (ny > 0) { nx = -nx; ny = -ny; }
-        var c = [mx + nx * len * 0.28, my + ny * len * 0.28];
-        pts = [];
-        for (var k = 0; k <= N; k++) {
-          var u = k / N, a = (1 - u) * (1 - u), b = 2 * (1 - u) * u, e = u * u;
-          pts.push([a * p0[0] + b * c[0] + e * p2[0], a * p0[1] + b * c[1] + e * p2[1]]);
+        P = stops.map(function (st) { return proj(st.lon, st.lat); });
+        segs = [];
+        var maxLen = 0;
+        for (var k = 0; k < segCount; k++) {
+          var a = P[k], b = P[k + 1];
+          var dx = b[0] - a[0], dy = b[1] - a[1], len = Math.hypot(dx, dy) || 1;
+          var nx = dy / len, ny = -dx / len;
+          if (ny > 0) { nx = -nx; ny = -ny; }
+          var bow = len < s * 8 ? 0.6 : 0.22;
+          var c = [(a[0] + b[0]) / 2 + nx * len * bow, (a[1] + b[1]) / 2 + ny * len * bow];
+          var pts = [];
+          for (var q = 0; q <= N; q++) {
+            var u = q / N, A = (1 - u) * (1 - u), B = 2 * (1 - u) * u, C = u * u;
+            pts.push([A * a[0] + B * c[0] + C * b[0], A * a[1] + B * c[1] + C * b[1]]);
+          }
+          segs.push({ pts: pts, len: len });
+          maxLen = Math.max(maxLen, len);
         }
+        // tidslinje: lange hop tager lidt længere tid, kort pause ved hvert land
+        timeline = []; var tt = DELAY;
+        segs.forEach(function (sg) {
+          var dur = HOP * (0.55 + 0.75 * Math.sqrt(sg.len / maxLen));
+          timeline.push({ t0: tt, dur: dur }); tt += dur + PAUSE;
+        });
+        total = tt;
 
         base = document.createElement('canvas');
         base.width = cv.width; base.height = cv.height;
         var bx = base.getContext('2d'); bx.setTransform(d, 0, 0, d, 0, 0);
-        bx.fillStyle = 'rgba(243,239,231,.24)';
-        var rad = Math.max(0.9, s * 0.2), reach = s * 3.2;
+        bx.fillStyle = 'rgba(243,239,231,.22)';
+        rad = Math.max(0.8, s * 0.24); reach = s * 2.6;
         dots = [];
         for (var row = 0; row < MAP.rows; row++) {
           for (var col = 0; col < MAP.cols; col++) {
             if (!MAP.bits[row * MAP.cols + col]) continue;
             var x = ox + (col + 0.5) * s, y = oy + (row + 0.5) * s;
-            if (x < -s || y < -s || x > W + s || y > H + s) continue;
             bx.beginPath(); bx.arc(x, y, rad, 0, 7); bx.fill();
-            var best = 1e9, at = 0;
-            for (var q = 0; q <= N; q += 2) {
-              var dd = Math.hypot(pts[q][0] - x, pts[q][1] - y);
-              if (dd < best) { best = dd; at = q / N; }
-            }
-            var d0 = Math.hypot(p0[0] - x, p0[1] - y), d2 = Math.hypot(p2[0] - x, p2[1] - y);
-            if (best < reach || d0 < s * 7 || d2 < s * 7) dots.push({ x: x, y: y, d: best, at: at, d0: d0, d2: d2 });
+            var best = 1e9, bs = 0, bu = 0;
+            segs.forEach(function (sg, si) {
+              for (var q = 0; q <= N; q += 3) {
+                var dd = Math.hypot(sg.pts[q][0] - x, sg.pts[q][1] - y);
+                if (dd < best) { best = dd; bs = si; bu = q / N; }
+              }
+            });
+            var near = -1, nd = 1e9;
+            P.forEach(function (p, pi) { var dd = Math.hypot(p[0] - x, p[1] - y); if (dd < nd) { nd = dd; near = pi; } });
+            if (best < reach || nd < s * 5) dots.push({ x: x, y: y, d: best, seg: bs, u: bu, stop: near, sd: nd });
           }
         }
-        MAP.rad = rad; MAP.reach = reach;
 
-        var lw = lblFrom.offsetWidth;
-        lblFrom.style.transform = 'translate(' + Math.min(p0[0] + 18, W - lw - 4) + 'px,' + (p0[1] + 14) + 'px)';
-        lblTo.style.transform = 'translate(' + Math.max(4, p2[0] - lblTo.offsetWidth - 18) + 'px,' + (p2[1] - lblTo.offsetHeight - 10) + 'px)';
+        labels.forEach(function (lb, i) {
+          var p = P[i], w = lb.offsetWidth, h = lb.offsetHeight, pos = stops[i].pos, g = 12, x, y;
+          if (pos === 'r') { x = p[0] + g; y = p[1] - h / 2; }
+          else if (pos === 'l') { x = p[0] - w - g; y = p[1] - h / 2; }
+          else if (pos === 't') { x = p[0] - w / 2; y = p[1] - h - g; }
+          else if (pos === 'tl') { x = p[0] - w - g * 0.6; y = p[1] - h - g * 0.6; }
+          else { x = p[0] - w / 2; y = p[1] + g; }
+          x = Math.max(4, Math.min(W - w - 4, x)); y = Math.max(4, Math.min(H - h - 4, y));
+          lb.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+        });
       }
 
       function ease(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
 
-      function ring(p, now, phase) {
+      // hvor langt er vi: segment-nummer + hvor langt inde i segmentet (0–1)
+      function progress(ms) {
+        if (reduce) return { seg: segCount, u: 1 };
+        for (var k = 0; k < segCount; k++) {
+          var tl = timeline[k];
+          if (ms < tl.t0) return { seg: k, u: 0 };
+          if (ms < tl.t0 + tl.dur) return { seg: k, u: ease((ms - tl.t0) / tl.dur) };
+        }
+        return { seg: segCount, u: 1 };
+      }
+
+      function ring(p, now, phase, big) {
         var k = ((now / 1800) + phase) % 1;
         ctx.strokeStyle = 'rgba(242,168,29,' + (0.7 * (1 - k)) + ')';
         ctx.lineWidth = 1.5;
-        ctx.beginPath(); ctx.arc(p[0], p[1], 4 + k * s * 3.5, 0, 7); ctx.stroke();
+        ctx.beginPath(); ctx.arc(p[0], p[1], 3 + k * s * (big ? 5 : 3.5), 0, 7); ctx.stroke();
         ctx.fillStyle = '#ffc94a';
-        ctx.beginPath(); ctx.arc(p[0], p[1], 4, 0, 7); ctx.fill();
+        ctx.beginPath(); ctx.arc(p[0], p[1], big ? 4 : 3, 0, 7); ctx.fill();
       }
 
       function draw(now) {
-        if (!reduce) {
-          if (start === null) start = now;
-          t = ease(Math.min(1, Math.max(0, (now - start - DELAY) / DUR)));
-        }
+        if (start === null) start = now;
+        var ms = now - start, pr = progress(ms), started = reduce || ms >= DELAY;
         ctx.clearRect(0, 0, W, H);
         ctx.drawImage(base, 0, 0, W, H);
 
-        // tændte prikker langs ruten og ved start/slut
-        var arrived = t >= 0.999;
+        // tændte prikker langs ruten og omkring de lande, der er nået
         dots.forEach(function (p) {
           var a = 0;
-          if (p.at <= t && p.d < MAP.reach) a = Math.max(a, 1 - p.d / MAP.reach);
-          if (t > 0) a = Math.max(a, (1 - p.d0 / (s * 7)) * 0.9);
-          if (arrived) a = Math.max(a, 1 - p.d2 / (s * 7));
+          var passed = p.seg < pr.seg || (p.seg === pr.seg && p.u <= pr.u);
+          if (passed && p.d < reach) a = 1 - p.d / reach;
+          if (started && p.stop <= pr.seg && p.sd < s * 5) a = Math.max(a, (1 - p.sd / (s * 5)) * 0.95);
           if (a <= 0) return;
           ctx.fillStyle = 'rgba(242,168,29,' + (a * 0.9) + ')';
-          ctx.beginPath(); ctx.arc(p.x, p.y, MAP.rad * (1 + a * 0.5), 0, 7); ctx.fill();
+          ctx.beginPath(); ctx.arc(p.x, p.y, rad * (1 + a * 0.5), 0, 7); ctx.fill();
         });
 
-        // guldlinjen
-        var n = Math.round(t * N);
-        if (n > 0) {
-          var g = ctx.createLinearGradient(p0[0], p0[1], p2[0], p2[1]);
-          g.addColorStop(0, '#e5701a'); g.addColorStop(1, '#ffc94a');
-          ctx.save();
-          ctx.strokeStyle = g; ctx.lineWidth = 2.5; ctx.lineCap = 'round';
-          ctx.shadowColor = 'rgba(242,168,29,.8)'; ctx.shadowBlur = 14;
-          ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
-          for (var i = 1; i <= n; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+        // guldlinjerne
+        ctx.save();
+        ctx.lineCap = 'round'; ctx.lineWidth = 2;
+        ctx.shadowColor = 'rgba(242,168,29,.8)'; ctx.shadowBlur = 12;
+        for (var k = 0; k < segCount; k++) {
+          if (k > pr.seg) break;
+          var sg = segs[k], n = k < pr.seg ? N : Math.round(pr.u * N);
+          if (n <= 0) continue;
+          ctx.strokeStyle = k < pr.seg ? 'rgba(242,168,29,.75)' : '#ffc94a';
+          ctx.beginPath(); ctx.moveTo(sg.pts[0][0], sg.pts[0][1]);
+          for (var q = 1; q <= n; q++) ctx.lineTo(sg.pts[q][0], sg.pts[q][1]);
           ctx.stroke();
-          ctx.restore();
-          if (!arrived) {
-            var h = pts[n], rg = ctx.createRadialGradient(h[0], h[1], 0, h[0], h[1], 22);
-            rg.addColorStop(0, 'rgba(255,214,110,.95)'); rg.addColorStop(1, 'rgba(242,168,29,0)');
-            ctx.fillStyle = rg; ctx.beginPath(); ctx.arc(h[0], h[1], 22, 0, 7); ctx.fill();
-          }
+        }
+        ctx.restore();
+
+        // lysende "hoved" på linjen mens den flyver
+        if (pr.seg < segCount && pr.u > 0 && pr.u < 1) {
+          var h = segs[pr.seg].pts[Math.round(pr.u * N)];
+          var rg = ctx.createRadialGradient(h[0], h[1], 0, h[0], h[1], 18);
+          rg.addColorStop(0, 'rgba(255,214,110,.95)'); rg.addColorStop(1, 'rgba(242,168,29,0)');
+          ctx.fillStyle = rg; ctx.beginPath(); ctx.arc(h[0], h[1], 18, 0, 7); ctx.fill();
         }
 
-        if (t > 0 || reduce) ring(p0, now, 0);
-        if (arrived) ring(p2, now, 0.5);
-        lblFrom.classList.toggle('is-on', t > 0.02);
-        lblTo.classList.toggle('is-on', arrived);
+        // ringe og tekst ved de lande, der er nået
+        P.forEach(function (p, i) {
+          var reached = started && i <= pr.seg;
+          if (reached) ring(p, now, i * 0.17, stops[i].first || stops[i].last);
+          labels[i].classList.toggle('is-on', reached);
+        });
 
         if (visible && !signal.aborted && !reduce) raf = requestAnimationFrame(draw);
       }
@@ -542,8 +603,8 @@
         { "value": "image", "label": "Billede" }
       ]
     },
-    { "type": "text", "id": "map_from_year", "label": "Kort: start-år", "default": "2022" },
-    { "type": "text", "id": "map_from_label", "label": "Kort: start-sted", "default": "Indonesia" },
+    { "type": "text", "id": "map_from_year", "label": "Kort: start-år", "default": "2020" },
+    { "type": "text", "id": "map_from_label", "label": "Kort: start-sted", "default": "Singapore" },
     { "type": "text", "id": "map_to_year", "label": "Kort: slut-år", "default": "2025" },
     { "type": "text", "id": "map_to_label", "label": "Kort: slut-sted", "default": "Europe" },
     { "type": "image_picker", "id": "hero_image", "label": "Stort billede (hvis 'Billede' er valgt)" },
