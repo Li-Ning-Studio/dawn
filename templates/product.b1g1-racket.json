@@ -44,9 +44,16 @@
         },
         "text_tqadKM": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<strong>Buy 1 Racket and add same racket in cart to get one free</strong>",
             "text_style": "body"
+          }
+        },
+        "custom_liquid_kByVDM": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"bogooffer\">Buy 1 Racket and add same racket in cart to get one <span>FREE</span></p>\n\n<style>\n.bogooffer{\nfont-size: 1.5rem;\ncolor: #fff;\nfont-weight: 600;\nbackground:#DE00FE;\n\npadding: 10px 10px;\nborder-radius: 10px;\n}\n.bogooffer span{\nfont-size:1.7rem;\ncolor: #FFF500;\n}\n</style>"
           }
         },
         "text_zEDFdK": {
@@ -221,6 +228,7 @@
         "caption",
         "price",
         "text_tqadKM",
+        "custom_liquid_kByVDM",
         "text_zEDFdK",
         "rating_UjxT3W",
         "variant_picker",
