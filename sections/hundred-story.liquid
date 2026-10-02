@@ -34,14 +34,25 @@
   .hs-hero{padding-block:clamp(80px,12vh,140px) 0;display:grid;gap:clamp(40px,7vh,70px)}
   .hs-hero-text{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:24px 48px;align-items:end}
   .hs-hero-text .hs-eyebrow{grid-column:1/-1}
-  .hs .hs-wordmark{font:italic 900 clamp(84px,16vw,250px)/.8 var(--hs-display);letter-spacing:-.02em;text-transform:uppercase;margin:0;
-    background:linear-gradient(180deg,#ffc94a,var(--hs-gold) 45%,var(--hs-ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .hs-wordmark span{display:inline-block;animation:hs-rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*60ms)}
+  .hs .hs-wordmark{font:italic 900 clamp(84px,16vw,250px)/.8 var(--hs-display);letter-spacing:-.02em;text-transform:uppercase;margin:0;color:var(--hs-gold)}
+  .hs-wordmark span{display:inline-block;padding-right:.02em;
+    background:linear-gradient(180deg,#ffc94a,var(--hs-gold) 45%,var(--hs-ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    animation:hs-rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*60ms)}
   @keyframes hs-rise{from{transform:translateY(.35em) skewX(-8deg);opacity:.15}to{transform:none;opacity:1}}
   .hs .hs-hero-sub{font:500 clamp(20px,2vw,26px)/1.35 var(--hs-body);margin:0 0 .6em;color:var(--hs-text);text-wrap:balance}
   .hs-hero-media{aspect-ratio:21/9;max-width:100%}
   .hs-hero-media .hs-parallax{position:absolute;left:0;right:0;top:-14%;height:128%;will-change:transform}
   .hs-hero-media .hs-parallax img{height:100%}
+
+  /* rejse-kort */
+  .hs-map{position:relative;aspect-ratio:21/9;max-width:100%}
+  .hs-map canvas{position:absolute;inset:0;width:100%;height:100%;display:block;
+    -webkit-mask-image:radial-gradient(ellipse 75% 80% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 75% 80% at 50% 50%,#000 55%,transparent 100%)}
+  .hs-map-label{position:absolute;left:0;top:0;display:grid;gap:4px;pointer-events:none;opacity:0;transition:opacity .6s,translate .6s;translate:0 8px;white-space:nowrap}
+  .hs-map-label.is-on{opacity:1;translate:0 0}
+  .hs-map-label b{font:italic 900 clamp(30px,3.4vw,52px)/.9 var(--hs-display);color:var(--hs-gold)}
+  .hs-map-label span{font:700 12px/1.2 var(--hs-body);letter-spacing:.24em;text-transform:uppercase;color:var(--hs-text)}
+  .hs-map-label--to{text-align:right}
 
   /* kapitler med tidslinje */
   .hs-chapter{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,80px);padding-block:clamp(70px,12vh,130px)}
@@ -102,6 +113,9 @@
     .hs{font-size:17px}
     .hs-hero-text,.hs-chapter{grid-template-columns:minmax(0,1fr)}
     .hs-hero-media{aspect-ratio:4/3}
+    .hs-map{aspect-ratio:3/2}
+    .hs-map-label b{font-size:26px}
+    .hs-map-label span{font-size:10px;letter-spacing:.18em}
     .hs-year-sticky{top:var(--hs-header,0px);padding-block:14px;background:linear-gradient(var(--hs-bg) 82%,transparent);z-index:2}
     .hs-year{font-size:92px}
     .hs-steps{padding-top:0;gap:72px}
@@ -128,7 +142,13 @@
       </h1>
       <p class="hs-hero-sub">{{ section.settings.subtitle | escape }}</p>
     </div>
-    {%- if section.settings.hero_image != blank -%}
+    {%- if section.settings.hero_mode == 'map' -%}
+      <div class="hs-map" data-map aria-label="{{ section.settings.map_from_label | escape }} → {{ section.settings.map_to_label | escape }}" role="img">
+        <canvas aria-hidden="true"></canvas>
+        <div class="hs-map-label hs-map-label--from" data-from><b>{{ section.settings.map_from_year | escape }}</b><span>{{ section.settings.map_from_label | escape }}</span></div>
+        <div class="hs-map-label hs-map-label--to" data-to><b>{{ section.settings.map_to_year | escape }}</b><span>{{ section.settings.map_to_label | escape }}</span></div>
+      </div>
+    {%- elsif section.settings.hero_image != blank -%}
       <div class="hs-media hs-hero-media">
         <div class="hs-parallax">
           {{ section.settings.hero_image | image_url: width: 2400 | image_tag: widths: '800,1200,1600,2000,2400', sizes: '100vw', fetchpriority: 'high', alt: section.settings.hero_image.alt }}
@@ -341,12 +361,158 @@
         ticking = false;
       }
 
+      var mapEl = $('[data-map]');
+      if (mapEl) initMap(mapEl, reduce, ctrl.signal);
+
       function req() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
       window.addEventListener('scroll', req, { passive: true, signal: ctrl.signal });
       window.addEventListener('resize', function () { setHeader(); europes.forEach(sizeCanvas); req(); }, { signal: ctrl.signal });
       setHeader();
       europes.forEach(sizeCanvas);
       frame();
+    }
+
+    /* ---------- Rejse-kort: Indonesien → Europa ---------- */
+    var MAP = {
+      lon0: -30, lat0: 72, step: 1, cols: 200, rows: 87,
+      data: '7gAAAAAAAAAAABwAPZ+///////4nv/gAAKIAAAAAAAb4AAAAAH7/v////////////AD8AAAAAAF//AAAADw+///////////////8wAAAAAAF///wMBe/3+///////////////wAAAAAAA////iP///z///////////////8AAAAAAB///n4////z////////////////Av8AAAA/8f+D/////////////////////wD/AAAAf+P/n/////////////////////8AMAAAA3/P////////////////////////AAAAAA//H///////////////////////nwAAAAAf/g//////////////////////4z8AAAAIH/8PX////////////////////4D9AAAAAB9/Ab///////////////////+uDgAAAAGAOfgv//////////////////+AABwAAAAHwAD6L///////////////////AAB+AAAAAYAOeH///////////////////AAA/gAAAAHAD0B///////////////////AAAPwAAAAO4ARO///////////////////4AAD4AAAAPHAX/////////////////////4AA8AAAADz8f/////////////////////+gAMAAAAAA+P//////////////////////oADAAAAAAQP//////////////////////zAAAAAAAAAv//////////////////////8wAAAAAAAB////////////////////////IAAAAAAAAD///////////////////////iAAAAAAAAA/////7z/4f/////////////wQAAAAAAAAH/+//8Y/8H/////////////4AAAAAAAAAB//H/+AP+P/////////////8CAAAAAAAA4/48f/gA/x/////////////+B4AAAAAAAf/gXD/wAD8H////////////4AIAAAAAAAH/wAcf8PB/g////////////8AAAAAAAAAB/4DB3wf//8f//////////7+ADAAAAAAAAf8gwI4f//+H//////////5nAAwAAAAQAAH/AACHP///g//////////8BwAMAAAAAAAB/gAGAh///4P//////////sGAGAAAAAAAACB/4AAGz/////////////+BgPgAAAAAAAAh/+AAAA//////////////A4PwAAAAAAAAf//AAAAP/////////////wIdgAAAAAAAAP//4AAAH/////////////+CPAAAAAAAAAH///4OAB//////////////gBAAAAAAAAAD////D+A//////////////4AgAAAAAAAAA////+////////////////+AAAAAAAAAAAP//////3//H///////////wAAAAAAAAAAH/////////x///////////8AAAAAAAAAAH///////z/+H//////////+AAAAAAAAAAD///////8//wH//////////AAAAAAAAAAB////////n/8Af3////////wAAAAAAAAAAf///////5//hgB////////xAAAAAAAAAAP////////H//+AP///////4gAAAAAAAAAD////////x///wA///////wIAAAAAAAAAB////////+f//4AN//g//8gAAAAAAAAAAAP////////j//+AAf/4H/+IAAAAAAAAAAAD////////4f//AAH/4A//GAAAAAAAAAAAA/////////H//gAB/8AP/xAAAAAAAAAAAAP////////4//gAAf+AB/+AAwAAAAAAAAAD////////+H/gAAH/AAz/wAMAAAAAAAAAB/////////x/wAAA/AAA/+ACAAAAAAAAAAf////////+fgAAAPwAAP/gAwAAAAAAAAAH/////////3gAAAB8AADf4ALAAAAAAAAAB/////////+AEAAAfAAAT+AAIAAAAAAAAAH/////////gIAAADwAAEfgALAAAAAAAAAB/////////9+AAAA8AACDgAQAAAAAAAAAAP//////////gAAAOgAAgQAIEAAAAAAAAAB//////////wAAABIAAMAAAHAAAAAAAAAAP/////////8AAAADAABAAAA4AAAAAAAAAB//v//////+AAAAAwAAMAAwMAAAAAAAAAAP/B///////gAAAAAABDgAeAAAAAAAAAAAAgAJ//////wAAAAAAAMYAPgAAAAAAAAAAAAAAP/////4AAAAAAABmAHgAAAAAAAAAAAAAAD/////8AAAAAAAAMwH8AIAAAAAAAAAAAAA/////8AAAAAAAAB0H/ACAAAAAAAAAAAAAf////+AAAAAAAAAeB/xwgAAAAAAAAAAAAH/////AAAAAAAAADof8ASgAAAAAAAAAAAB/////wAAAAAAAAAcD+cEMAAAAAAAAAAAAP////4AAAAAAAAAH4/nAAPgAAAAAAAAAAB////8AAAAAAAAAA8ARQif/AAAAAAAAAAAP///+AAAAAAAAAAHAAAAA/4AAAAAAAAAAD////gAAAAAAAAAAwAEAAj/LAAAAAAAAAA////4AAAAAAAAAADgAAAIf8BAAAAAAAAAH///+AAAAAAAAAAAfgAAQP+AAAAAAAAAAB////gAAAAAAAAAAAB+yAA4wAAAAAAAAAAf///8AAAAAAAAAAAABCAAAGgAAAAAAAAAD////AAAAAAAAAAAAAAAAAAIAAAAAAAAAA////wAAAAAAAAAAAAAAKAIAQAAAAAAAAAf///+AQAAAAAAAAAAAAB+CAAAAAAAAAAAH////gMAAAAAAAAAAAAA/AwAAAAAAAAAAD////4DAAAAAAAAAAAADPwOAAAA',
+      from: [106.8, -6.2],   // Jakarta
+      to: [12.35, 55.73]     // Herlev
+    };
+
+    function initMap(el, reduce, signal) {
+      var cv = el.querySelector('canvas'), ctx = cv.getContext('2d');
+      var lblFrom = el.querySelector('[data-from]'), lblTo = el.querySelector('[data-to]');
+      if (!MAP.bits) {
+        var raw = atob(MAP.data), bits = new Uint8Array(MAP.cols * MAP.rows);
+        for (var i = 0; i < bits.length; i++) bits[i] = (raw.charCodeAt(i >> 3) >> (7 - (i & 7))) & 1;
+        MAP.bits = bits;
+      }
+      var W, H, s, ox, oy, dots, base, pts, p0, p2, N = 140;
+      var start = null, DUR = 2600, DELAY = 700, raf = 0, visible = true, t = reduce ? 1 : 0;
+
+      function proj(lon, lat) {
+        return [ox + ((lon - MAP.lon0) / MAP.step) * s, oy + ((MAP.lat0 - lat) / MAP.step) * s];
+      }
+
+      function layout() {
+        var r = el.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+        W = r.width; H = r.height;
+        cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+        s = Math.max(W / MAP.cols, H / MAP.rows);
+        var fx = ((60 - MAP.lon0) / MAP.step) * s, fy = ((MAP.lat0 - 26) / MAP.step) * s;
+        ox = Math.min(0, Math.max(W - MAP.cols * s, W / 2 - fx));
+        oy = Math.min(0, Math.max(H - MAP.rows * s, H / 2 - fy));
+
+        p0 = proj(MAP.from[0], MAP.from[1]);
+        p2 = proj(MAP.to[0], MAP.to[1]);
+        var mx = (p0[0] + p2[0]) / 2, my = (p0[1] + p2[1]) / 2;
+        var dx = p2[0] - p0[0], dy = p2[1] - p0[1], len = Math.hypot(dx, dy);
+        var nx = dy / len, ny = -dx / len;
+        if (ny > 0) { nx = -nx; ny = -ny; }
+        var c = [mx + nx * len * 0.28, my + ny * len * 0.28];
+        pts = [];
+        for (var k = 0; k <= N; k++) {
+          var u = k / N, a = (1 - u) * (1 - u), b = 2 * (1 - u) * u, e = u * u;
+          pts.push([a * p0[0] + b * c[0] + e * p2[0], a * p0[1] + b * c[1] + e * p2[1]]);
+        }
+
+        base = document.createElement('canvas');
+        base.width = cv.width; base.height = cv.height;
+        var bx = base.getContext('2d'); bx.setTransform(d, 0, 0, d, 0, 0);
+        bx.fillStyle = 'rgba(243,239,231,.24)';
+        var rad = Math.max(0.9, s * 0.2), reach = s * 3.2;
+        dots = [];
+        for (var row = 0; row < MAP.rows; row++) {
+          for (var col = 0; col < MAP.cols; col++) {
+            if (!MAP.bits[row * MAP.cols + col]) continue;
+            var x = ox + (col + 0.5) * s, y = oy + (row + 0.5) * s;
+            if (x < -s || y < -s || x > W + s || y > H + s) continue;
+            bx.beginPath(); bx.arc(x, y, rad, 0, 7); bx.fill();
+            var best = 1e9, at = 0;
+            for (var q = 0; q <= N; q += 2) {
+              var dd = Math.hypot(pts[q][0] - x, pts[q][1] - y);
+              if (dd < best) { best = dd; at = q / N; }
+            }
+            var d0 = Math.hypot(p0[0] - x, p0[1] - y), d2 = Math.hypot(p2[0] - x, p2[1] - y);
+            if (best < reach || d0 < s * 7 || d2 < s * 7) dots.push({ x: x, y: y, d: best, at: at, d0: d0, d2: d2 });
+          }
+        }
+        MAP.rad = rad; MAP.reach = reach;
+
+        var lw = lblFrom.offsetWidth;
+        lblFrom.style.transform = 'translate(' + Math.min(p0[0] + 18, W - lw - 4) + 'px,' + (p0[1] + 14) + 'px)';
+        lblTo.style.transform = 'translate(' + Math.max(4, p2[0] - lblTo.offsetWidth - 18) + 'px,' + (p2[1] - lblTo.offsetHeight - 10) + 'px)';
+      }
+
+      function ease(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+
+      function ring(p, now, phase) {
+        var k = ((now / 1800) + phase) % 1;
+        ctx.strokeStyle = 'rgba(242,168,29,' + (0.7 * (1 - k)) + ')';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.arc(p[0], p[1], 4 + k * s * 3.5, 0, 7); ctx.stroke();
+        ctx.fillStyle = '#ffc94a';
+        ctx.beginPath(); ctx.arc(p[0], p[1], 4, 0, 7); ctx.fill();
+      }
+
+      function draw(now) {
+        if (!reduce) {
+          if (start === null) start = now;
+          t = ease(Math.min(1, Math.max(0, (now - start - DELAY) / DUR)));
+        }
+        ctx.clearRect(0, 0, W, H);
+        ctx.drawImage(base, 0, 0, W, H);
+
+        // tændte prikker langs ruten og ved start/slut
+        var arrived = t >= 0.999;
+        dots.forEach(function (p) {
+          var a = 0;
+          if (p.at <= t && p.d < MAP.reach) a = Math.max(a, 1 - p.d / MAP.reach);
+          if (t > 0) a = Math.max(a, (1 - p.d0 / (s * 7)) * 0.9);
+          if (arrived) a = Math.max(a, 1 - p.d2 / (s * 7));
+          if (a <= 0) return;
+          ctx.fillStyle = 'rgba(242,168,29,' + (a * 0.9) + ')';
+          ctx.beginPath(); ctx.arc(p.x, p.y, MAP.rad * (1 + a * 0.5), 0, 7); ctx.fill();
+        });
+
+        // guldlinjen
+        var n = Math.round(t * N);
+        if (n > 0) {
+          var g = ctx.createLinearGradient(p0[0], p0[1], p2[0], p2[1]);
+          g.addColorStop(0, '#e5701a'); g.addColorStop(1, '#ffc94a');
+          ctx.save();
+          ctx.strokeStyle = g; ctx.lineWidth = 2.5; ctx.lineCap = 'round';
+          ctx.shadowColor = 'rgba(242,168,29,.8)'; ctx.shadowBlur = 14;
+          ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
+          for (var i = 1; i <= n; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+          ctx.stroke();
+          ctx.restore();
+          if (!arrived) {
+            var h = pts[n], rg = ctx.createRadialGradient(h[0], h[1], 0, h[0], h[1], 22);
+            rg.addColorStop(0, 'rgba(255,214,110,.95)'); rg.addColorStop(1, 'rgba(242,168,29,0)');
+            ctx.fillStyle = rg; ctx.beginPath(); ctx.arc(h[0], h[1], 22, 0, 7); ctx.fill();
+          }
+        }
+
+        if (t > 0 || reduce) ring(p0, now, 0);
+        if (arrived) ring(p2, now, 0.5);
+        lblFrom.classList.toggle('is-on', t > 0.02);
+        lblTo.classList.toggle('is-on', arrived);
+
+        if (visible && !signal.aborted && !reduce) raf = requestAnimationFrame(draw);
+      }
+
+      layout();
+      if (reduce) { draw(0); return; }
+      var io = new IntersectionObserver(function (en) {
+        visible = en[0].isIntersecting;
+        cancelAnimationFrame(raf);
+        if (visible) raf = requestAnimationFrame(draw);
+      });
+      io.observe(el);
+      window.addEventListener('resize', function () { layout(); }, { signal: signal });
+      signal.addEventListener('abort', function () { io.disconnect(); cancelAnimationFrame(raf); });
     }
 
     initHundredStory(document.getElementById('hs-{{ section.id }}'));
@@ -370,7 +536,18 @@
     { "type": "text", "id": "eyebrow", "label": "Lille overskrift", "default": "The story behind" },
     { "type": "text", "id": "title", "label": "Stor titel", "default": "HUNDRED" },
     { "type": "text", "id": "subtitle", "label": "Undertekst", "default": "Built with one ambition: to become one of the world's biggest sports brands." },
-    { "type": "image_picker", "id": "hero_image", "label": "Stort billede (bredformat)" },
+    {
+      "type": "select", "id": "hero_mode", "label": "Under titlen", "default": "map",
+      "options": [
+        { "value": "map", "label": "Rejse-kort (animation)" },
+        { "value": "image", "label": "Billede" }
+      ]
+    },
+    { "type": "text", "id": "map_from_year", "label": "Kort: start-år", "default": "2022" },
+    { "type": "text", "id": "map_from_label", "label": "Kort: start-sted", "default": "Indonesia" },
+    { "type": "text", "id": "map_to_year", "label": "Kort: slut-år", "default": "2025" },
+    { "type": "text", "id": "map_to_label", "label": "Kort: slut-sted", "default": "Europe" },
+    { "type": "image_picker", "id": "hero_image", "label": "Stort billede (hvis 'Billede' er valgt)" },
     { "type": "header", "content": "Afslutning" },
     { "type": "text", "id": "finale_1", "label": "Linje 1", "default": "Live hundred" },
     { "type": "text", "id": "finale_2", "label": "Linje 2 (guld)", "default": "percent." },
