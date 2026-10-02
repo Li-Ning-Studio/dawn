@@ -1,0 +1,518 @@
+{%- comment -%}
+  HUNDRED – The story behind (about-side)
+  Sektion med tidslinje, THINK BIG-bånd, EUROPE-effekt og streg-effekt.
+  Indhold redigeres i temaeditoren. Rækkefølgen på blokkene styrer siden.
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap">
+
+<style>
+  .hs{
+    --hs-bg:#0a0a0b;--hs-bg-2:#131315;--hs-line:#26241f;--hs-text:#f3efe7;--hs-soft:#cfc9be;--hs-muted:#8c867b;
+    --hs-gold:#f2a81d;--hs-ember:#e5701a;
+    --hs-display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+    --hs-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    --hs-gutter:clamp(16px,4vw,56px);
+    background:var(--hs-bg);color:var(--hs-text);font-family:var(--hs-body);font-size:18px;line-height:1.6;letter-spacing:0;
+    overflow-x:clip;
+  }
+  .hs *{box-sizing:border-box}
+  .hs ::selection{background:var(--hs-gold);color:#000}
+  .hs-wrap{padding-inline:var(--hs-gutter);max-width:1360px;margin-inline:auto}
+  .hs-progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--hs-ember),var(--hs-gold));z-index:1000;pointer-events:none}
+  .hs-eyebrow{display:block;font:700 13px/1 var(--hs-body);letter-spacing:.42em;text-transform:uppercase;color:var(--hs-gold)}
+
+  /* billeder */
+  .hs-media{position:relative;overflow:hidden;border-radius:6px;border:1px solid var(--hs-line);background:#141414}
+  .hs-media img{display:block;width:100%;height:100%;object-fit:cover}
+  .hs-media--ph{background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 2px,transparent 2px 14px),linear-gradient(160deg,#1d1c1a,#0f0f10)}
+  .hs-media--ph::after{content:attr(data-label);position:absolute;left:14px;bottom:12px;right:14px;font:600 11px/1.3 var(--hs-body);letter-spacing:.14em;text-transform:uppercase;color:var(--hs-muted)}
+
+  /* hero */
+  .hs-hero{padding-block:clamp(80px,12vh,140px) 0;display:grid;gap:clamp(40px,7vh,70px)}
+  .hs-hero-text{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:24px 48px;align-items:end}
+  .hs-hero-text .hs-eyebrow{grid-column:1/-1}
+  .hs .hs-wordmark{font:italic 900 clamp(84px,16vw,250px)/.8 var(--hs-display);letter-spacing:-.02em;text-transform:uppercase;margin:0;
+    background:linear-gradient(180deg,#ffc94a,var(--hs-gold) 45%,var(--hs-ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hs-wordmark span{display:inline-block;animation:hs-rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*60ms)}
+  @keyframes hs-rise{from{transform:translateY(.35em) skewX(-8deg);opacity:.15}to{transform:none;opacity:1}}
+  .hs .hs-hero-sub{font:500 clamp(20px,2vw,26px)/1.35 var(--hs-body);margin:0 0 .6em;color:var(--hs-text);text-wrap:balance}
+  .hs-hero-media{aspect-ratio:21/9;max-width:100%}
+  .hs-hero-media .hs-parallax{position:absolute;left:0;right:0;top:-14%;height:128%;will-change:transform}
+  .hs-hero-media .hs-parallax img{height:100%}
+
+  /* kapitler med tidslinje */
+  .hs-chapter{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,80px);padding-block:clamp(70px,12vh,130px)}
+  .hs-year-sticky{position:sticky;top:calc(var(--hs-header,0px) + 40px);display:grid;gap:16px}
+  .hs-year{font:italic 900 clamp(110px,15vw,230px)/1 var(--hs-display);letter-spacing:-.03em;color:transparent;-webkit-text-stroke:2px var(--hs-gold);height:1em;overflow:hidden}
+  .hs-digits{display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .hs-digits span{display:block;height:1em;line-height:1;padding-left:.04em}
+  .hs-year-label{font:700 14px/1.3 var(--hs-body);letter-spacing:.24em;text-transform:uppercase;color:var(--hs-muted);min-height:1.3em}
+  .hs-track{position:relative;height:2px;background:var(--hs-line);max-width:320px}
+  .hs-track i{position:absolute;inset:0;transform-origin:0;transform:scaleX(var(--tp,0));background:var(--hs-gold);transition:transform .3s}
+  .hs-steps{display:grid;gap:clamp(70px,16vh,150px);padding-top:4vh}
+  .hs-step{max-width:56ch;opacity:.3;transform:translateY(10px);transition:opacity .5s,transform .5s;display:grid;gap:14px}
+  .hs-step.is-active{opacity:1;transform:none}
+  .hs .hs-step-title{font:italic 800 clamp(32px,3.8vw,52px)/1 var(--hs-display);letter-spacing:0;text-transform:uppercase;margin:0 0 4px;color:var(--hs-text);text-wrap:balance}
+  .hs .hs-big-line{font:italic 800 clamp(26px,3vw,40px)/1.08 var(--hs-display);text-transform:uppercase;color:var(--hs-gold);margin:0}
+  .hs-text{color:var(--hs-soft)}
+  .hs-text p{margin:0 0 .8em}
+  .hs-text p:last-child{margin-bottom:0}
+  .hs-text--callout{border-left:2px solid var(--hs-gold);padding-left:18px;color:var(--hs-text);font-weight:500;font-size:1.08em}
+  .hs-text--strong{color:var(--hs-text);font-weight:600}
+  .hs-step .hs-media{margin-top:10px;aspect-ratio:16/9}
+
+  /* streg over ordet */
+  .hs .hs-strike{font:italic 900 clamp(34px,4.6vw,64px)/.98 var(--hs-display);text-transform:uppercase;color:var(--hs-text);margin:10px 0 0;text-wrap:balance}
+  .hs-strike-word{position:relative;color:var(--hs-muted);white-space:nowrap}
+  .hs-strike-word::after{content:"";position:absolute;left:-3%;right:-3%;top:52%;height:.09em;background:var(--hs-ember);transform-origin:0;transform:scaleX(var(--k,0)) rotate(-2deg)}
+  .hs-strike-built{color:var(--hs-gold)}
+
+  /* THINK BIG */
+  .hs-think{padding-block:clamp(60px,10vh,110px);overflow:hidden;border-block:1px solid var(--hs-line);background:var(--hs-bg-2)}
+  .hs-marquee{white-space:nowrap;font:italic 900 clamp(64px,12vw,180px)/.9 var(--hs-display);text-transform:uppercase;will-change:transform}
+  .hs-marquee--a{color:var(--hs-text)}
+  .hs-marquee--b{color:transparent;-webkit-text-stroke:2px var(--hs-gold)}
+  .hs-think-body{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,5vw,72px);margin-top:clamp(44px,7vh,80px);align-items:start}
+  .hs-think-body .hs-text{max-width:50ch}
+  .hs .hs-lead{font:500 clamp(22px,2.2vw,28px)/1.35 var(--hs-body);color:var(--hs-text);margin:0 0 14px}
+  .hs .hs-foundation-title{font:italic 900 clamp(40px,5vw,76px)/.92 var(--hs-display);letter-spacing:0;text-transform:uppercase;margin:0 0 18px;color:var(--hs-text)}
+  .hs-foundation-title em{font-style:inherit;color:var(--hs-gold)}
+  .hs-foundation .hs-media{aspect-ratio:16/10;margin-bottom:22px}
+
+  /* EUROPE */
+  .hs-europe{height:140vh;position:relative}
+  .hs-europe-pin{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden}
+  .hs-europe canvas{position:absolute;inset:0;width:100%;height:100%}
+  .hs-europe-word{position:relative;font:italic 900 clamp(90px,21vw,360px)/.8 var(--hs-display);text-transform:uppercase;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:2px var(--hs-gold);transform:scale(calc(.75 + var(--e,0)*.35))}
+  .hs-europe-word::after{content:attr(data-word);position:absolute;inset:0;color:var(--hs-gold);-webkit-text-stroke:0;clip-path:inset(calc(100% - var(--e,0)*100%) 0 0 0)}
+  .hs .hs-europe-pre{position:absolute;top:18vh;left:0;right:0;text-align:center;padding-inline:var(--hs-gutter);font:500 clamp(18px,2vw,24px)/1.4 var(--hs-body);color:var(--hs-soft);text-wrap:balance;max-width:34ch;margin:0 auto}
+
+  /* finale */
+  .hs-finale{padding-block:clamp(80px,12vh,140px) clamp(110px,14vh,170px);text-align:center;border-top:1px solid var(--hs-line)}
+  .hs .hs-finale-title{font:italic 900 clamp(64px,13vw,210px)/.85 var(--hs-display);text-transform:uppercase;margin:0;letter-spacing:-.01em;color:var(--hs-text)}
+  .hs-pct{background:linear-gradient(90deg,var(--hs-ember),var(--hs-gold),#ffd36a,var(--hs-gold),var(--hs-ember));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:hs-sheen 5s linear infinite}
+  @keyframes hs-sheen{to{background-position:-200% 0}}
+  .hs .hs-cta{display:inline-flex;align-items:center;gap:12px;margin-top:44px;padding:18px 34px;border-radius:999px;background:var(--hs-gold);color:#000;font:700 13px/1 var(--hs-body);letter-spacing:.24em;text-transform:uppercase;text-decoration:none}
+  .hs-cta:focus-visible{outline:2px solid var(--hs-text);outline-offset:3px}
+
+  @media (max-width:820px){
+    .hs{font-size:17px}
+    .hs-hero-text,.hs-chapter{grid-template-columns:minmax(0,1fr)}
+    .hs-hero-media{aspect-ratio:4/3}
+    .hs-year-sticky{top:var(--hs-header,0px);padding-block:14px;background:linear-gradient(var(--hs-bg) 82%,transparent);z-index:2}
+    .hs-year{font-size:92px}
+    .hs-steps{padding-top:0;gap:72px}
+    .hs-europe{height:120vh}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hs *,.hs *::before,.hs *::after{animation:none!important;transition:none!important}
+    .hs-marquee,.hs-parallax{transform:none!important}
+  }
+</style>
+
+{%- capture ph_open -%}<div class="hs-media hs-media--ph" data-label="{%- endcapture -%}
+
+<div class="hs" id="hs-{{ section.id }}">
+  <div class="hs-progress" aria-hidden="true"></div>
+
+  {%- comment -%} HERO {%- endcomment -%}
+  <header class="hs-wrap hs-hero">
+    <div class="hs-hero-text">
+      <span class="hs-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- assign title_chars = section.settings.title | split: '' -%}
+      <h1 class="hs-wordmark" aria-label="{{ section.settings.title | escape }}">
+        {%- for c in title_chars -%}<span style="--i:{{ forloop.index0 }}" aria-hidden="true">{{ c }}</span>{%- endfor -%}
+      </h1>
+      <p class="hs-hero-sub">{{ section.settings.subtitle | escape }}</p>
+    </div>
+    {%- if section.settings.hero_image != blank -%}
+      <div class="hs-media hs-hero-media">
+        <div class="hs-parallax">
+          {{ section.settings.hero_image | image_url: width: 2400 | image_tag: widths: '800,1200,1600,2000,2400', sizes: '100vw', fetchpriority: 'high', alt: section.settings.hero_image.alt }}
+        </div>
+      </div>
+    {%- elsif request.design_mode -%}
+      <div class="hs-media hs-media--ph hs-hero-media" data-label="Vælg et stort billede (bredformat)"><div class="hs-parallax"></div></div>
+    {%- endif -%}
+  </header>
+
+  {%- assign in_chapter = false -%}
+  {%- assign in_step = false -%}
+
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+
+      {%- when 'chapter' -%}
+        {%- if in_step -%}</article>{%- assign in_step = false -%}{%- endif -%}
+        {%- if in_chapter -%}</div></section>{%- endif -%}
+        <section class="hs-wrap hs-chapter" data-chapter {{ block.shopify_attributes }}>
+          <div>
+            <div class="hs-year-sticky">
+              <span class="hs-eyebrow">{{ block.settings.eyebrow | escape }}</span>
+              <div class="hs-year" aria-hidden="true"><span class="hs-digits"></span></div>
+              <div class="hs-year-label" aria-hidden="true"></div>
+              <div class="hs-track" aria-hidden="true"><i></i></div>
+            </div>
+          </div>
+          <div class="hs-steps">
+        {%- assign in_chapter = true -%}
+
+      {%- when 'step' -%}
+        {%- if in_step -%}</article>{%- endif -%}
+        <article class="hs-step" data-year="{{ block.settings.year | escape }}" data-label="{{ block.settings.label | escape }}" {{ block.shopify_attributes }}>
+        {%- assign in_step = true -%}
+
+      {%- when 'heading' -%}
+        <h3 class="hs-step-title" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</h3>
+
+      {%- when 'big_line' -%}
+        <p class="hs-big-line" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</p>
+
+      {%- when 'text' -%}
+        <div class="hs-text hs-text--{{ block.settings.style }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+
+      {%- when 'strike' -%}
+        <p class="hs-strike" {{ block.shopify_attributes }}>
+          {{ block.settings.before | escape }} <span class="hs-strike-word">{{ block.settings.word | escape }}</span> {{ block.settings.after | escape }}
+          <span class="hs-strike-built">{{ block.settings.built | escape }}</span>
+        </p>
+
+      {%- when 'image' -%}
+        {%- if block.settings.image != blank -%}
+          <div class="hs-media" {{ block.shopify_attributes }}>
+            {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '600,900,1200,1600', sizes: '(min-width: 820px) 50vw, 100vw', alt: block.settings.image.alt }}
+          </div>
+        {%- elsif request.design_mode -%}
+          {{ ph_open }}{{ block.settings.hint | escape }}" {{ block.shopify_attributes }}></div>
+        {%- endif -%}
+
+      {%- when 'think_big' -%}
+        {%- if in_step -%}</article>{%- assign in_step = false -%}{%- endif -%}
+        {%- if in_chapter -%}</div></section>{%- assign in_chapter = false -%}{%- endif -%}
+        <section class="hs-think" {{ block.shopify_attributes }}>
+          {%- capture line_a -%}{{ block.settings.line_1 | escape }} {%- endcapture -%}
+          {%- capture line_b -%}{{ block.settings.line_2 | escape }} {%- endcapture -%}
+          <div class="hs-marquee hs-marquee--a" data-marquee="-1" aria-hidden="true">{% for i in (1..6) %}{{ line_a }} {% endfor %}</div>
+          <div class="hs-marquee hs-marquee--b" data-marquee="1" aria-hidden="true">{% for i in (1..5) %}{{ line_b }} {% endfor %}</div>
+          <h2 class="visually-hidden">{{ block.settings.line_1 | escape }} {{ block.settings.line_2 | escape }}</h2>
+          <div class="hs-wrap hs-think-body">
+            <div>
+              <p class="hs-lead">{{ block.settings.lead | escape }}</p>
+              <div class="hs-text">{{ block.settings.text }}</div>
+            </div>
+            <div class="hs-foundation">
+              {%- if block.settings.image != blank -%}
+                <div class="hs-media">{{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '600,900,1200,1400', sizes: '(min-width: 820px) 50vw, 100vw', alt: block.settings.image.alt }}</div>
+              {%- elsif request.design_mode -%}
+                <div class="hs-media hs-media--ph" data-label="Vælg billede: badminton"></div>
+              {%- endif -%}
+              <h3 class="hs-foundation-title">{{ block.settings.foundation_title | escape }} <em>{{ block.settings.foundation_highlight | escape }}</em></h3>
+              <div class="hs-text">{{ block.settings.foundation_text }}</div>
+            </div>
+          </div>
+        </section>
+
+      {%- when 'europe' -%}
+        {%- if in_step -%}</article>{%- assign in_step = false -%}{%- endif -%}
+        {%- if in_chapter -%}</div></section>{%- assign in_chapter = false -%}{%- endif -%}
+        <section class="hs-europe" data-europe {{ block.shopify_attributes }}>
+          <div class="hs-europe-pin">
+            <canvas aria-hidden="true"></canvas>
+            <p class="hs-europe-pre">{{ block.settings.pre | escape }}</p>
+            <h2 class="hs-europe-word" data-word="{{ block.settings.word | escape }}">{{ block.settings.word | escape }}</h2>
+          </div>
+        </section>
+
+    {%- endcase -%}
+  {%- endfor -%}
+  {%- if in_step -%}</article>{%- endif -%}
+  {%- if in_chapter -%}</div></section>{%- endif -%}
+
+  {%- comment -%} FINALE {%- endcomment -%}
+  <section class="hs-wrap hs-finale">
+    <h2 class="hs-finale-title">{{ section.settings.finale_1 | escape }}<br><span class="hs-pct">{{ section.settings.finale_2 | escape }}</span></h2>
+    {%- if section.settings.button_label != blank -%}
+      <a class="hs-cta" href="{{ section.settings.button_link | default: '/collections/all' }}">{{ section.settings.button_label | escape }} →</a>
+    {%- endif -%}
+  </section>
+</div>
+
+<script>
+  (function () {
+    function initHundredStory(root) {
+      if (!root) return;
+      window.__hsCtrl = window.__hsCtrl || {};
+      if (window.__hsCtrl[root.id]) window.__hsCtrl[root.id].abort();
+      var ctrl = new AbortController();
+      window.__hsCtrl[root.id] = ctrl;
+
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var $ = function (s) { return root.querySelector(s); };
+      var $$ = function (s) { return Array.prototype.slice.call(root.querySelectorAll(s)); };
+      var clamp = function (v) { return Math.min(1, Math.max(0, v)); };
+      var vh = function () { return window.innerHeight; };
+
+      function setHeader() {
+        var h = document.querySelector('.section-header');
+        var sticky = h && getComputedStyle(h).position === 'sticky';
+        root.style.setProperty('--hs-header', (sticky ? h.offsetHeight : 0) + 'px');
+      }
+
+      var chapters = $$('[data-chapter]').map(function (ch) {
+        var steps = Array.prototype.slice.call(ch.querySelectorAll('.hs-step'));
+        var years = [];
+        steps.forEach(function (s) { if (years.indexOf(s.dataset.year) < 0) years.push(s.dataset.year); });
+        var digits = ch.querySelector('.hs-digits');
+        digits.innerHTML = years.map(function (y) { return '<span>' + y + '</span>'; }).join('');
+        return { ch: ch, steps: steps, years: years, digits: digits, label: ch.querySelector('.hs-year-label'), track: ch.querySelector('.hs-track'), cur: -1 };
+      });
+
+      var europes = $$('[data-europe]').map(function (el) {
+        var cv = el.querySelector('canvas');
+        return { el: el, word: el.querySelector('.hs-europe-word'), cv: cv, ctx: cv.getContext('2d'), dots: [] };
+      });
+      function sizeCanvas(e) {
+        var r = e.cv.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+        e.cv.width = r.width * d; e.cv.height = r.height * d; e.ctx.setTransform(d, 0, 0, d, 0, 0);
+        e.dots = [];
+        var gap = r.width < 600 ? 22 : 30;
+        for (var y = gap / 2; y < r.height; y += gap)
+          for (var x = gap / 2; x < r.width; x += gap) e.dots.push({ x: x, y: y, t: Math.random() });
+        e.w = r.width; e.h = r.height;
+      }
+      function drawDots(e, p) {
+        e.ctx.clearRect(0, 0, e.w, e.h);
+        e.dots.forEach(function (d) {
+          var lit = d.t < p * 0.55;
+          e.ctx.fillStyle = lit ? 'rgba(242,168,29,.85)' : 'rgba(255,255,255,.07)';
+          e.ctx.beginPath(); e.ctx.arc(d.x, d.y, lit ? 1.8 : 1.2, 0, 7); e.ctx.fill();
+        });
+      }
+
+      var prog = function (el) { var r = el.getBoundingClientRect(); return clamp((vh() - r.top) / (r.height + vh())); };
+      var pinProg = function (el) { var r = el.getBoundingClientRect(); return clamp(-r.top / (r.height - vh())); };
+
+      var bar = $('.hs-progress');
+      var heroMedia = $('.hs-hero-media'), heroPar = $('.hs-parallax');
+      var marquees = $$('[data-marquee]');
+      var strikes = $$('.hs-strike-word');
+      var ticking = false;
+
+      function frame() {
+        var rr = root.getBoundingClientRect();
+        bar.style.setProperty('--p', clamp(-rr.top / (rr.height - vh())));
+
+        if (!reduce) {
+          if (heroMedia && heroPar) heroPar.style.transform = 'translate3d(0,' + (heroMedia.getBoundingClientRect().top * -0.15) + 'px,0)';
+          marquees.forEach(function (m) {
+            m.style.transform = 'translate3d(' + ((prog(m) - 0.5) * 40 * m.dataset.marquee - 10) + '%,0,0)';
+          });
+        }
+
+        chapters.forEach(function (c) {
+          if (!c.steps.length) return;
+          var active = 0;
+          c.steps.forEach(function (s, i) { if (s.getBoundingClientRect().top < vh() * 0.6) active = i; });
+          c.steps.forEach(function (s, i) { s.classList.toggle('is-active', i === active); });
+          if (active !== c.cur) {
+            c.cur = active;
+            var s = c.steps[active];
+            c.digits.style.transform = 'translateY(' + (-c.years.indexOf(s.dataset.year)) + 'em)';
+            c.label.textContent = s.dataset.label;
+          }
+          var r = c.ch.getBoundingClientRect();
+          c.track.style.setProperty('--tp', clamp((vh() * 0.6 - r.top) / r.height));
+        });
+
+        europes.forEach(function (e) {
+          var p = reduce ? 1 : pinProg(e.el);
+          e.word.style.setProperty('--e', clamp(p * 1.4));
+          drawDots(e, clamp(p * 1.2));
+        });
+
+        strikes.forEach(function (s) {
+          var r = s.getBoundingClientRect();
+          s.style.setProperty('--k', reduce ? 1 : clamp((vh() * 0.7 - r.top) / (vh() * 0.25)));
+        });
+
+        ticking = false;
+      }
+
+      function req() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+      window.addEventListener('scroll', req, { passive: true, signal: ctrl.signal });
+      window.addEventListener('resize', function () { setHeader(); europes.forEach(sizeCanvas); req(); }, { signal: ctrl.signal });
+      setHeader();
+      europes.forEach(sizeCanvas);
+      frame();
+    }
+
+    initHundredStory(document.getElementById('hs-{{ section.id }}'));
+
+    if (!window.__hsEditorBound) {
+      window.__hsEditorBound = true;
+      document.addEventListener('shopify:section:load', function (e) {
+        initHundredStory(e.target.querySelector('.hs'));
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "HUNDRED Story",
+  "tag": "section",
+  "class": "section-hundred-story",
+  "settings": [
+    { "type": "header", "content": "Top" },
+    { "type": "text", "id": "eyebrow", "label": "Lille overskrift", "default": "The story behind" },
+    { "type": "text", "id": "title", "label": "Stor titel", "default": "HUNDRED" },
+    { "type": "text", "id": "subtitle", "label": "Undertekst", "default": "Built with one ambition: to become one of the world's biggest sports brands." },
+    { "type": "image_picker", "id": "hero_image", "label": "Stort billede (bredformat)" },
+    { "type": "header", "content": "Afslutning" },
+    { "type": "text", "id": "finale_1", "label": "Linje 1", "default": "Live hundred" },
+    { "type": "text", "id": "finale_2", "label": "Linje 2 (guld)", "default": "percent." },
+    { "type": "text", "id": "button_label", "label": "Knaptekst", "default": "Shop the collection" },
+    { "type": "url", "id": "button_link", "label": "Knaplink" }
+  ],
+  "blocks": [
+    {
+      "type": "chapter",
+      "name": "Kapitel (ny tidslinje)",
+      "settings": [
+        { "type": "text", "id": "eyebrow", "label": "Kapitelnavn", "default": "The beginning" }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Nyt trin (årstal)",
+      "settings": [
+        { "type": "text", "id": "year", "label": "Årstal", "default": "2020", "info": "Trin med samme årstal deler tal. Fx NOW virker også." },
+        { "type": "text", "id": "label", "label": "Tekst under årstal", "default": "The beginning" }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Overskrift",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Overskrift", "default": "Overskrift" }
+      ]
+    },
+    {
+      "type": "big_line",
+      "name": "Guld-linje",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Tekst", "default": "A line in gold." }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Tekst",
+      "settings": [
+        { "type": "richtext", "id": "text", "label": "Tekst", "default": "<p>Tekst</p>" },
+        {
+          "type": "select", "id": "style", "label": "Stil", "default": "normal",
+          "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "callout", "label": "Fremhævet med streg" },
+            { "value": "strong", "label": "Hvid og fed" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "strike",
+      "name": "Streg-effekt",
+      "settings": [
+        { "type": "text", "id": "before", "label": "Før ordet", "default": "HUNDRED shouldn't simply be" },
+        { "type": "text", "id": "word", "label": "Ord der streges ud", "default": "distributed" },
+        { "type": "text", "id": "after", "label": "Efter ordet", "default": "in Europe." },
+        { "type": "text", "id": "built", "label": "Guld-tekst", "default": "HUNDRED should be built in Europe." }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Billede",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Billede" },
+        { "type": "text", "id": "hint", "label": "Note (kun i editoren)", "default": "Vælg billede" }
+      ]
+    },
+    {
+      "type": "think_big",
+      "name": "THINK BIG-bånd",
+      "settings": [
+        { "type": "text", "id": "line_1", "label": "Linje 1", "default": "Think big." },
+        { "type": "text", "id": "line_2", "label": "Linje 2 (omrids)", "default": "Build different." },
+        { "type": "text", "id": "lead", "label": "Indledning", "default": "Becoming a global sports brand doesn't happen by following everyone else." },
+        { "type": "richtext", "id": "text", "label": "Tekst", "default": "<p>HUNDRED set out to challenge conventions – through product innovation, bold design, athlete partnerships and a closer connection to the communities that actually play the game.</p>" },
+        { "type": "image_picker", "id": "image", "label": "Billede" },
+        { "type": "text", "id": "foundation_title", "label": "Overskrift", "default": "Badminton became the" },
+        { "type": "text", "id": "foundation_highlight", "label": "Overskrift (guld)", "default": "foundation." },
+        { "type": "richtext", "id": "foundation_text", "label": "Tekst", "default": "<p>From there, HUNDRED began expanding across markets, signing international athletes and building a presence far beyond its origins.</p>" }
+      ]
+    },
+    {
+      "type": "europe",
+      "name": "EUROPE-effekt",
+      "settings": [
+        { "type": "text", "id": "pre", "label": "Tekst over ordet", "default": "But if HUNDRED was going to become truly global, the next step was clear." },
+        { "type": "text", "id": "word", "label": "Stort ord", "default": "Europe." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HUNDRED Story",
+      "blocks": [
+        { "type": "chapter", "settings": { "eyebrow": "The beginning" } },
+
+        { "type": "step", "settings": { "year": "2020", "label": "The HNDRD trademark" } },
+        { "type": "heading", "settings": { "text": "A different approach to sport" } },
+        { "type": "text", "settings": { "text": "<p>HUNDRED was created with a belief that sport could be approached differently.</p><p>After years of experience in the global sporting industry, the HNDRD trademark was registered in 2020, marking the beginning of a new brand with ambitions far beyond a single product, market or sport.</p>" } },
+        { "type": "image", "settings": { "hint": "Billede: tidligt brand-materiale" } },
+
+        { "type": "step", "settings": { "year": "2022", "label": "First launch · Indonesia" } },
+        { "type": "heading", "settings": { "text": "Into the market" } },
+        { "type": "text", "settings": { "text": "<p>In 2022, HUNDRED officially entered the market with its first major product launches in Indonesia.</p>" } },
+        { "type": "image", "settings": { "hint": "Billede: launch i Indonesien" } },
+
+        { "type": "step", "settings": { "year": "2022", "label": "The vision" } },
+        { "type": "big_line", "settings": { "text": "But from the beginning, the vision was much bigger." } },
+        { "type": "text", "settings": { "text": "<p>The ambition was to build HUNDRED into one of the world's leading sports brands.</p>" } },
+
+        { "type": "think_big" },
+        { "type": "europe" },
+
+        { "type": "chapter", "settings": { "eyebrow": "The European chapter" } },
+
+        { "type": "step", "settings": { "year": "2025", "label": "HUNDRED × Sportbiz ApS" } },
+        { "type": "heading", "settings": { "text": "The European chapter" } },
+        { "type": "text", "settings": { "text": "<p>In 2025, HUNDRED entered Europe together with Sportbiz ApS.</p><p>Sportbiz already had extensive experience building badminton brands across European markets and initially took responsibility for developing and distributing HUNDRED in Europe.</p>" } },
+        { "type": "image", "settings": { "hint": "Billede: Sportbiz-teamet" } },
+
+        { "type": "step", "settings": { "year": "2025", "label": "The potential" } },
+        { "type": "big_line", "settings": { "text": "It didn't take long to see the potential." } },
+        { "type": "text", "settings": { "text": "<p>The products were there. The identity was there. And most importantly, the ambition between both sides was aligned.</p>" } },
+        { "type": "strike" },
+
+        { "type": "step", "settings": { "year": "2025", "label": "A dedicated European company" } },
+        { "type": "heading", "settings": { "text": "From distribution to something bigger" } },
+        { "type": "text", "settings": { "text": "<p>That shared vision changed the relationship.</p><p>Sportbiz and HUNDRED took the next step together, creating a dedicated European company focused entirely on building the brand across the continent.</p><p>This gave HUNDRED something essential to its global ambition:</p>" } },
+        { "type": "text", "settings": { "style": "callout", "text": "<p>A strong local organisation with the freedom, knowledge and infrastructure to build HUNDRED specifically for Europe.</p>" } },
+        { "type": "text", "settings": { "text": "<p>From athletes and retailers to clubs, content, e-commerce and communities, the goal is to create a brand that feels global – but never distant.</p>" } },
+        { "type": "image", "settings": { "hint": "Billede: klub / community i Europa" } },
+
+        { "type": "step", "settings": { "year": "NOW", "label": "The road ahead" } },
+        { "type": "heading", "settings": { "text": "The road ahead" } },
+        { "type": "text", "settings": { "text": "<p>Europe is another chapter in a much bigger story.</p><p>HUNDRED continues to expand across countries, athletes and sports, but the ambition remains the same:</p>" } },
+        { "type": "big_line", "settings": { "text": "To build one of the world's leading sports brands." } },
+        { "type": "text", "settings": { "text": "<p>Not by becoming another version of what already exists.</p><p>But by seeing things differently, challenging conventions and creating something people want to be part of.</p>" } },
+        { "type": "text", "settings": { "style": "strong", "text": "<p>We're still early in that journey.</p><p>And that's exactly what makes it exciting.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
