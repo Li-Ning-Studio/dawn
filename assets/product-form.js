@@ -2,6 +2,12 @@ if (!customElements.get('product-form')) {
   customElements.define(
     'product-form',
     class ProductForm extends HTMLElement {
+      // Read by the lazy modal after custom-element upgrade. An older cached
+      // form must never be offered finishes it cannot charge or fulfil.
+      get supportsTshirtMaterials() {
+        return true;
+      }
+
       constructor() {
         super();
 
@@ -19,6 +25,82 @@ if (!customElements.get('product-form')) {
 
       getCustomisationItemId(item) {
         return String(item.variant_id || item.id);
+      }
+
+      getTshirtPrintingSelection() {
+        const text = document.getElementById('the-tshirt-text');
+        if (!text) return null;
+
+        const root = document.getElementById('tshirt-printing-modal');
+        const country = document.getElementById('the-tshirt-second-line');
+        const countryText = country?.innerText.trim() || '';
+        const logo = country?.dataset.logoId || '';
+        const materialId = text.dataset.materialId;
+        const materialColors = {
+          standard: '',
+          gold: 'GOLD',
+          hologram: 'HOLOGRAM',
+          reflective: 'REFLECTIVE',
+          'rose-gold': 'ROSE GOLD',
+        };
+        const materialError = root?.dataset.messageMaterialUnavailable || window.cartStrings.error;
+        // Missing material metadata means a legacy modal, not a new selection.
+        // Explicit but invalid metadata must fail closed, including a flag that
+        // was disabled after a specialty selection was committed.
+        const hasMaterial = materialId !== undefined;
+        if (
+          hasMaterial &&
+          (root?.dataset.materialsEnabled !== 'true' ||
+            !Object.prototype.hasOwnProperty.call(materialColors, materialId))
+        ) {
+          throw new Error(materialError);
+        }
+        const secondLineEnabled = hasMaterial
+          ? root?.dataset.materialsSecondLineEnabled === 'true'
+          : window.s3_tshirt_printing_second_line_enabled === true;
+        const hasSecondLine = countryText.length > 0;
+        if (
+          hasSecondLine &&
+          (!secondLineEnabled ||
+            !['lining', 'hndrd'].includes(logo) ||
+            !['INDIA', 'INDONESIA', 'CHINA', 'JAPAN', 'MALAYSIA', 'DENMARK'].includes(countryText))
+        ) {
+          throw new Error(root?.dataset.messageLogoUnavailable || window.cartStrings.error);
+        }
+
+        let variantId = hasSecondLine
+          ? window.s3_tshirt_printing_plus_service_variant_id
+          : window.s3_tshirt_printing_service_variant_id;
+        let textColor = window.s3_tshirt_printing_config?.tshirtTextColor || 'UNKNOWN';
+        if (hasMaterial) {
+          let options;
+          try {
+            options = JSON.parse(root.dataset.materialOptions || '[]');
+          } catch {
+            throw new Error(materialError);
+          }
+          const matches = Array.isArray(options) ? options.filter((option) => option?.id === materialId) : [];
+          const service = hasSecondLine ? matches[0]?.plus : matches[0]?.single;
+          if (matches.length !== 1 || service?.available !== true || !/^\d+$/.test(service.variantId || '')) {
+            throw new Error(materialError);
+          }
+          variantId = service.variantId;
+          if (materialId !== 'standard') textColor = materialColors[materialId];
+        }
+        if (!variantId) throw new Error(materialError);
+
+        return {
+          id: variantId,
+          quantity: 1,
+          properties: {
+            _tshirtText: text.innerText,
+            ...(hasSecondLine ? { _tshirtSecondLine: countryText, _tshirtLogo: logo } : {}),
+            ...(hasMaterial ? { _tshirtMaterial: materialId } : {}),
+            _textColor: textColor,
+            _productSKU: window.s3_current_variant_sku || '',
+            _productName: window.s3_product_name || '',
+          },
+        };
       }
 
       // Shopify's native parent_relationship is the source of truth. The
@@ -215,25 +297,11 @@ if (!customElements.get('product-form')) {
 
         this.handleErrorMessage();
 
-        const theTshirtText = document.getElementById('the-tshirt-text');
-        const theTshirtSecondLine = document.getElementById('the-tshirt-second-line');
-        const tshirtSecondLineText = theTshirtSecondLine?.innerText.trim() || '';
-        const tshirtLogoId = theTshirtSecondLine?.dataset.logoId || '';
-        const hasTshirtSecondLine =
-          window.s3_tshirt_printing_second_line_enabled === true && tshirtSecondLineText.length > 0;
-        // Validate the applied package before locking the form or sending any
-        // cart request. A stale modal must never sell country printing without
-        // the included logo, or silently downgrade it to the one-line service.
-        if (
-          hasTshirtSecondLine &&
-          (!['lining', 'hndrd'].includes(tshirtLogoId) ||
-            !['INDIA', 'INDONESIA', 'CHINA', 'JAPAN', 'MALAYSIA', 'DENMARK'].includes(tshirtSecondLineText) ||
-            !window.s3_tshirt_printing_plus_service_variant_id)
-        ) {
-          this.handleErrorMessage(
-            document.getElementById('tshirt-printing-modal')?.dataset.messageLogoUnavailable ||
-              window.cartStrings.error,
-          );
+        let tshirtPrintingSelection;
+        try {
+          tshirtPrintingSelection = this.getTshirtPrintingSelection();
+        } catch (error) {
+          this.handleErrorMessage(error.message);
           return;
         }
 
@@ -377,23 +445,8 @@ if (!customElements.get('product-form')) {
           });
         }
 
-        //  check if printing is selected
-        const tshirtPrintingServiceVariantId = hasTshirtSecondLine
-          ? window.s3_tshirt_printing_plus_service_variant_id
-          : window.s3_tshirt_printing_service_variant_id;
-
-        if (theTshirtText && tshirtPrintingServiceVariantId && selectedVariantSku) {
-          customisationItems.push({
-            id: tshirtPrintingServiceVariantId,
-            quantity: 1,
-            properties: {
-              _tshirtText: theTshirtText.innerText,
-              ...(hasTshirtSecondLine ? { _tshirtSecondLine: tshirtSecondLineText, _tshirtLogo: tshirtLogoId } : {}),
-              _textColor: window.s3_tshirt_printing_config.tshirtTextColor || 'UNKNOWN',
-              _productSKU: window?.s3_current_variant_sku || '',
-              _productName: window?.s3_product_name || '',
-            },
-          });
+        if (tshirtPrintingSelection && selectedVariantSku) {
+          customisationItems.push(tshirtPrintingSelection);
         }
 
         if (customisationItems.length > 0) {

@@ -1,5 +1,5 @@
 import { render } from 'preact';
-import TShirtPrinting from './TShirtPrinting.tsx';
+import TShirtPrinting, { parsePrintingMaterials } from './TShirtPrinting.tsx';
 
 const preactRoot = document.getElementById('tshirt-printing-modal');
 
@@ -36,6 +36,20 @@ if (preactRoot) {
     singleLinePrice,
     plusPrice,
     clearIconSrc,
+    materialsEnabled,
+    materialsSecondLineEnabled,
+    materialOptions,
+    labelMaterial,
+    labelMaterialNote,
+    labelMaterialUnavailable,
+    messageMaterialUnavailable,
+    lightingTitle,
+    lightingDaylight,
+    lightingOff,
+    lightingOn,
+    lightingDaylightDescription,
+    lightingOffDescription,
+    lightingOnDescription,
   } = preactRoot.dataset;
 
   render(
@@ -80,6 +94,24 @@ if (preactRoot) {
           JP: countryJp || '',
           MY: countryMy || '',
           DK: countryDk || '',
+        },
+      }}
+      materials={{
+        enabled: materialsEnabled === 'true',
+        secondLineEnabled: materialsSecondLineEnabled === 'true',
+        options: parsePrintingMaterials(materialOptions),
+        title: labelMaterial || '',
+        note: labelMaterialNote || '',
+        unavailable: labelMaterialUnavailable || '',
+        unavailableMessage: messageMaterialUnavailable || '',
+        lighting: {
+          title: lightingTitle || '',
+          labels: { daylight: lightingDaylight || '', off: lightingOff || '', on: lightingOn || '' },
+          descriptions: {
+            daylight: lightingDaylightDescription || '',
+            off: lightingOffDescription || '',
+            on: lightingOnDescription || '',
+          },
         },
       }}
     />,
