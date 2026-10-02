@@ -32,8 +32,7 @@
 
   /* hero */
   .hs-hero{padding-block:clamp(80px,12vh,140px) 0;display:grid;gap:clamp(40px,7vh,70px)}
-  .hs-hero-text{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:24px 48px;align-items:end}
-  .hs-hero-text .hs-eyebrow{grid-column:1/-1}
+  .hs-hero-text{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:24px clamp(32px,5vw,80px);align-items:end}  .hs-hero-text .hs-eyebrow{grid-column:1/-1}
   .hs .hs-wordmark{font:italic 900 clamp(84px,16vw,250px)/.8 var(--hs-display);letter-spacing:-.02em;text-transform:uppercase;margin:0;color:var(--hs-gold)}
   .hs-wordmark span{display:inline-block;padding-right:.02em;
     background:linear-gradient(180deg,#ffc94a,var(--hs-gold) 45%,var(--hs-ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
