@@ -1,0 +1,589 @@
+{%- comment -%}
+  HUNDRED – Delivery (fragtside)
+  Hvert land i tabellen er en blok, så priser kan rettes i temaeditoren.
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap">
+
+<style>
+  .hd{
+    --hd-bg:#0a0a0b;--hd-panel:#131315;--hd-line:#26241f;--hd-text:#f3efe7;--hd-soft:#cfc9be;--hd-muted:#8c867b;
+    --hd-gold:#f2a81d;--hd-ember:#e5701a;
+    --hd-display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+    --hd-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    background:var(--hd-bg);color:var(--hd-text);font-family:var(--hd-body);font-size:17px;line-height:1.7;letter-spacing:0;
+    padding-block:clamp(60px,10vh,110px);
+  }
+  .hd *{box-sizing:border-box}
+  .hd-wrap > *{min-width:0}
+  .hd-wrap{max-width:860px;margin-inline:auto;padding-inline:clamp(16px,4vw,32px);display:grid;gap:clamp(48px,7vh,72px)}
+  .hd .hd-title{font:italic 900 clamp(56px,9vw,110px)/.85 var(--hd-display);text-transform:uppercase;letter-spacing:-.01em;margin:0;text-align:center;
+    background:linear-gradient(180deg,#ffc94a,var(--hd-gold) 45%,var(--hd-ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hd .hd-h2{font:italic 800 clamp(30px,4vw,44px)/1 var(--hd-display);text-transform:uppercase;letter-spacing:0;margin:0 0 18px;color:var(--hd-text)}
+  .hd-rte{color:var(--hd-soft)}
+  .hd-rte p{margin:0 0 1em}
+  .hd-rte p:last-child{margin-bottom:0}
+  .hd-rte strong{color:var(--hd-text)}
+  .hd-rte a{color:var(--hd-gold)}
+
+  /* søg */
+  .hd-search{position:relative;margin-bottom:18px}
+  .hd-search input{width:100%;height:52px;padding:0 16px 0 46px;border:1px solid var(--hd-line);border-radius:6px;background:var(--hd-panel);color:var(--hd-text);font:inherit;font-size:16px}
+  .hd-search input::placeholder{color:var(--hd-muted)}
+  .hd-search input:focus{outline:2px solid var(--hd-gold);outline-offset:0;border-color:transparent}
+  .hd-search svg{position:absolute;left:16px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--hd-muted);pointer-events:none}
+  .hd-empty{margin:14px 0 0;color:var(--hd-muted)}
+
+  /* tabel */
+  .hd-table-wrap{overflow-x:auto;border:1px solid var(--hd-line);border-radius:8px;background:var(--hd-panel)}
+  .hd table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:560px}
+  .hd th{position:sticky;top:0;background:var(--hd-panel);text-align:left;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--hd-gold);padding:16px 18px;border-bottom:1px solid var(--hd-line)}
+  .hd td{padding:14px 18px;border-bottom:1px solid var(--hd-line);color:var(--hd-soft)}
+  .hd tr:last-child td{border-bottom:0}
+  .hd tbody tr{transition:background .15s}
+  .hd tbody tr:hover{background:rgba(242,168,29,.06)}
+  .hd td:first-child{color:var(--hd-text);font-weight:600}
+  .hd td.hd-free{color:var(--hd-text)}
+  .hd th:nth-child(n+2),.hd td:nth-child(n+2){white-space:nowrap}
+
+  /* forhandler-boks */
+  .hd-retailer{position:relative;overflow:hidden;border-radius:10px;padding:clamp(28px,4vw,44px);
+    background:radial-gradient(120% 140% at 100% 0%,rgba(229,112,26,.28),transparent 55%),var(--hd-panel);border:1px solid rgba(242,168,29,.35);
+    display:grid;gap:18px;justify-items:start}
+  .hd-retailer .hd-h2{margin:0;color:var(--hd-gold)}
+  .hd .hd-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;background:var(--hd-gold);color:#000;font:700 13px/1 var(--hd-body);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:transform .2s}
+  .hd .hd-btn:hover{transform:translateY(-2px)}
+  .hd .hd-btn:focus-visible{outline:2px solid var(--hd-text);outline-offset:3px}
+
+  .hd-divider{height:1px;background:var(--hd-line);border:0;margin:0}
+
+  @media (max-width:640px){
+    .hd{font-size:16px}
+    .hd th,.hd td{padding:12px 14px}
+  }
+</style>
+
+<div class="hd" id="hd-{{ section.id }}">
+  <div class="hd-wrap">
+    <h1 class="hd-title">{{ section.settings.title | escape }}</h1>
+
+    <div>
+      {%- if section.settings.intro_heading != blank -%}<h2 class="hd-h2">{{ section.settings.intro_heading | escape }}</h2>{%- endif -%}
+      <div class="hd-rte">{{ section.settings.intro }}</div>
+    </div>
+
+    <div>
+      {%- if section.settings.show_search -%}
+        <div class="hd-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <label class="visually-hidden" for="hd-search-{{ section.id }}">{{ section.settings.search_placeholder | escape }}</label>
+          <input id="hd-search-{{ section.id }}" type="search" placeholder="{{ section.settings.search_placeholder | escape }}" autocomplete="off" data-hd-search>
+        </div>
+      {%- endif -%}
+      <div class="hd-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">{{ section.settings.col_country | escape }}</th>
+              <th scope="col">{{ section.settings.col_cost | escape }}</th>
+              <th scope="col">{{ section.settings.col_free | escape }}</th>
+              <th scope="col">{{ section.settings.col_time | escape }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for block in section.blocks -%}
+              <tr data-hd-row="{{ block.settings.country | downcase | escape }}" {{ block.shopify_attributes }}>
+                <td>{{ block.settings.country | escape }}</td>
+                <td>{{ block.settings.cost | escape }}</td>
+                <td class="hd-free">{{ block.settings.free | default: '–' | escape }}</td>
+                <td>{{ block.settings.time | escape }}</td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
+      {%- if section.settings.show_search -%}
+        <p class="hd-empty" data-hd-empty hidden>{{ section.settings.search_empty | escape }}</p>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.retailer_heading != blank -%}
+      <div class="hd-retailer">
+        <h2 class="hd-h2">{{ section.settings.retailer_heading | escape }}</h2>
+        <div class="hd-rte">{{ section.settings.retailer_text }}</div>
+        {%- if section.settings.retailer_button != blank and section.settings.retailer_link != blank -%}
+          <a class="hd-btn" href="{{ section.settings.retailer_link }}">{{ section.settings.retailer_button | escape }} →</a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <hr class="hd-divider">
+
+    <div>
+      {%- if section.settings.uncollected_heading != blank -%}<h2 class="hd-h2">{{ section.settings.uncollected_heading | escape }}</h2>{%- endif -%}
+      <div class="hd-rte">{{ section.settings.uncollected_text }}</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('hd-{{ section.id }}');
+    if (!root) return;
+    var input = root.querySelector('[data-hd-search]');
+    if (!input) return;
+    var rows = Array.prototype.slice.call(root.querySelectorAll('[data-hd-row]'));
+    var empty = root.querySelector('[data-hd-empty]');
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase(), shown = 0;
+      rows.forEach(function (r) {
+        var hit = !q || r.getAttribute('data-hd-row').indexOf(q) !== -1;
+        r.hidden = !hit;
+        if (hit) shown++;
+      });
+      if (empty) empty.hidden = shown > 0;
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "HUNDRED Delivery",
+  "tag": "section",
+  "class": "section-hundred-delivery",
+  "max_blocks": 50,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Overskrift",
+      "default": "Delivery"
+    },
+    {
+      "type": "text",
+      "id": "intro_heading",
+      "label": "Underoverskrift",
+      "default": "International shipping"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Tekst",
+      "default": "<p>HUNDRED Europe ships from our warehouse in Denmark to a wide range of countries across Europe and beyond. Shipping costs and delivery times vary depending on your destination.</p><p>The prices below are <strong>starting prices</strong> and show the lowest available shipping option for each country. Where free shipping is available, the minimum order value is shown in the table.</p><p>The exact shipping methods, costs and estimated delivery times for your order are always shown at checkout.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Tabel"
+    },
+    {
+      "type": "text",
+      "id": "col_country",
+      "label": "Kolonne 1",
+      "default": "Country"
+    },
+    {
+      "type": "text",
+      "id": "col_cost",
+      "label": "Kolonne 2",
+      "default": "Delivery cost"
+    },
+    {
+      "type": "text",
+      "id": "col_free",
+      "label": "Kolonne 3",
+      "default": "Free delivery over"
+    },
+    {
+      "type": "text",
+      "id": "col_time",
+      "label": "Kolonne 4",
+      "default": "Delivery time"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Vis søgefelt",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Søgefelt: tekst",
+      "default": "Find your country"
+    },
+    {
+      "type": "text",
+      "id": "search_empty",
+      "label": "Søgefelt: ingen resultater",
+      "default": "We couldn't find that country. Contact us and we'll help you."
+    },
+    {
+      "type": "header",
+      "content": "Lokal forhandler"
+    },
+    {
+      "type": "text",
+      "id": "retailer_heading",
+      "label": "Overskrift",
+      "default": "Shipping too expensive where you are?"
+    },
+    {
+      "type": "richtext",
+      "id": "retailer_text",
+      "label": "Tekst",
+      "default": "<p>Check out your local retailer. There's a good chance we have a webshop selling HUNDRED in your country, often with lower shipping costs and faster delivery.</p>"
+    },
+    {
+      "type": "text",
+      "id": "retailer_button",
+      "label": "Knaptekst",
+      "default": "Find your local retailer"
+    },
+    {
+      "type": "url",
+      "id": "retailer_link",
+      "label": "Knaplink"
+    },
+    {
+      "type": "header",
+      "content": "Uafhentede pakker"
+    },
+    {
+      "type": "text",
+      "id": "uncollected_heading",
+      "label": "Overskrift",
+      "default": "Uncollected parcels"
+    },
+    {
+      "type": "richtext",
+      "id": "uncollected_text",
+      "label": "Tekst",
+      "default": "<p>If a parcel is not collected from the selected pickup point, or cannot be delivered because of incorrect address details, it will be returned to us.</p><p>Any return shipping costs charged by the carrier, as well as the cost of reshipping the order, are the responsibility of the customer. Refunds for returned orders will exclude any shipping and return costs.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "country",
+      "name": "Land",
+      "settings": [
+        {
+          "type": "text",
+          "id": "country",
+          "label": "Land",
+          "default": "Denmark"
+        },
+        {
+          "type": "text",
+          "id": "cost",
+          "label": "Fragtpris",
+          "default": "5 €"
+        },
+        {
+          "type": "text",
+          "id": "free",
+          "label": "Gratis fragt over",
+          "default": "50 €"
+        },
+        {
+          "type": "text",
+          "id": "time",
+          "label": "Leveringstid",
+          "default": "1–2 working days"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HUNDRED Delivery",
+      "blocks": [
+        {
+          "type": "country",
+          "settings": {
+            "country": "Austria",
+            "cost": "10 €",
+            "free": "120 €",
+            "time": "2–3 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Belgium",
+            "cost": "10 €",
+            "free": "80 €",
+            "time": "2–3 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Bulgaria",
+            "cost": "30 €",
+            "free": "150 €",
+            "time": "4–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Croatia",
+            "cost": "50 €",
+            "free": "180 €",
+            "time": "5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Cyprus",
+            "cost": "60 €",
+            "free": "180 €",
+            "time": "5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Czech Republic",
+            "cost": "20 €",
+            "free": "120 €",
+            "time": "3–4 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Estonia",
+            "cost": "30 €",
+            "free": "150 €",
+            "time": "5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Faroe Islands",
+            "cost": "25 €",
+            "free": "150 €",
+            "time": "3–8 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Finland",
+            "cost": "15 €",
+            "free": "120 €",
+            "time": "3–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "France",
+            "cost": "10 €",
+            "free": "100 €",
+            "time": "2–3 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Germany",
+            "cost": "10 €",
+            "free": "100 €",
+            "time": "2–3 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Greece",
+            "cost": "30 €",
+            "free": "150 €",
+            "time": "5–6 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Greenland",
+            "cost": "30 €",
+            "free": "180 €",
+            "time": "15–20 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Hungary",
+            "cost": "30 €",
+            "free": "150 €",
+            "time": "3–4 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Iceland",
+            "cost": "30 €",
+            "free": "150 €",
+            "time": "4–9 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Ireland",
+            "cost": "30 €",
+            "free": "150 €",
+            "time": "5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Italy",
+            "cost": "15 €",
+            "free": "150 €",
+            "time": "3–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Latvia",
+            "cost": "25 €",
+            "free": "150 €",
+            "time": "5–6 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Lithuania",
+            "cost": "25 €",
+            "free": "150 €",
+            "time": "4–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Luxembourg",
+            "cost": "10 €",
+            "free": "80 €",
+            "time": "2–3 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Malta",
+            "cost": "50 €",
+            "free": "200 €",
+            "time": "5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Netherlands",
+            "cost": "10 €",
+            "free": "100 €",
+            "time": "2–3 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Norway",
+            "cost": "20 €",
+            "free": "100 €",
+            "time": "2–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Poland",
+            "cost": "20 €",
+            "free": "120 €",
+            "time": "2–3 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Portugal",
+            "cost": "20 €",
+            "free": "150 €",
+            "time": "4–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Romania",
+            "cost": "30 €",
+            "free": "150 €",
+            "time": "3–4 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Slovakia",
+            "cost": "15 €",
+            "free": "150 €",
+            "time": "3–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Slovenia",
+            "cost": "25 €",
+            "free": "150 €",
+            "time": "4 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Spain",
+            "cost": "20 €",
+            "free": "150 €",
+            "time": "4–5 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Sweden",
+            "cost": "10 €",
+            "free": "80 €",
+            "time": "2–4 working days"
+          }
+        },
+        {
+          "type": "country",
+          "settings": {
+            "country": "Switzerland",
+            "cost": "15 €",
+            "free": "150 €",
+            "time": "3–5 working days"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
