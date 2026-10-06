@@ -98,13 +98,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/01_Banner.jpg",
-        "mobile_image": "shopify://shop_images/01_50ff366d-0007-458b-8879-eb4d89bfc086.jpg",
-        "subtitle": "All Round",
-        "title": "EVERY CORNER. ONE ANSWER.",
-        "description": "The shoe that keeps up with players who do it all",
+        "image": "shopify://shop_images/1_241a6b31-1bdc-4c25-920e-ee4e3e069e3e.png",
+        "mobile_image": "shopify://shop_images/1R_96dc1b6b-f939-4b34-b625-97e0bddeb93c.png",
+        "subtitle": "RANGER FORCE",
+        "title": "OWN EVERY STEP.",
+        "description": "Grip with confidence. Land with comfort. Stay ready for the next move.",
         "button_text": "MAKE YOUR MOVE",
-        "link_to": "shopify://pages/all-round",
+        "link_to": "shopify://products/ranger-force",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -116,7 +116,7 @@
       "settings": {
         "title": "One Shoe. Full Court.",
         "products": [
-          "all-round"
+          "ranger-force"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -128,13 +128,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_e6cd7699-fe86-4bd8-b5b4-9c9d9ec61a8e.png",
-        "mobile_image": "shopify://shop_images/Banner_Responsive_9bb705d6-ba2c-4138-bd2b-988c89249d05.jpg",
-        "subtitle": "Axforce Warrior",
-        "title": "MAKE THE COURT HEAR IT",
-        "description": "Head-heavy power. A flexible shaft. Smashes that announce themselves.",
+        "image": "shopify://shop_images/New_Banner.jpg",
+        "mobile_image": "shopify://shop_images/New_Banner_R.jpg",
+        "subtitle": "Axforce Canon",
+        "title": "POWER HAS A NEW NAME",
+        "description": "Bring power to every attack with a head-heavy balance and a flexible shaft built for commanding smashes.",
         "button_text": "CHECK IT OUT",
-        "link_to": "shopify://products/axforce-warrior-5u",
+        "link_to": "shopify://products/axforce-cannon-4u",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -144,10 +144,13 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "AxForce Warrior Edition",
+        "title": "AxForce Cannon Edition",
         "products": [
-          "axforce-warrior",
-          "axforce-warrior-5u"
+          "axforce-cannon-4u",
+          "axforce-cannon-4u-copy",
+          "axforce-cannon-5u",
+          "axforce-cannon-5u-light",
+          "axforce-cannon-6u"
         ],
         "show_color_variants": true,
         "color_scheme": "",
