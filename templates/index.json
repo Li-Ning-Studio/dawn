@@ -135,13 +135,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/01_9c3bfcb4-600f-4dc6-be75-14da01cd0a11.jpg",
-        "mobile_image": "shopify://shop_images/02_87b440e2-56d0-4401-8afa-36ac35cbb1e2.jpg",
-        "subtitle": "Atomic-X-Black Knight Edition  Racket",
-        "title": "UNLEASH UNMATCHED POWER",
-        "description": "Fortified with a seamless built-in T-Joint for faster recovery, this racket delivers ultimate power and precision straight to your game.",
-        "button_text": "Unleash the Knight!",
-        "link_to": "shopify://products/atomic-x-black-knight",
+        "image": "shopify://shop_images/ba_2c8be6ef-4093-4580-b7c9-06e2ca583299.jpg",
+        "mobile_image": "shopify://shop_images/respo_04d193d3-5653-4549-b009-990d8d024701.jpg",
+        "subtitle": "Flutter Series",
+        "title": "Your style. Your Flutter.",
+        "description": "Power, control or speed. Find the Flutter that matches your game.",
+        "button_text": "SHOP FLUTTER",
+        "link_to": "https://in.hndrd.co/collections/flutter-series",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 36
@@ -151,11 +151,17 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Glory Series",
+        "title": "Flutter Series",
         "products": [
-          "atomic-x-black-knight"
+          "flutter-ff-attk-1",
+          "flutter-ff-attk",
+          "flutter-ff-zoom",
+          "flutter-7-attk",
+          "flutter-s-attk",
+          "flutter-s-ctrl",
+          "flutter-s-zoom"
         ],
-        "show_color_variants": true,
+        "show_color_variants": false,
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
@@ -194,13 +200,13 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/Banner_2_a0ade6e9-eb0f-4886-9dfd-355491bfb19e.jpg",
-        "mobile_image": "shopify://shop_images/Banner_2_R_f5b9933d-41b7-4212-9b64-6fdcc9afb938.jpg",
-        "subtitle": "Flareon Series",
-        "title": "Made to Move Faster",
-        "description": "React quicker and play sharper with a lightweight, speed-focused frame.",
-        "button_text": "Shop Now",
-        "link_to": "shopify://products/flareon-100-5u",
+        "image": "shopify://shop_images/Main_cd62345b-5f32-477b-8a12-8f63014708b9.jpg",
+        "mobile_image": "shopify://shop_images/Main_R_6f44ffad-eeb6-4a94-99bb-b8d11121d2e8.jpg",
+        "subtitle": "Nitrix Thunder Series",
+        "title": "Bring the thunder",
+        "description": "Swing fast. Smash hard. A lightweight carbon frame built for relentless attack.",
+        "button_text": "UNLEASH THE THUNDER",
+        "link_to": "shopify://products/nitrix-thunder",
         "color_scheme": "scheme-1",
         "padding_top": 24,
         "padding_bottom": 24
@@ -210,16 +216,12 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "Flareon Series",
+        "title": "Nitrix Thunder Series",
         "products": [
-          "flareon-100-5u",
-          "flareon-typhoon-5u",
-          "flareon-700",
-          "flareon-100",
-          "flareon-700-3u",
-          "flareon-typhoon"
+          "nitrix-thunder",
+          "nitrix-thunder-5u"
         ],
-        "show_color_variants": false,
+        "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 20
