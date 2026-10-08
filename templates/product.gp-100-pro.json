@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "custom_liquid_QT7xPW": {
+      "type": "custom-liquid",
+      "name": "GP 100 Pro specification order",
+      "settings": {
+        "custom_liquid": "<style>#shopify-section-{{ section.id }} { display: none; }</style>\n{% if product.id == 15416257314916 %}\n<script>\n(() => {\n  const applyOrder = () => {\n    const details = document.querySelector('[id^=\"Details-collapsible_tab_McAyVV-\"]');\n    if (!details) return;\n    const label = Array.from(details.querySelectorAll('p')).find(p => p.textContent.trim().toLowerCase() === 'material');\n    const list = label?.parentElement?.parentElement;\n    if (!list) return;\n    const order = ['material', 'grip type', 'grip texture', 'thickness', 'width', 'length', 'pack quantity', 'sweat absorption', 'slip resistance', 'comfort', 'durability'];\n    const rows = Array.from(list.children).filter(el => el.tagName === 'DIV');\n    const selected = order.map(name => rows.find(row => row.firstElementChild?.textContent.trim().toLowerCase() === name));\n    if (selected.some(row => !row) || selected.every((row, index) => rows[index] === row)) return;\n    const fragment = document.createDocumentFragment();\n    selected.forEach(row => {\n      const separator = row.nextElementSibling;\n      fragment.append(row);\n      if (separator?.tagName === 'HR') fragment.append(separator);\n    });\n    list.prepend(fragment);\n  };\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', applyOrder, { once: true });\n  else applyOrder();\n  document.addEventListener('shopify:section:load', applyOrder);\n})();\n</script>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -221,6 +231,7 @@
     }
   },
   "order": [
+    "custom_liquid_QT7xPW",
     "main",
     "175949369954284270",
     "related-products",
