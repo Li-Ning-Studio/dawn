@@ -17,33 +17,306 @@
         "padding_bottom": 28
       }
     },
+    "media_xd3Urd": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_1_77254b36-7ffb-40bc-a5ff-275084ee0926.jpg",
+        "mobile_image": "shopify://shop_images/Banner_1_aaed5d2f-3c05-4371-a963-2d89c98fd0f0.jpg",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_aNbzkm": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .ztronic-hero {\n    width: 100%;\n    min-height: 480px;\n    background: #0d0d0d;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 65px 24px;\n    box-sizing: border-box;\n    overflow: hidden;\n  }\n\n  .ztronic-hero__content {\n    width: 100%;\n    max-width: 1250px;\n    margin: 0 auto;\n  }\n\n  /* INTRO */\n  .ztronic-hero__eyebrow {\n    margin: 0 0 17px;\n    color: #aaa8a5;\n    font-family: \"Figtree\", sans-serif;\n    font-size: 21px;\n    font-weight: 500;\n    line-height: 1.35;\n    letter-spacing: -0.2px;\n  }\n\n  /* PRODUCT NAME */\n  .ztronic-hero__title {\n    margin: 0;\n    white-space: nowrap;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(64px, 6.5vw, 108px);\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: -3.5px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 0%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  /* TAGLINE */\n  .ztronic-hero__subtitle {\n    margin: 15px 0 0;\n    color: #d0cfcd;\n    font-family: \"Figtree\", sans-serif;\n    font-size: 25px;\n    font-weight: 600;\n    line-height: 1.25;\n    letter-spacing: 0;\n    text-transform: uppercase;\n  }\n\n  /* CTA SPACING */\n  .ztronic-hero__cta-wrap {\n    margin-top: 34px;\n  }\n\n  /* CTA */\n  .ztronic-hero__cta {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    min-width: 325px;\n    min-height: 66px;\n    padding: 0 40px;\n\n    border: 2px solid #7C7872;\n    border-radius: 999px;\n\n    /* ALWAYS TRANSPARENT */\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 14px;\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: 2.2px;\n    text-transform: uppercase;\n    text-decoration: none;\n\n    box-sizing: border-box;\n\n    transition:\n      transform 0.3s ease,\n      border-color 0.3s ease,\n      color 0.3s ease;\n  }\n\n  /* REMOVE ALL CTA FILL LAYERS */\n  .ztronic-hero__cta::before,\n  .ztronic-hero__cta::after {\n    content: none !important;\n    display: none !important;\n  }\n\n  .ztronic-hero__cta span {\n    position: relative;\n  }\n\n  /* HOVER - NO FILL */\n  .ztronic-hero__cta:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n    border-color: #7C7872;\n\n    transform: translateY(-2px);\n  }\n\n  .ztronic-hero__cta:focus,\n  .ztronic-hero__cta:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #7C7872;\n    border-color: #7C7872;\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .ztronic-hero {\n      min-height: auto;\n      padding: 48px 16px 50px;\n    }\n\n    .ztronic-hero__content {\n      max-width: 100%;\n    }\n\n    .ztronic-hero__eyebrow {\n      margin-bottom: 14px;\n      font-size: 15px;\n      line-height: 1.35;\n      letter-spacing: -0.1px;\n    }\n\n    .ztronic-hero__title {\n      white-space: nowrap;\n      font-size: clamp(28px, 9.2vw, 44px);\n      line-height: 1;\n      letter-spacing: -1.5px;\n    }\n\n    .ztronic-hero__subtitle {\n      margin-top: 16px;\n      font-size: 15px;\n      line-height: 1.3;\n      letter-spacing: 0;\n    }\n\n    .ztronic-hero__cta-wrap {\n      margin-top: 30px;\n    }\n\n    .ztronic-hero__cta {\n      min-width: 260px;\n      min-height: 56px;\n      padding: 0 28px;\n\n      border-width: 1.5px;\n\n      font-size: 12px;\n      letter-spacing: 1.8px;\n    }\n  }\n\n\n  /* VERY SMALL MOBILE */\n  @media screen and (max-width: 390px) {\n\n    .ztronic-hero {\n      padding-left: 12px;\n      padding-right: 12px;\n    }\n\n    .ztronic-hero__title {\n      font-size: 8.7vw;\n      letter-spacing: -1px;\n    }\n\n    .ztronic-hero__eyebrow {\n      font-size: 14px;\n    }\n\n    .ztronic-hero__subtitle {\n      font-size: 14px;\n    }\n\n    .ztronic-hero__cta {\n      min-width: 245px;\n      min-height: 54px;\n      font-size: 11px;\n      letter-spacing: 1.6px;\n    }\n  }\n</style>\n\n\n<section class=\"ztronic-hero\">\n\n  <div class=\"ztronic-hero__content\">\n\n    <p class=\"ztronic-hero__eyebrow\">\n      Built for fast attacking power.\n    </p>\n\n    <h2 class=\"ztronic-hero__title\">\n      Z-TRONIC 100 TI\n    </h2>\n\n    <p class=\"ztronic-hero__subtitle\">\n      STRIKES WITH TITANIUM POWER\n    </p>\n\n    <div class=\"ztronic-hero__cta-wrap\">\n\n      <a\n        href=\"/products/z-tronic-100-ti\"\n        class=\"ztronic-hero__cta\"\n      >\n        <span>EXPLORE Z-TRONIC 100 TI</span>\n      </a>\n\n    </div>\n\n  </div>\n\n</section>",
+        "custom_liquid": "<style>\n  .ztronic-hero {\n    width: 100%;\n    min-height: 480px;\n    background: #0d0d0d;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 6px 24px;\n    box-sizing: border-box;\n    overflow: hidden;\n  }\n\n  .ztronic-hero__content {\n    width: 100%;\n    max-width: 1250px;\n    margin: 0 auto;\n  }\n\n  /* INTRO */\n  .ztronic-hero__eyebrow {\n    margin: 0 0 17px;\n    color: #aaa8a5;\n    font-family: \"Figtree\", sans-serif;\n    font-size: 21px;\n    font-weight: 500;\n    line-height: 1.35;\n    letter-spacing: -0.2px;\n  }\n\n  /* PRODUCT NAME */\n  .ztronic-hero__title {\n    margin: 0;\n    white-space: nowrap;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(64px, 6.5vw, 108px);\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: -3.5px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 0%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  /* TAGLINE */\n  .ztronic-hero__subtitle {\n    margin: 15px 0 0;\n    color: #d0cfcd;\n    font-family: \"Figtree\", sans-serif;\n    font-size: 25px;\n    font-weight: 600;\n    line-height: 1.25;\n    letter-spacing: 0;\n    text-transform: uppercase;\n  }\n\n  /* CTA SPACING */\n  .ztronic-hero__cta-wrap {\n    margin-top: 34px;\n  }\n\n  /* CTA */\n  .ztronic-hero__cta {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    min-width: 325px;\n    min-height: 66px;\n    padding: 0 40px;\n\n    border: 2px solid #7C7872;\n    border-radius: 999px;\n\n    /* ALWAYS TRANSPARENT */\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 14px;\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: 2.2px;\n    text-transform: uppercase;\n    text-decoration: none;\n\n    box-sizing: border-box;\n\n    transition:\n      transform 0.3s ease,\n      border-color 0.3s ease,\n      color 0.3s ease;\n  }\n\n  /* REMOVE ALL CTA FILL LAYERS */\n  .ztronic-hero__cta::before,\n  .ztronic-hero__cta::after {\n    content: none !important;\n    display: none !important;\n  }\n\n  .ztronic-hero__cta span {\n    position: relative;\n  }\n\n  /* HOVER - NO FILL */\n  .ztronic-hero__cta:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n    border-color: #7C7872;\n\n    transform: translateY(-2px);\n  }\n\n  .ztronic-hero__cta:focus,\n  .ztronic-hero__cta:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #7C7872;\n    border-color: #7C7872;\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .ztronic-hero {\n      min-height: auto;\n      padding: 48px 16px 50px;\n    }\n\n    .ztronic-hero__content {\n      max-width: 100%;\n    }\n\n    .ztronic-hero__eyebrow {\n      margin-bottom: 14px;\n      font-size: 15px;\n      line-height: 1.35;\n      letter-spacing: -0.1px;\n    }\n\n    .ztronic-hero__title {\n      white-space: nowrap;\n      font-size: clamp(28px, 9.2vw, 44px);\n      line-height: 1;\n      letter-spacing: -1.5px;\n    }\n\n    .ztronic-hero__subtitle {\n      margin-top: 16px;\n      font-size: 15px;\n      line-height: 1.3;\n      letter-spacing: 0;\n    }\n\n    .ztronic-hero__cta-wrap {\n      margin-top: 30px;\n    }\n\n    .ztronic-hero__cta {\n      min-width: 260px;\n      min-height: 56px;\n      padding: 0 28px;\n\n      border-width: 1.5px;\n\n      font-size: 12px;\n      letter-spacing: 1.8px;\n    }\n  }\n\n\n  /* VERY SMALL MOBILE */\n  @media screen and (max-width: 390px) {\n\n    .ztronic-hero {\n      padding-left: 12px;\n      padding-right: 12px;\n    }\n\n    .ztronic-hero__title {\n      font-size: 8.7vw;\n      letter-spacing: -1px;\n    }\n\n    .ztronic-hero__eyebrow {\n      font-size: 14px;\n    }\n\n    .ztronic-hero__subtitle {\n      font-size: 14px;\n    }\n\n    .ztronic-hero__cta {\n      min-width: 245px;\n      min-height: 54px;\n      font-size: 11px;\n      letter-spacing: 1.6px;\n    }\n  }\n</style>\n\n\n<section class=\"ztronic-hero\">\n\n  <div class=\"ztronic-hero__content\">\n\n    <p class=\"ztronic-hero__eyebrow\">\n      BĐược chế tạo cho khả năng tấn công chớp nhoáng.\n    </p>\n\n    <h2 class=\"ztronic-hero__title\">\n      Z-TRONIC 100 TI\n    </h2>\n\n    <p class=\"ztronic-hero__subtitle\">\n      TẤN CÔNG VỚI SỨC MẠNH TITANIUM\n    </p>\n\n    <div class=\"ztronic-hero__cta-wrap\">\n\n      <a\n        href=\"/products/z-tronic-100-ti\"\n        class=\"ztronic-hero__cta\"\n      >\n        <span>KHÁM PHÁ Z-TRONIC 100 TI</span>\n      </a>\n\n    </div>\n\n  </div>\n\n</section>",
         "color_scheme": "scheme-4",
-        "padding_top": 8,
+        "padding_top": 0,
         "padding_bottom": 8
+      }
+    },
+    "media_ReGb8g": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_2_6f438662-6df2-4c48-b36a-0519ffd589a0.jpg",
+        "mobile_image": "shopify://shop_images/2.1.jpg",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_AqGw7V": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .ti-flex-section {\n    width: 100%;\n    background: #0d0d0d;\n    text-align: center;\n    box-sizing: border-box;\n    overflow: hidden;\n\n    padding: 62px 24px 58px;\n  }\n\n  .ti-flex-inner {\n    width: 100%;\n    max-width: 1300px;\n    margin: 0 auto;\n  }\n\n  /* MAIN HEADLINE */\n  .ti-flex-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(50px, 5.1vw, 82px);\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: -2.8px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  /* DESCRIPTION */\n  .ti-flex-description {\n    max-width: 850px;\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n    line-height: 1.45;\n    letter-spacing: -0.15px;\n\n    color: #b9b7b4;\n  }\n\n\n  /* =========================\n     CTA\n  ========================= */\n\n  .ti-flex-cta-wrap {\n    margin-top: 32px;\n  }\n\n  .ti-flex-cta {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    min-width: 300px;\n    height: 62px;\n    padding: 0 38px;\n\n    /* ALWAYS TRANSPARENT */\n    background: transparent !important;\n    background-image: none !important;\n\n    border: 1.5px solid #7C7872;\n    border-radius: 999px;\n\n    color: #FFFFFF;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1;\n\n    letter-spacing: 2.1px;\n    text-transform: uppercase;\n    text-decoration: none;\n\n    box-sizing: border-box;\n\n    transition:\n      transform 0.3s ease,\n      border-color 0.3s ease,\n      color 0.3s ease;\n  }\n\n  /* REMOVE ALL FILL LAYERS */\n  .ti-flex-cta::before,\n  .ti-flex-cta::after {\n    content: none !important;\n    display: none !important;\n    background: none !important;\n  }\n\n  .ti-flex-cta span {\n    position: relative;\n  }\n\n  /* HOVER — STILL TRANSPARENT */\n  .ti-flex-cta:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n    border-color: #7C7872;\n\n    transform: translateY(-2px);\n  }\n\n  /* CLICK / FOCUS — STILL TRANSPARENT */\n  .ti-flex-cta:focus,\n  .ti-flex-cta:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #7C7872;\n    border-color: #7C7872;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .ti-flex-section {\n      padding: 55px 22px 52px;\n    }\n\n    .ti-flex-title {\n      font-size: clamp(43px, 6vw, 65px);\n      letter-spacing: -2px;\n    }\n\n    .ti-flex-description {\n      max-width: 720px;\n      font-size: 18px;\n    }\n\n    .ti-flex-cta-wrap {\n      margin-top: 30px;\n    }\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .ti-flex-section {\n      padding: 42px 18px 40px;\n    }\n\n    .ti-flex-inner {\n      max-width: 100%;\n    }\n\n    .ti-flex-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n      line-height: 1.02;\n      letter-spacing: -1.6px;\n    }\n\n    .ti-flex-description {\n      max-width: 355px;\n      margin-top: 15px;\n\n      font-size: 15px;\n      font-weight: 500;\n      line-height: 1.45;\n      letter-spacing: 0;\n    }\n\n    .ti-flex-cta-wrap {\n      margin-top: 27px;\n    }\n\n    .ti-flex-cta {\n      min-width: 260px;\n      height: 56px;\n      padding: 0 28px;\n\n      border-width: 1.5px;\n\n      font-size: 12px;\n      letter-spacing: 1.8px;\n    }\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .ti-flex-section {\n      padding: 38px 14px 36px;\n    }\n\n    .ti-flex-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .ti-flex-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n\n    .ti-flex-cta {\n      min-width: 245px;\n      height: 54px;\n      padding: 0 24px;\n\n      font-size: 11px;\n      letter-spacing: 1.6px;\n    }\n  }\n</style>\n\n\n<section class=\"ti-flex-section\">\n\n  <div class=\"ti-flex-inner\">\n\n    <h2 class=\"ti-flex-title\">\n      FAST FLEX. FASTER RECOVERY.\n    </h2>\n\n    <p class=\"ti-flex-description\">\n      A small titanium wire helps the shaft snap back 11.8% faster,\n      getting you to the next shot way quicker than a regular racket.\n    </p>\n\n    <div class=\"ti-flex-cta-wrap\">\n\n      <a\n        href=\"/products/z-tronic-100-ti\"\n        class=\"ti-flex-cta\"\n      >\n        <span>SHOP Z-TRONIC 100 TI</span>\n      </a>\n\n    </div>\n\n  </div>\n\n</section>",
+        "custom_liquid": "<style>\n  .ti-flex-section {\n    width: 100%;\n    background: #0d0d0d;\n    text-align: center;\n    box-sizing: border-box;\n    overflow: hidden;\n\n    padding: 69px 20px 59px;\n  }\n\n  .ti-flex-inner {\n    width: 100%;\n    max-width: 1500px;\n    margin: 0 auto;\n  }\n\n  /* MAIN HEADLINE */\n  .ti-flex-title {\n    margin: ;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(60px, 5.1vw, 80px);\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: -2.8px;\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n  /* DESCRIPTION */\n  .ti-flex-description {\n    max-width: 850px;\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n    line-height: 1.45;\n    letter-spacing: -0.15px;\n\n    color: #b9b7b4;\n  }\n\n\n  /* =========================\n     CTA\n  ========================= */\n\n  .ti-flex-cta-wrap {\n    margin-top: 32px;\n  }\n\n  .ti-flex-cta {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n\n    min-width: 300px;\n    height: 62px;\n    padding: 0 38px;\n\n    /* ALWAYS TRANSPARENT */\n    background: transparent !important;\n    background-image: none !important;\n\n    border: 1.5px solid #7C7872;\n    border-radius: 999px;\n\n    color: #FFFFFF;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1;\n\n    letter-spacing: 2.1px;\n    text-transform: uppercase;\n    text-decoration: none;\n\n    box-sizing: border-box;\n\n    transition:\n      transform 0.3s ease,\n      border-color 0.3s ease,\n      color 0.3s ease;\n  }\n\n  /* REMOVE ALL FILL LAYERS */\n  .ti-flex-cta::before,\n  .ti-flex-cta::after {\n    content: none !important;\n    display: none !important;\n    background: none !important;\n  }\n\n  .ti-flex-cta span {\n    position: relative;\n  }\n\n  /* HOVER — STILL TRANSPARENT */\n  .ti-flex-cta:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n    border-color: #7C7872;\n\n    transform: translateY(-2px);\n  }\n\n  /* CLICK / FOCUS — STILL TRANSPARENT */\n  .ti-flex-cta:focus,\n  .ti-flex-cta:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #7C7872;\n    border-color: #7C7872;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .ti-flex-section {\n      padding: 55px 22px 52px;\n    }\n\n    .ti-flex-title {\n      font-size: clamp(43px, 6vw, 65px);\n      letter-spacing: -2px;\n    }\n\n    .ti-flex-description {\n      max-width: 720px;\n      font-size: 18px;\n    }\n\n    .ti-flex-cta-wrap {\n      margin-top: 30px;\n    }\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .ti-flex-section {\n      padding: 42px 18px 40px;\n    }\n\n    .ti-flex-inner {\n      max-width: 100%;\n    }\n\n    .ti-flex-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n      line-height: 1.02;\n      letter-spacing: -1.6px;\n    }\n\n    .ti-flex-description {\n      max-width: 355px;\n      margin-top: 15px;\n\n      font-size: 15px;\n      font-weight: 500;\n      line-height: 1.45;\n      letter-spacing: 0;\n    }\n\n    .ti-flex-cta-wrap {\n      margin-top: 27px;\n    }\n\n    .ti-flex-cta {\n      min-width: 260px;\n      height: 56px;\n      padding: 0 28px;\n\n      border-width: 1.5px;\n\n      font-size: 12px;\n      letter-spacing: 1.8px;\n    }\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .ti-flex-section {\n      padding: 38px 14px 36px;\n    }\n\n    .ti-flex-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .ti-flex-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n\n    .ti-flex-cta {\n      min-width: 245px;\n      height: 54px;\n      padding: 0 24px;\n\n      font-size: 11px;\n      letter-spacing: 1.6px;\n    }\n  }\n</style>\n\n\n<section class=\"ti-flex-section\">\n\n  <div class=\"ti-flex-inner\">\n\n    <h2 class=\"ti-flex-title\">\n   ĐỘ DẺO NHANH.PHỤC HỒI NHANH HƠN.\n    </h2>\n\n    <p class=\"ti-flex-description\">\n      Một sợi dây titan nhỏ giúp cán vợt trở lại vị trí ban đầu nhanh hơn 11,8%, giúp bạn thực hiện cú đánh tiếp theo nhanh hơn nhiều so với vợt thông thường.\n    </p>\n\n    <div class=\"ti-flex-cta-wrap\">\n\n      <a\n        href=\"/products/z-tronic-100-ti\"\n        class=\"ti-flex-cta\"\n      >\n        <span>MUA Z-TRONIC 100 TI</span>\n      </a>\n\n    </div>\n\n  </div>\n\n</section>",
         "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "media_KyN9Xc": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Banner_4_3ffc59dc-e1fb-4d44-991f-0f5a1bd730eb.jpg",
+        "mobile_image": "shopify://shop_images/A_4.1.jpg",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_6G3qXA": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  .rattle-section {\n    width: 100%;\n    overflow: hidden;\n    box-sizing: border-box;\n\n    background: #0D0D0D;\n    text-align: center;\n\n    padding: 60px 24px 68px;\n  }\n\n  .rattle-inner {\n    width: 100%;\n    max-width: 1300px;\n\n    margin: 0 auto;\n  }\n\n\n  /* =========================\n     HEADLINE\n  ========================= */\n\n  .rattle-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(54px, 5.8vw, 94px);\n    font-weight: 700;\n\n    line-height: 0.98;\n    letter-spacing: -3.5px;\n\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .rattle-description {\n    width: 100%;\n    max-width: 920px;\n\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n\n    line-height: 1.45;\n    letter-spacing: -0.2px;\n\n    color: #c1bfbd;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .rattle-section {\n      padding: 54px 22px 60px;\n    }\n\n    .rattle-title {\n      font-size: clamp(45px, 6.5vw, 66px);\n      letter-spacing: -2.5px;\n    }\n\n    .rattle-description {\n      max-width: 760px;\n\n      margin-top: 17px;\n\n      font-size: 18px;\n    }\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .rattle-section {\n      padding: 43px 16px 50px;\n    }\n\n    .rattle-inner {\n      max-width: 100%;\n    }\n\n    .rattle-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n\n      line-height: 1;\n      letter-spacing: -1.6px;\n\n      white-space: nowrap;\n    }\n\n    .rattle-description {\n      max-width: 355px;\n\n      margin-top: 15px;\n\n      font-size: 15px;\n      line-height: 1.45;\n\n      letter-spacing: 0;\n\n      color: #bbb9b7;\n    }\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .rattle-section {\n      padding: 39px 12px 46px;\n    }\n\n    .rattle-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .rattle-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n  }\n\n</style>\n\n\n<section class=\"rattle-section\">\n\n  <div class=\"rattle-inner\">\n\n    <h2 class=\"rattle-title\">\n      FEEL NO RATTLE\n    </h2>\n\n    <p class=\"rattle-description\">\n      Foam intercepts vibration before it travels, leaving a controlled\n      and connected feel.\n    </p>\n\n  </div>\n\n</section>",
+        "custom_liquid": "<style>\n  .rattle-section {\n    width: 100%;\n    overflow: hidden;\n    box-sizing: border-box;\n\n    background: #0D0D0D;\n    text-align: center;\n\n    padding: 60px 24px 68px;\n  }\n\n  .rattle-inner {\n    width: 100%;\nheight: 150%;\n    max-width: 1300px;\n\n    margin: 0 auto;\n  }\n\n\n  /* =========================\n     HEADLINE\n  ========================= */\n\n  .rattle-title {\n    margin: 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: clamp(64px, 5.8vw, 64px);\n    font-weight: 700;\n\n    line-height: 0.98;\n    letter-spacing: -3.5px;\n\n    text-transform: uppercase;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .rattle-description {\n    width: 100%;\n    max-width: 920px;\n\n    margin: 18px auto 0;\n\n    font-family: \"Figtree\", sans-serif;\n    font-size: 20px;\n    font-weight: 500;\n\n    line-height: 1.45;\n    letter-spacing: -0.2px;\n\n    color: #c1bfbd;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .rattle-section {\n      padding: 54px 22px 60px;\n    }\n\n    .rattle-title {\n      font-size: clamp(45px, 6.5vw, 66px);\n      letter-spacing: -2.5px;\n    }\n\n    .rattle-description {\n      max-width: 760px;\n\n      margin-top: 17px;\n\n      font-size: 18px;\n    }\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .rattle-section {\n      padding: 43px 16px 50px;\n    }\n\n    .rattle-inner {\n      max-width: 100%;\n    }\n\n    .rattle-title {\n      font-size: clamp(34px, 10.5vw, 48px);\n\n      line-height: 1;\n      letter-spacing: -1.6px;\n\n      white-space: nowrap;\n    }\n\n    .rattle-description {\n      max-width: 355px;\n\n      margin-top: 15px;\n\n      font-size: 15px;\n      line-height: 1.45;\n\n      letter-spacing: 0;\n\n      color: #bbb9b7;\n    }\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .rattle-section {\n      padding: 39px 12px 46px;\n    }\n\n    .rattle-title {\n      font-size: 9.8vw;\n      letter-spacing: -1.2px;\n    }\n\n    .rattle-description {\n      max-width: 330px;\n      font-size: 14px;\n    }\n  }\n\n</style>\n\n\n<section class=\"rattle-section\">\n\n  <div class=\"rattle-inner\">\n\n    <h2 class=\"rattle-title\">\n      KHÔNG CÓ TIẾNG KÊU LẠC\n    </h2>\n\n    <p class=\"rattle-description\">\n     Lớp mút hấp thụ rung động trước khi chúng lan truyền, mang lại cảm giác ổn định và liền mạch.\n    </p>\n\n  </div>\n\n</section>",
         "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
-        "padding_top": 28,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_rPEa3a": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zhEkng": {
+          "type": "heading",
+          "settings": {
+            "heading": "Công nghệ Nano Power&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_i8Cx8V": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Các chi tiết gia cố bằng công nghệ nano trên toàn bộ khung vợt giúp tăng cường độ bền cấu trúc mà không làm tăng trọng lượng, giúp vợt luôn vững chắc khi chịu những cú đánh mạnh lặp đi lặp lại.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_yAMAP4": {
+          "type": "button",
+          "settings": {
+            "button_label": "MUA Z-TRONIC 100TI",
+            "button_link": "shopify://products/z-tronic-100-ti",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_zhEkng",
+        "text_i8Cx8V",
+        "button_yAMAP4"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_4_1cf76331-e8ac-4909-ac75-89f81baefb3b.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_mqri3W": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BnpQ3D": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sợi carbon Hyperweave&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_nyqHgb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loại sợi carbon cao cấp nhất được sử dụng trong sản xuất vợt. Giữ độ cứng vững khi chịu lực và phục hồi hình dạng ngay lập tức.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_8afUWG": {
+          "type": "button",
+          "settings": {
+            "button_label": "MUA Z-TRONIC 100TI",
+            "button_link": "shopify://products/z-tronic-100-ti",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_BnpQ3D",
+        "text_nyqHgb",
+        "button_8afUWG"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_5_6a2e356f-909b-4b5d-bc79-85032f3124f4.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_JPCBYX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eQDaDg": {
+          "type": "heading",
+          "settings": {
+            "heading": "M46X Nano Graphite&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_3pTCGV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loại sợi carbon cao cấp nhất được sử dụng trong sản xuất vợt. Giữ độ cứng vững khi chịu lực và phục hồi hình dạng ngay lập tức.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_TAQGqT": {
+          "type": "button",
+          "settings": {
+            "button_label": "KHÁM PHÁ Z-TRONIC 100 TI",
+            "button_link": "shopify://products/z-tronic-100-ti",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_eQDaDg",
+        "text_3pTCGV",
+        "button_TAQGqT"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_1_ba522b44-08ec-4e1b-a467-9e955df408d1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_kVfryH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_J78xnw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cân bằng đầu nặng&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_dr9BNH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Khi trọng tâm dồn về phía trước, các cú smash sẽ rơi dốc hơn và các cú drive sẽ đi sâu hơn. Quả cầu sẽ bay đến những vị trí mà nó khó có thể quay trở lại được.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_AaM4bB": {
+          "type": "button",
+          "settings": {
+            "button_label": "MUA NGAY",
+            "button_link": "shopify://products/z-tronic-100-ti",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_J78xnw",
+        "text_dr9BNH",
+        "button_AaM4bB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_2_f8c09f9d-9568-414a-adb5-7ed32eed5f20.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_XqHnyC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7YXpFy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Curve²&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_GKjtQw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Các miếng đệm xốp bên trong khung giúp giảm rung động tại điểm tiếp xúc. Tay bạn cảm nhận được cú va chạm nhưng không cảm nhận được những rung động sau đó.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_VdqHGx": {
+          "type": "button",
+          "settings": {
+            "button_label": "MUA NGAY",
+            "button_link": "shopify://products/z-tronic-100-ti",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_7YXpFy",
+        "text_GKjtQw",
+        "button_VdqHGx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/A_3_2cf96e07-0646-470f-a104-3b2804ae5d63.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "color_scheme": "scheme-ee0d335f-088c-436e-b0e9-57af2039e0ce",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -51,17 +324,8 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"zt-final\">\n\n  <div class=\"zt-final__glow\"></div>\n\n  <div class=\"zt-final__inner\">\n\n    <p class=\"zt-final__kicker\">\n      Z-TRONIC 100 TI\n    </p>\n\n    <h2 class=\"zt-final__title\">\n      <span>BUILT TO STRIKE.</span>\n      <span>MADE TO RECOVER.</span>\n    </h2>\n\n    <p class=\"zt-final__description\">\n      Fast flex. Titanium recovery. Power that resets for the next attack.\n    </p>\n\n    <a\n      href=\"/products/z-tronic-100-ti\"\n      class=\"zt-final__button\"\n    >\n      EXPLORE Z-TRONIC 100 TI\n    </a>\n\n  </div>\n\n</section>\n\n\n<style>\n\n  .zt-final,\n  .zt-final * {\n    box-sizing: border-box;\n  }\n\n\n  /* =========================\n     SECTION\n  ========================= */\n\n  .zt-final {\n    position: relative;\n\n    width: 100%;\n    overflow: hidden;\n\n    padding: 92px 24px 98px;\n\n    background: #0D0D0D;\n\n    text-align: center;\n\n    font-family: \"Figtree\", sans-serif;\n  }\n\n\n  /* =========================\n     SUBTLE TITANIUM GLOW\n  ========================= */\n\n  .zt-final__glow {\n    position: absolute;\n\n    left: 50%;\n    bottom: -280px;\n\n    width: 1050px;\n    height: 470px;\n\n    transform: translateX(-50%);\n\n    background: radial-gradient(\n      ellipse at center,\n      rgba(124,120,114,.13) 0%,\n      rgba(90,85,79,.07) 30%,\n      rgba(55,50,44,.035) 50%,\n      rgba(13,13,13,0) 72%\n    );\n\n    pointer-events: none;\n  }\n\n\n  /* =========================\n     CONTENT\n  ========================= */\n\n  .zt-final__inner {\n    position: relative;\n    z-index: 2;\n\n    width: 100%;\n    max-width: 1200px;\n\n    margin: 0 auto;\n  }\n\n\n  /* =========================\n     KICKER\n  ========================= */\n\n  .zt-final__kicker {\n    margin: 0 0 20px;\n\n    color: #77736E;\n\n    font-size: 13px;\n    line-height: 1;\n\n    font-weight: 700;\n\n    letter-spacing: .18em;\n\n    text-transform: uppercase;\n  }\n\n\n  /* =========================\n     MAIN HEADLINE\n  ========================= */\n\n  .zt-final__title {\n    width: 100%;\n\n    margin: 0 auto;\n\n    font-size: clamp(58px, 6.3vw, 102px);\n\n    line-height: .91;\n\n    font-weight: 700;\n\n    letter-spacing: -4.5px;\n\n    text-transform: uppercase;\n  }\n\n\n  .zt-final__title span {\n    display: block;\n\n    /* KEEP EACH PHRASE ON ONE LINE */\n    white-space: nowrap;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  .zt-final__title span + span {\n    margin-top: 7px;\n\n    opacity: .82;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .zt-final__description {\n    max-width: 650px;\n\n    margin: 27px auto 0;\n\n    color: #A6A39F;\n\n    font-size: 18px;\n\n    line-height: 1.5;\n\n    font-weight: 500;\n\n    letter-spacing: -.15px;\n  }\n\n\n  /* =========================\n     CTA\n  ========================= */\n\n  .zt-final__button {\n    display: inline-flex;\n\n    align-items: center;\n    justify-content: center;\n\n    margin-top: 37px;\n\n    min-width: 310px;\n    min-height: 60px;\n\n    padding: 0 38px;\n\n    border: 1.5px solid #7C7872;\n    border-radius: 999px;\n\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n\n    font-size: 12px;\n\n    line-height: 1;\n\n    font-weight: 700;\n\n    letter-spacing: .15em;\n\n    text-transform: uppercase;\n\n    text-decoration: none;\n\n    transition:\n      transform .3s ease,\n      border-color .3s ease,\n      color .3s ease;\n  }\n\n\n  /* CTA STAYS TRANSPARENT */\n\n  .zt-final__button:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    border-color: #7C7872;\n\n    color: #FFFFFF;\n\n    transform: translateY(-2px);\n  }\n\n\n  .zt-final__button:focus,\n  .zt-final__button:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    border-color: #7C7872;\n\n    color: #FFFFFF;\n  }\n\n\n  .zt-final__button::before,\n  .zt-final__button::after {\n    display: none !important;\n    content: none !important;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .zt-final {\n      padding: 78px 20px 84px;\n    }\n\n    .zt-final__title {\n      font-size: clamp(50px, 7vw, 70px);\n\n      letter-spacing: -3px;\n    }\n\n    .zt-final__description {\n      font-size: 17px;\n    }\n\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .zt-final {\n      padding: 64px 14px 70px;\n    }\n\n\n    .zt-final__kicker {\n      margin-bottom: 17px;\n\n      font-size: 10px;\n\n      letter-spacing: .17em;\n    }\n\n\n    .zt-final__title {\n      width: 100%;\n      max-width: none;\n\n      /*\n        SCALED TO KEEP BOTH\n        PHRASES ON ONE LINE\n      */\n\n      font-size: clamp(34px, 9.8vw, 46px);\n\n      line-height: .95;\n\n      letter-spacing: -2px;\n    }\n\n\n    .zt-final__title span {\n      display: block;\n\n      white-space: nowrap;\n    }\n\n\n    .zt-final__title span + span {\n      margin-top: 7px;\n    }\n\n\n    .zt-final__description {\n      max-width: 340px;\n\n      margin: 23px auto 0;\n\n      font-size: 15px;\n\n      line-height: 1.5;\n    }\n\n\n    .zt-final__button {\n      margin-top: 30px;\n\n      min-width: 270px;\n      min-height: 55px;\n\n      padding: 0 28px;\n\n      font-size: 11px;\n\n      letter-spacing: .12em;\n    }\n\n\n    .zt-final__glow {\n      bottom: -190px;\n\n      width: 580px;\n      height: 330px;\n    }\n\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .zt-final {\n      padding: 58px 10px 64px;\n    }\n\n\n    .zt-final__title {\n      width: 100%;\n      max-width: none;\n\n      font-size: 9.2vw;\n\n      line-height: .95;\n\n      letter-spacing: -1.5px;\n    }\n\n\n    .zt-final__title span {\n      white-space: nowrap;\n    }\n\n\n    .zt-final__description {\n      max-width: 315px;\n\n      font-size: 14px;\n    }\n\n\n    .zt-final__button {\n      min-width: 250px;\n\n      min-height: 53px;\n\n      padding: 0 24px;\n\n      font-size: 10px;\n    }\n\n  }\n\n</style>",
+        "custom_liquid": "<section class=\"zt-final\">\n\n  <div class=\"zt-final__glow\"></div>\n\n  <div class=\"zt-final__inner\">\n\n    <p class=\"zt-final__kicker\">\n      Z-TRONIC 100 TI\n    </p>\n\n    <h2 class=\"zt-final__title\">\n      <span>Chế tạo để bùng nổ.</span>\n      <span> Thiết kế để phục hồi.</span>\n    </h2>\n\n    <p class=\"zt-final__description\">\n      Độ uốn dẻo nhanh. Khả năng phục hồi nhờ titan. Sức mạnh được tái tạo cho đợt tấn công tiếp theo.\n    </p>\n\n    <a\n      href=\"/products/z-tronic-100-ti\"\n      class=\"zt-final__button\"\n    >\n      KHÁM PHÁ Z-TRONIC 100 TI\n    </a>\n\n  </div>\n\n</section>\n\n\n<style>\n\n  .zt-final,\n  .zt-final * {\n    box-sizing: border-box;\n  }\n\n\n  /* =========================\n     SECTION\n  ========================= */\n\n  .zt-final {\n    position: relative;\n\n    width: 100%;\n    overflow: hidden;\n\n    padding: 92px 24px 98px;\n\n    background: #0D0D0D;\n\n    text-align: center;\n\n    font-family: \"Figtree\", sans-serif;\n  }\n\n\n  /* =========================\n     SUBTLE TITANIUM GLOW\n  ========================= */\n\n  .zt-final__glow {\n    position: absolute;\n\n    left: 50%;\n    bottom: -280px;\n\n    width: 1050px;\n    height: 470px;\n\n    transform: translateX(-50%);\n\n    background: radial-gradient(\n      ellipse at center,\n      rgba(124,120,114,.13) 0%,\n      rgba(90,85,79,.07) 30%,\n      rgba(55,50,44,.035) 50%,\n      rgba(13,13,13,0) 72%\n    );\n\n    pointer-events: none;\n  }\n\n\n  /* =========================\n     CONTENT\n  ========================= */\n\n  .zt-final__inner {\n    position: relative;\n    z-index: 2;\n\n    width: 100%;\n    max-width: 1200px;\n\n    margin: 0 auto;\n  }\n\n\n  /* =========================\n     KICKER\n  ========================= */\n\n  .zt-final__kicker {\n    margin: 0 0 20px;\n\n    color: #77736E;\n\n    font-size: 13px;\n    line-height: 1;\n\n    font-weight: 700;\n\n    letter-spacing: .18em;\n\n    text-transform: uppercase;\n  }\n\n\n  /* =========================\n     MAIN HEADLINE\n  ========================= */\n\n  .zt-final__title {\n    width: 100%;\n\n    margin: 0 auto;\n\n    font-size: clamp(58px, 6.3vw, 102px);\n\n    line-height: .91;\n\n    font-weight: 700;\n\n    letter-spacing: -4.5px;\n\n    text-transform: uppercase;\n  }\n\n\n  .zt-final__title span {\n    display: block;\n\n    /* KEEP EACH PHRASE ON ONE LINE */\n    white-space: nowrap;\n\n    background: linear-gradient(\n      180deg,\n      #7C7872 50%,\n      #37322C 100%\n    );\n\n    -webkit-background-clip: text;\n    background-clip: text;\n\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n  }\n\n\n  .zt-final__title span + span {\n    margin-top: 7px;\n\n    opacity: .82;\n  }\n\n\n  /* =========================\n     DESCRIPTION\n  ========================= */\n\n  .zt-final__description {\n    max-width: 650px;\n\n    margin: 27px auto 0;\n\n    color: #A6A39F;\n\n    font-size: 18px;\n\n    line-height: 1.5;\n\n    font-weight: 500;\n\n    letter-spacing: -.15px;\n  }\n\n\n  /* =========================\n     CTA\n  ========================= */\n\n  .zt-final__button {\n    display: inline-flex;\n\n    align-items: center;\n    justify-content: center;\n\n    margin-top: 37px;\n\n    min-width: 310px;\n    min-height: 60px;\n\n    padding: 0 38px;\n\n    border: 1.5px solid #7C7872;\n    border-radius: 999px;\n\n    background: transparent !important;\n    background-image: none !important;\n\n    color: #FFFFFF;\n\n    font-size: 12px;\n\n    line-height: 1;\n\n    font-weight: 700;\n\n    letter-spacing: .15em;\n\n    text-transform: uppercase;\n\n    text-decoration: none;\n\n    transition:\n      transform .3s ease,\n      border-color .3s ease,\n      color .3s ease;\n  }\n\n\n  /* CTA STAYS TRANSPARENT */\n\n  .zt-final__button:hover {\n    background: transparent !important;\n    background-image: none !important;\n\n    border-color: #7C7872;\n\n    color: #FFFFFF;\n\n    transform: translateY(-2px);\n  }\n\n\n  .zt-final__button:focus,\n  .zt-final__button:active {\n    background: transparent !important;\n    background-image: none !important;\n\n    border-color: #7C7872;\n\n    color: #FFFFFF;\n  }\n\n\n  .zt-final__button::before,\n  .zt-final__button::after {\n    display: none !important;\n    content: none !important;\n  }\n\n\n  /* =========================\n     TABLET\n  ========================= */\n\n  @media screen and (max-width: 990px) {\n\n    .zt-final {\n      padding: 78px 20px 84px;\n    }\n\n    .zt-final__title {\n      font-size: clamp(50px, 7vw, 70px);\n\n      letter-spacing: -3px;\n    }\n\n    .zt-final__description {\n      font-size: 17px;\n    }\n\n  }\n\n\n  /* =========================\n     MOBILE\n  ========================= */\n\n  @media screen and (max-width: 749px) {\n\n    .zt-final {\n      padding: 64px 14px 70px;\n    }\n\n\n    .zt-final__kicker {\n      margin-bottom: 17px;\n\n      font-size: 10px;\n\n      letter-spacing: .17em;\n    }\n\n\n    .zt-final__title {\n      width: 100%;\n      max-width: none;\n\n      /*\n        SCALED TO KEEP BOTH\n        PHRASES ON ONE LINE\n      */\n\n      font-size: clamp(34px, 9.8vw, 46px);\n\n      line-height: .95;\n\n      letter-spacing: -2px;\n    }\n\n\n    .zt-final__title span {\n      display: block;\n\n      white-space: nowrap;\n    }\n\n\n    .zt-final__title span + span {\n      margin-top: 7px;\n    }\n\n\n    .zt-final__description {\n      max-width: 340px;\n\n      margin: 23px auto 0;\n\n      font-size: 15px;\n\n      line-height: 1.5;\n    }\n\n\n    .zt-final__button {\n      margin-top: 30px;\n\n      min-width: 270px;\n      min-height: 55px;\n\n      padding: 0 28px;\n\n      font-size: 11px;\n\n      letter-spacing: .12em;\n    }\n\n\n    .zt-final__glow {\n      bottom: -190px;\n\n      width: 580px;\n      height: 330px;\n    }\n\n  }\n\n\n  /* =========================\n     SMALL MOBILE\n  ========================= */\n\n  @media screen and (max-width: 390px) {\n\n    .zt-final {\n      padding: 58px 10px 64px;\n    }\n\n\n    .zt-final__title {\n      width: 100%;\n      max-width: none;\n\n      font-size: 9.2vw;\n\n      line-height: .95;\n\n      letter-spacing: -1.5px;\n    }\n\n\n    .zt-final__title span {\n      white-space: nowrap;\n    }\n\n\n    .zt-final__description {\n      max-width: 315px;\n\n      font-size: 14px;\n    }\n\n\n    .zt-final__button {\n      min-width: 250px;\n\n      min-height: 53px;\n\n      padding: 0 24px;\n\n      font-size: 10px;\n    }\n\n  }\n\n</style>",
         "color_scheme": "scheme-39636f9a-299a-4d34-b9ae-709d6d7a1dfa",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "media_xd3Urd": {
-      "type": "media",
-      "name": "Media",
-      "settings": {
-        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -69,10 +333,17 @@
   },
   "order": [
     "main",
+    "media_xd3Urd",
     "custom_liquid_aNbzkm",
+    "media_ReGb8g",
     "custom_liquid_AqGw7V",
+    "media_KyN9Xc",
     "custom_liquid_6G3qXA",
-    "custom_liquid_rDaHwB",
-    "media_xd3Urd"
+    "image_with_text_rPEa3a",
+    "image_with_text_mqri3W",
+    "image_with_text_JPCBYX",
+    "image_with_text_kVfryH",
+    "image_with_text_XqHnyC",
+    "custom_liquid_rDaHwB"
   ]
 }
