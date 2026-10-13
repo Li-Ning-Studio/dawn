@@ -1,0 +1,259 @@
+{%- comment -%}
+  HUNDRED – Terms & Conditions
+  Venstre: firmaoplysninger. Højre: afsnit som fold-ud (hver er en blok).
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap">
+
+<style>
+  .ht{
+    --ht-bg:#0a0a0b;--ht-panel:#131315;--ht-line:#26241f;--ht-text:#f3efe7;--ht-soft:#cfc9be;--ht-muted:#8c867b;
+    --ht-gold:#f2a81d;--ht-ember:#e5701a;
+    --ht-display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+    --ht-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    background:var(--ht-bg);color:var(--ht-text);font-family:var(--ht-body);font-size:17px;line-height:1.7;letter-spacing:0;
+    padding-block:clamp(60px,10vh,110px);
+  }
+  .ht *{box-sizing:border-box}
+  .ht-grid{max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px);
+    display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+  .ht-grid > *{min-width:0}
+
+  /* venstre kolonne */
+  .ht-side{position:sticky;top:calc(var(--ht-header,0px) + 32px);display:grid;gap:22px}
+  .ht .ht-title{font:italic 900 clamp(48px,6vw,84px)/.88 var(--ht-display);text-transform:uppercase;letter-spacing:-.01em;margin:0;
+    background:linear-gradient(180deg,#ffc94a,var(--ht-gold) 45%,var(--ht-ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .ht-intro{color:var(--ht-soft)}
+  .ht-intro p{margin:0}
+  .ht-card{border:1px solid var(--ht-line);border-radius:8px;background:var(--ht-panel);padding:24px 26px;display:grid;gap:14px}
+  .ht-card .ht-label{margin:0;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ht-gold)}
+  .ht-card .ht-company{margin:0;font-weight:700;font-size:18px;color:var(--ht-text)}
+  .ht-address{color:var(--ht-soft)}
+  .ht-address p{margin:0}
+  .ht-facts{display:grid;gap:4px;margin:0;padding:14px 0 0;border-top:1px solid var(--ht-line)}
+  .ht-facts div{display:flex;gap:10px;flex-wrap:wrap}
+  .ht-facts dt{font-weight:700;color:var(--ht-text)}
+  .ht-facts dd{margin:0;color:var(--ht-soft)}
+  .ht-facts a{color:var(--ht-soft);text-decoration:underline;text-underline-offset:3px}
+  .ht-facts a:hover{color:var(--ht-gold)}
+  .ht-updated{margin:0;font-size:13px;color:var(--ht-muted)}
+
+  /* fold-ud */
+  .ht-list{border-top:1px solid var(--ht-line)}
+  .ht-item{border-bottom:1px solid var(--ht-line)}
+  .ht-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 4px;
+    font:italic 800 clamp(24px,2.6vw,32px)/1.05 var(--ht-display);text-transform:uppercase;letter-spacing:.01em;color:var(--ht-text);transition:color .2s}
+  .ht-item summary::-webkit-details-marker{display:none}
+  .ht-item summary:hover,.ht-item[open] summary{color:var(--ht-gold)}
+  .ht-item summary:focus-visible{outline:2px solid var(--ht-gold);outline-offset:4px;border-radius:4px}
+  .ht-num{font:700 13px/1 var(--ht-body);letter-spacing:.14em;color:var(--ht-muted);margin-right:14px;font-style:normal}
+  .ht-sum-text{flex:1}
+  .ht-icon{flex:none;position:relative;width:34px;height:34px;border:1px solid var(--ht-line);border-radius:50%;transition:background .2s,border-color .2s}
+  .ht-icon::before,.ht-icon::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:currentColor;transform:translate(-50%,-50%);transition:transform .25s}
+  .ht-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
+  .ht-item[open] .ht-icon{background:var(--ht-gold);border-color:var(--ht-gold);color:#000}
+  .ht-item[open] .ht-icon::after{transform:translate(-50%,-50%) rotate(0deg)}
+  .ht-body{padding:0 4px 30px;color:var(--ht-soft);max-width:64ch}
+  .ht-body p{margin:0 0 1em}
+  .ht-body p:last-child{margin-bottom:0}
+  .ht-body strong{color:var(--ht-text)}
+  .ht-body a{color:var(--ht-gold);text-underline-offset:3px}
+  .ht-body h3{margin:1.6em 0 .5em;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ht-text)}
+  .ht-body ul{margin:0 0 1em;padding:0;list-style:none;display:grid;gap:8px}
+  .ht-body li{position:relative;padding-left:22px}
+  .ht-body li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:2px;background:var(--ht-gold)}
+
+  @media (max-width:860px){
+    .ht-grid{grid-template-columns:minmax(0,1fr)}
+    .ht-side{position:static}
+  }
+</style>
+
+<div class="ht" id="ht-{{ section.id }}">
+  <div class="ht-grid">
+    <aside class="ht-side">
+      <h1 class="ht-title">{{ section.settings.title | escape }}</h1>
+      {%- if section.settings.intro != blank -%}<div class="ht-intro">{{ section.settings.intro }}</div>{%- endif -%}
+
+      <div class="ht-card">
+        {%- if section.settings.owner_label != blank -%}<p class="ht-label">{{ section.settings.owner_label | escape }}</p>{%- endif -%}
+        {%- if section.settings.company != blank -%}<p class="ht-company">{{ section.settings.company | escape }}</p>{%- endif -%}
+        {%- if section.settings.address != blank -%}<div class="ht-address">{{ section.settings.address }}</div>{%- endif -%}
+        {%- if section.settings.email != blank or section.settings.phone != blank or section.settings.cvr != blank -%}
+          <dl class="ht-facts">
+            {%- if section.settings.email != blank -%}<div><dt>Email:</dt><dd><a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></dd></div>{%- endif -%}
+            {%- if section.settings.phone != blank -%}<div><dt>Phone:</dt><dd><a href="tel:{{ section.settings.phone | remove: ' ' }}">{{ section.settings.phone }}</a></dd></div>{%- endif -%}
+            {%- if section.settings.cvr != blank -%}<div><dt>CVR:</dt><dd>{{ section.settings.cvr }}</dd></div>{%- endif -%}
+          </dl>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.updated != blank -%}<p class="ht-updated">Last updated: {{ section.settings.updated | escape }}</p>{%- endif -%}
+    </aside>
+
+    <div class="ht-list">
+      {%- for block in section.blocks -%}
+        <details class="ht-item"{% if block.settings.open %} open{% endif %} {{ block.shopify_attributes }}>
+          <summary>
+            <span class="ht-sum-text"><span class="ht-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>{{ block.settings.title | escape }}</span>
+            <span class="ht-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="ht-body">{{ block.settings.text }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('ht-{{ section.id }}');
+    var h = document.querySelector('.section-header');
+    if (root && h && getComputedStyle(h).position === 'sticky') root.style.setProperty('--ht-header', h.offsetHeight + 'px');
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "HUNDRED Terms",
+  "tag": "section",
+  "class": "section-hundred-terms",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Overskrift",
+      "default": "Terms & Conditions"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Indledning",
+      "default": "<p>Read more about our terms of sale when you shop at HUNDRED Europe.</p>"
+    },
+    {
+      "type": "text",
+      "id": "owner_label",
+      "label": "Tekst over firmanavn",
+      "default": "HUNDRED Europe is owned and operated by:"
+    },
+    {
+      "type": "text",
+      "id": "company",
+      "label": "Firmanavn",
+      "default": "HUNDRED Europe ApS"
+    },
+    {
+      "type": "richtext",
+      "id": "address",
+      "label": "Adresse",
+      "default": "<p>Marielundvej 45B, ground floor<br>2730 Herlev<br>Denmark</p>"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "E-mail"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Telefon"
+    },
+    {
+      "type": "text",
+      "id": "cvr",
+      "label": "CVR-nr."
+    },
+    {
+      "type": "text",
+      "id": "updated",
+      "label": "Sidst opdateret (valgfri)",
+      "info": "Fx October 2026"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Afsnit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Overskrift",
+          "default": "New section"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Tekst",
+          "default": "<p>Text</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "label": "Åben som standard",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HUNDRED Terms",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "title": "Delivery",
+            "text": "<p>Orders are usually shipped within <strong>1–3 business days</strong>, often the same day if you order before 12:00. If you have added stringing to your racket, please expect shipping after 2–3 business days.</p><p>If anything else applies to a product, it will be clearly stated when you order it.</p><p>Delivery times and shipping costs depend on your country. You can see them on our <a href=\"/pages/delivery\">delivery page</a> and always at checkout. We reserve the right for printing errors, price changes and stock errors.</p><h3>Uncollected parcels</h3><p>If you choose delivery to a pickup point, you usually have around 7 days to collect your parcel. After that it is automatically returned to us. You will receive both an email and a text message with the pickup point and the collection deadline.</p><p>If you do not collect your parcel and it is returned, we will contact you. Please note that an uncollected parcel is <strong>not</strong> a valid cancellation of your purchase. If you want the parcel resent, please contact customer service. You may be charged for the shipping costs.</p>",
+            "open": true
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Returns and right of withdrawal",
+            "text": "<p>As a consumer you have a <strong>14-day right of withdrawal</strong>, counted from the day you receive your order. You do not need to give a reason. If you want to cancel your purchase, you must let us know within the deadline, for example by email. After that, you have another 14 days to send the item back.</p><p>You pay for the return shipping yourself, unless otherwise agreed. We do not accept parcels sent cash on delivery.</p><p>Returned items must be in essentially the same condition and quantity as when you received them. We refund the purchase amount to the payment method you used no later than 14 days after we have received and approved your return.</p><p>You can also refuse to accept the parcel on delivery as a way of cancelling, but please contact us anyway.</p><h3>Exceptions from the right of withdrawal</h3><p>The following items <strong>cannot be returned</strong>:</p><ul><li>Rackets with added stringing</li><li>Clothing with added print</li></ul>",
+            "open": false
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Complaints",
+            "text": "<p>We check all items before they are shipped. If there is still a fault, please contact our customer service. We reply within 48 hours on business days.</p><p>If your complaint is approved, the item will be repaired or replaced within 7 days. If this is not possible, we refund the purchase amount no later than 14 days after receiving the item. You have a <strong>2-year right to complain</strong> about faults in accordance with consumer law.</p>",
+            "open": false
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Personal data (GDPR)",
+            "text": "<p>When you shop with us or take part in competitions, we process your personal data (name, address, email, phone number and purchase history) in accordance with the <strong>General Data Protection Regulation (GDPR)</strong>.</p><p>We store your data securely and do not share it without your consent. Card details are processed encrypted and are never stored by us.</p><p>You can always request access to, correction of or deletion of your data by contacting us.</p>",
+            "open": false
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Competition terms",
+            "text": "<p>You can only take part once per competition. Taking part does not require a purchase. You take part automatically by answering correctly or by signing up via email or our social media (Instagram, Facebook etc.).</p><p>If we suspect cheating, we reserve the right to exclude participants.</p><h3>If you win</h3><p>Winners are contacted directly by email, and their names may be published on our website. By taking part, you accept this publication.</p><p>Prizes are sent within approximately 14 days and cannot be exchanged for cash or other items.</p>",
+            "open": false
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Prices and discounts",
+            "text": "<p>We reserve the right for printing and typing errors in prices and discounts.</p><p>For special agreements (for example club or company apparel and prize cards), negotiated prices cannot be combined with discount codes or sale offers. Shuttlecocks are generally <strong>not</strong> included in regular campaigns, but may be discounted when buying larger quantities (for example several dozen).</p>",
+            "open": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
