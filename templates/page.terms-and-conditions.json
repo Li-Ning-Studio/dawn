@@ -17,58 +17,82 @@
         "padding_bottom": 28
       }
     },
-    "image_banner_fz3meY": {
-      "type": "image-banner",
+    "hundred_terms_CyXe8D": {
+      "type": "hundred-terms",
       "blocks": {
-        "heading_RPeDTa": {
-          "type": "heading",
+        "item_GNjMh6": {
+          "type": "item",
           "settings": {
-            "heading": "",
-            "heading_size": "h1"
+            "title": "Delivery",
+            "text": "<p>Orders are usually shipped within <strong>1–3 business days</strong>, often the same day if you order before 12:00. If you have added stringing to your racket, please expect shipping after 2–3 business days.</p><p>If anything else applies to a product, it will be clearly stated when you order it.</p><p>Delivery times and shipping costs depend on your country. You can see them on our <a href=\"/pages/delivery\">delivery page</a> and always at checkout. We reserve the right for printing errors, price changes and stock errors.</p><h3>Uncollected parcels</h3><p>If you choose delivery to a pickup point, you usually have around 7 days to collect your parcel. After that it is automatically returned to us. You will receive both an email and a text message with the pickup point and the collection deadline.</p><p>If you do not collect your parcel and it is returned, we will contact you. Please note that an uncollected parcel is <strong>not</strong> a valid cancellation of your purchase. If you want the parcel resent, please contact customer service. You may be charged for the shipping costs.</p>",
+            "open": true
           }
         },
-        "text_VTVPY6": {
-          "type": "text",
+        "item_KamLVU": {
+          "type": "item",
           "settings": {
-            "text": "",
-            "text_style": "body"
+            "title": "Returns and right of withdrawal",
+            "text": "<p>As a consumer you have a <strong>14-day right of withdrawal</strong>, counted from the day you receive your order. You do not need to give a reason. If you want to cancel your purchase, you must let us know within the deadline, for example by email. After that, you have another 14 days to send the item back.</p><p>You pay for the return shipping yourself, unless otherwise agreed. We do not accept parcels sent cash on delivery.</p><p>Returned items must be in essentially the same condition and quantity as when you received them. We refund the purchase amount to the payment method you used no later than 14 days after we have received and approved your return.</p><p>You can also refuse to accept the parcel on delivery as a way of cancelling, but please contact us anyway.</p><h3>Exceptions from the right of withdrawal</h3><p>The following items <strong>cannot be returned</strong>:</p><ul><li>Rackets with added stringing</li><li>Clothing with added print</li></ul>",
+            "open": false
           }
         },
-        "buttons_KNmEHq": {
-          "type": "buttons",
+        "item_UGgNpy": {
+          "type": "item",
           "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "title": "Complaints",
+            "text": "<p>We check all items before they are shipped. If there is still a fault, please contact our customer service. We reply within 48 hours on business days.</p><p>If your complaint is approved, the item will be repaired or replaced within 7 days. If this is not possible, we refund the purchase amount no later than 14 days after receiving the item. You have a <strong>2-year right to complain</strong> about faults in accordance with consumer law.</p>",
+            "open": false
+          }
+        },
+        "item_kdcMq7": {
+          "type": "item",
+          "settings": {
+            "title": "Personal data (GDPR)",
+            "text": "<p>When you shop with us or take part in competitions, we process your personal data (name, address, email, phone number and purchase history) in accordance with the <strong>General Data Protection Regulation (GDPR)</strong>.</p><p>We store your data securely and do not share it without your consent. Card details are processed encrypted and are never stored by us.</p><p>You can always request access to, correction of or deletion of your data by contacting us.</p>",
+            "open": false
+          }
+        },
+        "item_JTKfxF": {
+          "type": "item",
+          "settings": {
+            "title": "Competition terms",
+            "text": "<p>You can only take part once per competition. Taking part does not require a purchase. You take part automatically by answering correctly or by signing up via email or our social media (Instagram, Facebook etc.).</p><p>If we suspect cheating, we reserve the right to exclude participants.</p><h3>If you win</h3><p>Winners are contacted directly by email, and their names may be published on our website. By taking part, you accept this publication.</p><p>Prizes are sent within approximately 14 days and cannot be exchanged for cash or other items.</p>",
+            "open": false
+          }
+        },
+        "item_bkiaxG": {
+          "type": "item",
+          "settings": {
+            "title": "Prices and discounts",
+            "text": "<p>We reserve the right for printing and typing errors in prices and discounts.</p><p>For special agreements (for example club or company apparel and prize cards), negotiated prices cannot be combined with discount codes or sale offers. Shuttlecocks are generally <strong>not</strong> included in regular campaigns, but may be discounted when buying larger quantities (for example several dozen).</p>",
+            "open": false
           }
         }
       },
       "block_order": [
-        "heading_RPeDTa",
-        "text_VTVPY6",
-        "buttons_KNmEHq"
+        "item_GNjMh6",
+        "item_KamLVU",
+        "item_UGgNpy",
+        "item_kdcMq7",
+        "item_JTKfxF",
+        "item_bkiaxG"
       ],
-      "name": "t:sections.image-banner.presets.name",
+      "name": "HUNDRED Terms",
       "settings": {
-        "image": "shopify://shop_images/CINEMATIC_LIGHTING_ENHANCEMENT_Nano_Banana_2_73016_c575f141-69f2-453c-b45a-929afcd26bc5.png",
-        "image_overlay_opacity": 30,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "title": "Terms & Conditions",
+        "intro": "<p>Read more about our terms of sale when you shop at HUNDRED Europe.</p>",
+        "owner_label": "HUNDRED Europe is owned and operated by:",
+        "company": "HUNDRED Europe ApS",
+        "address": "<p>Marielundvej 45B, ground floor<br>2730 Herlev<br>Denmark</p>",
+        "email": "",
+        "phone": "",
+        "cvr": "",
+        "updated": ""
       }
     }
   },
   "order": [
     "main",
-    "image_banner_fz3meY"
+    "hundred_terms_CyXe8D"
   ]
 }
