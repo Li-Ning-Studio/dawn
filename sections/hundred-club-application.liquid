@@ -119,6 +119,7 @@
   var THANKS_TITLE = {{ section.settings.thanks_title | json }};
   var THANKS_TEXT = {{ section.settings.thanks_text | json }};
   var BLANK_PRICE = '[TO BE FILLED BY HUNDRED]';
+  var DESIGN_MODE = {{ request.design_mode | json }};
 
   var STEPS = ['Club', 'Size & usage', 'Visibility in your hall', 'Reaching your members', 'Agreement', 'Contact & review'];
   var BANNERS = [
@@ -130,8 +131,8 @@
   var REQUIRED = {
     0: ['club_name', 'club_address', 'country', 'sports'],
     1: ['members', 'courts', 'shuttles'],
-    2: ['banner', 'nets', 'display', 'exclusive'],
-    3: ['newsletter', 'social', 'website_logo', 'demo_days', 'kit_logo'],
+    2: ['banner', 'nets', 'exclusive'],
+    3: ['newsletter', 'social', 'website_logo'],
     4: ['club_code', 'start_date', 'years'],
     5: ['first_name', 'last_name', 'email', 'phone']
   };
@@ -141,8 +142,8 @@
       members: '', juniors: '', courts: '', shuttles: '',
       qty_jersey: '', qty_shorts: '', qty_training_top: '', qty_training_pants: '',
       current_supplier: '', supplier_ends: '',
-      banner: '', nets: '', nets_count: '', boards: '', display: '', exclusive: '',
-      newsletter: '', social: '', website_logo: '', demo_days: '', kit_logo: '', extra: '',
+      banner: '', nets: '', nets_count: '', boards: '', exclusive: '',
+      newsletter: '', social: '', website_logo: '', extra: '',
       club_code: '', start_date: '', years: '',
       first_name: '', last_name: '', role: '', email: '', phone: '', hp: ''
     };
@@ -162,7 +163,7 @@
     var field = t === 'textarea'
       ? '<textarea id="hca-' + id + '" data-k="' + id + '" class="' + (errors[id] ? 'invalid' : '') + '">' + esc(a[id]) + '</textarea>'
       : '<input id="hca-' + id + '" data-k="' + id + '" type="' + t + '"' + (t === 'number' ? ' min="0" inputmode="numeric"' : '') +
-        (o.auto ? ' autocomplete="' + o.auto + '"' : '') + ' value="' + esc(a[id]) + '" class="' + (errors[id] ? 'invalid' : '') + '"' +
+        (o.auto ? ' autocomplete="' + o.auto + '"' : '') + (o.min ? ' min="' + o.min + '"' : '') + ' value="' + esc(a[id]) + '" class="' + (errors[id] ? 'invalid' : '') + '"' +
         (o.ph ? ' placeholder="' + esc(o.ph) + '"' : '') + '>';
     return '<div class="hca-field"><label for="hca-' + id + '">' + esc(label) + (o.req ? ' <span class="hca-req">*</span>' : '') + '</label>' +
       (o.hint ? '<div class="hca-hint">' + esc(o.hint) + '</div>' : '') + field +
@@ -209,18 +210,15 @@
           (a.nets === 'yes' ? '<label class="hca-hint" for="hca-nets_count" style="margin:0">Number of nets</label><input id="hca-nets_count" data-k="nets_count" type="number" min="0" value="' + esc(a.nets_count) + '">' : '') +
           '</div>' + (errors.nets ? '<p class="hca-err">' + esc(errors.nets) + '</p>' : '') + '</div>' +
           '<div class="hca-grid">' + input('boards', 'Courtside boards (number)', { type: 'number', hint: '0 if none' }) + '</div><div style="margin-top:22px">' +
-          choice('display', 'Room for a HUNDRED display or shop corner in the hall', YN, { req: 1 }) +
           choice('exclusive', 'HUNDRED as the only racket sports brand visible in the hall', YN, { req: 1 }) + '</div>';
       case 3: return '<h2>Reaching your members</h2><p class="lead">How can HUNDRED reach your members through your channels?</p>' +
         choice('newsletter', 'HUNDRED campaigns in your member newsletter per year', [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5+', '5+']], { req: 1 }) +
         choice('social', 'HUNDRED posts on your social media per year', [['0', '0'], ['2', '2'], ['4', '4'], ['6', '6'], ['12+', '12+']], { req: 1 }) +
         choice('website_logo', 'HUNDRED logo and link on your website', YN, { req: 1 }) +
-        choice('demo_days', 'HUNDRED demo days in your hall per year', [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4+', '4+']], { req: 1, hint: 'Members test rackets and shoes' }) +
-        choice('kit_logo', 'HUNDRED logo on your club kit', YN, { req: 1 }) +
         input('extra', 'Anything else that makes your club special?', { type: 'textarea', hint: 'Tournaments, events, top players, coaches, youth programmes …' });
       case 4: return '<h2>The agreement</h2><p class="lead">Your members can shop with a personal club code. Your club earns money on every purchase.</p>' +
         choice('club_code', 'Do you want a club code where your club earns on members’ purchases?', YN, { req: 1 }) +
-        '<div class="hca-grid">' + input('start_date', 'Preferred start date', { type: 'date', req: 1 }) + '</div><div style="margin-top:22px">' +
+        '<div class="hca-grid">' + input('start_date', 'Preferred start date', { type: 'date', req: 1, min: new Date().toISOString().slice(0, 10) }) + '</div><div style="margin-top:22px">' +
         choice('years', 'Length of agreement', [['1', '1 year'], ['2', '2 years'], ['3', '3 years']], { req: 1 }) + '</div>';
       case 5: return '<h2>Contact & review</h2><p class="lead">Who should we send the offer to?</p><div class="hca-grid">' +
         input('first_name', 'First name', { req: 1, auto: 'given-name' }) + input('last_name', 'Last name', { req: 1, auto: 'family-name' }) +
@@ -236,8 +234,8 @@
     return [
       ['Club', [['Club', x.club_name], ['Registration no.', x.club_reg || '–'], ['Address', x.club_address], ['Country', x.country], ['Sports', x.sports.join(', ') || '–'], ['Website', x.website || '–'], ['Instagram', x.instagram || '–']]],
       ['Size & usage', [['Members', num(x.members)], ['Juniors', num(x.juniors)], ['Courts', num(x.courts)], ['Shuttlecocks / year', x.shuttles ? x.shuttles + ' dozen' : '–'], ['Club jerseys', num(x.qty_jersey)], ['Shorts', num(x.qty_shorts)], ['Training tops', num(x.qty_training_top)], ['Training pants', num(x.qty_training_pants)], ['Current supplier', x.current_supplier || '–'], ['Agreement ends', x.supplier_ends || '–']]],
-      ['Visibility', [['Banner', bannerLabel(x.banner)], ['Logo on nets', x.nets === 'yes' ? 'Yes' + (x.nets_count ? ', ' + x.nets_count + ' nets' : '') : yn(x.nets)], ['Courtside boards', num(x.boards)], ['Display / shop corner', yn(x.display)], ['Exclusivity', yn(x.exclusive)]]],
-      ['Members', [['Newsletter campaigns / year', num(x.newsletter)], ['Social posts / year', num(x.social)], ['Logo on website', yn(x.website_logo)], ['Demo days / year', num(x.demo_days)], ['Logo on club kit', yn(x.kit_logo)], ['Other', x.extra || '–']]],
+      ['Visibility', [['Banner', bannerLabel(x.banner)], ['Logo on nets', x.nets === 'yes' ? 'Yes' + (x.nets_count ? ', ' + x.nets_count + ' nets' : '') : yn(x.nets)], ['Courtside boards', num(x.boards)], ['Exclusivity', yn(x.exclusive)]]],
+      ['Members', [['Newsletter campaigns / year', num(x.newsletter)], ['Social posts / year', num(x.social)], ['Logo on website', yn(x.website_logo)], ['Other', x.extra || '–']]],
       ['Agreement', [['Club code', yn(x.club_code)], ['Start date', x.start_date || '–'], ['Length', x.years ? x.years + (x.years === '1' ? ' year' : ' years') : '–']]]
     ];
   }
@@ -253,6 +251,7 @@
       var v = a[k];
       if (Array.isArray(v) ? !v.length : (v === '' || v == null)) errors[k] = 'Please fill in this field.';
     });
+    if (step === 4 && a.start_date && a.start_date < new Date().toISOString().slice(0, 10)) errors.start_date = 'Please choose a date from today onwards.';
     if (step === 5 && a.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(a.email)) errors.email = 'Please enter a valid email.';
     return !Object.keys(errors).length;
   }
@@ -283,13 +282,10 @@
       BANNER: x.banner && x.banner !== 'none' ? bannerLabel(x.banner) + ', placed visibly in the main hall' : 'Not included',
       NETS: x.nets === 'yes' ? 'Included' + (x.nets_count ? ' on ' + x.nets_count + ' nets' : '') : 'Not included',
       BOARDS: x.boards && Number(x.boards) > 0 ? x.boards + ' boards' : 'Not included',
-      DISPLAY: x.display === 'yes' ? 'Included' : 'Not included',
       EXCLUSIVE: x.exclusive === 'yes' ? 'HUNDRED is the only racket sports brand visible in the hall' : 'Not included',
       NEWSLETTER: x.newsletter + ' per year',
       SOCIAL: x.social + ' per year',
       WEBSITE_LOGO: yn(x.website_logo),
-      DEMO_DAYS: x.demo_days + ' per year',
-      KIT_LOGO: yn(x.kit_logo),
       EXTRA: x.extra || '–',
       CLUB_CODE: x.club_code === 'yes'
         ? 'HUNDRED creates a personal club code for the Club’s members. The Club receives ' + BLANK_PRICE + ' % of the net sales made with the club code, paid out quarterly.'
@@ -342,7 +338,13 @@
       if (step < STEPS.length - 1) { step++; render(); scrollTop(); return; }
       sending = true; sendError = ''; render();
       send().then(function () { done = true; sending = false; render(); scrollTop(); })
-        .catch(function () { sending = false; sendError = 'Something went wrong and your application was not sent. Please try again, or contact us by email.'; render(); });
+        .catch(function (e) {
+          sending = false;
+          sendError = (e && e.message === 'no-webhook' && DESIGN_MODE)
+            ? 'Til HUNDRED: Make-webhook-URL mangler i sektionens indstillinger, så ansøgningen kan ikke sendes endnu.'
+            : 'Something went wrong and your application was not sent. Please try again, or contact us by email.';
+          render();
+        });
     };
   }
   function scrollTop() { root.scrollIntoView({ block: 'start' }); }
