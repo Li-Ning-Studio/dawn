@@ -1,0 +1,389 @@
+{%- comment -%}
+  HUNDRED – Sponsorship application
+  Ansøgning i 7 trin for spillere, der søger sponsorat.
+  Ved afsendelse sendes alle svar til Google Apps Script (samme som klubansøgningen).
+  Ingen priser, beløb eller vurderinger ligger i denne kode.
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap">
+
+<style>
+  .hsa{
+    --bg:#0a0a0b;--panel:#131315;--line:#2a2722;--text:#f3efe7;--soft:#cfc9be;--muted:#8c867b;
+    --gold:#f2a81d;--ember:#e5701a;--warn:#ff8a65;
+    --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+    --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--text);font:16px/1.6 var(--body);letter-spacing:0;
+    padding-block:clamp(60px,10vh,110px);
+  }
+  .hsa *{box-sizing:border-box}
+  .hsa button,.hsa input,.hsa textarea{font:inherit;color:inherit;letter-spacing:0}
+  .hsa-wrap{max-width:900px;margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+  .hsa :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+  .hsa .hsa-title{font:italic 900 clamp(48px,8vw,96px)/.86 var(--display);text-transform:uppercase;margin:0 0 16px;
+    background:linear-gradient(180deg,#ffc94a,var(--gold) 45%,var(--ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hsa-intro{color:var(--soft);max-width:62ch;margin:0 0 36px}
+  .hsa-intro p{margin:0 0 .8em}
+  .hsa-benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px;margin:0 0 40px;padding:0;list-style:none}
+  .hsa-benefits li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-weight:600;font-size:15px}
+  .hsa-benefits li::before{content:"";display:block;width:18px;height:3px;background:var(--gold);margin-bottom:10px}
+
+  .hsa-progress{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-bottom:10px}
+  .hsa-progress i{height:4px;border-radius:4px;background:var(--line)}
+  .hsa-progress i.on{background:var(--gold)}
+  .hsa-stepname{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+  .hsa-stepname b{color:var(--gold)}
+  .hsa-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:clamp(20px,4vw,40px)}
+  .hsa-card h2{font:italic 800 clamp(28px,3.4vw,40px)/1 var(--display);text-transform:uppercase;margin:0 0 8px;color:var(--text);letter-spacing:0}
+  .hsa-card .lead{color:var(--soft);margin:0 0 28px;max-width:62ch}
+  .hsa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px 22px}
+  .hsa-field{display:grid;gap:8px;margin-bottom:22px}
+  .hsa-grid .hsa-field{margin-bottom:0}
+  .hsa-field > label,.hsa-lbl{font-weight:600;font-size:15px}
+  .hsa-hint{font-size:13px;color:var(--muted);margin-top:-4px}
+  .hsa-req{color:var(--gold)}
+  .hsa input[type=text],.hsa input[type=email],.hsa input[type=tel],.hsa input[type=number],.hsa input[type=date],.hsa textarea{
+    width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;min-height:48px;box-shadow:none}
+  .hsa textarea{min-height:96px;resize:vertical}
+  .hsa input:focus,.hsa textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:transparent}
+  .hsa .invalid{border-color:var(--warn)!important}
+  .hsa-err{color:var(--warn);font-size:13px;margin:0}
+  .hsa-sec{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:30px 0 14px;padding-top:24px;border-top:1px solid var(--line)}
+
+  .hsa-opts{display:flex;flex-wrap:wrap;gap:8px}
+  .hsa-opt{position:relative}
+  .hsa-opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+  .hsa-opt span{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid var(--line);border-radius:999px;background:var(--bg);cursor:pointer;font-weight:600;font-size:15px;transition:border-color .15s,background .15s}
+  .hsa-opt input:checked + span{border-color:var(--gold);background:rgba(242,168,29,.12);color:var(--gold)}
+  .hsa-opt input:focus-visible + span{outline:2px solid var(--gold);outline-offset:2px}
+  .hsa-signs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:10px}
+  .hsa-signs .hsa-opt span{display:grid;gap:10px;justify-items:center;border-radius:10px;padding:16px 12px;text-align:center}
+  .hsa-signs .hsa-opt i{display:block;background:var(--line);border-radius:3px}
+  .hsa-signs .hsa-opt input:checked + span i{background:var(--gold)}
+  .hsa-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+  .hsa-row input[type=number]{width:140px}
+
+  .hsa-nav{display:flex;justify-content:space-between;gap:12px;margin-top:30px;flex-wrap:wrap}
+  .hsa .hsa-btn{border:0;border-radius:999px;padding:15px 28px;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;min-height:auto}
+  .hsa .hsa-btn--primary{background:var(--gold);color:#000}
+  .hsa .hsa-btn--primary:hover{background:#ffbb3a}
+  .hsa .hsa-btn--ghost{background:transparent;color:var(--soft);border:1px solid var(--line)}
+  .hsa .hsa-btn[disabled]{opacity:.5;cursor:not-allowed}
+
+  .hsa-review-group{margin-bottom:18px}
+  .hsa-review-group h3{margin:0 0 8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .hsa-review dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px 18px;margin:0}
+  .hsa-review dt{color:var(--muted)}
+  .hsa-review dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+  .hsa-thanks{text-align:center;padding-block:40px}
+  .hsa-thanks .lead{margin-inline:auto}
+  .hsa-alert{border:1px solid var(--warn);color:var(--warn);border-radius:8px;padding:12px 16px;margin-top:18px;font-size:14px}
+  .hsa-note{border:1px solid rgba(242,168,29,.45);background:rgba(242,168,29,.08);border-radius:10px;padding:14px 16px;margin:0 0 26px;color:var(--text);font-size:15px}
+  .hsa-note b{color:var(--gold)}
+  .hsa-social{display:grid;gap:14px;border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:16px}
+  .hsa-social h3{margin:0;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .hsa-check{display:flex;gap:12px;align-items:flex-start;margin:0 0 14px;cursor:pointer}
+  .hsa-check input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--gold);flex:none}
+  .hsa-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+
+  @media (max-width:640px){
+    .hsa-review dl{grid-template-columns:minmax(0,1fr)}
+    .hsa-review dd{margin-bottom:8px}
+  }
+  @media (prefers-reduced-motion:reduce){.hsa *{transition:none!important}}
+</style>
+
+<div class="hsa" id="hsa-{{ section.id }}">
+  <div class="hsa-wrap">
+    <h1 class="hsa-title">{{ section.settings.title | escape }}</h1>
+    <div class="hsa-intro">{{ section.settings.intro }}</div>
+
+    {%- assign benefits = section.settings.benefits | newline_to_br | split: '<br />' -%}
+    {%- if section.settings.benefits != blank -%}
+      <ul class="hsa-benefits">
+        {%- for b in benefits -%}{%- assign bt = b | strip -%}{%- if bt != blank -%}<li>{{ bt | escape }}</li>{%- endif -%}{%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    <div data-hsa-app></div>
+
+    {%- if section.settings.webhook_url == blank and request.design_mode -%}
+      <div class="hsa-alert">Mangler: indsæt webhook-URL'en fra Google Apps Script under sektionens indstillinger, ellers bliver ansøgninger ikke sendt.</div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('hsa-{{ section.id }}');
+  if (!root) return;
+  var app = root.querySelector('[data-hsa-app]');
+  var WEBHOOK = {{ section.settings.webhook_url | json }};
+  var THANKS_TITLE = {{ section.settings.thanks_title | json }};
+  var THANKS_TEXT = {{ section.settings.thanks_text | json }};
+  var DESIGN_MODE = {{ request.design_mode | json }};
+  var SID = '{{ section.id }}';
+
+  var STEPS = ['About you', 'Sport & level', 'Social media', 'What you can offer', 'Current sponsor', 'Your story', 'Review & send'];
+
+  function empty() {
+    return {
+      first_name: '', last_name: '', birth_date: '', nationality: '', country: '', city: '', email: '', phone: '',
+      guardian_name: '', guardian_email: '',
+      sports: [], category: '', disciplines: [], national_ranking: '', bwf_ranking: '', results: '',
+      tournaments_per_year: '', tournament_level: '',
+      ig_link: '', ig_followers: '', ig_views: '', tt_link: '', tt_followers: '', tt_views: '',
+      posting: '', europe_share: '', top_countries: '',
+      repost: '', ads: '', shoots: '', free_use: '', events: '',
+      has_sponsor: '', sponsor_brand: '', sponsor_ends: '',
+      story: '', why_hundred: '', goals: '', ambassador: '',
+      consent: false, guardian_consent: false, hp: ''
+    };
+  }
+
+  var step = 0, a = empty(), errors = {}, done = false, sending = false, sendError = '';
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function v(x) { return (x === '' || x == null) ? '–' : String(x); }
+  function today() { return new Date().toISOString().slice(0, 10); }
+  function age() {
+    if (!a.birth_date) return null;
+    var b = new Date(a.birth_date + 'T00:00:00'), n = new Date();
+    var y = n.getFullYear() - b.getFullYear();
+    if (n.getMonth() < b.getMonth() || (n.getMonth() === b.getMonth() && n.getDate() < b.getDate())) y--;
+    return y;
+  }
+  function minor() { var g = age(); return g !== null && g < 18; }
+
+  var YN = [['Yes', 'Yes'], ['No', 'No']];
+
+  function input(id, label, o) {
+    o = o || {};
+    var t = o.type || 'text';
+    var field = t === 'textarea'
+      ? '<textarea id="hsa-' + id + '" data-k="' + id + '" rows="' + (o.rows || 4) + '" class="' + (errors[id] ? 'invalid' : '') + '">' + esc(a[id]) + '</textarea>'
+      : '<input id="hsa-' + id + '" data-k="' + id + '" type="' + t + '"' + (t === 'number' ? ' min="0" inputmode="numeric"' : '') +
+        (o.auto ? ' autocomplete="' + o.auto + '"' : '') + (o.max ? ' max="' + o.max + '"' : '') + ' value="' + esc(a[id]) + '" class="' + (errors[id] ? 'invalid' : '') + '"' +
+        (o.ph ? ' placeholder="' + esc(o.ph) + '"' : '') + '>';
+    return '<div class="hsa-field"><label for="hsa-' + id + '">' + esc(label) + (o.req ? ' <span class="hsa-req">*</span>' : '') + '</label>' +
+      (o.hint ? '<div class="hsa-hint">' + esc(o.hint) + '</div>' : '') + field +
+      (errors[id] ? '<p class="hsa-err">' + esc(errors[id]) + '</p>' : '') + '</div>';
+  }
+  function choice(id, label, options, o) {
+    o = o || {};
+    var multi = !!o.multi;
+    var html = options.map(function (op) {
+      var on = multi ? a[id].indexOf(op[0]) !== -1 : String(a[id]) === String(op[0]);
+      return '<label class="hsa-opt"><input type="' + (multi ? 'checkbox' : 'radio') + '" name="hsa-' + id + '-' + SID + '" data-k="' + id + '" value="' + esc(op[0]) + '"' + (on ? ' checked' : '') + '><span>' + esc(op[1]) + '</span></label>';
+    }).join('');
+    return '<div class="hsa-field"><span class="hsa-lbl" id="hsa-l-' + id + '">' + esc(label) + (o.req ? ' <span class="hsa-req">*</span>' : '') + '</span>' +
+      (o.hint ? '<div class="hsa-hint">' + esc(o.hint) + '</div>' : '') +
+      '<div class="hsa-opts" role="' + (multi ? 'group' : 'radiogroup') + '" aria-labelledby="hsa-l-' + id + '">' + html + '</div>' +
+      (errors[id] ? '<p class="hsa-err">' + esc(errors[id]) + '</p>' : '') + '</div>';
+  }
+  function check(id, label) {
+    return '<label class="hsa-check"><input type="checkbox" data-k="' + id + '" data-bool="1"' + (a[id] ? ' checked' : '') + '><span>' + esc(label) + '</span></label>' +
+      (errors[id] ? '<p class="hsa-err" style="margin:-8px 0 14px">' + esc(errors[id]) + '</p>' : '');
+  }
+
+  function stepHTML() {
+    switch (step) {
+      case 0: return '<h2>About you</h2><p class="lead">Tell us who you are.</p><div class="hsa-grid">' +
+        input('first_name', 'First name', { req: 1, auto: 'given-name' }) + input('last_name', 'Last name', { req: 1, auto: 'family-name' }) +
+        input('birth_date', 'Date of birth', { type: 'date', req: 1, max: today(), auto: 'bday' }) + input('nationality', 'Nationality', { req: 1 }) +
+        input('country', 'Country you live in', { req: 1, auto: 'country-name' }) + input('city', 'City', { req: 1, auto: 'address-level2' }) +
+        input('email', 'Email', { type: 'email', req: 1, auto: 'email' }) + input('phone', 'Phone', { type: 'tel', req: 1, auto: 'tel' }) +
+        '</div>' +
+        (minor() ? '<p class="hsa-sec">Parent or guardian</p><p class="lead" style="margin-bottom:18px">You are under 18, so we also need the details of a parent or guardian.</p><div class="hsa-grid">' +
+          input('guardian_name', 'Parent / guardian name', { req: 1 }) + input('guardian_email', 'Parent / guardian email', { type: 'email', req: 1 }) + '</div>' : '');
+      case 1: return '<h2>Sport & level</h2><p class="lead">Your sport and how good you are.</p>' +
+        choice('sports', 'Sport', [['Badminton', 'Badminton'], ['Padel', 'Padel'], ['Pickleball', 'Pickleball']], { multi: 1, req: 1, hint: 'Choose all that apply' }) +
+        choice('category', 'Category', [['U13', 'U13'], ['U15', 'U15'], ['U17', 'U17'], ['U19', 'U19'], ['Senior', 'Senior']], { req: 1 }) +
+        choice('disciplines', 'Discipline', [['Singles', 'Singles'], ['Doubles', 'Doubles'], ['Mixed', 'Mixed']], { multi: 1, req: 1, hint: 'Choose all that apply' }) +
+        '<div class="hsa-grid">' +
+        input('national_ranking', 'National ranking in your country', { req: 1, ph: 'e.g. #4 singles, #2 mixed' }) +
+        input('bwf_ranking', 'BWF world ranking', { hint: 'If you have one (junior or senior)', ph: 'e.g. #87 singles' }) +
+        '</div><div style="margin-top:22px">' +
+        input('results', 'Biggest results in the last 2 years', { type: 'textarea', req: 1, hint: 'Titles, national team, international tournaments …' }) +
+        choice('tournaments_per_year', 'How many tournaments do you play per year?', [['0–5', '0–5'], ['6–10', '6–10'], ['11–20', '11–20'], ['20+', '20+']], { req: 1 }) +
+        choice('tournament_level', 'Highest level of tournaments you play', [['Local / regional', 'Local / regional'], ['National', 'National'], ['International', 'International'], ['World tour / pro circuit', 'World tour / pro circuit']], { req: 1 }) +
+        '</div>';
+      case 2: return '<h2>Social media</h2>' +
+        '<div class="hsa-note"><b>This step is very important to us.</b> We care a lot about social media and about reaching players across Europe. Fill in what you have. The fields are optional, but the more you share, the better we can assess your application.</div>' +
+        '<div class="hsa-social"><h3>Instagram</h3><div class="hsa-grid">' +
+        input('ig_link', 'Link to your Instagram', { ph: 'https://instagram.com/…' }) + input('ig_followers', 'Followers', { type: 'number' }) + input('ig_views', 'Average views per post / reel', { type: 'number' }) +
+        '</div></div>' +
+        '<div class="hsa-social"><h3>TikTok</h3><div class="hsa-grid">' +
+        input('tt_link', 'Link to your TikTok', { ph: 'https://tiktok.com/@…' }) + input('tt_followers', 'Followers', { type: 'number' }) + input('tt_views', 'Average views per video', { type: 'number' }) +
+        '</div></div>' +
+        choice('posting', 'How often do you post?', [['Daily', 'Daily'], ['A few times a week', 'A few times a week'], ['Weekly', 'Weekly'], ['Monthly', 'Monthly'], ['Rarely', 'Rarely']]) +
+        '<p class="hsa-sec">Your audience (if you can see it)</p><p class="lead" style="margin-bottom:18px">With a professional (creator or business) account you can see this under Insights → Audience. If you can’t see it, just skip it.</p>' +
+        choice('europe_share', 'Share of your followers from Europe', [['Under 25%', 'Under 25%'], ['25–50%', '25–50%'], ['50–75%', '50–75%'], ['Over 75%', 'Over 75%'], ['Don’t know', 'Don’t know']]) +
+        input('top_countries', 'Top 3 countries among your followers', { ph: 'e.g. Denmark, Germany, Sweden' });
+      case 3: return '<h2>What you can offer</h2><p class="lead">The more value you can create with HUNDRED, the better the partnership we can offer.</p>' +
+        choice('repost', 'Are you open to reposting HUNDRED content?', [['Yes', 'Yes, happy to'], ['Sometimes', 'Sometimes'], ['No', 'No']], { req: 1,
+          hint: 'For example campaigns, product launches and videos from our new YouTube project. We only ask you to share things that are actually cool to post.' }) +
+        choice('ads', 'May HUNDRED use you in ads, videos and on social media?', YN, { req: 1 }) +
+        choice('shoots', 'Are you ready to take part in video recordings and photoshoots?', YN, { req: 1 }) +
+        choice('free_use', 'May HUNDRED freely use photos and videos of you during the agreement?', YN, { req: 1 }) +
+        choice('events', 'If we host an event (1–2 times a year), are you open to taking part?', [['Yes', 'Yes'], ['Maybe', 'Maybe'], ['No', 'No']], { req: 1 });
+      case 4: return '<h2>Current sponsor</h2><p class="lead">This helps us plan when a partnership could start.</p>' +
+        choice('has_sponsor', 'Do you have a sponsor today?', YN, { req: 1 }) +
+        (a.has_sponsor === 'Yes' ? '<div class="hsa-grid">' + input('sponsor_brand', 'Which brand?', { req: 1 }) + input('sponsor_ends', 'When does the agreement end?', { req: 1, ph: 'e.g. June 2027' }) + '</div>' : '');
+      case 5: return '<h2>Your story</h2><p class="lead">This is your application. Take your time and tell us who you are.</p>' +
+        input('story', 'Who are you, and what is your story?', { type: 'textarea', req: 1, rows: 6 }) +
+        input('why_hundred', 'Why HUNDRED?', { type: 'textarea', req: 1 }) +
+        input('goals', 'What are your goals for the next 2–3 years?', { type: 'textarea', req: 1 }) +
+        input('ambassador', 'What makes you a good ambassador for HUNDRED?', { type: 'textarea', req: 1 });
+      case 6: return '<h2>Review & send</h2><p class="lead">Check your answers before you send.</p>' + reviewHTML() +
+        '<div style="margin-top:26px">' + check('consent', 'I confirm that the information I have given is correct.') +
+        (minor() ? check('guardian_consent', 'My parent or guardian knows about and agrees to this application.') : '') + '</div>' +
+        '<div class="hsa-hp" aria-hidden="true"><label>Leave empty<input type="text" data-k="hp" tabindex="-1" autocomplete="off"></label></div>';
+    }
+  }
+
+  function groups() {
+    var x = a, g = age();
+    var about = [['Name', x.first_name + ' ' + x.last_name], ['Date of birth', v(x.birth_date) + (g !== null ? ' (' + g + ' years)' : '')], ['Nationality', v(x.nationality)], ['Lives in', v(x.city) + ', ' + v(x.country)], ['Email', v(x.email)], ['Phone', v(x.phone)]];
+    if (minor()) about.push(['Parent / guardian', v(x.guardian_name) + ', ' + v(x.guardian_email)]);
+    return [
+      ['About you', about],
+      ['Sport & level', [['Sport', x.sports.join(', ') || '–'], ['Category', v(x.category)], ['Discipline', x.disciplines.join(', ') || '–'], ['National ranking', v(x.national_ranking)], ['BWF world ranking', v(x.bwf_ranking)], ['Biggest results', v(x.results)], ['Tournaments per year', v(x.tournaments_per_year)], ['Highest level', v(x.tournament_level)]]],
+      ['Social media', [['Instagram', v(x.ig_link)], ['Instagram followers', v(x.ig_followers)], ['Instagram avg. views', v(x.ig_views)], ['TikTok', v(x.tt_link)], ['TikTok followers', v(x.tt_followers)], ['TikTok avg. views', v(x.tt_views)], ['Posting', v(x.posting)], ['Followers from Europe', v(x.europe_share)], ['Top countries', v(x.top_countries)]]],
+      ['What you can offer', [['Reposting HUNDRED content', v(x.repost)], ['Use in ads and videos', v(x.ads)], ['Recordings and photoshoots', v(x.shoots)], ['Free use of photos and videos', v(x.free_use)], ['Events', v(x.events)]]],
+      ['Current sponsor', [['Has a sponsor', v(x.has_sponsor)]].concat(x.has_sponsor === 'Yes' ? [['Brand', v(x.sponsor_brand)], ['Agreement ends', v(x.sponsor_ends)]] : [])],
+      ['Your story', [['Who you are', v(x.story)], ['Why HUNDRED', v(x.why_hundred)], ['Goals', v(x.goals)], ['Good ambassador because', v(x.ambassador)]]]
+    ];
+  }
+  function reviewHTML() {
+    return '<div class="hsa-review">' + groups().map(function (g) {
+      return '<div class="hsa-review-group"><h3>' + esc(g[0]) + '</h3><dl>' + g[1].map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl></div>';
+    }).join('') + '</div>';
+  }
+
+  var REQUIRED = {
+    0: ['first_name', 'last_name', 'birth_date', 'nationality', 'country', 'city', 'email', 'phone'],
+    1: ['sports', 'category', 'disciplines', 'national_ranking', 'results', 'tournaments_per_year', 'tournament_level'],
+    2: [],
+    3: ['repost', 'ads', 'shoots', 'free_use', 'events'],
+    4: ['has_sponsor'],
+    5: ['story', 'why_hundred', 'goals', 'ambassador'],
+    6: ['consent']
+  };
+  function validate() {
+    errors = {};
+    var req = (REQUIRED[step] || []).slice();
+    if (step === 0 && minor()) req.push('guardian_name', 'guardian_email');
+    if (step === 4 && a.has_sponsor === 'Yes') req.push('sponsor_brand', 'sponsor_ends');
+    if (step === 6 && minor()) req.push('guardian_consent');
+    req.forEach(function (k) {
+      var x = a[k];
+      if (Array.isArray(x) ? !x.length : (x === '' || x == null || x === false)) errors[k] = (k === 'consent' || k === 'guardian_consent') ? 'Please confirm to continue.' : 'Please fill in this field.';
+    });
+    var mail = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if (step === 0) {
+      if (a.email && !mail.test(a.email)) errors.email = 'Please enter a valid email.';
+      if (a.guardian_email && minor() && !mail.test(a.guardian_email)) errors.guardian_email = 'Please enter a valid email.';
+      if (a.birth_date && a.birth_date > today()) errors.birth_date = 'Please check your date of birth.';
+    }
+    return !Object.keys(errors).length;
+  }
+
+  /* Felterne der sendes til Google Apps Script */
+  function payload() {
+    var x = a, g = age();
+    return {
+      FORM_TYPE: 'sponsorship',
+      SUBMITTED_AT: today(),
+      FIRST_NAME: x.first_name, LAST_NAME: x.last_name, NAME: x.first_name + ' ' + x.last_name,
+      BIRTH_DATE: x.birth_date, AGE: g === null ? '' : String(g), UNDER_18: minor() ? 'Yes' : 'No',
+      NATIONALITY: x.nationality, COUNTRY: x.country, CITY: x.city, EMAIL: x.email, PHONE: x.phone,
+      GUARDIAN_NAME: minor() ? x.guardian_name : '', GUARDIAN_EMAIL: minor() ? x.guardian_email : '',
+      SPORTS: x.sports.join(', '), CATEGORY: x.category, DISCIPLINES: x.disciplines.join(', '),
+      NATIONAL_RANKING: x.national_ranking, BWF_RANKING: x.bwf_ranking || '–', RESULTS: x.results,
+      TOURNAMENTS_PER_YEAR: x.tournaments_per_year, TOURNAMENT_LEVEL: x.tournament_level,
+      IG_LINK: x.ig_link || '–', IG_FOLLOWERS: x.ig_followers, IG_VIEWS: x.ig_views,
+      TT_LINK: x.tt_link || '–', TT_FOLLOWERS: x.tt_followers, TT_VIEWS: x.tt_views,
+      TOTAL_FOLLOWERS: String((Number(x.ig_followers) || 0) + (Number(x.tt_followers) || 0)),
+      POSTING: x.posting || '–', EUROPE_SHARE: x.europe_share || '–', TOP_COUNTRIES: x.top_countries || '–',
+      REPOST: x.repost, ADS: x.ads, SHOOTS: x.shoots, FREE_USE: x.free_use, EVENTS: x.events,
+      HAS_SPONSOR: x.has_sponsor, SPONSOR_BRAND: x.has_sponsor === 'Yes' ? x.sponsor_brand : '–', SPONSOR_ENDS: x.has_sponsor === 'Yes' ? x.sponsor_ends : '–',
+      STORY: x.story, WHY_HUNDRED: x.why_hundred, GOALS: x.goals, AMBASSADOR: x.ambassador
+    };
+  }
+
+  function send() {
+    if (a.hp) return Promise.resolve();
+    if (!WEBHOOK) return Promise.reject(new Error('no-webhook'));
+    return fetch(WEBHOOK, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(payload()) });
+  }
+
+  function render() {
+    if (done) {
+      app.innerHTML = '<div class="hsa-card hsa-thanks" tabindex="-1"><h2>' + esc(THANKS_TITLE) + '</h2><p class="lead">' + esc(THANKS_TEXT) + '</p></div>';
+      app.querySelector('.hsa-thanks').focus();
+      return;
+    }
+    app.innerHTML =
+      '<div class="hsa-progress" style="grid-template-columns:repeat(' + STEPS.length + ',minmax(0,1fr))" aria-hidden="true">' + STEPS.map(function (_, i) { return '<i class="' + (i <= step ? 'on' : '') + '"></i>'; }).join('') + '</div>' +
+      '<div class="hsa-stepname">Step <b>' + (step + 1) + '</b> of ' + STEPS.length + ' · ' + esc(STEPS[step]) + '</div>' +
+      '<div class="hsa-card">' + stepHTML() +
+      (sendError ? '<div class="hsa-alert" role="alert">' + esc(sendError) + '</div>' : '') +
+      '<div class="hsa-nav"><div>' + (step > 0 ? '<button class="hsa-btn hsa-btn--ghost" type="button" data-prev>Back</button>' : '') + '</div>' +
+      '<button class="hsa-btn hsa-btn--primary" type="button" data-next' + (sending ? ' disabled' : '') + '>' + (step === STEPS.length - 1 ? (sending ? 'Sending…' : 'Send application') : 'Next') + '</button></div></div>';
+
+    app.querySelectorAll('[data-k]').forEach(function (el) {
+      var k = el.getAttribute('data-k');
+      var ev = (el.type === 'radio' || el.type === 'checkbox') ? 'change' : 'input';
+      el.addEventListener(ev, function () {
+        if (el.getAttribute('data-bool')) a[k] = el.checked;
+        else if (el.type === 'checkbox') {
+          a[k] = el.checked ? a[k].concat([el.value]).filter(function (x, i, arr) { return arr.indexOf(x) === i; }) : a[k].filter(function (x) { return x !== el.value; });
+        } else a[k] = el.value;
+        if (errors[k]) { delete errors[k]; el.classList.remove('invalid'); }
+        if (k === 'has_sponsor') render();
+      });
+      if (k === 'birth_date') el.addEventListener('change', function () { var was = !!root.querySelector('#hsa-guardian_name'); if (was !== minor()) render(); });
+    });
+    var prev = app.querySelector('[data-prev]');
+    if (prev) prev.onclick = function () { step--; errors = {}; sendError = ''; render(); scrollTop(); };
+    app.querySelector('[data-next]').onclick = function () {
+      if (!validate()) { render(); var f = app.querySelector('.invalid, .hsa-err'); if (f) f.scrollIntoView({ block: 'center' }); return; }
+      if (step < STEPS.length - 1) { step++; render(); scrollTop(); return; }
+      sending = true; sendError = ''; render();
+      send().then(function () { done = true; sending = false; render(); scrollTop(); })
+        .catch(function (e) {
+          sending = false;
+          sendError = (e && e.message === 'no-webhook' && DESIGN_MODE)
+            ? 'Til HUNDRED: Webhook-URL mangler i sektionens indstillinger, så ansøgningen kan ikke sendes endnu.'
+            : 'Something went wrong and your application was not sent. Please try again, or contact us by email.';
+          render();
+        });
+    };
+  }
+  function scrollTop() { root.scrollIntoView({ block: 'start' }); }
+
+  render();
+})();
+</script>
+
+{% schema %}
+{
+  "name": "HUNDRED Sponsorship",
+  "tag": "section",
+  "class": "section-hundred-sponsorship",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Overskrift", "default": "Become a HUNDRED athlete" },
+    { "type": "richtext", "id": "intro", "label": "Indledning", "default": "<p>Apply for a HUNDRED sponsorship. We look for players who perform on court and connect with an audience across Europe.</p><p>The more value you can create with HUNDRED, the better the partnership we can offer. It takes about 10 minutes.</p>" },
+    { "type": "textarea", "id": "benefits", "label": "Fordele (én pr. linje)", "info": "Vises som små kort. Skriv ingen priser eller beløb her.", "default": "Gear from HUNDRED\nBe part of our campaigns and content\nJoin a growing European team" },
+    { "type": "header", "content": "Afsendelse" },
+    { "type": "text", "id": "webhook_url", "label": "Webhook-URL", "info": "Webapp-URL'en fra Google Apps Script (slutter på /exec)." },
+    { "type": "text", "id": "thanks_title", "label": "Tak-overskrift", "default": "Thank you!" },
+    { "type": "textarea", "id": "thanks_text", "label": "Tak-tekst", "default": "We have received your application. We review every application carefully and will get back to you by email." }
+  ],
+  "presets": [{ "name": "HUNDRED Sponsorship" }]
+}
+{% endschema %}
