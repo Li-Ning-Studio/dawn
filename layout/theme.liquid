@@ -419,12 +419,10 @@
       {% render 'gokwik-sdk' %}
     {% endif %}
 
-    {%- comment -%} Ketcherr√•dgiver: kun p√• eu.hndrd.co, p√• ketcherkategorien og ketcher-produktsider {%- endcomment -%}
+    {%- comment -%} Kim ketcherraadgiver: kun paa kollektionen Badminton Rackets og dens produktsider {%- endcomment -%}
     {%- assign vis_raadgiver = false -%}
     {%- if request.host == 'eu.hndrd.co' -%}
-      {%- if template contains 'collection' and collection.handle == 'badminton-rackets' -%}{%- assign vis_raadgiver = true -%}{%- endif -%}
-      {%- if template contains 'product' -%}{%- for c in product.collections -%}{%- if c.handle == 'badminton-rackets' -%}{%- assign vis_raadgiver = true -%}{%- endif -%}{%- endfor -%}{%- endif -%}
+      {%- if template contains 'collection' and collection.handle == 'badminton-rackets-hndrd' -%}{%- assign vis_raadgiver = true -%}{%- endif -%}
+      {%- if template contains 'product' -%}{%- for c in product.collections -%}{%- if c.handle == 'badminton-rackets-hndrd' -%}{%- assign vis_raadgiver = true -%}{%- endif -%}{%- endfor -%}{%- endif -%}
     {%- endif -%}
     {%- if vis_raadgiver -%}<script src="https://ketcherraadgiver-production.up.railway.app/widget.js" defer></script>{%- endif -%}
-  </body>
-</html>
