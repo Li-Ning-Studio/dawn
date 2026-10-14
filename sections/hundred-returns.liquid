@@ -1,0 +1,369 @@
+{%- comment -%}
+  HUNDRED – Returns
+  Returregler, varer der ikke kan returneres, og en knap til returportalen.
+  Linket til portalen indsættes i temaeditoren.
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap">
+
+<style>
+  .hrt{
+    --bg:#0a0a0b;--panel:#131315;--line:#2a2722;--text:#f3efe7;--soft:#cfc9be;--muted:#8c867b;
+    --gold:#f2a81d;--ember:#e5701a;--warn:#ff8a65;
+    --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+    --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--text);font:17px/1.7 var(--body);letter-spacing:0;
+    padding-block:clamp(60px,10vh,110px);
+  }
+  .hrt *{box-sizing:border-box}
+  .hrt-wrap{max-width:900px;margin-inline:auto;padding-inline:clamp(16px,4vw,32px);display:grid;gap:clamp(44px,7vh,68px)}
+  .hrt-wrap > *{min-width:0}
+  .hrt .hrt-title{font:italic 900 clamp(56px,9vw,110px)/.85 var(--display);text-transform:uppercase;margin:0 0 14px;letter-spacing:-.01em;
+    background:linear-gradient(180deg,#ffc94a,var(--gold) 45%,var(--ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hrt .hrt-h2{font:italic 800 clamp(30px,4vw,44px)/1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 18px;color:var(--text)}
+  .hrt-rte{color:var(--soft)}
+  .hrt-rte p{margin:0 0 1em}
+  .hrt-rte p:last-child{margin-bottom:0}
+  .hrt-rte strong{color:var(--text)}
+  .hrt-rte a{color:var(--gold)}
+  .hrt-rte ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+  .hrt-rte li{position:relative;padding-left:24px}
+  .hrt-rte li::before{content:"";position:absolute;left:0;top:.75em;width:12px;height:2px;background:var(--gold)}
+  .hrt-small{margin:16px 0 0;font-size:14px;color:var(--muted)}
+  .hrt-claim{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:clamp(20px,4vw,28px);background:var(--panel)}
+  .hrt-claim .hrt-h2{margin:0 0 6px}
+  .hrt-claim p{margin:0;color:var(--soft);max-width:52ch}
+  .hrt .hrt-btn--ghost{background:transparent;color:var(--gold);border:2px solid var(--gold);padding:15px 28px}
+  .hrt .hrt-btn--ghost:hover{background:var(--gold);color:#000}
+
+  /* portal-boks */
+  .hrt-portal{position:relative;overflow:hidden;border-radius:14px;padding:clamp(28px,5vw,48px);
+    background:radial-gradient(120% 140% at 100% 0%,rgba(229,112,26,.32),transparent 55%),var(--panel);border:1px solid rgba(242,168,29,.45);
+    display:grid;gap:16px;justify-items:start}
+  .hrt-portal .hrt-h2{margin:0;color:var(--gold)}
+  .hrt-portal p{margin:0;color:var(--soft);max-width:56ch}
+  .hrt-options{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px;padding:0;list-style:none}
+  .hrt-options li{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600}
+  .hrt .hrt-btn{display:inline-flex;align-items:center;gap:10px;padding:17px 32px;border-radius:999px;background:var(--gold);color:#000;
+    font:700 14px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s}
+  .hrt .hrt-btn:hover{background:#ffbb3a;transform:translateY(-2px)}
+  .hrt .hrt-btn:focus-visible,.hrt summary:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+  .hrt-alert{border:1px solid var(--warn);color:var(--warn);border-radius:8px;padding:10px 14px;font-size:14px}
+
+  /* trin */
+  .hrt-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px;margin:0;padding:0;list-style:none;counter-reset:s}
+  .hrt-steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;gap:6px}
+  .hrt-steps li::before{content:counter(s,decimal-leading-zero);font:italic 900 34px/1 var(--display);color:var(--gold)}
+  .hrt-steps b{font-size:17px}
+  .hrt-steps span{color:var(--soft);font-size:15px;line-height:1.55}
+
+  /* kan ikke returneres */
+  .hrt-no{border:1px solid var(--line);border-radius:12px;padding:clamp(20px,4vw,32px);background:var(--panel)}
+  .hrt-no ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+  .hrt-no li{position:relative;padding-left:30px;font-weight:600}
+  .hrt-no li::before{content:"";position:absolute;left:0;top:.35em;width:18px;height:18px;border-radius:50%;border:2px solid var(--warn)}
+  .hrt-no li::after{content:"";position:absolute;left:4px;top:calc(.35em + 8px);width:10px;height:2px;background:var(--warn);transform:rotate(-45deg)}
+
+  /* FAQ */
+  .hrt-faq{border-top:1px solid var(--line)}
+  .hrt-faq details{border-bottom:1px solid var(--line)}
+  .hrt-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 2px;font-weight:700;font-size:17px}
+  .hrt-faq summary::-webkit-details-marker{display:none}
+  .hrt-faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-weight:400;font-size:20px;color:var(--gold)}
+  .hrt-faq details[open] summary::after{content:"–";background:var(--gold);border-color:var(--gold);color:#000}
+  .hrt-faq details[open] summary{color:var(--gold)}
+  .hrt-faq .hrt-rte{padding:0 2px 22px}
+</style>
+
+<div class="hrt" id="hrt-{{ section.id }}">
+  <div class="hrt-wrap">
+    <div>
+      <h1 class="hrt-title">{{ section.settings.title | escape }}</h1>
+      {%- if section.settings.intro != blank -%}<div class="hrt-rte">{{ section.settings.intro }}</div>{%- endif -%}
+    </div>
+
+    {%- comment -%} Returportal {%- endcomment -%}
+    <div class="hrt-portal">
+      <h2 class="hrt-h2">{{ section.settings.portal_heading | escape }}</h2>
+      <p>{{ section.settings.portal_text | escape }}</p>
+      {%- assign opts = section.settings.portal_options | newline_to_br | split: '<br />' -%}
+      {%- if section.settings.portal_options != blank -%}
+        <ul class="hrt-options">
+          {%- for o in opts -%}{%- assign ot = o | strip -%}{%- if ot != blank -%}<li>{{ ot | escape }}</li>{%- endif -%}{%- endfor -%}
+        </ul>
+      {%- endif -%}
+      {%- if section.settings.portal_url != blank -%}
+        <a class="hrt-btn" href="{{ section.settings.portal_url }}" target="_blank" rel="noopener">{{ section.settings.portal_button | escape }} →</a>
+      {%- elsif request.design_mode -%}
+        <div class="hrt-alert">Til HUNDRED: indsæt linket til returportalen under sektionens indstillinger, så vises knappen.</div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Sådan gør du {%- endcomment -%}
+    <div>
+      <h2 class="hrt-h2">{{ section.settings.steps_heading | escape }}</h2>
+      <ol class="hrt-steps">
+        <li><b>{{ section.settings.step1_title | escape }}</b><span>{{ section.settings.step1_text | escape }}</span></li>
+        <li><b>{{ section.settings.step2_title | escape }}</b><span>{{ section.settings.step2_text | escape }}</span></li>
+        <li><b>{{ section.settings.step3_title | escape }}</b><span>{{ section.settings.step3_text | escape }}</span></li>
+      </ol>
+    </div>
+
+    {%- comment -%} Regler {%- endcomment -%}
+    <div>
+      <h2 class="hrt-h2">{{ section.settings.rules_heading | escape }}</h2>
+      <div class="hrt-rte">{{ section.settings.rules_text }}</div>
+      {%- if section.settings.rules_note != blank -%}<p class="hrt-small">{{ section.settings.rules_note | escape }}</p>{%- endif -%}
+    </div>
+
+    {%- comment -%} Kan ikke returneres {%- endcomment -%}
+    {%- if section.settings.no_return_items != blank -%}
+      <div class="hrt-no">
+        <h2 class="hrt-h2">{{ section.settings.no_return_heading | escape }}</h2>
+        {%- assign items = section.settings.no_return_items | newline_to_br | split: '<br />' -%}
+        <ul>
+          {%- for i in items -%}{%- assign it = i | strip -%}{%- if it != blank -%}<li>{{ it | escape }}</li>{%- endif -%}{%- endfor -%}
+        </ul>
+        {%- if section.settings.no_return_text != blank -%}<p class="hrt-small">{{ section.settings.no_return_text | escape }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Reklamation {%- endcomment -%}
+    {%- if section.settings.claim_heading != blank -%}
+      <div class="hrt-claim">
+        <div>
+          <h2 class="hrt-h2">{{ section.settings.claim_heading | escape }}</h2>
+          <p>{{ section.settings.claim_text | escape }}</p>
+        </div>
+        <a class="hrt-btn hrt-btn--ghost" href="{{ section.settings.claim_url | default: '/pages/contact' }}">{{ section.settings.claim_button | escape }} →</a>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Spørgsmål {%- endcomment -%}
+    {%- if section.blocks.size > 0 -%}
+      <div>
+        <h2 class="hrt-h2">{{ section.settings.faq_heading | escape }}</h2>
+        <div class="hrt-faq">
+          {%- for block in section.blocks -%}
+            <details {{ block.shopify_attributes }}>
+              <summary>{{ block.settings.question | escape }}</summary>
+              <div class="hrt-rte">{{ block.settings.answer }}</div>
+            </details>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HUNDRED Returns",
+  "tag": "section",
+  "class": "section-hundred-returns",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Overskrift",
+      "default": "Returns"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Indledning",
+      "default": "<p>Not the right size or not quite what you expected? Here is how to return your order.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Returportal"
+    },
+    {
+      "type": "text",
+      "id": "portal_heading",
+      "label": "Overskrift",
+      "default": "Start your return"
+    },
+    {
+      "type": "text",
+      "id": "portal_text",
+      "label": "Tekst",
+      "default": "Enter your order number and email, choose what you want to return, and print your label or show it at the parcel shop."
+    },
+    {
+      "type": "textarea",
+      "id": "portal_options",
+      "label": "Valgmuligheder (én pr. linje)",
+      "default": "Exchange for another size\nGift card\nRefund"
+    },
+    {
+      "type": "url",
+      "id": "portal_url",
+      "label": "Link til returportalen"
+    },
+    {
+      "type": "text",
+      "id": "portal_button",
+      "label": "Knaptekst",
+      "default": "Go to return portal"
+    },
+    {
+      "type": "header",
+      "content": "Sådan gør du"
+    },
+    {
+      "type": "text",
+      "id": "steps_heading",
+      "label": "Overskrift",
+      "default": "How it works"
+    },
+    {
+      "type": "text",
+      "id": "step1_title",
+      "label": "Trin 1 – overskrift",
+      "default": "Find your order"
+    },
+    {
+      "type": "text",
+      "id": "step1_text",
+      "label": "Trin 1 – tekst",
+      "default": "Enter your order number and email."
+    },
+    {
+      "type": "text",
+      "id": "step2_title",
+      "label": "Trin 2 – overskrift",
+      "default": "Choose items and solution"
+    },
+    {
+      "type": "text",
+      "id": "step2_text",
+      "label": "Trin 2 – tekst",
+      "default": "Pick an exchange, a gift card or a refund."
+    },
+    {
+      "type": "text",
+      "id": "step3_title",
+      "label": "Trin 3 – overskrift",
+      "default": "Send it back"
+    },
+    {
+      "type": "text",
+      "id": "step3_text",
+      "label": "Trin 3 – tekst",
+      "default": "Print the label or show it at the parcel shop."
+    },
+    {
+      "type": "header",
+      "content": "Returregler"
+    },
+    {
+      "type": "text",
+      "id": "rules_heading",
+      "label": "Overskrift",
+      "default": "Return policy"
+    },
+    {
+      "type": "richtext",
+      "id": "rules_text",
+      "label": "Tekst",
+      "default": "<ul><li><strong>14 days</strong> to return your order, counted from the day you receive it.</li><li><strong>You pay the return shipping.</strong> The price is shown in the return portal.</li><li>Items must be unused and in the same condition as when you received them.</li><li>We refund you within 14 days after we have received your return.</li></ul>"
+    },
+    {
+      "type": "text",
+      "id": "rules_note",
+      "label": "Note om særlige returperioder",
+      "default": "Special return periods, for example over Christmas, are always stated on our website. If a different period is stated, that period applies."
+    },
+    {
+      "type": "header",
+      "content": "Kan ikke returneres"
+    },
+    {
+      "type": "text",
+      "id": "no_return_heading",
+      "label": "Overskrift",
+      "default": "Cannot be returned"
+    },
+    {
+      "type": "textarea",
+      "id": "no_return_items",
+      "label": "Varer (én pr. linje)",
+      "default": "Rackets with added stringing\nClothing with added print"
+    },
+    {
+      "type": "text",
+      "id": "no_return_text",
+      "label": "Forklaring",
+      "default": "These are special orders made just for you, so we cannot resell them."
+    },
+    {
+      "type": "header",
+      "content": "Reklamation"
+    },
+    {
+      "type": "text",
+      "id": "claim_heading",
+      "label": "Overskrift",
+      "default": "Faulty item?"
+    },
+    {
+      "type": "text",
+      "id": "claim_text",
+      "label": "Tekst",
+      "default": "A faulty item is a complaint, not a return. Contact our support with your order number and a photo, and we will sort it out. You have a 2-year right to complain."
+    },
+    {
+      "type": "text",
+      "id": "claim_button",
+      "label": "Knaptekst",
+      "default": "Contact support"
+    },
+    {
+      "type": "url",
+      "id": "claim_url",
+      "label": "Link",
+      "info": "Tomt = /pages/contact"
+    },
+    {
+      "type": "header",
+      "content": "Spørgsmål"
+    },
+    {
+      "type": "text",
+      "id": "faq_heading",
+      "label": "Overskrift",
+      "default": "Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Spørgsmål",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Spørgsmål",
+          "default": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Svar",
+          "default": "<p>Answer</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HUNDRED Returns",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
