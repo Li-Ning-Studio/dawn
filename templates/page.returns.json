@@ -17,58 +17,40 @@
         "padding_bottom": 28
       }
     },
-    "image_banner_fz3meY": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_RPeDTa": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_VTVPY6": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_KNmEHq": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_RPeDTa",
-        "text_VTVPY6",
-        "buttons_KNmEHq"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+    "hundred_returns_48XAwL": {
+      "type": "hundred-returns",
+      "name": "HUNDRED Returns",
       "settings": {
-        "image": "shopify://shop_images/CINEMATIC_LIGHTING_ENHANCEMENT_Nano_Banana_2_73016_c575f141-69f2-453c-b45a-929afcd26bc5.png",
-        "image_overlay_opacity": 30,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "title": "Returns",
+        "intro": "<p>Not the right size or not quite what you expected? Here is how to return your order.</p>",
+        "portal_heading": "Start your return",
+        "portal_text": "Enter your order number and email, choose what you want to return, and print your label or show it at the parcel shop.",
+        "portal_options": "Exchange for another size\nGift card\nRefund",
+        "portal_url": "",
+        "portal_button": "Go to return portal",
+        "steps_heading": "How it works",
+        "step1_title": "Find your order",
+        "step1_text": "Enter your order number and email.",
+        "step2_title": "Choose items and solution",
+        "step2_text": "Pick an exchange, a gift card or a refund.",
+        "step3_title": "Send it back",
+        "step3_text": "Print the label or show it at the parcel shop.",
+        "rules_heading": "Return policy",
+        "rules_text": "<ul><li><strong>14 days</strong> to return your order, counted from the day you receive it.</li><li><strong>You pay the return shipping.</strong> The price is shown in the return portal.</li><li>Items must be unused and in the same condition as when you received them.</li><li>We refund you within 14 days after we have received your return.</li></ul>",
+        "rules_note": "Special return periods, for example over Christmas, are always stated on our website. If a different period is stated, that period applies.",
+        "no_return_heading": "Cannot be returned",
+        "no_return_items": "Rackets with added stringing\nClothing with added print",
+        "no_return_text": "These are special orders made just for you, so we cannot resell them.",
+        "claim_heading": "Faulty item?",
+        "claim_text": "A faulty item is a complaint, not a return. Contact our support with your order number and a photo, and we will sort it out. You have a 2-year right to complain.",
+        "claim_button": "Contact support",
+        "claim_url": "",
+        "faq_heading": "Questions"
       }
     }
   },
   "order": [
     "main",
-    "image_banner_fz3meY"
+    "hundred_returns_48XAwL"
   ]
 }
