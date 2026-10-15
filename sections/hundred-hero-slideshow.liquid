@@ -113,6 +113,39 @@
   if section.index == 1
     assign hero_prio = 'high'
   endif
+
+  # B2B = kunden er logget ind og har B2B-tagget (eller er en Shopify B2B-virksomhedskunde)
+  assign is_b2b = false
+  if customer
+    if customer.tags contains section.settings.b2b_tag
+      assign is_b2b = true
+    endif
+    if customer.b2b?
+      assign is_b2b = true
+    endif
+  endif
+
+  # Tæl de slides, denne kunde må se
+  assign visible_count = 0
+  for block in section.blocks
+    assign b = block.settings
+      assign show = false
+      if b.show_b2c and is_b2b == false
+        assign show = true
+      endif
+      if b.show_b2b and is_b2b
+        assign show = true
+      endif
+      if request.design_mode and section.settings.editor_show_all
+        if b.show_b2c or b.show_b2b
+          assign show = true
+        endif
+      endif
+    if show
+      assign visible_count = visible_count | plus: 1
+    endif
+  endfor
+  assign vi = 0
 -%}
 
 <div class="hhs" id="hhs-{{ section.id }}" role="region" aria-roledescription="carousel" aria-label="{{ section.settings.label | escape }}"
@@ -121,11 +154,32 @@
   {%- for block in section.blocks -%}
     {%- liquid
       assign b = block.settings
+      assign show = false
+      if b.show_b2c and is_b2b == false
+        assign show = true
+      endif
+      if b.show_b2b and is_b2b
+        assign show = true
+      endif
+      if request.design_mode and section.settings.editor_show_all
+        if b.show_b2c or b.show_b2b
+          assign show = true
+        endif
+      endif
+    -%}
+    {%- unless show -%}{%- continue -%}{%- endunless -%}
+    {%- liquid
+      assign vi = vi | plus: 1
+      if vi == 1
+        assign is_first = true
+      else
+        assign is_first = false
+      endif
       assign dv = b.video_desktop
       assign di = b.image_desktop
       assign mv = b.video_mobile
       assign mi = b.image_mobile
-      if forloop.first
+      if is_first
         assign load = 'eager'
         assign prio = hero_prio
       else
@@ -140,9 +194,9 @@
     -%}
     {%- capture pos_style -%}--pos-d:{{ b.position_desktop }};--pos-m:{{ b.position_mobile }};--pos-my:{{ b.position_mobile_y }};--bri:{{ b.brightness | divided_by: 100.0 }};--bri-m:{{ b.brightness_mobile | divided_by: 100.0 }}{%- endcapture -%}
 
-    <div class="hhs-slide{% if b.layout == 'right' %} hhs-slide--right{% endif %}{% if forloop.first %} is-active{% endif %}"
-      role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} / {{ forloop.length }}"
-      {% unless forloop.first %}aria-hidden="true" inert{% endunless %} {{ block.shopify_attributes }}>
+    <div class="hhs-slide{% if b.layout == 'right' %} hhs-slide--right{% endif %}{% if is_first %} is-active{% endif %}"
+      role="group" aria-roledescription="slide" aria-label="{{ vi }} / {{ visible_count }}"
+      {% unless is_first %}aria-hidden="true" inert{% endunless %} {{ block.shopify_attributes }}>
 
       <div class="hhs-media" style="{{ pos_style }}">
         {%- if dv == blank and mv == blank -%}
@@ -191,12 +245,12 @@
         {%- endif -%}
       </div>
       {%- if b.glow -%}<div class="hhs-deco" aria-hidden="true"></div>{%- endif -%}
-      <div class="hhs-shade" aria-hidden="true"></div>
+      {%- if b.shade -%}<div class="hhs-shade" aria-hidden="true"></div>{%- endif -%}
 
       <div class="hhs-copy">
         {%- if b.overline != blank -%}<p class="hhs-over">{{ b.overline | escape }}</p>{%- endif -%}
         {%- if b.heading != blank or b.heading_gold != blank -%}
-          {%- if forloop.first and section.settings.first_is_h1 -%}{%- assign htag = 'h1' -%}{%- else -%}{%- assign htag = 'h2' -%}{%- endif -%}
+          {%- if is_first and section.settings.first_is_h1 -%}{%- assign htag = 'h1' -%}{%- else -%}{%- assign htag = 'h2' -%}{%- endif -%}
           <{{ htag }} class="hhs-h">{{ b.heading | escape }}{% if b.heading_gold != blank %}{% if b.heading != blank %}{% case b.gold_join %}{% when 'newline' %}<br class="hhs-br"> {% when 'space' %} {% endcase %}{% endif %}<em>{{ b.heading_gold | escape }}</em>{% endif %}</{{ htag }}>
         {%- endif -%}
         {%- if b.text != blank -%}<p class="hhs-sub">{{ b.text | escape }}</p>{%- endif -%}
@@ -216,14 +270,14 @@
   {%- endfor -%}
   </div>
 
-  {%- if section.blocks.size > 1 -%}
+  {%- if visible_count > 1 -%}
     <div class="hhs-ctrl">
       <button type="button" class="hhs-arrow" data-dir="-1" aria-label="Previous slide" aria-controls="hhs-{{ section.id }}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
       </button>
       <div class="hhs-dots">
-        {%- for block in section.blocks -%}
-          <button type="button" class="hhs-dot" aria-label="Show slide {{ forloop.index }} of {{ forloop.length }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+        {%- for n in (1..visible_count) -%}
+          <button type="button" class="hhs-dot" aria-label="Show slide {{ n }} of {{ visible_count }}" aria-current="{% if n == 1 %}true{% else %}false{% endif %}"></button>
         {%- endfor -%}
       </div>
       <button type="button" class="hhs-arrow" data-dir="1" aria-label="Next slide" aria-controls="hhs-{{ section.id }}">
@@ -359,6 +413,9 @@
     { "type": "header", "content": "Afspilning" },
     { "type": "checkbox", "id": "autoplay", "label": "Skift slide automatisk", "default": true },
     { "type": "range", "id": "speed", "label": "Sekunder pr. slide", "min": 3, "max": 12, "step": 1, "unit": "s", "default": 6 },
+    { "type": "header", "content": "B2B" },
+    { "type": "text", "id": "b2b_tag", "label": "Kunde-tag for B2B", "default": "B2B", "info": "Kunder med dette tag (store/små bogstaver skal passe) ser B2B-slides." },
+    { "type": "checkbox", "id": "editor_show_all", "label": "Vis B2B-slides i temaeditoren", "default": true, "info": "Kun her i editoren, så du kan redigere dem. Kunderne ser stadig kun deres egne slides." },
     { "type": "header", "content": "Andet" },
     { "type": "checkbox", "id": "first_is_h1", "label": "Første overskrift er sidens hovedoverskrift (H1)", "default": false },
     { "type": "text", "id": "label", "label": "Navn til skærmlæsere", "default": "Highlights" }
@@ -368,6 +425,9 @@
       "type": "slide",
       "name": "Slide",
       "settings": [
+        { "type": "header", "content": "Vis denne slide for", "info": "Slå begge til, hvis den skal vises for alle. Slår du begge fra, vises den ikke." },
+        { "type": "checkbox", "id": "show_b2c", "label": "B2C – almindelige kunder og ikke-loggede", "default": true },
+        { "type": "checkbox", "id": "show_b2b", "label": "B2B – kunder med B2B-tag", "default": true },
         { "type": "header", "content": "Computer" },
         { "type": "image_picker", "id": "image_desktop", "label": "Billede – computer", "info": "Bredformat, fx 1920 × 840 px." },
         { "type": "video", "id": "video_desktop", "label": "Video – computer (valgfri)", "info": "Bruges i stedet for billedet. Afspilles uden lyd i loop." },
@@ -387,6 +447,7 @@
         { "type": "range", "id": "brightness_mobile", "label": "Lysstyrke – mobil", "min": 20, "max": 130, "step": 2, "unit": "%", "default": 100 },
 
         { "type": "header", "content": "Udseende" },
+        { "type": "checkbox", "id": "shade", "label": "Mørk skygge bag teksten", "info": "Slå fra, hvis teksten allerede står i billedet.", "default": true },
         { "type": "checkbox", "id": "glow", "label": "Guld-lys og vævet mønster", "info": "Godt til produktbilleder på sort baggrund.", "default": false },
 
         { "type": "header", "content": "Tekst" },
