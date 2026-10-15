@@ -8,6 +8,11 @@ if (!customElements.get('product-form')) {
         return true;
       }
 
+      // A cached form that still adds both services cannot fulfil the new modal's four-knot selection.
+      get supportsStringingServiceReplacement() {
+        return true;
+      }
+
       constructor() {
         super();
 
@@ -25,6 +30,48 @@ if (!customElements.get('product-form')) {
 
       getCustomisationItemId(item) {
         return String(item.variant_id || item.id);
+      }
+
+      getStringingSelection() {
+        if (document.querySelector('input[name="frame"]:checked')?.id !== 'pro-stringing') return [];
+
+        const root = document.getElementById('stringing-root');
+        const string = document.querySelector('input[name="string-variant"]:checked');
+        const tension = document.querySelector('input[name="string-tension"]:checked')?.id;
+        const fourKnots =
+          document.querySelector('input[name="knot-config"]:checked')?.dataset?.knotValue === 'four_knot';
+        const variantId = fourKnots ? window.s3_four_knots_service_variant_id : window.s3_stringing_service_variant_id;
+        const available = fourKnots ? root?.dataset.fourKnotsServiceAvailable : root?.dataset.stringingServiceAvailable;
+
+        // Older markup has no availability metadata. Preserve its valid IDs, while
+        // rejecting explicitly unavailable services and incomplete configurations before any cart request.
+        if (
+          !/^\d+$/.test(variantId || '') ||
+          available === 'false' ||
+          (fourKnots && root?.dataset.isKnottingEnabled === 'false') ||
+          !window.s3_current_variant_sku ||
+          !/^\d+$/.test(string?.id || '') ||
+          !string?.dataset.sku ||
+          !tension
+        ) {
+          throw new Error(root?.dataset.errorServiceUnavailable || window.cartStrings.error);
+        }
+
+        return [
+          {
+            id: variantId,
+            quantity: 1,
+            properties: {
+              _racket: window.s3_current_variant_sku,
+              _racketName: window.s3_product_name || '',
+              _string: string.dataset.sku,
+              _stringName: string.dataset.string || '',
+              _tension: `${tension}lbs`,
+              _knot: fourKnots ? '4_knot' : '2_knot',
+            },
+          },
+          { id: string.id, quantity: 1, properties: {} },
+        ];
       }
 
       getTshirtPrintingSelection() {
@@ -298,8 +345,10 @@ if (!customElements.get('product-form')) {
         this.handleErrorMessage();
 
         let tshirtPrintingSelection;
+        let stringingSelection;
         try {
           tshirtPrintingSelection = this.getTshirtPrintingSelection();
+          stringingSelection = this.getStringingSelection();
         } catch (error) {
           this.handleErrorMessage(error.message);
           return;
@@ -338,57 +387,7 @@ if (!customElements.get('product-form')) {
           quantity: formData.get('quantity') || 1,
         };
         const items = [mainItem];
-        const customisationItems = [];
-
-        // check if stringing service is selected
-        const frameSelected = document.querySelector('input[name="frame"]:checked')?.id;
-        // good trick -  document.querySelector('variant-selects [data-selected-variant]')?.innerHTML)?.sku
-        if (frameSelected === 'pro-stringing' && selectedVariantSku) {
-          const variantSelected = document.querySelector('input[name="string-variant"]:checked')?.id;
-          const stringVariantSku = document.querySelector('input[name="string-variant"]:checked')?.dataset.sku;
-          const tensionSelected = document.querySelector('input[name="string-tension"]:checked')?.id;
-
-          const knotValue = document.querySelector('input[name="knot-config"]:checked')?.dataset?.knotValue;
-
-          const selectedKnot = knotValue === 'four_knot' ? '4_knot' : '2_knot';
-
-          const stringingServiceVariantId = window.s3_stringing_service_variant_id;
-          const fourKnotsServiceVariantId = window.s3_four_knots_service_variant_id;
-
-          if (variantSelected && stringVariantSku && tensionSelected && stringingServiceVariantId) {
-            customisationItems.push(
-              {
-                id: stringingServiceVariantId,
-                quantity: 1,
-                properties: {
-                  _racket: selectedVariantSku,
-                  _racketName: window?.s3_product_name || '',
-                  _string: stringVariantSku,
-                  _stringName: document.querySelector('input[name="string-variant"]:checked')?.dataset?.string || '',
-                  _tension: `${tensionSelected}lbs`,
-                  _knot: selectedKnot ?? '2_knot',
-                },
-              },
-              {
-                id: variantSelected,
-                quantity: 1,
-                properties: {},
-              },
-            );
-          }
-
-          if (selectedKnot === '4_knot' && fourKnotsServiceVariantId) {
-            customisationItems.push({
-              id: fourKnotsServiceVariantId,
-              quantity: 1,
-              properties: {
-                _knot: selectedKnot,
-                _racket: selectedVariantSku,
-                _string: stringVariantSku,
-              },
-            });
-          }
-        }
+        const customisationItems = [...stringingSelection];
 
         // check if gripping is selected
         if (window.s3_gripping_service_variant_id && selectedVariantSku) {

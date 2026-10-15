@@ -12,8 +12,12 @@ type Stringing2Props = {
   isKnottingEnabled: string | null;
   knottingCost: string | null;
   stringingCost: string | null;
+  stringingServiceAvailable: boolean;
+  fourKnotsServiceAvailable: boolean;
   maxTension: string | null;
   labels: {
+    free: string;
+    unavailable: string;
     chooseString: string;
     selectColor: string;
     selectTension: string;
@@ -42,6 +46,7 @@ type Stringing2Props = {
     loading: string;
     empty: string;
     error: string;
+    serviceUnavailable: string;
   };
   actions: {
     add: string;
@@ -80,23 +85,6 @@ const HIDDEN_RADIO_INPUT_STYLE = {
 } as const;
 const AUTO_ADVANCE_DELAY_MS = 320;
 const MAX_VISIBLE_STRING_OPTIONS = 6;
-
-const getFreeablePrice = (alreadyFormattedPrice: string | null) => {
-  try {
-    if (!alreadyFormattedPrice) return alreadyFormattedPrice;
-
-    const numericMatch = alreadyFormattedPrice.replace(/[^0-9.-]/g, '');
-    const numericValue = Number.parseFloat(numericMatch);
-
-    if (!Number.isNaN(numericValue) && numericValue === 0) {
-      return 'FREE';
-    }
-
-    return alreadyFormattedPrice;
-  } catch (error) {
-    return alreadyFormattedPrice;
-  }
-};
 
 // Keep this formatter local to the stringing entrypoint. Sharing it with another entrypoint moves it into a
 // stable-name Rollup chunk, which can break cached storefronts when theme assets are deployed at different times.
@@ -209,7 +197,9 @@ const Stringing2 = ({
   stringingCollectionId,
   isKnottingEnabled,
   knottingCost,
-  stringingCost: _stringingCost,
+  stringingCost,
+  stringingServiceAvailable,
+  fourKnotsServiceAvailable,
   maxTension,
   labels,
   descriptions,
@@ -219,6 +209,25 @@ const Stringing2 = ({
   closeConfirm,
 }: Stringing2Props) => {
   const shouldShowKnotting = isKnottingEnabled === 'true';
+  const [formSupportsReplacement, setFormSupportsReplacement] = useState(false);
+  const canUseFourKnots = shouldShowKnotting && fourKnotsServiceAvailable && formSupportsReplacement;
+
+  useEffect(() => {
+    let cancelled = false;
+    // Only offer replacement semantics after the actual PDP form has upgraded.
+    // A cached form without this capability still charges both service products.
+    customElements.whenDefined('product-form').then(() => {
+      const root = document.getElementById('stringing-root');
+      const form = root?.closest('product-info')?.querySelector('product-form') as
+        | (HTMLElement & { supportsStringingServiceReplacement?: boolean })
+        | null
+        | undefined;
+      if (!cancelled) setFormSupportsReplacement(form?.supportsStringingServiceReplacement === true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   const maxTensionPounds = Number.parseInt(maxTension?.match(/\d+/g)?.pop() || '69', 10);
 
   const [stringingProducts, setStringingProducts] = useState<ProductNodes>([]);
@@ -329,6 +338,7 @@ const Stringing2 = ({
     const cardDescription = document.getElementById('stringing-description');
     const currentSelection = document.getElementById('stringing-current-selection');
     const ctaText = document.getElementById('stringing-cta-label');
+    const cardPrice = document.getElementById('stringing-service-price');
     const submitButton = document.getElementsByClassName('product-form__submit button')[0];
     const stringProduct = appliedConfig.stringProduct;
     const stringVariant = appliedConfig.stringVariant;
@@ -350,6 +360,15 @@ const Stringing2 = ({
       }
     }
 
+    if (cardPrice) {
+      const cost = hasAppliedStringing && appliedConfig.knot === 'four_knot' ? knottingCost : stringingCost;
+      const available =
+        hasAppliedStringing && appliedConfig.knot === 'four_knot'
+          ? fourKnotsServiceAvailable
+          : stringingServiceAvailable;
+      cardPrice.textContent = available && cost ? `${cost === labels.free ? '' : '+'}${cost}` : labels.unavailable;
+    }
+
     if (currentSelection) {
       currentSelection.hidden = Boolean(hasAppliedStringing);
     }
@@ -368,6 +387,12 @@ const Stringing2 = ({
     actions.change,
     appliedConfig,
     defaultCardDescription,
+    stringingCost,
+    knottingCost,
+    stringingServiceAvailable,
+    fourKnotsServiceAvailable,
+    labels.free,
+    labels.unavailable,
     labels.fourKnots,
     labels.summary,
     labels.tensionUnit,
@@ -777,7 +802,7 @@ const Stringing2 = ({
       },
       {
         id: 'stringing-tension-step',
-        canContinue: (state) => Boolean(state.tension),
+        canContinue: (state) => Boolean(state.tension) && (shouldShowKnotting || stringingServiceAvailable),
         render: (stepControls) =>
           renderStepLayout(
             stepControls,
@@ -997,7 +1022,7 @@ const Stringing2 = ({
     if (shouldShowKnotting) {
       stepList.push({
         id: 'stringing-knot-step',
-        canContinue: (state) => Boolean(state.knot),
+        canContinue: (state) => (state.knot === 'four_knot' ? canUseFourKnots : stringingServiceAvailable),
         render: (stepControls) =>
           renderStepLayout(
             stepControls,
@@ -1008,13 +1033,15 @@ const Stringing2 = ({
                   {
                     id: 'stringing-two-knots',
                     value: 'two_knot' as const,
-                    title: `${labels.twoKnots} (${getFreeablePrice('0')})`,
+                    title: `${labels.twoKnots} (${stringingServiceAvailable ? stringingCost : labels.unavailable})`,
+                    available: stringingServiceAvailable,
                     note: labels.twoKnotsNote,
                   },
                   {
                     id: 'stringing-four-knots',
                     value: 'four_knot' as const,
-                    title: `${labels.fourKnots} (${getFreeablePrice(knottingCost)})`,
+                    title: `${labels.fourKnots} (${canUseFourKnots ? knottingCost : labels.unavailable})`,
+                    available: canUseFourKnots,
                     note: labels.fourKnotsNote,
                   },
                 ].map((option) => {
@@ -1031,7 +1058,8 @@ const Stringing2 = ({
                         gap: '1.2rem',
                         padding: isMobileLayout ? '2rem 0' : '4rem 0',
                         borderBottom: '1px solid var(--border-color)',
-                        cursor: 'pointer',
+                        cursor: option.available ? 'pointer' : 'not-allowed',
+                        opacity: option.available ? 1 : 0.5,
                       }}
                     >
                       <input
@@ -1039,6 +1067,7 @@ const Stringing2 = ({
                         name="string-knot-step"
                         id={option.id}
                         checked={isSelected}
+                        disabled={!option.available}
                         onChange={() => {
                           setDraftConfig({
                             stringProduct: draftConfig.stringProduct,
@@ -1076,7 +1105,7 @@ const Stringing2 = ({
                               color: 'var(--color-foreground)',
                             }}
                           >
-                            {!isSelected ? (
+                            {!option.available ? null : !isSelected ? (
                               <span>{renderActionLabel(actions.add, 'plus', 'var(--color-foreground)')}</span>
                             ) : (
                               <span>
@@ -1124,6 +1153,10 @@ const Stringing2 = ({
     filters.power,
     isLoading,
     knottingCost,
+    stringingCost,
+    stringingServiceAvailable,
+    canUseFourKnots,
+    labels.unavailable,
     labels.chooseString,
     labels.fourKnots,
     labels.fourKnotsNote,
@@ -1149,6 +1182,8 @@ const Stringing2 = ({
     if (!draftConfig.stringProduct || !draftConfig.stringVariant || !draftConfig.tension) {
       return;
     }
+
+    if (draftConfig.knot === 'four_knot' ? !canUseFourKnots : !stringingServiceAvailable) return;
 
     setAppliedConfig(cloneStringingConfig(draftConfig));
     closeModalImmediately();
@@ -1311,6 +1346,9 @@ const Stringing2 = ({
                       )
                     }
                     renderSummary={({ state }) => {
+                      if (state.knot === 'four_knot' ? !canUseFourKnots : !stringingServiceAvailable) {
+                        return <p role="status">{messages.serviceUnavailable}</p>;
+                      }
                       const summaryParts: string[] = [`Stringing ${window?.s3_product_name}`];
 
                       if (state.stringProduct) {
