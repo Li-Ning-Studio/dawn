@@ -290,9 +290,36 @@
     "hundred_hero_slideshow_f3am9g": {
       "type": "hundred-hero-slideshow",
       "blocks": {
+        "slide_M6EAdp": {
+          "type": "slide",
+          "settings": {
+            "show_b2c": true,
+            "show_b2b": true,
+            "image_desktop": "shopify://shop_images/ChatGPT_Image_18._sep._2026_14.35.59.png",
+            "layout": "full",
+            "position_desktop": "center",
+            "brightness": 100,
+            "position_mobile": "center",
+            "position_mobile_y": "top",
+            "brightness_mobile": 100,
+            "shade": true,
+            "glow": false,
+            "overline": "",
+            "heading": "",
+            "heading_gold": "",
+            "gold_join": "newline",
+            "text": "",
+            "tags": "",
+            "button_label": "Shop now",
+            "button_link": "",
+            "credit": ""
+          }
+        },
         "slide_mrg3tH": {
           "type": "slide",
           "settings": {
+            "show_b2c": true,
+            "show_b2b": true,
             "image_desktop": "shopify://shop_images/b_20261014_1241_DenmarkOpen2026_BPYN6196.jpg",
             "layout": "full",
             "position_desktop": "right",
@@ -301,6 +328,7 @@
             "position_mobile": "center",
             "position_mobile_y": "top",
             "brightness_mobile": 50,
+            "shade": true,
             "glow": false,
             "overline": "Official HUNDRED store · Europe",
             "heading": "Now in",
@@ -316,6 +344,8 @@
         "slide_h6yXY8": {
           "type": "slide",
           "settings": {
+            "show_b2c": true,
+            "show_b2b": true,
             "video_desktop": "shopify://files/videos/Banner_1.mp4",
             "layout": "full",
             "position_desktop": "center",
@@ -324,6 +354,7 @@
             "position_mobile": "center",
             "position_mobile_y": "top",
             "brightness_mobile": 58,
+            "shade": true,
             "glow": true,
             "overline": "New · Nitrix technology",
             "heading": "nitrix 80",
@@ -339,6 +370,8 @@
         "slide_K8wULz": {
           "type": "slide",
           "settings": {
+            "show_b2c": true,
+            "show_b2b": true,
             "image_desktop": "shopify://shop_images/Banner_2_ebae2909-22a3-4548-befd-2683b8e93be7.png",
             "layout": "full",
             "position_desktop": "center",
@@ -347,6 +380,7 @@
             "position_mobile": "center",
             "position_mobile_y": "top",
             "brightness_mobile": 40,
+            "shade": true,
             "glow": false,
             "overline": "Badminton footwear",
             "heading": "Built to",
@@ -361,6 +395,7 @@
         }
       },
       "block_order": [
+        "slide_M6EAdp",
         "slide_mrg3tH",
         "slide_h6yXY8",
         "slide_K8wULz"
@@ -371,6 +406,8 @@
         "ratio_mobile": "2/3",
         "autoplay": true,
         "speed": 6,
+        "b2b_tag": "B2B",
+        "editor_show_all": true,
         "first_is_h1": false,
         "label": "Highlights"
       }

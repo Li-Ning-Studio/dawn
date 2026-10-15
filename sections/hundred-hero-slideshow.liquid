@@ -80,8 +80,21 @@
   .hhs .hhs-btn:focus-visible,.hhs .hhs-dot:focus-visible,.hhs .hhs-arrow:focus-visible,.hhs .hhs-pause:focus-visible{outline:2px solid var(--text);outline-offset:3px}
   .hhs-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
+  /* Billedvæg: 3 skrå billeder i højre side */
+  .hhs-wall{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:56%;height:82%;pointer-events:none}
+  .hhs-wall figure{position:absolute;margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.7);background:#fff}
+  .hhs-wall img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .hhs-wall .w1{left:4%;top:12%;width:44%;height:64%;rotate:-6deg}
+  .hhs-wall .w2{left:30%;top:2%;width:44%;height:68%;rotate:3deg;z-index:2}
+  .hhs-wall .w3{left:56%;top:22%;width:40%;height:62%;rotate:8deg}
+  .hhs-slide .hhs-wall figure{opacity:0;translate:0 30px;transition:opacity .8s ease,translate .8s ease}
+  .hhs-slide.is-active .hhs-wall figure{opacity:1;translate:0 0}
+  .hhs-slide.is-active .hhs-wall .w2{transition-delay:.12s}
+  .hhs-slide.is-active .hhs-wall .w3{transition-delay:.24s}
+
   @media (max-width:749px){
     .hhs{aspect-ratio:var(--ar-m)}
+    .hhs-wall{right:auto;left:50%;top:5%;transform:translateX(-50%);width:118%;height:50%}
     .hhs-slide--right .hhs-media{left:0}
     .hhs-dev--d{display:none}
     .hhs-dev--m{display:block}
@@ -104,7 +117,7 @@
     .hhs-dot{width:22px}
   }
   @media (prefers-reduced-motion:reduce){
-    .hhs-slide,.hhs-slide .hhs-copy > *{transition:none}
+    .hhs-slide,.hhs-slide .hhs-copy > *,.hhs-slide .hhs-wall figure{transition:none}
   }
 </style>
 
@@ -215,7 +228,7 @@
                 width="{{ img_d.width }}" height="{{ img_d.height }}"
                 alt="{{ img_d.alt | default: alt_text | escape }}" loading="{{ load }}" fetchpriority="{{ prio }}">
             </picture>
-          {%- else -%}
+          {%- elsif b.glow == false and b.wall_1 == blank and b.wall_2 == blank and b.wall_3 == blank -%}
             {{ 'lifestyle-1' | placeholder_svg_tag }}
           {%- endif -%}
         {%- else -%}
@@ -245,6 +258,13 @@
         {%- endif -%}
       </div>
       {%- if b.glow -%}<div class="hhs-deco" aria-hidden="true"></div>{%- endif -%}
+      {%- if b.wall_1 != blank or b.wall_2 != blank or b.wall_3 != blank -%}
+        <div class="hhs-wall" aria-hidden="true">
+          {%- if b.wall_1 != blank -%}<figure class="w1">{{ b.wall_1 | image_url: width: 900 | image_tag: widths: '450, 700, 900', sizes: '(min-width: 750px) 25vw, 50vw', loading: 'lazy', alt: '' }}</figure>{%- endif -%}
+          {%- if b.wall_2 != blank -%}<figure class="w2">{{ b.wall_2 | image_url: width: 900 | image_tag: widths: '450, 700, 900', sizes: '(min-width: 750px) 25vw, 50vw', loading: 'lazy', alt: '' }}</figure>{%- endif -%}
+          {%- if b.wall_3 != blank -%}<figure class="w3">{{ b.wall_3 | image_url: width: 900 | image_tag: widths: '450, 700, 900', sizes: '(min-width: 750px) 25vw, 50vw', loading: 'lazy', alt: '' }}</figure>{%- endif -%}
+        </div>
+      {%- endif -%}
       {%- if b.shade -%}<div class="hhs-shade" aria-hidden="true"></div>{%- endif -%}
 
       <div class="hhs-copy">
@@ -446,6 +466,10 @@
           "options": [ { "value": "top", "label": "Top" }, { "value": "center", "label": "Midten" }, { "value": "bottom", "label": "Bund" } ] },
         { "type": "range", "id": "brightness_mobile", "label": "Lysstyrke – mobil", "min": 20, "max": 130, "step": 2, "unit": "%", "default": 100 },
 
+        { "type": "header", "content": "Billedvæg (valgfri)", "info": "3 skrå billeder i højre side, fx til billedbanken. Lad billedfelterne under Computer/Mobil være tomme og slå guld-lys til." },
+        { "type": "image_picker", "id": "wall_1", "label": "Billedvæg – billede 1 (venstre)" },
+        { "type": "image_picker", "id": "wall_2", "label": "Billedvæg – billede 2 (midten, forrest)" },
+        { "type": "image_picker", "id": "wall_3", "label": "Billedvæg – billede 3 (højre)" },
         { "type": "header", "content": "Udseende" },
         { "type": "checkbox", "id": "shade", "label": "Mørk skygge bag teksten", "info": "Slå fra, hvis teksten allerede står i billedet.", "default": true },
         { "type": "checkbox", "id": "glow", "label": "Guld-lys og vævet mønster", "info": "Godt til produktbilleder på sort baggrund.", "default": false },
