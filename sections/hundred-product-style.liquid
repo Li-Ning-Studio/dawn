@@ -126,6 +126,33 @@
   }
 </style>
 
+<script>
+/* Reserve til billedpilene på mobil: hvis temaet ikke selv flytter billedet,
+   når man trykker på en pil, så flytter vi det. Gør intet, hvis temaet klarer det. */
+(function(){
+  if (window.__hpArrowsFix) return; window.__hpArrowsFix = true;
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('product-info .product__media-wrapper button[name="previous"], product-info .product__media-wrapper button[name="next"]');
+    if (!btn) return;
+    var wrap = btn.closest('.product__media-wrapper');
+    var list = wrap && wrap.querySelector('.product__media-list, [id^="Slider-Gallery"], .slider');
+    if (!list) return;
+    var start = list.scrollLeft;
+    var dir = btn.name === 'next' ? 1 : -1;
+    setTimeout(function(){
+      if (Math.abs(list.scrollLeft - start) > 2) return; // temaet har allerede flyttet billedet
+      var item = list.querySelector('li, .product__media-item');
+      var step = item ? item.getBoundingClientRect().width : list.clientWidth;
+      var max = list.scrollWidth - list.clientWidth;
+      var target = start + dir * step;
+      if (target > max + 2) target = 0;           // fra sidste til første
+      if (target < -2) target = max;              // fra første til sidste
+      list.scrollTo({ left: target, behavior: 'smooth' });
+    }, 250);
+  }, true);
+})();
+</script>
+
 {% schema %}
 {
   "name": "HUNDRED Produktdesign",
