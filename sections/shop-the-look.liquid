@@ -1,521 +1,245 @@
+{%- comment -%}
+  HUNDRED – Shop the look
+  Look-billede med 2 prikker + 2 produktkort. Billede og produkter hentes fra
+  produktets metafelter (navnene skrives i Tilpas). Prikkernes placering
+  styres med skydere og gælder hele skabelonen.
+  Priser følger kundens katalog automatisk (B2B ser B2B-priser).
+{%- endcomment -%}
+
 {%- liquid
-  assign img_parts = section.settings.mf_image | split: '.'
-  assign p1_parts = section.settings.mf_product_1 | split: '.'
-  assign p2_parts = section.settings.mf_product_2 | split: '.'
+  assign k_img = section.settings.mf_image | strip | split: '.'
+  assign k_p1 = section.settings.mf_product_1 | strip | split: '.'
+  assign k_p2 = section.settings.mf_product_2 | strip | split: '.'
 
-  assign look_image = product.metafields[img_parts[0]][img_parts[1]].value
-  assign p1 = product.metafields[p1_parts[0]][p1_parts[1]].value
-  assign p2 = product.metafields[p2_parts[0]][p2_parts[1]].value
+  assign look_img = product.metafields[k_img[0]][k_img[1]].value
+  assign p1 = product.metafields[k_p1[0]][k_p1[1]].value
+  assign p2 = product.metafields[k_p2[0]][k_p2[1]].value
 
-  assign image_is_file = false
-  if look_image.src != blank or look_image.url != blank
-    assign image_is_file = true
+  assign count = 1
+  assign total = product.selected_or_first_available_variant.price
+  if p1 != blank
+    assign count = count | plus: 1
+    assign total = total | plus: p1.selected_or_first_available_variant.price
   endif
-
-  assign image_is_url = false
-  unless image_is_file
-    assign image_string = look_image | strip
-    if image_string contains '//'
-      assign image_is_url = true
-    endif
-  endunless
-
-  assign has_look = false
-  if image_is_file or image_is_url
-    if p1 != blank or p2 != blank
-      assign has_look = true
-    endif
+  if p2 != blank
+    assign count = count | plus: 1
+    assign total = total | plus: p2.selected_or_first_available_variant.price
   endif
 -%}
 
-{%- if request.design_mode and has_look == false -%}
-  <div style="padding:24px;background:#fff3cd;color:#664d03;font-size:14px;line-height:1.7;border:1px solid #ffe69c;">
-    <strong>Shop looket kan ikke vises endnu.</strong><br><br>
-    Kopier de rigtige navne herunder ind i sektionens indstillinger under "Metafelter".<br><br>
-    {%- for namespace in product.metafields -%}
-      {%- for field in namespace[1] -%}
-        <code style="background:#fff;padding:2px 6px;border-radius:4px;">{{ namespace[0] }}.{{ field[0] }}</code><br>
-      {%- endfor -%}
-    {%- endfor -%}
-  </div>
-{%- endif -%}
+{%- if look_img != blank and p1 != blank or look_img != blank and p2 != blank -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap">
 
-{%- if has_look -%}
 <style>
-  #shopify-section-{{ section.id }} .stl {
-    box-sizing: border-box;
-    background: {{ section.settings.bg_color }};
-    color: {{ section.settings.text_color }};
-    padding: {{ section.settings.padding_top | divided_by: 2 }}px {{ section.settings.side_padding }}px {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  .hsl{--ink:#0a0a0b;--soft:#5d584f;--muted:#8c867b;--line:#e7e3dc;--panel:#f5f3ef;--gold:#f2a81d;--ember:#e5701a;
+    --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    background:#fff;color:var(--ink);font-family:var(--body);letter-spacing:0;padding-block:clamp(40px,6vw,80px)}
+  .hsl *{box-sizing:border-box}
+  .hsl a{color:inherit;text-decoration:none}
+  .hsl-wrap{max-width:var(--page-width,1440px);margin-inline:auto;padding-inline:clamp(16px,4.4vw,64px);
+    display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center}
+
+  /* Billede */
+  .hsl-look{position:relative;aspect-ratio:1;background:var(--panel);border-radius:16px;overflow:hidden}
+  .hsl-in{position:absolute;top:3%;bottom:3%;left:50%;transform:translateX(-50%);aspect-ratio:var(--ar);max-width:94%;mix-blend-mode:multiply}
+  .hsl-in > img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+
+  /* Prikker */
+  .hsl-pin{position:absolute;width:0;height:0;z-index:2}
+  .hsl .hsl-dot{position:absolute;left:0;top:0;width:38px;height:38px;margin:-19px 0 0 -19px;padding:0;border:0;border-radius:50%;cursor:pointer;
+    background:#fff;color:var(--ink);font:800 15px/1 var(--body);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .2s,background .2s,color .2s}
+  .hsl-dot::before{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--gold);opacity:.55;transition:opacity .2s,inset .2s;animation:hsl-pulse 2.4s ease-out infinite}
+  .hsl-pin.is-on .hsl-dot{background:var(--ink);color:#fff;transform:scale(1.12)}
+  .hsl-pin.is-on .hsl-dot::before{opacity:1;inset:-7px;animation:none}
+  @keyframes hsl-pulse{0%{transform:scale(.9);opacity:.7}70%{transform:scale(1.25);opacity:0}100%{opacity:0}}
+
+  .hsl-pop{position:absolute;left:30px;top:0;transform:translateY(-50%) scale(.96);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility 0s .2s;
+    display:grid;grid-template-columns:56px auto;gap:10px;align-items:center;background:#fff;border-radius:12px;padding:8px 14px 8px 8px;
+    box-shadow:0 14px 34px rgba(0,0,0,.16);white-space:nowrap;mix-blend-mode:normal}
+  .hsl-pin--flip .hsl-pop{left:auto;right:30px}
+  .hsl-pop::before{content:"";position:absolute;right:100%;top:0;bottom:0;width:16px}
+  .hsl-pin--flip .hsl-pop::before{right:auto;left:100%}
+  .hsl-pin.is-on .hsl-pop{opacity:1;visibility:visible;transform:translateY(-50%) scale(1);transition:opacity .2s,transform .2s}
+  .hsl-pop-t{width:56px;height:56px;border-radius:8px;background:var(--panel);display:grid;place-items:center;overflow:hidden}
+  .hsl-pop-t img{max-width:86%;max-height:86%;object-fit:contain;mix-blend-mode:multiply}
+  .hsl-pop b{display:block;font-size:14px;line-height:1.3}
+  .hsl-pop span{font-size:13px;color:var(--soft)}
+
+  /* Højre side */
+  .hsl-side{display:grid;gap:22px;min-width:0}
+  .hsl-over{margin:0;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ember)}
+  .hsl .hsl-title{margin:8px 0 0;font:italic 900 clamp(38px,4vw,56px)/.95 var(--display);text-transform:uppercase;letter-spacing:-.005em;color:var(--ink)}
+  .hsl-title em{font-style:inherit;color:var(--ember)}
+  .hsl-lead{margin:0;color:var(--soft);font-size:16px;max-width:38ch}
+
+  .hsl-cards{display:grid;gap:12px}
+  .hsl-card{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:18px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:14px;position:relative;transition:border-color .2s,box-shadow .2s}
+  .hsl-card:hover,.hsl-card.is-on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+  .hsl-card-t{aspect-ratio:1;border-radius:10px;background:var(--panel);display:grid;place-items:center;overflow:hidden}
+  .hsl-card-t img{width:84%;height:84%;object-fit:contain;mix-blend-mode:multiply}
+  .hsl-n{position:absolute;left:-8px;top:-8px;width:26px;height:26px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:12px;font-weight:800}
+  .hsl-card.is-on .hsl-n{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hsl-card b{display:block;font-size:16px;line-height:1.3}
+  .hsl-card small{display:block;color:var(--muted);font-size:13px}
+  .hsl-pr{font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums}
+  .hsl-go{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s,color .2s}
+  .hsl-card:hover .hsl-go,.hsl-card.is-on .hsl-go{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hsl-go svg{width:18px;height:18px}
+
+  .hsl-total{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px;font-size:14px;color:var(--soft)}
+  .hsl-total b{font-size:20px;color:var(--ink);font-variant-numeric:tabular-nums}
+  .hsl .hsl-dot:focus-visible,.hsl a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+  @media (max-width:749px){
+    .hsl-wrap{grid-template-columns:1fr;gap:16px}
+    .hsl-side{display:contents}
+    .hsl-head{order:-1}
+    .hsl-lead{display:none}
+    .hsl .hsl-title{font-size:38px}
+    .hsl-look{aspect-ratio:4/5}
+    .hsl .hsl-dot{width:30px;height:30px;margin:-15px 0 0 -15px;font-size:13px}
+    .hsl-pop{display:none}
+    .hsl-cards{grid-template-columns:1fr 1fr;gap:10px}
+    .hsl-card{grid-template-columns:1fr;gap:8px;padding:8px;align-items:start}
+    .hsl-n{left:14px;top:14px;width:22px;height:22px;font-size:11px;z-index:1}
+    .hsl-card b{font-size:13px}
+    .hsl-card small{display:none}
+    .hsl-pr{font-size:13px;margin-top:2px}
+    .hsl-go{display:none}
+    .hsl-total{font-size:13px}
   }
-
-  #shopify-section-{{ section.id }} .stl__inner {
-    width: 100%;
-    max-width: {{ section.settings.max_width }}px;
-    margin: 0 auto;
-  }
-
-  #shopify-section-{{ section.id }} .stl__heading {
-    margin: 0 0 {{ section.settings.heading_space }}px;
-    font-family: var(--font-heading-family, inherit);
-    font-size: {{ section.settings.heading_size_mobile }}px;
-    font-weight: {{ section.settings.heading_weight }};
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    {% if section.settings.heading_uppercase %}text-transform: uppercase;{% endif %}
-    {% if section.settings.heading_italic %}font-style: italic;{% endif %}
-    text-align: {{ section.settings.heading_align }};
-  }
-
-  #shopify-section-{{ section.id }} .stl__layout {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #shopify-section-{{ section.id }} .stl__stage {
-    position: relative;
-    width: 100%;
-    max-width: {{ section.settings.image_width }}px;
-  }
-
-  #shopify-section-{{ section.id }} .stl__stage > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: {{ section.settings.image_radius }}px;
-  }
-
-  #shopify-section-{{ section.id }} .stl__dot {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: {{ section.settings.dot_size_mobile }}px;
-    height: {{ section.settings.dot_size_mobile }}px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: {{ section.settings.dot_color }};
-    box-shadow: 0 0 0 {{ section.settings.dot_ring }}px {{ section.settings.dot_ring_color }};
-    cursor: pointer;
-    z-index: 3;
-    transition: transform 0.2s ease;
-  }
-
-  #shopify-section-{{ section.id }} .stl__dot:hover,
-  #shopify-section-{{ section.id }} .stl__dot.is-active {
-    transform: translate(-50%, -50%) scale(1.25);
-  }
-
-  #shopify-section-{{ section.id }} .stl__dot::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: {{ section.settings.dot_color }};
-    opacity: 0.5;
-    animation: stl-pulse-{{ section.id }} 2.4s ease-out infinite;
-  }
-
-  #shopify-section-{{ section.id }} .stl__dot.is-active::after {
-    animation: none;
-  }
-
-  @keyframes stl-pulse-{{ section.id }} {
-    0%   { transform: scale(1); opacity: 0.5; }
-    70%  { transform: scale(2.1); opacity: 0; }
-    100% { transform: scale(2.1); opacity: 0; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    #shopify-section-{{ section.id }} .stl__dot::after { animation: none; }
-  }
-
-  #shopify-section-{{ section.id }} .stl__panel {
-    position: relative;
-  }
-
-  /* --- MOBIL: kompakt vandret kort --- */
-
-  #shopify-section-{{ section.id }} .stl__product {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    box-sizing: border-box;
-    padding: 14px;
-    border: 1px solid {{ section.settings.card_border_color }};
-    border-radius: {{ section.settings.card_radius }}px;
-    background: {{ section.settings.card_background }};
-    text-decoration: none;
-    color: inherit;
-  }
-
-  #shopify-section-{{ section.id }} .stl__product:not(.is-active) {
-    display: none;
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-media {
-    position: relative;
-    flex: 0 0 {{ section.settings.thumb_size }}px;
-    width: {{ section.settings.thumb_size }}px;
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-media img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: {{ section.settings.panel_image_radius }}px;
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-text {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-name {
-    font-size: {{ section.settings.panel_name_size_mobile }}px;
-    font-weight: 700;
-    line-height: 1.35;
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-price {
-    font-size: {{ section.settings.panel_price_size_mobile }}px;
-    font-weight: 600;
-    color: {{ section.settings.price_color }};
-  }
-
-  #shopify-section-{{ section.id }} .stl__product-compare {
-    margin-left: 8px;
-    text-decoration: line-through;
-    opacity: 0.5;
-    font-weight: 400;
-    color: {{ section.settings.text_color }};
-  }
-
-  #shopify-section-{{ section.id }} .stl__badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 2px;
-  }
-
-  #shopify-section-{{ section.id }} .stl__badge {
-    padding: 4px 9px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
-  #shopify-section-{{ section.id }} .stl__badge--save {
-    background: {{ section.settings.save_badge_bg }};
-    color: {{ section.settings.save_badge_color }};
-  }
-
-  #shopify-section-{{ section.id }} .stl__badge--stock {
-    background: {{ section.settings.stock_badge_bg }};
-    color: {{ section.settings.stock_badge_color }};
-  }
-
-  #shopify-section-{{ section.id }} .stl__hint {
-    margin: 12px 0 0;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.45;
-  }
-
-  /* --- COMPUTER: stor kolonne til højre --- */
-
-  @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .stl {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-
-    #shopify-section-{{ section.id }} .stl__heading {
-      font-size: {{ section.settings.heading_size }}px;
-    }
-
-    #shopify-section-{{ section.id }} .stl__layout {
-      flex-direction: row;
-      align-items: center;
-      gap: {{ section.settings.column_gap }}px;
-    }
-
-    #shopify-section-{{ section.id }} .stl__stage {
-      flex: 0 0 {{ section.settings.image_column_width }}%;
-    }
-
-    #shopify-section-{{ section.id }} .stl__dot {
-      width: {{ section.settings.dot_size }}px;
-      height: {{ section.settings.dot_size }}px;
-    }
-
-    #shopify-section-{{ section.id }} .stl__panel {
-      flex: 1;
-      min-height: {{ section.settings.panel_min_height }}px;
-    }
-
-    #shopify-section-{{ section.id }} .stl__product {
-      display: block;
-      padding: 0;
-      border: 0;
-      background: none;
-      border-radius: 0;
-      text-align: {{ section.settings.panel_align }};
-    }
-
-    #shopify-section-{{ section.id }} .stl__product:not(.is-active) {
-      display: none;
-    }
-
-    #shopify-section-{{ section.id }} .stl__product-media {
-      flex: none;
-      width: 100%;
-      max-width: {{ section.settings.panel_image_width }}px;
-      margin-bottom: 20px;
-      {% if section.settings.panel_align == 'center' %}margin-left: auto; margin-right: auto;{% endif %}
-      {% if section.settings.panel_align == 'right' %}margin-left: auto;{% endif %}
-    }
-
-    #shopify-section-{{ section.id }} .stl__badges {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      flex-direction: column;
-      align-items: flex-end;
-      margin: 0;
-      z-index: 2;
-    }
-
-    #shopify-section-{{ section.id }} .stl__badge {
-      padding: 6px 12px;
-      font-size: 12px;
-    }
-
-    #shopify-section-{{ section.id }} .stl__product-text {
-      display: block;
-    }
-
-    #shopify-section-{{ section.id }} .stl__product-name {
-      display: block;
-      font-size: {{ section.settings.panel_name_size }}px;
-    }
-
-    #shopify-section-{{ section.id }} .stl__product-price {
-      display: block;
-      margin-top: 8px;
-      font-size: {{ section.settings.panel_price_size }}px;
-    }
-  }
+  @media (prefers-reduced-motion:reduce){.hsl-dot::before{animation:none}}
 </style>
 
-<div class="stl">
-  <div class="stl__inner">
-    {%- if section.settings.heading != blank -%}
-      <h2 class="stl__heading">{{ section.settings.heading | escape }}</h2>
-    {%- endif -%}
+{%- capture arrow -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>{%- endcapture -%}
 
-    <div class="stl__layout" data-stl>
-      <div class="stl__stage">
-        {%- if image_is_file -%}
-          {{
-            look_image
-            | image_url: width: 1600
-            | image_tag:
-              loading: 'lazy',
-              widths: '400, 600, 800, 1100, 1400, 1600',
-              sizes: '(min-width: 750px) 50vw, 92vw',
-              alt: product.title
-          }}
-        {%- else -%}
-          <img src="{{ look_image | strip }}" alt="{{ product.title | escape }}" loading="lazy">
-        {%- endif -%}
+<div class="hsl" id="hsl-{{ section.id }}">
+  <div class="hsl-wrap">
+    <div class="hsl-look">
+      <div class="hsl-in" style="--ar:{{ look_img.aspect_ratio | default: 0.6 }}">
+        {{ look_img | image_url: width: 1400 | image_tag: widths: '500, 800, 1100, 1400', sizes: '(min-width: 750px) 55vw, 100vw', loading: 'lazy', alt: section.settings.heading }}
 
-        {%- if p1 != blank -%}
-          <button type="button" class="stl__dot" style="left: {{ section.settings.dot1_x }}%; top: {{ section.settings.dot1_y }}%;" data-stl-dot="1" aria-label="{{ p1.title | escape }}"></button>
-        {%- endif -%}
-        {%- if p2 != blank -%}
-          <button type="button" class="stl__dot" style="left: {{ section.settings.dot2_x }}%; top: {{ section.settings.dot2_y }}%;" data-stl-dot="2" aria-label="{{ p2.title | escape }}"></button>
-        {%- endif -%}
+        {%- for i in (1..2) -%}
+          {%- if i == 1 -%}
+            {%- assign p = p1 -%}{%- assign px = section.settings.dot1_x -%}{%- assign py = section.settings.dot1_y -%}
+          {%- else -%}
+            {%- assign p = p2 -%}{%- assign px = section.settings.dot2_x -%}{%- assign py = section.settings.dot2_y -%}
+          {%- endif -%}
+          {%- if p != blank -%}
+            <div class="hsl-pin{% if px > 60 %} hsl-pin--flip{% endif %}" style="left:{{ px }}%;top:{{ py }}%" data-i="{{ i }}">
+              <button type="button" class="hsl-dot" aria-label="{{ i }}: {{ p.title | escape }}">{{ i }}</button>
+              <a class="hsl-pop" href="{{ p.url }}" tabindex="-1">
+                <span class="hsl-pop-t">{%- if p.featured_image -%}{{ p.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}</span>
+                <span><b>{{ p.title | escape }}</b><span>{{ p.selected_or_first_available_variant.price | money }} →</span></span>
+              </a>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
       </div>
+    </div>
 
-      <div class="stl__panel">
-        {%- for n in (1..2) -%}
-          {%- liquid
-            if n == 1
-              assign item = p1
-            else
-              assign item = p2
-            endif
-          -%}
-          {%- if item != blank -%}
-            {%- liquid
-              assign saving = 0
-              if item.compare_at_price > item.price
-                assign saving = item.compare_at_price | minus: item.price
-              endif
-            -%}
-            <a class="stl__product" href="{{ item.url }}" data-stl-product="{{ n }}">
-              <div class="stl__product-media">
-                {%- if item.featured_image != blank -%}
-                  {{ item.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '200, 400, 600, 900', sizes: '(min-width: 750px) 30vw, 100px', alt: item.title }}
-                {%- endif -%}
-              </div>
-              <div class="stl__product-text">
-                <span class="stl__product-name">{{ item.title }}</span>
-                <span class="stl__product-price">
-                  {{ item.price | money }}
-                  {%- if item.compare_at_price > item.price -%}
-                    <span class="stl__product-compare">{{ item.compare_at_price | money }}</span>
-                  {%- endif -%}
-                </span>
-                <span class="stl__badges">
-                  {%- if saving > 0 and section.settings.show_save_badge -%}
-                    <span class="stl__badge stl__badge--save">{{ section.settings.save_badge_text }} {{ saving | money_without_trailing_zeros }}</span>
-                  {%- endif -%}
-                  {%- if section.settings.show_stock_badge and item.available and item.selected_or_first_available_variant.inventory_quantity > 0 and item.selected_or_first_available_variant.inventory_quantity <= section.settings.stock_threshold -%}
-                    <span class="stl__badge stl__badge--stock">{{ section.settings.stock_badge_text }}</span>
-                  {%- endif -%}
-                </span>
-              </div>
+    <div class="hsl-side">
+      <div class="hsl-head">
+        {%- if section.settings.overline != blank -%}<p class="hsl-over">{{ section.settings.overline | escape }}</p>{%- endif -%}
+        <h2 class="hsl-title">{{ section.settings.heading | escape }}{% if section.settings.heading_accent != blank %} <em>{{ section.settings.heading_accent | escape }}</em>{% endif %}</h2>
+      </div>
+      {%- if section.settings.lead != blank -%}<p class="hsl-lead">{{ section.settings.lead | escape }}</p>{%- endif -%}
+
+      <div class="hsl-cards">
+        {%- for i in (1..2) -%}
+          {%- if i == 1 -%}{%- assign p = p1 -%}{%- else -%}{%- assign p = p2 -%}{%- endif -%}
+          {%- if p != blank -%}
+            <a class="hsl-card" href="{{ p.url }}" data-i="{{ i }}">
+              <span class="hsl-n">{{ i }}</span>
+              <span class="hsl-card-t">{%- if p.featured_image -%}{{ p.featured_image | image_url: width: 400 | image_tag: widths: '200, 300, 400', sizes: '(min-width: 750px) 110px, 45vw', loading: 'lazy', alt: p.title }}{%- endif -%}</span>
+              <span>
+                <b>{{ p.title | escape }}</b>
+                {%- if p.type != blank -%}<small>{{ p.type | escape }}</small>{%- endif -%}
+                <span class="hsl-pr">{{ p.selected_or_first_available_variant.price | money }}</span>
+              </span>
+              <span class="hsl-go">{{ arrow }}</span>
             </a>
           {%- endif -%}
         {%- endfor -%}
-
-        {%- if section.settings.hint != blank -%}
-          <p class="stl__hint">{{ section.settings.hint | escape }}</p>
-        {%- endif -%}
       </div>
+
+      {%- if section.settings.show_total -%}
+        <div class="hsl-total"><span>{{ section.settings.total_label | escape }} · {{ count }} items</span><b>{{ total | money }}</b></div>
+      {%- endif -%}
     </div>
   </div>
 </div>
 
 <script>
-  (function () {
-    var sectionId = {{ section.id | json }};
+(function(){
+  var root = document.getElementById('hsl-{{ section.id }}');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  var pins = root.querySelectorAll('.hsl-pin');
+  var cards = root.querySelectorAll('.hsl-card');
+  var hover = window.matchMedia('(hover: hover)').matches;
 
-    function initLook() {
-      var root = document.querySelector('#shopify-section-' + sectionId + ' [data-stl]');
-      if (!root) return;
-
-      var dots = root.querySelectorAll('[data-stl-dot]');
-      var products = root.querySelectorAll('[data-stl-product]');
-      if (!dots.length || !products.length) return;
-
-      function show(key) {
-        products.forEach(function (p) {
-          p.classList.toggle('is-active', p.dataset.stlProduct === key);
-        });
-        dots.forEach(function (d) {
-          d.classList.toggle('is-active', d.dataset.stlDot === key);
-        });
-      }
-
-      dots.forEach(function (dot) {
-        dot.addEventListener('mouseenter', function () { show(dot.dataset.stlDot); });
-        dot.addEventListener('focus', function () { show(dot.dataset.stlDot); });
-        dot.addEventListener('click', function (e) { e.preventDefault(); show(dot.dataset.stlDot); });
-      });
-
-      show(dots[0].dataset.stlDot);
+  function set(i){
+    pins.forEach(function(p){ p.classList.toggle('is-on', p.dataset.i === i); });
+    cards.forEach(function(c){ c.classList.toggle('is-on', c.dataset.i === i); });
+  }
+  pins.forEach(function(p){
+    var dot = p.querySelector('.hsl-dot');
+    if (hover) {
+      p.addEventListener('mouseenter', function(){ set(p.dataset.i); });
+      p.addEventListener('mouseleave', function(){ set(null); });
     }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initLook);
-    } else {
-      initLook();
-    }
-
-    document.addEventListener('shopify:section:load', function (event) {
-      if (event.detail.sectionId === sectionId) initLook();
+    dot.addEventListener('focus', function(){ set(p.dataset.i); });
+    dot.addEventListener('click', function(){
+      // Mobil/klik: første tryk viser produktet, andet tryk åbner det
+      if (p.classList.contains('is-on') && !hover) { window.location = p.querySelector('.hsl-pop').href; return; }
+      if (hover) { window.location = p.querySelector('.hsl-pop').href; return; }
+      set(p.dataset.i);
     });
-  })();
+  });
+  cards.forEach(function(c){
+    if (hover) {
+      c.addEventListener('mouseenter', function(){ set(c.dataset.i); });
+      c.addEventListener('mouseleave', function(){ set(null); });
+    }
+  });
+})();
 </script>
+{%- elsif request.design_mode -%}
+  <div style="padding:40px 24px;text-align:center;font:15px/1.5 Barlow,Arial,sans-serif;color:#5d584f;background:#f5f3ef">
+    <b>HUNDRED Shop the look:</b> Dette produkt mangler look-billede eller produkter i metafelterne
+    ({{ section.settings.mf_image }}, {{ section.settings.mf_product_1 }}, {{ section.settings.mf_product_2 }}). Sektionen vises ikke for kunderne.
+  </div>
 {%- endif -%}
 
 {% schema %}
 {
-  "name": "Shop looket",
+  "name": "HUNDRED Shop the look",
   "tag": "section",
-  "class": "section",
+  "class": "section-hundred-shop-the-look",
   "settings": [
-    { "type": "header", "content": "Metafelter", "info": "Skriv navnene præcis som de står i den gule kasse på produktsiden." },
+    { "type": "header", "content": "Tekst" },
+    { "type": "text", "id": "overline", "label": "Overlinje", "default": "Shop the look" },
+    { "type": "text", "id": "heading", "label": "Overskrift (sort)", "default": "Complete" },
+    { "type": "text", "id": "heading_accent", "label": "Overskrift (orange)", "default": "the look" },
+    { "type": "text", "id": "lead", "label": "Kort tekst (kun computer)", "default": "Hover the dots to shop each piece." },
+    { "type": "checkbox", "id": "show_total", "label": "Vis samlet pris for hele looket", "default": true },
+    { "type": "text", "id": "total_label", "label": "Tekst ved samlet pris", "default": "Complete look" },
+
+    { "type": "header", "content": "Metafelter", "info": "Skriv navnene præcis som i Indstillinger → Brugerdefinerede data → Produkter, fx custom.look_billede" },
     { "type": "text", "id": "mf_image", "label": "Metafelt til look-billedet", "default": "custom.look_billede" },
-    { "type": "text", "id": "mf_product_1", "label": "Metafelt til produkt 1", "default": "custom.look_shorts" },
-    { "type": "text", "id": "mf_product_2", "label": "Metafelt til produkt 2", "default": "custom.look_sko" },
+    { "type": "text", "id": "mf_product_1", "label": "Metafelt til produkt 1 (prik 1)", "default": "custom.look_shorts" },
+    { "type": "text", "id": "mf_product_2", "label": "Metafelt til produkt 2 (prik 2)", "default": "custom.look_sko" },
 
-    { "type": "header", "content": "Prikkernes placering", "info": "Måles i procent af billedet. Venstre kant er 0, højre kant er 100. Top er 0, bund er 100." },
-    { "type": "range", "id": "dot1_x", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Prik 1 — vandret", "default": 44 },
-    { "type": "range", "id": "dot1_y", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Prik 1 — lodret", "default": 61 },
-    { "type": "range", "id": "dot2_x", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Prik 2 — vandret", "default": 50 },
-    { "type": "range", "id": "dot2_y", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Prik 2 — lodret", "default": 89 },
-
-    { "type": "header", "content": "Prikkernes udseende" },
-    { "type": "range", "id": "dot_size", "min": 10, "max": 50, "step": 2, "unit": "px", "label": "Størrelse (computer)", "default": 28 },
-    { "type": "range", "id": "dot_size_mobile", "min": 10, "max": 40, "step": 2, "unit": "px", "label": "Størrelse (mobil)", "default": 22 },
-    { "type": "color", "id": "dot_color", "label": "Farve", "default": "#ffffff" },
-    { "type": "range", "id": "dot_ring", "min": 0, "max": 6, "step": 1, "unit": "px", "label": "Ring omkring", "default": 2 },
-    { "type": "color", "id": "dot_ring_color", "label": "Ringens farve", "default": "rgba(0,0,0,0.25)" },
-
-    { "type": "header", "content": "Produktet — computer" },
-    { "type": "range", "id": "panel_image_width", "min": 200, "max": 600, "step": 10, "unit": "px", "label": "Produktbilledets bredde", "default": 420 },
-    { "type": "range", "id": "panel_min_height", "min": 200, "max": 700, "step": 20, "unit": "px", "label": "Mindste højde", "default": 420, "info": "Holder højden ens når du skifter mellem produkterne." },
-    { "type": "select", "id": "panel_align", "label": "Justering", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "right", "label": "Højre" }], "default": "left" },
-    { "type": "range", "id": "panel_name_size", "min": 14, "max": 30, "step": 1, "unit": "px", "label": "Navnets størrelse", "default": 18 },
-    { "type": "range", "id": "panel_price_size", "min": 12, "max": 28, "step": 1, "unit": "px", "label": "Prisens størrelse", "default": 17 },
-
-    { "type": "header", "content": "Produktet — mobil", "info": "På mobil vises produktet som en kompakt linje under billedet." },
-    { "type": "range", "id": "thumb_size", "min": 60, "max": 160, "step": 5, "unit": "px", "label": "Billedets størrelse", "default": 90 },
-    { "type": "range", "id": "panel_name_size_mobile", "min": 12, "max": 22, "step": 1, "unit": "px", "label": "Navnets størrelse", "default": 15 },
-    { "type": "range", "id": "panel_price_size_mobile", "min": 11, "max": 20, "step": 1, "unit": "px", "label": "Prisens størrelse", "default": 14 },
-    { "type": "range", "id": "card_radius", "min": 0, "max": 24, "step": 2, "unit": "px", "label": "Kortets runde hjørner", "default": 8 },
-    { "type": "color", "id": "card_background", "label": "Kortets baggrund", "default": "rgba(0,0,0,0)" },
-    { "type": "color", "id": "card_border_color", "label": "Kortets kantlinje", "default": "rgba(0,0,0,0.12)" },
-
-    { "type": "header", "content": "Fælles" },
-    { "type": "range", "id": "panel_image_radius", "min": 0, "max": 30, "step": 2, "unit": "px", "label": "Produktbilledets runde hjørner", "default": 0 },
-    { "type": "color", "id": "price_color", "label": "Prisens farve", "default": "#121212" },
-    { "type": "text", "id": "hint", "label": "Lille hjælpetekst", "info": "Lad feltet stå tomt for ikke at vise nogen tekst." },
-
-    { "type": "header", "content": "Mærkater" },
-    { "type": "checkbox", "id": "show_save_badge", "label": "Vis besparelse", "default": true },
-    { "type": "text", "id": "save_badge_text", "label": "Tekst før beløbet", "default": "Spar" },
-    { "type": "color", "id": "save_badge_bg", "label": "Besparelsens baggrund", "default": "#000000" },
-    { "type": "color", "id": "save_badge_color", "label": "Besparelsens tekstfarve", "default": "#ffffff" },
-    { "type": "checkbox", "id": "show_stock_badge", "label": "Vis 'få tilbage'", "default": true },
-    { "type": "text", "id": "stock_badge_text", "label": "Tekst", "default": "Få tilbage" },
-    { "type": "range", "id": "stock_threshold", "min": 1, "max": 20, "step": 1, "unit": "stk", "label": "Vis når lageret er under", "default": 5 },
-    { "type": "color", "id": "stock_badge_bg", "label": "Baggrund", "default": "#e01b24" },
-    { "type": "color", "id": "stock_badge_color", "label": "Tekstfarve", "default": "#ffffff" },
-
-    { "type": "header", "content": "Overskrift" },
-    { "type": "text", "id": "heading", "label": "Overskrift", "default": "Shop looket" },
-    { "type": "checkbox", "id": "heading_uppercase", "label": "Store bogstaver", "default": true },
-    { "type": "checkbox", "id": "heading_italic", "label": "Kursiv", "default": true },
-    { "type": "range", "id": "heading_size", "min": 18, "max": 72, "step": 2, "unit": "px", "label": "Størrelse (computer)", "default": 38 },
-    { "type": "range", "id": "heading_size_mobile", "min": 16, "max": 48, "step": 2, "unit": "px", "label": "Størrelse (mobil)", "default": 26 },
-    { "type": "select", "id": "heading_weight", "label": "Tykkelse", "options": [{ "value": "500", "label": "Medium" }, { "value": "600", "label": "Halvfed" }, { "value": "700", "label": "Fed" }, { "value": "800", "label": "Ekstra fed" }], "default": "800" },
-    { "type": "select", "id": "heading_align", "label": "Placering", "options": [{ "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "right", "label": "Højre" }], "default": "left" },
-    { "type": "range", "id": "heading_space", "min": 8, "max": 60, "step": 2, "unit": "px", "label": "Afstand ned til billedet", "default": 32 },
-
-    { "type": "header", "content": "Sektion" },
-    { "type": "color", "id": "bg_color", "label": "Baggrundsfarve", "default": "#ffffff" },
-    { "type": "color", "id": "text_color", "label": "Tekstfarve", "default": "#121212" },
-    { "type": "range", "id": "image_width", "min": 300, "max": 900, "step": 20, "unit": "px", "label": "Look-billedets bredde", "default": 620 },
-    { "type": "range", "id": "image_column_width", "min": 30, "max": 70, "step": 5, "unit": "%", "label": "Look-billedets spaltebredde", "default": 50 },
-    { "type": "range", "id": "image_radius", "min": 0, "max": 30, "step": 2, "unit": "px", "label": "Runde hjørner", "default": 0 },
-    { "type": "range", "id": "column_gap", "min": 20, "max": 140, "step": 4, "unit": "px", "label": "Afstand mellem spalterne", "default": 60 },
-    { "type": "range", "id": "max_width", "min": 600, "max": 1600, "step": 20, "unit": "px", "label": "Indholdets maksbredde", "default": 1280 },
-    { "type": "range", "id": "side_padding", "min": 0, "max": 80, "step": 4, "unit": "px", "label": "Luft ud til kanten", "default": 24 },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Afstand over", "default": 64 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Afstand under", "default": 64 }
+    { "type": "header", "content": "Prikkernes placering", "info": "I procent af billedet. Venstre kant er 0, højre kant er 100. Top er 0, bund er 100." },
+    { "type": "range", "id": "dot1_x", "label": "Prik 1 – vandret", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 44 },
+    { "type": "range", "id": "dot1_y", "label": "Prik 1 – lodret", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 61 },
+    { "type": "range", "id": "dot2_x", "label": "Prik 2 – vandret", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
+    { "type": "range", "id": "dot2_y", "label": "Prik 2 – lodret", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 89 }
   ],
-  "presets": [{ "name": "Shop looket" }]
+  "enabled_on": { "templates": ["product"] },
+  "presets": [{ "name": "HUNDRED Shop the look" }]
 }
 {% endschema %}
