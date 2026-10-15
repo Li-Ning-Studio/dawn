@@ -38,7 +38,7 @@
 
   /* ---------- Titel ---------- */
   product-info .product__main-title{
-    font:italic 900 clamp(40px,4.4vw,64px)/.9 var(--hp-display) !important;text-transform:uppercase;letter-spacing:-.005em !important;
+    font:italic 900 clamp(32px,3.3vw,50px)/.92 var(--hp-display) !important;text-transform:uppercase;letter-spacing:-.005em !important;
     color:var(--hp-ink);margin:6px 0 0 !important;text-wrap:balance;
   }
   product-info .product__eyebrow-row,
@@ -62,12 +62,14 @@
   product-info .product__rrp .hp-rrp-label{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hp-soft)}
 
   /* ---------- Størrelser / varianter (B2C) ---------- */
-  product-info .product-form__input--pill,
-  product-info variant-selects fieldset.product-form__input{display:flex;flex-wrap:wrap;gap:8px}
+  product-info .product-form__input--pill{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  product-info .product-form__input--pill > legend,
+  product-info .product-form__input--pill > .form__label{grid-column:1 / -1}
+  product-info .product-form__input--pill input[type=radio]+label{width:100%;text-align:center;justify-content:center}
   product-info .product-form__input .form__label{width:100%;font:700 12px/1 var(--hp-body);letter-spacing:.16em;text-transform:uppercase;color:var(--hp-ink);margin-bottom:6px}
   product-info .product-form__input--pill input[type=radio]+label{
     margin:0 !important;border-radius:8px !important;border:1px solid var(--hp-line) !important;background:#fff !important;color:var(--hp-ink) !important;
-    padding:12px 16px !important;font:600 15px/1.2 var(--hp-body) !important;letter-spacing:0 !important;transition:border-color .15s,box-shadow .15s;
+    padding:13px 8px !important;font:600 14px/1.25 var(--hp-body) !important;letter-spacing:0 !important;transition:border-color .15s,box-shadow .15s;
   }
   product-info .product-form__input--pill input[type=radio]+label:hover{border-color:var(--hp-ink) !important}
   product-info .product-form__input--pill input[type=radio]:checked+label{
@@ -95,51 +97,16 @@
   product-info .product-form__submit:hover{background:#222 !important}
   product-info .shopify-payment-button__button{border-radius:999px !important;min-height:52px}
 
-  /* ---------- Bulk-bestilling (kun B2B, Shopify quick order list) ---------- */
-  product-info .quick-order-list{margin-top:18px;font-family:var(--hp-body)}
-  product-info .quick-order-list__contents{border:1px solid var(--hp-line);border-radius:12px;overflow:hidden;padding:0 !important}
-  product-info .quick-order-list__table{width:100%;border-collapse:collapse}
+  /* ---------- Bulk-bestilling (kun B2B) ----------
+     Bevidst let: kun skrift og farver. Layout, kolonner og total-boksen
+     er Shopifys egne og røres ikke, så tabellen altid passer. */
   product-info .quick-order-list__table thead th{
-    background:var(--hp-panel);padding:12px 18px !important;border:0 !important;
-    font:700 11px/1.2 var(--hp-body) !important;letter-spacing:.16em !important;text-transform:uppercase;color:var(--hp-soft) !important;opacity:1 !important;
+    font:700 11px/1.2 var(--hp-body) !important;letter-spacing:.16em !important;text-transform:uppercase;color:var(--hp-soft) !important;
   }
-  product-info .quick-order-list__table .variant-item td{padding:14px 18px !important;border-top:1px solid var(--hp-line) !important;vertical-align:middle}
-  product-info .quick-order-list__table .variant-item{transition:background .2s}
-  product-info .quick-order-list__table .variant-item:has(.quantity__input:not([value="0"]):not([value=""])){background:#fffaf0}
-  product-info .variant-item__name{font:700 15px/1.3 var(--hp-body) !important;letter-spacing:0 !important;color:var(--hp-ink)}
-  product-info .variant-item__sku{font-size:11px !important;letter-spacing:.04em;color:var(--hp-muted) !important;opacity:1 !important}
-  product-info .variant-item__image-container,product-info .variant-item__image{border-radius:8px;background:var(--hp-panel)}
-  product-info .variant-item__totals,product-info .variant-item__price,product-info .variant-item .price{
-    font:600 15px/1.2 var(--hp-body) !important;font-variant-numeric:tabular-nums;color:var(--hp-ink)}
-  product-info .variant-item .quantity{min-height:42px;width:124px}
-  product-info .variant-item .quantity__input{font-weight:700;font-variant-numeric:tabular-nums}
-  product-info .variant-item:has(.quantity__input:not([value="0"]):not([value=""])) .quantity:after{box-shadow:0 0 0 1.5px var(--hp-ink) !important}
-  product-info .variant-item__inventory,product-info .variant-item .inventory{font-size:12px;color:var(--hp-soft)}
-
-  /* Opsummering: sort bjælke med guldknap */
-  product-info .quick-order-list__total{
-    margin-top:14px;padding:18px 22px !important;border:0 !important;border-radius:12px;background:var(--hp-ink);color:#fff;
-  }
-  product-info .quick-order-list__total *{color:#fff}
-  product-info .quick-order-list-total__info,
-  product-info .quick-order-list__total-info{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
-  product-info .quick-order-list-total__price,
-  product-info .quick-order-list__total .totals__subtotal-value,
-  product-info .quick-order-list__total .h5,
-  product-info .quick-order-list__total .h4{font:700 24px/1.1 var(--hp-body) !important;font-variant-numeric:tabular-nums;color:#fff !important}
-  product-info .quick-order-list__total .totals__subtotal,
-  product-info .quick-order-list__total small,
-  product-info .quick-order-list__total .caption,
-  product-info .quick-order-list-total__column span:not(.totals__subtotal-value){font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a8a296 !important}
-  product-info .quick-order-list__button,
-  product-info .quick-order-list__total .button{
-    border-radius:999px !important;background:var(--hp-gold) !important;color:#000 !important;border:0 !important;min-height:52px;padding:0 26px !important;
-    font:700 13px/1 var(--hp-body) !important;letter-spacing:.14em !important;text-transform:uppercase;
-  }
-  product-info .quick-order-list__total .button *{color:#000 !important}
-  product-info .quick-order-list__total .button::before,product-info .quick-order-list__total .button::after{box-shadow:none !important}
-  product-info .quick-order-list__total .button-remove,
-  product-info .quick-order-list__total .quick-order-list-total__confirmation button{background:none !important;color:#cfc9be !important;text-decoration:underline;min-height:0;padding:0 !important;letter-spacing:0 !important;text-transform:none;font-weight:500 !important}
+  product-info .variant-item__name{font-family:var(--hp-body) !important;font-weight:700 !important;letter-spacing:0 !important;color:var(--hp-ink)}
+  product-info .variant-item__sku{color:var(--hp-muted) !important}
+  product-info .variant-item__totals,product-info .variant-item__price{font-variant-numeric:tabular-nums}
+  product-info .quick-order-list .quantity__input{font-weight:700}
 
   /* ---------- Faner (Details osv.) ---------- */
   product-info .product__accordion{border-color:var(--hp-line) !important}
@@ -149,8 +116,7 @@
   product-info .accordion__content{color:var(--hp-soft);font-size:15px;line-height:1.65}
 
   @media (max-width:749px){
-    product-info .quick-order-list__table .variant-item td{padding:12px !important}
-    product-info .quick-order-list__total{padding:16px !important}
+    product-info .product-form__input--pill{grid-template-columns:repeat(2,minmax(0,1fr))}
   }
 </style>
 
