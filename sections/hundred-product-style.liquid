@@ -30,6 +30,12 @@
   product-info .thumbnail-list .thumbnail img{object-fit:contain;mix-blend-mode:multiply}
   product-info .thumbnail-list .thumbnail[aria-current]{box-shadow:0 0 0 2px var(--hp-ink) !important}
   {%- endif -%}
+  /* Pilene skal ligge øverst, så de kan trykkes på mobil (ellers dækker zoom-knappen dem) */
+  product-info .product__media-wrapper{isolation:isolate}
+  product-info .product__media-wrapper .slider-buttons{z-index:3}
+  product-info .product__media-wrapper .slider-button,
+  product-info .product__media-wrapper button[name="previous"],
+  product-info .product__media-wrapper button[name="next"]{position:relative;z-index:3;pointer-events:auto;touch-action:manipulation}
   product-info .slider-button,
   product-info .product__media-wrapper button[name="previous"],
   product-info .product__media-wrapper button[name="next"]{
