@@ -85,7 +85,7 @@
     .hhs-slide--right .hhs-media{left:0}
     .hhs-dev--d{display:none}
     .hhs-dev--m{display:block}
-    .hhs-media img,.hhs-media video{object-position:var(--pos-m,center) var(--pos-my,top)}
+    .hhs-media img,.hhs-media video{object-position:var(--pos-m,center) var(--pos-my,top);filter:brightness(var(--bri-m,1))}
     .hhs-deco::before{width:520px;height:520px;left:50%;top:32%}
     .hhs-deco::after{-webkit-mask:radial-gradient(circle at 50% 30%,#000,transparent 55%);mask:radial-gradient(circle at 50% 30%,#000,transparent 55%)}
     .hhs-shade,.hhs-slide--right .hhs-shade{background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.8) 64%,#000 88%)}
@@ -138,7 +138,7 @@
         assign d_sizes = '80vw'
       endif
     -%}
-    {%- capture pos_style -%}--pos-d:{{ b.position_desktop }};--pos-m:{{ b.position_mobile }};--pos-my:{{ b.position_mobile_y }};--bri:{{ b.brightness | divided_by: 100.0 }}{%- endcapture -%}
+    {%- capture pos_style -%}--pos-d:{{ b.position_desktop }};--pos-m:{{ b.position_mobile }};--pos-my:{{ b.position_mobile_y }};--bri:{{ b.brightness | divided_by: 100.0 }};--bri-m:{{ b.brightness_mobile | divided_by: 100.0 }}{%- endcapture -%}
 
     <div class="hhs-slide{% if b.layout == 'right' %} hhs-slide--right{% endif %}{% if forloop.first %} is-active{% endif %}"
       role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} / {{ forloop.length }}"
@@ -375,6 +375,7 @@
           "options": [ { "value": "full", "label": "Hele bredden" }, { "value": "right", "label": "Til højre, sort felt bag teksten" } ] },
         { "type": "select", "id": "position_desktop", "label": "Fokus", "default": "center",
           "options": [ { "value": "left", "label": "Venstre" }, { "value": "center", "label": "Midten" }, { "value": "right", "label": "Højre" } ] },
+        { "type": "range", "id": "brightness", "label": "Lysstyrke – computer", "min": 20, "max": 130, "step": 2, "unit": "%", "default": 100 },
 
         { "type": "header", "content": "Mobil" },
         { "type": "image_picker", "id": "image_mobile", "label": "Billede – mobil", "info": "Højformat, fx 1080 × 1620 px. Tom = computerbilledet bruges." },
@@ -383,9 +384,9 @@
           "options": [ { "value": "left", "label": "Venstre" }, { "value": "30%", "label": "Lidt til venstre" }, { "value": "center", "label": "Midten" }, { "value": "70%", "label": "Lidt til højre" }, { "value": "right", "label": "Højre" } ] },
         { "type": "select", "id": "position_mobile_y", "label": "Fokus (lodret)", "default": "top",
           "options": [ { "value": "top", "label": "Top" }, { "value": "center", "label": "Midten" }, { "value": "bottom", "label": "Bund" } ] },
+        { "type": "range", "id": "brightness_mobile", "label": "Lysstyrke – mobil", "min": 20, "max": 130, "step": 2, "unit": "%", "default": 100 },
 
         { "type": "header", "content": "Udseende" },
-        { "type": "range", "id": "brightness", "label": "Lysstyrke", "min": 60, "max": 130, "step": 2, "unit": "%", "default": 100 },
         { "type": "checkbox", "id": "glow", "label": "Guld-lys og vævet mønster", "info": "Godt til produktbilleder på sort baggrund.", "default": false },
 
         { "type": "header", "content": "Tekst" },
