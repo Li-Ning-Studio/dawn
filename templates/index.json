@@ -269,6 +269,7 @@
         "slide_yyVJtc",
         "slide_W4TjcE"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "b2b_tag": "B2B",
@@ -284,6 +285,65 @@
         "controls_arrow_color": "#000000",
         "video_autoplay": true,
         "video_controls": false
+      }
+    },
+    "hundred_hero_slideshow_f3am9g": {
+      "type": "hundred-hero-slideshow",
+      "blocks": {
+        "slide_mrg3tH": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Design_uden_navn_25.png",
+            "layout": "full",
+            "position_desktop": "right",
+            "position_mobile": "center",
+            "position_mobile_y": "top",
+            "brightness": 80,
+            "glow": false,
+            "overline": "Official HUNDRED store · Europe",
+            "heading": "Now in",
+            "heading_gold": "Europe",
+            "gold_join": "newline",
+            "text": "Shop HUNDRED directly, shipped from Denmark.",
+            "tags": "",
+            "button_label": "Shop now",
+            "button_link": "",
+            "credit": "<strong>Mathias & Alexandra</strong> play HUNDRED"
+          }
+        },
+        "slide_h6yXY8": {
+          "type": "slide",
+          "settings": {
+            "layout": "full",
+            "position_desktop": "center",
+            "position_mobile": "center",
+            "position_mobile_y": "top",
+            "brightness": 100,
+            "glow": true,
+            "overline": "New · Hyperweave technology",
+            "heading": "Hyper",
+            "heading_gold": "weave",
+            "gold_join": "none",
+            "text": "Woven carbon fibre for a faster, more stable racket head.",
+            "tags": "Carbon fibre, Head-light, 4U · G5",
+            "button_label": "Shop Hyperweave",
+            "button_link": "",
+            "credit": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_mrg3tH",
+        "slide_h6yXY8"
+      ],
+      "name": "HUNDRED Hero slideshow",
+      "settings": {
+        "ratio_desktop": "16/7",
+        "ratio_mobile": "2/3",
+        "autoplay": true,
+        "speed": 6,
+        "first_is_h1": false,
+        "label": "Highlights"
       }
     },
     "collection_list_9eLrHG": {
@@ -691,6 +751,7 @@
   },
   "order": [
     "responsive_slideshow_fB8Wfk",
+    "hundred_hero_slideshow_f3am9g",
     "collection_list_9eLrHG",
     "latest_products_new_in_9YXazP",
     "featured_collection_VRmapC",
