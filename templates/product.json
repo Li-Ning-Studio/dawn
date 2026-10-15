@@ -16,6 +16,12 @@
           "type": "title",
           "settings": {}
         },
+        "custom_liquid_MnaH6D": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- comment -%} HUNDRED – Andre farver. Læses fra metafeltet custom.other_colours (liste over produkter). {%- endcomment -%}\n{%- assign hcol_others = product.metafields.custom.other_colours.value -%}\n{%- if hcol_others != blank -%}\n<style>\n  .hcol{display:grid;gap:12px;margin:18px 0 6px;font-family:\"Barlow\",\"Helvetica Neue\",Arial,sans-serif}\n  .hcol-lbl{display:flex;justify-content:space-between;gap:12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#0a0a0b}\n  .hcol-lbl span{letter-spacing:.04em;text-transform:none;font-weight:600;color:#8c867b}\n  .hcol-row{display:flex;flex-wrap:wrap;gap:10px}\n  .hcol a{width:72px;aspect-ratio:1;border-radius:8px;background:#f5f3ef;border:1px solid #e7e3dc;display:grid;place-items:center;overflow:hidden;transition:border-color .15s}\n  .hcol a:hover{border-color:#0a0a0b}\n  .hcol a[aria-current=\"true\"]{outline:2px solid #0a0a0b;outline-offset:2px;border-color:transparent}\n  .hcol a.is-out{opacity:.45}\n  .hcol img{width:88%;height:88%;object-fit:contain;mix-blend-mode:multiply}\n  .hcol a:focus-visible{outline:2px solid #0a0a0b;outline-offset:3px}\n</style>\n<div class=\"hcol\">\n  <div class=\"hcol-lbl\">Colour <span>{{ product.metafields.custom.colour_name | default: product.title | split: ' ' | last | escape }}</span></div>\n  <div class=\"hcol-row\">\n    <a href=\"{{ product.url }}\" aria-current=\"true\" title=\"{{ product.title | escape }}\">\n      {%- if product.featured_image -%}{{ product.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: product.title }}{%- endif -%}\n    </a>\n    {%- for p in hcol_others -%}\n      {%- if p.id == product.id -%}{%- continue -%}{%- endif -%}\n      <a href=\"{{ p.url }}\" title=\"{{ p.title | escape }}\"{% unless p.available %} class=\"is-out\"{% endunless %}>\n        {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}\n      </a>\n    {%- endfor -%}\n  </div>\n</div>\n{%- endif -%}"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -46,11 +52,6 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "description": {
-          "type": "description",
-          "disabled": true,
-          "settings": {}
         },
         "collapsible_tab_McAyVV": {
           "type": "collapsible_tab",
@@ -93,12 +94,12 @@
       },
       "block_order": [
         "title",
+        "custom_liquid_MnaH6D",
         "caption",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "collapsible_tab_McAyVV",
         "collapsible-row-1",
         "collapsible_tab_UKdtFh",
