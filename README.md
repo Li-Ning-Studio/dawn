@@ -104,7 +104,7 @@ Customers pick "Pro Stringing" on eligible rackets, choose a string, colour, ten
 
 - Hidden service products:
   - Handle `studio-pro-stringing` (contains the paid service variant).
-  - Handle `studio-four-knots-service` (upsell when a customer selects four knots).
+  - Handle `studio-four-knots-service` (complete four-knot service, replacing the base service).
 - Collection of string products linked to `settings.stringing_collection_id`.
 - Each string product needs:
   - `Metafields > custom > durability | control | repulsion_power | hitting_sound | shock_absorption` with numeric values (out of 10) used for filtering and charts.
@@ -118,9 +118,12 @@ Customers pick "Pro Stringing" on eligible rackets, choose a string, colour, ten
 1. `snippets/stringing.liquid` exposes the service variant ids via `window.s3_stringing_service_variant_id` and `window.s3_four_knots_service_variant_id`.
 2. When the shopper submits the form, `assets/product-form.js` looks for checked inputs named `string-variant`, `string-tension`, and `knot-config` and adds:
 
-   - the stringing service variant,
-   - the selected string variant,
-   - and (if four knots selected) the four-knot service variant.
+   - exactly one service variant: `studio-pro-stringing` for two knots, or `studio-four-knots-service` for four knots,
+   - and the selected string variant.
+
+   The selected service carries the racket, string, tension, and knot properties. Both knot options show their full service variant prices; applying a selection updates the service card price. The four-knot product price must cover the complete service, not just an upgrade fee. The first variant of each service supplies its ID, availability, and price.
+
+   Missing or unavailable selected services block submission before any cart request. Four knots never falls back to the base service. New modals disable four knots when the PDP has an older cached product form that still adds both services. Deploy the updated product form, Liquid, and rebuilt entry together, retaining the dependency assets described above. Existing cart lines are not migrated.
 
    The racket is added first, and each service or add-on uses Shopify's native `parent_id` relationship so the cart, checkout, and order keep the customisation grouped.
 
