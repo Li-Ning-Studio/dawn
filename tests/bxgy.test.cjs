@@ -437,7 +437,7 @@ function customise(h) {
   h.context.window.s3_current_variant_sku = 'RACKET';
   h.context.window.s3_tshirt_printing_service_variant_id = 301;
   h.context.window.s3_tshirt_printing_config = { tshirtTextColor: '#fff' };
-  h.elements.set('the-tshirt-text', { innerText: 'Name' });
+  h.elements.set('the-tshirt-text', { innerText: 'Name', dataset: {} });
 }
 
 test('customisations retain native relationships and quantity one, including their independent gifts', async () => {
@@ -581,4 +581,161 @@ test('unavailable session storage cannot interrupt a successful paid purchase', 
   assert.equal(h.rendered.length, 1);
   assert.equal(h.bxgy.notice, 'unavailable');
   assert.equal(h.form.error, false);
+});
+
+// Model the applied modal inputs, then submit through the real product-form so
+// these tests cover the emitted request and recovery rather than a copied selector.
+function customiseStringing(h, knot = 'two_knot') {
+  h.context.window.s3_current_variant_sku = 'RACKET';
+  h.context.window.s3_product_name = 'Test racket';
+  h.context.window.s3_stringing_service_variant_id = '301';
+  h.context.window.s3_four_knots_service_variant_id = '302';
+  const inputs = {
+    frame: { id: 'pro-stringing' },
+    'string-variant': { id: '401', dataset: { sku: 'STRING', string: 'Test string - White' } },
+    'string-tension': { id: '25' },
+    'knot-config': { dataset: { knotValue: knot } },
+  };
+  h.context.document.querySelector = (selector) => {
+    const match = selector.match(/^input\[name="([^"\]]+)"\]:checked$/);
+    return match ? inputs[match[1]] || null : null;
+  };
+  const dataset = {
+    isKnottingEnabled: 'true',
+    stringingServiceAvailable: 'true',
+    fourKnotsServiceAvailable: 'true',
+    errorServiceUnavailable: 'Service unavailable',
+  };
+  h.elements.set('stringing-root', { dataset });
+  return { inputs, dataset };
+}
+
+for (const knot of ['two_knot', 'four_knot']) {
+  for (const gifts of [false, true]) {
+    test(`${knot} adds exactly one complete service and string (gifts: ${gifts})`, async () => {
+      const h = harness();
+      if (!gifts) h.context.window.s3_bxgy = [];
+      customiseStringing(h, knot);
+      assert.equal(h.form.supportsStringingServiceReplacement, true);
+      await submit(h);
+      const items = addedRequests(h)[0].body.items;
+      assert.deepEqual(
+        items.map((item) => String(item.id)),
+        ['101', knot === 'four_knot' ? '302' : '301', '401'],
+      );
+      assert.ok(items.every((item) => item.quantity === 1));
+      const service = items[1];
+      assert.equal(service.parent_id, '101');
+      assert.equal(items[2].parent_id, '101');
+      assert.deepEqual(service.properties, {
+        _racket: 'RACKET',
+        _racketName: 'Test racket',
+        _string: 'STRING',
+        _stringName: 'Test string - White',
+        _tension: '25lbs',
+        _knot: knot === 'four_knot' ? '4_knot' : '2_knot',
+        _customisationId: items[0].properties._customisationId,
+      });
+      assert.equal(items[2].properties._customisationId, items[0].properties._customisationId);
+      assert.equal(giftsInCart(h).length, gifts ? 2 : 0);
+      assert.ok(giftsInCart(h).every((item) => item.quantity === 1 && !item.parent_id));
+    });
+  }
+}
+
+test('switching knot selection changes only the service and its knot property', () => {
+  const h = harness();
+  const { inputs } = customiseStringing(h);
+  for (const knot of ['two_knot', 'four_knot', 'two_knot']) {
+    inputs['knot-config'].dataset.knotValue = knot;
+    const selection = normalise(h.form.getStringingSelection());
+    assert.equal(selection.length, 2);
+    assert.equal(selection[0].id, knot === 'four_knot' ? '302' : '301');
+    assert.equal(selection[0].properties._knot, knot === 'four_knot' ? '4_knot' : '2_knot');
+    assert.equal(selection[1].id, '401');
+  }
+  inputs.frame.id = 'unstrung';
+  assert.deepEqual(normalise(h.form.getStringingSelection()), []);
+});
+
+test('four knots does not require the base service to exist or be available', async () => {
+  const h = harness();
+  const { dataset } = customiseStringing(h, 'four_knot');
+  h.context.window.s3_stringing_service_variant_id = '';
+  dataset.stringingServiceAvailable = 'false';
+  h.context.window.s3_bxgy = [];
+  await submit(h);
+  assert.deepEqual(requestedIds(h), [101, 302, 401]);
+});
+
+for (const knot of ['two_knot', 'four_knot']) {
+  for (const failure of [
+    'missing-id',
+    'invalid-id',
+    'sold-out',
+    'missing-string',
+    'missing-tension',
+    'missing-racket',
+  ]) {
+    test(`${knot} blocks ${failure} before any purchase or gift request`, async () => {
+      const h = harness();
+      const { inputs, dataset } = customiseStringing(h, knot);
+      const idKey = knot === 'four_knot' ? 's3_four_knots_service_variant_id' : 's3_stringing_service_variant_id';
+      const availabilityKey = knot === 'four_knot' ? 'fourKnotsServiceAvailable' : 'stringingServiceAvailable';
+      if (failure === 'missing-id') h.context.window[idKey] = '';
+      if (failure === 'invalid-id') h.context.window[idKey] = 'not-a-variant';
+      if (failure === 'sold-out') dataset[availabilityKey] = 'false';
+      if (failure === 'missing-string') delete inputs['string-variant'];
+      if (failure === 'missing-tension') delete inputs['string-tension'];
+      if (failure === 'missing-racket') h.context.window.s3_current_variant_sku = '';
+      await submit(h);
+      assert.equal(h.requests.length, 0);
+      assert.equal(h.form.lastError, 'Service unavailable');
+    });
+  }
+}
+
+test('disabled knotting rejects a stale four-knot selection', async () => {
+  const h = harness();
+  const { dataset } = customiseStringing(h, 'four_knot');
+  dataset.isKnottingEnabled = 'false';
+  await submit(h);
+  assert.equal(h.requests.length, 0);
+});
+
+test('disabled knotting without a knot input retains the base service', async () => {
+  const h = harness();
+  const { inputs, dataset } = customiseStringing(h);
+  delete inputs['knot-config'];
+  dataset.isKnottingEnabled = 'false';
+  h.context.window.s3_bxgy = [];
+  await submit(h);
+  assert.deepEqual(requestedIds(h), [101, 301, 401]);
+});
+
+test('legacy markup without availability data still replaces the four-knot service', async () => {
+  const h = harness();
+  const { dataset } = customiseStringing(h, 'four_knot');
+  delete dataset.stringingServiceAvailable;
+  delete dataset.fourKnotsServiceAvailable;
+  h.context.window.s3_bxgy = [];
+  await submit(h);
+  assert.deepEqual(requestedIds(h), [101, 302, 401]);
+});
+
+test('an incomplete four-knot addition rolls back the purchase and never attempts gifts', async () => {
+  const h = harness((request, index, cart) => {
+    if (index !== 1) return;
+    const parent = { ...request.body.items[0], key: 'partial-racket' };
+    cart.push(parent);
+    return reply({ items: normalise([parent]) });
+  });
+  customiseStringing(h, 'four_knot');
+  await submit(h);
+  assert.deepEqual(
+    h.requests.map((request) => request.url),
+    ['/en/cart/add', '/en/cart.js', '/en/cart/update'],
+  );
+  assert.equal(h.cartItems.length, 0);
+  assert.equal(giftsInCart(h).length, 0);
 });

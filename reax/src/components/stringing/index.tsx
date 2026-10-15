@@ -9,6 +9,11 @@ if (preactRoot) {
     isKnottingEnabled,
     knottingCost,
     stringingCost,
+    stringingServiceAvailable,
+    fourKnotsServiceAvailable,
+    labelFree,
+    labelUnavailable,
+    errorServiceUnavailable,
     maxTension,
     labelChooseString,
     labelSelectColor,
@@ -52,7 +57,15 @@ if (preactRoot) {
       isKnottingEnabled={isKnottingEnabled || null}
       knottingCost={knottingCost || null}
       stringingCost={stringingCost || null}
+      stringingServiceAvailable={
+        stringingServiceAvailable !== 'false' && Boolean(window.s3_stringing_service_variant_id)
+      }
+      fourKnotsServiceAvailable={
+        fourKnotsServiceAvailable !== 'false' && Boolean(window.s3_four_knots_service_variant_id)
+      }
       labels={{
+        free: labelFree || '',
+        unavailable: labelUnavailable || '',
         chooseString: labelChooseString || '',
         selectColor: labelSelectColor || '',
         selectTension: labelSelectTension || '',
@@ -81,6 +94,7 @@ if (preactRoot) {
         loading: messageLoading || '',
         empty: messageEmpty || '',
         error: messageError || '',
+        serviceUnavailable: errorServiceUnavailable || messageError || '',
       }}
       actions={{
         add: actionAdd || '',
