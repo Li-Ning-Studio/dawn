@@ -10,74 +10,78 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700;800&display=swap">
 
 <style>
-  .hsg{--ink:#0a0a0b;--soft:#5d584f;--muted:#8c867b;--line:#e7e3dc;--panel:#f5f3ef;--gold:#f2a81d;--ember:#e5701a;--ok:#7bc47f;
+  .hsg{--bg:#0a0a0b;--panel:#131315;--panel2:#1a1917;--line:#2a2722;--text:#f3efe7;--soft:#cfc9be;--muted:#8c867b;--gold:#f2a81d;--ember:#e5701a;--ok:#7bc47f;
     --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;
-    background:#fff;color:var(--ink);font:16px/1.5 var(--body);letter-spacing:0;padding-block:clamp(40px,6vw,72px)}
+    background:var(--bg);color:var(--text);font:16px/1.5 var(--body);letter-spacing:0;padding-block:clamp(40px,6vw,72px)}
   .hsg *{box-sizing:border-box}
   .hsg-wrap{max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,3vw,32px)}
-  .hsg-over{margin:0;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ember)}
-  .hsg .hsg-title{margin:8px 0 12px;font:italic 900 clamp(48px,7vw,80px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.005em;color:var(--ink)}
-  .hsg-title em{font-style:inherit;color:var(--ember)}
+  .hsg-over{margin:0;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .hsg .hsg-title{margin:8px 0 12px;font:italic 900 clamp(48px,7vw,80px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.005em;
+    background:linear-gradient(180deg,#ffc94a,var(--gold) 45%,var(--ember));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--gold)}
+  .hsg-title em{font-style:inherit}
   .hsg-lead{margin:0;color:var(--soft);max-width:60ch}
 
   .hsg-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 24px}
-  .hsg .hsg-tab{padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;
+  .hsg .hsg-tab{padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;
     font:700 14px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
-  .hsg .hsg-tab:hover{border-color:var(--ink)}
-  .hsg .hsg-tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hsg .hsg-tab:hover{border-color:var(--gold)}
+  .hsg .hsg-tab[aria-selected="true"]{background:var(--gold);color:#000;border-color:var(--gold)}
 
-  .hsg-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:28px;align-items:start}
+  .hsg-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:24px;align-items:start}
   .hsg-panel[hidden]{display:none}
 
   /* Beregner */
-  .hsg-calc{background:var(--ink);color:#f3efe7;border-radius:18px;padding:clamp(20px,3vw,28px);display:grid;gap:18px}
-  .hsg .hsg-h{margin:0;font:italic 900 34px/1 var(--display);text-transform:uppercase;color:#f3efe7}
+  .hsg-calc{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,28px);display:grid;gap:18px}
+  .hsg .hsg-h{margin:0;font:italic 900 34px/1 var(--display);text-transform:uppercase;color:var(--text)}
   .hsg-h em{font-style:inherit;color:var(--gold)}
-  .hsg-intro{margin:0;color:#cfc9be;font-size:14px}
-  .hsg-lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#a8a296;margin-bottom:8px}
+  .hsg-intro{margin:0;color:var(--soft);font-size:14px}
+  .hsg-lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
   .hsg-chips{display:flex;flex-wrap:wrap;gap:8px}
-  .hsg .hsg-chip{padding:9px 14px;border-radius:999px;border:1px solid #2a2722;background:transparent;color:#f3efe7;cursor:pointer;font:600 13px/1.2 var(--body)}
+  .hsg .hsg-chip{padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;font:600 13px/1.2 var(--body)}
   .hsg .hsg-chip[aria-pressed="true"]{background:var(--gold);color:#000;border-color:var(--gold)}
   .hsg-fields{display:grid;gap:10px}
   .hsg-f{display:grid;grid-template-columns:28px minmax(0,1fr) 116px;align-items:center;gap:12px}
   .hsg-n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ember);color:#fff;font:800 13px/1 var(--body);flex:none}
-  .hsg-f label{font-weight:600;font-size:15px;line-height:1.3}
-  .hsg-f label small{display:block;color:#a8a296;font-weight:500;font-size:12px}
+  .hsg-f label{font-weight:600;font-size:15px;line-height:1.3;color:var(--text)}
+  .hsg-f label small{display:block;color:var(--muted);font-weight:500;font-size:12px}
   .hsg-in{position:relative}
-  .hsg .hsg-in input{width:100%;height:48px;border-radius:12px;border:1px solid #2a2722;background:#131315;color:#fff;padding:0 40px 0 14px;
+  .hsg .hsg-in input{width:100%;height:48px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);padding:0 40px 0 14px;margin:0;
     font:700 18px/1 var(--body);font-variant-numeric:tabular-nums;-moz-appearance:textfield;appearance:textfield;box-shadow:none}
   .hsg .hsg-in input::-webkit-outer-spin-button,.hsg .hsg-in input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   .hsg .hsg-in input:focus{outline:none;border-color:var(--gold)}
-  .hsg-in span{position:absolute;right:14px;top:50%;translate:0 -50%;color:#a8a296;font-size:14px;font-weight:600;pointer-events:none}
+  .hsg .hsg-in input::placeholder{color:#4a463f}
+  .hsg-in span{position:absolute;right:14px;top:50%;translate:0 -50%;color:var(--muted);font-size:14px;font-weight:600;pointer-events:none}
 
-  .hsg-res{background:#131315;border:1px solid #2a2722;border-radius:14px;padding:18px;display:grid;gap:6px}
+  .hsg-res{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:6px}
   .hsg-big{font:italic 900 56px/.9 var(--display);color:var(--gold);text-transform:uppercase}
-  .hsg-big.is-empty{color:#4a463f}
-  .hsg-fit{display:grid;gap:0;margin-top:6px}
-  .hsg-fit div{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:#cfc9be;border-top:1px solid #2a2722;padding:7px 0}
-  .hsg-fit b{color:#fff;font-weight:700}.hsg-fit b.ok{color:var(--ok)}.hsg-fit b.up{color:var(--gold)}
-  .hsg-sum{margin:4px 0 0;color:#fff;font-weight:600;font-size:14px}
-  .hsg-note{margin:0;color:#cfc9be;font-size:14px}
+  .hsg-big.is-empty{color:#3a3732}
+  .hsg-fit{display:grid}
+  .hsg-fit div{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--soft);border-top:1px solid var(--line);padding:7px 0}
+  .hsg-fit b{color:var(--text);font-weight:700}.hsg-fit b.ok{color:var(--ok)}.hsg-fit b.up{color:var(--gold)}
+  .hsg-sum{margin:4px 0 0;color:var(--text);font-weight:600;font-size:14px}
+  .hsg-note{margin:0;color:var(--soft);font-size:14px}
 
   /* Tegning + tabel */
-  .hsg-card{border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px);display:grid;gap:16px;min-width:0}
-  .hsg .hsg-card h3{margin:0;font:700 18px/1.3 var(--body);color:var(--ink);letter-spacing:0}
-  .hsg-dia{background:var(--panel);border-radius:14px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:center}
+  .hsg-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px);display:grid;gap:16px;min-width:0}
+  .hsg .hsg-card h3{margin:0;font:700 18px/1.3 var(--body);color:var(--text);letter-spacing:0}
+  .hsg-dia{background:var(--panel2);border-radius:14px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:center}
   .hsg-dia.one{grid-template-columns:1fr}
   .hsg-dia svg{width:100%;max-height:300px;height:auto;display:block;margin:0 auto}
   .hsg-steps{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14px;color:var(--soft)}
-  .hsg-steps b{color:var(--ink)}
+  .hsg-steps b{color:var(--gold)}
   .hsg-cap{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;margin:0}
 
-  .hsg-tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .hsg table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;margin:0}
-  .hsg th,.hsg td{padding:11px 8px;text-align:center;border:0;border-bottom:1px solid var(--line);font-size:14px;white-space:nowrap;background:#fff}
-  .hsg thead th{font-weight:800;color:var(--ink)}
-  .hsg tbody th,.hsg thead th:first-child{text-align:left;color:var(--soft);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;position:sticky;left:0;z-index:1}
-  .hsg tbody th .hsg-n{width:20px;height:20px;font-size:11px;margin-right:6px;vertical-align:-5px}
-  .hsg .is-hit{background:#fff4dc;font-weight:800;color:var(--ink);box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold)}
-  .hsg thead .is-hit{box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold),inset 0 2px 0 var(--gold)}
-  .hsg tbody tr:last-child .is-hit{box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold),inset 0 -2px 0 var(--gold)}
+  .hsg-tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:10px}
+  .hsg .hsg-tw table{border-collapse:collapse !important;border:0 !important;width:100%;table-layout:auto;font-variant-numeric:tabular-nums;margin:0;background:transparent}
+  .hsg .hsg-tw th,.hsg .hsg-tw td{padding:12px 10px !important;text-align:center;border:0 !important;border-bottom:1px solid var(--line) !important;
+    font-size:14px;line-height:1.2;white-space:nowrap;background:var(--panel);color:var(--soft);vertical-align:middle}
+  .hsg .hsg-tw thead th{font-weight:800;color:var(--text);font-size:14px;letter-spacing:.04em}
+  .hsg .hsg-tw tbody th,.hsg .hsg-tw thead th:first-child{text-align:left;color:var(--muted);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    position:sticky;left:0;z-index:2;min-width:132px;padding-right:16px !important;box-shadow:1px 0 0 var(--line)}
+  .hsg .hsg-tw tbody th .hsg-n{width:20px;height:20px;font-size:11px;margin-right:8px;vertical-align:middle}
+  .hsg .hsg-tw .is-hit{background:#2a2110 !important;color:var(--gold) !important;font-weight:800;box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold)}
+  .hsg .hsg-tw thead .is-hit{box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold),inset 0 2px 0 var(--gold)}
+  .hsg .hsg-tw tbody tr:last-child .is-hit{box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold),inset 0 -2px 0 var(--gold)}
   .hsg .hsg-tab:focus-visible,.hsg .hsg-chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
   @media (max-width:989px){.hsg-panel{grid-template-columns:1fr}}
@@ -85,6 +89,7 @@
     .hsg-f{grid-template-columns:28px minmax(0,1fr) 96px}
     .hsg-dia{grid-template-columns:1fr}
     .hsg-big{font-size:48px}
+    .hsg .hsg-tw tbody th,.hsg .hsg-tw thead th:first-child{min-width:112px}
   }
 </style>
 
@@ -186,28 +191,28 @@
           {%- case c -%}
             {%- when 'shoes' -%}
               <div class="hsg-dia">
-                <svg viewBox="0 0 300 400" role="img" aria-label="How to measure your foot"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><rect x="34" y="8" width="236" height="350" rx="4" fill="#fff" stroke="#d6d1c8"/><g transform="translate(66 -6) scale(.92)"><g>
-<path fill="#0a0a0b" d="M100 392 C66 392 50 368 50 338 C50 302 44 272 35 242 C24 206 18 178 21 148 C24 112 46 92 78 86 C112 80 156 82 172 100 C186 116 184 150 176 182 C168 214 160 244 160 282 C160 322 154 354 140 374 C131 386 117 392 100 392 Z"/>
-<g fill="#0a0a0b" stroke="#fff" stroke-width="3">
+                <svg viewBox="0 0 300 400" role="img" aria-label="How to measure your foot"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><rect x="34" y="8" width="236" height="350" rx="4" fill="#26241f" stroke="#3a3732"/><g transform="translate(66 -6) scale(.92)"><g>
+<path fill="#f3efe7" d="M100 392 C66 392 50 368 50 338 C50 302 44 272 35 242 C24 206 18 178 21 148 C24 112 46 92 78 86 C112 80 156 82 172 100 C186 116 184 150 176 182 C168 214 160 244 160 282 C160 322 154 354 140 374 C131 386 117 392 100 392 Z"/>
+<g fill="#f3efe7" stroke="#26241f" stroke-width="3">
 <ellipse cx="44" cy="114" rx="13" ry="18" transform="rotate(-24 44 100)"/>
 <ellipse cx="64" cy="90" rx="14" ry="21" transform="rotate(-14 64 76)"/>
 <ellipse cx="89" cy="74" rx="15" ry="24" transform="rotate(-6 89 60)"/>
 <ellipse cx="117" cy="66" rx="16" ry="26"/>
 <ellipse cx="153" cy="72" rx="26" ry="36" transform="rotate(6 153 58)"/>
 </g>
-<g fill="none" stroke="#fff" stroke-width="2" opacity=".5" transform="translate(0 14)">
+<g fill="none" stroke="#26241f" stroke-width="2" opacity=".5" transform="translate(0 14)">
 <path d="M40 92 q4 -7 9 -2"/><path d="M59 66 q5 -8 11 -2"/><path d="M84 48 q6 -9 12 -2"/><path d="M111 38 q6 -9 13 -1"/><path d="M142 40 q10 -12 22 0"/>
 </g>
-<path fill="#fff" d="M100 372 C80 372 72 354 72 332 C72 300 66 272 58 244 C50 214 44 188 46 164 C48 140 62 128 82 126 C98 116 120 112 138 118 C156 116 164 132 160 160 C156 190 144 218 140 252 C136 286 138 320 130 344 C125 362 115 372 100 372 Z"/>
-</g></g><line x1="14" y1="358" x2="290" y2="358" stroke="#0a0a0b" stroke-width="5" stroke-linecap="round"/><text x="152" y="388" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-size="12" letter-spacing="2" fill="#8c867b" font-weight="700">WALL</text><line x1="40" y1="27" x2="250" y2="27" stroke="#e5701a" stroke-width="2" stroke-dasharray="5 4"/><line x1="48" y1="31" x2="48" y2="354" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="48" cy="190" r="14" fill="#e5701a"/><text x="48" y="195" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">1</text></svg>
+<path fill="#26241f" d="M100 372 C80 372 72 354 72 332 C72 300 66 272 58 244 C50 214 44 188 46 164 C48 140 62 128 82 126 C98 116 120 112 138 118 C156 116 164 132 160 160 C156 190 144 218 140 252 C136 286 138 320 130 344 C125 362 115 372 100 372 Z"/>
+</g></g><line x1="14" y1="358" x2="290" y2="358" stroke="#f3efe7" stroke-width="5" stroke-linecap="round"/><text x="152" y="388" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-size="12" letter-spacing="2" fill="#8c867b" font-weight="700">WALL</text><line x1="40" y1="27" x2="250" y2="27" stroke="#e5701a" stroke-width="2" stroke-dasharray="5 4"/><line x1="48" y1="31" x2="48" y2="354" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="48" cy="190" r="14" fill="#e5701a"/><text x="48" y="195" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">1</text></svg>
                 <ol class="hsg-steps">
                   {%- for h in hint_lines offset: 1 -%}<li><b>{{ forloop.index }}.</b> {{ h | strip | escape }}</li>{%- endfor -%}
                 </ol>
               </div>
             {%- when 'tshirts' -%}
-              <div class="hsg-dia one"><svg viewBox="40 10 320 340" role="img" aria-label="How to measure a T-shirt"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><path d="M120 40 L165 28 Q200 52 235 28 L280 40 L345 88 L318 140 L285 122 L285 330 L115 330 L115 122 L82 140 L55 88 Z" fill="#fff" stroke="#0a0a0b" stroke-width="2.5" stroke-linejoin="round"/><path d="M165 28 Q200 70 235 28" fill="none" stroke="#0a0a0b" stroke-width="2.5"/><line x1="118" y1="150" x2="282" y2="150" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="200" cy="138" r="14" fill="#e5701a"/><text x="200" y="143" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">1</text><line x1="140" y1="40" x2="140" y2="326" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="152" cy="240" r="14" fill="#e5701a"/><text x="152" y="245" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">2</text><line x1="120" y1="46" x2="280" y2="46" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="252" cy="64" r="14" fill="#e5701a"/><text x="252" y="69" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">3</text><line x1="118" y1="312" x2="282" y2="312" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="200" cy="298" r="14" fill="#e5701a"/><text x="200" y="303" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">4</text></svg><p class="hsg-cap">Lay the garment flat · measure in cm</p></div>
+              <div class="hsg-dia one"><svg viewBox="40 10 320 340" role="img" aria-label="How to measure a T-shirt"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><path d="M120 40 L165 28 Q200 52 235 28 L280 40 L345 88 L318 140 L285 122 L285 330 L115 330 L115 122 L82 140 L55 88 Z" fill="#1f1e1b" stroke="#f3efe7" stroke-width="2.5" stroke-linejoin="round"/><path d="M165 28 Q200 70 235 28" fill="none" stroke="#f3efe7" stroke-width="2.5"/><line x1="118" y1="150" x2="282" y2="150" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="200" cy="138" r="14" fill="#e5701a"/><text x="200" y="143" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#1f1e1b">1</text><line x1="140" y1="40" x2="140" y2="326" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="152" cy="240" r="14" fill="#e5701a"/><text x="152" y="245" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#1f1e1b">2</text><line x1="120" y1="46" x2="280" y2="46" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="252" cy="64" r="14" fill="#e5701a"/><text x="252" y="69" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#1f1e1b">3</text><line x1="118" y1="312" x2="282" y2="312" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="200" cy="298" r="14" fill="#e5701a"/><text x="200" y="303" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#1f1e1b">4</text></svg><p class="hsg-cap">Lay the garment flat · measure in cm</p></div>
             {%- else -%}
-              <div class="hsg-dia one"><svg viewBox="0 0 360 330" role="img" aria-label="How to measure a skirt"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><path d="M110 40 L250 40 L258 80 L102 80 Z" fill="#fff" stroke="#0a0a0b" stroke-width="2.5"/><path d="M102 80 L258 80 L320 290 Q180 320 40 290 Z" fill="#fff" stroke="#0a0a0b" stroke-width="2.5" stroke-linejoin="round"/><line x1="120" y1="80" x2="80" y2="296" stroke="#0a0a0b" stroke-width="1.5"/><line x1="140" y1="80" x2="120" y2="303" stroke="#0a0a0b" stroke-width="1.5"/><line x1="240" y1="80" x2="280" y2="296" stroke="#0a0a0b" stroke-width="1.5"/><line x1="220" y1="80" x2="240" y2="303" stroke="#0a0a0b" stroke-width="1.5"/><line x1="112" y1="28" x2="248" y2="28" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="180" cy="16" r="14" fill="#e5701a"/><text x="180" y="21" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">1</text><line x1="180" y1="44" x2="180" y2="306" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="194" cy="230" r="14" fill="#e5701a"/><text x="194" y="235" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">2</text><line x1="92" y1="128" x2="268" y2="128" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="180" cy="116" r="14" fill="#e5701a"/><text x="180" y="121" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">3</text><line x1="62" y1="80" x2="62" y2="128" stroke="#8c867b" stroke-width="1.5"/><text x="26" y="109" font-family="Barlow,Arial,sans-serif" font-size="12" fill="#8c867b" font-weight="700">18 cm</text></svg><p class="hsg-cap">Lay the skirt flat · measure in cm</p></div>
+              <div class="hsg-dia one"><svg viewBox="0 0 360 330" role="img" aria-label="How to measure a skirt"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><path d="M110 40 L250 40 L258 80 L102 80 Z" fill="#1f1e1b" stroke="#f3efe7" stroke-width="2.5"/><path d="M102 80 L258 80 L320 290 Q180 320 40 290 Z" fill="#1f1e1b" stroke="#f3efe7" stroke-width="2.5" stroke-linejoin="round"/><line x1="120" y1="80" x2="80" y2="296" stroke="#f3efe7" stroke-width="1.5"/><line x1="140" y1="80" x2="120" y2="303" stroke="#f3efe7" stroke-width="1.5"/><line x1="240" y1="80" x2="280" y2="296" stroke="#f3efe7" stroke-width="1.5"/><line x1="220" y1="80" x2="240" y2="303" stroke="#f3efe7" stroke-width="1.5"/><line x1="112" y1="28" x2="248" y2="28" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="180" cy="16" r="14" fill="#e5701a"/><text x="180" y="21" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#1f1e1b">1</text><line x1="180" y1="44" x2="180" y2="306" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="194" cy="230" r="14" fill="#e5701a"/><text x="194" y="235" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#1f1e1b">2</text><line x1="92" y1="128" x2="268" y2="128" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="180" cy="116" r="14" fill="#e5701a"/><text x="180" y="121" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#1f1e1b">3</text><line x1="62" y1="80" x2="62" y2="128" stroke="#8c867b" stroke-width="1.5"/><text x="26" y="109" font-family="Barlow,Arial,sans-serif" font-size="12" fill="#8c867b" font-weight="700">18 cm</text></svg><p class="hsg-cap">Lay the skirt flat · measure in cm</p></div>
           {%- endcase -%}
 
           {%- if ctitle != blank -%}<h3>{{ ctitle | escape }}</h3>{%- endif -%}
