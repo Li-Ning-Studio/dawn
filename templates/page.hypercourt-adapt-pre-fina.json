@@ -26,10 +26,22 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "media_cMABpX": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/1_Banner.jpg",
+        "mobile_image": "shopify://shop_images/2_Banner_a7339051-cea5-45ba-ae7f-2d6cf17448bb.jpg",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_pwcedT"
+    "custom_liquid_pwcedT",
+    "media_cMABpX"
   ]
 }
