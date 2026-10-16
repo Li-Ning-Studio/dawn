@@ -1,0 +1,387 @@
+{%- comment -%}
+  HUNDRED – Size guide
+  3 faner (sko, t-shirts, nederdele) med størrelsesberegner, måletegning og tabel.
+  Tabellerne redigeres i Tilpas (én linje pr. række: Navn|værdi,værdi,...).
+  Link direkte til en fane: /pages/size-guide#shoes, #tshirts eller #skirts
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700;800&display=swap">
+
+<style>
+  .hsg{--ink:#0a0a0b;--soft:#5d584f;--muted:#8c867b;--line:#e7e3dc;--panel:#f5f3ef;--gold:#f2a81d;--ember:#e5701a;--ok:#7bc47f;
+    --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    background:#fff;color:var(--ink);font:16px/1.5 var(--body);letter-spacing:0;padding-block:clamp(40px,6vw,72px)}
+  .hsg *{box-sizing:border-box}
+  .hsg-wrap{max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,3vw,32px)}
+  .hsg-over{margin:0;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ember)}
+  .hsg .hsg-title{margin:8px 0 12px;font:italic 900 clamp(48px,7vw,80px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.005em;color:var(--ink)}
+  .hsg-title em{font-style:inherit;color:var(--ember)}
+  .hsg-lead{margin:0;color:var(--soft);max-width:60ch}
+
+  .hsg-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 24px}
+  .hsg .hsg-tab{padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;
+    font:700 14px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
+  .hsg .hsg-tab:hover{border-color:var(--ink)}
+  .hsg .hsg-tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  .hsg-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:28px;align-items:start}
+  .hsg-panel[hidden]{display:none}
+
+  /* Beregner */
+  .hsg-calc{background:var(--ink);color:#f3efe7;border-radius:18px;padding:clamp(20px,3vw,28px);display:grid;gap:18px}
+  .hsg .hsg-h{margin:0;font:italic 900 34px/1 var(--display);text-transform:uppercase;color:#f3efe7}
+  .hsg-h em{font-style:inherit;color:var(--gold)}
+  .hsg-intro{margin:0;color:#cfc9be;font-size:14px}
+  .hsg-lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#a8a296;margin-bottom:8px}
+  .hsg-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .hsg .hsg-chip{padding:9px 14px;border-radius:999px;border:1px solid #2a2722;background:transparent;color:#f3efe7;cursor:pointer;font:600 13px/1.2 var(--body)}
+  .hsg .hsg-chip[aria-pressed="true"]{background:var(--gold);color:#000;border-color:var(--gold)}
+  .hsg-fields{display:grid;gap:10px}
+  .hsg-f{display:grid;grid-template-columns:28px minmax(0,1fr) 116px;align-items:center;gap:12px}
+  .hsg-n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ember);color:#fff;font:800 13px/1 var(--body);flex:none}
+  .hsg-f label{font-weight:600;font-size:15px;line-height:1.3}
+  .hsg-f label small{display:block;color:#a8a296;font-weight:500;font-size:12px}
+  .hsg-in{position:relative}
+  .hsg .hsg-in input{width:100%;height:48px;border-radius:12px;border:1px solid #2a2722;background:#131315;color:#fff;padding:0 40px 0 14px;
+    font:700 18px/1 var(--body);font-variant-numeric:tabular-nums;-moz-appearance:textfield;appearance:textfield;box-shadow:none}
+  .hsg .hsg-in input::-webkit-outer-spin-button,.hsg .hsg-in input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .hsg .hsg-in input:focus{outline:none;border-color:var(--gold)}
+  .hsg-in span{position:absolute;right:14px;top:50%;translate:0 -50%;color:#a8a296;font-size:14px;font-weight:600;pointer-events:none}
+
+  .hsg-res{background:#131315;border:1px solid #2a2722;border-radius:14px;padding:18px;display:grid;gap:6px}
+  .hsg-big{font:italic 900 56px/.9 var(--display);color:var(--gold);text-transform:uppercase}
+  .hsg-big.is-empty{color:#4a463f}
+  .hsg-fit{display:grid;gap:0;margin-top:6px}
+  .hsg-fit div{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:#cfc9be;border-top:1px solid #2a2722;padding:7px 0}
+  .hsg-fit b{color:#fff;font-weight:700}.hsg-fit b.ok{color:var(--ok)}.hsg-fit b.up{color:var(--gold)}
+  .hsg-sum{margin:4px 0 0;color:#fff;font-weight:600;font-size:14px}
+  .hsg-note{margin:0;color:#cfc9be;font-size:14px}
+
+  /* Tegning + tabel */
+  .hsg-card{border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px);display:grid;gap:16px;min-width:0}
+  .hsg .hsg-card h3{margin:0;font:700 18px/1.3 var(--body);color:var(--ink);letter-spacing:0}
+  .hsg-dia{background:var(--panel);border-radius:14px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:center}
+  .hsg-dia.one{grid-template-columns:1fr}
+  .hsg-dia svg{width:100%;max-height:300px;height:auto;display:block;margin:0 auto}
+  .hsg-steps{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14px;color:var(--soft)}
+  .hsg-steps b{color:var(--ink)}
+  .hsg-cap{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;margin:0}
+
+  .hsg-tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .hsg table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;margin:0}
+  .hsg th,.hsg td{padding:11px 8px;text-align:center;border:0;border-bottom:1px solid var(--line);font-size:14px;white-space:nowrap;background:#fff}
+  .hsg thead th{font-weight:800;color:var(--ink)}
+  .hsg tbody th,.hsg thead th:first-child{text-align:left;color:var(--soft);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;position:sticky;left:0;z-index:1}
+  .hsg tbody th .hsg-n{width:20px;height:20px;font-size:11px;margin-right:6px;vertical-align:-5px}
+  .hsg .is-hit{background:#fff4dc;font-weight:800;color:var(--ink);box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold)}
+  .hsg thead .is-hit{box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold),inset 0 2px 0 var(--gold)}
+  .hsg tbody tr:last-child .is-hit{box-shadow:inset 1px 0 0 var(--gold),inset -1px 0 0 var(--gold),inset 0 -2px 0 var(--gold)}
+  .hsg .hsg-tab:focus-visible,.hsg .hsg-chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  @media (max-width:989px){.hsg-panel{grid-template-columns:1fr}}
+  @media (max-width:560px){
+    .hsg-f{grid-template-columns:28px minmax(0,1fr) 96px}
+    .hsg-dia{grid-template-columns:1fr}
+    .hsg-big{font-size:48px}
+  }
+</style>
+
+{%- liquid
+  assign s = section.settings
+  assign cats = 'shoes,tshirts,skirts' | split: ','
+-%}
+
+<div class="hsg" id="hsg-{{ section.id }}" data-default="{{ s.default_tab }}">
+  <div class="hsg-wrap">
+    {%- if s.overline != blank -%}<p class="hsg-over">{{ s.overline | escape }}</p>{%- endif -%}
+    <h1 class="hsg-title">{{ s.heading | escape }}{% if s.heading_accent != blank %} <em>{{ s.heading_accent | escape }}</em>{% endif %}</h1>
+    {%- if s.lead != blank -%}<p class="hsg-lead">{{ s.lead | escape }}</p>{%- endif -%}
+
+    <div class="hsg-tabs" role="tablist" aria-label="Size guide categories">
+      {%- for c in cats -%}
+        {%- capture lab -%}{%- case c -%}{%- when 'shoes' -%}{{ s.shoes_tab }}{%- when 'tshirts' -%}{{ s.tee_tab }}{%- else -%}{{ s.skirt_tab }}{%- endcase -%}{%- endcapture -%}
+        <button type="button" class="hsg-tab" role="tab" id="hsg-tab-{{ c }}-{{ section.id }}" data-cat="{{ c }}"
+          aria-controls="hsg-panel-{{ c }}-{{ section.id }}" aria-selected="false">{{ lab | escape }}</button>
+      {%- endfor -%}
+    </div>
+
+    {%- for c in cats -%}
+      {%- liquid
+        case c
+          when 'shoes'
+            assign chart = s.shoes_chart
+            assign hints = s.shoes_hints
+            assign note = s.shoes_note
+            assign intro = s.shoes_intro
+            assign ctitle = s.shoes_chart_title
+          when 'tshirts'
+            assign chart = s.tee_chart
+            assign hints = s.tee_hints
+            assign note = s.tee_note
+            assign intro = s.tee_intro
+            assign ctitle = s.tee_chart_title
+          else
+            assign chart = s.skirt_chart
+            assign hints = s.skirt_hints
+            assign note = s.skirt_note
+            assign intro = s.skirt_intro
+            assign ctitle = s.skirt_chart_title
+        endcase
+        assign lines = chart | strip | newline_to_br | split: '<br />'
+        assign hint_lines = hints | strip | newline_to_br | split: '<br />'
+        assign head = lines.first | strip | split: '|'
+        assign cols = head.last | split: ','
+      -%}
+      <div class="hsg-panel" role="tabpanel" id="hsg-panel-{{ c }}-{{ section.id }}" aria-labelledby="hsg-tab-{{ c }}-{{ section.id }}" data-cat="{{ c }}" hidden>
+        <div class="hsg-calc">
+          <h2 class="hsg-h">Size <em>finder</em></h2>
+          {%- if intro != blank -%}<p class="hsg-intro">{{ intro | escape }}</p>{%- endif -%}
+
+          {%- if c == 'shoes' -%}
+            <div>
+              <span class="hsg-lbl">Foot shape</span>
+              <div class="hsg-chips" role="group" aria-label="Foot shape">
+                <button type="button" class="hsg-chip" data-up="0" aria-pressed="true">Standard</button>
+                <button type="button" class="hsg-chip" data-up="1" aria-pressed="false">Tapered big toe</button>
+                <button type="button" class="hsg-chip" data-up="0" aria-pressed="false">Protruding long toe</button>
+                <button type="button" class="hsg-chip" data-up="1" aria-pressed="false">Wide</button>
+                <button type="button" class="hsg-chip" data-up="0" aria-pressed="false">Narrow</button>
+                <button type="button" class="hsg-chip" data-up="0" aria-pressed="false">High instep</button>
+              </div>
+            </div>
+            <div class="hsg-fields">
+              <div class="hsg-f">
+                <span class="hsg-n">1</span>
+                <label for="hsg-in-{{ c }}-1-{{ section.id }}">Foot length<small>{{ hint_lines.first | strip | escape }}</small></label>
+                <div class="hsg-in"><input type="number" inputmode="decimal" step="0.1" min="0" id="hsg-in-{{ c }}-1-{{ section.id }}" data-row="cm" placeholder="–"><span>cm</span></div>
+              </div>
+            </div>
+          {%- else -%}
+            <div class="hsg-fields">
+              {%- for line in lines offset: 1 -%}
+                {%- assign parts = line | strip | split: '|' -%}
+                {%- assign hi = forloop.index0 -%}
+                <div class="hsg-f">
+                  <span class="hsg-n">{{ forloop.index }}</span>
+                  <label for="hsg-in-{{ c }}-{{ forloop.index }}-{{ section.id }}">{{ parts.first | escape }}{%- if hint_lines[hi] != blank -%}<small>{{ hint_lines[hi] | strip | escape }}</small>{%- endif -%}</label>
+                  <div class="hsg-in"><input type="number" inputmode="decimal" step="0.1" min="0" id="hsg-in-{{ c }}-{{ forloop.index }}-{{ section.id }}" data-row="{{ forloop.index }}" placeholder="–"><span>cm</span></div>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+
+          <div class="hsg-res" aria-live="polite">
+            <span class="hsg-lbl" style="margin:0">Your size</span>
+            <div class="hsg-big is-empty">–</div>
+            <div class="hsg-fit"></div>
+            <p class="hsg-sum" hidden></p>
+            {%- if note != blank -%}<p class="hsg-note">{{ note | escape }}</p>{%- endif -%}
+          </div>
+        </div>
+
+        <div class="hsg-card">
+          <h3>How to measure</h3>
+          {%- case c -%}
+            {%- when 'shoes' -%}
+              <div class="hsg-dia">
+                <svg viewBox="0 0 300 400" role="img" aria-label="How to measure your foot"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><rect x="34" y="8" width="236" height="350" rx="4" fill="#fff" stroke="#d6d1c8"/><g transform="translate(66 -6) scale(.92)"><g>
+<path fill="#0a0a0b" d="M100 392 C66 392 50 368 50 338 C50 302 44 272 35 242 C24 206 18 178 21 148 C24 112 46 92 78 86 C112 80 156 82 172 100 C186 116 184 150 176 182 C168 214 160 244 160 282 C160 322 154 354 140 374 C131 386 117 392 100 392 Z"/>
+<g fill="#0a0a0b" stroke="#fff" stroke-width="3">
+<ellipse cx="44" cy="114" rx="13" ry="18" transform="rotate(-24 44 100)"/>
+<ellipse cx="64" cy="90" rx="14" ry="21" transform="rotate(-14 64 76)"/>
+<ellipse cx="89" cy="74" rx="15" ry="24" transform="rotate(-6 89 60)"/>
+<ellipse cx="117" cy="66" rx="16" ry="26"/>
+<ellipse cx="153" cy="72" rx="26" ry="36" transform="rotate(6 153 58)"/>
+</g>
+<g fill="none" stroke="#fff" stroke-width="2" opacity=".5" transform="translate(0 14)">
+<path d="M40 92 q4 -7 9 -2"/><path d="M59 66 q5 -8 11 -2"/><path d="M84 48 q6 -9 12 -2"/><path d="M111 38 q6 -9 13 -1"/><path d="M142 40 q10 -12 22 0"/>
+</g>
+<path fill="#fff" d="M100 372 C80 372 72 354 72 332 C72 300 66 272 58 244 C50 214 44 188 46 164 C48 140 62 128 82 126 C98 116 120 112 138 118 C156 116 164 132 160 160 C156 190 144 218 140 252 C136 286 138 320 130 344 C125 362 115 372 100 372 Z"/>
+</g></g><line x1="14" y1="358" x2="290" y2="358" stroke="#0a0a0b" stroke-width="5" stroke-linecap="round"/><text x="152" y="388" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-size="12" letter-spacing="2" fill="#8c867b" font-weight="700">WALL</text><line x1="40" y1="27" x2="250" y2="27" stroke="#e5701a" stroke-width="2" stroke-dasharray="5 4"/><line x1="48" y1="31" x2="48" y2="354" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="48" cy="190" r="14" fill="#e5701a"/><text x="48" y="195" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">1</text></svg>
+                <ol class="hsg-steps">
+                  {%- for h in hint_lines offset: 1 -%}<li><b>{{ forloop.index }}.</b> {{ h | strip | escape }}</li>{%- endfor -%}
+                </ol>
+              </div>
+            {%- when 'tshirts' -%}
+              <div class="hsg-dia one"><svg viewBox="40 10 320 340" role="img" aria-label="How to measure a T-shirt"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><path d="M120 40 L165 28 Q200 52 235 28 L280 40 L345 88 L318 140 L285 122 L285 330 L115 330 L115 122 L82 140 L55 88 Z" fill="#fff" stroke="#0a0a0b" stroke-width="2.5" stroke-linejoin="round"/><path d="M165 28 Q200 70 235 28" fill="none" stroke="#0a0a0b" stroke-width="2.5"/><line x1="118" y1="150" x2="282" y2="150" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="200" cy="138" r="14" fill="#e5701a"/><text x="200" y="143" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">1</text><line x1="140" y1="40" x2="140" y2="326" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="152" cy="240" r="14" fill="#e5701a"/><text x="152" y="245" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">2</text><line x1="120" y1="46" x2="280" y2="46" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="252" cy="64" r="14" fill="#e5701a"/><text x="252" y="69" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">3</text><line x1="118" y1="312" x2="282" y2="312" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="200" cy="298" r="14" fill="#e5701a"/><text x="200" y="303" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">4</text></svg><p class="hsg-cap">Lay the garment flat · measure in cm</p></div>
+            {%- else -%}
+              <div class="hsg-dia one"><svg viewBox="0 0 360 330" role="img" aria-label="How to measure a skirt"><defs><marker id="hsgA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5701a"/></marker></defs><path d="M110 40 L250 40 L258 80 L102 80 Z" fill="#fff" stroke="#0a0a0b" stroke-width="2.5"/><path d="M102 80 L258 80 L320 290 Q180 320 40 290 Z" fill="#fff" stroke="#0a0a0b" stroke-width="2.5" stroke-linejoin="round"/><line x1="120" y1="80" x2="80" y2="296" stroke="#0a0a0b" stroke-width="1.5"/><line x1="140" y1="80" x2="120" y2="303" stroke="#0a0a0b" stroke-width="1.5"/><line x1="240" y1="80" x2="280" y2="296" stroke="#0a0a0b" stroke-width="1.5"/><line x1="220" y1="80" x2="240" y2="303" stroke="#0a0a0b" stroke-width="1.5"/><line x1="112" y1="28" x2="248" y2="28" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="180" cy="16" r="14" fill="#e5701a"/><text x="180" y="21" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">1</text><line x1="180" y1="44" x2="180" y2="306" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="194" cy="230" r="14" fill="#e5701a"/><text x="194" y="235" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">2</text><line x1="92" y1="128" x2="268" y2="128" stroke="#e5701a" stroke-width="2.5" stroke-dasharray="7 5" marker-start="url(#hsgA)" marker-end="url(#hsgA)"/><circle cx="180" cy="116" r="14" fill="#e5701a"/><text x="180" y="121" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="15" fill="#fff">3</text><line x1="62" y1="80" x2="62" y2="128" stroke="#8c867b" stroke-width="1.5"/><text x="26" y="109" font-family="Barlow,Arial,sans-serif" font-size="12" fill="#8c867b" font-weight="700">18 cm</text></svg><p class="hsg-cap">Lay the skirt flat · measure in cm</p></div>
+          {%- endcase -%}
+
+          {%- if ctitle != blank -%}<h3>{{ ctitle | escape }}</h3>{%- endif -%}
+          <div class="hsg-tw">
+            <table data-chart="{{ c }}">
+              <thead><tr><th scope="col">{{ head.first | escape }}</th>{%- for col in cols -%}<th scope="col" data-i="{{ forloop.index0 }}">{{ col | strip | escape }}</th>{%- endfor -%}</tr></thead>
+              <tbody>
+                {%- for line in lines offset: 1 -%}
+                  {%- assign parts = line | strip | split: '|' -%}
+                  {%- assign vals = parts.last | split: ',' -%}
+                  {%- assign key = parts.first | strip | downcase -%}
+                  <tr data-row="{% if c == 'shoes' %}{{ key }}{% else %}{{ forloop.index }}{% endif %}">
+                    <th scope="row">{%- if c != 'shoes' -%}<span class="hsg-n">{{ forloop.index }}</span>{%- elsif key == 'cm' -%}<span class="hsg-n">1</span>{%- endif -%}{{ parts.first | strip | escape }}</th>
+                    {%- for v in vals -%}<td data-i="{{ forloop.index0 }}">{{ v | strip }}</td>{%- endfor -%}
+                  </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('hsg-{{ section.id }}');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  var tabs = root.querySelectorAll('.hsg-tab');
+  var panels = root.querySelectorAll('.hsg-panel');
+  var names = { shoes: 'shoes', sko: 'shoes', tshirts: 'tshirts', 't-shirts': 'tshirts', tshirt: 'tshirts', tops: 'tshirts', skirts: 'skirts', skirt: 'skirts' };
+
+  function show(cat, focus){
+    tabs.forEach(function(t){ var on = t.dataset.cat === cat; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); });
+    panels.forEach(function(p){ p.hidden = p.dataset.cat !== cat; });
+  }
+  tabs.forEach(function(t, k){
+    t.addEventListener('click', function(){ show(t.dataset.cat); if (history.replaceState) history.replaceState(null, '', '#' + t.dataset.cat); });
+    t.addEventListener('keydown', function(e){
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var n = (k + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      show(tabs[n].dataset.cat, true);
+    });
+  });
+  var h = (location.hash || '').replace('#', '').toLowerCase();
+  show(names[h] || root.dataset.default || 'shoes');
+  window.addEventListener('hashchange', function(){ var x = names[location.hash.replace('#','').toLowerCase()]; if (x) show(x); });
+
+  function num(v){ v = String(v).replace(',', '.'); var n = parseFloat(v); return isNaN(n) ? null : n; }
+
+  panels.forEach(function(p){
+    var cat = p.dataset.cat;
+    var table = p.querySelector('table');
+    var cols = Array.prototype.map.call(table.querySelectorAll('thead th[data-i]'), function(th){ return th.textContent.trim(); });
+    var rows = {};
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      rows[tr.dataset.row] = { label: tr.querySelector('th').textContent.replace(/^\d+/, '').trim(), vals: Array.prototype.map.call(tr.querySelectorAll('td'), function(td){ return num(td.textContent); }) };
+    });
+    var inputs = p.querySelectorAll('input[data-row]');
+    var big = p.querySelector('.hsg-big'), fit = p.querySelector('.hsg-fit'), sum = p.querySelector('.hsg-sum');
+    var chips = p.querySelectorAll('.hsg-chip');
+    var up = 0;
+
+    function mark(i){
+      table.querySelectorAll('.is-hit').forEach(function(el){ el.classList.remove('is-hit'); });
+      if (i == null) return;
+      table.querySelectorAll('[data-i="' + i + '"]').forEach(function(el){ el.classList.add('is-hit'); });
+      var cell = table.querySelector('thead [data-i="' + i + '"]'), wrap = table.parentNode;
+      if (cell && wrap.scrollWidth > wrap.clientWidth) wrap.scrollTo({ left: Math.max(0, cell.offsetLeft - wrap.clientWidth / 2 + cell.offsetWidth / 2), behavior: 'smooth' });
+    }
+    function empty(){ big.textContent = '–'; big.classList.add('is-empty'); fit.innerHTML = ''; sum.hidden = true; mark(null); }
+    function line(a, b, cls){ var d = document.createElement('div'); var s1 = document.createElement('span'); s1.textContent = a; var s2 = document.createElement('b'); s2.textContent = b; if (cls) s2.className = cls; d.appendChild(s1); d.appendChild(s2); fit.appendChild(d); }
+
+    function calc(){
+      fit.innerHTML = '';
+      if (cat === 'shoes') {
+        var v = num(inputs[0].value), cm = rows.cm;
+        if (v == null || !cm) return empty();
+        var i = cm.vals.length - 1;
+        for (var k = 0; k < cm.vals.length; k++) { if (cm.vals[k] != null && cm.vals[k] >= v - 0.001) { i = k; break; } }
+        i = Math.min(cm.vals.length - 1, i + up);
+        big.textContent = cols[0] !== undefined ? (table.querySelector('thead th').textContent.trim() + ' ' + cols[i]) : cols[i];
+        big.classList.remove('is-empty');
+        Object.keys(rows).forEach(function(r){ if (r !== 'cm') line(rows[r].label, rows[r].vals[i]); });
+        line('Foot length', v + ' cm');
+        sum.hidden = true;
+        if (v > cm.vals[cm.vals.length - 1]) { sum.textContent = 'Your foot is longer than our largest size.'; sum.hidden = false; }
+        mark(i); return;
+      }
+      var used = [];
+      inputs.forEach(function(inp){ var v = num(inp.value); if (v != null && rows[inp.dataset.row]) used.push({ r: rows[inp.dataset.row], v: v }); });
+      if (!used.length) return empty();
+      var best = 0, bestScore = Infinity;
+      for (var i2 = 0; i2 < cols.length; i2++) {
+        var sc = 0;
+        used.forEach(function(u){ var vs = u.r.vals; var step = Math.abs((vs[vs.length-1] - vs[0]) / Math.max(1, vs.length - 1)) || 1; sc += Math.abs(u.v - vs[i2]) / step; });
+        if (sc <= bestScore + 1e-9) { bestScore = sc; best = i2; }
+      }
+      var okCount = 0;
+      used.forEach(function(u){
+        var vs = u.r.vals, step = Math.abs((vs[vs.length-1] - vs[0]) / Math.max(1, vs.length - 1)) || 1, d = u.v - vs[best];
+        var txt, cls;
+        if (Math.abs(d) <= step * 0.35) { txt = cols[best] + ' ✓'; cls = 'ok'; okCount++; }
+        else {
+          var near = 0, nd = Infinity; vs.forEach(function(x, k){ var dd = Math.abs(u.v - x); if (dd < nd) { nd = dd; near = k; } });
+          var lo = Math.min(best, near), hi = Math.max(best, near);
+          if (lo === hi) { lo = d < 0 ? Math.max(0, best - 1) : best; hi = d < 0 ? best : Math.min(cols.length - 1, best + 1); }
+          txt = lo === hi ? cols[lo] : cols[lo] + '–' + cols[hi]; cls = 'up';
+        }
+        line(u.r.label + ' ' + u.v, txt, cls);
+      });
+      big.textContent = cols[best]; big.classList.remove('is-empty');
+      sum.textContent = okCount + ' of ' + used.length + ' measurement' + (used.length > 1 ? 's' : '') + ' fit ' + cols[best] + '.';
+      sum.hidden = false;
+      mark(best);
+    }
+    inputs.forEach(function(inp){ inp.addEventListener('input', calc); });
+    chips.forEach(function(ch){
+      ch.addEventListener('click', function(){
+        chips.forEach(function(x){ x.setAttribute('aria-pressed', x === ch); });
+        up = parseInt(ch.dataset.up, 10) || 0; calc();
+      });
+    });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "HUNDRED Size guide",
+  "tag": "section",
+  "class": "section-hundred-size-guide",
+  "settings": [
+    { "type": "header", "content": "Overskrift" },
+    { "type": "text", "id": "overline", "label": "Overlinje", "default": "Size guide" },
+    { "type": "text", "id": "heading", "label": "Overskrift (sort)", "default": "Find" },
+    { "type": "text", "id": "heading_accent", "label": "Overskrift (orange)", "default": "your size" },
+    { "type": "text", "id": "lead", "label": "Kort tekst", "default": "Enter your measurements and we show the size that fits you best." },
+    { "type": "select", "id": "default_tab", "label": "Fane der vises først", "default": "shoes",
+      "info": "Link direkte til en fane med #shoes, #tshirts eller #skirts i slutningen af adressen.",
+      "options": [ { "value": "shoes", "label": "Sko" }, { "value": "tshirts", "label": "T-shirts" }, { "value": "skirts", "label": "Nederdele" } ] },
+
+    { "type": "header", "content": "Sko" },
+    { "type": "text", "id": "shoes_tab", "label": "Fanenavn", "default": "Shoes" },
+    { "type": "text", "id": "shoes_intro", "label": "Tekst i beregneren", "default": "Choose your foot shape and enter your foot length." },
+    { "type": "textarea", "id": "shoes_chart", "label": "Tabel", "info": "Første linje er størrelsen der vises stort. Rækken der hedder cm bruges til at beregne størrelsen.",
+      "default": "EU|34,35,36.5,37,38.5,39.5,41,41.5,42,42.5,43,43.5,44.5,46,47\nUK|1,2,3,4,5,6,7,7.5,8,8.5,9,9.5,10,11,12\nUS|2,3,4,5,6,7,8,8.5,9,9.5,10,10.5,11,12,13\ncm|21.5,22,22.5,23,23.5,24.5,25.5,26,26.5,27,27.5,28,28.5,29.5,30" },
+    { "type": "textarea", "id": "shoes_hints", "label": "Målevejledning", "info": "Første linje står under feltet. De næste linjer er trinene ved tegningen.",
+      "default": "Heel to the tip of your longest toe\nPut a sheet of paper on the floor against a wall.\nStand straight on it with your heel against the wall.\nMark the tip of your longest toe and measure the length in cm.\nLeft and right foot can differ – measure both and use the bigger one." },
+    { "type": "text", "id": "shoes_note", "label": "Råd under resultatet", "default": "Standard foot: choose your normal size. Wide foot or tapered big toe: choose one size larger." },
+    { "type": "text", "id": "shoes_chart_title", "label": "Tabeloverskrift", "default": "Shoe size chart" },
+
+    { "type": "header", "content": "T-shirts" },
+    { "type": "text", "id": "tee_tab", "label": "Fanenavn", "default": "T-shirts & tops" },
+    { "type": "text", "id": "tee_intro", "label": "Tekst i beregneren", "default": "Take a T-shirt that fits you well, lay it flat and measure it. Fill in one or more fields." },
+    { "type": "textarea", "id": "tee_chart", "label": "Tabel", "info": "Rækkefølgen skal passe til numrene på tegningen: 1 Chest, 2 Length, 3 Shoulder, 4 Bottom.",
+      "default": "Size|5XS,4XS,3XS,2XS,XS,S,M,L,XL,2XL,3XL\nChest|39,41,43,45,47,49,51,53,55,57,59\nLength|55,57,59,61,63,65,68,71,73,75,77\nShoulder|38.6,39.8,41,42.2,43.4,44.6,45.8,47,48.2,49.4,50.8\nBottom|39,41,43,45,47,49,51,53,55,57,59" },
+    { "type": "textarea", "id": "tee_hints", "label": "Hjælpetekst pr. felt (én linje pr. række)",
+      "default": "1\" below the armhole, side to side\nFrom shoulder to hem\nShoulder seam to seam\nAcross the hem" },
+    { "type": "text", "id": "tee_note", "label": "Råd under resultatet", "default": "We recommend measuring your T-shirt flat and comparing it with our size chart for the best fit." },
+    { "type": "text", "id": "tee_chart_title", "label": "Tabeloverskrift", "default": "T-shirt size chart (cm)" },
+
+    { "type": "header", "content": "Nederdele" },
+    { "type": "text", "id": "skirt_tab", "label": "Fanenavn", "default": "Skirts" },
+    { "type": "text", "id": "skirt_intro", "label": "Tekst i beregneren", "default": "Measure a skirt that fits you well, laid flat. Fill in one or more fields." },
+    { "type": "textarea", "id": "skirt_chart", "label": "Tabel", "info": "Rækkefølgen skal passe til tegningen: 1 ½ Waist, 2 CB length, 3 ½ Hip.",
+      "default": "Size|S,M,L,XL,2XL\n½ Waist (relaxed)|34,36,38,40,42\nSkirt CB length|32,34,36,38,40\n½ Hip width|46,48,50,52,54" },
+    { "type": "textarea", "id": "skirt_hints", "label": "Hjælpetekst pr. felt (én linje pr. række)",
+      "default": "Across the top of the waistband, laid flat, without stretching\nTop of the waistband at the center back down to the hem\nSide seam to side seam, 18 cm below the waistband" },
+    { "type": "text", "id": "skirt_note", "label": "Råd under resultatet", "default": "Sizes may vary within 1–2 cm. When in doubt between two sizes, always size up unless a smaller/tighter fit is desired." },
+    { "type": "text", "id": "skirt_chart_title", "label": "Tabeloverskrift", "default": "Ladies skirts (cm)" }
+  ],
+  "presets": [{ "name": "HUNDRED Size guide" }]
+}
+{% endschema %}
