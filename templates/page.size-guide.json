@@ -17,58 +17,38 @@
         "padding_bottom": 28
       }
     },
-    "image_banner_fz3meY": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_RPeDTa": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_VTVPY6": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_KNmEHq": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_RPeDTa",
-        "text_VTVPY6",
-        "buttons_KNmEHq"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+    "hundred_size_guide_kVcntT": {
+      "type": "hundred-size-guide",
+      "name": "HUNDRED Size guide",
       "settings": {
-        "image": "shopify://shop_images/CINEMATIC_LIGHTING_ENHANCEMENT_Nano_Banana_2_73016_c575f141-69f2-453c-b45a-929afcd26bc5.png",
-        "image_overlay_opacity": 30,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "overline": "Size guide",
+        "heading": "Find",
+        "heading_accent": "your size",
+        "lead": "Enter your measurements and we show the size that fits you best.",
+        "default_tab": "shoes",
+        "shoes_tab": "Shoes",
+        "shoes_intro": "Choose your foot shape and enter your foot length.",
+        "shoes_chart": "EU|34,35,36.5,37,38.5,39.5,41,41.5,42,42.5,43,43.5,44.5,46,47\nUK|1,2,3,4,5,6,7,7.5,8,8.5,9,9.5,10,11,12\nUS|2,3,4,5,6,7,8,8.5,9,9.5,10,10.5,11,12,13\ncm|21.5,22,22.5,23,23.5,24.5,25.5,26,26.5,27,27.5,28,28.5,29.5,30",
+        "shoes_hints": "Heel to the tip of your longest toe\nPut a sheet of paper on the floor against a wall.\nStand straight on it with your heel against the wall.\nMark the tip of your longest toe and measure the length in cm.\nLeft and right foot can differ – measure both and use the bigger one.",
+        "shoes_note": "Standard foot: choose your normal size. Wide foot or tapered big toe: choose one size larger.",
+        "shoes_chart_title": "Shoe size chart",
+        "tee_tab": "T-shirts & tops",
+        "tee_intro": "Take a T-shirt that fits you well, lay it flat and measure it. Fill in one or more fields.",
+        "tee_chart": "Size|5XS,4XS,3XS,2XS,XS,S,M,L,XL,2XL,3XL\nChest|39,41,43,45,47,49,51,53,55,57,59\nLength|55,57,59,61,63,65,68,71,73,75,77\nShoulder|38.6,39.8,41,42.2,43.4,44.6,45.8,47,48.2,49.4,50.8\nBottom|39,41,43,45,47,49,51,53,55,57,59",
+        "tee_hints": "1\" below the armhole, side to side\nFrom shoulder to hem\nShoulder seam to seam\nAcross the hem",
+        "tee_note": "We recommend measuring your T-shirt flat and comparing it with our size chart for the best fit.",
+        "tee_chart_title": "T-shirt size chart (cm)",
+        "skirt_tab": "Skirts",
+        "skirt_intro": "Measure a skirt that fits you well, laid flat. Fill in one or more fields.",
+        "skirt_chart": "Size|S,M,L,XL,2XL\n½ Waist (relaxed)|34,36,38,40,42\nSkirt CB length|32,34,36,38,40\n½ Hip width|46,48,50,52,54",
+        "skirt_hints": "Across the top of the waistband, laid flat, without stretching\nTop of the waistband at the center back down to the hem\nSide seam to side seam, 18 cm below the waistband",
+        "skirt_note": "Sizes may vary within 1–2 cm. When in doubt between two sizes, always size up unless a smaller/tighter fit is desired.",
+        "skirt_chart_title": "Ladies skirts (cm)"
       }
     }
   },
   "order": [
     "main",
-    "image_banner_fz3meY"
+    "hundred_size_guide_kVcntT"
   ]
 }
