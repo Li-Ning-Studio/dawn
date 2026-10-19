@@ -14,6 +14,55 @@ This document gives new teammates a map of the theme with a focus on the custom 
 - The frozen `assets/vx-MultiStepForm.js` comes from `46f50aeb^` and must retain exports `M`, `f`, and `g`. Cached Stringing/Gripping entries from that revision still need the helper exports. Checking against `HEAD` alone misses these older callers; verify both pre-`46f50aeb` and current entry graphs against retained assets. New implementations belong only in hashed chunks.
 - Deploy new hashed dependencies before updating entry bundles. Preserve earlier hashed assets and the legacy unversioned chunks: cached pages still import those exact URLs. Do not overwrite legacy chunks with a newer build or delete them during asset cleanup. `emptyOutDir: false` preserves them locally; deployment must retain them too. A hard refresh is not a shopper-facing cache migration strategy.
 
+## Paid shoe pre-booking
+
+`templates/page.pre-book.json` creates a standalone page using `sections/pre-book.liquid`.
+Create a Shopify page and assign the **pre-book** theme template. In the theme editor,
+set its campaign image URL, introduction, full selling price, release information and campaign
+terms. The template starts with the Shopify-hosted Hypercourt Adapt artwork URL;
+replace it using the section's **Campaign image URL** setting, or clear it to hide the image. Address
+collection happens later, with the balance payment. Each submission books one pair.
+
+The section also exposes the eyebrow, deposit explanation, form labels, contact note,
+button text, next steps and payment-return messages. `[amount]` inserts ₹500 into
+the deposit explanation, button label and next steps; editing copy does not change
+the server's charge. Clearing optional copy hides it. Required field labels, button
+text and payment messages fall back to the default translation when cleared.
+
+The section starts closed. Before opening it:
+
+1. Deploy shopify-server PR #9 and configure `PRE_BOOK_PRODUCTS` with campaign ID
+   `hypercourt-adapt`, amount `500`, the exact colour/size values shown in the editor,
+   the Google Sheet, Shopify customer tag and KwikEngage event. The page displays a
+   fixed ₹500 deposit; its server campaign must use that amount. The browser never
+   supplies the amount or creates a Shopify order.
+2. Set the section's HTTPS server URL (default `https://sitemap.hndrd.co`). Allow the
+   storefront origin in the server's CORS and return URL allowlist. Share the Sheet
+   with the service account and enable the verified Easebuzz transaction webhook.
+3. In a preview, enable **Open pre-booking**, then verify validation, a successful
+   payment, a cancelled/failed payment, and returning with the browser Back button.
+   Check the deposit and option values in Easebuzz and the Sheet, and the Shopify
+   customer tag and KwikEngage event. The `?prebook=success` banner is display-only;
+   it is not evidence that the webhook has verified or recorded a payment.
+4. Prove the later WhatsApp/email balance link, address collection, and manual
+   Shopify order against the same booking before opening the public campaign.
+
+The server is the authority for allowed options and price. A theme setting does
+not update `PRE_BOOK_PRODUCTS`. The form posts contact details and `options.colour`
+and `options.size` to `/pre-book/initiate`, then redirects only to Easebuzz's HTTPS
+production or test checkout. It stores no customer details in browser storage.
+Custom events remain `prebook:error` and `prebook:redirect` on the form, and
+`prebook:result` on the document.
+
+PR #9 writes the Sheet first; Shopify tagging and KwikEngage delivery are best-effort.
+Reconcile paid Easebuzz transactions with the Sheet and inspect server logs for
+missing tags/events. Replaying a webhook for an already saved row does not retry
+those notifications. Sequential webhook retries are deduplicated; concurrent
+deliveries can still race, so check transaction IDs before manual fulfilment.
+
+Run `node --test tests/pre-book.test.cjs` for the client request-flow checks. Theme
+Check and local browser mocks do not prove deployed payments or reconciliation.
+
 ## Architecture Crash Course
 
 - Theme assets live where Dawn expects them: global layouts in `layout/`, sections in `sections/`, reusable snippets in `snippets/`, translations in `locales/`, and settings in `config/`.

@@ -8,6 +8,42 @@
  * ------------------------------------------------------------
  */
 {
+  "prebook": {
+    "eyebrow": "Pre-book your pair",
+    "image_alt": "Hypercourt Adapt badminton shoe with Adapt Dial",
+    "deposit_amount": "₹500",
+    "deposit_label": "Deposit today",
+    "deposit_note": "One pair per pre-booking. Your {{ amount }} deposit goes towards the full price.",
+    "full_price": "Full price:",
+    "colour_label": "Choose your colourway",
+    "size_label": "Choose your size (UK)",
+    "name_label": "Full name",
+    "email_label": "Email address",
+    "phone_label": "WhatsApp number",
+    "contact_note": "All fields are required. We'll collect your shipping address later.",
+    "submit": "Pre-book for {{ amount }}",
+    "busy": "Opening payment…",
+    "closed": "Pre-booking is not open right now. Please check back soon.",
+    "noscript": "Please enable JavaScript to pre-book your pair.",
+    "success": "You're back from payment. Your pre-booking is confirmed once your payment has been verified. If you've already paid, please don't pay again while confirmation is pending.",
+    "failed": "Payment wasn't confirmed. If your account was debited, please contact us before trying again. Otherwise, you can retry below.",
+    "next_heading": "What happens next",
+    "step_deposit": "Choose your pair and pay the {{ amount }} deposit on Easebuzz.",
+    "step_balance": "When it's released, we'll send a link on WhatsApp and email to pay the remaining amount.",
+    "step_address": "Share your shipping address when paying the balance. We'll then create your order.",
+    "errors": {
+      "name": "Please enter your full name.",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a 10-digit Indian mobile number, optionally starting with +91.",
+      "colour": "Please choose a colourway.",
+      "size": "Please choose a UK shoe size.",
+      "network": "Could not reach the server. Please check your connection and try again.",
+      "timeout": "The payment page took too long to open. Please try again.",
+      "generic": "Could not open the payment page. Please try again.",
+      "details": "Please check your details and selected colourway and size.",
+      "unavailable": "Pre-booking is currently unavailable. Please try again later."
+    }
+  },
   "studio": {
     "labels": {
       "customisations": "Customisations"
