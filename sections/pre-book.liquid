@@ -1,0 +1,381 @@
+{{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
+{{ 'section-pre-book.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'pre-book.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign form_id = 'PreBook-' | append: section.id
+  assign error_id = form_id | append: '-error'
+  assign deposit = 'prebook.deposit_amount' | t
+  assign colours = section.settings.colours | newline_to_br | split: '<br />'
+  assign sizes = section.settings.sizes | newline_to_br | split: '<br />'
+  assign default_button_label = 'prebook.submit' | t: amount: deposit
+  assign button_label = section.settings.button_label | default: default_button_label | replace: '[amount]', deposit
+  assign default_busy_label = 'prebook.busy' | t
+  assign default_colour_label = 'prebook.colour_label' | t
+  assign default_size_label = 'prebook.size_label' | t
+  assign default_closed_message = 'prebook.closed' | t
+  assign default_success_message = 'prebook.success' | t
+  assign default_failed_message = 'prebook.failed' | t
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <pre-book-form
+    class="pre-book page-width"
+    data-enabled="{{ section.settings.enabled }}"
+    data-server-url="{{ section.settings.server_url | escape }}"
+  >
+    <div class="pre-book__grid{% if section.settings.image_url == blank %} pre-book__grid--no-image{% endif %}">
+      <div
+        class="pre-book__art"
+        {% if section.settings.image_url == blank %}
+          hidden
+        {% endif %}
+      >
+        {% comment %}The merchant supplies this image URL, including links copied from Shopify Files.{% endcomment %}
+        {% # theme-check-disable RemoteAsset %}
+        <img
+          data-prebook-image
+          data-default-src="{{ section.settings.image_url | escape }}"
+          data-default-alt="{{ 'prebook.image_alt' | t | escape }}"
+          {% if section.settings.image_url != blank %}
+            src="{{ section.settings.image_url | escape }}"
+          {% endif %}
+          alt="{{ 'prebook.image_alt' | t | escape }}"
+          width="1600"
+          height="1600"
+          fetchpriority="high"
+        >
+        {% # theme-check-enable RemoteAsset %}
+      </div>
+
+      <div class="pre-book__content">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="pre-book__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        <h1 class="pre-book__heading s3_title">{{ section.settings.heading | escape }}</h1>
+        {%- if section.settings.intro != blank -%}
+          <div class="pre-book__intro rte">{{ section.settings.intro }}</div>
+        {%- endif -%}
+
+        <div class="pre-book__deposit">
+          <div class="pre-book__deposit-line">
+            <span>{{ section.settings.deposit_label | escape }}</span>
+            <strong class="pre-book__amount">{{ deposit }}</strong>
+          </div>
+          {%- if section.settings.deposit_note != blank -%}
+            <p class="pre-book__note">{{ section.settings.deposit_note | replace: '[amount]', deposit | escape }}</p>
+          {%- endif -%}
+          {%- if section.settings.full_price != blank -%}
+            <p class="pre-book__note">
+              {{ section.settings.full_price_label | escape }}
+              {{ section.settings.full_price | escape }}
+            </p>
+          {%- endif -%}
+          {%- if section.settings.release != blank -%}
+            <p class="pre-book__note">{{ section.settings.release | escape }}</p>
+          {%- endif -%}
+        </div>
+
+        <p class="pre-book__status" data-prebook-success role="status" tabindex="-1" hidden>
+          {{ section.settings.success_message | default: default_success_message | escape }}
+        </p>
+        <p class="pre-book__status" data-prebook-failed role="status" tabindex="-1" hidden>
+          {{ section.settings.failed_message | default: default_failed_message | escape }}
+        </p>
+
+        {%- unless section.settings.enabled -%}
+          <p class="pre-book__status">
+            {{ section.settings.closed_message | default: default_closed_message | escape }}
+          </p>
+        {%- endunless -%}
+
+        <form id="{{ form_id }}" data-prebook="{{ section.settings.campaign_id | escape }}" method="post">
+          <fieldset class="pre-book__options product-form__input product-form__input--pill">
+            <legend class="form__label">
+              {{ section.settings.colour_label | default: default_colour_label | escape }}
+            </legend>
+            {%- for colour in colours -%}
+              {%- assign colour_value = colour | strip -%}
+              {%- if colour_value != blank -%}
+                {%- liquid
+                  assign colour_image_url = blank
+                  assign colour_image_attributes = blank
+                  for block in section.blocks
+                    assign image_colour = block.settings.title | strip
+                    if block.type == 'colourway_image' and image_colour == colour_value
+                      assign colour_image_url = block.settings.image_url
+                      assign colour_image_attributes = block.shopify_attributes
+                      break
+                    endif
+                  endfor
+                -%}
+                <input
+                  id="{{ form_id }}-colour-{{ forloop.index }}"
+                  type="radio"
+                  name="option[colour]"
+                  value="{{ colour_value | escape }}"
+                  data-image-url="{{ colour_image_url | escape }}"
+                  data-image-alt="{{ 'prebook.colour_image_alt' | t: product: section.settings.heading, colour: colour_value | escape }}"
+                  aria-describedby="{{ error_id }}"
+                  required
+                >
+                <label for="{{ form_id }}-colour-{{ forloop.index }}" {{ colour_image_attributes }}>
+                  {{- colour_value | escape -}}
+                </label>
+              {%- endif -%}
+            {%- endfor -%}
+          </fieldset>
+
+          <fieldset class="pre-book__options product-form__input product-form__input--pill product-form__input--size">
+            <legend class="form__label">
+              {{ section.settings.size_label | default: default_size_label | escape }}
+            </legend>
+            {%- for size in sizes -%}
+              {%- assign size_value = size | strip -%}
+              {%- if size_value != blank -%}
+                <input
+                  id="{{ form_id }}-size-{{ forloop.index }}"
+                  type="radio"
+                  name="option[size]"
+                  value="{{ size_value | escape }}"
+                  aria-describedby="{{ error_id }}"
+                  required
+                >
+                <label for="{{ form_id }}-size-{{ forloop.index }}">{{ size_value | escape }}</label>
+              {%- endif -%}
+            {%- endfor -%}
+          </fieldset>
+
+          <div class="pre-book__contact">
+            {%- assign contact_fields = 'name,email,phone' | split: ',' -%}
+            {%- for contact_field in contact_fields -%}
+              {%- liquid
+                assign input_type = 'text'
+                assign autocomplete = 'name'
+                if contact_field == 'email'
+                  assign input_type = 'email'
+                  assign autocomplete = 'email'
+                elsif contact_field == 'phone'
+                  assign input_type = 'tel'
+                  assign autocomplete = 'tel'
+                endif
+                assign label_key = 'prebook.' | append: contact_field | append: '_label'
+                assign label_setting = contact_field | append: '_label'
+                assign default_label = label_key | t
+                assign input_label = section.settings[label_setting] | default: default_label
+              -%}
+              <div class="pre-book__field">
+                <input
+                  class="pre-book__input"
+                  id="{{ form_id }}-{{ contact_field }}"
+                  name="{{ contact_field }}"
+                  type="{{ input_type }}"
+                  autocomplete="{{ autocomplete }}"
+                  placeholder="{{ input_label | escape }}"
+                  aria-describedby="{{ error_id }}"
+                  required
+                  {% if contact_field == 'email' %}
+                    autocapitalize="off" spellcheck="false"
+                  {% endif %}
+                >
+                <label class="visually-hidden" for="{{ form_id }}-{{ contact_field }}">
+                  {{ input_label | escape }}
+                </label>
+              </div>
+            {%- endfor -%}
+          </div>
+
+          {%- if section.settings.contact_note != blank -%}
+            <p class="pre-book__note">{{ section.settings.contact_note | escape }}</p>
+          {%- endif -%}
+          <p id="{{ error_id }}" class="pre-book__error" data-prebook-error role="alert" tabindex="-1"></p>
+          <button
+            class="product-form__submit button button--full-width button--primary button--xlarge pre-book__submit"
+            type="submit"
+            disabled
+          >
+            <span data-prebook-button-label>{{ button_label | escape }}</span>
+          </button>
+          <noscript>
+            <p class="pre-book__note">{{ 'prebook.noscript' | t }}</p>
+          </noscript>
+          {%- if section.settings.terms != blank -%}
+            <div class="pre-book__note rte">{{ section.settings.terms }}</div>
+          {%- endif -%}
+        </form>
+
+        {%- if section.settings.next_steps != blank -%}
+          <div class="pre-book__steps">
+            {%- if section.settings.next_heading != blank -%}
+              <h2>{{ section.settings.next_heading | escape }}</h2>
+            {%- endif -%}
+            <div class="rte">{{ section.settings.next_steps | replace: '[amount]', deposit }}</div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- capture messages -%}
+      {
+        "submit": {{ button_label | json }},
+        "busy": {{ section.settings.busy_label | default: default_busy_label | json }},
+        {%- assign message_keys = 'name,email,phone,colour,size,network,timeout,generic,details,unavailable' | split: ',' -%}
+        {%- for message_key in message_keys -%}
+          {%- assign translation_key = 'prebook.errors.' | append: message_key -%}
+          {{ message_key | json }}: {{ translation_key | t | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      }
+    {%- endcapture -%}
+    <script type="application/json" data-prebook-messages>
+      {{- messages | replace: '<', '\u003c' -}}
+    </script>
+  </pre-book-form>
+</div>
+
+{% schema %}
+{
+  "name": "t:prebook.name",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": { "templates": ["page"] },
+  "limit": 1,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "default": false,
+      "label": "t:prebook.enabled",
+      "info": "t:prebook.enabled_info"
+    },
+    { "type": "text", "id": "server_url", "default": "https://sitemap.hndrd.co", "label": "t:prebook.server_url" },
+    { "type": "text", "id": "campaign_id", "default": "hypercourt-adapt", "label": "t:prebook.campaign_id" },
+    { "type": "header", "content": "t:prebook.content_group" },
+    { "type": "text", "id": "eyebrow", "default": "t:prebook.eyebrow_default", "label": "t:prebook.eyebrow" },
+    { "type": "text", "id": "heading", "default": "t:prebook.heading_default", "label": "t:prebook.heading" },
+    { "type": "richtext", "id": "intro", "default": "t:prebook.intro_default", "label": "t:prebook.intro" },
+    { "type": "url", "id": "image_url", "label": "t:prebook.image", "info": "t:prebook.image_info" },
+    {
+      "type": "text",
+      "id": "deposit_label",
+      "default": "t:prebook.deposit_label_default",
+      "label": "t:prebook.deposit_label"
+    },
+    {
+      "type": "textarea",
+      "id": "deposit_note",
+      "default": "t:prebook.deposit_note_default",
+      "label": "t:prebook.deposit_note",
+      "info": "t:prebook.amount_info"
+    },
+    { "type": "text", "id": "full_price", "label": "t:prebook.full_price", "info": "t:prebook.full_price_info" },
+    {
+      "type": "text",
+      "id": "full_price_label",
+      "default": "t:prebook.full_price_label_default",
+      "label": "t:prebook.full_price_label"
+    },
+    { "type": "text", "id": "release", "label": "t:prebook.release" },
+    { "type": "richtext", "id": "terms", "label": "t:prebook.terms" },
+    { "type": "header", "content": "t:prebook.form_group" },
+    {
+      "type": "text",
+      "id": "colour_label",
+      "default": "t:prebook.colour_label_default",
+      "label": "t:prebook.colour_label"
+    },
+    {
+      "type": "textarea",
+      "id": "colours",
+      "label": "t:prebook.colours",
+      "info": "t:prebook.options_info",
+      "default": "Grey / White\nBlack / Dk Grey / White\nGrey / Black / Multi"
+    },
+    {
+      "type": "textarea",
+      "id": "sizes",
+      "label": "t:prebook.sizes",
+      "info": "t:prebook.options_info",
+      "default": "5\n6\n7\n8\n9\n10\n11"
+    },
+    { "type": "text", "id": "size_label", "default": "t:prebook.size_label_default", "label": "t:prebook.size_label" },
+    { "type": "text", "id": "name_label", "default": "t:prebook.name_label_default", "label": "t:prebook.name_label" },
+    {
+      "type": "text",
+      "id": "email_label",
+      "default": "t:prebook.email_label_default",
+      "label": "t:prebook.email_label"
+    },
+    {
+      "type": "text",
+      "id": "phone_label",
+      "default": "t:prebook.phone_label_default",
+      "label": "t:prebook.phone_label"
+    },
+    {
+      "type": "textarea",
+      "id": "contact_note",
+      "default": "t:prebook.contact_note_default",
+      "label": "t:prebook.contact_note"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:prebook.button_label_default",
+      "label": "t:prebook.button_label",
+      "info": "t:prebook.amount_info"
+    },
+    { "type": "text", "id": "busy_label", "default": "t:prebook.busy_label_default", "label": "t:prebook.busy_label" },
+    { "type": "header", "content": "t:prebook.next_group" },
+    {
+      "type": "text",
+      "id": "next_heading",
+      "default": "t:prebook.next_heading_default",
+      "label": "t:prebook.next_heading"
+    },
+    {
+      "type": "richtext",
+      "id": "next_steps",
+      "default": "t:prebook.next_steps_default",
+      "label": "t:prebook.next_steps",
+      "info": "t:prebook.amount_info"
+    },
+    { "type": "header", "content": "t:prebook.messages_group" },
+    {
+      "type": "textarea",
+      "id": "closed_message",
+      "default": "t:prebook.closed_message_default",
+      "label": "t:prebook.closed_message"
+    },
+    {
+      "type": "textarea",
+      "id": "success_message",
+      "default": "t:prebook.success_message_default",
+      "label": "t:prebook.success_message",
+      "info": "t:prebook.success_info"
+    },
+    {
+      "type": "textarea",
+      "id": "failed_message",
+      "default": "t:prebook.failed_message_default",
+      "label": "t:prebook.failed_message"
+    },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "colourway_image",
+      "name": "t:prebook.colourway_image",
+      "settings": [
+        { "type": "text", "id": "title", "label": "t:prebook.image_colour", "info": "t:prebook.image_colour_info" },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "t:prebook.colour_image_url",
+          "info": "t:prebook.colour_image_info"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "t:prebook.name" }]
+}
+{% endschema %}
