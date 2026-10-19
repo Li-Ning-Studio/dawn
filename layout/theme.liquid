@@ -17,7 +17,7 @@
 
     <title>
       {%- if template.name == 'product' -%}
-        {{ product.vendor }}
+        {%- unless page_title contains product.vendor -%}{{ product.vendor }} {% endunless -%}
         {{ page_title }}
       {%- else -%}
         {{ page_title }}
