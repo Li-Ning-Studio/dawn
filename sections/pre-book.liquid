@@ -25,20 +25,28 @@
     data-server-url="{{ section.settings.server_url | escape }}"
   >
     <div class="pre-book__grid{% if section.settings.image_url == blank %} pre-book__grid--no-image{% endif %}">
-      {%- if section.settings.image_url != blank -%}
-        <div class="pre-book__art">
-          {% comment %}The merchant supplies this image URL, including links copied from Shopify Files.{% endcomment %}
-          {% # theme-check-disable RemoteAsset %}
-          <img
+      <div
+        class="pre-book__art"
+        {% if section.settings.image_url == blank %}
+          hidden
+        {% endif %}
+      >
+        {% comment %}The merchant supplies this image URL, including links copied from Shopify Files.{% endcomment %}
+        {% # theme-check-disable RemoteAsset %}
+        <img
+          data-prebook-image
+          data-default-src="{{ section.settings.image_url | escape }}"
+          data-default-alt="{{ 'prebook.image_alt' | t | escape }}"
+          {% if section.settings.image_url != blank %}
             src="{{ section.settings.image_url | escape }}"
-            alt="{{ 'prebook.image_alt' | t | escape }}"
-            width="1600"
-            height="1600"
-            fetchpriority="high"
-          >
-          {% # theme-check-enable RemoteAsset %}
-        </div>
-      {%- endif -%}
+          {% endif %}
+          alt="{{ 'prebook.image_alt' | t | escape }}"
+          width="1600"
+          height="1600"
+          fetchpriority="high"
+        >
+        {% # theme-check-enable RemoteAsset %}
+      </div>
 
       <div class="pre-book__content">
         {%- if section.settings.eyebrow != blank -%}
@@ -89,15 +97,31 @@
             {%- for colour in colours -%}
               {%- assign colour_value = colour | strip -%}
               {%- if colour_value != blank -%}
+                {%- liquid
+                  assign colour_image_url = blank
+                  assign colour_image_attributes = blank
+                  for block in section.blocks
+                    assign image_colour = block.settings.title | strip
+                    if block.type == 'colourway_image' and image_colour == colour_value
+                      assign colour_image_url = block.settings.image_url
+                      assign colour_image_attributes = block.shopify_attributes
+                      break
+                    endif
+                  endfor
+                -%}
                 <input
                   id="{{ form_id }}-colour-{{ forloop.index }}"
                   type="radio"
                   name="option[colour]"
                   value="{{ colour_value | escape }}"
+                  data-image-url="{{ colour_image_url | escape }}"
+                  data-image-alt="{{ 'prebook.colour_image_alt' | t: product: section.settings.heading, colour: colour_value | escape }}"
                   aria-describedby="{{ error_id }}"
                   required
                 >
-                <label for="{{ form_id }}-colour-{{ forloop.index }}">{{ colour_value | escape }}</label>
+                <label for="{{ form_id }}-colour-{{ forloop.index }}" {{ colour_image_attributes }}>
+                  {{- colour_value | escape -}}
+                </label>
               {%- endif -%}
             {%- endfor -%}
           </fieldset>
@@ -140,9 +164,9 @@
                 assign default_label = label_key | t
                 assign input_label = section.settings[label_setting] | default: default_label
               -%}
-              <div class="field">
+              <div class="pre-book__field">
                 <input
-                  class="field__input"
+                  class="pre-book__input"
                   id="{{ form_id }}-{{ contact_field }}"
                   name="{{ contact_field }}"
                   type="{{ input_type }}"
@@ -154,7 +178,7 @@
                     autocapitalize="off" spellcheck="false"
                   {% endif %}
                 >
-                <label class="field__label" for="{{ form_id }}-{{ contact_field }}">
+                <label class="visually-hidden" for="{{ form_id }}-{{ contact_field }}">
                   {{ input_label | escape }}
                 </label>
               </div>
@@ -336,6 +360,21 @@
       "label": "t:prebook.failed_message"
     },
     { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "colourway_image",
+      "name": "t:prebook.colourway_image",
+      "settings": [
+        { "type": "text", "id": "title", "label": "t:prebook.image_colour", "info": "t:prebook.image_colour_info" },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "t:prebook.colour_image_url",
+          "info": "t:prebook.colour_image_info"
+        }
+      ]
+    }
   ],
   "presets": [{ "name": "t:prebook.name" }]
 }

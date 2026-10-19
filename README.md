@@ -20,8 +20,15 @@ This document gives new teammates a map of the theme with a focus on the custom 
 Create a Shopify page and assign the **pre-book** theme template. In the theme editor,
 set its campaign image URL, introduction, full selling price, release information and campaign
 terms. The template starts with the Shopify-hosted Hypercourt Adapt artwork URL;
-replace it using the section's **Campaign image URL** setting, or clear it to hide the image. Address
+replace it using the section's **Campaign image URL** setting. Address
 collection happens later, with the balance payment. Each submission books one pair.
+
+In the section editor, use **Add block → Colourway image** to add an image URL for each
+colourway. Use the exact value from **Colourways**. The template starts without image
+blocks so it can sync before the updated section schema. Selecting a colour updates the main image and its alt
+text. A missing colour image falls back to the campaign image. If that is also blank,
+the image is hidden until a colour with an image is selected. These blocks only map
+images; they do not add colours or change the options sent to the server.
 
 The section also exposes the eyebrow, deposit explanation, form labels, contact note,
 button text, next steps and payment-return messages. `[amount]` inserts ₹500 into

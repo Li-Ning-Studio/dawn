@@ -72,14 +72,54 @@
   padding-left: 0;
 }
 
-.pre-book__options.product-form__input--pill input[aria-invalid='true'] + label,
-.pre-book .field__input[aria-invalid='true'] {
-  outline: 1px solid var(--danger-red, #c00);
-}
-
 .pre-book__contact {
   display: grid;
   gap: 1.6rem;
+}
+
+.pre-book__field {
+  position: relative;
+}
+
+/* Match the product option pills without Dawn's floating-label padding or inset borders. */
+.pre-book__input {
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 1.4rem 2.4rem;
+  border: 1px solid rgba(var(--color-foreground), 0.18);
+  border-radius: 100px;
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  font: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  transition:
+    border-color var(--duration-short) ease,
+    outline-color var(--duration-short) ease;
+}
+
+.pre-book__input::placeholder {
+  color: rgba(var(--color-foreground), 0.75);
+  opacity: 1;
+}
+
+.pre-book__input:hover {
+  border-color: rgb(var(--color-foreground));
+}
+
+.pre-book__input:focus {
+  border-color: var(--accent-color);
+  /* Override the theme's global !important focus rule so the solid ring stays visible. */
+  outline: 1.5px solid var(--accent-color) !important;
+  outline-offset: 0;
+  box-shadow: none;
+}
+
+.pre-book__options.product-form__input--pill input[aria-invalid='true'] + label,
+.pre-book__input[aria-invalid='true'] {
+  outline: 1px solid var(--danger-red, #c00) !important;
 }
 
 .pre-book__submit {
@@ -133,18 +173,46 @@
   margin-top: 0.6rem;
 }
 
+@media screen and (max-width: 989px) {
+  .pre-book {
+    padding-top: 0;
+  }
+
+  /* Extend only the artwork through the page gutters; keep the form comfortably inset. */
+  .pre-book__art {
+    margin-inline: -1.5rem;
+  }
+
+  .pre-book__grid--no-image {
+    padding-top: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .pre-book__art {
+    margin-inline: -5rem;
+  }
+}
+
 @media screen and (min-width: 990px) {
   .pre-book {
     padding-block: 4.8rem 8rem;
   }
 
   .pre-book__grid {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    /* Use the main PDP's large-media proportions to keep the booking form compact. */
+    grid-template-columns: minmax(0, 66fr) minmax(0, 34fr);
     gap: 6.4rem;
   }
 
   .pre-book__art {
     position: sticky;
     top: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1501px) {
+  .pre-book__grid {
+    grid-template-columns: minmax(0, 70fr) minmax(0, 30fr);
   }
 }

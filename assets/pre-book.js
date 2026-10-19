@@ -10,13 +10,21 @@ if (!customElements.get('pre-book-form')) {
         this.buttonLabel = this.button.querySelector('[data-prebook-button-label]');
         this.error = this.form.querySelector('[data-prebook-error]');
         this.submit = this.onSubmit.bind(this);
+        this.changeColour = (event) => {
+          if (event.target.name === 'option[colour]') this.updateImage();
+        };
         this.restore = (event) => {
-          if (event.persisted) this.resetRequest();
+          if (event.persisted) {
+            this.resetRequest();
+            this.updateImage();
+          }
         };
         this.form.noValidate = true;
         this.form.addEventListener('submit', this.submit);
+        this.form.addEventListener('change', this.changeColour);
         window.addEventListener('pageshow', this.restore);
         this.resetRequest();
+        this.updateImage();
         if (this.dataset.enabled === 'true' && !this.endpoint()) this.showError(this.messages.unavailable);
         this.showResult();
       }
@@ -24,8 +32,25 @@ if (!customElements.get('pre-book-form')) {
       disconnectedCallback() {
         this.resetRequest();
         this.form.removeEventListener('submit', this.submit);
+        this.form.removeEventListener('change', this.changeColour);
         window.removeEventListener('pageshow', this.restore);
         this.form = null;
+      }
+
+      updateImage() {
+        const image = this.querySelector('[data-prebook-image]');
+        if (!image) return;
+        const colour = this.fields('option[colour]').find((field) => field.checked);
+        // Always fall back to the campaign artwork, never the previously selected colour's image.
+        const source = colour?.dataset.imageUrl || image.dataset.defaultSrc;
+        image.alt = colour?.dataset.imageUrl ? colour.dataset.imageAlt : image.dataset.defaultAlt;
+        if (source) {
+          if (image.getAttribute('src') !== source) image.setAttribute('src', source);
+        } else {
+          image.removeAttribute('src');
+        }
+        image.closest('.pre-book__art').hidden = !source;
+        image.closest('.pre-book__grid').classList.toggle('pre-book__grid--no-image', !source);
       }
 
       endpoint() {
