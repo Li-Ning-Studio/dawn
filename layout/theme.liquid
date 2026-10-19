@@ -327,6 +327,9 @@
       <script src="https://pdp.gokwik.co/sa-login-ui/gokwik-sso-sdk.js" defer="defer"></script>
       {% render 'gokwik' %}
     {% endif %}
+    <style>
+      .card__media img, .card__media .media, .product__media, .product-media-container, .product__media img { background-color: #fff !important; }
+    </style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
