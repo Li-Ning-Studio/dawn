@@ -42,10 +42,24 @@
         "share",
         "content"
       ],
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "hundred_article_XdrVib": {
+      "type": "hundred-article",
+      "name": "HUNDRED Artikel",
+      "settings": {
+        "show_date": true,
+        "show_author": false,
+        "show_more": true,
+        "more_heading": "Keep reading"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hundred_article_XdrVib"
   ]
 }
