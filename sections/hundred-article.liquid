@@ -1,0 +1,159 @@
+{%- comment -%}
+  HUNDRED – Artikel / guide
+  Bruges til alle blogindlæg. Titel og info til venstre, billede til højre
+  (stablet på mobil), artiklens tekst i en læsevenlig kolonne og 3 andre
+  indlæg fra samme blog nederst.
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700;800&display=swap">
+
+<style>
+  .hart{--bg:#0a0a0b;--panel:#141414;--line:#262626;--text:#f5f5f5;--soft:#c9c9c9;--muted:#8a8a8a;--o:#ffa300;
+    --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--text);font:18px/1.75 var(--body);letter-spacing:0;padding-block:clamp(32px,5vw,64px)}
+  .hart *{box-sizing:border-box}
+  .hart a{color:inherit}
+  .hart-wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,3vw,32px)}
+
+  /* Top: titel + billede */
+  .hart-head{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(24px,3vw,36px)}
+  .hart-head.no-img{grid-template-columns:minmax(0,1fr)}
+  .hart-crumb{font-size:13px;color:var(--muted);letter-spacing:.06em}
+  .hart-crumb a{text-decoration:none}.hart-crumb a:hover{color:var(--o)}
+  .hart .hart-title{margin:14px 0 20px;max-width:20ch;font:italic 900 clamp(40px,6vw,80px)/.95 var(--display);text-transform:uppercase;letter-spacing:-.005em;color:var(--text);text-wrap:balance}
+  .hart-meta{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;color:var(--muted);font-size:14px}
+  .hart .hart-tag{background:var(--o);color:#000;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;text-decoration:none}
+  .hart-meta .dot{opacity:.5}
+  .hart .hart-share{background:none;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:6px 14px;font:600 13px var(--body);cursor:pointer}
+  .hart .hart-share:hover{border-color:var(--o)}
+  .hart-img{aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:var(--panel)}
+  .hart-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* Tekst */
+  .hart-body{max-width:720px;margin:clamp(40px,6vw,72px) auto 0;color:var(--soft)}
+  .hart-body > *:first-child{margin-top:0}
+  .hart-body p{margin:0 0 22px}
+  .hart-body h2,.hart-body h3,.hart-body h4{color:var(--text);font-family:var(--display);font-style:italic;font-weight:900;text-transform:uppercase;letter-spacing:0;line-height:1.05;margin:44px 0 14px}
+  .hart-body h2{font-size:clamp(28px,3vw,38px)}.hart-body h3{font-size:clamp(24px,2.4vw,30px)}.hart-body h4{font-size:22px}
+  .hart-body strong,.hart-body b{color:var(--text)}
+  .hart-body a{color:var(--o);text-underline-offset:3px}
+  .hart-body ul,.hart-body ol{margin:0 0 22px;padding-left:22px}.hart-body li{margin-bottom:8px}.hart-body li::marker{color:var(--o)}
+  .hart-body blockquote{margin:32px 0;padding:4px 0 4px 22px;border-left:4px solid var(--o);color:var(--text);font-size:21px;font-weight:600}
+  .hart-body img{max-width:100%;height:auto;border-radius:12px;margin:12px 0}
+  .hart-body table{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:15px}
+  .hart-body th,.hart-body td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left}
+  .hart-body iframe{max-width:100%;border-radius:12px}
+
+  .hart-back{max-width:720px;margin:48px auto 0;padding-top:24px;border-top:1px solid var(--line)}
+  .hart-back a{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+  .hart-back a:hover{color:var(--o)}
+
+  /* Flere indlæg */
+  .hart-more{margin-top:clamp(56px,7vw,88px)}
+  .hart-more-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px}
+  .hart .hart-more h2{margin:0;font:italic 900 clamp(28px,3vw,36px)/1 var(--display);text-transform:uppercase;color:var(--text)}
+  .hart-more-head a{font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--o);text-decoration:none}
+  .hart-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .hart-card{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s}
+  .hart-card:hover{border-color:var(--o)}
+  .hart-card .ph{aspect-ratio:16/9;background:#1e1e1e;overflow:hidden}
+  .hart-card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .hart-card:hover .ph img{transform:scale(1.04)}
+  .hart-card .tx{padding:16px 18px 18px;display:grid;gap:4px}
+  .hart-card small{color:var(--o);font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .hart-card b{font-size:17px;line-height:1.3;color:var(--text)}
+  .hart-card span{color:var(--muted);font-size:13px}
+  .hart a:focus-visible,.hart button:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+
+  @media (max-width:860px){
+    .hart-img{aspect-ratio:4/3;border-radius:12px}
+    .hart-cards{grid-template-columns:1fr}
+    .hart{font-size:16px}
+  }
+  @media (min-width:600px) and (max-width:860px){.hart-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+
+{%- liquid
+  assign words = article.content | strip_html | split: ' ' | size
+  assign minutes = words | divided_by: 220 | at_least: 1
+  assign first_tag = article.tags | first
+-%}
+
+<article class="hart" id="hart-{{ section.id }}">
+  <div class="hart-wrap">
+    <header class="hart-head{% if article.image == blank %} no-img{% endif %}">
+      <div>
+        <div class="hart-crumb"><a href="{{ blog.url }}">{{ blog.title | escape }}</a>{% if first_tag %} / <a href="{{ blog.url }}/tagged/{{ first_tag | handleize }}">{{ first_tag | escape }}</a>{% endif %}</div>
+        <h1 class="hart-title">{{ article.title | escape }}</h1>
+        <div class="hart-meta">
+          {%- if first_tag -%}<a class="hart-tag" href="{{ blog.url }}/tagged/{{ first_tag | handleize }}">{{ first_tag | escape }}</a>{%- endif -%}
+          {%- if section.settings.show_date -%}<span>{{ article.published_at | time_tag: format: 'date' }}</span><span class="dot">·</span>{%- endif -%}
+          <span>{{ minutes }} min read</span>
+          {%- if section.settings.show_author and article.author != blank -%}<span class="dot">·</span><span>{{ article.author | escape }}</span>{%- endif -%}
+          <button type="button" class="hart-share" data-url="{{ request.origin }}{{ article.url }}" data-title="{{ article.title | escape }}">Share ↗</button>
+        </div>
+      </div>
+      {%- if article.image -%}
+        <div class="hart-img">
+          {{ article.image | image_url: width: 2000 | image_tag: widths: '600, 900, 1200, 1600, 2000', sizes: '(min-width: 1240px) 1200px, 100vw', loading: 'eager', fetchpriority: 'high', alt: article.title }}
+        </div>
+      {%- endif -%}
+    </header>
+
+    <div class="hart-body rte">{{ article.content }}</div>
+
+    <div class="hart-back"><a href="{{ blog.url }}">← Back to {{ blog.title | escape }}</a></div>
+
+    {%- if section.settings.show_more -%}
+      {%- assign shown = 0 -%}
+      {%- capture cards -%}
+        {%- for a in blog.articles -%}
+          {%- if a.id == article.id -%}{%- continue -%}{%- endif -%}
+          {%- if shown >= 3 -%}{%- break -%}{%- endif -%}
+          {%- assign shown = shown | plus: 1 -%}
+          {%- assign t = a.tags | first -%}
+          <a class="hart-card" href="{{ a.url }}">
+            <div class="ph">{%- if a.image -%}{{ a.image | image_url: width: 800 | image_tag: widths: '400, 600, 800', sizes: '(min-width: 861px) 33vw, 100vw', loading: 'lazy', alt: a.title }}{%- endif -%}</div>
+            <div class="tx">{%- if t -%}<small>{{ t | escape }}</small>{%- endif -%}<b>{{ a.title | escape }}</b><span>{{ a.published_at | date: '%b %d, %Y' }}</span></div>
+          </a>
+        {%- endfor -%}
+      {%- endcapture -%}
+      {%- if shown > 0 -%}
+        <section class="hart-more" aria-labelledby="hart-more-{{ section.id }}">
+          <div class="hart-more-head"><h2 id="hart-more-{{ section.id }}">{{ section.settings.more_heading | escape }}</h2><a href="{{ blog.url }}">See all →</a></div>
+          <div class="hart-cards">{{ cards }}</div>
+        </section>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</article>
+
+<script>
+(function(){
+  var b = document.querySelector('#hart-{{ section.id }} .hart-share');
+  if (!b) return;
+  b.addEventListener('click', function(){
+    var url = b.dataset.url;
+    if (navigator.share) { navigator.share({ title: b.dataset.title, url: url }).catch(function(){}); return; }
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(function(){ b.textContent = 'Link copied ✓'; setTimeout(function(){ b.textContent = 'Share ↗'; }, 2000); });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "HUNDRED Artikel",
+  "tag": "section",
+  "class": "section-hundred-article",
+  "settings": [
+    { "type": "checkbox", "id": "show_date", "label": "Vis dato", "default": true },
+    { "type": "checkbox", "id": "show_author", "label": "Vis forfatter", "default": false },
+    { "type": "checkbox", "id": "show_more", "label": "Vis 3 andre indlæg nederst", "default": true },
+    { "type": "text", "id": "more_heading", "label": "Overskrift over andre indlæg", "default": "More guides" }
+  ],
+  "enabled_on": { "templates": ["article"] },
+  "presets": [{ "name": "HUNDRED Artikel" }]
+}
+{% endschema %}
