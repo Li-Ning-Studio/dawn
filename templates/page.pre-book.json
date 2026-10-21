@@ -11,6 +11,18 @@
   "sections": {
     "main": {
       "type": "pre-book",
+      "blocks": {
+        "colourway_image_kccC9B": {
+          "type": "colourway_image",
+          "settings": {
+            "title": "Grey / White",
+            "image_url": "https://cdn.shopify.com/s/files/1/0933/9378/1029/files/WhatsApp_Image_2026-10-21_at_12.06.06.jpg?v=1792564787"
+          }
+        }
+      },
+      "block_order": [
+        "colourway_image_kccC9B"
+      ],
       "settings": {
         "enabled": true,
         "server_url": "https://sitemap.hndrd.co",
@@ -36,7 +48,7 @@
         "button_label": "Pre-book for [amount]",
         "busy_label": "Opening payment…",
         "next_heading": "What happens next",
-        "next_steps": "<ol><li><strong>Choose Your Pair</strong><br/>Select your preferred pair and pay the pre-booking amount of [amount] securely through Easebuzz.</li><li><strong>Complete Your Payment</strong><br/>Once the product officially launches, we'll send you a payment link via WhatsApp and email to complete the remaining balance.</li><li><strong>Confirm Your Order</strong><br/>Provide your shipping address when completing the final payment. We'll then place your order and prepare it for delivery.</li></ol>",
+        "next_steps": "<ol><li><strong>Choose Your Pair</strong><br/>Select your preferred pair and pay the pre-booking amount of [amount] securely.</li><li><strong>Complete Your Payment</strong><br/>Once the product officially launches, we'll send you a payment link via WhatsApp and email to complete the remaining balance.</li><li><strong>Confirm Your Order</strong><br/>Provide your shipping address when completing the final payment. We'll then place your order and prepare it for delivery.</li></ol>",
         "closed_message": "Pre-booking is not open right now. Please check back soon.",
         "success_message": "You're back from payment. Your pre-booking is confirmed once your payment has been verified. If you've already paid, please don't pay again while confirmation is pending.",
         "failed_message": "Payment wasn't confirmed. If your account was debited, please contact us before trying again. Otherwise, you can retry below.",
