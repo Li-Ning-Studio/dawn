@@ -12,6 +12,13 @@
     "main": {
       "type": "pre-book",
       "blocks": {
+        "colourway_image_CCbMLQ": {
+          "type": "colourway_image",
+          "settings": {
+            "title": "Black / Dk Grey / White",
+            "image_url": "https://cdn.shopify.com/s/files/1/0933/9378/1029/files/WhatsApp_Image_2026-10-21_at_12.06.07.jpg?v=1792564787"
+          }
+        },
         "colourway_image_kccC9B": {
           "type": "colourway_image",
           "settings": {
@@ -21,6 +28,7 @@
         }
       },
       "block_order": [
+        "colourway_image_CCbMLQ",
         "colourway_image_kccC9B"
       ],
       "settings": {
