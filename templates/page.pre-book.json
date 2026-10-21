@@ -70,9 +70,44 @@
         "failed_message": "Payment wasn't confirmed. If your account was debited, please contact us before trying again. Otherwise, you can retry below.",
         "color_scheme": ""
       }
+    },
+    "hero_component_DKzW8a": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/10_Banner.jpg",
+        "mobile_image": "shopify://shop_images/Artboard_4_987a8a9f-4181-4b7f-bb36-ab616b08e726.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_TDTdfH": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/4_Banner.jpg",
+        "mobile_image": "shopify://shop_images/3_Banner_10a291c3-7fa2-444c-a78d-0e47a12ad477.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_component_DKzW8a",
+    "hero_component_TDTdfH"
   ]
 }
