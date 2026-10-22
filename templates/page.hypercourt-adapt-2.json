@@ -47,11 +47,22 @@
     },
     "media_Gi9Dhc": {
       "type": "media",
+      "disabled": true,
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/ChatGPT_Image_21_Oct_2026_12_57_33.png",
         "mobile_image": "shopify://shop_images/ChatGPT_Image_21_Oct_2026_12_57_29.png",
         "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_whHTcA": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n/* ==========================================\n   HNDRD HYPERCOURT ADAPT\n   IMAGE-BASED HEADING\n========================================== */\n\n.hndrd-adapt-heading,\n.hndrd-adapt-heading * {\n  box-sizing: border-box;\n}\n\n.hndrd-adapt-heading {\n  position: relative;\n  isolation: isolate;\n  width: 100%;\n  max-width: 100%;\n  background: #ffffff;\n  overflow: hidden;\n  padding: 54px 24px 60px;\n}\n\n/* SUBTLE DOT GRID */\n\n.hndrd-adapt-heading::before {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  z-index: -1;\n  pointer-events: none;\n\n  background-image: radial-gradient(\n    circle,\n    #454545 1px,\n    transparent 1.4px\n  );\n\n  background-size: 115px 115px;\n  background-position: center center;\n}\n\n/* MAIN WRAPPER */\n\n.hndrd-adapt-heading-inner {\n  width: 100%;\n  max-width: 1120px;\n  margin: 0 auto;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n/* SHARED IMAGE RULES */\n\n.hndrd-adapt-heading img {\n  position: static !important;\n  display: block;\n  height: auto !important;\n  max-width: 100%;\n  object-fit: contain !important;\n  object-position: center;\n  transform: none !important;\n  transition: none !important;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n/* ADAPT TO THE */\n\n.hndrd-heading-adapt {\n  width: min(100%, 470px);\n  margin-bottom: 8px;\n}\n\n/* IMPOSSIBLE */\n\n.hndrd-heading-impossible {\n  width: min(100%, 900px);\n  margin-bottom: 17px;\n}\n\n/* HNDRD HYPERCOURT */\n\n.hndrd-heading-brand {\n  width: min(100%, 340px);\n}\n\n/* ==========================================\n   TABLET\n========================================== */\n\n@media (max-width: 1024px) {\n  .hndrd-adapt-heading {\n    padding: 46px 26px 52px;\n  }\n\n  .hndrd-heading-adapt {\n    width: min(100%, 410px);\n  }\n\n  .hndrd-heading-impossible {\n    width: min(100%, 760px);\n  }\n\n  .hndrd-heading-brand {\n    width: min(100%, 300px);\n  }\n}\n\n/* ==========================================\n   MOBILE\n========================================== */\n\n@media (max-width: 768px) {\n  .hndrd-adapt-heading {\n    padding: 38px 20px 42px;\n  }\n\n  .hndrd-adapt-heading-inner {\n    max-width: 100%;\n  }\n\n  .hndrd-heading-adapt {\n    width: 64%;\n    max-width: 260px;\n    margin-bottom: 10px;\n  }\n\n  .hndrd-heading-impossible {\n    width: 100%;\n    max-width: 480px;\n    margin-bottom: 13px;\n  }\n\n  .hndrd-heading-brand {\n    width: 43%;\n    max-width: 200px;\n  }\n}\n\n/* ==========================================\n   SMALL MOBILE\n========================================== */\n\n@media (max-width: 400px) {\n  .hndrd-adapt-heading {\n    padding: 32px 16px 38px;\n  }\n\n  .hndrd-heading-adapt {\n    width: 70%;\n    margin-bottom: 8px;\n  }\n\n  .hndrd-heading-impossible {\n    width: 100%;\n    margin-bottom: 12px;\n  }\n\n  .hndrd-heading-brand {\n    width: 49%;\n  }\n}\n</style>\n\n<section\n  class=\"hndrd-adapt-heading\"\n  aria-label=\"Adapt to the Impossible, HNDRD Hypercourt\"\n>\n  <div class=\"hndrd-adapt-heading-inner\">\n\n    <!-- ADAPT TO THE -->\n    <img\n      class=\"hndrd-heading-adapt\"\n      src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Adapt.png?v=1792669866\"\n      alt=\"ADAPT TO THE\"\n      loading=\"eager\"\n      decoding=\"async\"\n    >\n\n    <!-- IMPOSSIBLE -->\n    <img\n      class=\"hndrd-heading-impossible\"\n      src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/Imp.png?v=1792669869\"\n      alt=\"IMPOSSIBLE.\"\n      loading=\"eager\"\n      decoding=\"async\"\n    >\n\n    <!-- HNDRD HYPERCOURT -->\n    <img\n      class=\"hndrd-heading-brand\"\n      src=\"https://cdn.shopify.com/s/files/1/0933/9378/1029/files/HND.png?v=1792669863\"\n      alt=\"HNDRD HYPERCOURT\"\n      loading=\"eager\"\n      decoding=\"async\"\n    >\n\n  </div>\n</section>",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -65,17 +76,6 @@
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "custom_liquid_whHTcA": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section class=\"hyper-title-section\">\n\n  <p class=\"hyper-kicker\">\n    HNDRD Hyperarmour\n  </p>\n\n\n  <h2 class=\"second-title\">\n    Built to Outlast Every Rally,\n    <br class=\"mobile-break\">\n    Ready for Every Move\n  </h2>\n\n\n  \n\n\n</section>\n\n\n\n<style>\n\n\n.hyper-title-section{\n\n  text-align:center;\n\n  letter-spacing:0px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.4rem;\n\n  margin:0 0 10px;\n\n  color:rgba(255,255,255,.8);\n\n}\n\n\n\n.second-title {\n\n  letter-spacing:-1px;\n\n  font-size:3.3rem;\n\n  font-weight:800;\n\n  line-height:1.1;\n\n  margin:0;\n\n  background-image:\n\n  linear-gradient(\n    to right,\n    #c9f24d 0%,\n    #2fe0c2 50%,\n    #ff8a3d 100%\n  );\n\n  -webkit-background-clip:text;\n\n  background-clip:text;\n\n  -webkit-text-fill-color:transparent;\n\n  color:transparent;\n\n}\n\n\n\n.second-copy {\n\n  max-width:520px;\n\n  margin:20px auto 0;\n\n  color:rgba(255,255,255,.55);\n\n  font-size:1.05rem;\n\n  line-height:1.55;\n\n  font-weight:450;\n\n}\n\n\n\n.mobile-break{\n\n  display:none;\n\n}\n\n\n\n\n\n@media screen and (min-width:750px){\n\n\n.second-title{\n\n  font-size:5.9rem;\n\n}\n\n\n.second-copy{\n\n  font-size:1.2rem;\n\n}\n\n\n}\n\n\n\n\n\n@media screen and (max-width:750px){\n\n\n.hyper-title-section{\n\n  padding:0 16px;\n\n}\n\n\n\n.hyper-kicker{\n\n  font-size:1.2rem;\n\n}\n\n\n\n.second-title{\n\n\n  font-size:2.9rem;\n\n  line-height:1.08;\n\n  letter-spacing:-1.5px;\n\n  max-width:100%;\n\n}\n\n\n\n.mobile-break{\n\n  display:block;\n\n}\n\n\n\n.second-copy{\n\n\n  max-width:330px;\n\n  margin-top:18px;\n\n  font-size:.95rem;\n\n  line-height:1.45;\n\n}\n\n\n\n}\n\n</style>",
-        "color_scheme": "scheme-4",
-        "padding_top": 100,
-        "padding_bottom": 100
       }
     },
     "custom_liquid_pX3CYh": {
@@ -395,8 +395,8 @@
     "hero_component_LFwDaT",
     "media_pXzJ7f",
     "media_Gi9Dhc",
-    "media_hiBFN9",
     "custom_liquid_whHTcA",
+    "media_hiBFN9",
     "custom_liquid_pX3CYh",
     "media_gxHEbG",
     "custom_liquid_rhUah4",
