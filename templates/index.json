@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_component_WF9GDh": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/9_Banner_R.jpg",
+        "mobile_image": "shopify://shop_images/9_Banner_0af8db2d-de35-4913-a0dc-5ff6c4b7486f.jpg",
+        "subtitle": "Introducing",
+        "title": "HYPERCOURT ADAPT",
+        "description": "Dial in your fit. Move with confidence.",
+        "button_text": "CLAIM NOW",
+        "link_to": "https://in.hndrd.co/products/hypercourt-adapt",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
     "hero_video_component_6D9BF9": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -27,6 +44,7 @@
     },
     "hero_video_component_Xmtj6T": {
       "type": "hero-video-component",
+      "disabled": true,
       "name": "Hero Video Component",
       "settings": {
         "video": "shopify://files/videos/YTarmour.mp4",
@@ -54,10 +72,11 @@
     },
     "hero_component_mGMHCw": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/2_f7d49388-07f3-4367-8b6a-dc8286802285.jpg",
-        "mobile_image": "shopify://shop_images/1_3bb13bec-f4d7-4f49-9d26-874b9bbb9c60.jpg",
+        "image": "shopify://shop_images/9_Banner_R.jpg",
+        "mobile_image": "shopify://shop_images/9_Banner_0af8db2d-de35-4913-a0dc-5ff6c4b7486f.jpg",
         "subtitle": "Introducing",
         "title": "Nitrix 80 Bullet",
         "description": "HNDRD's thinnest professional racket yet",
@@ -413,6 +432,7 @@
     }
   },
   "order": [
+    "hero_component_WF9GDh",
     "hero_video_component_6D9BF9",
     "hero_video_component_Xmtj6T",
     "custom_liquid_jebebN",
