@@ -136,7 +136,7 @@
       first_name: '', last_name: '', birth_date: '', nationality: '', country: '', city: '', email: '', phone: '',
       guardian_name: '', guardian_email: '',
       sports: [], category: '', disciplines: [], national_ranking: '', bwf_ranking: '', results: '',
-      tournaments_per_year: '', tournament_level: '',
+      tournaments_per_year: '', tournament_level: [],
       ig_link: '', ig_followers: '', ig_views: '', tt_link: '', tt_followers: '', tt_views: '',
       posting: '', europe_share: '', top_countries: '',
       repost: '', ads: '', shoots: '', free_use: '', events: '',
@@ -212,9 +212,7 @@
         '</div><div style="margin-top:22px">' +
         input('results', 'Biggest results in the last 2 years', { type: 'textarea', req: 1, hint: 'Titles, national team, international tournaments …' }) +
         choice('tournaments_per_year', 'How many tournaments do you play per year?', [['0–5', '0–5'], ['6–10', '6–10'], ['11–20', '11–20'], ['20+', '20+']], { req: 1 }) +
-        (a.category && a.category !== 'Senior'
-          ? choice('tournament_level', 'Highest level of youth tournaments you play', [['Local / regional', 'Local / regional'], ['National', 'National'], ['International junior', 'International junior']], { req: 1 })
-          : choice('tournament_level', 'Highest level of tournaments you play', [['International Future Series', 'International Future Series'], ['International Series', 'International Series'], ['International Challenge', 'International Challenge'], ['World Tour', 'World Tour']], { req: 1, hint: a.category ? '' : 'Choose your category above first' })) +
+        choice('tournament_level', (a.category && a.category !== 'Senior' ? 'Highest level of youth tournaments you play' : 'Highest level of tournaments you play'), [['International Future Series', 'International Future Series'], ['International Series', 'International Series'], ['International Challenge', 'International Challenge'], ['World Tour', 'World Tour']], { multi: 1, req: 1, hint: 'Choose all that apply' }) +
         '</div>';
       case 2: return '<h2>Social media</h2>' +
         '<div class="hsa-note"><b>This step is very important to us.</b> We care a lot about social media and about reaching players across Europe. Fill in what you have. The fields are optional, but the more you share, the better we can assess your application.</div>' +
@@ -255,7 +253,7 @@
     if (minor()) about.push(['Parent / guardian', v(x.guardian_name) + ', ' + v(x.guardian_email)]);
     return [
       ['About you', about],
-      ['Sport & level', [['Sport', x.sports.join(', ') || '–'], ['Category', v(x.category)], ['Discipline', x.disciplines.join(', ') || '–'], ['National ranking', v(x.national_ranking)], ['BWF world ranking', v(x.bwf_ranking)], ['Biggest results', v(x.results)], ['Tournaments per year', v(x.tournaments_per_year)], ['Highest level', v(x.tournament_level)]]],
+      ['Sport & level', [['Sport', x.sports.join(', ') || '–'], ['Category', v(x.category)], ['Discipline', x.disciplines.join(', ') || '–'], ['National ranking', v(x.national_ranking)], ['BWF world ranking', v(x.bwf_ranking)], ['Biggest results', v(x.results)], ['Tournaments per year', v(x.tournaments_per_year)], ['Highest level', x.tournament_level.join(', ') || '–']]],
       ['Social media', [['Instagram', v(x.ig_link)], ['Instagram followers', v(x.ig_followers)], ['Instagram avg. views', v(x.ig_views)], ['TikTok', v(x.tt_link)], ['TikTok followers', v(x.tt_followers)], ['TikTok avg. views', v(x.tt_views)], ['Posting', v(x.posting)], ['Followers from Europe', v(x.europe_share)], ['Top countries', v(x.top_countries)]]],
       ['What you can offer', [['Reposting HUNDRED content', v(x.repost)], ['Use in ads and videos', v(x.ads)], ['Recordings and photoshoots', v(x.shoots)], ['Free use of photos and videos', v(x.free_use)]]],
       ['Current sponsor', [['Has a sponsor', v(x.has_sponsor)]].concat(x.has_sponsor === 'Yes' ? [['Brand', v(x.sponsor_brand)], ['Agreement ends', v(x.sponsor_ends)]] : [])],
@@ -308,7 +306,7 @@
       GUARDIAN_NAME: minor() ? x.guardian_name : '', GUARDIAN_EMAIL: minor() ? x.guardian_email : '',
       SPORTS: x.sports.join(', '), CATEGORY: x.category, DISCIPLINES: x.disciplines.join(', '),
       NATIONAL_RANKING: x.national_ranking, BWF_RANKING: x.bwf_ranking || '–', RESULTS: x.results,
-      TOURNAMENTS_PER_YEAR: x.tournaments_per_year, TOURNAMENT_LEVEL: x.tournament_level,
+      TOURNAMENTS_PER_YEAR: x.tournaments_per_year, TOURNAMENT_LEVEL: x.tournament_level.join(', '),
       IG_LINK: x.ig_link || '–', IG_FOLLOWERS: x.ig_followers, IG_VIEWS: x.ig_views,
       TT_LINK: x.tt_link || '–', TT_FOLLOWERS: x.tt_followers, TT_VIEWS: x.tt_views,
       TOTAL_FOLLOWERS: String((Number(x.ig_followers) || 0) + (Number(x.tt_followers) || 0)),
@@ -353,7 +351,7 @@
           var c = app.querySelector('[data-count="' + k + '"]');
           if (c) { c.textContent = el.value.length + ' / ' + el.maxLength; c.classList.toggle('is-near', el.value.length >= el.maxLength * 0.875); }
         }
-        if (k === 'category') { var junior = el.value !== 'Senior'; if (junior !== (a._lvl === 'junior')) { a._lvl = junior ? 'junior' : 'senior'; a.tournament_level = ''; render(); } }
+        if (k === 'category') { var junior = el.value !== 'Senior'; if (junior !== (a._lvl === 'junior')) { a._lvl = junior ? 'junior' : 'senior'; render(); } }
       });
       if (k === 'birth_date') el.addEventListener('change', function () { var was = !!root.querySelector('#hsa-guardian_name'); if (was !== minor()) render(); });
     });
