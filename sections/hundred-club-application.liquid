@@ -63,6 +63,11 @@
   .hca-signs .hca-opt span{display:grid;gap:10px;justify-items:center;border-radius:10px;padding:16px 12px;text-align:center}
   .hca-signs .hca-opt i{display:block;background:var(--line);border-radius:3px}
   .hca-signs .hca-opt input:checked + span i{background:var(--gold)}
+  .hca-signs .hca-opt span{align-content:end;min-height:120px}
+  .hca-signs .hca-opt i.hca-sign{background:#f9a51b;display:grid;place-items:center;overflow:hidden;border-radius:2px;opacity:.55;transition:opacity .15s}
+  .hca-signs .hca-opt input:checked + span i.hca-sign{background:#f9a51b;opacity:1;box-shadow:0 0 0 2px var(--gold)}
+  .hca-sign img{width:100%;height:100%;object-fit:contain;display:block}
+  .hca-sign b{font:italic 900 10px/1 var(--display,sans-serif);color:#000;letter-spacing:.02em}
   .hca-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
   .hca-row input[type=number]{width:140px}
 
@@ -120,20 +125,22 @@
   var THANKS_TEXT = {{ section.settings.thanks_text | json }};
   var BLANK_PRICE = '[TO BE FILLED BY HUNDRED]';
   var DESIGN_MODE = {{ request.design_mode | json }};
+  var LOGO_SQ = {% if section.settings.logo_square %}{{ section.settings.logo_square | image_url: width: 200 | json }}{% else %}''{% endif %};
+  var LOGO_WIDE = {% if section.settings.logo_wide %}{{ section.settings.logo_wide | image_url: width: 300 | json }}{% else %}''{% endif %};
 
   var STEPS = ['Club', 'Size & usage', 'Visibility in your hall', 'Reaching your members', 'Agreement', 'Contact & review'];
   var BANNERS = [
     { v: 'none', label: 'No room', w: 0, h: 0 },
-    { v: '1x2', label: '1 × 2 m', w: 24, h: 12 },
-    { v: '2x3', label: '2 × 3 m', w: 36, h: 24 },
-    { v: '3x4', label: '3 × 4 m', w: 48, h: 36 }
+    { v: '60x200', label: '60 cm × 2 m', w: 96, h: 29, logo: 'wide' },
+    { v: '100x100', label: '1 × 1 m', w: 44, h: 44, logo: 'square' },
+    { v: '180x180', label: '1.8 × 1.8 m', w: 66, h: 66, logo: 'square' }
   ];
   var REQUIRED = {
     0: ['club_name', 'club_address', 'country', 'sports'],
     1: ['members', 'courts', 'shuttles'],
     2: ['banner', 'nets', 'exclusive'],
     3: ['newsletter', 'social', 'website_logo'],
-    4: ['club_code', 'start_date', 'years'],
+    4: ['start_date', 'years'],
     5: ['first_name', 'last_name', 'email', 'phone']
   };
   function empty() {
@@ -185,13 +192,13 @@
   function stepHTML() {
     switch (step) {
       case 0: return '<h2>About your club</h2><p class="lead">Tell us who you are.</p><div class="hca-grid">' +
-        input('club_name', 'Club name', { req: 1 }) + input('club_reg', 'Registration / CVR number', { hint: 'Optional' }) +
+        input('club_name', 'Club name', { req: 1 }) +
         input('club_address', 'Address of your club / hall', { req: 1 }) + input('country', 'Country', { req: 1, auto: 'country-name' }) +
         input('website', 'Website', { hint: 'Optional' }) + input('instagram', 'Instagram', { hint: 'Optional', ph: '@yourclub' }) +
         '</div><div style="margin-top:22px">' + choice('sports', 'Which sports do you play?', [['Badminton', 'Badminton'], ['Padel', 'Padel'], ['Pickleball', 'Pickleball']], { multi: 1, req: 1, hint: 'Choose all that apply' }) + '</div>';
       case 1: return '<h2>Size & usage</h2><p class="lead">Your size and what you use in a normal season.</p>' +
         '<p class="hca-sec" style="border-top:0;padding-top:0;margin-top:0">Your club</p><div class="hca-grid">' +
-        input('members', 'Number of members', { type: 'number', req: 1 }) + input('juniors', 'Of which juniors', { type: 'number' }) + input('courts', 'Number of courts', { type: 'number', req: 1 }) +
+        input('members', 'Number of members', { type: 'number', req: 1 }) + input('juniors', 'Number of juniors', { type: 'number' }) + input('courts', 'Number of courts', { type: 'number', req: 1 }) +
         '</div><p class="hca-sec">Expected usage per year</p><div class="hca-grid">' +
         input('shuttles', 'Shuttlecocks (dozens per year)', { type: 'number', req: 1 }) + input('qty_jersey', 'Club jerseys (pcs)', { type: 'number' }) +
         input('qty_shorts', 'Shorts (pcs)', { type: 'number' }) + input('qty_training_top', 'Training tops (pcs)', { type: 'number' }) + input('qty_training_pants', 'Training pants (pcs)', { type: 'number' }) +
@@ -200,26 +207,25 @@
       case 2:
         var signs = BANNERS.map(function (b) {
           return '<label class="hca-opt"><input type="radio" name="hca-banner-{{ section.id }}" data-k="banner" value="' + b.v + '"' + (a.banner === b.v ? ' checked' : '') + '><span>' +
-            (b.w ? '<i style="width:' + b.w + 'px;height:' + b.h + 'px"></i>' : '<i style="width:24px;height:2px"></i>') + esc(b.label) + '</span></label>';
+            (b.w ? '<i class="hca-sign" style="width:' + b.w + 'px;height:' + b.h + 'px">' + ((b.logo === 'wide' ? LOGO_WIDE : LOGO_SQ) ? '<img src="' + esc(b.logo === 'wide' ? LOGO_WIDE : LOGO_SQ) + '" alt="">' : '<b>HNDRD</b>') + '</i>' : '<i style="width:24px;height:2px"></i>') + esc(b.label) + '</span></label>';
         }).join('');
         var nets = YN.map(function (o) { return '<label class="hca-opt"><input type="radio" name="hca-nets-{{ section.id }}" data-k="nets" value="' + o[0] + '"' + (a.nets === o[0] ? ' checked' : '') + '><span>' + o[1] + '</span></label>'; }).join('');
         return '<h2>Visibility in your hall</h2><p class="lead">Which HUNDRED visibility can you offer in your hall? The more you can offer, the better your offer.</p>' +
-          '<div class="hca-field"><span class="hca-lbl" id="hca-l-banner">Room for a HUNDRED banner <span class="hca-req">*</span></span><div class="hca-signs" role="radiogroup" aria-labelledby="hca-l-banner">' + signs + '</div>' +
+          '<div class="hca-field"><span class="hca-lbl" id="hca-l-banner">Room for a HUNDRED banner <span class="hca-req">*</span></span><span class="hca-hint" style="display:block;margin:-4px 0 12px">A banner hung on the wall of your hall.</span><div class="hca-signs" role="radiogroup" aria-labelledby="hca-l-banner">' + signs + '</div>' +
           (errors.banner ? '<p class="hca-err">' + esc(errors.banner) + '</p>' : '') + '</div>' +
           '<div class="hca-field"><span class="hca-lbl" id="hca-l-nets">HUNDRED logo on the nets <span class="hca-req">*</span></span><div class="hca-row"><div class="hca-opts" role="radiogroup" aria-labelledby="hca-l-nets">' + nets + '</div>' +
           (a.nets === 'yes' ? '<label class="hca-hint" for="hca-nets_count" style="margin:0">Number of nets</label><input id="hca-nets_count" data-k="nets_count" type="number" min="0" value="' + esc(a.nets_count) + '">' : '') +
           '</div>' + (errors.nets ? '<p class="hca-err">' + esc(errors.nets) + '</p>' : '') + '</div>' +
-          '<div class="hca-grid">' + input('boards', 'Courtside boards (number)', { type: 'number', hint: '0 if none' }) + '</div><div style="margin-top:22px">' +
+          '<div class="hca-grid">' + input('boards', 'Courtside boards (number)', { type: 'number', hint: 'Free-standing boards (60 cm × 2 m) placed along the court at matches and events. 0 if none.' }) + '</div><div style="margin-top:22px">' +
           choice('exclusive', 'HUNDRED as the only racket sports brand visible in the hall', YN, { req: 1 }) + '</div>';
       case 3: return '<h2>Reaching your members</h2><p class="lead">How can HUNDRED reach your members through your channels?</p>' +
-        choice('newsletter', 'HUNDRED campaigns in your member newsletter per year', [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5+', '5+']], { req: 1 }) +
-        choice('social', 'HUNDRED posts on your social media per year', [['0', '0'], ['2', '2'], ['4', '4'], ['6', '6'], ['12+', '12+']], { req: 1 }) +
+        choice('newsletter', 'HUNDRED campaigns in your member newsletter per year', [['0', '0'], ['1–4', '1–4'], ['5+', '5+']], { req: 1 }) +
+        choice('social', 'Reposts of HUNDRED content on your social media per year', [['0', '0'], ['1–5', '1–5'], ['6–10', '6–10'], ['11+', '11+']], { req: 1, hint: 'We send you the content – you simply repost it.' }) +
         choice('website_logo', 'HUNDRED logo and link on your website', YN, { req: 1 }) +
         input('extra', 'Anything else that makes your club special?', { type: 'textarea', hint: 'Tournaments, events, top players, coaches, youth programmes …' });
-      case 4: return '<h2>The agreement</h2><p class="lead">Your members can shop with a personal club code. Your club earns money on every purchase.</p>' +
-        choice('club_code', 'Do you want a club code where your club earns on members’ purchases?', YN, { req: 1 }) +
+      case 4: return '<h2>The agreement</h2><p class="lead">Every partner club gets a personal club code – your club earns money on every member purchase.</p>' +
         '<div class="hca-grid">' + input('start_date', 'Preferred start date', { type: 'date', req: 1, min: new Date().toISOString().slice(0, 10) }) + '</div><div style="margin-top:22px">' +
-        choice('years', 'Length of agreement', [['1', '1 year'], ['2', '2 years'], ['3', '3 years']], { req: 1 }) + '</div>';
+        choice('years', 'Length of agreement', [['2', '2 years'], ['3', '3 years'], ['4', '4 years']], { req: 1 }) + '</div>';
       case 5: return '<h2>Contact & review</h2><p class="lead">Who should we send the offer to?</p><div class="hca-grid">' +
         input('first_name', 'First name', { req: 1, auto: 'given-name' }) + input('last_name', 'Last name', { req: 1, auto: 'family-name' }) +
         input('role', 'Role in the club', { ph: 'e.g. Chair, Treasurer' }) + input('email', 'Email', { type: 'email', req: 1, auto: 'email' }) +
@@ -232,11 +238,11 @@
   function groups() {
     var x = a;
     return [
-      ['Club', [['Club', x.club_name], ['Registration no.', x.club_reg || '–'], ['Address', x.club_address], ['Country', x.country], ['Sports', x.sports.join(', ') || '–'], ['Website', x.website || '–'], ['Instagram', x.instagram || '–']]],
+      ['Club', [['Club', x.club_name], ['Address', x.club_address], ['Country', x.country], ['Sports', x.sports.join(', ') || '–'], ['Website', x.website || '–'], ['Instagram', x.instagram || '–']]],
       ['Size & usage', [['Members', num(x.members)], ['Juniors', num(x.juniors)], ['Courts', num(x.courts)], ['Shuttlecocks / year', x.shuttles ? x.shuttles + ' dozen' : '–'], ['Club jerseys', num(x.qty_jersey)], ['Shorts', num(x.qty_shorts)], ['Training tops', num(x.qty_training_top)], ['Training pants', num(x.qty_training_pants)], ['Current supplier', x.current_supplier || '–'], ['Agreement ends', x.supplier_ends || '–']]],
       ['Visibility', [['Banner', bannerLabel(x.banner)], ['Logo on nets', x.nets === 'yes' ? 'Yes' + (x.nets_count ? ', ' + x.nets_count + ' nets' : '') : yn(x.nets)], ['Courtside boards', num(x.boards)], ['Exclusivity', yn(x.exclusive)]]],
-      ['Members', [['Newsletter campaigns / year', num(x.newsletter)], ['Social posts / year', num(x.social)], ['Logo on website', yn(x.website_logo)], ['Other', x.extra || '–']]],
-      ['Agreement', [['Club code', yn(x.club_code)], ['Start date', x.start_date || '–'], ['Length', x.years ? x.years + (x.years === '1' ? ' year' : ' years') : '–']]]
+      ['Members', [['Newsletter campaigns / year', num(x.newsletter)], ['Reposts / year', num(x.social)], ['Logo on website', yn(x.website_logo)], ['Other', x.extra || '–']]],
+      ['Agreement', [['Start date', x.start_date || '–'], ['Length', x.years ? x.years + (x.years === '1' ? ' year' : ' years') : '–']]]
     ];
   }
   function reviewHTML() {
@@ -263,7 +269,7 @@
     return {
       SUBMITTED_AT: new Date().toISOString().slice(0, 10),
       CLUB_NAME: x.club_name,
-      CLUB_REG: x.club_reg || '–',
+      CLUB_REG: '–',
       CLUB_ADDRESS: x.club_address,
       COUNTRY: x.country,
       SPORTS: x.sports.join(', '),
@@ -287,10 +293,10 @@
       SOCIAL: x.social + ' per year',
       WEBSITE_LOGO: yn(x.website_logo),
       EXTRA: x.extra || '–',
-      CLUB_CODE: x.club_code === 'yes'
+      CLUB_CODE: true
         ? 'HUNDRED creates a personal club code for the Club’s members. The Club receives ' + BLANK_PRICE + ' % of the net sales made with the club code, paid out quarterly.'
         : 'No club code is included in this agreement.',
-      CLUB_CODE_YN: yn(x.club_code),
+      CLUB_CODE_YN: 'Yes',
       START_DATE: x.start_date,
       YEARS: yrs,
       YEARS_NUM: x.years,
@@ -362,6 +368,9 @@
   "tag": "section",
   "class": "section-hundred-club-application",
   "settings": [
+    { "type": "header", "content": "Logoer til skilte" },
+    { "type": "image_picker", "id": "logo_square", "label": "Kvadratisk logo", "info": "Vises i 1 × 1 m og 1.8 × 1.8 m" },
+    { "type": "image_picker", "id": "logo_wide", "label": "Aflangt logo", "info": "Vises i 60 cm × 2 m" },
     { "type": "text", "id": "title", "label": "Overskrift", "default": "Become a HUNDRED club" },
     { "type": "richtext", "id": "intro", "label": "Indledning", "default": "<p>Answer a few questions about your club and what you can offer. The more value we can create together, the better your partnership offer.</p><p>It takes about 5 minutes. We'll send your personal offer by email.</p>" },
     { "type": "textarea", "id": "benefits", "label": "Fordele (én pr. linje)", "info": "Vises som små kort. Skriv ingen priser eller procenter her.", "default": "Club prices on shuttlecocks\nClub apparel with the HUNDRED logo\nYour club earns on members' purchases" },
