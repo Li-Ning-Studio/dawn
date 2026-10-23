@@ -48,6 +48,8 @@
   .hsa input[type=text],.hsa input[type=email],.hsa input[type=tel],.hsa input[type=number],.hsa input[type=date],.hsa textarea{
     width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;min-height:48px;box-shadow:none}
   .hsa textarea{min-height:96px;resize:vertical}
+  .hsa-count{margin-top:6px;text-align:right;font-size:12px;font-variant-numeric:tabular-nums;color:var(--muted)}
+  .hsa-count.is-near{color:var(--gold);font-weight:700}
   .hsa input:focus,.hsa textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:transparent}
   .hsa .invalid{border-color:var(--warn)!important}
   .hsa-err{color:var(--warn);font-size:13px;margin:0}
@@ -164,7 +166,8 @@
     o = o || {};
     var t = o.type || 'text';
     var field = t === 'textarea'
-      ? '<textarea id="hsa-' + id + '" data-k="' + id + '" rows="' + (o.rows || 4) + '" class="' + (errors[id] ? 'invalid' : '') + '">' + esc(a[id]) + '</textarea>'
+      ? '<textarea id="hsa-' + id + '" data-k="' + id + '" rows="' + (o.rows || 4) + '"' + (o.limit ? ' maxlength="' + o.limit + '"' : '') + ' class="' + (errors[id] ? 'invalid' : '') + '">' + esc(a[id]) + '</textarea>' +
+        (o.limit ? '<div class="hsa-count' + (String(a[id]).length >= o.limit * 0.875 ? ' is-near' : '') + '" data-count="' + id + '" aria-live="polite">' + String(a[id]).length + ' / ' + o.limit + '</div>' : '')
       : '<input id="hsa-' + id + '" data-k="' + id + '" type="' + t + '"' + (t === 'number' ? ' min="0" inputmode="numeric"' : '') +
         (o.auto ? ' autocomplete="' + o.auto + '"' : '') + (o.max ? ' max="' + o.max + '"' : '') + ' value="' + esc(a[id]) + '" class="' + (errors[id] ? 'invalid' : '') + '"' +
         (o.ph ? ' placeholder="' + esc(o.ph) + '"' : '') + '>';
@@ -201,7 +204,7 @@
           input('guardian_name', 'Parent / guardian name', { req: 1 }) + input('guardian_email', 'Parent / guardian email', { type: 'email', req: 1 }) + '</div>' : '');
       case 1: return '<h2>Sport & level</h2><p class="lead">Your sport and how good you are.</p>' +
         choice('sports', 'Sport', [['Badminton', 'Badminton'], ['Padel', 'Padel'], ['Pickleball', 'Pickleball']], { multi: 1, req: 1, hint: 'Choose all that apply' }) +
-        choice('category', 'Category', [['U13', 'U13'], ['U15', 'U15'], ['U17', 'U17'], ['U19', 'U19'], ['Senior', 'Senior']], { req: 1 }) +
+        choice('category', 'Category', [['U15', 'U15'], ['U17', 'U17'], ['U19', 'U19'], ['Senior', 'Senior']], { req: 1 }) +
         choice('disciplines', 'Discipline', [['Singles', 'Singles'], ['Doubles', 'Doubles'], ['Mixed', 'Mixed']], { multi: 1, req: 1, hint: 'Choose all that apply' }) +
         '<div class="hsa-grid">' +
         input('national_ranking', 'National ranking in your country', { req: 1, ph: 'e.g. #4 singles, #2 mixed' }) +
@@ -209,7 +212,9 @@
         '</div><div style="margin-top:22px">' +
         input('results', 'Biggest results in the last 2 years', { type: 'textarea', req: 1, hint: 'Titles, national team, international tournaments …' }) +
         choice('tournaments_per_year', 'How many tournaments do you play per year?', [['0–5', '0–5'], ['6–10', '6–10'], ['11–20', '11–20'], ['20+', '20+']], { req: 1 }) +
-        choice('tournament_level', 'Highest level of tournaments you play', [['Local / regional', 'Local / regional'], ['National', 'National'], ['International', 'International'], ['World tour / pro circuit', 'World tour / pro circuit']], { req: 1 }) +
+        (a.category && a.category !== 'Senior'
+          ? choice('tournament_level', 'Highest level of youth tournaments you play', [['Local / regional', 'Local / regional'], ['National', 'National'], ['International junior', 'International junior']], { req: 1 })
+          : choice('tournament_level', 'Highest level of tournaments you play', [['International Future Series', 'International Future Series'], ['International Series', 'International Series'], ['International Challenge', 'International Challenge'], ['World Tour', 'World Tour']], { req: 1, hint: a.category ? '' : 'Choose your category above first' })) +
         '</div>';
       case 2: return '<h2>Social media</h2>' +
         '<div class="hsa-note"><b>This step is very important to us.</b> We care a lot about social media and about reaching players across Europe. Fill in what you have. The fields are optional, but the more you share, the better we can assess your application.</div>' +
@@ -220,24 +225,23 @@
         input('tt_link', 'Link to your TikTok', { ph: 'https://tiktok.com/@…' }) + input('tt_followers', 'Followers', { type: 'number' }) + input('tt_views', 'Average views per video', { type: 'number' }) +
         '</div></div>' +
         choice('posting', 'How often do you post?', [['Daily', 'Daily'], ['A few times a week', 'A few times a week'], ['Weekly', 'Weekly'], ['Monthly', 'Monthly'], ['Rarely', 'Rarely']]) +
-        '<p class="hsa-sec">Your audience (if you can see it)</p><p class="lead" style="margin-bottom:18px">With a professional (creator or business) account you can see this under Insights → Audience. If you can’t see it, just skip it.</p>' +
-        choice('europe_share', 'Share of your followers from Europe', [['Under 25%', 'Under 25%'], ['25–50%', '25–50%'], ['50–75%', '50–75%'], ['Over 75%', 'Over 75%'], ['Don’t know', 'Don’t know']]) +
-        input('top_countries', 'Top 3 countries among your followers', { ph: 'e.g. Denmark, Germany, Sweden' });
+        '<p class="hsa-sec">Your audience (your best estimate)</p><p class="lead" style="margin-bottom:18px">Just give us your best guess – it doesn’t have to be exact.</p>' +
+        choice('europe_share', 'Roughly how many of your followers are from Europe?', [['Under 25%', 'Under 25%'], ['25–50%', '25–50%'], ['50–75%', '50–75%'], ['Over 75%', 'Over 75%'], ['Don’t know', 'Don’t know']]) +
+        input('top_countries', 'Top 3 countries among your followers', { hint: 'Your best guess', ph: 'e.g. Denmark, Germany, Sweden' });
       case 3: return '<h2>What you can offer</h2><p class="lead">The more value you can create with HUNDRED, the better the partnership we can offer.</p>' +
         choice('repost', 'Are you open to reposting HUNDRED content?', [['Yes', 'Yes, happy to'], ['Sometimes', 'Sometimes'], ['No', 'No']], { req: 1,
           hint: 'For example campaigns, product launches and videos from our new YouTube project. We only ask you to share things that are actually cool to post.' }) +
         choice('ads', 'May HUNDRED use you in ads, videos and on social media?', YN, { req: 1 }) +
         choice('shoots', 'Are you ready to take part in video recordings and photoshoots?', YN, { req: 1 }) +
-        choice('free_use', 'May HUNDRED freely use photos and videos of you during the agreement?', YN, { req: 1 }) +
-        choice('events', 'If we host an event (1–2 times a year), are you open to taking part?', [['Yes', 'Yes'], ['Maybe', 'Maybe'], ['No', 'No']], { req: 1 });
+        choice('free_use', 'May HUNDRED freely use photos and videos of you during the agreement?', YN, { req: 1 });
       case 4: return '<h2>Current sponsor</h2><p class="lead">This helps us plan when a partnership could start.</p>' +
         choice('has_sponsor', 'Do you have a sponsor today?', YN, { req: 1 }) +
         (a.has_sponsor === 'Yes' ? '<div class="hsa-grid">' + input('sponsor_brand', 'Which brand?', { req: 1 }) + input('sponsor_ends', 'When does the agreement end?', { req: 1, ph: 'e.g. June 2027' }) + '</div>' : '');
-      case 5: return '<h2>Your story</h2><p class="lead">This is your application. Take your time and tell us who you are.</p>' +
-        input('story', 'Who are you, and what is your story?', { type: 'textarea', req: 1, rows: 6 }) +
-        input('why_hundred', 'Why HUNDRED?', { type: 'textarea', req: 1 }) +
-        input('goals', 'What are your goals for the next 2–3 years?', { type: 'textarea', req: 1 }) +
-        input('ambassador', 'What makes you a good ambassador for HUNDRED?', { type: 'textarea', req: 1 });
+      case 5: return '<h2>Your story</h2><p class="lead">Keep it short and personal – max 4–5 lines per answer. We’d rather hear it in your own words.</p>' +
+        input('story', 'Who are you, and what is your story?', { type: 'textarea', req: 1, rows: 5, limit: 400 }) +
+        input('why_hundred', 'Why HUNDRED?', { type: 'textarea', req: 1, rows: 5, limit: 400 }) +
+        input('goals', 'What are your goals for the next 2–3 years?', { type: 'textarea', req: 1, rows: 5, limit: 400 }) +
+        input('ambassador', 'What makes you a good ambassador for HUNDRED?', { type: 'textarea', req: 1, rows: 5, limit: 400 });
       case 6: return '<h2>Review & send</h2><p class="lead">Check your answers before you send.</p>' + reviewHTML() +
         '<div style="margin-top:26px">' + check('consent', 'I confirm that the information I have given is correct.') +
         (minor() ? check('guardian_consent', 'My parent or guardian knows about and agrees to this application.') : '') + '</div>' +
@@ -253,7 +257,7 @@
       ['About you', about],
       ['Sport & level', [['Sport', x.sports.join(', ') || '–'], ['Category', v(x.category)], ['Discipline', x.disciplines.join(', ') || '–'], ['National ranking', v(x.national_ranking)], ['BWF world ranking', v(x.bwf_ranking)], ['Biggest results', v(x.results)], ['Tournaments per year', v(x.tournaments_per_year)], ['Highest level', v(x.tournament_level)]]],
       ['Social media', [['Instagram', v(x.ig_link)], ['Instagram followers', v(x.ig_followers)], ['Instagram avg. views', v(x.ig_views)], ['TikTok', v(x.tt_link)], ['TikTok followers', v(x.tt_followers)], ['TikTok avg. views', v(x.tt_views)], ['Posting', v(x.posting)], ['Followers from Europe', v(x.europe_share)], ['Top countries', v(x.top_countries)]]],
-      ['What you can offer', [['Reposting HUNDRED content', v(x.repost)], ['Use in ads and videos', v(x.ads)], ['Recordings and photoshoots', v(x.shoots)], ['Free use of photos and videos', v(x.free_use)], ['Events', v(x.events)]]],
+      ['What you can offer', [['Reposting HUNDRED content', v(x.repost)], ['Use in ads and videos', v(x.ads)], ['Recordings and photoshoots', v(x.shoots)], ['Free use of photos and videos', v(x.free_use)]]],
       ['Current sponsor', [['Has a sponsor', v(x.has_sponsor)]].concat(x.has_sponsor === 'Yes' ? [['Brand', v(x.sponsor_brand)], ['Agreement ends', v(x.sponsor_ends)]] : [])],
       ['Your story', [['Who you are', v(x.story)], ['Why HUNDRED', v(x.why_hundred)], ['Goals', v(x.goals)], ['Good ambassador because', v(x.ambassador)]]]
     ];
@@ -268,7 +272,7 @@
     0: ['first_name', 'last_name', 'birth_date', 'nationality', 'country', 'city', 'email', 'phone'],
     1: ['sports', 'category', 'disciplines', 'national_ranking', 'results', 'tournaments_per_year', 'tournament_level'],
     2: [],
-    3: ['repost', 'ads', 'shoots', 'free_use', 'events'],
+    3: ['repost', 'ads', 'shoots', 'free_use'],
     4: ['has_sponsor'],
     5: ['story', 'why_hundred', 'goals', 'ambassador'],
     6: ['consent']
@@ -309,7 +313,7 @@
       TT_LINK: x.tt_link || '–', TT_FOLLOWERS: x.tt_followers, TT_VIEWS: x.tt_views,
       TOTAL_FOLLOWERS: String((Number(x.ig_followers) || 0) + (Number(x.tt_followers) || 0)),
       POSTING: x.posting || '–', EUROPE_SHARE: x.europe_share || '–', TOP_COUNTRIES: x.top_countries || '–',
-      REPOST: x.repost, ADS: x.ads, SHOOTS: x.shoots, FREE_USE: x.free_use, EVENTS: x.events,
+      REPOST: x.repost, ADS: x.ads, SHOOTS: x.shoots, FREE_USE: x.free_use, EVENTS: '–',
       HAS_SPONSOR: x.has_sponsor, SPONSOR_BRAND: x.has_sponsor === 'Yes' ? x.sponsor_brand : '–', SPONSOR_ENDS: x.has_sponsor === 'Yes' ? x.sponsor_ends : '–',
       STORY: x.story, WHY_HUNDRED: x.why_hundred, GOALS: x.goals, AMBASSADOR: x.ambassador
     };
@@ -345,6 +349,11 @@
         } else a[k] = el.value;
         if (errors[k]) { delete errors[k]; el.classList.remove('invalid'); }
         if (k === 'has_sponsor') render();
+        if (el.maxLength > 0 && el.tagName === 'TEXTAREA') {
+          var c = app.querySelector('[data-count="' + k + '"]');
+          if (c) { c.textContent = el.value.length + ' / ' + el.maxLength; c.classList.toggle('is-near', el.value.length >= el.maxLength * 0.875); }
+        }
+        if (k === 'category') { var junior = el.value !== 'Senior'; if (junior !== (a._lvl === 'junior')) { a._lvl = junior ? 'junior' : 'senior'; a.tournament_level = ''; render(); } }
       });
       if (k === 'birth_date') el.addEventListener('change', function () { var was = !!root.querySelector('#hsa-guardian_name'); if (was !== minor()) render(); });
     });
