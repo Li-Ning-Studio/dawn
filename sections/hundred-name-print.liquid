@@ -115,7 +115,20 @@
   <div class="hnp-prev" data-more hidden aria-hidden="true">
     {%- liquid
       assign shirt = product.metafields.custom.shirt_color.value | default: section.settings.shirt_color
-      assign ink = product.metafields.custom.print_color.value | default: section.settings.print_color
+      comment
+        Trykket er sort eller hvidt – det der står tydeligst på trøjen.
+        Auto: lys trøje = sort tryk, mørk trøje = hvidt tryk.
+      endcomment
+      assign shirt_br = shirt | color_brightness
+      assign ink = '#ffffff'
+      if section.settings.print_mode == 'black'
+        assign ink = '#0a0a0b'
+      elsif section.settings.print_mode == 'auto' and shirt_br > 150
+        assign ink = '#0a0a0b'
+      endif
+      if product.metafields.custom.print_color.value != blank
+        assign ink = product.metafields.custom.print_color.value
+      endif
       assign back = product.metafields.custom.back_image.value | default: section.settings.back_image
     -%}
     <svg class="hnp-shirt" viewBox="0 0 300 300" style="color:{{ ink }}">
@@ -137,7 +150,7 @@
       <text x="150" y="117" font-size="23" fill="currentColor" data-pv-country hidden></text>
       <g data-pv-logo hidden><path fill="currentColor" transform="translate(0 0) scale(.022)" d="M1347.62,587.22c0,0-101.04-3.54-155.38,1.77c-45.26,4.42-92.29,21.78-146.07,48.64c-73.03,36.48-174.86,89.55-174.86,89.55l532.88,263.67h-280.81L733.54,799.04L350.9,990.85H61.86c0,0,680.94-339.96,831.87-413.83c100.03-48.97,181.76-67.87,291.38-67.87h253.04L1347.62,587.22z"/></g>
     </svg>
-    <small><b>{{ section.settings.label_preview | escape }}</b>{% if section.settings.label_disclaimer != blank %}<br>{{ section.settings.label_disclaimer | escape }}{% endif %}</small>
+    <small><b>{{ section.settings.label_preview | escape }}</b>{% if section.settings.label_note != blank %}<br>{{ section.settings.label_note | escape }}{% endif %}</small>
   </div>
 
   <p class="hnp-sum" data-more hidden>{{ section.settings.label_adds | escape }} <b data-total></b></p>
@@ -329,8 +342,8 @@
 
     { "type": "header", "content": "Forhåndsvisning" },
     { "type": "image_picker", "id": "back_image", "label": "Billede af trøjens ryg (uden tryk)", "info": "Kvadratisk billede. Kan sættes pr. produkt med metafeltet custom.back_image (fil). Tom = tegnet trøje i farven nedenfor." },
-    { "type": "color", "id": "shirt_color", "label": "Farve på trøjen", "default": "#1f2a44", "info": "Kan sættes pr. produkt med metafeltet custom.shirt_color (farve)." },
-    { "type": "color", "id": "print_color", "label": "Farve på trykket", "default": "#ffffff", "info": "Kan sættes pr. produkt med metafeltet custom.print_color (farve). Fx sort tryk på hvid trøje." },
+    { "type": "color", "id": "shirt_color", "label": "Farve på trøjen", "default": "#1f2a44", "info": "Bruges til den tegnede trøje og til Auto-farven på trykket. Kan sættes pr. produkt med metafeltet custom.shirt_color (farve)." },
+    { "type": "select", "id": "print_mode", "label": "Farve på trykket", "options": [{ "value": "auto", "label": "Auto (sort på lyse trøjer, hvid på mørke)" }, { "value": "white", "label": "Altid hvid" }, { "value": "black", "label": "Altid sort" }], "default": "auto", "info": "Auto bruger farven på trøjen ovenfor. Kan overstyres pr. produkt med metafeltet custom.print_color (farve)." },
 
     { "type": "header", "content": "Tekster" },
     { "type": "text", "id": "label_print", "label": "Overskrift", "default": "Name print" },
@@ -344,7 +357,7 @@
     { "type": "text", "id": "label_country", "label": "Overskrift land", "default": "Choose country" },
     { "type": "text", "id": "label_choose", "label": "Tom valgmulighed", "default": "-- Please choose --" },
     { "type": "text", "id": "label_preview", "label": "Overskrift under forhåndsvisning", "default": "Preview – back of the shirt" },
-    { "type": "text", "id": "label_disclaimer", "label": "Info om skitsen", "default": "Illustration only – the final print may vary slightly in size, placement and colour." },
+    { "type": "textarea", "id": "label_note", "label": "Info om skitsen", "default": "This is just an illustration – the size may differ slightly. Use it as a guide to how your print will look. The print is black or white, depending on what stands out best on your shirt." },
     { "type": "text", "id": "label_adds", "label": "Pris-tekst", "default": "The print adds" },
     { "type": "text", "id": "label_error_name", "label": "Fejl: navn", "default": "Please write the name for the print." },
     { "type": "text", "id": "label_error_country", "label": "Fejl: land", "default": "Please choose a country." }
