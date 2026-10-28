@@ -31,6 +31,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "variant_picker": {
@@ -46,6 +47,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
@@ -213,7 +215,7 @@
         "max_chars": 15,
         "countries": "Albania\nAndorra\nAustria\nBelarus\nBelgium\nBosnia and Herzegovina\nBulgaria\nCroatia\nCyprus\nCzech Republic\nDenmark\nEngland\nEstonia\nFaroe Islands\nFinland\nFrance\nGermany\nGibraltar\nGreece\nGreenland\nHungary\nIceland\nIreland\nItaly\nKosovo\nLatvia\nLiechtenstein\nLithuania\nLuxembourg\nMalta\nMoldova\nMonaco\nMontenegro\nNetherlands\nNorth Macedonia\nNorthern Ireland\nNorway\nPoland\nPortugal\nRomania\nSan Marino\nScotland\nSerbia\nSlovakia\nSlovenia\nSpain\nSweden\nSwitzerland\nUkraine\nUnited Kingdom\nWales",
         "shirt_color": "#1f2a44",
-        "print_color": "#ffffff",
+        "print_mode": "auto",
         "label_print": "Name print",
         "label_no": "No thanks",
         "label_yes": "Yes please",
@@ -225,6 +227,7 @@
         "label_country": "Choose country",
         "label_choose": "-- Please choose --",
         "label_preview": "Preview – back of the shirt",
+        "label_note": "This is just an illustration – the size may differ slightly. Use it as a guide to how your print will look. The print is black or white, depending on what stands out best on your shirt.",
         "label_adds": "The print adds",
         "label_error_name": "Please write the name for the print.",
         "label_error_country": "Please choose a country."
