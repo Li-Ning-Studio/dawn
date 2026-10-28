@@ -204,6 +204,33 @@
         "images_per_card": 4,
         "exclude": "all, frontpage, new, new-arrivals, sale, bestsellers"
       }
+    },
+    "hundred_name_print_HCyd7P": {
+      "type": "hundred-name-print",
+      "name": "HUNDRED Navnetryk",
+      "settings": {
+        "name_product": "name-print",
+        "country_product": "country-logo-print",
+        "logo_product": "logo-print",
+        "max_chars": 15,
+        "countries": "Denmark\nSweden\nNorway\nFinland\nIceland\nGermany\nNetherlands\nBelgium\nLuxembourg\nFrance\nSpain\nPortugal\nItaly\nSwitzerland\nAustria\nPoland\nCzech Republic\nSlovakia\nHungary\nSlovenia\nCroatia\nSerbia\nBulgaria\nRomania\nGreece\nCyprus\nMalta\nIreland\nUnited Kingdom\nEstonia\nLatvia\nLithuania\nUkraine\nTurkey\nIsrael\nUnited States\nCanada\nAustralia\nNew Zealand\nIndia\nIndonesia\nMalaysia\nSingapore\nThailand\nChina\nHong Kong\nTaiwan\nJapan\nSouth Korea",
+        "shirt_color": "#1f2a44",
+        "print_color": "#ffffff",
+        "label_print": "Name print",
+        "label_no": "No thanks",
+        "label_yes": "Yes please",
+        "label_name": "Your name",
+        "placeholder": "YOUR NAME",
+        "label_extra": "Add country & HUNDRED logo",
+        "label_country_logo": "Country + HUNDRED logo",
+        "label_logo_only": "HUNDRED logo only",
+        "label_country": "Choose country",
+        "label_choose": "-- Please choose --",
+        "label_preview": "Preview – back of the shirt",
+        "label_adds": "The print adds",
+        "label_error_name": "Please write the name for the print.",
+        "label_error_country": "Please choose a country."
+      }
     }
   },
   "order": [
@@ -213,6 +240,7 @@
     "pairs-well-with",
     "related-products",
     "recently-viewed",
-    "hundred_collection_row_84YUcg"
+    "hundred_collection_row_84YUcg",
+    "hundred_name_print_HCyd7P"
   ]
 }
