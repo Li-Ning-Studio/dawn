@@ -56,7 +56,7 @@
   /* Forhåndsvisning af ryggen */
   .hnp-prev{border-radius:14px;background:var(--panel);padding:16px 16px 12px;display:grid;justify-items:center;gap:8px}
   .hnp-prev:has(svg image){background:#fff;border:1px solid var(--line)}
-  .hnp-prev small{font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .hnp-prev small{font:500 12px/1.45 var(--body);letter-spacing:0;text-align:center;color:var(--muted);max-width:34ch}
   .hnp-shirt{width:min(100%,320px);height:auto;display:block}
   .hnp-shirt text{font-family:"Oswald","Arial Narrow",Impact,sans-serif;font-weight:600;text-transform:uppercase;text-anchor:middle}
   .hnp-sum{margin:0;font-size:14px;color:var(--soft)}
@@ -324,7 +324,7 @@
     { "type": "range", "id": "max_chars", "label": "Maks. antal tegn i navnet", "min": 5, "max": 25, "step": 1, "default": 15 },
 
     { "type": "header", "content": "Lande" },
-    { "type": "textarea", "id": "countries", "label": "Lande (én pr. linje, på engelsk)", "default": "Denmark\nSweden\nNorway\nFinland\nIceland\nGermany\nNetherlands\nBelgium\nLuxembourg\nFrance\nSpain\nPortugal\nItaly\nSwitzerland\nAustria\nPoland\nCzech Republic\nSlovakia\nHungary\nSlovenia\nCroatia\nSerbia\nBulgaria\nRomania\nGreece\nCyprus\nMalta\nIreland\nUnited Kingdom\nEstonia\nLatvia\nLithuania\nUkraine\nTurkey\nIsrael\nUnited States\nCanada\nAustralia\nNew Zealand\nIndia\nIndonesia\nMalaysia\nSingapore\nThailand\nChina\nHong Kong\nTaiwan\nJapan\nSouth Korea" },
+    { "type": "textarea", "id": "countries", "label": "Lande (én pr. linje, på engelsk)", "default": "Albania\nAndorra\nAustria\nBelarus\nBelgium\nBosnia and Herzegovina\nBulgaria\nCroatia\nCyprus\nCzech Republic\nDenmark\nEngland\nEstonia\nFaroe Islands\nFinland\nFrance\nGermany\nGibraltar\nGreece\nGreenland\nHungary\nIceland\nIreland\nItaly\nKosovo\nLatvia\nLiechtenstein\nLithuania\nLuxembourg\nMalta\nMoldova\nMonaco\nMontenegro\nNetherlands\nNorth Macedonia\nNorthern Ireland\nNorway\nPoland\nPortugal\nRomania\nSan Marino\nScotland\nSerbia\nSlovakia\nSlovenia\nSpain\nSweden\nSwitzerland\nUkraine\nUnited Kingdom\nWales" },
 
     { "type": "header", "content": "Forhåndsvisning" },
     { "type": "image_picker", "id": "back_image", "label": "Billede af trøjens ryg (uden tryk)", "info": "Kvadratisk billede. Kan sættes pr. produkt med metafeltet custom.back_image (fil). Tom = tegnet trøje i farven nedenfor." },
@@ -342,7 +342,7 @@
     { "type": "text", "id": "label_logo_only", "label": "Kun logo", "default": "HUNDRED logo only" },
     { "type": "text", "id": "label_country", "label": "Overskrift land", "default": "Choose country" },
     { "type": "text", "id": "label_choose", "label": "Tom valgmulighed", "default": "-- Please choose --" },
-    { "type": "text", "id": "label_preview", "label": "Tekst under forhåndsvisning", "default": "Preview – back of the shirt" },
+    { "type": "text", "id": "label_preview", "label": "Tekst under forhåndsvisning", "default": "Illustration only – the final print may vary slightly in size, placement and colour." },
     { "type": "text", "id": "label_adds", "label": "Pris-tekst", "default": "The print adds" },
     { "type": "text", "id": "label_error_name", "label": "Fejl: navn", "default": "Please write the name for the print." },
     { "type": "text", "id": "label_error_country", "label": "Fejl: land", "default": "Please choose a country." }
