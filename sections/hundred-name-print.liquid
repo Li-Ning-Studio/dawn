@@ -55,6 +55,7 @@
 
   /* Forhåndsvisning af ryggen */
   .hnp-prev{border-radius:14px;background:var(--panel);padding:16px 16px 12px;display:grid;justify-items:center;gap:8px}
+  .hnp-prev:has(svg image){background:#fff;border:1px solid var(--line)}
   .hnp-prev small{font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
   .hnp-shirt{width:min(100%,320px);height:auto;display:block}
   .hnp-shirt text{font-family:"Oswald","Arial Narrow",Impact,sans-serif;font-weight:600;text-transform:uppercase;text-anchor:middle}
@@ -114,21 +115,26 @@
     {%- liquid
       assign shirt = product.metafields.custom.shirt_color.value | default: section.settings.shirt_color
       assign ink = product.metafields.custom.print_color.value | default: section.settings.print_color
+      assign back = product.metafields.custom.back_image.value | default: section.settings.back_image
     -%}
-    <svg class="hnp-shirt" viewBox="0 0 300 320" style="color:{{ ink }}">
+    <svg class="hnp-shirt" viewBox="0 0 300 300" style="color:{{ ink }}">
       <defs>
         <linearGradient id="hnp-sh-{{ section.id }}" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0" stop-color="#000" stop-opacity=".12"/><stop offset=".22" stop-color="#000" stop-opacity="0"/>
-          <stop offset=".78" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".12"/>
+          <stop offset="0" stop-color="#000" stop-opacity=".18"/><stop offset=".3" stop-color="#fff" stop-opacity=".04"/>
+          <stop offset=".7" stop-color="#fff" stop-opacity=".04"/><stop offset="1" stop-color="#000" stop-opacity=".18"/>
         </linearGradient>
-        <path id="hnp-arc-{{ section.id }}" d="M80 100 Q150 100 220 100" data-pv-arc/>
+        <path id="hnp-arc-{{ section.id }}" d="M40 92 L260 92"/>
       </defs>
-      <path d="M94 28C114 40 186 40 206 28L260 52 294 128 254 146 234 112V302Q150 312 66 302V112L46 146 6 128 40 52Z" fill="{{ shirt }}"/>
-      <path d="M94 28C114 40 186 40 206 28L260 52 294 128 254 146 234 112V302Q150 312 66 302V112L46 146 6 128 40 52Z" fill="url(#hnp-sh-{{ section.id }})"/>
-      <path d="M94 28C114 40 186 40 206 28M100 32 66 112M200 32 234 112" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="2"/>
-      <text font-size="40" fill="currentColor" data-pv-name><textPath href="#hnp-arc-{{ section.id }}" startOffset="50%">{{ section.settings.placeholder | escape }}</textPath></text>
-      <text x="150" y="134" font-size="27" fill="currentColor" data-pv-country hidden></text>
-      <g data-pv-logo hidden><path fill="currentColor" transform="translate(0 0) scale(.04)" d="M1347.62,587.22c0,0-101.04-3.54-155.38,1.77c-45.26,4.42-92.29,21.78-146.07,48.64c-73.03,36.48-174.86,89.55-174.86,89.55l532.88,263.67h-280.81L733.54,799.04L350.9,990.85H61.86c0,0,680.94-339.96,831.87-413.83c100.03-48.97,181.76-67.87,291.38-67.87h253.04L1347.62,587.22z"/></g>
+      {%- if back != blank -%}
+        <image href="{{ back | image_url: width: 900 }}" x="0" y="0" width="300" height="300" preserveAspectRatio="xMidYMid slice"/>
+      {%- else -%}
+        <path d="M118 14Q150 22 182 14L232 40Q262 55 272 80L280 128 238 136 228 108V292Q150 298 72 292V108L62 136 20 128 28 80Q38 55 68 40Z" fill="{{ shirt }}"/>
+        <path d="M118 14Q150 22 182 14L232 40Q262 55 272 80L280 128 238 136 228 108V292Q150 298 72 292V108L62 136 20 128 28 80Q38 55 68 40Z" fill="url(#hnp-sh-{{ section.id }})"/>
+        <path d="M118 14Q150 22 182 14M68 40 72 108M232 40 228 108" fill="none" stroke="#000" stroke-opacity=".15" stroke-width="1.5"/>
+      {%- endif -%}
+      <text font-size="33" letter-spacing="-0.5" fill="currentColor" data-pv-name><textPath href="#hnp-arc-{{ section.id }}" startOffset="50%">{{ section.settings.placeholder | escape }}</textPath></text>
+      <text x="150" y="117" font-size="23" fill="currentColor" data-pv-country hidden></text>
+      <g data-pv-logo hidden><path fill="currentColor" transform="translate(0 0) scale(.022)" d="M1347.62,587.22c0,0-101.04-3.54-155.38,1.77c-45.26,4.42-92.29,21.78-146.07,48.64c-73.03,36.48-174.86,89.55-174.86,89.55l532.88,263.67h-280.81L733.54,799.04L350.9,990.85H61.86c0,0,680.94-339.96,831.87-413.83c100.03-48.97,181.76-67.87,291.38-67.87h253.04L1347.62,587.22z"/></g>
     </svg>
     <small>{{ section.settings.label_preview | escape }}</small>
   </div>
@@ -229,16 +235,19 @@
   function draw(name, country, logo){
     var tp = pvName.querySelector('textPath');
     /* Altid lige tekst. Lange navne bliver lidt mindre og trykkes sammen */
-    pvName.setAttribute('font-size', Math.max(28, 40 - Math.max(0, name.length - 6) * 2));
+    /* Samme størrelse som VAN LEEUWEN for alle navne. Meget lange navne bliver lidt mindre og tættere */
+    var extra = Math.max(0, name.length - 11);
+    pvName.setAttribute('font-size', Math.max(28, 33 - extra));
+    pvName.setAttribute('letter-spacing', extra > 0 ? -1 : -0.5);
     tp.textContent = name;
-    fit(tp, 150);
-    var y = 108;
+    fit(tp, 140);
+    var y = 92;
     show(pvCountry, !!country);
-    if (country) { pvCountry.textContent = country; pvCountry.setAttribute('y', y + 30); fit(pvCountry, 130); y += 34; }
+    if (country) { pvCountry.textContent = country; pvCountry.setAttribute('y', y + 25); fit(pvCountry, 120); y += 25; }
     show(pvLogo, logo);
     if (logo) {
-      var s = .046, w = 1377 * s;
-      pvLogo.firstElementChild.setAttribute('transform', 'translate(' + (150 - w / 2 - 61 * s) + ' ' + (y + 8 - 509 * s) + ') scale(' + s + ')');
+      var s = .036, w = 1377 * s;
+      pvLogo.firstElementChild.setAttribute('transform', 'translate(' + (150 - w / 2 - 61 * s) + ' ' + (y + 7 - 509 * s) + ') scale(' + s + ')');
     }
   }
 
@@ -318,6 +327,7 @@
     { "type": "textarea", "id": "countries", "label": "Lande (én pr. linje, på engelsk)", "default": "Denmark\nSweden\nNorway\nFinland\nIceland\nGermany\nNetherlands\nBelgium\nLuxembourg\nFrance\nSpain\nPortugal\nItaly\nSwitzerland\nAustria\nPoland\nCzech Republic\nSlovakia\nHungary\nSlovenia\nCroatia\nSerbia\nBulgaria\nRomania\nGreece\nCyprus\nMalta\nIreland\nUnited Kingdom\nEstonia\nLatvia\nLithuania\nUkraine\nTurkey\nIsrael\nUnited States\nCanada\nAustralia\nNew Zealand\nIndia\nIndonesia\nMalaysia\nSingapore\nThailand\nChina\nHong Kong\nTaiwan\nJapan\nSouth Korea" },
 
     { "type": "header", "content": "Forhåndsvisning" },
+    { "type": "image_picker", "id": "back_image", "label": "Billede af trøjens ryg (uden tryk)", "info": "Kvadratisk billede. Kan sættes pr. produkt med metafeltet custom.back_image (fil). Tom = tegnet trøje i farven nedenfor." },
     { "type": "color", "id": "shirt_color", "label": "Farve på trøjen", "default": "#1f2a44", "info": "Kan sættes pr. produkt med metafeltet custom.shirt_color (farve)." },
     { "type": "color", "id": "print_color", "label": "Farve på trykket", "default": "#ffffff", "info": "Kan sættes pr. produkt med metafeltet custom.print_color (farve). Fx sort tryk på hvid trøje." },
 
