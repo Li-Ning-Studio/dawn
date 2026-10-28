@@ -204,6 +204,27 @@
         "images_per_card": 4,
         "exclude": "all, frontpage, new, new-arrivals, sale, bestsellers"
       }
+    },
+    "hundred_stringing_B7yTaz": {
+      "type": "hundred-stringing",
+      "name": "HUNDRED Opstrengning",
+      "settings": {
+        "service_product": "racket-stringing",
+        "free": false,
+        "strings": "String 1 White – 0.66 mm\nString 1 Yellow – 0.66 mm\nString 2 White – 0.68 mm\nString 2 Black – 0.68 mm",
+        "kg_min": 10,
+        "kg_max": 15,
+        "kg_default": 11,
+        "label_stringing": "Stringing",
+        "label_no": "No thanks – unstrung",
+        "label_yes": "Yes please, string my racket",
+        "label_free": "FREE",
+        "note": "Strung by our professional stringers. Ships within 2–3 business days.",
+        "label_string": "Choose string",
+        "label_tension": "Choose tension",
+        "label_choose": "-- Please choose --",
+        "label_error": "Please choose string and tension."
+      }
     }
   },
   "order": [
@@ -213,6 +234,7 @@
     "pairs-well-with",
     "related-products",
     "recently-viewed",
-    "hundred_collection_row_84YUcg"
+    "hundred_collection_row_84YUcg",
+    "hundred_stringing_B7yTaz"
   ]
 }
