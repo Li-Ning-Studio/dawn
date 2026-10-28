@@ -1,0 +1,343 @@
+{%- comment -%}
+  HUNDRED – Navnetryk på tøj
+  Læg sektionen på produktskabelonen for tøj med navnetryk.
+  Den flytter sig selv ind over "Add to cart" i produktsektionen.
+  Ja → kunden skriver navn og vælger evt. land + HUNDRED-logo eller kun logo.
+  Valgene gemmes som noter på tøjet (vises i kurv og på ordren), og de valgte
+  tryk-produkter lægges i kurven i samme antal. En lille forhåndsvisning viser
+  ryggen med navn, land og logo. Vises aldrig for B2B-kunder.
+{%- endcomment -%}
+
+{%- liquid
+  assign show = true
+  if customer.b2b?
+    assign show = false
+  endif
+  assign v_name = section.settings.name_product.selected_or_first_available_variant
+  assign v_country = section.settings.country_product.selected_or_first_available_variant
+  assign v_logo = section.settings.logo_product.selected_or_first_available_variant
+  if v_name == blank
+    assign show = false
+  endif
+  assign countries = section.settings.countries | newline_to_br | split: '<br />'
+-%}
+
+{%- if show -%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap">
+<style>
+  .hnp{--ink:#0a0a0b;--soft:#5d584f;--muted:#8c867b;--line:#e7e3dc;--panel:#f5f3ef;--err:#c62828;--o:#e5701a;
+    --body:"Barlow","Helvetica Neue",Arial,sans-serif;--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+    margin:4px 0 18px;display:grid;gap:16px;font-family:var(--body);letter-spacing:0;color:var(--ink)}
+  .hnp *{box-sizing:border-box}
+  .hnp[hidden],.hnp [hidden]{display:none !important}
+  .hnp-f{display:grid;gap:6px}
+  .hnp-l{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+  .hnp-l i{color:var(--err);font-style:normal}
+  .hnp select,.hnp input[type=text]{width:100%;min-height:52px;padding:0 16px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);
+    font:500 15px/1.2 var(--body);letter-spacing:0}
+  .hnp select{padding-right:44px;appearance:none;-webkit-appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230a0a0b' stroke-width='1.8'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 16px center}
+  .hnp input[type=text]{text-transform:uppercase;font-weight:700;letter-spacing:.06em}
+  .hnp select:hover,.hnp input[type=text]:hover{border-color:var(--ink)}
+  .hnp select:focus-visible,.hnp input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .hnp .is-err{border-color:var(--err) !important;box-shadow:inset 0 0 0 1px var(--err)}
+  .hnp-count{justify-self:end;font-size:12px;color:var(--muted)}
+
+  .hnp-opts{display:grid;gap:8px;border:0;margin:0;padding:0}
+  .hnp-opt{display:flex;align-items:center;gap:12px;min-height:52px;padding:0 16px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;font-size:15px;font-weight:500}
+  .hnp-opt:hover{border-color:var(--ink)}
+  .hnp-opt input{accent-color:var(--ink);width:18px;height:18px;margin:0}
+  .hnp-opt span{flex:1}
+  .hnp-opt b{font-weight:600;color:var(--soft)}
+  .hnp-opt:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+  .hnp-opts.is-err .hnp-opt{border-color:var(--err)}
+
+  /* Forhåndsvisning af ryggen */
+  .hnp-prev{border-radius:14px;background:var(--panel);padding:16px 16px 12px;display:grid;justify-items:center;gap:8px}
+  .hnp-prev small{font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .hnp-shirt{width:min(100%,320px);height:auto;display:block}
+  .hnp-shirt text{font-family:"Oswald","Arial Narrow",Impact,sans-serif;font-weight:600;text-transform:uppercase;text-anchor:middle}
+  .hnp-sum{margin:0;font-size:14px;color:var(--soft)}
+  .hnp-sum b{color:var(--o)}
+  .hnp-msg{margin:0;font-size:13px;font-weight:600;color:var(--err)}
+  .hnp-msg:empty{display:none}
+</style>
+
+<div class="hnp" id="hnp-{{ section.id }}" hidden
+  data-product="{{ product.title | escape }}"
+  data-v-name="{{ v_name.id }}" data-p-name="{{ v_name.price }}"
+  {%- if v_country %} data-v-country="{{ v_country.id }}" data-p-country="{{ v_country.price }}"{% endif %}
+  {%- if v_logo %} data-v-logo="{{ v_logo.id }}" data-p-logo="{{ v_logo.price }}"{% endif %}>
+
+  <div class="hnp-f">
+    <label class="hnp-l" for="hnp-yn-{{ section.id }}">{{ section.settings.label_print | escape }} <i>*</i></label>
+    <select id="hnp-yn-{{ section.id }}" data-yn>
+      <option value="No">{{ section.settings.label_no | escape }}</option>
+      <option value="Yes">{{ section.settings.label_yes | escape }} (+ {{ v_name.price | money }})</option>
+    </select>
+  </div>
+
+  <div class="hnp-f" data-more hidden>
+    <label class="hnp-l" for="hnp-n-{{ section.id }}">{{ section.settings.label_name | escape }} <i>*</i></label>
+    <input type="text" id="hnp-n-{{ section.id }}" data-name maxlength="{{ section.settings.max_chars }}" autocomplete="off" spellcheck="false" placeholder="{{ section.settings.placeholder | escape }}">
+    <span class="hnp-count"><span data-count>0</span>/{{ section.settings.max_chars }} characters</span>
+  </div>
+
+  {%- if v_country or v_logo -%}
+  <fieldset class="hnp-f hnp-opts" data-more data-opts hidden>
+    <legend class="hnp-l" style="margin-bottom:6px">{{ section.settings.label_extra | escape }} <i>*</i></legend>
+    <label class="hnp-opt"><input type="radio" name="hnp-x-{{ section.id }}" value="none" checked><span>{{ section.settings.label_no | escape }}</span></label>
+    {%- if v_country -%}
+    <label class="hnp-opt"><input type="radio" name="hnp-x-{{ section.id }}" value="country"><span>{{ section.settings.label_country_logo | escape }}</span><b>+ {{ v_country.price | money }}</b></label>
+    {%- endif -%}
+    {%- if v_logo -%}
+    <label class="hnp-opt"><input type="radio" name="hnp-x-{{ section.id }}" value="logo"><span>{{ section.settings.label_logo_only | escape }}</span><b>+ {{ v_logo.price | money }}</b></label>
+    {%- endif -%}
+  </fieldset>
+
+  {%- if v_country -%}
+  <div class="hnp-f" data-country-f hidden>
+    <label class="hnp-l" for="hnp-c-{{ section.id }}">{{ section.settings.label_country | escape }} <i>*</i></label>
+    <select id="hnp-c-{{ section.id }}" data-country>
+      <option value="">{{ section.settings.label_choose | escape }}</option>
+      {%- for c in countries -%}
+        {%- assign c = c | strip -%}
+        {%- if c != blank -%}<option value="{{ c | escape }}">{{ c | escape }}</option>{%- endif -%}
+      {%- endfor -%}
+    </select>
+  </div>
+  {%- endif -%}
+  {%- endif -%}
+
+  <div class="hnp-prev" data-more hidden aria-hidden="true">
+    {%- liquid
+      assign shirt = product.metafields.custom.shirt_color.value | default: section.settings.shirt_color
+      assign ink = product.metafields.custom.print_color.value | default: section.settings.print_color
+    -%}
+    <svg class="hnp-shirt" viewBox="0 0 300 320" style="color:{{ ink }}">
+      <defs>
+        <linearGradient id="hnp-sh-{{ section.id }}" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#000" stop-opacity=".12"/><stop offset=".22" stop-color="#000" stop-opacity="0"/>
+          <stop offset=".78" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".12"/>
+        </linearGradient>
+        <path id="hnp-arc-{{ section.id }}" d="M80 100 Q150 100 220 100" data-pv-arc/>
+      </defs>
+      <path d="M94 28C114 40 186 40 206 28L260 52 294 128 254 146 234 112V302Q150 312 66 302V112L46 146 6 128 40 52Z" fill="{{ shirt }}"/>
+      <path d="M94 28C114 40 186 40 206 28L260 52 294 128 254 146 234 112V302Q150 312 66 302V112L46 146 6 128 40 52Z" fill="url(#hnp-sh-{{ section.id }})"/>
+      <path d="M94 28C114 40 186 40 206 28M100 32 66 112M200 32 234 112" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="2"/>
+      <text font-size="40" fill="currentColor" data-pv-name><textPath href="#hnp-arc-{{ section.id }}" startOffset="50%">{{ section.settings.placeholder | escape }}</textPath></text>
+      <text x="150" y="134" font-size="27" fill="currentColor" data-pv-country hidden></text>
+      <g data-pv-logo hidden><path fill="currentColor" transform="translate(0 0) scale(.04)" d="M1347.62,587.22c0,0-101.04-3.54-155.38,1.77c-45.26,4.42-92.29,21.78-146.07,48.64c-73.03,36.48-174.86,89.55-174.86,89.55l532.88,263.67h-280.81L733.54,799.04L350.9,990.85H61.86c0,0,680.94-339.96,831.87-413.83c100.03-48.97,181.76-67.87,291.38-67.87h253.04L1347.62,587.22z"/></g>
+    </svg>
+    <small>{{ section.settings.label_preview | escape }}</small>
+  </div>
+
+  <p class="hnp-sum" data-more hidden>{{ section.settings.label_adds | escape }} <b data-total></b></p>
+  <p class="hnp-msg" role="alert"></p>
+
+  {%- comment -%} Noterne på tøjet – udfyldes af scriptet {%- endcomment -%}
+  <input type="hidden" data-prop="Name print" disabled>
+  <input type="hidden" data-prop="Name" disabled>
+  <input type="hidden" data-prop="Country & logo" disabled>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('hnp-{{ section.id }}');
+  if (!box) return;
+  var yn = box.querySelector('[data-yn]');
+  var nameIn = box.querySelector('[data-name]');
+  var count = box.querySelector('[data-count]');
+  var opts = box.querySelector('[data-opts]');
+  var cf = box.querySelector('[data-country-f]');
+  var cs = box.querySelector('[data-country]');
+  var pvName = box.querySelector('[data-pv-name]');
+  var pvCountry = box.querySelector('[data-pv-country]');
+  var pvLogo = box.querySelector('[data-pv-logo]');
+  var pvArc = box.querySelector('[data-pv-arc]');
+  var total = box.querySelector('[data-total]');
+  var msg = box.querySelector('.hnp-msg');
+  var T = {
+    placeholder: {{ section.settings.placeholder | json }},
+    errName: {{ section.settings.label_error_name | json }},
+    errCountry: {{ section.settings.label_error_country | json }},
+    countryLogo: 'HUNDRED logo',
+    logoOnly: {{ section.settings.label_logo_only | json }}
+  };
+  var form = null, passing = false;
+
+  function place(){
+    var f = document.querySelector('product-info product-form form[action*="/cart/add"]') || document.querySelector('form[id^="product-form-"][action*="/cart/add"]');
+    if (!f) return;
+    var btns = f.querySelector('.product-form__buttons');
+    if (!btns) return;
+    if (box.parentNode !== f || box.nextElementSibling !== btns) f.insertBefore(box, btns);
+    form = f;
+    box.hidden = false;
+  }
+
+  function isYes(){ return yn.value === 'Yes'; }
+  function extra(){ var r = opts && opts.querySelector('input:checked'); return r ? r.value : 'none'; }
+  function cents(k){ return parseInt(box.dataset['p' + k] || '0', 10); }
+  function money(c){
+    var cur = (window.Shopify && Shopify.currency && Shopify.currency.active) || 'EUR';
+    try { return new Intl.NumberFormat(document.documentElement.lang || 'en', { style: 'currency', currency: cur }).format(c / 100); }
+    catch(e){ return (c / 100).toFixed(2) + ' ' + cur; }
+  }
+  function prop(k, v){
+    var el = box.querySelector('[data-prop="' + k + '"]');
+    if (v) { el.name = 'properties[' + k + ']'; el.value = v; el.disabled = false; }
+    else { el.removeAttribute('name'); el.value = ''; el.disabled = true; }
+  }
+  function extraText(){
+    var x = extra();
+    if (x === 'country') return (cs && cs.value ? cs.value : 'Country') + ' + ' + T.countryLogo;
+    if (x === 'logo') return T.logoOnly;
+    return '';
+  }
+
+  function update(){
+    var on = isYes();
+    box.querySelectorAll('[data-more]').forEach(function(el){ el.hidden = !on; });
+    var x = extra();
+    if (cf) cf.hidden = !(on && x === 'country');
+
+    var n = nameIn.value.trim();
+    count.textContent = nameIn.value.length;
+    if (on) draw(n || T.placeholder, x === 'country' ? ((cs && cs.value) || 'Country') : '', x !== 'none');
+
+    var sum = cents('Name') + (x === 'country' ? cents('Country') : 0) + (x === 'logo' ? cents('Logo') : 0);
+    total.textContent = money(sum);
+
+    prop('Name print', on ? 'Yes' : '');
+    prop('Name', on ? n.toUpperCase() : '');
+    prop('Country & logo', on && x !== 'none' ? extraText() : '');
+
+    var pay = form && form.querySelector('.shopify-payment-button');
+    if (pay) pay.style.display = on ? 'none' : '';
+  }
+
+
+  /* Tegner trykket som på landsholdstrøjerne: navn øverst, land lige under, logo nederst */
+  function fit(el, max){
+    el.removeAttribute('textLength'); el.removeAttribute('lengthAdjust');
+    var w = 0; try { w = el.getComputedTextLength(); } catch(e){}
+    if (w > max) { el.setAttribute('textLength', max); el.setAttribute('lengthAdjust', 'spacingAndGlyphs'); }
+  }
+  function show(el, on){ if (on) el.removeAttribute('hidden'); else el.setAttribute('hidden', ''); }
+  function draw(name, country, logo){
+    var tp = pvName.querySelector('textPath');
+    /* Altid lige tekst. Lange navne bliver lidt mindre og trykkes sammen */
+    pvName.setAttribute('font-size', Math.max(28, 40 - Math.max(0, name.length - 6) * 2));
+    tp.textContent = name;
+    fit(tp, 150);
+    var y = 108;
+    show(pvCountry, !!country);
+    if (country) { pvCountry.textContent = country; pvCountry.setAttribute('y', y + 30); fit(pvCountry, 130); y += 34; }
+    show(pvLogo, logo);
+    if (logo) {
+      var s = .046, w = 1377 * s;
+      pvLogo.firstElementChild.setAttribute('transform', 'translate(' + (150 - w / 2 - 61 * s) + ' ' + (y + 8 - 509 * s) + ') scale(' + s + ')');
+    }
+  }
+
+  function valid(){
+    var ok = true, err = '';
+    box.querySelectorAll('.is-err').forEach(function(el){ el.classList.remove('is-err'); });
+    if (!nameIn.value.trim()) { nameIn.classList.add('is-err'); ok = false; err = T.errName; }
+    if (ok && extra() === 'country' && cs && !cs.value) { cs.classList.add('is-err'); ok = false; err = T.errCountry; }
+    msg.textContent = err;
+    if (!ok) { var first = box.querySelector('.is-err'); if (first) first.focus(); }
+    return ok;
+  }
+
+  function qty(){
+    var q = document.querySelector('input[name="quantity"][form="' + form.id + '"]') || form.querySelector('input[name="quantity"]');
+    var n = q ? parseInt(q.value, 10) : 1;
+    return n > 0 ? n : 1;
+  }
+
+  yn.addEventListener('change', function(){ msg.textContent = ''; update(); });
+  nameIn.addEventListener('input', function(){ nameIn.classList.remove('is-err'); msg.textContent = ''; update(); });
+  if (opts) opts.addEventListener('change', function(){ msg.textContent = ''; update(); });
+  if (cs) cs.addEventListener('change', function(){ cs.classList.remove('is-err'); msg.textContent = ''; update(); });
+
+  /* Fanger "Add to cart" før temaets egen kode og lægger tryk-produkterne i kurven først */
+  document.addEventListener('submit', function(e){
+    if (!form || e.target !== form || passing || !isYes()) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    if (!valid()) return;
+    update();
+    var q = qty(), n = nameIn.value.trim().toUpperCase(), x = extra();
+    var info = { 'For': box.dataset.product, 'Name': n };
+    var items = [{ id: Number(box.dataset.vName), quantity: q, properties: info }];
+    if (x === 'country' && box.dataset.vCountry) items.push({ id: Number(box.dataset.vCountry), quantity: q, properties: { 'For': box.dataset.product, 'Country': cs.value } });
+    if (x === 'logo' && box.dataset.vLogo) items.push({ id: Number(box.dataset.vLogo), quantity: q, properties: { 'For': box.dataset.product } });
+    fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ items: items })
+    }).then(function(r){
+      if (!r.ok) return r.json().then(function(j){ throw new Error(j.description || j.message || 'Error'); });
+    }).then(function(){
+      passing = true;
+      if (form.requestSubmit) form.requestSubmit(); else form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+      passing = false;
+    }).catch(function(err){ msg.textContent = err.message; });
+  }, true);
+
+  place();
+  update();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(update);
+  /* Hvis temaet tegner produktformularen igen (fx ved skift af størrelse), sættes boksen ind igen */
+  new MutationObserver(function(){ if (!box.isConnected || (form && !form.isConnected)) { form = null; place(); update(); } })
+    .observe(document.body, { childList: true, subtree: true });
+  if (!form) document.addEventListener('DOMContentLoaded', function(){ place(); update(); });
+})();
+</script>
+{%- elsif request.design_mode -%}
+  <p style="padding:12px 16px;background:#fff4e0;border:1px solid #f2a81d;border-radius:8px;font:14px/1.5 Arial,sans-serif;color:#000">
+    HUNDRED Navnetryk: Vælg produktet <b>Name print</b> i sektionens indstillinger.
+  </p>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "HUNDRED Navnetryk",
+  "tag": "div",
+  "class": "hundred-name-print",
+  "settings": [
+    { "type": "paragraph", "content": "Feltet lægger sig automatisk over \"Add to cart\". Brug sektionen kun på skabelonen for tøj med navnetryk. Vises aldrig for B2B-kunder." },
+    { "type": "product", "id": "name_product", "label": "Produkt: Name print", "info": "Påkrævet. Prisen for navnet." },
+    { "type": "product", "id": "country_product", "label": "Produkt: Country + logo print", "info": "Tom = valget vises ikke." },
+    { "type": "product", "id": "logo_product", "label": "Produkt: Logo print", "info": "Tom = valget vises ikke." },
+    { "type": "range", "id": "max_chars", "label": "Maks. antal tegn i navnet", "min": 5, "max": 25, "step": 1, "default": 15 },
+
+    { "type": "header", "content": "Lande" },
+    { "type": "textarea", "id": "countries", "label": "Lande (én pr. linje, på engelsk)", "default": "Denmark\nSweden\nNorway\nFinland\nIceland\nGermany\nNetherlands\nBelgium\nLuxembourg\nFrance\nSpain\nPortugal\nItaly\nSwitzerland\nAustria\nPoland\nCzech Republic\nSlovakia\nHungary\nSlovenia\nCroatia\nSerbia\nBulgaria\nRomania\nGreece\nCyprus\nMalta\nIreland\nUnited Kingdom\nEstonia\nLatvia\nLithuania\nUkraine\nTurkey\nIsrael\nUnited States\nCanada\nAustralia\nNew Zealand\nIndia\nIndonesia\nMalaysia\nSingapore\nThailand\nChina\nHong Kong\nTaiwan\nJapan\nSouth Korea" },
+
+    { "type": "header", "content": "Forhåndsvisning" },
+    { "type": "color", "id": "shirt_color", "label": "Farve på trøjen", "default": "#1f2a44", "info": "Kan sættes pr. produkt med metafeltet custom.shirt_color (farve)." },
+    { "type": "color", "id": "print_color", "label": "Farve på trykket", "default": "#ffffff", "info": "Kan sættes pr. produkt med metafeltet custom.print_color (farve). Fx sort tryk på hvid trøje." },
+
+    { "type": "header", "content": "Tekster" },
+    { "type": "text", "id": "label_print", "label": "Overskrift", "default": "Name print" },
+    { "type": "text", "id": "label_no", "label": "Nej", "default": "No thanks" },
+    { "type": "text", "id": "label_yes", "label": "Ja", "default": "Yes please" },
+    { "type": "text", "id": "label_name", "label": "Overskrift navn", "default": "Your name" },
+    { "type": "text", "id": "placeholder", "label": "Eksempel-navn", "default": "YOUR NAME" },
+    { "type": "text", "id": "label_extra", "label": "Overskrift land/logo", "default": "Add country & HUNDRED logo" },
+    { "type": "text", "id": "label_country_logo", "label": "Land + logo", "default": "Country + HUNDRED logo" },
+    { "type": "text", "id": "label_logo_only", "label": "Kun logo", "default": "HUNDRED logo only" },
+    { "type": "text", "id": "label_country", "label": "Overskrift land", "default": "Choose country" },
+    { "type": "text", "id": "label_choose", "label": "Tom valgmulighed", "default": "-- Please choose --" },
+    { "type": "text", "id": "label_preview", "label": "Tekst under forhåndsvisning", "default": "Preview – back of the shirt" },
+    { "type": "text", "id": "label_adds", "label": "Pris-tekst", "default": "The print adds" },
+    { "type": "text", "id": "label_error_name", "label": "Fejl: navn", "default": "Please write the name for the print." },
+    { "type": "text", "id": "label_error_country", "label": "Fejl: land", "default": "Please choose a country." }
+  ],
+  "enabled_on": { "templates": ["product"] },
+  "presets": [{ "name": "HUNDRED Navnetryk" }]
+}
+{% endschema %}
