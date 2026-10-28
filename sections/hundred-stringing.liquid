@@ -1,0 +1,210 @@
+{%- comment -%}
+  HUNDRED – Opstrengning på ketsjere
+  Læg sektionen på produktskabelonen for ketsjere med opstrengning.
+  Den flytter sig selv ind over "Add to cart" i produktsektionen.
+  Ja → kunden skal vælge streng og hårdhed. Valgene gemmes som noter på
+  ketsjeren (vises i kurv og på ordren). Betalt opstrengning lægger desuden
+  produktet "Racket stringing" i kurven i samme antal som ketsjeren.
+  Vises aldrig for B2B-kunder.
+{%- endcomment -%}
+
+{%- liquid
+  assign show = true
+  if customer.b2b?
+    assign show = false
+  endif
+  assign service = section.settings.service_product
+  assign service_variant = service.selected_or_first_available_variant
+  assign free = section.settings.free
+  if free == false and service_variant == blank
+    assign show = false
+  endif
+  assign strings = section.settings.strings | newline_to_br | split: '<br />'
+  assign kg_min = section.settings.kg_min | times: 2
+  assign kg_max = section.settings.kg_max | times: 2
+-%}
+
+{%- if show -%}
+<style>
+  .hstr{--ink:#0a0a0b;--soft:#5d584f;--muted:#8c867b;--line:#e7e3dc;--panel:#f5f3ef;--err:#c62828;
+    margin:4px 0 18px;display:grid;gap:14px;font-family:"Barlow","Helvetica Neue",Arial,sans-serif;letter-spacing:0}
+  .hstr[hidden]{display:none}
+  .hstr-f{display:grid;gap:6px}
+  .hstr-f[hidden]{display:none}
+  .hstr label{font:700 12px/1.2 "Barlow","Helvetica Neue",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+  .hstr label i{color:var(--err);font-style:normal}
+  .hstr select{width:100%;min-height:52px;padding:0 44px 0 16px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);
+    font:500 15px/1.2 "Barlow","Helvetica Neue",Arial,sans-serif;appearance:none;-webkit-appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230a0a0b' stroke-width='1.8'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 16px center}
+  .hstr select:hover{border-color:var(--ink)}
+  .hstr select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .hstr select.is-err{border-color:var(--err);box-shadow:inset 0 0 0 1px var(--err)}
+  .hstr-note{margin:0;font-size:13px;line-height:1.5;color:var(--soft)}
+  .hstr-msg{margin:0;font-size:13px;font-weight:600;color:var(--err)}
+  .hstr-msg:empty{display:none}
+</style>
+
+<div class="hstr" id="hstr-{{ section.id }}" hidden
+  {%- unless free %} data-service="{{ service_variant.id }}"{% endunless %}
+  data-racket="{{ product.title | escape }}">
+  <div class="hstr-f">
+    <label for="hstr-yn-{{ section.id }}">{{ section.settings.label_stringing | escape }} <i>*</i></label>
+    <select id="hstr-yn-{{ section.id }}" data-yn>
+      <option value="No">{{ section.settings.label_no | escape }}</option>
+      <option value="Yes">{{ section.settings.label_yes | escape }}{% if free %} – {{ section.settings.label_free | escape }}{% else %} (+ {{ service_variant.price | money }}){% endif %}</option>
+    </select>
+    {%- if section.settings.note != blank -%}<p class="hstr-note">{{ section.settings.note | escape }}</p>{%- endif -%}
+  </div>
+
+  <div class="hstr-f" data-more hidden>
+    <label for="hstr-s-{{ section.id }}">{{ section.settings.label_string | escape }} <i>*</i></label>
+    <select id="hstr-s-{{ section.id }}" data-req name="properties[String]" disabled>
+      <option value="">{{ section.settings.label_choose | escape }}</option>
+      {%- for s in strings -%}
+        {%- assign s = s | strip -%}
+        {%- if s != blank -%}<option value="{{ s | escape }}">{{ s | escape }}</option>{%- endif -%}
+      {%- endfor -%}
+    </select>
+  </div>
+
+  <div class="hstr-f" data-more hidden>
+    <label for="hstr-t-{{ section.id }}">{{ section.settings.label_tension | escape }} <i>*</i></label>
+    <select id="hstr-t-{{ section.id }}" data-req name="properties[Tension]" disabled>
+      <option value="">{{ section.settings.label_choose | escape }}</option>
+      {%- for i in (kg_min..kg_max) -%}
+        {%- assign kg = i | divided_by: 2.0 -%}
+        {%- assign kg_txt = kg | append: '' | remove: '.0' -%}
+        {%- assign lbs = kg | times: 2.20462 | round: 1 -%}
+        {%- assign txt = kg_txt | append: ' kg (' | append: lbs | append: ' lbs)' -%}
+        {%- if kg == section.settings.kg_default -%}{%- assign txt = txt | append: ' – Standard' -%}{%- endif -%}
+        <option value="{{ txt | escape }}">{{ txt | escape }}</option>
+      {%- endfor -%}
+    </select>
+  </div>
+
+  <p class="hstr-msg" role="alert"></p>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('hstr-{{ section.id }}');
+  if (!box) return;
+  var yn = box.querySelector('[data-yn]');
+  var more = box.querySelectorAll('[data-more]');
+  var req = box.querySelectorAll('[data-req]');
+  var msg = box.querySelector('.hstr-msg');
+  var errText = {{ section.settings.label_error | json }};
+  var form = null, passing = false;
+
+  /* Placér boksen inde i produktformularen, lige over knapperne */
+  function place(){
+    var f = document.querySelector('product-info product-form form[action*="/cart/add"]') || document.querySelector('form[id^="product-form-"][action*="/cart/add"]');
+    if (!f) return;
+    var btns = f.querySelector('.product-form__buttons');
+    if (!btns) return;
+    if (box.parentNode !== f || box.nextElementSibling !== btns) f.insertBefore(box, btns);
+    form = f;
+    box.hidden = false;
+  }
+
+  function isYes(){ return yn.value === 'Yes'; }
+
+  function toggle(){
+    var on = isYes();
+    /* Kun noter på ketsjeren, når kunden har valgt Ja */
+    if (on) yn.setAttribute('name', 'properties[Stringing]'); else yn.removeAttribute('name');
+    more.forEach(function(el){ el.hidden = !on; });
+    req.forEach(function(el){ el.disabled = !on; if (!on) { el.value = ''; el.classList.remove('is-err'); } });
+    msg.textContent = '';
+    /* "Buy it now" tager ikke opstrengning med, så den skjules ved Ja */
+    var pay = form && form.querySelector('.shopify-payment-button');
+    if (pay) pay.style.display = on ? 'none' : '';
+  }
+
+  function valid(){
+    var ok = true;
+    req.forEach(function(el){ var bad = !el.value; el.classList.toggle('is-err', bad); if (bad) ok = false; });
+    msg.textContent = ok ? '' : errText;
+    if (!ok) { var first = box.querySelector('.is-err'); if (first) first.focus(); }
+    return ok;
+  }
+
+  function qty(){
+    var q = document.querySelector('input[name="quantity"][form="' + form.id + '"]') || form.querySelector('input[name="quantity"]');
+    var n = q ? parseInt(q.value, 10) : 1;
+    return n > 0 ? n : 1;
+  }
+
+  yn.addEventListener('change', toggle);
+  req.forEach(function(el){ el.addEventListener('change', function(){ if (el.value) el.classList.remove('is-err'); if (box.querySelectorAll('.is-err').length === 0) msg.textContent = ''; }); });
+
+  /* Fanger "Add to cart" før temaets egen kode */
+  document.addEventListener('submit', function(e){
+    if (!form || e.target !== form || passing || !isYes()) return;
+    if (!valid()) { e.preventDefault(); e.stopImmediatePropagation(); return; }
+    var id = box.dataset.service;
+    if (!id) return; /* gratis: noterne følger bare ketsjeren */
+    e.preventDefault(); e.stopImmediatePropagation();
+    var s = box.querySelector('[name="properties[String]"]').value;
+    var t = box.querySelector('[name="properties[Tension]"]').value;
+    fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ items: [{ id: Number(id), quantity: qty(), properties: { 'Racket': box.dataset.racket, 'String': s, 'Tension': t } }] })
+    }).then(function(r){
+      if (!r.ok) return r.json().then(function(j){ throw new Error(j.description || j.message || 'Error'); });
+    }).then(function(){
+      passing = true;
+      if (form.requestSubmit) form.requestSubmit(); else form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+      passing = false;
+    }).catch(function(err){ msg.textContent = err.message; });
+  }, true);
+
+  place();
+  toggle();
+  /* Hvis temaet tegner produktformularen igen (fx ved skift af variant), sættes boksen ind igen */
+  new MutationObserver(function(){ if (!box.isConnected || (form && !form.isConnected)) { form = null; place(); toggle(); } })
+    .observe(document.body, { childList: true, subtree: true });
+  if (!form) document.addEventListener('DOMContentLoaded', function(){ place(); toggle(); });
+})();
+</script>
+{%- elsif request.design_mode -%}
+  <p style="padding:12px 16px;background:#fff4e0;border:1px solid #f2a81d;border-radius:8px;font:14px/1.5 Arial,sans-serif;color:#000">
+    HUNDRED Opstrengning: Vælg produktet <b>Racket stringing</b> i sektionens indstillinger (eller sæt flueben i "Gratis opstrengning").
+  </p>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "HUNDRED Opstrengning",
+  "tag": "div",
+  "class": "hundred-stringing",
+  "settings": [
+    { "type": "paragraph", "content": "Feltet lægger sig automatisk over \"Add to cart\". Brug sektionen kun på skabelonen for ketsjere, der kan strenges op." },
+    { "type": "product", "id": "service_product", "label": "Produkt: Racket stringing", "info": "Prisen på dette produkt bliver lagt i kurven, når kunden vælger opstrengning." },
+    { "type": "checkbox", "id": "free", "label": "Gratis opstrengning", "default": false, "info": "Til: intet ekstra produkt i kurven, kun noter på ketsjeren." },
+
+    { "type": "header", "content": "Strenge" },
+    { "type": "textarea", "id": "strings", "label": "Strenge (én pr. linje)", "default": "String 1 White – 0.66 mm\nString 1 Yellow – 0.66 mm\nString 2 White – 0.68 mm\nString 2 Black – 0.68 mm" },
+
+    { "type": "header", "content": "Hårdhed" },
+    { "type": "range", "id": "kg_min", "label": "Fra (kg)", "min": 7, "max": 15, "step": 1, "default": 10 },
+    { "type": "range", "id": "kg_max", "label": "Til (kg)", "min": 8, "max": 16, "step": 1, "default": 14 },
+    { "type": "range", "id": "kg_default", "label": "Standard (kg)", "min": 7, "max": 16, "step": 1, "default": 11 },
+
+    { "type": "header", "content": "Tekster" },
+    { "type": "text", "id": "label_stringing", "label": "Overskrift", "default": "Stringing" },
+    { "type": "text", "id": "label_no", "label": "Nej", "default": "No thanks – unstrung" },
+    { "type": "text", "id": "label_yes", "label": "Ja", "default": "Yes please, string my racket" },
+    { "type": "text", "id": "label_free", "label": "Ord for gratis", "default": "FREE" },
+    { "type": "text", "id": "note", "label": "Lille tekst under", "default": "Strung by our professional stringers. Ships within 2–3 business days." },
+    { "type": "text", "id": "label_string", "label": "Overskrift streng", "default": "Choose string" },
+    { "type": "text", "id": "label_tension", "label": "Overskrift hårdhed", "default": "Choose tension" },
+    { "type": "text", "id": "label_choose", "label": "Tom valgmulighed", "default": "-- Please choose --" },
+    { "type": "text", "id": "label_error", "label": "Fejltekst", "default": "Please choose string and tension." }
+  ],
+  "enabled_on": { "templates": ["product"] },
+  "presets": [{ "name": "HUNDRED Opstrengning" }]
+}
+{% endschema %}
