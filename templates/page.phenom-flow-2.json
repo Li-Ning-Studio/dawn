@@ -95,6 +95,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_TEpjwi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- ============================================================\n  SCROLL-CONTROLLED VIDEO  |  Paste into a Shopify \"Custom Liquid\" section\n  1) Upload Reel_1_scrub.mp4 in Shopify Admin > Content > Files\n  2) data-src below uses the file_url filter. If it doesn't load, replace it\n     with the full link copied from Files, e.g. data-src=\"https://cdn.shopify.com/videos/c/vp/ab3bba98d2ff40a4b372b32b707ec43b/ab3bba98d2ff40a4b372b32b707ec43b.HD-1080p-7.2Mbps-99162414.mp4\"\n  3) Scroll length: change data-scroll (in vh). Bigger = slower video.\n============================================================ -->\n\n<style>\n  .hsv {\n    position: relative;\n    height: var(--hsv-scroll, 500vh);\n    width: 100vw;\n    margin-left: calc(50% - 50vw);   /* full width even inside a narrow page container */\n    background: #000;\n  }\n  .hsv__stage {\n    position: sticky;\n    top: 0;\n    height: 100vh;\n    height: 100svh;\n    overflow: hidden;\n    background: #000;\n  }\n  .hsv__video {\n    width: 100%;\n    height: 100%;\n    display: block;\n    object-fit: contain;             /* desktop: show the full vertical reel */\n    pointer-events: none;\n    will-change: contents;\n  }\n  @media (max-aspect-ratio: 1/1) {\n    .hsv__video { object-fit: cover; } /* mobile / portrait: fill the screen */\n  }\n  @media (prefers-reduced-motion: reduce) {\n    .hsv { height: 100vh; height: 100svh; }\n  }\n</style>\n\n<section class=\"hsv\" data-src=\"https://cdn.shopify.com/videos/c/vp/ab3bba98d2ff40a4b372b32b707ec43b/ab3bba98d2ff40a4b372b32b707ec43b.HD-1080p-7.2Mbps-99162414.mp4\" data-scroll=\"500\">\n  <div class=\"hsv__stage\">\n    <video class=\"hsv__video\" muted playsinline preload=\"auto\" disablepictureinpicture></video>\n  </div>\n</section>\n\n<script>\n(function () {\n  document.querySelectorAll('.hsv').forEach(function (section) {\n    var video = section.querySelector('.hsv__video');\n    var scrollVh = parseFloat(section.dataset.scroll) || 500;\n    section.style.setProperty('--hsv-scroll', scrollVh + 'vh');\n\n    var ease = 0.085;          // lower = smoother/slower catch-up (0.05 - 0.15)\n    var current = 0;           // smoothed playhead (seconds)\n    var visible = false;\n    var running = false;\n    var ready = false;\n\n    video.src = section.dataset.src;\n    video.load();\n\n    video.addEventListener('loadedmetadata', function () {\n      ready = true;\n      video.currentTime = 0.001;   // draw the first frame\n      kick();\n    });\n\n    // iOS Safari: unlock seeking after the first touch\n    window.addEventListener('touchstart', function () {\n      var p = video.play();\n      if (p && p.then) p.then(function () { video.pause(); }).catch(function () {});\n    }, { once: true, passive: true });\n\n    function progress() {\n      var r = section.getBoundingClientRect();\n      var total = section.offsetHeight - window.innerHeight;\n      return total > 0 ? Math.min(Math.max(-r.top / total, 0), 1) : 0;\n    }\n\n    var last = performance.now();\n    function tick(now) {\n      var dt = Math.min((now - last) / 16.667, 3);   // frame-rate independent smoothing\n      last = now;\n\n      if (ready && video.duration) {\n        var target = progress() * video.duration;\n        current += (target - current) * (1 - Math.pow(1 - ease, dt));\n\n        // only request a new seek when the previous one has finished (avoids stutter)\n        if (!video.seeking && Math.abs(video.currentTime - current) > 0.012) {\n          video.currentTime = current;\n        }\n        // stop looping once settled\n        if (Math.abs(target - current) < 0.002 && !visible) { running = false; return; }\n      }\n      if (visible) requestAnimationFrame(tick); else running = false;\n    }\n\n    function kick() {\n      if (running || !ready) return;\n      running = true;\n      last = performance.now();\n      requestAnimationFrame(tick);\n    }\n\n    if ('IntersectionObserver' in window) {\n      new IntersectionObserver(function (entries) {\n        visible = entries[0].isIntersecting;\n        if (visible) kick();\n      }, { rootMargin: '100px 0px' }).observe(section);\n    } else {\n      visible = true; kick();\n    }\n  });\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "media_HHKRjF": {
       "type": "media",
       "name": "Media",
@@ -116,6 +126,7 @@
     "custom_liquid_F4kFyL",
     "custom_liquid_cFdt9G",
     "custom_liquid_KiKgXJ",
+    "custom_liquid_TEpjwi",
     "media_HHKRjF"
   ]
 }
