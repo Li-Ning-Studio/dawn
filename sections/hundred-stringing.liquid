@@ -22,6 +22,9 @@
   assign strings = section.settings.strings | newline_to_br | split: '<br />'
   assign kg_min = section.settings.kg_min | times: 2
   assign kg_max = section.settings.kg_max | times: 2
+  if kg_max > 28
+    assign kg_max = 28
+  endif
 -%}
 
 {%- if show -%}
@@ -62,9 +65,18 @@
     <select id="hstr-s-{{ section.id }}" data-req name="properties[String]" disabled>
       <option value="">{{ section.settings.label_choose | escape }}</option>
       {%- for s in strings -%}
-        {%- assign s = s | strip -%}
-        {%- if s != blank -%}<option value="{{ s | escape }}">{{ s | escape }}</option>{%- endif -%}
+        {%- assign parts = s | split: '|' -%}
+        {%- assign s_name = parts[0] | strip -%}
+        {%- assign s_cols = parts[1] | strip -%}
+        {%- if s_name != blank -%}<option value="{{ s_name | escape }}" data-colors="{{ s_cols | escape }}">{{ s_name | escape }}</option>{%- endif -%}
       {%- endfor -%}
+    </select>
+  </div>
+
+  <div class="hstr-f" data-more data-colwrap hidden>
+    <label for="hstr-c-{{ section.id }}">{{ section.settings.label_colour | escape }} <i>*</i></label>
+    <select id="hstr-c-{{ section.id }}" data-col name="properties[String colour]" disabled>
+      <option value="">{{ section.settings.label_choose | escape }}</option>
     </select>
   </div>
 
@@ -75,7 +87,8 @@
       {%- for i in (kg_min..kg_max) -%}
         {%- assign kg = i | divided_by: 2.0 -%}
         {%- assign kg_txt = kg | append: '' | remove: '.0' -%}
-        {%- assign lbs = kg | times: 2.20462 | round: 1 -%}
+        {%- comment -%} Hele lbs: 10 kg = 22, 10.5 kg = 23 … 14 kg = 30 {%- endcomment -%}
+        {%- assign lbs = i | plus: 2 -%}
         {%- assign txt = kg_txt | append: ' kg (' | append: lbs | append: ' lbs)' -%}
         {%- if kg == section.settings.kg_default -%}{%- assign txt = txt | append: ' – Standard' -%}{%- endif -%}
         <option value="{{ txt | escape }}">{{ txt | escape }}</option>
@@ -94,6 +107,10 @@
   var more = box.querySelectorAll('[data-more]');
   var req = box.querySelectorAll('[data-req]');
   var msg = box.querySelector('.hstr-msg');
+  var sSel = box.querySelector('[name="properties[String]"]');
+  var col = box.querySelector('[data-col]');
+  var colWrap = box.querySelector('[data-colwrap]');
+  var chooseText = col.options[0].text;
   var errText = {{ section.settings.label_error | json }};
   var form = null, passing = false;
 
@@ -110,12 +127,34 @@
 
   function isYes(){ return yn.value === 'Yes'; }
 
+  /* Farvelisten følger den valgte streng (teksten efter | i indstillingerne) */
+  function colours(){
+    var o = sSel.options[sSel.selectedIndex];
+    var list = (o && o.getAttribute('data-colors') || '').split(',').map(function(c){ return c.trim(); }).filter(Boolean);
+    var keep = col.value;
+    col.innerHTML = '';
+    col.add(new Option(chooseText, ''));
+    list.forEach(function(c){ col.add(new Option(c, c)); });
+    col.value = list.length === 1 ? list[0] : (list.indexOf(keep) > -1 ? keep : '');
+    var on = isYes() && list.length > 0;
+    colWrap.hidden = !on;
+    col.disabled = !on;
+    if (!on) col.classList.remove('is-err');
+  }
+
+  function fields(){
+    var a = Array.prototype.slice.call(req);
+    if (!col.disabled) a.splice(1, 0, col);
+    return a;
+  }
+
   function toggle(){
     var on = isYes();
     /* Kun noter på ketsjeren, når kunden har valgt Ja */
     if (on) yn.setAttribute('name', 'properties[Stringing]'); else yn.removeAttribute('name');
     more.forEach(function(el){ el.hidden = !on; });
     req.forEach(function(el){ el.disabled = !on; if (!on) { el.value = ''; el.classList.remove('is-err'); } });
+    colours();
     msg.textContent = '';
     /* "Buy it now" tager ikke opstrengning med, så den skjules ved Ja */
     var pay = form && form.querySelector('.shopify-payment-button');
@@ -124,7 +163,7 @@
 
   function valid(){
     var ok = true;
-    req.forEach(function(el){ var bad = !el.value; el.classList.toggle('is-err', bad); if (bad) ok = false; });
+    fields().forEach(function(el){ var bad = !el.value; el.classList.toggle('is-err', bad); if (bad) ok = false; });
     msg.textContent = ok ? '' : errText;
     if (!ok) { var first = box.querySelector('.is-err'); if (first) first.focus(); }
     return ok;
@@ -137,7 +176,8 @@
   }
 
   yn.addEventListener('change', toggle);
-  req.forEach(function(el){ el.addEventListener('change', function(){ if (el.value) el.classList.remove('is-err'); if (box.querySelectorAll('.is-err').length === 0) msg.textContent = ''; }); });
+  sSel.addEventListener('change', colours);
+  [].concat(Array.prototype.slice.call(req), col).forEach(function(el){ el.addEventListener('change', function(){ if (el.value) el.classList.remove('is-err'); if (box.querySelectorAll('.is-err').length === 0) msg.textContent = ''; }); });
 
   /* Fanger "Add to cart" før temaets egen kode */
   document.addEventListener('submit', function(e){
@@ -148,10 +188,13 @@
     e.preventDefault(); e.stopImmediatePropagation();
     var s = box.querySelector('[name="properties[String]"]').value;
     var t = box.querySelector('[name="properties[Tension]"]').value;
+    var props = { 'Racket': box.dataset.racket, 'String': s };
+    if (!col.disabled) props['String colour'] = col.value;
+    props['Tension'] = t;
     fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ items: [{ id: Number(id), quantity: qty(), properties: { 'Racket': box.dataset.racket, 'String': s, 'Tension': t } }] })
+      body: JSON.stringify({ items: [{ id: Number(id), quantity: qty(), properties: props }] })
     }).then(function(r){
       if (!r.ok) return r.json().then(function(j){ throw new Error(j.description || j.message || 'Error'); });
     }).then(function(){
@@ -186,11 +229,11 @@
     { "type": "checkbox", "id": "free", "label": "Gratis opstrengning", "default": false, "info": "Til: intet ekstra produkt i kurven, kun noter på ketsjeren." },
 
     { "type": "header", "content": "Strenge" },
-    { "type": "textarea", "id": "strings", "label": "Strenge (én pr. linje)", "default": "String 1 White – 0.66 mm\nString 1 Yellow – 0.66 mm\nString 2 White – 0.68 mm\nString 2 Black – 0.68 mm" },
+    { "type": "textarea", "id": "strings", "label": "Strenge (én pr. linje)", "info": "Format: Navn – beskrivelse | Farve, Farve, Farve. Uden | vises intet farvevalg.", "default": "JP58 Magnite – 0.58 mm – Power / Speed | White, Yellow\nJP63 Hunter – 0.63 mm – Power / Crisp sound | White, Yellow, Blue, Pink, Purple\nJP65 Magnite – 0.65 mm – All-round / Power | Black, White, Yellow, Red, Pink, Green, Light Blue, Orange\nJP66 Hunter X – 0.66 mm – Power / Control | White, Yellow, Blue, Pink, Purple\nJP-66 – 0.66 mm – Power / Control | Black, White, Blue, Red, Orange, Green, Yellow\nJP70 Magnite – 0.70 mm – Control / Durability | White, Yellow\nJP70 Hunter – 0.70 mm – Durability / Control | White, Yellow, Blue, Pink" },
 
     { "type": "header", "content": "Hårdhed" },
     { "type": "range", "id": "kg_min", "label": "Fra (kg)", "min": 7, "max": 15, "step": 1, "default": 10 },
-    { "type": "range", "id": "kg_max", "label": "Til (kg)", "min": 8, "max": 16, "step": 1, "default": 14 },
+    { "type": "range", "id": "kg_max", "label": "Til (kg)", "min": 8, "max": 16, "step": 1, "default": 14, "info": "Maks. 14 kg – højere værdier vises ikke." },
     { "type": "range", "id": "kg_default", "label": "Standard (kg)", "min": 7, "max": 16, "step": 1, "default": 11 },
 
     { "type": "header", "content": "Tekster" },
@@ -200,9 +243,10 @@
     { "type": "text", "id": "label_free", "label": "Ord for gratis", "default": "FREE" },
     { "type": "text", "id": "note", "label": "Lille tekst under", "default": "Strung by our professional stringers. Ships within 2–3 business days." },
     { "type": "text", "id": "label_string", "label": "Overskrift streng", "default": "Choose string" },
+    { "type": "text", "id": "label_colour", "label": "Overskrift farve", "default": "Choose colour" },
     { "type": "text", "id": "label_tension", "label": "Overskrift hårdhed", "default": "Choose tension" },
     { "type": "text", "id": "label_choose", "label": "Tom valgmulighed", "default": "-- Please choose --" },
-    { "type": "text", "id": "label_error", "label": "Fejltekst", "default": "Please choose string and tension." }
+    { "type": "text", "id": "label_error", "label": "Fejltekst", "default": "Please choose string, colour and tension." }
   ],
   "enabled_on": { "templates": ["product"] },
   "presets": [{ "name": "HUNDRED Opstrengning" }]
