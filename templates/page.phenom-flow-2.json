@@ -178,6 +178,7 @@
     },
     "media_e6CGRi": {
       "type": "media",
+      "disabled": true,
       "name": "Media",
       "settings": {
         "desktop_image": "shopify://shop_images/Color.jpg",
@@ -187,11 +188,27 @@
         "padding_bottom": 0
       }
     },
+    "hero_component_w9HjW3": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Color.jpg",
+        "mobile_image": "shopify://shop_images/color_R.jpg",
+        "subtitle": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "link_to": "https://in.hndrd.co/products/phenom-flow",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_W8FhAR": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n@font-face {\n  font-family: 'Anita_semi_square';\n  src: url(\"{{ 'FixtureItalic-ExpandedBlack.ttf' | file_url }}\") format('truetype');\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n}\n\n/* SECTION */\n.hndrd-explore-minimal,\n.hndrd-explore-minimal * {\n  box-sizing: border-box;\n}\n\n.hndrd-explore-minimal {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  width: 100%;\n  margin: 0;\n  padding: 45px 20px;\n\n  background: #000000 !important;\n  background-image: none !important;\n\n  text-align: center;\n}\n\n/* EXPLORE ALL TEXT */\n.hndrd-explore-minimal .hndrd-explore-text {\n  display: inline-block;\n\n  margin: 0;\n  padding: 0;\n\n  font-family: 'Anita_semi_square', sans-serif !important;\n  font-size: clamp(28px, 3.5vw, 48px);\n  font-weight: 400 !important;\n  font-style: normal !important;\n\n  line-height: 1.2;\n  letter-spacing: .025em;\n  text-transform: uppercase;\n  text-decoration: none !important;\n\n  color: #ffffff !important;\n\n  transition: opacity .3s ease;\n}\n\n/* HOVER */\n@media (hover: hover) {\n  .hndrd-explore-minimal .hndrd-explore-text:hover {\n    opacity: .65;\n  }\n}\n\n/* MOBILE */\n@media (max-width: 768px) {\n  .hndrd-explore-minimal {\n    padding: 35px 16px;\n  }\n\n  .hndrd-explore-minimal .hndrd-explore-text {\n    font-size: clamp(24px, 6vw, 34px);\n  }\n}\n</style>\n\n<section class=\"hndrd-explore-minimal\">\n  <a\n    class=\"hndrd-explore-text\"\n    href=\"https://in.hndrd.co/products/PHENOM-FLOW\"\n    aria-label=\"Explore All\"\n  >\n    EXPLORE ALL\n  </a>\n</section>",
+        "custom_liquid": "{% comment %}\n  HNDRD PHENOM FLOW\n  Premium Explore All CTA\n  Black Background\n  Outlined Pill + Animated Arrow\n{% endcomment %}\n\n<style>\n/* FONT */\n@font-face {\n  font-family: 'HNPF-Explore-Fixture';\n  src: url(\"{{ 'FixtureItalic-ExpandedBlack.ttf' | file_url }}\") format('truetype');\n  font-weight: 900;\n  font-style: italic;\n  font-display: swap;\n}\n\n/* SECTION */\n.hndrd-explore-minimal,\n.hndrd-explore-minimal * {\n  box-sizing: border-box;\n}\n\n.hndrd-explore-minimal {\n  position: relative;\n  isolation: isolate;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  width: 100%;\n  margin: 0;\n  padding: 45px 20px;\n\n  background: #000000 !important;\n  background-image: none !important;\n  text-align: center;\n}\n\n/* PREMIUM OUTLINED CTA */\n.hndrd-explore-minimal .hndrd-explore-link,\n.hndrd-explore-minimal .hndrd-explore-link:visited {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 22px;\n\n  max-width: 100%;\n  min-height: 58px;\n  padding: 9px 11px 9px 28px;\n\n  border: 1px solid rgba(255,255,255,.7);\n  border-radius: 999px;\n\n  background: transparent !important;\n  color: #ffffff !important;\n\n  text-decoration: none !important;\n  cursor: pointer;\n\n  transition:\n    border-color .3s ease,\n    background .3s ease,\n    box-shadow .3s ease,\n    transform .3s ease;\n}\n\n/* TEXT */\n.hndrd-explore-minimal .hndrd-explore-text {\n  display: block;\n  margin: 0;\n  padding: 0;\n\n  font-family: 'HNPF-Explore-Fixture', sans-serif !important;\n  font-size: clamp(17px, 2vw, 23px) !important;\n  font-weight: 900 !important;\n  font-style: italic !important;\n  font-synthesis: none !important;\n\n  line-height: 1.15 !important;\n  letter-spacing: .01em !important;\n  text-transform: uppercase !important;\n  white-space: nowrap;\n\n  color: #ffffff !important;\n}\n\n/* ARROW CIRCLE */\n.hndrd-explore-minimal .hndrd-explore-arrow {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n\n  width: 38px;\n  height: 38px;\n  flex: 0 0 38px;\n\n  border-radius: 50%;\n  background: #ffffff;\n  color: #000000;\n\n  transition:\n    background .3s ease,\n    color .3s ease,\n    transform .3s ease;\n}\n\n/* ARROW ICON */\n.hndrd-explore-minimal .hndrd-explore-arrow svg {\n  display: block;\n  width: 19px;\n  height: 19px;\n}\n\n/* HOVER */\n@media (hover: hover) {\n  .hndrd-explore-minimal .hndrd-explore-link:hover {\n    border-color: #ffffff;\n    background: rgba(255,255,255,.045) !important;\n\n    transform: translateY(-2px);\n    box-shadow: 0 8px 28px rgba(255,255,255,.09);\n  }\n\n  .hndrd-explore-minimal\n  .hndrd-explore-link:hover\n  .hndrd-explore-arrow {\n    transform: translateX(3px);\n  }\n}\n\n/* FOCUS */\n.hndrd-explore-minimal .hndrd-explore-link:focus-visible {\n  outline: 2px solid #ffffff;\n  outline-offset: 5px;\n}\n\n/* MOBILE */\n@media (max-width: 768px) {\n  .hndrd-explore-minimal {\n    padding: 35px 16px;\n  }\n\n  .hndrd-explore-minimal .hndrd-explore-link {\n    min-height: 50px;\n    gap: 14px;\n    padding: 7px 8px 7px 20px;\n  }\n\n  .hndrd-explore-minimal .hndrd-explore-text {\n    font-size: 16px !important;\n  }\n\n  .hndrd-explore-minimal .hndrd-explore-arrow {\n    width: 34px;\n    height: 34px;\n    flex-basis: 34px;\n  }\n\n  .hndrd-explore-minimal .hndrd-explore-arrow svg {\n    width: 17px;\n    height: 17px;\n  }\n}\n\n/* SMALL MOBILE */\n@media (max-width: 400px) {\n  .hndrd-explore-minimal .hndrd-explore-link {\n    gap: 12px;\n    padding-left: 17px;\n  }\n\n  .hndrd-explore-minimal .hndrd-explore-text {\n    font-size: 14px !important;\n  }\n}\n\n/* REDUCED MOTION */\n@media (prefers-reduced-motion: reduce) {\n  .hndrd-explore-minimal .hndrd-explore-link,\n  .hndrd-explore-minimal .hndrd-explore-arrow {\n    transition: none !important;\n  }\n}\n</style>\n\n<section class=\"hndrd-explore-minimal\">\n  <a\n    class=\"hndrd-explore-link\"\n    href=\"https://in.hndrd.co/products/phenom-flow\"\n    aria-label=\"Explore All Phenom Flow\"\n  >\n    <span class=\"hndrd-explore-text\">\n      EXPLORE ALL\n    </span>\n\n    <span class=\"hndrd-explore-arrow\" aria-hidden=\"true\">\n      <svg viewBox=\"0 0 24 24\" fill=\"none\">\n        <path\n          d=\"M5 12h14m-6-6 6 6-6 6\"\n          stroke=\"currentColor\"\n          stroke-width=\"1.8\"\n          stroke-linecap=\"round\"\n          stroke-linejoin=\"round\"\n        />\n      </svg>\n    </span>\n  </a>\n</section>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -214,6 +231,7 @@
     "media_HHKRjF",
     "media_9D8MJ9",
     "media_e6CGRi",
+    "hero_component_w9HjW3",
     "custom_liquid_W8FhAR"
   ]
 }
