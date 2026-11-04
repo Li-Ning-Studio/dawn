@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_video_component_46bRD8": {
+      "type": "hero-video-component",
+      "disabled": true,
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/web700.mp4",
+        "mobile_video": "shopify://files/videos/web700.mp4",
+        "subtitle": "PHENOM FLOW",
+        "title": "Breath of innovs",
+        "description": "Experience the speed and precision with our latest video showcase",
+        "button_text": "EXPLORE MORE",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero_component_WF9GDh": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -431,6 +448,7 @@
     }
   },
   "order": [
+    "hero_video_component_46bRD8",
     "hero_component_WF9GDh",
     "hero_video_component_6D9BF9",
     "hero_video_component_Xmtj6T",
