@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_video_component_8ijgHw": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/PHENOM FLOW Main video.mp4",
+        "mobile_video": "shopify://files/videos/PHENOM FLOW Main video.mp4",
+        "subtitle": "Prnx",
+        "title": "MOTION IN ACTION",
+        "description": "Experience the speed and precision with our latest video showcase",
+        "button_text": "EXPLORE MORE",
+        "link_to": "/",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "countdown_timer_reGcgi": {
       "type": "countdown-timer",
       "name": "Countdown Timer",
@@ -18,13 +34,6 @@
         "background": "linear-gradient(303deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1) 4%, rgba(0, 0, 0, 1) 100%)",
         "text_color": "#000000",
         "padding_top": 18
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
       }
     },
     "featured_collection_DTYgDt": {
@@ -55,11 +64,19 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
     }
   },
   "order": [
+    "hero_video_component_8ijgHw",
     "countdown_timer_reGcgi",
-    "main",
-    "featured_collection_DTYgDt"
+    "featured_collection_DTYgDt",
+    "main"
   ]
 }
