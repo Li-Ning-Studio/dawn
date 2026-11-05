@@ -83,7 +83,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"phenom-rubber-section\">\n  <p class=\"phenom-rubber-label\">\n  </p>\n\n  <p class=\"longcopy\">\n    For Phenom, we worked with\n    <span class=\"highlight\">Goodyear</span>,\n    the world leader in tire technology,\n    to bring\n    <span class=\"highlight\">racing-grade rubber</span>\n    to the Badminton court, ending the\n    age-long\n    <span class=\"highlight\">traditional trade-off</span>\n    between\n    <span class=\"highlight\">grip and longevity</span>.\n  </p>\n</div>\n\n<style>\n/* SECTION - NO TOP OR BOTTOM SPACING */\n.phenom-rubber-section {\n  max-width: 1000px;\n  width: 100%;\n  margin: 0 auto !important;\n  padding: 0 12px !important;\n  text-align: center;\n  background-color: #000000;\n}\n\n/* LABEL */\n.phenom-rubber-label {\n  font-size: 1.4rem;\n  color: #ffffff;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n/* DESCRIPTION */\n.phenom-rubber-section .longcopy {\n  font-size: 2.2rem;\n  font-weight: 800;\n  letter-spacing: -1px;\n  line-height: 145%;\n  color: rgba(255,255,255,.5);\n\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n/* HIGHLIGHT */\n.phenom-rubber-section .highlight {\n  color: rgba(255,255,255,.95);\n}\n\n/* DESKTOP */\n@media screen and (min-width: 750px) {\n  .phenom-rubber-section .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
+        "custom_liquid": "<div class=\"phenom-rubber-section\">\n  <p class=\"phenom-rubber-label\">\n  </p>\n\n  <p class=\"longcopy\">\n    For Phenom Flow, we worked with\n    <span class=\"highlight\">Goodyear</span>,\n    the world leader in tire technology,\n    to bring\n    <span class=\"highlight\">racing-grade rubber</span>\n    to the Badminton court, ending the\n    age-long\n    <span class=\"highlight\">traditional trade-off</span>\n    between\n    <span class=\"highlight\">grip and longevity</span>.\n  </p>\n</div>\n\n<style>\n/* SECTION - NO TOP OR BOTTOM SPACING */\n.phenom-rubber-section {\n  max-width: 1000px;\n  width: 100%;\n  margin: 0 auto !important;\n  padding: 0 12px !important;\n  text-align: center;\n  background-color: #000000;\n}\n\n/* LABEL */\n.phenom-rubber-label {\n  font-size: 1.4rem;\n  color: #ffffff;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n/* DESCRIPTION */\n.phenom-rubber-section .longcopy {\n  font-size: 2.2rem;\n  font-weight: 800;\n  letter-spacing: -1px;\n  line-height: 145%;\n  color: rgba(255,255,255,.5);\n\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n/* HIGHLIGHT */\n.phenom-rubber-section .highlight {\n  color: rgba(255,255,255,.95);\n}\n\n/* DESKTOP */\n@media screen and (min-width: 750px) {\n  .phenom-rubber-section .longcopy {\n    font-size: 3rem;\n  }\n}\n</style>",
         "color_scheme": "scheme-4",
         "padding_top": 16,
         "padding_bottom": 24
@@ -238,12 +238,11 @@
     },
     "swipeable_products_x34qkx": {
       "type": "swipeable-products",
-      "disabled": true,
       "name": "Swipeable Products",
       "settings": {
         "title": "EXPLORE PHENOM FLOW",
         "products": [
-          "phenom"
+          "phenom-flow"
         ],
         "show_color_variants": true,
         "color_scheme": "scheme-4",
