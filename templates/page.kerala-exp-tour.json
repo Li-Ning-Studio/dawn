@@ -287,13 +287,23 @@
     "collapsible_content_ywGM93": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_rgThXi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is there any age limit?",
+            "open_by_default": false,
+            "icon": "question_mark",
+            "row_content": "<p>Yes, participants must be at least 18 years old to participate.</p>",
+            "page": ""
+          }
+        },
         "collapsible_row_bKfjRY": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Your Tour Benefits At a Glance",
             "open_by_default": false,
             "icon": "star",
-            "row_content": "<p>🎯 What's in Store for You</p><p>✅ Free Equipment Trials - Experience our latest high-performance rackets at no cost</p><p>🎁 Exclusive Rewards - Unlock special offers and limited-time coupon codes</p><p>🏆 Competitive Fun - Participate in on-court challenges and win exciting prizes</p><p>🤝 Network & Connect - Meet professional players and fellow badminton enthusiasts</p><p>💬 Meet the Team - Connect with Hundred experts and discover what makes our gear elite</p>",
+            "row_content": "<p>🎯&nbsp;What's in Store for You</p><p>✅&nbsp;Free Equipment Trials&nbsp;- Experience our latest high-performance rackets at no cost</p><p>🎁&nbsp;Exclusive Rewards&nbsp;- Unlock special offers and limited-time coupon codes</p><p>🏆&nbsp;Competitive Fun&nbsp;- Participate in on-court challenges and win exciting prizes</p><p>🤝&nbsp;Network & Connect&nbsp;- Meet professional players and fellow badminton enthusiasts</p><p>💬&nbsp;Meet the Team&nbsp;- Connect with Hundred experts and discover what makes our gear elite</p>",
             "page": ""
           }
         },
@@ -353,7 +363,7 @@
             "heading": "Is this event only for badminton?",
             "open_by_default": false,
             "icon": "eye",
-            "row_content": "<p>Yes, this particular tour stop in Rajasthan is <strong>focused on badminton rackets only</strong>.</p>",
+            "row_content": "<p>Yes, this particular tour stop in Kerala is <strong>focused on badminton rackets only</strong>.</p>",
             "page": ""
           }
         },
@@ -379,6 +389,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_rgThXi",
         "collapsible_row_bKfjRY",
         "collapsible_row_HhrpyN",
         "collapsible_row_d8Azcr",
