@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_video_component_LbdXtB": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/PHENOM FLOW Main video.mp4",
+        "mobile_video": "shopify://files/videos/038a9f8181c0428f87a6302d7b450522.HD-1080p-7.2Mbps-100099292.mp4",
+        "subtitle": "PHENOM FLOW",
+        "title": "A Breath of innovation",
+        "description": "Because every detail matters. Discover the technology and innovation behind Phenom Flow.",
+        "button_text": "Explore The Innovation",
+        "link_to": "shopify://products/velocity-zoom-salinan",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
     "hero_video_component_i4cfmH": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -68,35 +84,6 @@
         "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 36
-      }
-    },
-    "hero_component_gKmhp8": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/1_1.png",
-        "mobile_image": "shopify://shop_images/2_1.png",
-        "subtitle": "Built for explosive speed, stable control, and unstoppable court performance.",
-        "title": "VELOCITY ZOOM BADMINTON SHOES",
-        "description": "Explosive Speed Meets Total Control",
-        "button_text": "SHOP VELOCITY ZOOM",
-        "link_to": "shopify://products/velocity-zoom",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_Q7qTKA": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "Explosive Speed Control",
-        "products": [
-          "velocity-zoom"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 28
       }
     },
     "hero_component_nKcbRQ": {
@@ -301,12 +288,11 @@
     }
   },
   "order": [
+    "hero_video_component_LbdXtB",
     "hero_video_component_i4cfmH",
     "hero_video_component_nCVBG3",
     "hero_component_n9R8Ji",
     "swipeable_products_qF6iTW",
-    "hero_component_gKmhp8",
-    "swipeable_products_Q7qTKA",
     "hero_component_nKcbRQ",
     "swipeable_products_ptFa6j",
     "hero_component_CE4EqA",
