@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "hero_video_component_LrCHeM": {
+      "type": "hero-video-component",
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/1.mp4",
+        "mobile_video": "shopify://files/videos/2.mp4",
+        "subtitle": "PHENOM FLOW",
+        "title": "HƠI THỞ CỦA SỰ ĐỔI MỚI.",
+        "description": "Bởi mỗi chi tiết đều quan trọng. Khám phá công nghệ và những cải tiến đằng sau Phenom Flow.",
+        "button_text": "KHÁM PHÁ NHỮNG CẢI TIẾN",
+        "link_to": "https://vn.hndrd.co/pages/phenom-flow",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
     "hero_video_component_dDy49h": {
       "type": "hero-video-component",
       "name": "Hero Video Component",
@@ -295,6 +311,7 @@
     }
   },
   "order": [
+    "hero_video_component_LrCHeM",
     "hero_video_component_dDy49h",
     "hero_component_WAJY7j",
     "custom_liquid_grQUgz",
