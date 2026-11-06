@@ -15,64 +15,14 @@
       "settings": {
         "video": "shopify://files/videos/PHENOM FLOW Main video.mp4",
         "mobile_video": "shopify://files/videos/PHENOM FLOW Main video.mp4",
-        "subtitle": "Prnx",
-        "title": "MOTION IN ACTION",
-        "description": "Experience the speed and precision with our latest video showcase",
-        "button_text": "EXPLORE MORE",
+        "subtitle": "INTRODUCING PHENOM FLOW",
+        "title": "Crafted for the Meticulous.",
+        "description": "The Engineered Badminton Shoe by HNDRD.",
+        "button_text": "EXPLORE PHENOM FLOW",
         "link_to": "/",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "rich_text_XURybH": {
-      "type": "rich-text",
-      "blocks": {
-        "text_X9FDg8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>INTRODUCING PHENOM FLOW</p>"
-          }
-        },
-        "heading_TGB8jM": {
-          "type": "heading",
-          "settings": {
-            "heading": "&nbsp;Crafted for the Meticulous.&nbsp;",
-            "heading_size": "h1"
-          }
-        },
-        "text_CL6NYF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The Engineered Badminton Shoe by HNDRD.</p>"
-          }
-        },
-        "button_dV6JeV": {
-          "type": "button",
-          "settings": {
-            "button_label": "EXPLORE PHENOM FLOW",
-            "button_link": "",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "text_X9FDg8",
-        "heading_TGB8jM",
-        "text_CL6NYF",
-        "button_dV6JeV"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "main": {
@@ -85,7 +35,6 @@
   },
   "order": [
     "hero_video_component_8ijgHw",
-    "rich_text_XURybH",
     "main"
   ]
 }
