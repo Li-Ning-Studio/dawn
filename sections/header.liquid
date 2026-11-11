@@ -443,6 +443,7 @@
     "@context": "http://schema.org",
     "@type": "Organization",
     "name": {{ shop.name | json }},
+    "alternateName": ["Hundred", "HNDRD", "Hundred Badminton", "Hundred Badminton Europe"],
     {% if settings.logo %}
       "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
@@ -468,6 +469,7 @@
       "@context": "http://schema.org",
       "@type": "WebSite",
       "name": {{ shop.name | json }},
+      "alternateName": ["Hundred", "HNDRD", "Hundred Badminton Europe"],
       "potentialAction": {
         "@type": "SearchAction",
         "target": {{ potential_action_target | json }},
