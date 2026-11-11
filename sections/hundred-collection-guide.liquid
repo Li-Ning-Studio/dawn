@@ -1,5 +1,5 @@
 {%- comment -%}
-  Hundred Europe: købsguide + FAQ under produkterne på udvalgte kollektioner.
+  Hundred Europe: FAQ under produkterne på udvalgte kollektioner.
   Indholdet vælges ud fra collection.handle. Andre kollektioner viser intet.
   Kilde: 100 Google SEO/tekster/udkast-03-kategorier.md
 {%- endcomment -%}
@@ -13,167 +13,77 @@
 -%}
 {%- if show -%}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  .hg{--ink:#0a0a0b;--soft:#5d584f;--muted:#8c867b;--line:#e7e3dc;--panel:#f5f3ef;--gold:#f2a81d;--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;font-family:var(--body);color:var(--ink);max-width:1360px;margin:0 auto;padding:clamp(56px,8vh,96px) clamp(16px,4vw,56px);border-top:1px solid var(--line)}
+  .hg{--ink:#0a0a0b;--soft:#5d584f;--line:#e7e3dc;--gold:#f2a81d;--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;font-family:var(--body);color:var(--ink);max-width:860px;margin:0 auto;padding:clamp(48px,7vh,88px) clamp(16px,4vw,32px);text-align:center}
   .hg *{box-sizing:border-box}
-  .hg-eyebrow{display:flex;align-items:center;gap:12px;font:700 12px/1 var(--body);letter-spacing:.32em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-  .hg-eyebrow::before{content:"";width:28px;height:2px;background:var(--gold)}
-  .hg h2{font:italic 800 clamp(32px,3.8vw,52px)/1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 32px;text-wrap:balance;color:var(--ink)}
-  .hg h3{font:italic 800 24px/1.1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 10px;color:var(--ink)}
-  .hg p{font:400 17px/1.6 var(--body);color:var(--soft);margin:0 0 12px;max-width:65ch}
-  .hg-lead{border-left:2px solid var(--gold);padding-left:18px;font-weight:500!important;color:var(--ink)!important;margin:28px 0 0!important;max-width:75ch!important}
-  .hg-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:6px}
-  .hg-table{width:100%;border-collapse:collapse;font:400 16px/1.45 var(--body);margin:0;min-width:560px}
-  .hg-table th,.hg-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--soft)}
-  .hg-table tr:last-child td{border-bottom:0}
-  .hg-table th{font:700 12px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;background:var(--panel);color:var(--ink)}
-  .hg-table td:first-child{font-weight:700;color:var(--ink)}
-  .hg-table th:first-child,.hg-table td:first-child{position:sticky;left:0;background:#fff;z-index:1}
-  .hg-table th:first-child{background:var(--panel)}
-  .hg-table a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
-  .hg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);margin-top:clamp(40px,5vw,64px)}
-  .hg-item{border-top:2px solid var(--ink);padding-top:18px}
-  .hg-faq-wrap{margin-top:clamp(48px,6vw,80px);max-width:900px}
-  .hg-faq{border-top:1px solid var(--line)}
+  .hg-eyebrow{display:inline-flex;align-items:center;gap:12px;font:700 12px/1 var(--body);letter-spacing:.32em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+  .hg-eyebrow::before,.hg-eyebrow::after{content:"";width:24px;height:2px;background:var(--gold)}
+  .hg h2{font:italic 800 clamp(30px,3.4vw,44px)/1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 28px;color:var(--ink)}
+  .hg-faq{border-top:1px solid var(--line);text-align:left}
   .hg-faq details{border-bottom:1px solid var(--line)}
-  .hg-faq summary{cursor:pointer;list-style:none;font:600 18px/1.35 var(--body);color:var(--ink);min-height:56px;display:flex;align-items:center;padding:14px 44px 14px 0;position:relative}
+  .hg-faq summary{cursor:pointer;list-style:none;font:600 17px/1.35 var(--body);color:var(--ink);min-height:56px;display:flex;align-items:center;padding:14px 44px 14px 0;position:relative}
   .hg-faq summary::-webkit-details-marker{display:none}
   .hg-faq summary::before,.hg-faq summary::after{content:"";position:absolute;right:6px;top:50%;width:16px;height:2px;background:var(--ink);transition:transform .2s ease,background .2s ease}
   .hg-faq summary::after{transform:rotate(90deg)}
   .hg-faq details[open] summary::after{transform:rotate(0)}
   .hg-faq summary:hover::before,.hg-faq summary:hover::after,.hg-faq details[open] summary::before,.hg-faq details[open] summary::after{background:var(--gold)}
   .hg-faq summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-  .hg-faq details p{padding:0 0 18px}
+  .hg-faq details p{font:400 16px/1.6 var(--body);color:var(--soft);margin:0;padding:0 44px 18px 0}
   @media (prefers-reduced-motion:reduce){.hg-faq summary::before,.hg-faq summary::after{transition:none}}
-  @media screen and (max-width:820px){.hg p{font-size:16px}.hg h3{font-size:22px}.hg-table{font-size:15px}.hg-table th,.hg-table td{padding:12px}.hg-faq summary{font-size:17px}}
+  @media screen and (max-width:820px){.hg-faq summary{font-size:16px;min-height:52px}.hg-faq details p{font-size:15px;padding-right:0}}
 </style>
 <div class="hg">
 <span class="hg-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+<h2>{{ section.settings.faq_title | escape }}</h2>
 {%- case h -%}
 
 {%- when 'badminton-rackets-hndrd' -%}
-<h2>How to choose your Hundred racket</h2>
-<div class="hg-scroll"><table class="hg-table">
-<tr><th>You want…</th><th>Series</th><th>Balance</th></tr>
-<tr><td>Maximum power in your smash and clear</td><td><a href="/collections/power-rackets-nitrix">Nitrix</a> or Battle</td><td>Head-heavy</td></tr>
-<tr><td>The best of both worlds – some power, fast handling</td><td><a href="/collections/control-rackets-hyfonic">Hyfonic</a></td><td>Even balance</td></tr>
-<tr><td>Really fast racket handling and speed at the net</td><td><a href="/collections/speed-rackets-flareon">Flareon</a></td><td>Head-light</td></tr>
-<tr><td>A very light racket that is easy to play</td><td><a href="/collections/lightweight-rackets-nuclear">Nuclear</a></td><td>Light, slightly head-heavy</td></tr>
-</table></div>
-<div class="hg-grid">
-<div class="hg-item"><h3>Balance – where the weight sits</h3>
-<p>Head-heavy rackets have more weight towards the head, which gives you more power. Even-balanced rackets give you some of that power while keeping fast racket handling. Head-light rackets keep the weight towards the handle, so you can change grips quickly and react fast in flat exchanges.</p></div>
-<div class="hg-item"><h3>Flex – how stiff the shaft is</h3>
-<p>A flexible shaft is the easiest to play with and helps you generate power – we recommend it for most beginners and recreational players. Medium is the middle ground many club players land on. A stiff shaft is the most demanding: it requires good technique and a fast swing, but gives more control and a more direct feel.</p></div>
-<div class="hg-item"><h3>Weight – 3U to 7U</h3>
-<p>3U = 85–89 g, 4U = 80–84 g, 5U = 75–79 g, 6U = 70–74 g and 7U = 65–69 g. A heavier racket gives more power if you can swing it; a lighter racket is quicker to move. 4U is the standard weight for most players.</p></div>
-<div class="hg-item"><h3>String tension</h3>
-<p>Lower tension gives a bigger sweet spot; higher tension gives more control but demands precise, hard hitting. As a guide: beginners around 18–22 lbs, club players 22–25 lbs, advanced players 24–27 lbs. Never string above the racket's maximum tension.</p></div>
-</div>
-<div class="hg-faq-wrap"><h3>{{ section.settings.faq_title | escape }}</h3>
 <div class="hg-faq">
 <details><summary>Which Hundred racket is best for beginners?</summary><p>A flexible racket that is easy to play – Nitrix 10 or Thunder if you want power, Hyfonic 1 for all-round play, Flareon 100 for speed, or Nuclear if you want a very light racket.</p></details>
 <details><summary>Is a stiff racket better?</summary><p>Not for everyone. A stiff shaft gives the most control to players with good technique, but it is harder to play with. Most players get more out of a flexible or medium shaft.</p></details>
 <details><summary>Which weight should I choose – 3U, 4U, 5U, 6U or 7U?</summary><p>4U suits most players. Choose 3U for more weight and power, and 5U, 6U or 7U for a lighter, quicker racket that is easier on your arm and shoulder.</p></details>
 <details><summary>Are all colours of a model the same racket?</summary><p>Yes – unless stated otherwise, the colours only differ in design.</p></details>
+<details><summary>What is the difference between head-heavy, even balance and head-light?</summary><p>Head-heavy gives more power, head-light gives faster racket handling, and even balance gives you some of both.</p></details>
+<details><summary>What string tension should I choose?</summary><p>As a guide: beginners around 18–22 lbs, club players 22–25 lbs and advanced players 24–27 lbs. Never string above the racket's maximum tension.</p></details>
 <details><summary>How do I find the right racket?</summary><p>Talk to Kim, our racket advisor. Kim asks about your level and how you play, and recommends a model from the Hundred range.</p></details>
-</div></div>
+</div>
 
 {%- when 'power-rackets-nitrix' -%}
-<h2>Find your Nitrix</h2>
-<div class="hg-scroll"><table class="hg-table">
-<tr><th>Model</th><th>Shaft</th><th>Weight</th><th>For</th></tr>
-<tr><td>Nitrix 10 Pro Strung</td><td>Flexible</td><td>4U / 5U</td><td>Beginners and recreational players who want power</td></tr>
-<tr><td>Nitrix Thunder</td><td>Flexible</td><td>4U / 5U</td><td>Recreational players one step up</td></tr>
-<tr><td>Nitrix Attack</td><td>Flexible, 6.5 mm</td><td>4U / 5U</td><td>Juniors and recreational players getting some level</td></tr>
-<tr><td>Nitrix Pro</td><td>Flexible</td><td>3U / 4U</td><td>Advanced players who want maximum power and some help</td></tr>
-<tr><td>Nitrix 70 Volta</td><td>Flexible, 7.0 mm</td><td>3U / 4U</td><td>Advanced players – aerodynamic frame, feels really fast</td></tr>
-<tr><td>Nitrix 70 Venom</td><td>Stiff, 6.1 mm</td><td>3U / 4U</td><td>Experienced, technical high-level players</td></tr>
-<tr><td>Nitrix 80 Bullet</td><td>Stiff (3U), medium (4U/5U), 5.9 mm</td><td>3U / 4U / 5U</td><td>Advanced, elite and competition players</td></tr>
-</table></div>
-<div class="hg-grid">
-<div class="hg-item"><h3>Entry models</h3>
-<p>Nitrix 10, Thunder and Attack are flexible and not demanding – easy to play and easy to get power from. 4U is heavier and gives the most power; 5U is lighter but still head-heavy, and many players choose 5U as they get older.</p></div>
-<div class="hg-item"><h3>Top models</h3>
-<p>4U is the normal weight that most players should choose; 3U is for players who want even more weight and power. Nitrix Pro and 70 Volta are flexible and forgiving. 70 Venom and 80 Bullet are the most demanding: stiff shafts that require good technique and a fast swing. The 80 Bullet is slightly less head-heavy than the 70 Venom, so it handles a little faster.</p></div>
-</div>
-<div class="hg-faq-wrap"><h3>{{ section.settings.faq_title | escape }}</h3>
 <div class="hg-faq">
 <details><summary>Which Nitrix is easiest to play?</summary><p>Nitrix 10, Thunder and Attack – all flexible and made to help you generate power.</p></details>
 <details><summary>Nitrix Pro or Nitrix 70 Venom?</summary><p>Both are top rackets. The Pro is flexible and forgiving; the 70 Venom is stiff and demands more technique.</p></details>
 <details><summary>What is the difference between Nitrix 70 Volta and Nitrix Pro?</summary><p>They are very similar. The Volta has a more aerodynamic frame for faster handling but a slightly thicker shaft (7.0 mm vs 6.5 mm), so the two roughly balance out.</p></details>
 <details><summary>Not sure which Nitrix to choose?</summary><p>Ask Kim, our racket advisor, for a recommendation based on how you play.</p></details>
-</div></div>
+</div>
 
 {%- when 'control-rackets-hyfonic' -%}
-<h2>Find your Hyfonic</h2>
-<div class="hg-scroll"><table class="hg-table">
-<tr><th>Model</th><th>Shaft</th><th>Weight</th><th>For</th></tr>
-<tr><td>Hyfonic 1 (strung)</td><td>Flexible</td><td>5U</td><td>Beginners and recreational players – light and quick</td></tr>
-<tr><td>Hyfonic Lazer</td><td>Flexible</td><td>5U</td><td>Beginners and juniors – a small step up from Hyfonic 1</td></tr>
-<tr><td>Hyfonic Lazer Strung</td><td>Flexible</td><td>4U</td><td>The classic all-rounder – a little more power than the 5U</td></tr>
-<tr><td>Hyfonic 7</td><td>Flexible, 7.0 mm</td><td>3U / 4U</td><td>Advanced players – and anyone who wants an easy-to-play top racket</td></tr>
-</table></div>
-<p class="hg-lead">If you are choosing between Hyfonic 1 and Lazer, the difference is small – both are a good start. Because they are light and not head-heavy, they also suit players with shoulder problems. The Hyfonic 7 is built with the best materials in the series; its flexible shaft makes it easy to play with, so it suits more than just elite players.</p>
-<div class="hg-faq-wrap"><h3>{{ section.settings.faq_title | escape }}</h3>
 <div class="hg-faq">
 <details><summary>Is Hyfonic good for doubles?</summary><p>Yes – the even balance combines power and fast racket handling, which works for both singles and doubles.</p></details>
 <details><summary>Is the Hyfonic 7 stiff?</summary><p>No. It is flexible, which makes it an easy-to-play top racket.</p></details>
 <details><summary>Not sure which Hyfonic to choose?</summary><p>Ask Kim, our racket advisor, for a recommendation based on how you play.</p></details>
-</div></div>
+</div>
 
 {%- when 'speed-rackets-flareon' -%}
-<h2>Find your Flareon</h2>
-<div class="hg-scroll"><table class="hg-table">
-<tr><th>Model</th><th>Shaft</th><th>Weight</th><th>For</th></tr>
-<tr><td>Flareon 100 (strung)</td><td>Flexible</td><td>5U</td><td>Beginners and recreational players, also with arm problems</td></tr>
-<tr><td>Flareon Typhoon</td><td>Flexible</td><td>4U / 5U</td><td>Recreational players and seniors – 4U is very popular</td></tr>
-<tr><td>Flareon 700</td><td>Stiff, 7.0 mm</td><td>3U / 4U</td><td>Advanced and elite players – a control racket</td></tr>
-</table></div>
-<p class="hg-lead">The lighter models are a good choice if you have arm problems, because the weight sits towards the handle – but they give less power. Typhoon in 5U gives really fast racket handling; in 4U it is a more typical head-light racket with a little more power. The Flareon 700 is stiff and demands more technique. As always: the heavier the weight class, the more power.</p>
-<div class="hg-faq-wrap"><h3>{{ section.settings.faq_title | escape }}</h3>
 <div class="hg-faq">
 <details><summary>Is a head-light racket good for doubles?</summary><p>Many doubles players choose head-light for fast grip changes and quick exchanges at the net.</p></details>
 <details><summary>Will I lose power with a head-light racket?</summary><p>You get less "free" power than with a head-heavy racket. Choose 3U or 4U for more weight behind the shot.</p></details>
 <details><summary>Not sure which Flareon to choose?</summary><p>Ask Kim, our racket advisor, for a recommendation based on how you play.</p></details>
-</div></div>
+</div>
 
 {%- when 'lightweight-rackets-nuclear', 'nuclear-rackets' -%}
-<h2>Choosing a Nuclear racket</h2>
-<div class="hg-scroll"><table class="hg-table">
-<tr><th>Model</th><th>Weight</th><th>Feel</th></tr>
-<tr><td>Nuclear 60</td><td>60 g</td><td>The lightest and quickest</td></tr>
-<tr><td>Nuclear 72</td><td>72 g</td><td>Light, with a little more weight behind the shot</td></tr>
-<tr><td>Nuclear 78</td><td>78 g</td><td>The most weight behind the shot in the series</td></tr>
-</table></div>
-<p class="hg-lead">All Nuclear rackets are flexible and easy to play. They are ideal for beginners, children, recreational and senior players, and for anyone who wants a really light racket with fast racket handling – for example after arm problems. The only difference between the models is the weight: the lighter, the quicker; the heavier, the more weight behind the shot.</p>
-<div class="hg-faq-wrap"><h3>{{ section.settings.faq_title | escape }}</h3>
 <div class="hg-faq">
 <details><summary>Is Nuclear a power series?</summary><p>No. Nuclear is a lightweight series. The rackets are slightly head-heavy, so you can still create some power, but the focus is on low weight and easy handling.</p></details>
 <details><summary>What does the number mean?</summary><p>It is the weight in grams: Nuclear 60 weighs 60 g, Nuclear 72 weighs 72 g and Nuclear 78 weighs 78 g.</p></details>
 <details><summary>Not sure which Nuclear to choose?</summary><p>Ask Kim, our racket advisor, for a recommendation based on how you play.</p></details>
-</div></div>
+</div>
 
 {%- when 'badminton-shoes' -%}
-<h2>Which Hundred shoe is right for you?</h2>
-<div class="hg-scroll"><table class="hg-table">
-<tr><th></th><th>Hundred Phenom</th><th>Hundred Hypercourt</th></tr>
-<tr><td>For</td><td>Advanced players – training and matches at high intensity</td><td>Players who want high comfort, grip and support</td></tr>
-<tr><td>Cushioning</td><td>Thrust Foam in the heel</td><td>X Cushion in the midsole</td></tr>
-<tr><td>Stability</td><td>Z-Lock foam structure for torsional stability</td><td>Supportive heel construction</td></tr>
-<tr><td>Upper</td><td>ArmorMesh and DuraCore</td><td>KPU</td></tr>
-<tr><td>Outsole</td><td>DuraGrip, developed with Goodyear</td><td>Active Grip, non-marking</td></tr>
-</table></div>
-<div class="hg-grid">
-<div class="hg-item"><h3>Finding the right size</h3>
-<p>Both shoes have a snug fit: your foot should not slide around inside the shoe, but your toes should not be squeezed either. Measure your foot and compare it with our size guide, especially if you are between two sizes.</p></div>
-</div>
-<div class="hg-faq-wrap"><h3>{{ section.settings.faq_title | escape }}</h3>
 <div class="hg-faq">
 <details><summary>How should a badminton shoe fit?</summary><p>Snug, so your foot stays in place in lunges and stops – without squeezing your toes.</p></details>
 <details><summary>Phenom or Hypercourt?</summary><p>The Phenom is Hundred's top model for intensive training and matches. The Hypercourt focuses on comfort, grip and support.</p></details>
-</div></div>
+<details><summary>How do I find the right size?</summary><p>Measure your foot and compare it with our size guide – especially if you are between two sizes.</p></details>
+</div>
 {%- endcase -%}
 </div>
 <script type="application/ld+json">
@@ -182,7 +92,9 @@
 {%- when 'badminton-rackets-hndrd' -%}
 {"@type":"Question","name":"Which Hundred racket is best for beginners?","acceptedAnswer":{"@type":"Answer","text":"A flexible racket that is easy to play – Nitrix 10 or Thunder if you want power, Hyfonic 1 for all-round play, Flareon 100 for speed, or Nuclear if you want a very light racket."}},
 {"@type":"Question","name":"Is a stiff racket better?","acceptedAnswer":{"@type":"Answer","text":"Not for everyone. A stiff shaft gives the most control to players with good technique, but it is harder to play with. Most players get more out of a flexible or medium shaft."}},
-{"@type":"Question","name":"Which weight should I choose – 3U, 4U, 5U, 6U or 7U?","acceptedAnswer":{"@type":"Answer","text":"4U suits most players. Choose 3U for more weight and power, and 5U, 6U or 7U for a lighter, quicker racket that is easier on your arm and shoulder."}}
+{"@type":"Question","name":"Which weight should I choose – 3U, 4U, 5U, 6U or 7U?","acceptedAnswer":{"@type":"Answer","text":"4U suits most players. Choose 3U for more weight and power, and 5U, 6U or 7U for a lighter, quicker racket that is easier on your arm and shoulder."}},
+{"@type":"Question","name":"What is the difference between head-heavy, even balance and head-light?","acceptedAnswer":{"@type":"Answer","text":"Head-heavy gives more power, head-light gives faster racket handling, and even balance gives you some of both."}},
+{"@type":"Question","name":"What string tension should I choose?","acceptedAnswer":{"@type":"Answer","text":"As a guide: beginners around 18–22 lbs, club players 22–25 lbs and advanced players 24–27 lbs. Never string above the racket's maximum tension."}}
 {%- when 'power-rackets-nitrix' -%}
 {"@type":"Question","name":"Which Nitrix is easiest to play?","acceptedAnswer":{"@type":"Answer","text":"Nitrix 10, Thunder and Attack – all flexible and made to help you generate power."}},
 {"@type":"Question","name":"Nitrix Pro or Nitrix 70 Venom?","acceptedAnswer":{"@type":"Answer","text":"Both are top rackets. The Pro is flexible and forgiving; the 70 Venom is stiff and demands more technique."}},
@@ -197,7 +109,8 @@
 {"@type":"Question","name":"Is Nuclear a power series?","acceptedAnswer":{"@type":"Answer","text":"No. Nuclear is a lightweight series. The rackets are slightly head-heavy, so you can still create some power, but the focus is on low weight and easy handling."}},
 {"@type":"Question","name":"What does the number mean?","acceptedAnswer":{"@type":"Answer","text":"It is the weight in grams: Nuclear 60 weighs 60 g, Nuclear 72 weighs 72 g and Nuclear 78 weighs 78 g."}}
 {%- when 'badminton-shoes' -%}
-{"@type":"Question","name":"How should a badminton shoe fit?","acceptedAnswer":{"@type":"Answer","text":"Snug, so your foot stays in place in lunges and stops – without squeezing your toes."}}
+{"@type":"Question","name":"How should a badminton shoe fit?","acceptedAnswer":{"@type":"Answer","text":"Snug, so your foot stays in place in lunges and stops – without squeezing your toes."}},
+{"@type":"Question","name":"How do I find the right size?","acceptedAnswer":{"@type":"Answer","text":"Measure your foot and compare it with our size guide – especially if you are between two sizes."}}
 {%- endcase -%}
 ]}
 </script>
@@ -207,8 +120,8 @@
 {
   "name": "Hundred købsguide",
   "settings": [
-    {"type":"text","id":"eyebrow","label":"Lille overskrift","default":"Buying guide"},
-    {"type":"text","id":"faq_title","label":"FAQ-overskrift","default":"Questions & answers"}
+    {"type":"text","id":"eyebrow","label":"Lille overskrift","default":"Good to know"},
+    {"type":"text","id":"faq_title","label":"Overskrift","default":"Questions & answers"}
   ],
   "presets": [{ "name": "Hundred købsguide" }]
 }
