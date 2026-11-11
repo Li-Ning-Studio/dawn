@@ -104,3 +104,11 @@
     min-height: 20rem;
   }
 }
+
+/* Hundred Europe: centreret kollektionsbanner */
+.collection-hero .collection-hero__inner{justify-content:center;padding-top:6rem;padding-bottom:1rem}
+.collection-hero .collection-hero__text-wrapper{flex-basis:100%;text-align:center}
+.collection-hero .collection-hero__title{margin:0 0 1.4rem;font-size:4.2rem;font-weight:700}
+.collection-hero .collection-hero__description{max-width:110rem;margin:0 auto}
+.collection-hero .collection-hero__description p{color:#121212;font-size:1.6rem;line-height:1.7}
+@media screen and (max-width:749px){.collection-hero .collection-hero__inner{padding-top:3rem}.collection-hero .collection-hero__title{font-size:2.4rem;margin-bottom:.8rem}.collection-hero .collection-hero__description p{font-size:1.3rem;line-height:1.5}}
