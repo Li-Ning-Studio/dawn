@@ -11,14 +11,7 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "custom_css": [
-        ".collection-hero__inner{justify-content:center;padding-bottom:1rem}",
-        ".collection-hero__text-wrapper{flex-basis:100%;text-align:center}",
-        ".collection-hero__title{margin:0 auto 1.4rem;font-size:4.2rem;font-weight:700}",
-        ".collection-hero__description{max-width:110rem;margin:0 auto;font-size:1.6rem;line-height:1.7}",
-        ".collection-hero__description p{color:#121212}",
-        "@media(max-width:749px){.collection-hero__title{font-size:3rem}.collection-hero__description{font-size:1.5rem}}"
-      ],
+      "custom_css": [],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
