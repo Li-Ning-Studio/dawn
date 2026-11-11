@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   .hg{--ink:#0a0a0b;--soft:#5d584f;--line:#e7e3dc;--gold:#f2a81d;--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;font-family:var(--body);color:var(--ink);max-width:1728px;margin:0 auto;padding:clamp(40px,6vh,72px) 1.5rem clamp(56px,8vh,96px)}
-  .hg-in{text-align:center}
+  .hg-in{text-align:center;max-width:1320px;margin:0 auto}
   @media screen and (min-width:750px){.hg{padding-left:5rem;padding-right:5rem}}
   .hg *{box-sizing:border-box}
   .hg-eyebrow{display:inline-flex;align-items:center;gap:12px;font:700 12px/1 var(--body);letter-spacing:.32em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
@@ -90,21 +90,6 @@
 {%- endcase -%}
 </div>
 </div>
-<script>
-(function(){
-  var hg=document.currentScript.previousElementSibling,inner=hg&&hg.querySelector('.hg-in');
-  function align(){
-    var g=document.getElementById('product-grid');if(!g||!inner)return;
-    inner.style.marginLeft='';inner.style.width='';
-    var gr=g.getBoundingClientRect(),ir=inner.getBoundingClientRect();
-    if(gr.width<200)return;
-    inner.style.marginLeft=(gr.left-ir.left)+'px';inner.style.width=gr.width+'px';
-  }
-  align();window.addEventListener('load',align);
-  if(window.ResizeObserver){var g=document.getElementById('product-grid');if(g)new ResizeObserver(align).observe(g);}
-  window.addEventListener('resize',align);
-})();
-</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {%- case h -%}
