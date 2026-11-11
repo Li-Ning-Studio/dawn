@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "hero_video_component_hNztTF": {
+      "type": "hero-video-component",
+      "disabled": true,
+      "name": "Hero Video Component",
+      "settings": {
+        "video": "shopify://files/videos/web700 30mb.mp4",
+        "mobile_video": "shopify://files/videos/Yt · 1080×1350_1 (1).mp4",
+        "subtitle": "PHENOM FLOW",
+        "title": "A Breath of innovation",
+        "description": "Because every detail matters. Discover the technology and innovation behind Phenom Flow.",
+        "button_text": "EXPLORE PHENOM FLOW",
+        "link_to": "https://us.hndrd.co/pages/phenom-flow",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 28
+      }
+    },
     "hero_component_FgXrwt": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -101,23 +118,6 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "hero_video_component_hNztTF": {
-      "type": "hero-video-component",
-      "disabled": true,
-      "name": "Hero Video Component",
-      "settings": {
-        "video": "shopify://files/videos/Comp 1.mp4",
-        "mobile_video": "shopify://files/videos/R1_1.mp4",
-        "subtitle": "Comfortable. Durable. Professional.",
-        "title": "THE ART OF PERFORMANCE",
-        "description": "Built for competitive athletes who want agility, comfort, and control on every court.",
-        "button_text": "BUY NOW",
-        "link_to": "shopify://collections/pickleball-shoes",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 28
       }
     },
     "swipeable_products_ekha9p": {
@@ -611,10 +611,10 @@
     }
   },
   "order": [
+    "hero_video_component_hNztTF",
     "hero_component_FgXrwt",
     "custom_liquid_TNKe7n",
     "multicolumn_mWCEMh",
-    "hero_video_component_hNztTF",
     "swipeable_products_ekha9p",
     "hero_component_eRmFyD",
     "swipeable_products_eG7XyV",
