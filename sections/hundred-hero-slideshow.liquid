@@ -268,9 +268,9 @@
       {%- if b.shade -%}<div class="hhs-shade" aria-hidden="true"></div>{%- endif -%}
 
       <div class="hhs-copy">
-        {%- if b.overline != blank -%}<p class="hhs-over">{{ b.overline | escape }}</p>{%- endif -%}
+        {%- if b.overline != blank -%}{%- if is_first and section.settings.first_is_h1 -%}<h1 class="hhs-over" style="font-family:inherit;line-height:inherit">{{ b.overline | escape }}</h1>{%- else -%}<p class="hhs-over">{{ b.overline | escape }}</p>{%- endif -%}{%- endif -%}
         {%- if b.heading != blank or b.heading_gold != blank -%}
-          {%- if is_first and section.settings.first_is_h1 -%}{%- assign htag = 'h1' -%}{%- else -%}{%- assign htag = 'h2' -%}{%- endif -%}
+          Daniele PEDERZOLI
           <{{ htag }} class="hhs-h">{{ b.heading | escape }}{% if b.heading_gold != blank %}{% if b.heading != blank %}{% case b.gold_join %}{% when 'newline' %}<br class="hhs-br"> {% when 'space' %} {% endcase %}{% endif %}<em>{{ b.heading_gold | escape }}</em>{% endif %}</{{ htag }}>
         {%- endif -%}
         {%- if b.text != blank -%}<p class="hhs-sub">{{ b.text | escape }}</p>{%- endif -%}
