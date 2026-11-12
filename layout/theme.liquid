@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    {%- if template.name == 'index' -%}<link rel="alternate" hreflang="en-US" href="https://us.hndrd.co/"><link rel="alternate" hreflang="en-IN" href="https://in.hndrd.co/"><link rel="alternate" hreflang="id-ID" href="https://id.hndrd.co/"><link rel="alternate" hreflang="en-GB" href="https://eu.hndrd.co/"><link rel="alternate" hreflang="en-IE" href="https://eu.hndrd.co/"><link rel="alternate" hreflang="en" href="https://eu.hndrd.co/"><link rel="alternate" hreflang="x-default" href="https://hndrd.co/">{%- endif -%}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
