@@ -1,5 +1,5 @@
 import { render } from 'preact';
-import Stringing2 from './Stringing2.tsx';
+import Stringing2, { parseMaxTensionPounds } from './Stringing2.tsx';
 
 const preactRoot = document.getElementById('stringing-root');
 
@@ -15,6 +15,10 @@ if (preactRoot) {
     labelUnavailable,
     errorServiceUnavailable,
     maxTension,
+    racketPrice,
+    racketWeight,
+    racketProductType,
+    racketHandle,
     labelChooseString,
     labelSelectColor,
     labelSelectTension,
@@ -54,6 +58,13 @@ if (preactRoot) {
     <Stringing2
       stringingCollectionId={stringingCollectionId || null}
       maxTension={maxTension || null}
+      racketContext={{
+        price: racketPrice ? Number.parseFloat(racketPrice) : null,
+        max_tension: parseMaxTensionPounds(maxTension),
+        weight: racketWeight || null,
+        product_type: racketProductType || null,
+        handle: racketHandle || null,
+      }}
       isKnottingEnabled={isKnottingEnabled || null}
       knottingCost={knottingCost || null}
       stringingCost={stringingCost || null}

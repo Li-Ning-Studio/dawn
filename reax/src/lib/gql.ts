@@ -42,6 +42,10 @@ query getCollectionById($id: ID!) {
         productTagMetafield: metafield(key: "product_tag", namespace:"custom_but_hidden") {
           value
         }
+        # Optional JSON rules deciding which rackets show this string (see AGENTS.md "String rules").
+        stringingRules: metafield(key: "stringing_rules", namespace:"custom_but_hidden") {
+          value
+        }
         metafields(identifiers: [
           {namespace: "custom", key: "durability"}
           {namespace: "custom", key: "control"}

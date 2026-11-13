@@ -1,0 +1,692 @@
+/* The finder inherits the PDP's S3 typography and shared theme controls.
+   Keep this file scoped to layout and finder-only states; never restyle .button
+   or .field globally, or attach product-form behaviour to the quiz. */
+.rf {
+  --rf-muted: rgba(var(--color-foreground), 0.7);
+  --rf-line: rgba(var(--color-foreground), 0.18);
+  --border-color: var(--rf-line);
+  color: rgb(var(--color-foreground));
+  margin-block: 3.2rem 6.4rem;
+  scroll-margin-top: 10rem;
+}
+.rf [hidden] {
+  display: none !important;
+}
+.rf h1,
+.rf h2,
+.rf h3,
+.rf h4,
+.rf p {
+  margin: 0;
+}
+.rf [tabindex='-1']:focus {
+  outline: none;
+}
+
+/* Shared controls */
+.rf-action {
+  gap: 1.2rem;
+}
+.rf-text-button {
+  min-height: 4.4rem;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 0;
+}
+/* Editorial finder layout: typography and horizontal rules establish hierarchy.
+   Shared PDP controls retain their theme styling and keyboard focus treatment. */
+.rf-icon {
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: 0 0 1.8rem;
+  background: currentColor;
+  mask: var(--rf-arrow) center / contain no-repeat;
+}
+.rf-icon--check {
+  mask-image: var(--rf-check);
+}
+.rf-icon--back {
+  transform: rotate(180deg);
+}
+.rf-icon--diagonal {
+  transform: rotate(-45deg);
+}
+
+/* Introduction */
+.rf-intro-copy .button {
+  margin-top: 0.8rem;
+}
+.rf-intro {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 6.4rem;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  align-items: center;
+  padding-block: 3.2rem 6.4rem;
+}
+.rf-intro:not(:has(.rf-hero-image)) {
+  grid-template-columns: 1fr;
+}
+.rf-intro-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  gap: 2.4rem;
+}
+.rf-intro-copy h1 {
+  font-size: clamp(3.2rem, 4vw, 5.6rem);
+  line-height: 1.06;
+  max-width: 14ch;
+}
+.rf-hero-image img,
+.rf-hero-image video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+.rf-hero-image video {
+  max-width: 69rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+/* Questions and answer states */
+.rf-intro-copy > p,
+.rf-question-help {
+  color: var(--rf-muted);
+}
+/* Selected answers stay neutral. Keyboard focus uses the PDP accent. */
+.rf-option:has(:checked:focus-visible) {
+  outline-color: var(--accent-color);
+}
+.rf-option-copy {
+  display: block;
+  min-width: 0;
+}
+.rf-option:has(:checked) .rf-option-mark {
+  visibility: visible;
+}
+.rf-options--pills .s3_subtitle {
+  font-weight: 400;
+  line-height: 1.4;
+}
+.rf-quiz {
+  margin: 0 auto;
+  padding-inline: 0;
+  max-width: none;
+  padding-block: 1.6rem 6.4rem;
+}
+.rf-quiz-top {
+  color: var(--rf-muted);
+  margin-bottom: 4rem;
+}
+.rf-quiz-top .rf-text-button {
+  gap: 1.2rem;
+}
+.rf-question-layout {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3.5rem;
+  animation: rf-question-in 180ms ease both;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+.rf-question-layout--leaving {
+  animation: none;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+.rf-question-aside {
+  grid-column: 1 / span 3;
+}
+.rf-question-aside h1 {
+  max-width: 22ch;
+}
+.rf-question-help {
+  margin-top: 2.4rem !important;
+  line-height: 1.6;
+}
+.rf-step {
+  margin-top: 3.2rem !important;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rf-line);
+  color: var(--rf-muted);
+  text-transform: uppercase;
+}
+.rf-question-answers {
+  grid-column: 5 / -1;
+  min-width: 0;
+}
+.rf-options {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+.rf-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  min-height: 4.4rem;
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+  transition: border-color var(--duration-short) ease;
+  padding: 2.4rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--rf-line);
+  border-radius: 0;
+  background: transparent;
+}
+.rf-option:has(:checked) {
+  outline: none;
+  border-color: var(--rf-line);
+}
+.rf-option:has(:checked) .s3_subtitle {
+  font-weight: 700;
+}
+.rf-option:has(:focus-visible) {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 4px;
+}
+.rf-option-description {
+  display: block;
+  color: var(--rf-muted);
+  margin-top: 0.6rem;
+  line-height: 1.6;
+}
+.rf-option-mark {
+  visibility: hidden;
+  flex-shrink: 0;
+  color: rgb(var(--color-foreground));
+}
+.rf-question-answers .rf-options--pills .rf-option {
+  padding: 2rem 0;
+  justify-content: flex-start;
+  text-align: left;
+}
+.rf-question-answers .rf-options--pills .rf-option:has(:checked)::after {
+  content: '';
+  width: 1.8rem;
+  height: 1.8rem;
+  background: currentColor;
+  mask: var(--rf-check) center / contain no-repeat;
+  margin-left: auto;
+}
+.rf-question-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 3.2rem;
+}
+.rf-next {
+  width: auto;
+  gap: 1.2rem;
+  min-width: 15rem;
+}
+.rf-quiz-top,
+.rf-shortlist-heading,
+.rf-result-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+/* The result introduction shares question motion, without adding another
+   navigation delay. Its duration is owned by Finder, not animation events. */
+.rf-preparing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 24rem;
+  gap: 1.6rem;
+  padding-block: 3.2rem;
+}
+.rf-preparing h1,
+.rf-preparing p {
+  animation: rf-question-in 180ms ease both;
+}
+.rf-preparing p {
+  animation-delay: 900ms;
+}
+
+/* Results and weight refinement */
+.rf-personality-copy,
+.rf-card-actions {
+  position: relative;
+}
+.rf-personality-copy {
+  max-width: 62rem;
+}
+.rf-personality p {
+  margin-top: 1.2rem;
+}
+.rf-card-actions {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.rf-result-tools {
+  padding-block: 1.6rem;
+  border-bottom: 1px solid var(--rf-line);
+}
+.rf-result-tools button {
+  flex-shrink: 0;
+}
+.rf-status:empty {
+  display: none;
+}
+.rf-status {
+  padding-block: 1.6rem;
+}
+.rf-shortlist-heading {
+  margin-block: 3.2rem 1.2rem;
+}
+.rf-refinement .rf-options {
+  margin-block: 1.6rem 0;
+}
+.rf-personality {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  padding: 3.2rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(3.2rem, 5vw, 6.4rem);
+}
+.rf-personality-art {
+  display: block;
+  width: clamp(24rem, 28vw, 36rem);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+.rf-personality-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  min-width: 0;
+}
+.rf-refinement {
+  margin-block: 1.6rem 0.8rem;
+  padding: 2.4rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.rf-refinement .rf-options--pills {
+  display: flex;
+  gap: 1.2rem 3.2rem;
+  flex-wrap: wrap;
+}
+.rf-refinement .rf-options--pills .rf-option {
+  text-align: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0;
+  padding: 1.2rem 0;
+}
+.rf-refinement .rf-options--pills .rf-option:has(:checked) {
+  box-shadow: inset 0 -2px currentColor;
+}
+/* Keep result guidance readable at the same scale and contrast as product copy. */
+.rf-personality-copy > p:not(.rf-tagline),
+.rf-result-tools,
+.rf-refinement .s3_paragraph {
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 0;
+  color: rgb(var(--color-foreground));
+}
+.rf-refinement .s3_paragraph {
+  margin-top: 0.8rem;
+  max-width: 80ch;
+}
+
+/* Product recommendations */
+.rf-product {
+  padding-block: 3.2rem;
+  display: grid;
+  grid-template-columns: 19rem 1fr;
+  gap: 3.2rem;
+  border-bottom: 1px solid var(--rf-line);
+}
+.rf-product--lead {
+  grid-template-columns: minmax(24rem, 0.85fr) 1.15fr;
+}
+.rf-product img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 1;
+  mix-blend-mode: multiply;
+}
+.rf-product-copy h3 {
+  margin-block: 0.8rem;
+}
+.rf-label,
+.rf-meta {
+  color: var(--rf-muted);
+}
+.rf .rf-meta {
+  margin-block: 1.2rem;
+}
+.rf-product h4 {
+  margin-top: 2rem;
+}
+.rf-product ul {
+  margin-block: 0.8rem 1.6rem;
+  padding-left: 2rem;
+}
+.rf-product li + li {
+  margin-top: 0.4rem;
+}
+.rf-product .button {
+  margin-top: 2rem;
+}
+.rf-product-image {
+  display: flex;
+  align-self: start;
+  overflow: hidden;
+  background: rgb(251, 251, 253);
+  isolation: isolate;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.rf-notice {
+  margin-block: 2rem !important;
+  border-radius: 0;
+  padding: 1.6rem 0;
+  background: transparent;
+  border-top: 1px solid var(--rf-line);
+}
+.rf-product-copy {
+  letter-spacing: 0;
+}
+
+/* Specification scales */
+.rf .rf-racket-specs {
+  display: grid;
+  max-width: 64rem;
+  gap: 2.4rem;
+  margin-block: 2.4rem 3.2rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.rf-spec {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+}
+.rf-spec dt {
+  font-weight: 600;
+}
+.rf-spec dd {
+  margin: 0;
+}
+.rf-spec-value {
+  text-align: right;
+}
+/* Hide known values visually, retaining their text for screen readers. Remove
+   this rule to restore them. Keep missing-specification notices visible. */
+.rf-spec:has(.is-active) .rf-spec-value {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.rf-spec-visual {
+  grid-column: 1 / -1;
+}
+.rf-spec-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+  height: 0.6rem;
+}
+.rf-spec-track > span {
+  border-bottom: 1px solid currentColor;
+}
+.rf-spec-track > .is-active {
+  border-bottom-width: 0.6rem;
+  border-radius: 4px;
+}
+.rf-spec-ends {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.6rem;
+  font-size: 1.3rem;
+}
+
+/* Saved answers and storage */
+.rf .accordion summary {
+  min-height: 4.4rem;
+  gap: 1.6rem;
+}
+.rf .accordion .icon-caret {
+  width: 2rem;
+  height: 2rem;
+  position: static;
+  flex-shrink: 0;
+}
+.rf .accordion details[open] > summary .icon-caret {
+  transform: rotate(180deg);
+}
+.rf-answer-summary dl {
+  margin: 0;
+}
+.rf-answer-summary dl > div {
+  padding-block: 1.2rem;
+}
+.rf-answer-summary dt {
+  font-weight: 600;
+}
+.rf-answer-summary dd {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  color: var(--rf-muted);
+}
+.rf-storage {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  padding-block: 2.4rem;
+  color: var(--rf-muted);
+}
+.rf-storage p {
+  flex-basis: 100%;
+}
+
+/* Motion */
+.rf-products--reveal > .rf-product {
+  animation: rf-shortlist-in 300ms ease-out both;
+}
+.rf-products--reveal > .rf-product:nth-child(2) {
+  animation-delay: 50ms;
+}
+.rf-products--reveal > .rf-product:nth-child(3) {
+  animation-delay: 100ms;
+}
+@keyframes rf-shortlist-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rf-question-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive layout and accessibility */
+@media (min-width: 990px) {
+  .rf-intro-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .rf-hero-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .rf-hero-image video {
+    margin-inline: auto 0;
+  }
+}
+@media (max-width: 989px) {
+  .rf-intro {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    padding-block: 1.6rem 3.2rem;
+  }
+  .rf-hero-image img {
+    aspect-ratio: 1775 / 920;
+  }
+  .rf-question-layout {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .rf-question-aside,
+  .rf-question-answers {
+    grid-column: 1;
+  }
+  .rf-quiz-top {
+    margin-bottom: 2.4rem;
+  }
+  .rf-question-aside h1 {
+    max-width: 32ch;
+  }
+  .rf-question-help {
+    margin-top: 1.2rem !important;
+  }
+  .rf-step {
+    margin-top: 2rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .rf-personality-copy > p:not(.rf-tagline),
+  .rf-result-tools,
+  .rf-refinement .s3_paragraph {
+    line-height: 1.9;
+  }
+}
+@media (max-width: 749px) {
+  .rf-personality {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+  }
+  /* Align mobile artwork with the text and the theme's existing page gutters. */
+  .rf-personality-art {
+    width: 100%;
+  }
+  .rf-personality-content {
+    width: 100%;
+  }
+  .rf-refinement .rf-options--pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding-block: 0.4rem;
+    scrollbar-width: thin;
+  }
+  .rf-refinement .rf-options--pills .rf-option {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .rf-next {
+    width: 100%;
+  }
+  .rf-option {
+    padding-block: 2rem;
+  }
+  .rf {
+    margin-top: 1.6rem;
+  }
+  .rf-product,
+  .rf-product--lead {
+    grid-template-columns: 1fr;
+  }
+  .rf-result-tools,
+  .rf-shortlist-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  .rf-card-actions,
+  .rf-card-actions .button,
+  .rf-intro-copy .button,
+  .rf-product .button {
+    width: 100%;
+  }
+  .rf-product-image {
+    width: 100%;
+    max-width: 36rem;
+    margin-inline: auto;
+  }
+  .rf-product {
+    gap: 2rem;
+  }
+}
+@media (forced-colors: active) {
+  .rf-option:has(:checked) .rf-option-copy {
+    text-decoration: underline;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rf-option {
+    transition: none;
+  }
+  .rf-preparing h1,
+  .rf-preparing p,
+  .rf-products--reveal > .rf-product {
+    animation: none;
+  }
+  .rf-question-layout {
+    animation: none;
+    transition: none;
+  }
+}

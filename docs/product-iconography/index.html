@@ -1,0 +1,1196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HNDRD — Product iconography collection</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 28px;
+      }
+      body {
+        margin: 0;
+        background: #fff;
+        color: #171717;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      main {
+        max-width: 1280px;
+        margin: auto;
+        padding: 56px 32px 80px;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid #171717;
+        outline-offset: 6px;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 64px);
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 1.08;
+        max-width: 900px;
+        margin: 16px 0 24px;
+      }
+      h2 {
+        font-size: 32px;
+        letter-spacing: -0.025em;
+        line-height: 1.2;
+        margin: 12px 0 20px;
+      }
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.3;
+        margin: 10px 0;
+      }
+      p {
+        max-width: 78ch;
+        margin-bottom: 16px;
+      }
+      .eyebrow {
+        font:
+          12px/1.4 Arial,
+          Helvetica,
+          sans-serif;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .intro {
+        font-size: 19px;
+        max-width: 72ch;
+      }
+      .meta {
+        font-size: 13px;
+        color: #555;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 28px;
+        padding: 28px 0;
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 64px;
+      }
+      section {
+        margin: 0 0 72px;
+      }
+      .reference-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0 32px;
+      }
+      .reference {
+        border-top: 1px solid #aaa;
+        padding: 32px 0;
+      }
+      .reference p {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+      .reference a {
+        font-size: 13px;
+      }
+      .reference .products {
+        font-size: 12px;
+        color: #555;
+      }
+      .size-samples {
+        display: flex;
+        align-items: flex-end;
+        gap: 24px;
+        height: 116px;
+        margin-bottom: 24px;
+      }
+      .size-samples figure {
+        margin: 0;
+        text-align: center;
+      }
+      .size-samples img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+      .size-samples figcaption {
+        font-size: 11px;
+        color: #666;
+        margin-top: 8px;
+      }
+      .board {
+        margin: 0 0 48px;
+        border-top: 1px solid #aaa;
+        padding-top: 24px;
+      }
+      .board figcaption {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .board h3 {
+        font-size: 24px;
+        flex: 1;
+      }
+      .board figcaption a {
+        font-size: 13px;
+      }
+      .board img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .table-wrap {
+        overflow: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      caption {
+        text-align: left;
+        font-size: 13px;
+        color: #555;
+        padding-bottom: 16px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 18px 16px 18px 0;
+        border-bottom: 1px solid #ccc;
+      }
+      th {
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      td:first-child {
+        white-space: nowrap;
+      }
+      td p {
+        margin: 0;
+      }
+      .notes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 48px;
+      }
+      .notes article {
+        border-top: 1px solid #aaa;
+        padding-top: 20px;
+      }
+      .notes p {
+        font-size: 14px;
+      }
+      details {
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        padding: 20px 0;
+        margin-top: 24px;
+      }
+      summary {
+        cursor: pointer;
+        font-size: 14px;
+      }
+      details img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 20px;
+      }
+      footer {
+        border-top: 1px solid #aaa;
+        padding-top: 24px;
+        font-size: 13px;
+      }
+      footer p {
+        max-width: none;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+      }
+      .evidence {
+        font-size: 14px;
+        color: #444;
+      }
+      @media (max-width: 900px) {
+        .reference-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .notes {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        main {
+          padding: 32px 20px 48px;
+        }
+        nav {
+          gap: 12px 20px;
+          margin-bottom: 40px;
+        }
+        h2 {
+          font-size: 27px;
+        }
+        .reference-grid {
+          grid-template-columns: 1fr;
+        }
+        .reference {
+          padding: 24px 0;
+        }
+        .board figcaption {
+          display: block;
+        }
+        .board h3 {
+          margin: 10px 0;
+        }
+        section {
+          margin-bottom: 48px;
+        }
+        th,
+        td {
+          min-width: 120px;
+        }
+        .intro {
+          font-size: 17px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      @media print {
+        main {
+          padding: 20px;
+          max-width: none;
+        }
+        nav {
+          display: none;
+        }
+        .board {
+          break-inside: avoid;
+        }
+        .reference-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .reference {
+          break-inside: avoid;
+        }
+        a {
+          text-decoration: none;
+        }
+        .table-wrap {
+          overflow: visible;
+        }
+        details {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">HNDRD / Design research / 23 October 2026</p>
+        <h1>Product facts,<br />drawn simply.</h1>
+        <p class="intro">
+          Twelve On references. Three revised boards of minimal, abstract attribute signs. Gauge, string construction
+          and maximum tension remain the strongest starting points.
+        </p>
+        <p class="meta">
+          Revision 2 · Built-in Image Generation · Raster concepts: 1448 × 1086 · Production vectors pending selection
+        </p>
+      </header>
+      <nav aria-label="Collection sections">
+        <a href="#concepts">Concept boards</a><a href="#references">On icon references</a
+        ><a href="#sources">Product sources</a><a href="#categories">HNDRD category map</a
+        ><a href="#review">Review notes</a>
+      </nav>
+      <section id="concepts">
+        <p class="eyebrow">Revision 2 / Minimal and abstract</p>
+        <h2>Fewer lines. Clearer signs.</h2>
+        <p>
+          Each board explores weight, balance, shaft flex, maximum tension, string gauge, construction, outsole, support
+          structure, ventilation, compartments, shoe storage and bag dimensions. Labels name attributes; no values or
+          features have been assigned to individual products.
+        </p>
+        <figure class="board" id="concept-1">
+          <figcaption>
+            <span class="eyebrow">Revision 2 / Option 1</span>
+            <h3>Sparse signs</h3>
+            <a href="concepts/revision-2/sparse-signs.png">Open full-size image ↗</a>
+          </figcaption>
+          <a href="concepts/revision-2/sparse-signs.png" aria-label="Open revised option 1"
+            ><img
+              src="concepts/revision-2/sparse-signs.png"
+              width="1448"
+              height="1086"
+              alt="Sparse signs: twelve minimal abstract HNDRD attribute signs"
+              loading="lazy"
+          /></a>
+        </figure>
+        <figure class="board" id="concept-2">
+          <figcaption>
+            <span class="eyebrow">Revision 2 / Option 2</span>
+            <h3>Open contours</h3>
+            <a href="concepts/revision-2/open-contours.png">Open full-size image ↗</a>
+          </figcaption>
+          <a href="concepts/revision-2/open-contours.png" aria-label="Open revised option 2"
+            ><img
+              src="concepts/revision-2/open-contours.png"
+              width="1448"
+              height="1086"
+              alt="Open contours: twelve minimal abstract HNDRD attribute signs"
+              loading="lazy"
+          /></a>
+        </figure>
+        <figure class="board" id="concept-3">
+          <figcaption>
+            <span class="eyebrow">Revision 2 / Option 3</span>
+            <h3>Quiet geometry</h3>
+            <a href="concepts/revision-2/quiet-geometry.png">Open full-size image ↗</a>
+          </figcaption>
+          <a href="concepts/revision-2/quiet-geometry.png" aria-label="Open revised option 3"
+            ><img
+              src="concepts/revision-2/quiet-geometry.png"
+              width="1448"
+              height="1086"
+              alt="Quiet geometry: twelve minimal abstract HNDRD attribute signs"
+              loading="lazy"
+          /></a>
+        </figure>
+        <p class="evidence">
+          Raster concept explorations, awaiting your feedback. Exact pixel-size checks and production SVG work remain
+          pending. <a href="REVISION-2.md">Read the revised brief and critique</a>.
+        </p>
+        <details>
+          <summary>Initial boards — rejected as too detailed</summary>
+          <p>
+            Retained for comparison only. The minimal, abstract direction above supersedes these whole-object
+            illustrations.
+          </p>
+          <figure class="board" id="initial-concept-1">
+            <figcaption>
+              <span class="eyebrow">Initial concept 1</span>
+              <h3>Object outlines</h3>
+              <a href="concepts/object-outlines.png">Open full-size image ↗</a>
+            </figcaption>
+            <a href="concepts/object-outlines.png" aria-label="Open concept 1 at full size"
+              ><img
+                src="concepts/object-outlines.png"
+                width="1448"
+                height="1086"
+                alt="HNDRD Object outlines concept board: twelve labelled sports attribute icons in a four-column, three-row grid"
+                loading="lazy"
+            /></a>
+          </figure>
+          <figure class="board" id="initial-concept-2">
+            <figcaption>
+              <span class="eyebrow">Initial concept 2</span>
+              <h3>Technical sections</h3>
+              <a href="concepts/technical-sections.png">Open full-size image ↗</a>
+            </figcaption>
+            <a href="concepts/technical-sections.png" aria-label="Open concept 2 at full size"
+              ><img
+                src="concepts/technical-sections.png"
+                width="1448"
+                height="1086"
+                alt="HNDRD Technical sections concept board: twelve labelled sports attribute icons in a four-column, three-row grid"
+                loading="lazy"
+            /></a>
+          </figure>
+          <figure class="board" id="initial-concept-3">
+            <figcaption>
+              <span class="eyebrow">Initial concept 3</span>
+              <h3>Objects with movement</h3>
+              <a href="concepts/objects-with-movement.png">Open full-size image ↗</a>
+            </figcaption>
+            <a href="concepts/objects-with-movement.png" aria-label="Open concept 3 at full size"
+              ><img
+                src="concepts/objects-with-movement.png"
+                width="1448"
+                height="1086"
+                alt="HNDRD Objects with movement concept board: twelve labelled sports attribute icons in a four-column, three-row grid"
+                loading="lazy"
+            /></a>
+          </figure>
+        </details>
+      </section>
+      <section id="references">
+        <p class="eyebrow">Reference collection / On originals</p>
+        <h2>The source drawing language</h2>
+        <p>
+          Light black linework, specific objects, simple guides and plenty of white space. These are the actual
+          downloaded On SVG files, shown at 32, 48 and 80 CSS pixels. They are research references, not HNDRD production
+          assets.
+        </p>
+        <div class="reference-grid">
+          <article class="reference" id="weight">
+            <div class="size-samples" aria-label="Weight at three display sizes">
+              <figure>
+                <img src="references/on/weight.svg" alt="Weight reference icon" width="32" height="32" loading="lazy" />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img src="references/on/weight.svg" alt="Weight reference icon" width="48" height="48" loading="lazy" />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img src="references/on/weight.svg" alt="Weight reference icon" width="80" height="80" loading="lazy" />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Weight</h3>
+            <p class="products">Cloudnova 2; shared across footwear, bags and socks</p>
+            <p>A literal feather makes an abstract attribute immediately recognisable.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/weight.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="standard-lacing">
+            <div class="size-samples" aria-label="Standard lacing at three display sizes">
+              <figure>
+                <img
+                  src="references/on/lacing_standart.svg"
+                  alt="Standard lacing reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/lacing_standart.svg"
+                  alt="Standard lacing reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/lacing_standart.svg"
+                  alt="Standard lacing reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Standard lacing</h3>
+            <p class="products">Cloudnova 2; Cloudsurfer 2</p>
+            <p>A cropped shoe opening keeps the drawing simple and explains the fastening.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/lacing_standart.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="heel-to-toe-drop">
+            <div class="size-samples" aria-label="Heel-to-toe drop at three display sizes">
+              <figure>
+                <img
+                  src="references/on/heel_to_toe_v2.svg"
+                  alt="Heel-to-toe drop reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/heel_to_toe_v2.svg"
+                  alt="Heel-to-toe drop reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/heel_to_toe_v2.svg"
+                  alt="Heel-to-toe drop reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Heel-to-toe drop</h3>
+            <p class="products">Cloudnova 2; Cloudsurfer 2; Cloudultra 3; THE ROGER Pro 3</p>
+            <p>A shoe section and measurement guide explain a dimension.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/heel_to_toe_v2.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="smooth-ride">
+            <div class="size-samples" aria-label="Smooth ride at three display sizes">
+              <figure>
+                <img
+                  src="references/on/ride_smooth.svg"
+                  alt="Smooth ride reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/ride_smooth.svg"
+                  alt="Smooth ride reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/ride_smooth.svg"
+                  alt="Smooth ride reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Smooth ride</h3>
+            <p class="products">Cloudsurfer 2</p>
+            <p>Reference for expressing a product characteristic through a small diagram.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/ride_smooth.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="technical-terrain">
+            <div class="size-samples" aria-label="Technical terrain at three display sizes">
+              <figure>
+                <img
+                  src="references/on/terrain_technical.svg"
+                  alt="Technical terrain reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/terrain_technical.svg"
+                  alt="Technical terrain reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/terrain_technical.svg"
+                  alt="Technical terrain reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Technical terrain</h3>
+            <p class="products">Cloudultra 3</p>
+            <p>A contextual environment can explain intended use.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/terrain_technical.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="maximum-cushioning">
+            <div class="size-samples" aria-label="Maximum cushioning at three display sizes">
+              <figure>
+                <img
+                  src="references/on/cushioning_max.svg"
+                  alt="Maximum cushioning reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/cushioning_max.svg"
+                  alt="Maximum cushioning reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/cushioning_max.svg"
+                  alt="Maximum cushioning reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Maximum cushioning</h3>
+            <p class="products">Cloudultra 3</p>
+            <p>Reference for construction/feel visualisation; On's scale does not transfer to HNDRD.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/cushioning_max.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="light-stability">
+            <div class="size-samples" aria-label="Light stability at three display sizes">
+              <figure>
+                <img
+                  src="references/on/stability_light.svg"
+                  alt="Light stability reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/stability_light.svg"
+                  alt="Light stability reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/stability_light.svg"
+                  alt="Light stability reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Light stability</h3>
+            <p class="products">Cloud X 4</p>
+            <p>Reference for a labelled support classification, not a HNDRD rating.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/stability_light.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="star-lacing">
+            <div class="size-samples" aria-label="Star lacing at three display sizes">
+              <figure>
+                <img
+                  src="references/on/lacing_star.svg"
+                  alt="Star lacing reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/lacing_star.svg"
+                  alt="Star lacing reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/lacing_star.svg"
+                  alt="Star lacing reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Star lacing</h3>
+            <p class="products">Cloud X 4</p>
+            <p>Compare with standard lacing: variants retain one visual language.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/lacing_star.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="hard-court">
+            <div class="size-samples" aria-label="Hard court at three display sizes">
+              <figure>
+                <img
+                  src="references/on/hard_court_v2.svg"
+                  alt="Hard court reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/hard_court_v2.svg"
+                  alt="Hard court reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/hard_court_v2.svg"
+                  alt="Hard court reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Hard court</h3>
+            <p class="products">THE ROGER Pro 3</p>
+            <p>Intended playing surface becomes a recognisable spatial diagram.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/hard_court_v2.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="close-fit">
+            <div class="size-samples" aria-label="Close fit at three display sizes">
+              <figure>
+                <img
+                  src="references/on/fit_close.svg"
+                  alt="Close fit reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/fit_close.svg"
+                  alt="Close fit reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/fit_close.svg"
+                  alt="Close fit reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Close fit</h3>
+            <p class="products">Performance-T; Performance Jacket</p>
+            <p>Garment/fit diagram rather than a generic apparel category symbol.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/fit_close.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="warm-conditions">
+            <div class="size-samples" aria-label="Warm conditions at three display sizes">
+              <figure>
+                <img
+                  src="references/on/conditions_warm.svg"
+                  alt="Warm conditions reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/conditions_warm.svg"
+                  alt="Warm conditions reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/conditions_warm.svg"
+                  alt="Warm conditions reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Warm conditions</h3>
+            <p class="products">Performance-T; Essential Shorts text reference</p>
+            <p>Environmental condition icon; do not assume HNDRD climate classifications.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/conditions_warm.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+          <article class="reference" id="waterproof">
+            <div class="size-samples" aria-label="Waterproofness at three display sizes">
+              <figure>
+                <img
+                  src="references/on/waterproof.svg"
+                  alt="Waterproofness reference icon"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <figcaption>32px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/waterproof.svg"
+                  alt="Waterproofness reference icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <figcaption>48px</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="references/on/waterproof.svg"
+                  alt="Waterproofness reference icon"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <figcaption>80px</figcaption>
+              </figure>
+            </div>
+            <h3>Waterproofness</h3>
+            <p class="products">Performance Jacket</p>
+            <p>Precise attribute icon; waterproof, resistant and repellent are distinct.</p>
+            <a
+              href="https://on-app-mobile-staging.s3.eu-west-1.amazonaws.com/public_assets/icons_quick_facts/waterproof.svg"
+              >Original SVG ↗</a
+            >
+          </article>
+        </div>
+        <details>
+          <summary>View the supplied On screenshot</summary>
+          <img
+            src="references/user-on-cloudnova.png"
+            width="1952"
+            height="1248"
+            alt="Supplied Cloudnova screenshot showing On's lacing, heel-to-toe drop and weight icon row"
+            loading="lazy"
+          />
+        </details>
+      </section>
+      <section id="sources">
+        <p class="eyebrow">Footwear / Apparel / Accessories</p>
+        <h2>Where the references come from</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>
+              Public On product-page content and SVG source references inspected on 23 October 2026.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Product source</th>
+                <th scope="col">Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Everyday footwear</td>
+                <td>
+                  <a
+                    href="https://www.on.com/en-us/products/cloudnova-2-3we3022/womens/biscuit-desert-shoes-3WE30226014"
+                    >Cloudnova 2 ↗</a
+                  >
+                </td>
+                <td>Lacing · heel-to-toe drop · weight</td>
+              </tr>
+              <tr>
+                <td>Road running</td>
+                <td><a href="https://www.on.com/en-us/products/cloudsurfer-2-3mf1012/mens">Cloudsurfer 2 ↗</a></td>
+                <td>Smooth ride · lacing · drop · weight</td>
+              </tr>
+              <tr>
+                <td>Trail running</td>
+                <td><a href="https://www.on.com/en-us/products/cloudultra-3-m-3mf3023/">Cloudultra 3 ↗</a></td>
+                <td>Technical terrain · cushioning · drop · weight</td>
+              </tr>
+              <tr>
+                <td>Training</td>
+                <td><a href="https://www.on.com/en-us/products/cloud-x-4-m-3mg1133/mens">Cloud X 4 ↗</a></td>
+                <td>Stability · star lacing</td>
+              </tr>
+              <tr>
+                <td>Tennis</td>
+                <td>
+                  <a href="https://www.on.com/en-us/products/the-roger-pro-3-m-3mg1036/mens/black-ash-shoes-3MG10365204"
+                    >THE ROGER Pro 3 ↗</a
+                  >
+                </td>
+                <td>Hard court · drop · weight</td>
+              </tr>
+              <tr>
+                <td>Apparel</td>
+                <td>
+                  <a
+                    href="https://www.on.com/en-us/products/performance-t-w-1we1031/womens/navy-black-apparel-1WE10310516"
+                    >Performance-T ↗</a
+                  >
+                </td>
+                <td>Fit · warm conditions; shared weight asset in source</td>
+              </tr>
+              <tr>
+                <td>Outerwear</td>
+                <td>
+                  <a href="https://www.on.com/en-us/products/performance-jacket-m-1mf3077">Performance Jacket ↗</a>
+                </td>
+                <td>Fit · waterproofness; shared weight asset in source</td>
+              </tr>
+              <tr>
+                <td>Shorts</td>
+                <td><a href="https://www.on.com/en-us/products/essential-shorts-m-1me1152">Essential Shorts ↗</a></td>
+                <td>Warm climate in page text; SVG extraction unavailable</td>
+              </tr>
+              <tr>
+                <td>Bags</td>
+                <td>
+                  <a
+                    href="https://www.on.com/en-us/products/cargo-pack-60l-2uf1030/unisex/biscuit-accessories-2UF10304934"
+                    >Cargo Pack 60L ↗</a
+                  >
+                </td>
+                <td>Shared weight asset in source; storage described in text</td>
+              </tr>
+              <tr>
+                <td>Backpacks</td>
+                <td>
+                  <a
+                    href="https://www.on.com/en-us/products/speed-pack-24l-elite-2ue1016/unisex/cacao-black-accessories-2UE10164936"
+                    >Speed Pack 24L Elite ↗</a
+                  >
+                </td>
+                <td>Text reference for storage and dimensions; no distinct icons verified</td>
+              </tr>
+              <tr>
+                <td>Socks</td>
+                <td>
+                  <a
+                    href="https://www.on.com/en-us/products/performance-run-sock-mid-2uf1005/unisex/flurry-storm-accessories-2UF10055543"
+                    >Performance Run Sock Mid ↗</a
+                  >
+                </td>
+                <td>Shared weight asset in source; construction described in text</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="evidence">
+          A source asset reference does not establish visible rendering at every viewport. No additional live browser
+          screenshots were captured; the user-supplied screenshot is the captured page reference.
+        </p>
+      </section>
+      <section id="categories">
+        <p class="eyebrow">Catalogue-led / Phased coverage</p>
+        <h2>One family across HNDRD</h2>
+        <p>
+          Start with the four product families in phase 01, then extend shared visual meanings across the full range.
+          Every final product assignment needs model-specific evidence.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Phase</th>
+                <th scope="col">Product family</th>
+                <th scope="col">Attribute subjects</th>
+                <th scope="col">Drawing and content guidance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Badminton rackets</td>
+                <td>Weight · balance · shaft flex · maximum tension</td>
+                <td>Fulcrum, bent shaft and taut string-bed diagrams.</td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>Footwear / all sports</td>
+                <td>Outsole · support construction · cushioning construction · ventilation</td>
+                <td>Sole tread, midfoot insert, heel section and mesh. Keep feature claims specific to each model.</td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>Badminton strings</td>
+                <td>Gauge · construction · length</td>
+                <td>Strand diameter, filament cross-section and coil. Confirm gauge and length.</td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>Kit bags / backpacks / shoe bags</td>
+                <td>Compartments · shoe storage · dimensions · documented capacity</td>
+                <td>
+                  Partitions, separate shoe pouch and dimension guides. Capacity is not inferred from external
+                  dimensions.
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Pickleball paddles</td>
+                <td>Core thickness · face construction · shape · weight</td>
+                <td>Paddle sections, surface layers and shape variants.</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Tennis rackets and strings</td>
+                <td>Head size · balance · weight · grip size · gauge</td>
+                <td>Measured head, balance point and handle section. Confirm measurement basis.</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Apparel</td>
+                <td>Fabric · fit · length · documented functional features</td>
+                <td>Weave, garment clearance and hem guides.</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Socks</td>
+                <td>Height · composition · pack quantity · documented zones</td>
+                <td>Ankle silhouette and textile zones.</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Grips and grip powder</td>
+                <td>Type · thickness · material · palm condition · quantity</td>
+                <td>Wrapped handle, grip section and powder container. Verify units.</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Insoles / wristbands / KT tape</td>
+                <td>Material · dimensions · pack quantity · documented construction</td>
+                <td>Insole section, band silhouette and measured tape. No medical benefit implied.</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Shuttlecocks and balls / all sports</td>
+                <td>Material · size · construction · pack quantity · documented speed or surface</td>
+                <td>Shuttle profile, ball section and circumference guide; validate each model.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="review">
+        <p class="eyebrow">Design judgement / Evidence gaps</p>
+        <h2>What to carry forward</h2>
+        <div class="notes">
+          <article>
+            <h3>Keep the family light</h3>
+            <p>
+              Use minimal, abstract signs as the baseline. Keep the clear gauge and construction cross-sections; use
+              only the lines needed to communicate an attribute with its label.
+            </p>
+          </article>
+          <article>
+            <h3>Simplify for small sizes</h3>
+            <p>
+              Avoid full product silhouettes, tread, mesh, lacing and stitched panels. Judge the revised signs at the
+              intended display sizes once they are drawn as vectors; whitespace alone is not simplification.
+            </p>
+          </article>
+          <article>
+            <h3>Keep meanings distinct</h3>
+            <p>
+              Flex belongs to the shaft; tension belongs to the string bed. Gauge measures diameter. Dimensions do not
+              establish capacity. The first revised board's tension arrows point inward; use outward arrows when
+              refining. Prefer a neutral flex guide over the third board's measurement-like ticks.
+            </p>
+          </article>
+          <article>
+            <h3>Qualify the product data</h3>
+            <p>
+              <a href="https://in.hndrd.co/products/phenom">Phenom's</a> weight needs a reference-size and
+              single-shoe/pair basis. The reviewed
+              <a href="https://in.hndrd.co/products/jp65-magnite">JP65 Magnite</a> text does not establish gauge or
+              length. The <a href="https://in.hndrd.co/products/aeris-pack">Aeris</a> description also names “Nova Pro”;
+              resolve that inconsistency before assigning its storage features.
+            </p>
+          </article>
+        </div>
+        <p class="evidence">
+          The three boards have been visually reviewed. Reference SVGs and local file links have been checked. The
+          offline HTML has not been rendered in a browser in this session. Production SVG and exact-size icon QA remain
+          a separate step.
+        </p>
+      </section>
+      <footer>
+        <p>
+          Internal design exploration. On reference artwork remains separate from original HNDRD concept artwork. No
+          theme, metafield or public API changes.
+        </p>
+        <div class="links">
+          <a href="README.md">Research and category notes</a><a href="QA.md">Full review</a
+          ><a href="references.json">Reference manifest</a
+          ><a href="revision-2-prompts.json">Revision 2 generation prompts</a><a href="prompts.json">Initial prompts</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

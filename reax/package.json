@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "codegen": "graphql-codegen --watch"
+    "codegen": "graphql-codegen --watch",
+    "build:once": "tsc -b && node build-once.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
