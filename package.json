@@ -7,13 +7,14 @@
     "shopify": "shopify",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "shopify theme dev --store https://sss-staging-llp.myshopify.com",
-    "pull": "shopify theme pull"
+    "pull": "shopify theme pull",
+    "check:racket-finder": "node scripts/check-racket-finder.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@shopify/cli": "^3.91.0"
+    "@shopify/cli": "^4.9.4"
   },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.6.3",

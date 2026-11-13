@@ -1,0 +1,295 @@
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'racket-finder.css' | asset_url | stylesheet_tag }}
+<script type="module" src="{{ 'vx-racket-finder.js' | asset_url }}"></script>
+
+<section
+  class="rf page-width"
+  id="RacketFinder-{{ section.id }}"
+  data-racket-finder
+  style="--rf-arrow: url({{ 'icon-arrow.svg' | asset_url }}); --rf-check: url({{ 'icon-checkmark.svg' | asset_url }});"
+  data-root="{{ routes.root_url }}{% unless routes.root_url == '/' %}/{% endunless %}"
+  data-browse-url="{{ section.settings.browse_collection.url | escape }}"
+  data-currency="{{ cart.currency.iso_code }}"
+  data-shortlist-reveal="{{ section.settings.shortlist_reveal }}"
+  data-message-heading="{{ 'racket_finder.heading' | t | escape }}"
+  data-message-intro="{{ 'racket_finder.intro' | t | escape }}"
+  data-message-court="{{ 'racket_finder.court' | t | escape }}"
+  data-message-hero-image-alt="{{ 'racket_finder.hero_image_alt' | t | escape }}"
+  data-message-hero-video-label="{{ 'racket_finder.hero_video_label' | t | escape }}"
+  data-message-start="{{ 'racket_finder.start' | t | escape }}"
+  data-message-scope="{{ 'racket_finder.scope' | t | escape }}"
+  data-message-back="{{ 'racket_finder.back' | t | escape }}"
+  data-message-next="{{ 'racket_finder.next' | t | escape }}"
+  data-message-reveal="{{ 'racket_finder.reveal' | t | escape }}"
+  data-message-preparing-title="{{ 'racket_finder.preparing_title' | t | escape }}"
+  data-message-preparing-detail="{{ 'racket_finder.preparing_detail' | t | escape }}"
+  data-message-preparing-exploration-title="{{ 'racket_finder.preparing_exploration_title' | t | escape }}"
+  data-message-preparing-exploration-detail="{{ 'racket_finder.preparing_exploration_detail' | t | escape }}"
+  data-message-step="{{ 'racket_finder.step' | t | escape }}"
+  data-message-progress="{{ 'racket_finder.progress' | t | escape }}"
+  data-message-unsure="{{ 'racket_finder.unsure' | t | escape }}"
+  data-message-browse="{{ 'racket_finder.browse' | t | escape }}"
+  data-message-error="{{ 'racket_finder.error' | t | escape }}"
+  data-message-retry="{{ 'racket_finder.retry' | t | escape }}"
+  data-message-results="{{ 'racket_finder.results' | t | escape }}"
+  data-message-recommended="{{ 'racket_finder.recommended' | t | escape }}"
+  data-message-alternatives="{{ 'racket_finder.alternatives' | t | escape }}"
+  data-message-view="{{ 'racket_finder.view' | t | escape }}"
+  data-message-edit="{{ 'racket_finder.edit' | t | escape }}"
+  data-message-restart="{{ 'racket_finder.restart' | t | escape }}"
+  data-message-why="{{ 'racket_finder.why' | t | escape }}"
+  data-message-consider="{{ 'racket_finder.consider' | t | escape }}"
+  data-message-loading="{{ 'racket_finder.loading' | t | escape }}"
+  data-message-partial="{{ 'racket_finder.partial' | t | escape }}"
+  data-message-empty="{{ 'racket_finder.empty' | t | escape }}"
+  data-message-catalogue-error="{{ 'racket_finder.catalogue_error' | t | escape }}"
+  data-message-currency-error="{{ 'racket_finder.currency_error' | t | escape }}"
+  data-message-change-budget="{{ 'racket_finder.change_budget' | t | escape }}"
+  data-message-profile-note="{{ 'racket_finder.profile_note' | t | escape }}"
+  data-message-neutral-note="{{ 'racket_finder.neutral_note' | t | escape }}"
+  data-message-edit-summary="{{ 'racket_finder.edit_summary' | t | escape }}"
+  data-message-download="{{ 'racket_finder.download' | t | escape }}"
+  data-message-downloaded="{{ 'racket_finder.downloaded' | t | escape }}"
+  data-message-download-error="{{ 'racket_finder.download_error' | t | escape }}"
+  data-message-local-note="{{ 'racket_finder.local_note' | t | escape }}"
+  data-message-forget="{{ 'racket_finder.forget' | t | escape }}"
+  data-message-forgotten="{{ 'racket_finder.forgotten' | t | escape }}"
+  data-message-resume="{{ 'racket_finder.resume' | t | escape }}"
+  data-message-unstrung="{{ 'racket_finder.unstrung' | t | escape }}"
+  data-message-reason-style="{{ 'racket_finder.reason_style' | t | escape }}"
+  data-message-reason-handling="{{ 'racket_finder.reason_handling' | t | escape }}"
+  data-message-reason-experience="{{ 'racket_finder.reason_experience' | t | escape }}"
+  data-message-consider-power="{{ 'racket_finder.consider_power' | t | escape }}"
+  data-message-consider-speed="{{ 'racket_finder.consider_speed' | t | escape }}"
+  data-message-consider-control="{{ 'racket_finder.consider_control' | t | escape }}"
+  data-message-consider-stiff="{{ 'racket_finder.consider_stiff' | t | escape }}"
+  data-message-consider-flexible="{{ 'racket_finder.consider_flexible' | t | escape }}"
+  data-message-smash-merchant-title="{{ 'racket_finder.smash_merchant_title' | t | escape }}"
+  data-message-smash-merchant-line="{{ 'racket_finder.smash_merchant_line' | t | escape }}"
+  data-message-smash-merchant-description="{{ 'racket_finder.smash_merchant_description' | t | escape }}"
+  data-message-speed-demon-title="{{ 'racket_finder.speed_demon_title' | t | escape }}"
+  data-message-speed-demon-line="{{ 'racket_finder.speed_demon_line' | t | escape }}"
+  data-message-speed-demon-description="{{ 'racket_finder.speed_demon_description' | t | escape }}"
+  data-message-court-chessmaster-title="{{ 'racket_finder.court_chessmaster_title' | t | escape }}"
+  data-message-court-chessmaster-line="{{ 'racket_finder.court_chessmaster_line' | t | escape }}"
+  data-message-court-chessmaster-description="{{ 'racket_finder.court_chessmaster_description' | t | escape }}"
+  data-message-comeback-kid-title="{{ 'racket_finder.comeback_kid_title' | t | escape }}"
+  data-message-comeback-kid-line="{{ 'racket_finder.comeback_kid_line' | t | escape }}"
+  data-message-comeback-kid-description="{{ 'racket_finder.comeback_kid_description' | t | escape }}"
+  data-message-wild-card-title="{{ 'racket_finder.wild_card_title' | t | escape }}"
+  data-message-wild-card-line="{{ 'racket_finder.wild_card_line' | t | escape }}"
+  data-message-wild-card-description="{{ 'racket_finder.wild_card_description' | t | escape }}"
+  data-message-experience-title="{{ 'racket_finder.experience_title' | t | escape }}"
+  data-message-experience-help="{{ 'racket_finder.experience_help' | t | escape }}"
+  data-message-experience-new="{{ 'racket_finder.experience_new' | t | escape }}"
+  data-message-experience-developing="{{ 'racket_finder.experience_developing' | t | escape }}"
+  data-message-experience-experienced="{{ 'racket_finder.experience_experienced' | t | escape }}"
+  data-message-style-title="{{ 'racket_finder.style_title' | t | escape }}"
+  data-message-style-help="{{ 'racket_finder.style_help' | t | escape }}"
+  data-message-style-attack="{{ 'racket_finder.style_attack' | t | escape }}"
+  data-message-style-speed="{{ 'racket_finder.style_speed' | t | escape }}"
+  data-message-style-control="{{ 'racket_finder.style_control' | t | escape }}"
+  data-message-style-counter="{{ 'racket_finder.style_counter' | t | escape }}"
+  data-message-style-adapt="{{ 'racket_finder.style_adapt' | t | escape }}"
+  data-message-style-unsure="{{ 'racket_finder.style_unsure' | t | escape }}"
+  data-message-handling-title="{{ 'racket_finder.handling_title' | t | escape }}"
+  data-message-handling-help="{{ 'racket_finder.handling_help' | t | escape }}"
+  data-message-handling-light="{{ 'racket_finder.handling_light' | t | escape }}"
+  data-message-handling-substantial="{{ 'racket_finder.handling_substantial' | t | escape }}"
+  data-message-handling-middle="{{ 'racket_finder.handling_middle' | t | escape }}"
+  data-message-handling-unsure="{{ 'racket_finder.handling_unsure' | t | escape }}"
+  data-message-budget-title="{{ 'racket_finder.budget_title' | t | escape }}"
+  data-message-budget-help="{{ 'racket_finder.budget_help' | t | escape }}"
+  data-message-budget-2000="{{ 'racket_finder.budget_2000' | t | escape }}"
+  data-message-budget-3500="{{ 'racket_finder.budget_3500' | t | escape }}"
+  data-message-budget-5000="{{ 'racket_finder.budget_5000' | t | escape }}"
+  data-message-budget-10000="{{ 'racket_finder.budget_10000' | t | escape }}"
+  data-message-budget-unlimited="{{ 'racket_finder.budget_unlimited' | t | escape }}"
+  data-message-experience-new-description="{{ 'racket_finder.experience_new_description' | t | escape }}"
+  data-message-experience-developing-description="{{ 'racket_finder.experience_developing_description' | t | escape }}"
+  data-message-experience-experienced-description="{{ 'racket_finder.experience_experienced_description' | t | escape }}"
+  data-message-style-attack-description="{{ 'racket_finder.style_attack_description' | t | escape }}"
+  data-message-style-speed-description="{{ 'racket_finder.style_speed_description' | t | escape }}"
+  data-message-style-control-description="{{ 'racket_finder.style_control_description' | t | escape }}"
+  data-message-style-counter-description="{{ 'racket_finder.style_counter_description' | t | escape }}"
+  data-message-style-adapt-description="{{ 'racket_finder.style_adapt_description' | t | escape }}"
+  data-message-style-unsure-description="{{ 'racket_finder.style_unsure_description' | t | escape }}"
+  data-message-refine="{{ 'racket_finder.refine' | t | escape }}"
+  data-message-refined="{{ 'racket_finder.refined' | t | escape }}"
+  data-message-personality-intro="{{ 'racket_finder.personality_intro' | t | escape }}"
+  data-message-exploring-title="{{ 'racket_finder.exploring_title' | t | escape }}"
+  data-message-exploring-line="{{ 'racket_finder.exploring_line' | t | escape }}"
+  data-message-exploring-description="{{ 'racket_finder.exploring_description' | t | escape }}"
+  data-message-empty-weight="{{ 'racket_finder.empty_weight' | t | escape }}"
+  data-message-benefit-title="{{ 'racket_finder.benefit_title' | t | escape }}"
+  data-message-benefit-help="{{ 'racket_finder.benefit_help' | t | escape }}"
+  data-message-benefit-power="{{ 'racket_finder.benefit_power' | t | escape }}"
+  data-message-benefit-power-description="{{ 'racket_finder.benefit_power_description' | t | escape }}"
+  data-message-benefit-handling="{{ 'racket_finder.benefit_handling' | t | escape }}"
+  data-message-benefit-handling-description="{{ 'racket_finder.benefit_handling_description' | t | escape }}"
+  data-message-benefit-control="{{ 'racket_finder.benefit_control' | t | escape }}"
+  data-message-benefit-control-description="{{ 'racket_finder.benefit_control_description' | t | escape }}"
+  data-message-benefit-versatility="{{ 'racket_finder.benefit_versatility' | t | escape }}"
+  data-message-benefit-versatility-description="{{ 'racket_finder.benefit_versatility_description' | t | escape }}"
+  data-message-benefit-unsure="{{ 'racket_finder.benefit_unsure' | t | escape }}"
+  data-message-benefit-unsure-description="{{ 'racket_finder.benefit_unsure_description' | t | escape }}"
+  data-message-spec-unknown="{{ 'racket_finder.spec_unknown' | t | escape }}"
+  data-message-spec-lighter="{{ 'racket_finder.spec_lighter' | t | escape }}"
+  data-message-spec-heavier="{{ 'racket_finder.spec_heavier' | t | escape }}"
+  data-message-spec-flexible="{{ 'racket_finder.spec_flexible' | t | escape }}"
+  data-message-spec-medium="{{ 'racket_finder.spec_medium' | t | escape }}"
+  data-message-spec-hard-flex="{{ 'racket_finder.spec_hard_flex' | t | escape }}"
+  data-message-spec-head-heavy="{{ 'racket_finder.spec_head_heavy' | t | escape }}"
+  data-message-spec-even="{{ 'racket_finder.spec_even' | t | escape }}"
+  data-message-spec-head-light="{{ 'racket_finder.spec_head_light' | t | escape }}"
+  data-message-close="{{ 'racket_finder.close' | t | escape }}"
+  data-message-spec-weight-label="{{ 'racket_finder.spec_weight_label' | t | escape }}"
+  data-message-spec-flex-label="{{ 'racket_finder.spec_flex_label' | t | escape }}"
+  data-message-spec-balance-label="{{ 'racket_finder.spec_balance_label' | t | escape }}"
+  data-message-default-handling-help="{{ 'racket_finder.default_handling_help' | t | escape }}"
+>
+  <div class="rf-intro" data-finder-intro>
+    <div class="rf-hero-image">
+      <video
+        data-finder-hero-video
+        src="https://cdn.shopify.com/videos/c/o/v/eb3279b865394a5abf202ef189be460e.mp4"
+        width="1080"
+        height="1080"
+        aria-label="{{ 'racket_finder.hero_video_label' | t }}"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
+    <div class="rf-intro-copy">
+      <h1 class="s3_title" data-finder-heading>
+        {% if section.settings.heading != blank -%}
+          {{- section.settings.heading | escape -}}
+        {%- else -%}
+          {{- 'racket_finder.heading' | t -}}
+        {%- endif %}
+      </h1>
+      <p class="s3_paragraph" data-finder-description>
+        {% if section.settings.intro != blank -%}
+          {{- section.settings.intro | escape -}}
+        {%- else -%}
+          {{- 'racket_finder.intro' | t -}}
+        {%- endif %}
+      </p>
+      <button type="button" class="button button--primary button--large rf-action" data-finder-start disabled>
+        {{ 'racket_finder.start' | t }}
+        <span class="rf-icon rf-icon--arrow" aria-hidden="true"></span>
+      </button>
+      <p class="rf-scope s3_caption">
+        {% if section.settings.scope != blank -%}
+          {{- section.settings.scope | escape -}}
+        {%- else -%}
+          {{- 'racket_finder.scope' | t -}}
+        {%- endif %}
+      </p>
+      <p data-finder-error role="alert" hidden>{{ 'racket_finder.error' | t }}</p>
+      <noscript>
+        <p>{{ 'racket_finder.error' | t }}</p>
+      </noscript>
+    </div>
+  </div>
+  <div data-finder-app hidden></div>
+  <script type="application/json" data-finder-config>
+    {% render 'racket-finder-config', finder_settings: section.settings %}
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "t:racket_finder.name",
+  "tag": "section",
+  "class": "section-racket-finder",
+  "limit": 1,
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:racket_finder.heading",
+      "default": "t:racket_finder.heading_default"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "t:racket_finder.intro",
+      "default": "t:racket_finder.intro_default"
+    },
+    {
+      "type": "textarea",
+      "id": "scope",
+      "label": "t:racket_finder.scope",
+      "default": "t:racket_finder.scope_default"
+    },
+    {
+      "type": "collection",
+      "id": "browse_collection",
+      "label": "t:racket_finder.browse_collection",
+      "info": "t:racket_finder.browse_collection_info"
+    },
+    {
+      "type": "range",
+      "id": "result_limit",
+      "label": "t:racket_finder.result_limit",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "shortlist_reveal",
+      "label": "t:racket_finder.shortlist_reveal",
+      "info": "t:racket_finder.shortlist_reveal_info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:racket_finder.personality_images"
+    },
+    {
+      "type": "url",
+      "id": "smash_merchant_image_url",
+      "label": "t:racket_finder.smash_merchant_image_url",
+      "info": "t:racket_finder.personality_image_info"
+    },
+    {
+      "type": "url",
+      "id": "speed_demon_image_url",
+      "label": "t:racket_finder.speed_demon_image_url",
+      "info": "t:racket_finder.personality_image_info"
+    },
+    {
+      "type": "url",
+      "id": "court_chessmaster_image_url",
+      "label": "t:racket_finder.court_chessmaster_image_url",
+      "info": "t:racket_finder.personality_image_info"
+    },
+    {
+      "type": "url",
+      "id": "comeback_kid_image_url",
+      "label": "t:racket_finder.comeback_kid_image_url",
+      "info": "t:racket_finder.personality_image_info"
+    },
+    {
+      "type": "url",
+      "id": "wild_card_image_url",
+      "label": "t:racket_finder.wild_card_image_url",
+      "info": "t:racket_finder.personality_image_info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:racket_finder.name"
+    }
+  ]
+}
+{% endschema %}

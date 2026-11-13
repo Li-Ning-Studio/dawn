@@ -13,6 +13,7 @@ export default defineConfig({
         track: 'src/components/track/index.tsx',
         'tshirt-printing': 'src/components/tshirt-printing/index.tsx',
         gripping: 'src/components/gripping/index.tsx',
+        'racket-finder': 'src/components/racket-finder/index.tsx',
       },
       output: {
         dir: '../assets/',

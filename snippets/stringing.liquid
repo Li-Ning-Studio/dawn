@@ -82,6 +82,14 @@
   data-label-unavailable="{{ 'products.product.unavailable' | t | escape }}"
   data-error-service-unavailable="{{ 'studio.stringing.errors.service_unavailable' | t | escape }}"
   data-max-tension="{{ product.metafields.custom.maximum_racket_tension }}"
+  {% comment %}
+    Racket attributes used by string rules (custom_but_hidden.stringing_rules JSON metafield on string products).
+    Price is in major units of the storefront currency, e.g. 1999.0.
+  {% endcomment %}
+  data-racket-price="{{ product.selected_or_first_available_variant.price | divided_by: 100.0 }}"
+  data-racket-weight="{{ product.metafields.custom_but_hidden.weight.value | escape }}"
+  data-racket-product-type="{{ product.metafields.custom.product_type.value | escape }}"
+  data-racket-handle="{{ product.handle | escape }}"
   data-label-choose-string="{{ 'studio.stringing.headings.choose_string' | t }}"
   data-label-select-color="{{ 'studio.stringing.headings.select_color' | t }}"
   data-label-select-tension="{{ 'studio.stringing.headings.select_tension' | t }}"
