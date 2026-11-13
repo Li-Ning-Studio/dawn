@@ -11,6 +11,7 @@
     {{- rule -}}
   {% endfor %}
   {%- if group.sitemap != blank -%}
+    Sitemap: {{ external_sitemap }}
     Sitemap: {{ group.sitemap.value }}
   {%- endif -%}
 {% endfor %}
