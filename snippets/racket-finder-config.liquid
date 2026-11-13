@@ -1,0 +1,47 @@
+{% doc %}
+  Serializes section settings and active racket-profile metaobjects. The fixed
+  quiz is maintained in code; product profiles stay in Shopify Content so new
+  launches need no JavaScript rebuild.
+
+  @param {object} finder_settings - The racket finder section settings.
+{% enddoc %}
+{% if finder_settings != blank %}
+  {% capture finder_payload %}
+    {% paginate metaobjects.racket_finder_profile.values by 250 %}
+      {
+        "complete": {% if paginate.pages <= 1 and paginate.current_page == 1 %}true{% else %}false{% endif %},
+        "resultLimit": {{ finder_settings.result_limit | json }},
+        "archetypeImages": {
+          "smash-merchant": {{ finder_settings.smash_merchant_image_url | append: '' | json }},
+          "speed-demon": {{ finder_settings.speed_demon_image_url | append: '' | json }},
+          "court-chessmaster": {{ finder_settings.court_chessmaster_image_url | append: '' | json }},
+          "comeback-kid": {{ finder_settings.comeback_kid_image_url | append: '' | json }},
+          "wild-card": {{ finder_settings.wild_card_image_url | append: '' | json }}
+        },
+          "products": [
+            {% assign profile_separator = '' %}
+            {% for profile in metaobjects.racket_finder_profile.values %}
+              {% if profile.enabled.value and profile.product.value != blank %}
+                {{ profile_separator }}
+                {
+                  "handle": {{ profile.product.value.handle | json }},
+                  "model": {{ profile.model.value | json }},
+                  "weight": {{ profile.weight_class.value | json }},
+                  "shaftFlex": {{ profile.shaft_flex.value | json }},
+                  "balance": {{ profile.balance.value | json }},
+                  "playingStrengths": {{ profile.playing_strengths.value | json }},
+                  "playerLevels": {{ profile.player_levels.value | json }},
+                  "consideration": {{ profile.consideration.value | json }},
+                  "enabled": true
+                }
+                {% assign profile_separator = ',' %}
+              {% endif %}
+            {% endfor %}
+          ]
+      }
+    {% endpaginate %}
+  {% endcapture %}
+  {{ finder_payload | replace: '</', '<\/' }}
+{% else %}
+  null
+{% endif %}

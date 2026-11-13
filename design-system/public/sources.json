@@ -1,0 +1,103 @@
+{
+  "capturedAt": "2026-10-22T22:21:03.071Z",
+  "productData": [
+    {
+      "handle": "nitrix-70-venom",
+      "url": "https://in.hndrd.co/products/nitrix-70-venom",
+      "endpoint": "https://in.hndrd.co/products/nitrix-70-venom.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    },
+    {
+      "handle": "nitrix-70-volta",
+      "url": "https://in.hndrd.co/products/nitrix-70-volta",
+      "endpoint": "https://in.hndrd.co/products/nitrix-70-volta.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    },
+    {
+      "handle": "nitrix-pro-4u",
+      "url": "https://in.hndrd.co/products/nitrix-pro-4u",
+      "endpoint": "https://in.hndrd.co/products/nitrix-pro-4u.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    },
+    {
+      "handle": "nitrix-attack-4u",
+      "url": "https://in.hndrd.co/products/nitrix-attack-4u",
+      "endpoint": "https://in.hndrd.co/products/nitrix-attack-4u.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    },
+    {
+      "handle": "studio-pro-stringing",
+      "url": "https://in.hndrd.co/products/studio-pro-stringing",
+      "endpoint": "https://in.hndrd.co/products/studio-pro-stringing.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    },
+    {
+      "handle": "studio-four-knots-service",
+      "url": "https://in.hndrd.co/products/studio-four-knots-service",
+      "endpoint": "https://in.hndrd.co/products/studio-four-knots-service.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    },
+    {
+      "handle": "jp65-magnite",
+      "url": "https://in.hndrd.co/products/jp65-magnite",
+      "endpoint": "https://in.hndrd.co/products/jp65-magnite.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    },
+    {
+      "handle": "jp-70-magnite",
+      "url": "https://in.hndrd.co/products/jp-70-magnite",
+      "endpoint": "https://in.hndrd.co/products/jp-70-magnite.js",
+      "values": "Public prices, availability, variants and official images; captured fixtures, not a live inventory connection."
+    }
+  ],
+  "catalogue": {
+    "path": "/Users/prnx/Documents/BHND HNDRD/HNDRD Full Product Catalogue.txt",
+    "use": "Racket weight, shaft flexibility, shaft diameter, grip size and maximum tension; JP65 and JP70 Magnite naming."
+  },
+  "brand": {
+    "wordmark": "Official HNDRD asset captured from in.hndrd.co",
+    "accent": "#FFA300",
+    "typeface": "Figtree",
+    "decisions": "Selected direction 1, revised without product colour swatches. Text-labelled choices where colour is required."
+  },
+  "typography": {
+    "source": "https://fonts.google.com/specimen/Figtree",
+    "repository": "https://github.com/erikdkennedy/figtree",
+    "license": "/assets/FIGTREE-LICENSE.txt",
+    "files": "Locally hosted Figtree 400, 500, 600 and 700"
+  },
+  "icons": {
+    "source": "Existing Dawn theme assets/icon-*.svg",
+    "use": "External SVG files, reused without redrawing"
+  },
+  "references": [
+    {
+      "name": "On",
+      "url": "https://www.on.com/",
+      "status": "Homepage desktop and mobile captured; collection capture was blank and not used."
+    },
+    {
+      "name": "Cowboy",
+      "url": "https://cowboy.com/",
+      "status": "Desktop and mobile captured."
+    },
+    {
+      "name": "Custo",
+      "url": "https://custo.io/",
+      "status": "Desktop and mobile captured."
+    },
+    {
+      "name": "Aesop",
+      "url": "https://www.aesop.com/",
+      "status": "403 prevented capture; excluded with user approval."
+    }
+  ],
+  "limitations": [
+    "English and INR fixtures only.",
+    "Prices and availability can change after capture.",
+    "No invented performance scores, reviews, delivery promises or active offers.",
+    "Campaign example is explicitly illustrative.",
+    "Stringing prices use captured variant amounts; store promotions are not modelled.",
+    "No production cart API, checkout, payments or theme adoption."
+  ]
+}

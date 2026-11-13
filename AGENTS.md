@@ -45,6 +45,8 @@ Example: `SHOPIFY_FLAG_STORE=<your-store>.myshopify.com pnpm dev` to point the d
 Current Preact-backed features
 
 - Stringing options: `snippets/stringing.liquid` → `assets/vx-stringing.js`.
+  - String rules: all strings come from one collection (`settings.stringing_collection_id`, first 10 products; shared with gripping). A string product can restrict which rackets show it with the optional JSON metafield `custom_but_hidden.stringing_rules` (definition must have Storefront API access), e.g. `{ "show_when": [ { "field": "price", "op": "<", "value": 2000 } ] }`. All conditions must match; no rule = shown everywhere. Fields: `price` (selected/first variant, major units), `max_tension` (lbs), `weight`, `product_type`, `handle`, passed as `data-racket-*` on `#stringing-root`. Ops: `<`, `<=`, `>`, `>=`, `=`, `!=`, `in`, `not_in` (array value); string comparisons ignore case. Invalid JSON/field/op hides the string and logs `console.warn` (fail closed). Logic: `matchesStringRules` in `reax/src/components/stringing/Stringing2.tsx`.
+  - Free strings: `free_when` (same format) in the same JSON labels the string FREE in the menu when it matches, e.g. 700 S: `{ "free_when": [ { "field": "price", "op": "<", "value": 2000 } ] }`. Display only: the real ₹0 comes from the Shopify automatic BXGY discount "Free 700 S string" (buy 1 from smart collection "Rackets under ₹2000", get 700 S 100% off). Keep thresholds in sync; pausing the discount without removing `free_when` shows FREE but charges full price. A ₹0 string is also labelled FREE. Missing `show_when` = shown; missing `free_when` = not free.
 - S‑Plus options: `snippets/s-plus.liquid` → `assets/vx-splus.js`.
 - Remix modal: `snippets/remix.liquid` → `assets/vx-remix.js`.
 - T‑Shirt printing: `snippets/tshirt-printing.liquid` → `assets/vx-tshirt-printing.js`.
@@ -63,6 +65,12 @@ Current Preact-backed features
 - Put new tasks in `Next` unless the user names another section. Within each section, keep the highest-priority item first.
 - When the user selects a listed task for implementation, move it to `Now`. Move it to `Done` only after the requested work and relevant verification succeed; mark it checked and append the completion date as `YYYY-MM-DD`.
 - Keep blocked or partially completed work in `Now` with a short status note. Use Codex goals only for a single bounded active task, not as the backlog.
+
+## Racket Finder Documentation
+
+- `docs/RACKET-FINDER.md` is the canonical explanation of finder logic. Read its matching behaviour section before changing the finder.
+- Maintain this document in the same change whenever finder behaviour changes, including questions, eligibility, scoring, specification coverage, tie-breakers, personality assignment, metaobject inputs, result explanations, or refresh/saving behaviour. Keep formulas, worked examples, limitations and relevant verification accurate; distinguish starter defaults from store-owned settings and tested fixtures from live-store evidence.
+- For ranking changes, update the relevant cases in `tests/racket-finder.test.mjs` and document the final implemented behaviour before considering the work complete.
 
 ## Commit & Pull Request Guidelines
 

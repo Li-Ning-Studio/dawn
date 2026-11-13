@@ -15,6 +15,7 @@ type Stringing2Props = {
   stringingServiceAvailable: boolean;
   fourKnotsServiceAvailable: boolean;
   maxTension: string | null;
+  racketContext: RacketContext;
   labels: {
     free: string;
     unavailable: string;
@@ -186,6 +187,74 @@ const getMetricMap = (product: ProductNodes[number]) => {
   };
 };
 
+// --- String rules -------------------------------------------------------------------------------
+// One strings collection is the single source. A string product may carry an optional JSON metafield
+// `custom_but_hidden.stringing_rules` deciding which rackets it appears on, e.g.
+//   { "show_when": [ { "field": "price", "op": "<", "value": 2000 } ] }
+// Every condition must match. No rule = shown on every racket. Invalid rules hide the string (fail closed)
+// so a restricted string never leaks onto every racket. Racket values come from data-racket-* on #stringing-root.
+type RacketContext = {
+  price: number | null;
+  max_tension: number | null;
+  weight: string | null;
+  product_type: string | null;
+  handle: string | null;
+};
+
+type RuleValue = string | number;
+
+const RULE_OPERATORS: Record<string, (actual: RuleValue, expected: unknown) => boolean> = {
+  '<': (a, e) => Number(a) < Number(e),
+  '<=': (a, e) => Number(a) <= Number(e),
+  '>': (a, e) => Number(a) > Number(e),
+  '>=': (a, e) => Number(a) >= Number(e),
+  '=': (a, e) => String(a).toLowerCase() === String(e).toLowerCase(),
+  '!=': (a, e) => String(a).toLowerCase() !== String(e).toLowerCase(),
+  in: (a, e) => Array.isArray(e) && e.some((v) => String(v).toLowerCase() === String(a).toLowerCase()),
+  not_in: (a, e) => Array.isArray(e) && !e.some((v) => String(v).toLowerCase() === String(a).toLowerCase()),
+};
+
+// key "show_when": should the string appear? No rule (or no show_when) = shown.
+// key "free_when": should the menu label it FREE? Display only; the real ₹0 comes from a Shopify automatic
+// discount (e.g. "Free 700 S string"), so keep both thresholds in sync. No free_when = not free.
+const matchesStringRules = (
+  rulesJson: string | null | undefined,
+  racket: RacketContext,
+  key: 'show_when' | 'free_when' = 'show_when',
+): boolean => {
+  const whenMissing = key === 'show_when';
+  if (!rulesJson) return whenMissing;
+
+  try {
+    const parsed = JSON.parse(rulesJson);
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error('rules must be an object');
+
+    const conditions = parsed[key];
+    if (conditions === undefined) return whenMissing;
+    if (!Array.isArray(conditions)) throw new Error(`"${key}" must be an array`);
+
+    return conditions.every((condition) => {
+      const operator = RULE_OPERATORS[condition?.op];
+      // Own keys only, so inherited names like "toString" count as unknown fields.
+      if (!operator || !Object.prototype.hasOwnProperty.call(racket, condition?.field)) {
+        throw new Error(`unknown field or op in ${JSON.stringify(condition)}`);
+      }
+      const actual = racket[condition.field as keyof RacketContext];
+      // Racket without this attribute cannot satisfy the condition.
+      if (actual === null || actual === '') return false;
+      return operator(actual, condition.value);
+    });
+  } catch (error) {
+    // Fail closed: invalid rules hide the string and never label it free.
+    console.warn(`[stringing] invalid stringing_rules (${key}):`, rulesJson, error);
+    return false;
+  }
+};
+
+// Max tension metafield text (e.g. "Up to 30 lbs") -> last number in it, or null when there is none.
+export const parseMaxTensionPounds = (maxTension: string | null | undefined): number | null =>
+  Number.parseInt(maxTension?.match(/\d+/g)?.pop() || '', 10) || null;
+
 window.s3_stringing_modal_controller = {
   openModal: () => {},
   closeModal: () => {},
@@ -201,6 +270,7 @@ const Stringing2 = ({
   stringingServiceAvailable,
   fourKnotsServiceAvailable,
   maxTension,
+  racketContext,
   labels,
   descriptions,
   filters,
@@ -400,7 +470,15 @@ const Stringing2 = ({
     shouldShowKnotting,
   ]);
 
-  const availableProducts = stringingProducts?.filter((product) => product.availableForSale) || [];
+  // Memoized so rules are parsed (and invalid-rule warnings logged) once per fetch, not on every render.
+  const availableProducts = useMemo(
+    () =>
+      stringingProducts?.filter(
+        (product) =>
+          product.availableForSale && matchesStringRules((product as any).stringingRules?.value, racketContext),
+      ) || [],
+    [stringingProducts, racketContext],
+  );
   const fallbackMessage = errorMessage || (!availableProducts.length ? messages.empty : null);
 
   const counts = useMemo(
@@ -612,10 +690,15 @@ const Stringing2 = ({
                                   whiteSpace: 'nowrap',
                                 }}
                               >
-                                {`+${formatCurrency(
-                                  stringProduct.priceRange.minVariantPrice.amount,
-                                  stringProduct.priceRange.minVariantPrice.currencyCode,
-                                )}`}
+                                {/* FREE label for a ₹0 string, or when its free_when rule matches this racket
+                                    (display only; the Shopify discount applies the actual ₹0). */}
+                                {Number.parseFloat(stringProduct.priceRange.minVariantPrice.amount) === 0 ||
+                                matchesStringRules((stringProduct as any).stringingRules?.value, racketContext, 'free_when')
+                                  ? labels.free
+                                  : `+${formatCurrency(
+                                      stringProduct.priceRange.minVariantPrice.amount,
+                                      stringProduct.priceRange.minVariantPrice.currencyCode,
+                                    )}`}
                               </span>
                             </p>
                             <span

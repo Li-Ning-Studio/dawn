@@ -8,6 +8,27 @@
  * ------------------------------------------------------------
  */
 {
+  "racket_finder": {
+    "name": "Racket finder",
+    "shortlist_reveal": "Show brief results reveal",
+    "shortlist_reveal_info": "Shows a 2.5-second introduction and card entrance after a fresh quiz or restart. Saved results and edits skip it. Reduced motion keeps the introduction static.",
+    "heading": "Heading",
+    "heading_default": "What’s your court personality?",
+    "intro": "Introduction",
+    "intro_default": "Find your playing style. Find your next HNDRD racket.",
+    "scope": "Supporting text",
+    "scope_default": "Four quick questions. No signup needed.",
+    "browse_collection": "Browse collection",
+    "browse_collection_info": "Destination for the browse link below the shortlist. Leave blank to hide the link.",
+    "result_limit": "Maximum recommendations",
+    "personality_images": "Personality images",
+    "personality_image_info": "Paste a direct HTTPS image URL. Leave blank to hide this image and its download. The host must allow cross-origin downloads.",
+    "smash_merchant_image_url": "Smash Merchant image URL",
+    "speed_demon_image_url": "Speed Demon image URL",
+    "court_chessmaster_image_url": "Court Chessmaster image URL",
+    "comeback_kid_image_url": "The Counterpuncher image URL",
+    "wild_card_image_url": "All-Court Ace image URL"
+  },
   "prebook": {
     "name": "Shoe pre-booking",
     "content_group": "Campaign content",
@@ -3104,7 +3125,6 @@
         }
       }
     },
-
     "product-delivery-returns-collapsible": {
       "name": "Delivery and returns",
       "settings": {
