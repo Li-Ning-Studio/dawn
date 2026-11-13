@@ -57,8 +57,36 @@
       "type": "hero-component",
       "name": "Hero Component",
       "settings": {
-        "image": "shopify://shop_images/1_51499ab3-a742-4ddf-af88-c68ceebcb70f.png",
-        "mobile_image": "shopify://shop_images/2_cd03bc83-0b9e-4750-9f01-f6ce5454b78c.png",
+        "image": "shopify://shop_images/Banner_5659ce7e-9d47-471f-9b26-2419b39f17dd.jpg",
+        "mobile_image": "shopify://shop_images/Responsive_Banner_857c8e3b-1449-44aa-b244-333bb69417d2.jpg",
+        "subtitle": "AXFORCE 90 LKY EDITION",
+        "title": "EVERY SMASH TELLS A STORY.",
+        "description": "Head-heavy power. Precise control. Signed by a World Champion.",
+        "button_text": "Get Yours Now!",
+        "link_to": "shopify://products/axforce-90-lky-special-edition-4u-bag-2-strings",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "media_x9qieF": {
+      "type": "media",
+      "name": "Media",
+      "settings": {
+        "desktop_image": "shopify://shop_images/01_031081d6-5a14-4ff0-a48d-1af674388236.jpg",
+        "mobile_image": "shopify://shop_images/02_9065bcdf-3795-41a6-a76b-59237310be2f.jpg",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_component_a9mpjV": {
+      "type": "hero-component",
+      "disabled": true,
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/Banner_5659ce7e-9d47-471f-9b26-2419b39f17dd.jpg",
+        "mobile_image": "shopify://shop_images/Responsive_Banner_857c8e3b-1449-44aa-b244-333bb69417d2.jpg",
         "subtitle": "AXFORCE 100 MAX",
         "title": "UNLEASH MAXIMUM POWER",
         "description": "Explosive power. Precise control. Dominate every rally.",
@@ -73,14 +101,15 @@
       "type": "swipeable-products",
       "name": "Swipeable Products",
       "settings": {
-        "title": "AXFORCE 100 MAX",
+        "title": "G-FORCE 6800/6900 SERIES",
         "products": [
-          "axforce-100-max"
+          "g-force-6800-superlite",
+          "g-force-6900-superlite"
         ],
         "show_color_variants": true,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     },
     "custom_liquid_wCCxbf": {
@@ -448,6 +477,8 @@
   "order": [
     "responsive_slideshow_iH6DVM",
     "hero_component_xTDVjV",
+    "media_x9qieF",
+    "hero_component_a9mpjV",
     "swipeable_products_zQQwqq",
     "custom_liquid_wCCxbf",
     "hero_component_ErFhK9",
