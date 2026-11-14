@@ -34,6 +34,12 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_w6CMVJ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign weight_3u = '/products/halbertec-motor-3u' %}\n{% assign weight_4u = '/products/halbertec-motor-4u' %}\n{% assign weight_5u = '/products/halbertec-motor-5u' %}\n\n<div class=\"weight-selector\">\n  <p class=\"weight-selector__title\">WEIGHT</p>\n\n  <div class=\"weight-selector__buttons\">\n    <a href=\"{{ weight_3u }}\"\n       class=\"weight-btn {% if product.handle == 'halbertec-motor-3u' %}active{% endif %}\">\n      3U\n    </a>\n\n    <a href=\"{{ weight_4u }}\"\n       class=\"weight-btn {% if product.handle == 'halbertec-motor-4u' %}active{% endif %}\">\n      4U\n    </a>\n\n    <a href=\"{{ weight_5u }}\"\n       class=\"weight-btn {% if product.handle == 'halbertec-motor-5u' %}active{% endif %}\">\n      5U\n    </a>\n  </div>\n</div>\n\n<style>\n.weight-selector {\n  margin: 20px 0;\n}\n\n.weight-selector__title {\n  font-size: 13px;\n  margin-bottom: 10px;\n  color: #333;\n}\n\n.weight-selector__buttons {\n  display: flex;\n  gap: 8px;\n}\n\n.weight-btn {\n  width: 70px;\n  height: 46px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border: 1px solid #e5e5e5;\n  border-radius: 11px;\n  color: #222;\n  text-decoration: none;\n  font-size: 14px;\n  background: white;\n  box-shadow: 0 1px 3px rgba(0,0,0,.08);\n}\n\n.weight-btn.active {\n  border: 2px solid #304ffe;\n}\n</style>"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -97,6 +103,7 @@
         "title",
         "caption",
         "price",
+        "custom_liquid_w6CMVJ",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
