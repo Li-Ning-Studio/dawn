@@ -66,11 +66,21 @@ type Stringing2Props = {
   };
 };
 
-type FilterKey = 'all' | 'power' | 'durable' | 'balanced';
+// --- String filters -----------------------------------------------------------------------------
+// Filter chips come from data, not code. Each string product may reference one `stringing_filter` metaobject
+// (fields: name, description) via the product metafield `custom_but_hidden.stringing_filter`. Chips are ALL plus
+// every filter used by an available string, in strings-collection order. No filter = string only under ALL.
+type StringFilter = { handle: string; name: string; description: string };
 
-const FILTER_ORDER: FilterKey[] = ['all', 'power', 'durable', 'balanced'];
-const POWER_THRESHOLD = 9.5;
-const DURABLE_THRESHOLD = 9.5;
+// Value meaning "no filter selected" (the ALL chip).
+const ALL_FILTER = '';
+
+const stringFilterOf = (product: ProductNodes[number]): StringFilter | null => {
+  const reference = (product as any)?.stringingFilter?.reference;
+  const name = reference?.name?.value?.trim();
+  if (!reference?.handle || !name) return null;
+  return { handle: reference.handle, name, description: reference.description?.value?.trim() || '' };
+};
 
 const EMPTY_CONFIG: TConfig = {
   stringProduct: null,
@@ -85,7 +95,7 @@ const HIDDEN_RADIO_INPUT_STYLE = {
   pointerEvents: 'none',
 } as const;
 const AUTO_ADVANCE_DELAY_MS = 320;
-const MAX_VISIBLE_STRING_OPTIONS = 6;
+const MAX_VISIBLE_STRING_OPTIONS = 7;
 
 // Keep this formatter local to the stringing entrypoint. Sharing it with another entrypoint moves it into a
 // stable-name Rollup chunk, which can break cached storefronts when theme assets are deployed at different times.
@@ -163,60 +173,26 @@ const cloneStringingConfig = (config: TConfig): TConfig => ({
   knot: config.knot || 'two_knot',
 });
 
-const getMetricMap = (product: ProductNodes[number]) => {
-  const map = new Map<string, number>();
-  const entries = (product as any)?.metafields as Array<{ key: string; value: string }> | undefined;
-
-  if (entries && Array.isArray(entries)) {
-    for (const metafield of entries) {
-      if (!metafield) continue;
-
-      const rawValue = (metafield.value as any) ?? '';
-      const numericMatch = typeof rawValue === 'string' ? rawValue.match(/\d+(?:\.\d+)?/) : null;
-      const numericValue = numericMatch ? Number.parseFloat(numericMatch[0]) : NaN;
-
-      if (!Number.isNaN(numericValue)) {
-        map.set(metafield.key, numericValue);
-      }
-    }
-  }
-
-  return {
-    durability: map.get('durability') ?? 0,
-    repulsion: map.get('repulsion_power') ?? 0,
-  };
-};
-
 // --- String rules -------------------------------------------------------------------------------
 // One strings collection is the single source. A string product may carry an optional JSON metafield
-// `custom_but_hidden.stringing_rules` deciding which rackets it appears on, e.g.
-//   { "show_when": [ { "field": "price", "op": "<", "value": 2000 } ] }
-// Every condition must match. No rule = shown on every racket. Invalid rules hide the string (fail closed)
-// so a restricted string never leaks onto every racket. Racket values come from data-racket-* on #stringing-root.
+// `custom_but_hidden.stringing_rules` deciding which rackets it appears on, based on the racket's collections, e.g.
+//   { "show_when": [ { "field": "collections", "op": "has", "value": "rackets-under-3k" } ] }
+// Racket groups (price bands, tension, weight...) are defined as Shopify collections in admin, so the same
+// collection can also drive a Shopify discount. Every condition must match. No rule = shown on every racket.
+// Invalid rules hide the string (fail closed) so a restricted string never leaks onto every racket.
+// Racket collection handles come from data-racket-collections on #stringing-root (Online Store collections only).
 type RacketContext = {
-  price: number | null;
-  max_tension: number | null;
-  weight: string | null;
-  product_type: string | null;
-  handle: string | null;
+  collections: string[];
 };
 
-type RuleValue = string | number;
-
-const RULE_OPERATORS: Record<string, (actual: RuleValue, expected: unknown) => boolean> = {
-  '<': (a, e) => Number(a) < Number(e),
-  '<=': (a, e) => Number(a) <= Number(e),
-  '>': (a, e) => Number(a) > Number(e),
-  '>=': (a, e) => Number(a) >= Number(e),
-  '=': (a, e) => String(a).toLowerCase() === String(e).toLowerCase(),
-  '!=': (a, e) => String(a).toLowerCase() !== String(e).toLowerCase(),
-  in: (a, e) => Array.isArray(e) && e.some((v) => String(v).toLowerCase() === String(a).toLowerCase()),
-  not_in: (a, e) => Array.isArray(e) && !e.some((v) => String(v).toLowerCase() === String(a).toLowerCase()),
+const RULE_OPERATORS: Record<string, (actual: string[], expected: unknown) => boolean> = {
+  has: (a, e) => a.some((handle) => handle.toLowerCase() === String(e).toLowerCase()),
+  not_has: (a, e) => !a.some((handle) => handle.toLowerCase() === String(e).toLowerCase()),
 };
 
 // key "show_when": should the string appear? No rule (or no show_when) = shown.
 // key "free_when": should the menu label it FREE? Display only; the real ₹0 comes from a Shopify automatic
-// discount (e.g. "Free 700 S string"), so keep both thresholds in sync. No free_when = not free.
+// discount (e.g. "Free 700S String") that should use the same collection. No free_when = not free.
 const matchesStringRules = (
   rulesJson: string | null | undefined,
   racket: RacketContext,
@@ -239,10 +215,7 @@ const matchesStringRules = (
       if (!operator || !Object.prototype.hasOwnProperty.call(racket, condition?.field)) {
         throw new Error(`unknown field or op in ${JSON.stringify(condition)}`);
       }
-      const actual = racket[condition.field as keyof RacketContext];
-      // Racket without this attribute cannot satisfy the condition.
-      if (actual === null || actual === '') return false;
-      return operator(actual, condition.value);
+      return operator(racket[condition.field as keyof RacketContext], condition.value);
     });
   } catch (error) {
     // Fail closed: invalid rules hide the string and never label it free.
@@ -250,10 +223,6 @@ const matchesStringRules = (
     return false;
   }
 };
-
-// Max tension metafield text (e.g. "Up to 30 lbs") -> last number in it, or null when there is none.
-export const parseMaxTensionPounds = (maxTension: string | null | undefined): number | null =>
-  Number.parseInt(maxTension?.match(/\d+/g)?.pop() || '', 10) || null;
 
 window.s3_stringing_modal_controller = {
   openModal: () => {},
@@ -306,7 +275,8 @@ const Stringing2 = ({
 
   const [isModalOpen, setIsModalOpen] = useState(() => consumePendingModalOpen('stringing'));
   const [isCloseConfirmVisible, setIsCloseConfirmVisible] = useState(false);
-  const [activeFilter, setActiveFilter] = useState<FilterKey>('all');
+  // Handle of the selected stringing_filter metaobject; ALL_FILTER = the ALL chip.
+  const [activeFilter, setActiveFilter] = useState<string>(ALL_FILTER);
 
   const [draftConfig, setDraftConfig] = useState<TConfig>({ ...EMPTY_CONFIG });
   const [appliedConfig, setAppliedConfig] = useState<TConfig>({ ...EMPTY_CONFIG });
@@ -387,7 +357,7 @@ const Stringing2 = ({
   useEffect(() => {
     const openModal = () => {
       setDraftConfig(cloneStringingConfig(appliedConfig));
-      setActiveFilter('all');
+      setActiveFilter(ALL_FILTER);
       setIsCloseConfirmVisible(false);
       setIsModalOpen(true);
     };
@@ -481,35 +451,26 @@ const Stringing2 = ({
   );
   const fallbackMessage = errorMessage || (!availableProducts.length ? messages.empty : null);
 
-  const counts = useMemo(
-    () => ({
-      all: availableProducts.length,
-      power: availableProducts.filter((product) => getMetricMap(product).repulsion >= POWER_THRESHOLD).length,
-      durable: availableProducts.filter((product) => getMetricMap(product).durability >= DURABLE_THRESHOLD).length,
-      balanced: availableProducts.filter((product) => {
-        const metrics = getMetricMap(product);
-        return metrics.repulsion < POWER_THRESHOLD && metrics.durability < DURABLE_THRESHOLD;
-      }).length,
-    }),
-    [availableProducts],
-  );
-
-  const filteredProducts = useMemo(() => {
-    switch (activeFilter) {
-      case 'power':
-        return availableProducts.filter((product) => getMetricMap(product).repulsion >= POWER_THRESHOLD);
-      case 'durable':
-        return availableProducts.filter((product) => getMetricMap(product).durability >= DURABLE_THRESHOLD);
-      case 'balanced':
-        return availableProducts.filter((product) => {
-          const metrics = getMetricMap(product);
-          return metrics.repulsion < POWER_THRESHOLD && metrics.durability < DURABLE_THRESHOLD;
-        });
-      case 'all':
-      default:
-        return availableProducts;
+  // Distinct filters used by the available strings, in strings-collection order. Every chip has >= 1 string.
+  const filterOptions = useMemo(() => {
+    const byHandle = new Map<string, StringFilter>();
+    for (const product of availableProducts) {
+      const filter = stringFilterOf(product);
+      if (filter && !byHandle.has(filter.handle)) byHandle.set(filter.handle, filter);
     }
-  }, [activeFilter, availableProducts]);
+    return [...byHandle.values()];
+  }, [availableProducts]);
+
+  // Falls back to ALL when the selected filter no longer has any available string.
+  const activeFilterOption = filterOptions.find((filter) => filter.handle === activeFilter) || null;
+
+  const filteredProducts = useMemo(
+    () =>
+      activeFilterOption
+        ? availableProducts.filter((product) => stringFilterOf(product)?.handle === activeFilterOption.handle)
+        : availableProducts,
+    [activeFilterOption, availableProducts],
+  );
 
   const selectedProductVariants =
     draftConfig.stringProduct?.variants?.nodes
@@ -693,7 +654,11 @@ const Stringing2 = ({
                                 {/* FREE label for a ₹0 string, or when its free_when rule matches this racket
                                     (display only; the Shopify discount applies the actual ₹0). */}
                                 {Number.parseFloat(stringProduct.priceRange.minVariantPrice.amount) === 0 ||
-                                matchesStringRules((stringProduct as any).stringingRules?.value, racketContext, 'free_when')
+                                matchesStringRules(
+                                  (stringProduct as any).stringingRules?.value,
+                                  racketContext,
+                                  'free_when',
+                                )
                                   ? labels.free
                                   : `+${formatCurrency(
                                       stringProduct.priceRange.minVariantPrice.amount,
@@ -734,54 +699,58 @@ const Stringing2 = ({
 
               {!isLoading && fallbackMessage ? <p className="frame-description">{fallbackMessage}</p> : null}
             </div>,
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: '1rem',
-                marginBottom: isMobileLayout ? '3rem' : '3rem',
-              }}
-            >
-              <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
-                {FILTER_ORDER.map((filterKey) => {
-                  const isActive = activeFilter === filterKey;
-                  const labelMap = {
-                    all: filters.all,
-                    power: filters.power,
-                    durable: filters.durable,
-                    balanced: filters.balanced,
-                  };
+            <div style={{ marginBottom: '3rem' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: '1rem',
+                }}
+              >
+                {/* One row of pills that scrolls sideways when they don't fit (minWidth 0 lets it shrink in the flex row). */}
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '0.6rem',
+                    flexWrap: 'nowrap',
+                    overflowX: 'auto',
+                    minWidth: 0,
+                    scrollbarWidth: 'thin',
+                    WebkitOverflowScrolling: 'touch',
+                    paddingBottom: '0.4rem',
+                  }}
+                >
+                  {[{ handle: ALL_FILTER, name: filters.all }, ...filterOptions].map((filter) => {
+                    const isActive = (activeFilterOption?.handle ?? ALL_FILTER) === filter.handle;
 
-                  if (filterKey !== 'all' && counts[filterKey] === 0) {
-                    return null;
-                  }
+                    return (
+                      <div
+                        key={filter.handle || 'all'}
+                        onClick={() => setActiveFilter(filter.handle)}
+                        style={{
+                          borderRadius: '999px',
+                          padding: '0.6rem 1.2rem',
+                          border: isActive
+                            ? '1px solid var(--accent-color)'
+                            : '1px solid rgba(var(--color-foreground), 0.4)',
+                          background: isActive ? 'var(--accent-color)' : 'white',
+                          color: isActive ? 'white' : 'var(--color-foreground)',
+                          cursor: 'pointer',
+                          fontSize: '1.4rem',
+                          fontWeight: 500,
+                          lineHeight: 1.2,
+                          flexShrink: 0,
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {filter.name}
+                      </div>
+                    );
+                  })}
+                </div>
 
-                  return (
-                    <div
-                      key={filterKey}
-                      onClick={() => setActiveFilter(filterKey)}
-                      style={{
-                        borderRadius: '999px',
-                        padding: '0.6rem 1.2rem',
-                        border: isActive
-                          ? '1px solid var(--accent-color)'
-                          : '1px solid rgba(var(--color-foreground), 0.4)',
-                        background: isActive ? 'var(--accent-color)' : 'white',
-                        color: isActive ? 'white' : 'var(--color-foreground)',
-                        cursor: 'pointer',
-                        fontSize: '1.4rem',
-                        fontWeight: 500,
-                        lineHeight: 1.2,
-                      }}
-                    >
-                      {labelMap[filterKey]}
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* <button
+                {/* <button
                 type="button"
                 onClick={() => setIsStringGuideOpen(true)}
                 style={{
@@ -797,6 +766,20 @@ const Stringing2 = ({
               >
                 {labels.stringsGuide}
               </button> */}
+              </div>
+              {/* Explains the selected filter (stringing_filter metaobject "description"); nothing for ALL. */}
+              {activeFilterOption?.description ? (
+                <p
+                  style={{
+                    margin: '1.2rem 0 0',
+                    fontSize: bodyFontSize,
+                    lineHeight: 1.5,
+                    color: 'rgba(var(--color-foreground), 0.55)',
+                  }}
+                >
+                  {activeFilterOption.description}
+                </p>
+              ) : null}
             </div>,
           ),
       },
@@ -1222,8 +1205,8 @@ const Stringing2 = ({
 
     return stepList;
   }, [
-    activeFilter,
-    counts,
+    activeFilterOption,
+    filterOptions,
     draftConfig.knot,
     draftConfig.stringProduct,
     draftConfig.stringVariant,
@@ -1232,8 +1215,6 @@ const Stringing2 = ({
     filteredProducts,
     filters.all,
     filters.balanced,
-    filters.durable,
-    filters.power,
     isLoading,
     knottingCost,
     stringingCost,

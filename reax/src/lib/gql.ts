@@ -46,6 +46,16 @@ query getCollectionById($id: ID!) {
         stringingRules: metafield(key: "stringing_rules", namespace:"custom_but_hidden") {
           value
         }
+        # Filter chip this string appears under in the stringing menu (see AGENTS.md "String filters").
+        stringingFilter: metafield(key: "stringing_filter", namespace:"custom_but_hidden") {
+          reference {
+            ... on Metaobject {
+              handle
+              name: field(key: "name") { value }
+              description: field(key: "description") { value }
+            }
+          }
+        }
         metafields(identifiers: [
           {namespace: "custom", key: "durability"}
           {namespace: "custom", key: "control"}
