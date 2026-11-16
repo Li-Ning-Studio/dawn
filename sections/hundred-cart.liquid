@@ -25,6 +25,9 @@
           if plk == lk
             assign hit = true
           endif
+        elsif plk != ''
+          # en vare med eget _link-tryk må ikke få gamle tryk uden _link
+          continue
         elsif target != ''
           if pid == target
             assign hit = true
