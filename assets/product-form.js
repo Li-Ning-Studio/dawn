@@ -246,6 +246,15 @@ if (!customElements.get('product-form')) {
           quantity: formData.get('quantity') || 1,
         };
         const items = [mainItem];
+
+        // HUNDRED: tag formularens egne egenskaber med på hovedvaren (fx _link fra navnetryk/opstrengning),
+        // så en trøje med tryk bliver sin egen linje i kurven og ikke slås sammen med en uden tryk
+        const ownProps = {};
+        for (const [key, value] of formData.entries()) {
+          const match = /^properties\[(.+)\]$/.exec(key);
+          if (match && typeof value === 'string' && value !== '') ownProps[match[1]] = value;
+        }
+        if (Object.keys(ownProps).length) mainItem.properties = ownProps;
         const customisationItems = [];
 
         // check if stringing service is selected
@@ -374,7 +383,7 @@ if (!customElements.get('product-form')) {
 
         if (customisationItems.length > 0) {
           mainItem.quantity = 1;
-          mainItem.properties = { _customisationId: customisationId };
+          mainItem.properties = { ...(mainItem.properties || {}), _customisationId: customisationId };
 
           customisationItems.forEach((item) => {
             item.parent_id = mainVariantId;
