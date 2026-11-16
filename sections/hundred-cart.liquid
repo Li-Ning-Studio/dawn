@@ -10,6 +10,7 @@
   assign s = section.settings
   assign links = ''
   for item in cart.items
+    assign lk = item.properties['_link'] | default: ''
     assign target = item.properties['_for_variant'] | default: ''
     assign ftitle = item.properties['For'] | default: item.properties['Racket'] | default: ''
     if target != '' or ftitle != ''
@@ -18,8 +19,13 @@
           continue
         endif
         assign pid = p.variant_id | append: ''
+        assign plk = p.properties['_link'] | default: ''
         assign hit = false
-        if target != ''
+        if lk != ''
+          if plk == lk
+            assign hit = true
+          endif
+        elsif target != ''
           if pid == target
             assign hit = true
           endif

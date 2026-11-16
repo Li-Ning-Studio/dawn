@@ -295,10 +295,15 @@
     var q = qty(), n = nameIn.value.trim().toUpperCase(), x = extra();
     /* _for_variant kobler trykket til trøjen i kurven (skjult for kunden) */
     var vIn = form.querySelector('[name="id"]'), fv = vIn ? String(vIn.value) : '';
-    var info = { 'For': box.dataset.product, 'Name': n, '_for_variant': fv };
+    /* _link gør trøjen med tryk til sin egen linje i kurven og kobler trykket til netop den (skjult for kunden) */
+    var lk = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    var lkIn = form.querySelector('input[name="properties[_link]"]');
+    if (!lkIn) { lkIn = document.createElement('input'); lkIn.type = 'hidden'; lkIn.name = 'properties[_link]'; form.appendChild(lkIn); }
+    lkIn.value = lk;
+    var info = { 'For': box.dataset.product, 'Name': n, '_for_variant': fv, '_link': lk };
     var items = [{ id: Number(box.dataset.vName), quantity: q, properties: info }];
-    if (x === 'country' && box.dataset.vCountry) items.push({ id: Number(box.dataset.vCountry), quantity: q, properties: { 'For': box.dataset.product, 'Country': cs.value, '_for_variant': fv } });
-    if (x === 'logo' && box.dataset.vLogo) items.push({ id: Number(box.dataset.vLogo), quantity: q, properties: { 'For': box.dataset.product, '_for_variant': fv } });
+    if (x === 'country' && box.dataset.vCountry) items.push({ id: Number(box.dataset.vCountry), quantity: q, properties: { 'For': box.dataset.product, 'Country': cs.value, '_for_variant': fv, '_link': lk } });
+    if (x === 'logo' && box.dataset.vLogo) items.push({ id: Number(box.dataset.vLogo), quantity: q, properties: { 'For': box.dataset.product, '_for_variant': fv, '_link': lk } });
     fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -309,7 +314,8 @@
       passing = true;
       if (form.requestSubmit) form.requestSubmit(); else form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
       passing = false;
-    }).catch(function(err){ msg.textContent = err.message; });
+      setTimeout(function(){ if (lkIn.parentNode) lkIn.parentNode.removeChild(lkIn); }, 0);
+    }).catch(function(err){ if (lkIn.parentNode) lkIn.parentNode.removeChild(lkIn); msg.textContent = err.message; });
   }, true);
 
   place();

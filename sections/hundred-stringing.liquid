@@ -194,6 +194,12 @@
     /* _for_variant kobler opstrengningen til ketsjeren i kurven (skjult for kunden) */
     var vIn = form.querySelector('[name="id"]');
     if (vIn) props['_for_variant'] = String(vIn.value);
+    /* _link gør trøjen med tryk til sin egen linje i kurven og kobler trykket til netop den (skjult for kunden) */
+    var lk = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    var lkIn = form.querySelector('input[name="properties[_link]"]');
+    if (!lkIn) { lkIn = document.createElement('input'); lkIn.type = 'hidden'; lkIn.name = 'properties[_link]'; form.appendChild(lkIn); }
+    lkIn.value = lk;
+    props['_link'] = lk;
     fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -204,7 +210,8 @@
       passing = true;
       if (form.requestSubmit) form.requestSubmit(); else form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
       passing = false;
-    }).catch(function(err){ msg.textContent = err.message; });
+      setTimeout(function(){ if (lkIn.parentNode) lkIn.parentNode.removeChild(lkIn); }, 0);
+    }).catch(function(err){ if (lkIn.parentNode) lkIn.parentNode.removeChild(lkIn); msg.textContent = err.message; });
   }, true);
 
   place();
