@@ -1,5 +1,5 @@
 import { render } from 'preact';
-import Stringing2 from './Stringing2.tsx';
+import Stringing2, { parseMaxTensionPounds } from './Stringing2.tsx';
 
 const preactRoot = document.getElementById('stringing-root');
 
