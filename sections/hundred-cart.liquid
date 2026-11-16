@@ -39,10 +39,32 @@
     assign in_cart = in_cart | append: ',' | append: item.product_id | append: ','
   endfor
 
+  # Fri fragt pr. land: én linje pr. land, fx "DK: 100". "*" gælder alle andre lande.
+  # Beløbet er i den valuta, kunden handler i.
+  assign goal = 0
+  assign fallback = 0
+  assign cc = localization.country.iso_code
+  assign rules = s.free_shipping_rules | newline_to_br | split: '<br />'
+  for r in rules
+    assign parts = r | split: ':'
+    if parts.size < 2
+      continue
+    endif
+    assign code = parts[0] | strip | upcase
+    assign amt = parts[1] | strip | replace: ',', '.' | times: 1
+    if code == cc
+      assign goal = amt
+    elsif code == '*'
+      assign fallback = amt
+    endif
+  endfor
+  if goal == 0
+    assign goal = fallback
+  endif
   assign show_bar = false
-  if s.free_shipping > 0 and cart.item_count > 0 and cart.currency.iso_code == shop.currency
+  if goal > 0 and cart.item_count > 0
     assign show_bar = true
-    assign goal = s.free_shipping | times: 100
+    assign goal = goal | times: 100 | round
     assign left = goal | minus: cart.total_price
     assign pct = cart.total_price | times: 100 | divided_by: goal
     if pct > 100
@@ -114,7 +136,15 @@
 
   .hc-up{margin-top:clamp(40px,6vw,64px)}
   .hc-up h2{font:italic 800 clamp(26px,3vw,34px)/1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 18px}
-  .hc-rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(170px,20%,230px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin:0;list-style:none;padding-left:0}
+  .hc-railwrap{position:relative}
+  .hc-rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(170px,20%,230px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;margin:0;list-style:none;padding:0;scrollbar-width:none}
+  .hc-rail::-webkit-scrollbar{display:none}
+  .hc-arrow{position:absolute;top:var(--hc-at,90px);z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.12);transition:opacity .2s}
+  .hc-arrow svg{width:18px;height:18px}
+  .hc-arrow:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hc-arrow[hidden]{display:none}
+  .hc-arrow--prev{left:-16px}
+  .hc-arrow--next{right:-16px}
   .hc-card{scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;min-width:0}
   .hc-card .hc-img{width:100%}
   .hc-card a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;line-height:1.3}
@@ -147,6 +177,8 @@
     .hc-sticky .hc-cta{padding:16px}
     .hc-spacer{height:110px}
     .hc-rail{grid-auto-columns:46%}
+    .hc-arrow--prev{left:-6px}
+    .hc-arrow--next{right:-6px}
   }
 </style>
 
@@ -306,7 +338,11 @@
     {%- if shown > 0 -%}
       <div class="hc-up">
         <h2>{{ s.label_upsell | escape }}</h2>
-        <ul class="hc-rail">{{ cards }}</ul>
+        <div class="hc-railwrap">
+          <button type="button" class="hc-arrow hc-arrow--prev" data-hc-arrow="-1" aria-label="Previous" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <ul class="hc-rail">{{ cards }}</ul>
+          <button type="button" class="hc-arrow hc-arrow--next" data-hc-arrow="1" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
       </div>
     {%- endif -%}
   {%- endif -%}
@@ -336,7 +372,7 @@
     if (id && sections[id]) {
       var doc = new DOMParser().parseFromString(sections[id], 'text/html');
       var fresh = doc.querySelector('[data-hc]');
-      if (fresh) el.replaceWith(fresh);
+      if (fresh) { el.replaceWith(fresh); arrows(); }
     }
     var bubble = document.getElementById('cart-icon-bubble');
     if (bubble && sections['cart-icon-bubble']) {
@@ -363,9 +399,32 @@
       });
   }
 
+  /* Pilene ved forslagene: venstre-pilen vises først, når man er gået til højre */
+  function arrows(){
+    var rail = document.querySelector('[data-hc] .hc-rail');
+    if (!rail) return;
+    var wrap = rail.parentNode, max = rail.scrollWidth - rail.clientWidth - 4;
+    var c = rail.querySelector('.hc-card');
+    if (c) wrap.style.setProperty('--hc-at', (c.offsetWidth / 2 - 22) + 'px');
+    wrap.querySelector('[data-hc-arrow="-1"]').hidden = rail.scrollLeft <= 4;
+    wrap.querySelector('[data-hc-arrow="1"]').hidden = rail.scrollLeft >= max;
+  }
+  document.addEventListener('scroll', function(e){ if (e.target.classList && e.target.classList.contains('hc-rail')) arrows(); }, true);
+  window.addEventListener('resize', arrows);
+  window.addEventListener('load', arrows);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', arrows); else arrows();
+
   document.addEventListener('click', function(e){
     var t = e.target.closest('[data-hc] button');
     if (!t) return;
+
+    if (t.hasAttribute('data-hc-arrow')) {
+      var rail = t.parentNode.querySelector('.hc-rail');
+      var card = rail.querySelector('.hc-card');
+      var step = card ? (card.offsetWidth + 16) * Math.max(1, Math.floor(rail.clientWidth / (card.offsetWidth + 16)) - 1) : rail.clientWidth;
+      rail.scrollBy({ left: step * Number(t.getAttribute('data-hc-arrow')), behavior: 'smooth' });
+      return;
+    }
 
     if (t.hasAttribute('data-hc-step')) {
       var row = t.closest('.hc-item');
@@ -396,7 +455,7 @@
   "class": "hundred-cart",
   "settings": [
     { "type": "header", "content": "Fri fragt-bjælke" },
-    { "type": "number", "id": "free_shipping", "label": "Fri fragt fra (beløb i butikkens valuta, 0 = skjul)", "default": 0 },
+    { "type": "textarea", "id": "free_shipping_rules", "label": "Fri fragt fra – pr. land", "info": "Én linje pr. land: landekode: beløb, fx DK: 100. Skriv * for alle andre lande, fx *: 150. Tom = ingen bjælke." },
     { "type": "text", "id": "label_ship_left", "label": "Tekst før fri fragt", "default": "You're [amount] away from free shipping", "info": "[amount] bliver til det beløb, der mangler." },
     { "type": "text", "id": "label_ship_done", "label": "Tekst ved fri fragt", "default": "You've unlocked free shipping" },
     { "type": "header", "content": "Forslag under kurven" },
