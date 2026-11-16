@@ -293,10 +293,12 @@
     if (!valid()) return;
     update();
     var q = qty(), n = nameIn.value.trim().toUpperCase(), x = extra();
-    var info = { 'For': box.dataset.product, 'Name': n };
+    /* _for_variant kobler trykket til trøjen i kurven (skjult for kunden) */
+    var vIn = form.querySelector('[name="id"]'), fv = vIn ? String(vIn.value) : '';
+    var info = { 'For': box.dataset.product, 'Name': n, '_for_variant': fv };
     var items = [{ id: Number(box.dataset.vName), quantity: q, properties: info }];
-    if (x === 'country' && box.dataset.vCountry) items.push({ id: Number(box.dataset.vCountry), quantity: q, properties: { 'For': box.dataset.product, 'Country': cs.value } });
-    if (x === 'logo' && box.dataset.vLogo) items.push({ id: Number(box.dataset.vLogo), quantity: q, properties: { 'For': box.dataset.product } });
+    if (x === 'country' && box.dataset.vCountry) items.push({ id: Number(box.dataset.vCountry), quantity: q, properties: { 'For': box.dataset.product, 'Country': cs.value, '_for_variant': fv } });
+    if (x === 'logo' && box.dataset.vLogo) items.push({ id: Number(box.dataset.vLogo), quantity: q, properties: { 'For': box.dataset.product, '_for_variant': fv } });
     fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },

@@ -191,6 +191,9 @@
     var props = { 'Racket': box.dataset.racket, 'String': s };
     if (!col.disabled) props['String colour'] = col.value;
     props['Tension'] = t;
+    /* _for_variant kobler opstrengningen til ketsjeren i kurven (skjult for kunden) */
+    var vIn = form.querySelector('[name="id"]');
+    if (vIn) props['_for_variant'] = String(vIn.value);
     fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
