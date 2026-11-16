@@ -1,0 +1,429 @@
+{%- comment -%}
+  HUNDRED – Kurv
+  Erstatter "Varer i kurv" og "Subtotal" på kurvsiden.
+  Navnetryk, land + logo og opstrengning vises under det produkt, de hører til
+  (koblet via den skjulte egenskab _for_variant, eller via "For"/"Racket" på ældre linjer).
+  Ændres antal eller fjernes et produkt, følger tillæggene med.
+{%- endcomment -%}
+
+{%- liquid
+  assign s = section.settings
+  assign links = ''
+  for item in cart.items
+    assign target = item.properties['_for_variant'] | default: ''
+    assign ftitle = item.properties['For'] | default: item.properties['Racket'] | default: ''
+    if target != '' or ftitle != ''
+      for p in cart.items
+        if p.key == item.key
+          continue
+        endif
+        assign pid = p.variant_id | append: ''
+        assign hit = false
+        if target != ''
+          if pid == target
+            assign hit = true
+          endif
+        elsif p.product.title == ftitle
+          assign hit = true
+        endif
+        if hit
+          assign links = links | append: ',' | append: item.key | append: '>' | append: p.key | append: ','
+          break
+        endif
+      endfor
+    endif
+  endfor
+
+  assign in_cart = ''
+  for item in cart.items
+    assign in_cart = in_cart | append: ',' | append: item.product_id | append: ','
+  endfor
+
+  assign show_bar = false
+  if s.free_shipping > 0 and cart.item_count > 0 and cart.currency.iso_code == shop.currency
+    assign show_bar = true
+    assign goal = s.free_shipping | times: 100
+    assign left = goal | minus: cart.total_price
+    assign pct = cart.total_price | times: 100 | divided_by: goal
+    if pct > 100
+      assign pct = 100
+    endif
+  endif
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+  .hc{--ink:#0a0a0b;--soft:#5d584f;--muted:#8c867b;--line:#e7e3dc;--panel:#f5f3ef;--gold:#f2a81d;--sale:#c62828;
+    --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    font-family:var(--body);color:var(--ink);font-size:16px;line-height:1.5;letter-spacing:0}
+  .hc *{box-sizing:border-box}
+  .hc-wrap{max-width:1360px;margin-inline:auto;padding:clamp(28px,5vw,56px) clamp(16px,4vw,56px) clamp(48px,7vw,80px)}
+  .hc-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:clamp(28px,4vw,56px);align-items:start}
+  .hc h1{font:italic 800 clamp(34px,4vw,48px)/1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 6px}
+  .hc-sub{margin:0 0 22px;color:var(--soft);font-size:15px}
+  .hc-sub a{color:inherit}
+  .hc-ship{background:var(--panel);border-radius:8px;padding:14px 16px;font-weight:600;font-size:14px;margin-bottom:8px}
+  .hc-bar{height:6px;background:var(--line);border-radius:9px;margin-top:10px;overflow:hidden}
+  .hc-bar i{display:block;height:100%;background:var(--gold);border-radius:inherit}
+  .hc-items{list-style:none;margin:0;padding:0}
+  .hc-item{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+  .hc-item:first-child{border-top:0}
+  .hc-img{display:block;width:110px;aspect-ratio:1;border-radius:8px;background:var(--panel);overflow:hidden}
+  .hc-img img{width:100%;height:100%;object-fit:contain;display:block}
+  .hc-t{font-weight:700;font-size:17px;line-height:1.3;margin:0 0 4px;color:var(--ink);text-decoration:none;display:block}
+  .hc-t:hover{text-decoration:underline}
+  .hc-v{margin:0 0 4px;color:var(--soft);font-size:14px}
+  .hc-props{margin:0 0 4px;color:var(--soft);font-size:13px}
+  .hc-add{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+  .hc-add li{display:flex;align-items:center;gap:10px;background:var(--panel);border-left:2px solid var(--gold);border-radius:0 6px 6px 0;padding:8px 8px 8px 12px;font-size:13px}
+  .hc-add span{flex:1;min-width:0}
+  .hc-add em{font-style:normal;color:var(--soft);white-space:nowrap}
+  .hc-x{border:0;background:none;color:var(--muted);font-size:18px;line-height:1;cursor:pointer;padding:4px 6px;border-radius:4px}
+  .hc-x:hover{color:var(--ink)}
+  .hc-ctl{display:flex;align-items:center;gap:16px;margin-top:14px}
+  .hc-qty{display:inline-flex;align-items:center;border:1px solid #d9d4cb;border-radius:999px;height:40px}
+  .hc-qty button{width:38px;height:38px;border:0;background:none;font-size:18px;cursor:pointer;color:var(--ink);border-radius:999px}
+  .hc-qty output{min-width:28px;text-align:center;font-weight:600}
+  .hc-rm{border:0;background:none;padding:0;font:inherit;font-size:13px;color:var(--soft);text-decoration:underline;cursor:pointer}
+  .hc-p{font-weight:700;font-size:17px;text-align:right;white-space:nowrap}
+  .hc-p s{display:block;color:var(--muted);font-weight:500;font-size:14px}
+  .hc-p.is-sale{color:var(--sale)}
+  .hc-err{color:var(--sale);font-size:13px;font-weight:600;margin:8px 0 0}
+  .hc-err:empty{display:none}
+  .hc-busy{opacity:.5;pointer-events:none;transition:opacity .2s}
+  .hc button:focus-visible,.hc a:focus-visible,.hc select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+  .hc-sum{background:var(--panel);border-radius:10px;padding:28px;position:sticky;top:calc(var(--hc-top,0px) + 20px)}
+  .hc-sum h2{font:italic 800 28px/1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 20px}
+  .hc-l{display:flex;justify-content:space-between;gap:12px;font-size:15px;padding:7px 0}
+  .hc-l.is-disc{color:var(--sale)}
+  .hc-tot{border-top:1px solid #e1dcd2;margin-top:8px;padding-top:16px;font-weight:800;font-size:22px}
+  .hc-note{font-size:13px;color:var(--soft);margin:4px 0 18px}
+  .hc-cta{display:block;width:100%;border:0;cursor:pointer;background:var(--ink);color:#fff;border-radius:999px;padding:18px;font:700 14px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+  .hc-cta:hover{background:#2a2a2a}
+  .hc-dyn{margin-top:10px}
+  .hc-trust{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:6px;font-size:13px;color:var(--soft)}
+  .hc-trust li::before{content:"✓ ";color:var(--ink);font-weight:700}
+
+  .hc-empty{text-align:center;padding:40px 0}
+  .hc-empty p{color:var(--soft);margin:0 0 24px}
+  .hc-empty a{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;padding:16px 30px;font:700 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+
+  .hc-up{margin-top:clamp(40px,6vw,64px)}
+  .hc-up h2{font:italic 800 clamp(26px,3vw,34px)/1 var(--display);text-transform:uppercase;letter-spacing:0;margin:0 0 18px}
+  .hc-rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(170px,20%,230px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin:0;list-style:none;padding-left:0}
+  .hc-card{scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;min-width:0}
+  .hc-card .hc-img{width:100%}
+  .hc-card a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;line-height:1.3}
+  .hc-card a:hover{text-decoration:underline}
+  .hc-cp{font-weight:700;font-size:15px}
+  .hc-cp s{color:var(--muted);font-weight:500;margin-left:6px}
+  .hc-cf{display:flex;gap:8px;margin-top:auto}
+  .hc-cf select{flex:1;min-width:0;height:40px;border:1px solid #d9d4cb;border-radius:8px;background:#fff;padding:0 10px;font:500 14px var(--body);color:var(--ink)}
+  .hc-cf button{height:40px;border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:999px;padding:0 16px;font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+  .hc-cf button:hover{background:var(--ink);color:#fff}
+  .hc-cf button.is-done{background:var(--ink);color:#fff}
+
+  .hc-sticky{display:none}
+  .hc-pm{display:none}
+  @media (max-width:899px){
+    .hc-grid{grid-template-columns:minmax(0,1fr)}
+    .hc-sum{position:static}
+  }
+  @media (max-width:749px){
+    .hc-item{grid-template-columns:84px minmax(0,1fr);gap:14px}
+    .hc-img{width:84px}
+    .hc-item > .hc-p{display:none}
+    .hc .hc-pm{display:block;font-weight:700;font-size:16px;margin:2px 0 6px}
+    .hc-pm s{color:var(--muted);font-weight:500;font-size:14px;margin-left:6px}
+    .hc-pm.is-sale{color:var(--sale)}
+    .hc-t{font-size:15px}
+    .hc-sum{padding:22px}
+    .hc-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 20px rgba(0,0,0,.06);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+    .hc-sticky .hc-l{padding:0 0 10px;font-weight:700;font-size:16px}
+    .hc-sticky .hc-cta{padding:16px}
+    .hc-spacer{height:110px}
+    .hc-rail{grid-auto-columns:46%}
+  }
+</style>
+
+<div class="hc" id="hc-{{ section.id }}" data-hc data-section="{{ section.id }}">
+  <div class="hc-wrap">
+  {%- if cart.item_count == 0 -%}
+    <div class="hc-empty">
+      <h1>{{ s.label_title | escape }}</h1>
+      <p>{{ s.label_empty | escape }}</p>
+      <a href="{{ routes.all_products_collection_url }}">{{ s.label_continue | escape }}</a>
+    </div>
+  {%- else -%}
+    <div class="hc-grid">
+      <div>
+        <h1>{{ s.label_title | escape }}</h1>
+        <p class="hc-sub">{{ cart.item_count }} {% if cart.item_count == 1 %}{{ s.label_item | escape }}{% else %}{{ s.label_items | escape }}{% endif %} · <a href="{{ routes.all_products_collection_url }}">{{ s.label_continue | escape }}</a></p>
+
+        {%- if show_bar -%}
+          <div class="hc-ship" role="status">
+            {%- if left > 0 -%}
+              {%- assign left_money = left | money -%}
+              {{ s.label_ship_left | escape | replace: '[amount]', left_money }}
+            {%- else -%}
+              {{ s.label_ship_done | escape }}
+            {%- endif -%}
+            <div class="hc-bar" aria-hidden="true"><i style="width:{{ pct }}%"></i></div>
+          </div>
+        {%- endif -%}
+
+        <ul class="hc-items">
+        {%- for item in cart.items -%}
+          {%- assign as_child = ',' | append: item.key | append: '>' -%}
+          {%- if links contains as_child -%}{%- continue -%}{%- endif -%}
+
+          {%- liquid
+            assign keys = item.key
+            assign kids = 0
+            assign total = item.final_line_price
+            assign was = item.original_line_price
+            if item.variant.compare_at_price > item.final_price
+              assign was = item.variant.compare_at_price | times: item.quantity
+            endif
+            for c in cart.items
+              assign pair = ',' | append: c.key | append: '>' | append: item.key | append: ','
+              if links contains pair
+                assign keys = keys | append: '|' | append: c.key
+                assign kids = kids | plus: 1
+                assign total = total | plus: c.final_line_price
+                assign was = was | plus: c.original_line_price
+              endif
+            endfor
+          -%}
+          <li class="hc-item" data-keys="{{ keys }}" data-qty="{{ item.quantity }}">
+            <a class="hc-img" href="{{ item.url }}" tabindex="-1" aria-hidden="true">
+              {%- if item.image -%}{{ item.image | image_url: width: 300 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+            </a>
+            <div>
+              <a class="hc-t" href="{{ item.url }}">{{ item.product.title | escape }}</a>
+              {%- unless item.product.has_only_default_variant -%}
+                <p class="hc-v">{{ item.variant.title | escape }}</p>
+              {%- endunless -%}
+              <p class="hc-pm{% if was > total %} is-sale{% endif %}">{{ total | money }}{% if was > total %}<s>{{ was | money }}</s>{% endif %}</p>
+              {%- if kids == 0 -%}
+                {%- for prop in item.properties -%}
+                  {%- assign first = prop.first | slice: 0 -%}
+                  {%- if prop.last != blank and first != '_' -%}<p class="hc-props">{{ prop.first | escape }}: {{ prop.last | escape }}</p>{%- endif -%}
+                {%- endfor -%}
+              {%- else -%}
+                <ul class="hc-add">
+                {%- for c in cart.items -%}
+                  {%- assign pair = ',' | append: c.key | append: '>' | append: item.key | append: ',' -%}
+                  {%- if links contains pair -%}
+                    {%- capture info -%}
+                      {%- for prop in c.properties -%}
+                        {%- assign first = prop.first | slice: 0 -%}
+                        {%- if prop.last != blank and first != '_' and prop.first != 'For' and prop.first != 'Racket' -%}{%- assign short = prop.last | split: ' – ' | first -%}&nbsp;· {{ short | escape }}{%- endif -%}
+                      {%- endfor -%}
+                    {%- endcapture -%}
+                    <li><span>{{ c.product.title | escape }}{{ info }}</span><em>+ {{ c.final_line_price | money }}</em>
+                      <button type="button" class="hc-x" data-hc-remove="{{ c.key }}" aria-label="{{ s.label_remove | escape }} {{ c.product.title | escape }}">×</button></li>
+                  {%- endif -%}
+                {%- endfor -%}
+                </ul>
+              {%- endif -%}
+              {%- for d in item.line_level_discount_allocations -%}
+                <p class="hc-props" style="color:var(--sale)">{{ d.discount_application.title | escape }} (−{{ d.amount | money }})</p>
+              {%- endfor -%}
+              <div class="hc-ctl">
+                <div class="hc-qty">
+                  <button type="button" data-hc-step="-1" aria-label="{{ s.label_minus | escape }}">−</button>
+                  <output aria-live="polite">{{ item.quantity }}</output>
+                  <button type="button" data-hc-step="1" aria-label="{{ s.label_plus | escape }}">+</button>
+                </div>
+                <button type="button" class="hc-rm" data-hc-remove="{{ keys }}">{{ s.label_remove | escape }}</button>
+              </div>
+              <p class="hc-err" role="alert"></p>
+            </div>
+            <div class="hc-p{% if was > total %} is-sale{% endif %}">{{ total | money }}{% if was > total %}<s>{{ was | money }}</s>{% endif %}</div>
+          </li>
+        {%- endfor -%}
+        </ul>
+      </div>
+
+      <aside class="hc-sum" aria-label="{{ s.label_summary | escape }}">
+        <h2>{{ s.label_summary | escape }}</h2>
+        <div class="hc-l"><span>{{ s.label_subtotal | escape }}</span><span>{{ cart.items_subtotal_price | money }}</span></div>
+        {%- for d in cart.cart_level_discount_applications -%}
+          <div class="hc-l is-disc"><span>{{ d.title | escape }}</span><span>−{{ d.total_allocated_amount | money }}</span></div>
+        {%- endfor -%}
+        <div class="hc-l"><span>{{ s.label_shipping | escape }}</span><span>{{ s.label_shipping_val | escape }}</span></div>
+        <div class="hc-l hc-tot"><span>{{ s.label_total | escape }}</span><span>{{ cart.total_price | money_with_currency }}</span></div>
+        <p class="hc-note">{{ s.label_tax | escape }}</p>
+        <form action="{{ routes.cart_url }}" method="post" id="hc-form-{{ section.id }}">
+          <button type="submit" name="checkout" class="hc-cta">{{ s.label_checkout | escape }}</button>
+        </form>
+        {%- if additional_checkout_buttons and s.show_dynamic -%}
+          <div class="hc-dyn">{{ content_for_additional_checkout_buttons }}</div>
+        {%- endif -%}
+        {%- assign trust = s.trust | newline_to_br | split: '<br />' -%}
+        {%- if s.trust != blank -%}
+          <ul class="hc-trust">
+            {%- for t in trust -%}{%- assign t = t | strip -%}{%- if t != blank -%}<li>{{ t | escape }}</li>{%- endif -%}{%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </aside>
+    </div>
+  {%- endif -%}
+
+  {%- if s.upsell != blank -%}
+    {%- capture cards -%}
+      {%- assign shown = 0 -%}
+      {%- for p in s.upsell.products limit: 30 -%}
+        {%- assign pid = ',' | append: p.id | append: ',' -%}
+        {%- if in_cart contains pid or p.available == false -%}{%- continue -%}{%- endif -%}
+        {%- assign v = p.selected_or_first_available_variant -%}
+        <li class="hc-card">
+          <a class="hc-img" href="{{ p.url }}" tabindex="-1" aria-hidden="true">
+            {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+          </a>
+          <a href="{{ p.url }}">{{ p.title | escape }}</a>
+          <span class="hc-cp">{{ v.price | money }}{% if v.compare_at_price > v.price %}<s>{{ v.compare_at_price | money }}</s>{% endif %}</span>
+          <div class="hc-cf">
+            {%- if p.has_only_default_variant -%}
+              <input type="hidden" value="{{ v.id }}" data-hc-variant>
+            {%- else -%}
+              <select data-hc-variant aria-label="{{ p.title | escape }}">
+                {%- for vv in p.variants -%}{%- if vv.available -%}<option value="{{ vv.id }}">{{ vv.title | escape }}</option>{%- endif -%}{%- endfor -%}
+              </select>
+            {%- endif -%}
+            <button type="button" data-hc-addup>{{ s.label_add | escape }}</button>
+          </div>
+        </li>
+        {%- assign shown = shown | plus: 1 -%}
+        {%- if shown >= s.upsell_max -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- if shown > 0 -%}
+      <div class="hc-up">
+        <h2>{{ s.label_upsell | escape }}</h2>
+        <ul class="hc-rail">{{ cards }}</ul>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if cart.item_count > 0 -%}
+    <div class="hc-spacer"></div>
+    <div class="hc-sticky">
+      <div class="hc-l"><span>{{ s.label_total | escape }}</span><span>{{ cart.total_price | money }}</span></div>
+      <button type="submit" form="hc-form-{{ section.id }}" name="checkout" class="hc-cta">{{ s.label_checkout | escape }}</button>
+    </div>
+  {%- endif -%}
+  </div>
+</div>
+
+<script>
+(function(){
+  if (window.__hundredCart) return;
+  window.__hundredCart = true;
+  var root = (window.Shopify && Shopify.routes ? Shopify.routes.root : '/');
+
+  function box(){ return document.querySelector('[data-hc]'); }
+
+  /* Tegner kurven og kurv-ikonet i headeren igen med Shopifys svar */
+  function paint(sections){
+    if (!sections) { location.reload(); return; }
+    var el = box(), id = el && el.dataset.section;
+    if (id && sections[id]) {
+      var doc = new DOMParser().parseFromString(sections[id], 'text/html');
+      var fresh = doc.querySelector('[data-hc]');
+      if (fresh) el.replaceWith(fresh);
+    }
+    var bubble = document.getElementById('cart-icon-bubble');
+    if (bubble && sections['cart-icon-bubble']) {
+      var b = new DOMParser().parseFromString(sections['cart-icon-bubble'], 'text/html').querySelector('.shopify-section');
+      if (b) bubble.innerHTML = b.innerHTML;
+    }
+  }
+
+  function post(url, body, row){
+    var el = box();
+    var ids = [el.dataset.section];
+    if (document.getElementById('cart-icon-bubble')) ids.push('cart-icon-bubble');
+    body.sections = ids;
+    body.sections_url = window.location.pathname;
+    el.classList.add('hc-busy');
+    return fetch(root + url, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(body) })
+      .then(function(r){ return r.json().then(function(j){ if (!r.ok) throw j; return j; }); })
+      .then(function(j){ paint(j.sections); })
+      .catch(function(err){
+        var b = box(); if (b) b.classList.remove('hc-busy');
+        var msg = (err && (err.description || err.message)) || 'Error';
+        var out = row && row.querySelector('.hc-err');
+        if (out) out.textContent = msg; else alert(msg);
+      });
+  }
+
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-hc] button');
+    if (!t) return;
+
+    if (t.hasAttribute('data-hc-step')) {
+      var row = t.closest('.hc-item');
+      var q = Math.max(0, parseInt(row.dataset.qty, 10) + parseInt(t.getAttribute('data-hc-step'), 10));
+      var updates = {};
+      row.dataset.keys.split('|').forEach(function(k){ updates[k] = q; });
+      post('cart/update.js', { updates: updates }, row);
+    }
+    else if (t.hasAttribute('data-hc-remove')) {
+      var up = {};
+      t.getAttribute('data-hc-remove').split('|').forEach(function(k){ up[k] = 0; });
+      post('cart/update.js', { updates: up }, t.closest('.hc-item'));
+    }
+    else if (t.hasAttribute('data-hc-addup')) {
+      var card = t.closest('.hc-card');
+      var v = card.querySelector('[data-hc-variant]');
+      t.classList.add('is-done');
+      post('cart/add.js', { items: [{ id: Number(v.value), quantity: 1 }] }, null);
+    }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "HUNDRED Kurv",
+  "tag": "section",
+  "class": "hundred-cart",
+  "settings": [
+    { "type": "header", "content": "Fri fragt-bjælke" },
+    { "type": "number", "id": "free_shipping", "label": "Fri fragt fra (beløb i butikkens valuta, 0 = skjul)", "default": 0 },
+    { "type": "text", "id": "label_ship_left", "label": "Tekst før fri fragt", "default": "You're [amount] away from free shipping", "info": "[amount] bliver til det beløb, der mangler." },
+    { "type": "text", "id": "label_ship_done", "label": "Tekst ved fri fragt", "default": "You've unlocked free shipping" },
+    { "type": "header", "content": "Forslag under kurven" },
+    { "type": "collection", "id": "upsell", "label": "Kollektion med tilkøbsprodukter", "info": "Fx t-shirts, strømper, bolde og strenge. Produkter, der allerede er i kurven, vises ikke." },
+    { "type": "range", "id": "upsell_max", "label": "Antal forslag", "min": 2, "max": 12, "step": 1, "default": 6 },
+    { "type": "text", "id": "label_upsell", "label": "Overskrift", "default": "Complete your kit" },
+    { "type": "text", "id": "label_add", "label": "Knap", "default": "Add" },
+    { "type": "header", "content": "Opsummering" },
+    { "type": "checkbox", "id": "show_dynamic", "label": "Vis Shop Pay / PayPal / Google Pay-knapper", "default": true },
+    { "type": "textarea", "id": "trust", "label": "Linjer under knappen (én pr. linje, tom = skjul)", "default": "Secure payment" },
+    { "type": "header", "content": "Tekster" },
+    { "type": "text", "id": "label_title", "label": "Overskrift", "default": "Your bag" },
+    { "type": "text", "id": "label_item", "label": "1 vare", "default": "item" },
+    { "type": "text", "id": "label_items", "label": "Flere varer", "default": "items" },
+    { "type": "text", "id": "label_continue", "label": "Fortsæt", "default": "Continue shopping" },
+    { "type": "text", "id": "label_empty", "label": "Tom kurv", "default": "Your bag is empty." },
+    { "type": "text", "id": "label_remove", "label": "Fjern", "default": "Remove" },
+    { "type": "text", "id": "label_minus", "label": "Færre (skærmlæser)", "default": "Decrease quantity" },
+    { "type": "text", "id": "label_plus", "label": "Flere (skærmlæser)", "default": "Increase quantity" },
+    { "type": "text", "id": "label_summary", "label": "Opsummering", "default": "Order summary" },
+    { "type": "text", "id": "label_subtotal", "label": "Subtotal", "default": "Subtotal" },
+    { "type": "text", "id": "label_shipping", "label": "Fragt", "default": "Shipping" },
+    { "type": "text", "id": "label_shipping_val", "label": "Fragt-tekst", "default": "Calculated at checkout" },
+    { "type": "text", "id": "label_total", "label": "Total", "default": "Total" },
+    { "type": "text", "id": "label_tax", "label": "Moms-tekst", "default": "Taxes included." },
+    { "type": "text", "id": "label_checkout", "label": "Knap", "default": "Check out" }
+  ],
+  "presets": [{ "name": "HUNDRED Kurv" }],
+  "enabled_on": { "templates": ["cart"] }
+}
+{% endschema %}
