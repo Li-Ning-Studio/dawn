@@ -62,16 +62,16 @@
     "collection_list_wUk9aN": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_nMfhy4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "badminton-shuttlecocks"
-          }
-        },
         "featured_collection_MfxEwH": {
           "type": "featured_collection",
           "settings": {
             "collection": "badminton-strings"
+          }
+        },
+        "featured_collection_nMfhy4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badminton-shuttlecocks"
           }
         },
         "featured_collection_KjbPgx": {
@@ -82,19 +82,19 @@
         }
       },
       "block_order": [
-        "featured_collection_nMfhy4",
         "featured_collection_MfxEwH",
+        "featured_collection_nMfhy4",
         "featured_collection_KjbPgx"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
