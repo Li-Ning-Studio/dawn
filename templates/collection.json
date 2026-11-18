@@ -19,6 +19,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [
+        ".card__badge .badge {background: #ffffff !important; color: #ff0000 !important; border: 1px solid #ff0000 !important; border-radius: 999px !important; padding: 5px 12px !important; font-size: 13px !important; font-weight: 700 !important; text-transform: none !important; letter-spacing: 0.2px !important; box-shadow: none !important;}"
+      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
@@ -26,11 +29,11 @@
         "color_scheme": "",
         "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "should_look_disabled": true,
+        "should_look_disabled": false,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
