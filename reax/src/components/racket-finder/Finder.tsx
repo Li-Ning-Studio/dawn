@@ -93,7 +93,6 @@ export function reasonTexts(config: FinderConfig, item: Recommendation, t: Trans
 // these local so independently cached PDP entries gain no shared dependency.
 const AUTO_ADVANCE_DELAY_MS = 320;
 const STEP_FADE_DURATION_MS = 180;
-const RESULT_PREPARATION_MS = 2500;
 
 type Props = {
   config: FinderConfig;
@@ -126,10 +125,8 @@ function Caret() {
 export function Finder({ config, messages, root, browseUrl, currency, saved, section, onHome }: Props) {
   const questions = quizQuestions(config);
   const [answers, setAnswers] = useState<Answers>(saved);
-  const [mode, setMode] = useState<'quiz' | 'preparing' | 'results'>(complete(config, saved) ? 'results' : 'quiz');
+  const [mode, setMode] = useState<'quiz' | 'results'>(complete(config, saved) ? 'results' : 'quiz');
   const [step, setStep] = useState(() => questions.find((q) => !saved[q.id])?.id || questions[0].id);
-  const [reveal, setReveal] = useState<'idle' | 'waiting' | 'revealing'>('idle');
-  const hasCompleted = useRef(complete(config, saved));
   const [catalogue, setCatalogue] = useState<{
     status: 'idle' | 'loading' | 'ready';
     products: LiveProduct[];
@@ -140,6 +137,7 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
   const [status, setStatus] = useState('');
   const [exporting, setExporting] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
+  const emailSlot = useRef<HTMLDivElement>(null);
   const [transition, dispatchTransition] = useReducer(transitionQuestion, { phase: 'answering' });
   const stepLeaving = transition.phase === 'leaving';
   const request = useRef<AbortController>();
@@ -171,27 +169,6 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
       maximumFractionDigits: 2,
     }).format(value / 100);
   const productLink = (item: Recommendation) => `${root}products/${item.profile.handle}?variant=${item.variant.id}`;
-
-  // This is a bounded presentation pause, independent of catalogue requests.
-  // Restored results and edits bypass it; leaving this view cancels the timer.
-  useLayoutEffect(() => {
-    if (mode !== 'preparing') return;
-    const timer = setTimeout(() => {
-      setMode('results');
-      setReveal('waiting');
-    }, RESULT_PREPARATION_MS);
-    return () => clearTimeout(timer);
-  }, [mode]);
-
-  useEffect(() => {
-    if (reveal !== 'waiting' || loading) return;
-    setReveal(recommendations.length > 0 ? 'revealing' : 'idle');
-  }, [reveal, loading, recommendations.length]);
-  useEffect(() => {
-    if (reveal !== 'revealing') return;
-    const timeout = setTimeout(() => setReveal('idle'), 450);
-    return () => clearTimeout(timeout);
-  }, [reveal]);
 
   async function refresh() {
     request.current?.abort();
@@ -228,6 +205,38 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
       section.scrollIntoView({ block: 'start', behavior: 'instant' });
     setStatus('');
   }, [mode, step]);
+
+  // Optional email signup (sections/racket-finder.liquid, [data-finder-email]).
+  // Liquid renders Shopify's native customer form so Shopify owns validation,
+  // bot protection and consent; here we only move it under the results and tag
+  // the signup with stable answer IDs for Flow / Shopify Messaging coupons.
+  // Cleanup returns it to the section, hidden, for quiz steps and remounts.
+  useLayoutEffect(() => {
+    const form = section.querySelector<HTMLElement>('[data-finder-email]');
+    const slot = emailSlot.current;
+    if (mode !== 'results' || !form || !slot) return;
+    const tags = form.querySelector<HTMLInputElement>('[data-finder-email-tags]');
+    if (tags)
+      tags.value = [
+        'racket-finder',
+        `rf-${identity || 'exploring'}`,
+        `rf-level-${answers.experience}`,
+        `rf-budget-${answers.budget}`,
+      ].join(', ');
+    slot.append(form);
+    form.hidden = false;
+    return () => {
+      form.hidden = true;
+      section.append(form);
+    };
+  }, [mode, answers, identity]);
+
+  // After submitting, Shopify reloads to #RacketFinderEmail. Scroll to its
+  // success/error message after the heading-focus effect above has run.
+  useEffect(() => {
+    if (mode === 'results' && location.hash === '#RacketFinderEmail')
+      emailSlot.current?.scrollIntoView({ block: 'center' });
+  }, [mode]);
 
   // Start timing at the committed phase, without useEffect's deferred start.
   // One timer owns both stages and is cancelled on replacement or unmount.
@@ -269,7 +278,6 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
   }
 
   function refine(questionId: string, option: string) {
-    setReveal('idle');
     const next = cleanAnswers(config, { ...answers, [questionId]: option });
     setAnswers(next);
     saveAnswers(config, next);
@@ -331,10 +339,8 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
     if (!updatedAnswers[question.id]) return;
     if (position < questions.length - 1) setStep(questions[position + 1].id);
     else if (complete(config, updatedAnswers)) {
-      const prepare = !hasCompleted.current && section.dataset.shortlistReveal === 'true';
-      hasCompleted.current = true;
       saveAnswers(config, updatedAnswers);
-      setMode(prepare ? 'preparing' : 'results');
+      setMode('results');
       track(config, 'completed', { archetype: identify(config, updatedAnswers) ?? 'exploring' });
       if (Date.now() - fetchedAt.current > 60000 && currency === config.currency) void refresh();
     }
@@ -345,14 +351,11 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
     setAnswers({});
     setStep(questions[0].id);
     setMode('quiz');
-    setReveal('idle');
     dispatchTransition({ type: 'cancel' });
-    hasCompleted.current = false;
     track(config, 'started');
   }
 
   function edit(id: string) {
-    setReveal('idle');
     dispatchTransition({ type: 'cancel' });
     setStep(id);
     setMode('quiz');
@@ -440,18 +443,6 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
       </article>
     );
   }
-
-  if (mode === 'preparing')
-    return (
-      <div class="rf-preparing">
-        <h1 class="s3_title" ref={heading} tabIndex={-1} aria-describedby={`${section.id}-preparing-detail`}>
-          {t(exploring ? 'preparing_exploration_title' : 'preparing_title')}
-        </h1>
-        <p class="s3_paragraph" id={`${section.id}-preparing-detail`}>
-          {t(exploring ? 'preparing_exploration_detail' : 'preparing_detail')}
-        </p>
-      </div>
-    );
 
   if (mode === 'quiz')
     return (
@@ -574,9 +565,7 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
               </div>
             ) : null}
             {recommendations.length ? (
-              <div class={`rf-products${reveal === 'revealing' ? ' rf-products--reveal' : ''}`}>
-                {recommendations.map(card)}
-              </div>
+              <div class="rf-products">{recommendations.map(card)}</div>
             ) : products.length || !failed.length ? (
               <p class="rf-notice s3_paragraph">
                 {selectedWeight ? t('empty_weight', { weight: selectedWeight }) : t('empty')}
@@ -591,6 +580,7 @@ export function Finder({ config, messages, root, browseUrl, currency, saved, sec
           {t('browse')} <span class="rf-icon rf-icon--arrow rf-icon--diagonal" aria-hidden="true" />
         </a>
       ) : null}
+      <div ref={emailSlot} />
       <div class="accordion rf-answer-summary">
         <details>
           <summary>

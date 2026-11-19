@@ -11,7 +11,6 @@
   data-root="{{ routes.root_url }}{% unless routes.root_url == '/' %}/{% endunless %}"
   data-browse-url="{{ section.settings.browse_collection.url | escape }}"
   data-currency="{{ cart.currency.iso_code }}"
-  data-shortlist-reveal="{{ section.settings.shortlist_reveal }}"
   data-message-heading="{{ 'racket_finder.heading' | t | escape }}"
   data-message-intro="{{ 'racket_finder.intro' | t | escape }}"
   data-message-court="{{ 'racket_finder.court' | t | escape }}"
@@ -22,10 +21,6 @@
   data-message-back="{{ 'racket_finder.back' | t | escape }}"
   data-message-next="{{ 'racket_finder.next' | t | escape }}"
   data-message-reveal="{{ 'racket_finder.reveal' | t | escape }}"
-  data-message-preparing-title="{{ 'racket_finder.preparing_title' | t | escape }}"
-  data-message-preparing-detail="{{ 'racket_finder.preparing_detail' | t | escape }}"
-  data-message-preparing-exploration-title="{{ 'racket_finder.preparing_exploration_title' | t | escape }}"
-  data-message-preparing-exploration-detail="{{ 'racket_finder.preparing_exploration_detail' | t | escape }}"
   data-message-step="{{ 'racket_finder.step' | t | escape }}"
   data-message-progress="{{ 'racket_finder.progress' | t | escape }}"
   data-message-unsure="{{ 'racket_finder.unsure' | t | escape }}"
@@ -196,6 +191,84 @@
     </div>
   </div>
   <div data-finder-app hidden></div>
+  {%- comment -%}
+    Optional email signup shown under the finder results. It is Shopify's native
+    customer form: submitting creates (or updates) a customer subscribed to email
+    marketing with the tags in contact[tags]. Liquid owns the form so Shopify
+    handles bot protection, errors and success. Finder.tsx moves this node into
+    the results view, un-hides it, and replaces the tags value with
+    "racket-finder, rf-<personality|exploring>, rf-level-<experience>,
+    rf-budget-<budget>" from the current answers. Flow/Shopify Messaging use the
+    tags to send the coupon email. After submitting, the page reloads and saved
+    answers reopen the results, where the success or error message is shown.
+  {%- endcomment -%}
+  {%- if section.settings.email_signup -%}
+    <div class="rf-email" data-finder-email hidden>
+      {%- comment -%}
+        Same two-column layout as quiz questions (rf-question-*): question and
+        help on the left, a single underline answer row and the primary arrow
+        button on the right.
+      {%- endcomment -%}
+      {%- form 'customer', id: 'RacketFinderEmail', class: 'rf-question-layout rf-email-layout' -%}
+        <input type="hidden" name="contact[tags]" value="racket-finder" data-finder-email-tags>
+        <div class="rf-question-aside">
+          <h2 class="s3_title">{{ 'racket_finder_email.heading' | t }}</h2>
+          <p class="rf-question-help s3_paragraph">{{ 'racket_finder_email.body' | t }}</p>
+          {% comment %}
+            <p class="rf-step rf-email-consent s3_caption">
+              {{ 'racket_finder_email.consent' | t }}
+              {%- if shop.privacy_policy %}
+                <a class="link underlined-link" href="{{ shop.privacy_policy.url }}">{{ shop.privacy_policy.title }}</a>
+              {%- endif %}
+            </p>
+          {% endcomment %}
+        </div>
+        <div class="rf-question-answers">
+          {%- if form.posted_successfully? -%}
+            <p class="rf-email-row s3_subtitle" role="status" tabindex="-1" autofocus>
+              {{- 'racket_finder_email.success' | t -}}
+            </p>
+          {%- else -%}
+            <label class="rf-email-row" for="RacketFinderEmail-{{ section.id }}">
+              <span class="s3_subtitle">{{ 'racket_finder_email.label' | t }}</span>
+              <input
+                id="RacketFinderEmail-{{ section.id }}"
+                class="rf-email-input s3_paragraph"
+                type="email"
+                name="contact[email]"
+                value="{{ form.email }}"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if form.errors %}
+                  autofocus
+                  aria-invalid="true"
+                  aria-describedby="RacketFinderEmail-error-{{ section.id }}"
+                {% endif %}
+                placeholder="{{ 'racket_finder_email.placeholder' | t }}"
+                required
+              >
+            </label>
+            {%- if form.errors -%}
+              <p class="rf-email-error form__message s3_caption" id="RacketFinderEmail-error-{{ section.id }}">
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </p>
+            {%- endif -%}
+            <div class="rf-question-actions">
+              <button type="submit" class="button button--primary button--large rf-next">
+                {{ 'racket_finder_email.submit' | t }}
+                <span class="rf-icon rf-icon--arrow" aria-hidden="true"></span>
+              </button>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endform -%}
+    </div>
+  {%- endif -%}
   <script type="application/json" data-finder-config>
     {% render 'racket-finder-config', finder_settings: section.settings %}
   </script>
@@ -246,9 +319,9 @@
     },
     {
       "type": "checkbox",
-      "id": "shortlist_reveal",
-      "label": "t:racket_finder.shortlist_reveal",
-      "info": "t:racket_finder.shortlist_reveal_info",
+      "id": "email_signup",
+      "label": "t:racket_finder_email.setting",
+      "info": "t:racket_finder_email.setting_info",
       "default": true
     },
     {

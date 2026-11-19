@@ -246,24 +246,6 @@
   gap: 1.6rem;
 }
 
-/* The result introduction shares question motion, without adding another
-   navigation delay. Its duration is owned by Finder, not animation events. */
-.rf-preparing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 24rem;
-  gap: 1.6rem;
-  padding-block: 3.2rem;
-}
-.rf-preparing h1,
-.rf-preparing p {
-  animation: rf-question-in 180ms ease both;
-}
-.rf-preparing p {
-  animation-delay: 900ms;
-}
-
 /* Results and weight refinement */
 .rf-personality-copy,
 .rf-card-actions {
@@ -502,6 +484,57 @@
 .rf .accordion details[open] > summary .icon-caret {
   transform: rotate(180deg);
 }
+/* Optional email signup moved under results by Finder.tsx. It reuses the quiz
+   question layout (rf-question-*); only the answer row is email-specific. */
+.rf-email {
+  margin-top: 6.4rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--rf-line);
+}
+.rf-email-layout {
+  animation: none;
+}
+.rf-email .s3_title,
+.rf-email .s3_paragraph,
+.rf-email .s3_caption {
+  margin: 0;
+}
+.rf-email-consent {
+  text-transform: none;
+}
+.rf-email-row {
+  display: block;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--rf-line);
+}
+.rf-email-input {
+  display: block;
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  font: inherit;
+  line-height: 1.6;
+}
+.rf-email-input::placeholder {
+  color: var(--rf-muted);
+}
+.rf-email-input:focus {
+  outline: none;
+}
+.rf-email-row:focus-within {
+  border-color: rgb(var(--color-foreground));
+}
+.rf-email-input:focus-visible {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 4px;
+}
+.rf-email-error {
+  margin-top: 1.2rem;
+}
 .rf-answer-summary dl {
   margin: 0;
 }
@@ -532,25 +565,6 @@
 }
 
 /* Motion */
-.rf-products--reveal > .rf-product {
-  animation: rf-shortlist-in 300ms ease-out both;
-}
-.rf-products--reveal > .rf-product:nth-child(2) {
-  animation-delay: 50ms;
-}
-.rf-products--reveal > .rf-product:nth-child(3) {
-  animation-delay: 100ms;
-}
-@keyframes rf-shortlist-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes rf-question-in {
   from {
     opacity: 0;
@@ -679,11 +693,6 @@
 @media (prefers-reduced-motion: reduce) {
   .rf-option {
     transition: none;
-  }
-  .rf-preparing h1,
-  .rf-preparing p,
-  .rf-products--reveal > .rf-product {
-    animation: none;
   }
   .rf-question-layout {
     animation: none;
