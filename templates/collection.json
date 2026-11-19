@@ -19,9 +19,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "custom_css": [
-        ".card__badge .badge {background: #ffffff !important; color: #ff0000 !important; border: 1px solid #ff0000 !important; border-radius: 999px !important; padding: 5px 12px !important; font-size: 13px !important; font-weight: 700 !important; text-transform: none !important; letter-spacing: 0.2px !important; box-shadow: none !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
@@ -40,10 +38,22 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_jx6XCk": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<script>\n  (function () {\n    const SOLD_OUT_REGEX = /\\b(sold\\s*out|out\\s*of\\s*stock)\\b/i;\n\n    function isCardSoldOut(card) {\n      // 1. Check for common sold-out classes\n      if (\n        card.classList.contains('sold-out') ||\n        card.classList.contains('out-of-stock') ||\n        card.querySelector('.sold-out, .out-of-stock, .card--sold-out')\n      ) {\n        return true;\n      }\n\n      // 2. Check product badges (Dawn & custom badges)\n      const badges = card.querySelectorAll('.badge, .card__badge, [class*=\"badge\"]');\n      for (const badge of badges) {\n        if (SOLD_OUT_REGEX.test(badge.textContent)) {\n          return true;\n        }\n      }\n\n      // 3. Check disabled Add-to-Cart / Quick-Add buttons\n      const buttons = card.querySelectorAll('button[disabled], .quick-add__submit');\n      for (const btn of buttons) {\n        if (SOLD_OUT_REGEX.test(btn.textContent)) {\n          return true;\n        }\n      }\n\n      // 4. Fallback: check any text inside the product card\n      return SOLD_OUT_REGEX.test(card.textContent);\n    }\n\n    function updateProductGrid() {\n      const cards = document.querySelectorAll('#product-grid .grid__item, .collection .grid__item');\n      cards.forEach((card) => {\n        if (isCardSoldOut(card)) {\n          card.style.display = 'none';\n        } else {\n          // Automatically restores the product once restocked\n          card.style.display = '';\n        }\n      });\n    }\n\n    // Run immediately and after page load\n    updateProductGrid();\n    document.addEventListener('DOMContentLoaded', updateProductGrid);\n\n    // Re-run whenever filters, sorting, or pagination update the grid\n    const observer = new MutationObserver(updateProductGrid);\n    observer.observe(document.body, { childList: true, subtree: true });\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "custom_liquid_jx6XCk"
   ]
 }
