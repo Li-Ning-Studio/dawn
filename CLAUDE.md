@@ -57,6 +57,7 @@ This is a hybrid Shopify Dawn theme that integrates React components for enhance
 - **Liquid → JavaScript**: Global variables set in templates expose Shopify data to React components
 - **Form Integration**: React components sync with HTML forms via DOM manipulation and custom validation
 - **Cart Bundling**: Services add additional line items with properties linking to main products
+- **Service details at checkout**: service lines also get one visible property (`sections.cart.service_details`, "Details") holding the customer's choices as comma-separated values (stringing: tension + knots; remix: sticker text; t-shirt printing: text + second line). Built by `serviceDetails` in `assets/product-form.js`; the `_` properties remain the fulfilment data.
 
 ### React Build System
 
@@ -219,3 +220,15 @@ Operational notes
 
 - Avoid editing `component-slider.css` directly; keep customizations scoped in `recs-slider.css` to reduce merge conflicts and side effects on other sliders.
 - Hide components by default and reveal after JS injection to prevent UI flashing.
+
+## Cart Drawer Rewards Progress Bar
+
+- Kaching-style bar at the top of the cart drawer: up to 3 milestones (amount, reward label, pasted SVG icon; empty = `icon-gift.svg`) under theme settings → Cart → "Rewards progress bar" (`cart_progress_enabled`, `cart_milestone_{1..3}_amount|label|unlocked|icon|gift`). `unlocked` is the optional text shown once that milestone is the highest reached (empty = `sections.cart.progress.unlocked`, "Eligible for <label>").
+- Display only: each amount must match a real Shopify discount (free shipping, % off at a minimum, gift) kept in sync by hand. Amounts are in shop currency major units, entered in ascending order; an empty amount or label hides that milestone.
+- Milestone gift: optional product per milestone (`cart_milestone_{n}_gift`). `Bxgy.syncMilestoneGifts` in `assets/bxgy.js` (data: `window.s3_milestoneGifts` in `layout/theme.liquid`) keeps exactly one line of that product's first available variant, marked `_milestoneGift: "<n>"`, while the cart subtotal without gift lines is at least the amount, and removes it below, so an unearned gift never reaches checkout at full price. Runs after every `cartUpdate` event and on page load, never publishes `cartUpdate` (no loops), and re-renders the drawer and `/cart` without opening the drawer. Gift rows carry `data-milestone-gift`; CSS in `assets/component-cart-items.css` hides the stepper and Remove and shows a "Free gift" tag. A sold-out gift shows `sections.cart.milestone_gift_unavailable` in `<bxgy-notice>`. Price guard: a gift line that should be free but isn't ₹0 in the cart (discount missing, paused or misconfigured) is removed, logged with `console.warn`, and that milestone's gift is skipped until the next page load (`milestoneGiftsUndiscounted`). The ₹0 price comes only from a Shopify Buy X Get Y discount (customer spends the minimum amount, gets the product 100% off, combinable with product/order/shipping discounts). Removing items inside checkout (GoKwik) is not guarded.
+- All milestones reached: the bar collapses into a tinted banner with the last reward's icon (`.cart-progress__banner-icon`, CSS `:has` on the last reached milestone).
+- Progress uses `cart.items_subtotal_price`. Pure Liquid + CSS inline in `snippets/cart-drawer.liquid` (inside `<cart-drawer-items>` so every drawer re-render refreshes it); styles in `assets/component-cart-drawer.css` (`.cart-progress*`).
+- Line items: a ₹0 line (e.g. BXGY free string) shows FREE. "Your Savings" in the footer = Σ(compare-at or regular price × qty) − `cart.total_price` (sale prices + all discounts).
+- Strung racket: the option line reads "black-lime · 26 lbs" from the stringing child line's `_tension` (the string name is already listed under "Show bundle").
+- "Complete your kit": `cart-recommendations` with `layout: 'list'` (drawer only; the PDP OOS carousel is unchanged) renders compact rows via `renderList` in `assets/cart-recommendations.js`. Single-variant products get one-tap "+ Add"; multi-variant ones link to the PDP ("Choose").
+- Empty drawer: `snippets/cart-drawer-trending.liquid` lists up to 4 products from Theme settings → Cart → Cart drawer → Collection (set it to the header's Trending collection; sections can't read each other's settings). Row styles shared as `.cart-upsell*`.

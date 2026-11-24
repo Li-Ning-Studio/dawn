@@ -712,13 +712,28 @@
       }
     },
     "cart": {
-      "title": "Your Shopping Bag",
+      "title": "Shopping Bag",
       "caption": "Bag items",
       "remove_title": "Remove {{ title }}",
       "show_bundle": "Show bundle",
       "hide_bundle": "Hide bundle",
+      "remove": "Remove",
       "free": "FREE",
+      "service_details": "Details",
+      "milestone_gift": "Free gift",
+      "milestone_gift_unavailable": "Your free gift is out of stock right now.",
+      "progress": {
+        "add_to_unlock_html": "Add <strong>{{ amount }}</strong> to unlock {{ reward }}",
+        "unlocked": "Eligible for {{ reward }}."
+      },
+      "total_savings": "Your Savings",
       "estimated_total": "Estimated total",
+      "upsell": {
+        "heading": "Complete your kit",
+        "add": "+ Add",
+        "adding": "Adding…",
+        "choose": "Choose"
+      },
       "new_estimated_total": "New estimated total",
       "note": "Order special instructions",
       "checkout": "Check out",

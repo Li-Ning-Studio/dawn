@@ -159,6 +159,11 @@ class CartRecommendations extends HTMLElement {
   }
 
   renderRecommendations(recommendations) {
+    if (this.dataset.layout === 'list') {
+      this.renderList(recommendations);
+      return;
+    }
+
     const grid = document.createElement('div');
     grid.className = 'cart-recommendations__grid';
 
@@ -238,6 +243,97 @@ class CartRecommendations extends HTMLElement {
     grid.addEventListener('scroll', updateButtons, { passive: true });
     window.addEventListener('resize', updateButtons);
     setTimeout(updateButtons, 0);
+  }
+
+  /*
+    List layout (cart drawer "Complete your kit"): compact rows, no carousel controls.
+    Single-variant products get a one-tap "+ Add"; products with options link to the product
+    page ("Choose") so a colour/size is never picked for the customer. Unavailable products are
+    skipped. Row styles (.cart-upsell*) live in assets/component-cart-drawer.css.
+  */
+  renderList(recommendations) {
+    const list = document.createElement('ul');
+    list.className = 'cart-upsell list-unstyled';
+    list.setAttribute('role', 'list');
+
+    recommendations
+      .filter((product) => product.available)
+      .forEach((product) => {
+        const item = document.createElement('li');
+        item.className = 'cart-upsell__item';
+
+        const primaryImage = product.featured_image || product.images?.[0];
+        const rawImage = typeof primaryImage === 'string' ? primaryImage : primaryImage?.src;
+        const imageUrl = rawImage ? this.appendImgParam(rawImage, 'width', 160) : '';
+        const title = this.escapeHtml(product.title);
+        const compareAt =
+          product.compare_at_price > product.price ? `<s>${this.formatPrice(product.compare_at_price)}</s> ` : '';
+        const variant = product.variants?.length === 1 ? product.variants[0] : null;
+        const action =
+          variant && variant.available
+            ? `<button type="button" class="cart-upsell__add" data-variant-id="${variant.id}" aria-label="${this.escapeHtml(
+                `${this.dataset.labelAdd || ''} ${product.title}`,
+              )}">${this.escapeHtml(this.dataset.labelAdd || '')}</button>`
+            : `<a href="${product.url}" class="cart-upsell__choose">${this.escapeHtml(this.dataset.labelChoose || '')}</a>`;
+
+        item.innerHTML = `
+          <a href="${product.url}" class="cart-upsell__media" tabindex="-1" aria-hidden="true">
+            ${imageUrl ? `<img class="cart-upsell__image" src="${imageUrl}" alt="" loading="lazy" width="80" height="80">` : ''}
+          </a>
+          <div class="cart-upsell__info">
+            <a href="${product.url}" class="cart-upsell__title">${title}</a>
+            <span class="cart-upsell__price">${compareAt}${this.formatPrice(product.price)}</span>
+          </div>
+          ${action}
+        `;
+        list.appendChild(item);
+      });
+
+    if (!list.children.length) {
+      this.hideComponent();
+      return;
+    }
+
+    list.addEventListener('click', (event) => {
+      const button = event.target.closest('.cart-upsell__add');
+      if (button) this.addToCart(button);
+    });
+
+    this.contentElement.innerHTML = '';
+    this.contentElement.appendChild(list);
+  }
+
+  // One-tap add from the list layout. Mirrors product-form.js: add with the drawer's sections,
+  // re-render the drawer with the response, then publish cartUpdate for other subscribers.
+  async addToCart(button) {
+    const drawer = document.querySelector('cart-drawer');
+    const sections = drawer ? drawer.getSectionsToRender().map((section) => section.id) : [];
+
+    button.disabled = true;
+    button.textContent = this.dataset.labelAdding || '';
+
+    try {
+      const response = await fetch(`${routes.cart_add_url}`, {
+        ...fetchConfig('javascript'),
+        body: JSON.stringify({
+          items: [{ id: Number(button.dataset.variantId), quantity: 1 }],
+          sections,
+          sections_url: window.location.pathname,
+        }),
+      });
+      const data = await response.json();
+      if (!response.ok || data.status) throw new Error(data.description || data.message || 'Add failed');
+
+      if (drawer) drawer.renderContents(data);
+      publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-recommendations', cartData: data });
+    } catch (error) {
+      console.error('[cart-recs] add failed:', error);
+      button.disabled = false;
+      button.textContent = window.cartStrings?.error || this.dataset.labelAdd || '';
+      setTimeout(() => {
+        button.textContent = this.dataset.labelAdd || '';
+      }, 3000);
+    }
   }
 
   createProductCard(product) {

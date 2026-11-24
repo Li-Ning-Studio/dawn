@@ -111,6 +111,7 @@
                   <tr
                     class="cart-item"
                     id="CartItem-{{ item.index | plus: 1 }}"
+                    data-milestone-gift="{{ item.properties._milestoneGift }}"
                     {% if nested_parent != blank %}
                       hidden
                     {% endif %}
@@ -349,6 +350,8 @@
                     <td class="cart-item__quantity{% if has_qty_rules or has_vol_pricing %} cart-item__quantity--info{% endif %}">
                       <quantity-popover>
                         <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
+                          {%- # Shown only on milestone gift rows (data-milestone-gift); stepper and Remove are hidden there. -%}
+                          <span class="cart-item__gift-tag">{{ 'sections.cart.milestone_gift' | t }}</span>
                           <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                             {{ 'products.product.quantity.label' | t }}
                           </label>

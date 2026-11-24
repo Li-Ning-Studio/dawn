@@ -441,6 +441,30 @@
             "label": "Collection",
             "info": "Shown when cart drawer is empty"
           }
+        },
+        "cart_progress": {
+          "header": "Rewards progress bar",
+          "enabled": {
+            "label": "Show rewards progress bar",
+            "info": "Display only. Each amount must match a real Shopify discount (free shipping, % off, gift). Enter milestones in ascending order; leave an amount empty to hide it."
+          },
+          "milestone_1": "Milestone 1",
+          "milestone_2": "Milestone 2",
+          "milestone_3": "Milestone 3",
+          "amount": { "label": "Cart amount" },
+          "label": { "label": "Reward label" },
+          "unlocked": {
+            "label": "Unlocked text",
+            "info": "Shown in the cart drawer once this milestone is the highest one reached, e.g. \"Your free gift is in the bag\". Leave empty for \"Eligible for [reward label]\"."
+          },
+          "icon": {
+            "label": "Icon (SVG)",
+            "info": "Paste the complete SVG code, including the opening and closing svg tags. Use currentColor for fill/stroke so it inverts when reached. Leave empty for the default gift icon."
+          },
+          "gift": {
+            "label": "Free gift product",
+            "info": "Optional. Added to the cart automatically (quantity 1, not removable) once the cart reaches this amount, and removed when it drops below. Needs a matching Shopify Buy X Get Y discount (customer spends this minimum amount, gets this product 100% off, combinable with other discounts) or the gift is charged."
+          }
         }
       }
     },

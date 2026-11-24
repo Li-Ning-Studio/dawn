@@ -68,6 +68,10 @@ if (!customElements.get('product-form')) {
               _stringName: string.dataset.string || '',
               _tension: `${tension}lbs`,
               _knot: fourKnots ? '4_knot' : '2_knot',
+              ...this.serviceDetails([
+                `${tension} ${root?.dataset.labelTensionUnit || ''}`.trim(),
+                fourKnots ? root?.dataset.labelFourKnots : root?.dataset.labelTwoKnots,
+              ]),
             },
           },
           { id: string.id, quantity: 1, properties: {} },
@@ -146,8 +150,21 @@ if (!customElements.get('product-form')) {
             _textColor: textColor,
             _productSKU: window.s3_current_variant_sku || '',
             _productName: window.s3_product_name || '',
+            ...this.serviceDetails([text.innerText, countryText]),
           },
         };
+      }
+
+      // Customer-visible summary on a service line: one property whose name does not start with "_",
+      // so Shopify checkout, order emails and admin show it (e.g. "Details: 26 LBS, Two Knots").
+      // Values only, comma separated; the cart drawer and /cart hide service child lines anyway.
+      // The private "_" properties stay the source of truth for fulfilment.
+      serviceDetails(values) {
+        const details = values
+          .map((value) => (value || '').trim())
+          .filter(Boolean)
+          .join(', ');
+        return details ? { [window.cartStrings.serviceDetails]: details } : {};
       }
 
       // Shopify's native parent_relationship is the source of truth. The
@@ -440,6 +457,7 @@ if (!customElements.get('product-form')) {
               _textColor: window.s3_remix_config.stickerTextColor || 'UNKNOWN',
               _productSKU: window?.s3_current_variant_sku || '',
               _productName: window?.s3_product_name || '',
+              ...this.serviceDetails([stickerText]),
             },
           });
         }
