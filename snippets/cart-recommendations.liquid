@@ -8,6 +8,9 @@
   - limit: {Number} Number of recommendations to show (default: 4, max: 10)
   - heading: {String} Section heading text
   - intent: {String} Recommendation intent - 'related' or 'complementary' (default: 'related')
+  - layout: {String} 'list' renders compact rows with a one-tap "+ Add" (cart drawer "Complete
+    your kit"); omitted = the default horizontal carousel. See renderList in
+    assets/cart-recommendations.js.
 {% endcomment %}
 
 {%- liquid
@@ -48,6 +51,12 @@
   data-product-ids="{{ cart_product_ids | join: ',' }}"
   data-icon-arrow-url="{{ 'icon-arrow.svg' | asset_url }}"
   data-section-id="cart-recommendations"
+  {% if layout == 'list' %}
+    data-layout="list"
+    data-label-add="{{ 'sections.cart.upsell.add' | t | escape }}"
+    data-label-adding="{{ 'sections.cart.upsell.adding' | t | escape }}"
+    data-label-choose="{{ 'sections.cart.upsell.choose' | t | escape }}"
+  {% endif %}
 >
   <div class="cart-recommendations__container">
     <h3 class="cart-recommendations__heading h4" hidden>{{ heading }}</h3>

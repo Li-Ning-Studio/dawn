@@ -96,6 +96,138 @@ window.Bxgy = {
     };
   },
 
+  // Rewards progress bar gifts (window.s3_milestoneGifts, set in layout/theme.liquid). Shopify never
+  // adds merchandise by itself: the matching Buy X Get Y discount ("spends a minimum amount") makes the
+  // gift ₹0, and this keeps exactly one marked gift line (_milestoneGift = milestone number) in the
+  // cart while the subtotal without gifts reaches the threshold, and none below it, so an unearned
+  // gift never reaches checkout at full price. Runs after every cartUpdate event and once on page
+  // load. It never publishes cartUpdate itself, so it cannot loop.
+  milestoneGiftsSync: null,
+  milestoneGiftsQueued: false,
+  // Milestones whose gift came back with a price (the Shopify discount is not applying). Skipped for
+  // the rest of this page view so every cart change doesn't add and remove it again; the next page
+  // load tries once more, which picks up a fixed discount.
+  milestoneGiftsUndiscounted: new Set(),
+
+  syncMilestoneGifts() {
+    // One sync at a time; changes made meanwhile get a single follow-up pass.
+    if (this.milestoneGiftsSync) {
+      this.milestoneGiftsQueued = true;
+      return this.milestoneGiftsSync;
+    }
+    this.milestoneGiftsSync = this.applyMilestoneGifts()
+      .catch((error) => console.error('[bxgy] milestone gift sync failed:', error))
+      .finally(() => {
+        this.milestoneGiftsSync = null;
+        if (this.milestoneGiftsQueued) {
+          this.milestoneGiftsQueued = false;
+          this.syncMilestoneGifts();
+        }
+      });
+    return this.milestoneGiftsSync;
+  },
+
+  async applyMilestoneGifts() {
+    const gifts = window.s3_milestoneGifts || [];
+    let cart = await this.readCart();
+    const giftLines = cart.items.filter((item) => item.properties?._milestoneGift);
+    const subtotal =
+      cart.items_subtotal_price - giftLines.reduce((total, item) => total + Number(item.final_line_price), 0);
+
+    const updates = {};
+    const additions = [];
+    let soldOut = false;
+    // Lines from a milestone that no longer has a gift (setting cleared) are removed too.
+    giftLines
+      .filter((item) => !gifts.some((gift) => gift.milestone === item.properties._milestoneGift))
+      .forEach((item) => (updates[item.key] = 0));
+
+    gifts.forEach((gift) => {
+      const lines = giftLines.filter((item) => item.properties._milestoneGift === gift.milestone);
+      // Never keep a gift the discount isn't making free: a sync mistake must not charge for it.
+      const earned = subtotal >= gift.threshold;
+      const reached = earned && !this.milestoneGiftsUndiscounted.has(gift.milestone);
+      // Keep the first line at quantity 1 when it is still the configured gift. A sold-out gift
+      // (variantId null) keeps a line that is already in the cart rather than taking it away.
+      lines.forEach((item, index) => {
+        const isGift = !gift.variantId || String(item.variant_id) === String(gift.variantId);
+        const isFree = Number(item.final_line_price) === 0;
+        // Below the amount a price is expected (the discount's minimum isn't met): just remove it.
+        if (earned && isGift && !isFree) this.flagUndiscountedGift(gift.milestone, item);
+        const quantity = reached && index === 0 && isGift && isFree ? 1 : 0;
+        if (item.quantity !== quantity) updates[item.key] = quantity;
+      });
+      const kept = lines.some((item) => updates[item.key] !== 0);
+      if (!reached || kept) return;
+      if (gift.variantId) {
+        additions.push({ id: gift.variantId, quantity: 1, properties: { _milestoneGift: gift.milestone } });
+      } else {
+        soldOut = true;
+      }
+    });
+
+    // Only clear our own message, never a product-form BXGY notice.
+    if (soldOut) this.setNotice('milestone_unavailable');
+    else if (this.notice === 'milestone_unavailable') this.setNotice(null);
+    if (Object.keys(updates).length === 0 && additions.length === 0) return;
+
+    if (Object.keys(updates).length > 0) {
+      await fetch(`${routes.cart_update_url}`, { ...fetchConfig(), body: JSON.stringify({ updates }) });
+    }
+    if (additions.length > 0) {
+      const response = await fetch(routes.cart_add_url, {
+        ...fetchConfig(),
+        body: JSON.stringify({ items: additions }),
+      });
+      if (!response.ok) this.setNotice('milestone_unavailable');
+    }
+    cart = await this.readCart();
+
+    // Shopify applies automatic discounts in the cart response, so a just-added gift that isn't ₹0
+    // means the Buy X Get Y discount is missing, paused or set up differently. Take it straight out.
+    const pricedGifts = {};
+    cart.items
+      .filter((item) => item.properties?._milestoneGift && Number(item.final_line_price) > 0)
+      .forEach((item) => {
+        this.flagUndiscountedGift(item.properties._milestoneGift, item);
+        pricedGifts[item.key] = 0;
+      });
+    if (Object.keys(pricedGifts).length > 0) {
+      await fetch(`${routes.cart_update_url}`, { ...fetchConfig(), body: JSON.stringify({ updates: pricedGifts }) });
+      cart = await this.readCart();
+    }
+
+    await this.renderCartUI(cart);
+  },
+
+  flagUndiscountedGift(milestone, item) {
+    if (this.milestoneGiftsUndiscounted.has(milestone)) return;
+    this.milestoneGiftsUndiscounted.add(milestone);
+    console.warn(
+      `[bxgy] Milestone ${milestone} gift "${item.product_title}" is priced at ${item.final_line_price / 100}, ` +
+        'not 0: its Buy X Get Y discount is not applying. Removed it from the cart; check the discount.',
+    );
+  },
+
+  // Refresh whichever cart UIs are on the page (drawer and/or /cart) without opening the drawer,
+  // using each component's own section list, as CartItems.updateQuantity does in assets/cart.js.
+  async renderCartUI(cart) {
+    const empty = cart.item_count === 0;
+    for (const cartItems of document.querySelectorAll('cart-items, cart-drawer-items')) {
+      const sections = cartItems.getSectionsToRender();
+      const rendered = await this.renderSections(sections.map((section) => section.section));
+      sections.forEach((section) => {
+        const container = document.getElementById(section.id);
+        if (!container) return;
+        const target = container.querySelector(section.selector) || container;
+        target.innerHTML = cartItems.getSectionInnerHTML(rendered[section.section], section.selector);
+      });
+    }
+    document.querySelector('cart-drawer')?.classList.toggle('is-empty', empty);
+    document.querySelector('cart-items')?.classList.toggle('is-empty', empty);
+    document.getElementById('main-cart-footer')?.classList.toggle('is-empty', empty);
+  },
+
   setNotice(notice) {
     this.notice = notice;
     // Preserve the skipped-gift message when the shopper opens the cart later.
@@ -117,7 +249,8 @@ customElements.define(
       if (!window.Bxgy.notice) {
         try {
           const saved = JSON.parse(sessionStorage.getItem('bxgy-notice'));
-          if (saved?.notice === 'unavailable' && Date.now() - saved.at < 5 * 60 * 1000) {
+          const known = ['unavailable', 'milestone_unavailable'].includes(saved?.notice);
+          if (known && Date.now() - saved.at < 5 * 60 * 1000) {
             window.Bxgy.notice = saved.notice;
           }
         } catch (error) {
@@ -129,7 +262,11 @@ customElements.define(
 
     showNotice() {
       const notice = window.Bxgy.notice;
-      const message = notice === 'unavailable' ? window.cartStrings.giftsUnavailable : '';
+      const messages = {
+        unavailable: window.cartStrings.giftsUnavailable,
+        milestone_unavailable: window.cartStrings.milestoneGiftUnavailable,
+      };
+      const message = messages[notice] || '';
       const paragraph = document.createElement('p');
       paragraph.textContent = message;
       this.replaceChildren(paragraph);
@@ -137,3 +274,12 @@ customElements.define(
     }
   },
 );
+
+// Milestone gifts: re-check after every cart change, and once on load for carts changed elsewhere
+// (another tab, a discount or setting change). Also runs while a gift line is still in the cart after
+// its setting was cleared, so that line is removed instead of being charged at checkout. Otherwise
+// it is skipped entirely, with no extra cart requests.
+if (window.s3_milestoneGifts?.length || window.s3_milestoneGiftInCart) {
+  subscribe(PUB_SUB_EVENTS.cartUpdate, () => window.Bxgy.syncMilestoneGifts());
+  if (window.s3_milestoneGiftsCheckOnLoad) window.Bxgy.syncMilestoneGifts();
+}

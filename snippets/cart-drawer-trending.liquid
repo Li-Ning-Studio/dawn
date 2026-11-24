@@ -1,0 +1,48 @@
+{%- doc -%}
+  Empty cart drawer: compact "Trending" list (same idea as the header search's Trending list,
+  snippets/header-search.liquid). Sections can't read each other's settings, so the collection
+  comes from the cart drawer's own setting (Theme settings → Cart → Cart drawer → Collection);
+  point it at the same collection as the header's search featured collection.
+
+  Up to 4 available products, skipping internal service products (tag "Service"). Rows reuse the
+  `.cart-upsell` styles from assets/component-cart-drawer.css.
+
+  @param {collection} collection - Collection to list.
+{%- enddoc -%}
+
+{%- if collection.products_count > 0 -%}
+  <div class="cart-trending">
+    <h3 class="cart-trending__heading">{{ 'general.search.featured_collection' | t }}</h3>
+    <ul class="cart-upsell list-unstyled" role="list">
+      {%- assign trending_shown = 0 -%}
+      {%- for product in collection.products limit: 20 -%}
+        {%- unless product.tags contains 'Service' or product.available == false -%}
+          <li class="cart-upsell__item">
+            <a href="{{ product.url }}" class="cart-upsell__media" tabindex="-1" aria-hidden="true">
+              {%- if product.featured_image -%}
+                {{
+                  product.featured_image
+                  | image_url: width: 160
+                  | image_tag: loading: 'lazy', alt: '', width: 80, height: 80, class: 'cart-upsell__image'
+                }}
+              {%- endif -%}
+            </a>
+            <div class="cart-upsell__info">
+              <a href="{{ product.url }}" class="cart-upsell__title">{{ product.title | escape }}</a>
+              <span class="cart-upsell__price">
+                {%- if product.compare_at_price > product.price -%}
+                  <s>{{ product.compare_at_price | money }}</s>
+                {%- endif %}
+                {{ product.price | money -}}
+              </span>
+            </div>
+          </li>
+          {%- assign trending_shown = trending_shown | plus: 1 -%}
+          {%- if trending_shown == 4 -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}

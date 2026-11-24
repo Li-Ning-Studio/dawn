@@ -1495,6 +1495,113 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       },
       {
+        "type": "header",
+        "content": "t:settings_schema.cart.settings.cart_progress.header"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_progress_enabled",
+        "label": "t:settings_schema.cart.settings.cart_progress.enabled.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.enabled.info",
+        "default": false
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.cart.settings.cart_progress.milestone_1"
+      },
+      {
+        "type": "number",
+        "id": "cart_milestone_1_amount",
+        "label": "t:settings_schema.cart.settings.cart_progress.amount.label"
+      },
+      {
+        "type": "text",
+        "id": "cart_milestone_1_label",
+        "label": "t:settings_schema.cart.settings.cart_progress.label.label"
+      },
+      {
+        "type": "text",
+        "id": "cart_milestone_1_unlocked",
+        "label": "t:settings_schema.cart.settings.cart_progress.unlocked.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.unlocked.info"
+      },
+      {
+        "type": "textarea",
+        "id": "cart_milestone_1_icon",
+        "label": "t:settings_schema.cart.settings.cart_progress.icon.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.icon.info"
+      },
+      {
+        "type": "product",
+        "id": "cart_milestone_1_gift",
+        "label": "t:settings_schema.cart.settings.cart_progress.gift.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.gift.info"
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.cart.settings.cart_progress.milestone_2"
+      },
+      {
+        "type": "number",
+        "id": "cart_milestone_2_amount",
+        "label": "t:settings_schema.cart.settings.cart_progress.amount.label"
+      },
+      {
+        "type": "text",
+        "id": "cart_milestone_2_label",
+        "label": "t:settings_schema.cart.settings.cart_progress.label.label"
+      },
+      {
+        "type": "text",
+        "id": "cart_milestone_2_unlocked",
+        "label": "t:settings_schema.cart.settings.cart_progress.unlocked.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.unlocked.info"
+      },
+      {
+        "type": "textarea",
+        "id": "cart_milestone_2_icon",
+        "label": "t:settings_schema.cart.settings.cart_progress.icon.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.icon.info"
+      },
+      {
+        "type": "product",
+        "id": "cart_milestone_2_gift",
+        "label": "t:settings_schema.cart.settings.cart_progress.gift.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.gift.info"
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.cart.settings.cart_progress.milestone_3"
+      },
+      {
+        "type": "number",
+        "id": "cart_milestone_3_amount",
+        "label": "t:settings_schema.cart.settings.cart_progress.amount.label"
+      },
+      {
+        "type": "text",
+        "id": "cart_milestone_3_label",
+        "label": "t:settings_schema.cart.settings.cart_progress.label.label"
+      },
+      {
+        "type": "text",
+        "id": "cart_milestone_3_unlocked",
+        "label": "t:settings_schema.cart.settings.cart_progress.unlocked.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.unlocked.info"
+      },
+      {
+        "type": "textarea",
+        "id": "cart_milestone_3_icon",
+        "label": "t:settings_schema.cart.settings.cart_progress.icon.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.icon.info"
+      },
+      {
+        "type": "product",
+        "id": "cart_milestone_3_gift",
+        "label": "t:settings_schema.cart.settings.cart_progress.gift.label",
+        "info": "t:settings_schema.cart.settings.cart_progress.gift.info"
+      },
+      {
         "type": "color_scheme",
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",

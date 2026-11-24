@@ -376,9 +376,42 @@
 
       window.cartStrings = {
         giftsUnavailable: {{ 'sections.cart.gifts_unavailable' | t | json }},
+        // Visible line-item property name for service details (see serviceDetails in assets/product-form.js).
+        serviceDetails: {{ 'sections.cart.service_details' | t | json }},
+        milestoneGiftUnavailable: {{ 'sections.cart.milestone_gift_unavailable' | t | json }},
         error: `{{ 'sections.cart.cart_error' | t }}`,
         quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
       };
+
+      // Rewards progress bar gifts (Theme settings → Cart → Rewards progress bar). Kept in the cart by
+      // Bxgy.syncMilestoneGifts in assets/bxgy.js: threshold in cents, like cart.items_subtotal_price;
+      // variantId null = gift sold out. Only milestones with an amount and a gift product are listed.
+      window.s3_milestoneGifts = [
+        {%- if settings.cart_progress_enabled -%}
+          {%- for n in (1..3) -%}
+            {%- liquid
+              assign amount_key = 'cart_milestone_' | append: n | append: '_amount'
+              assign gift_key = 'cart_milestone_' | append: n | append: '_gift'
+              assign gift_amount = settings[amount_key] | default: 0
+              assign gift_product = settings[gift_key]
+            -%}
+            {%- if gift_amount > 0 and gift_product != blank -%}
+              { milestone: '{{ n }}', threshold: {{ gift_amount | times: 100 | round }}, variantId: {{ gift_product.first_available_variant.id | json }} },
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      ];
+      window.s3_milestoneGiftsCheckOnLoad = {% if cart.item_count > 0 %}true{% else %}false{% endif %};
+      {%- liquid
+        assign milestone_gift_in_cart = false
+        for item in cart.items
+          if item.properties._milestoneGift != blank
+            assign milestone_gift_in_cart = true
+            break
+          endif
+        endfor
+      -%}
+      window.s3_milestoneGiftInCart = {{ milestone_gift_in_cart }};
 
       window.variantStrings = {
         addToCart: `{{ 'products.product.add_to_cart' | t }}`,
