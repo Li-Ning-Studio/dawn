@@ -19,10 +19,6 @@
     "back": "Back",
     "next": "Next",
     "reveal": "Meet my matches",
-    "preparing_title": "Every game has a character.",
-    "preparing_detail": "Let’s meet yours.",
-    "preparing_exploration_title": "Your game is still taking shape.",
-    "preparing_exploration_detail": "Let’s explore the possibilities.",
     "step": "Question [current] of [total]",
     "progress": "Quiz progress",
     "unsure": "Still figuring it out",
@@ -145,6 +141,15 @@
     "spec_flex_label": "Shaft flexibility",
     "spec_balance_label": "Balance",
     "default_handling_help": "Try a different weight if your current racket feels slow to move or too light through a shot. Explore lighter options for easier changes of direction, heavier ones if you prefer a more substantial swing, or middle weight for something in between. Balance, strings and grip also affect the feel. Not sure yet? Keep No preference to explore the full shortlist."
+  },
+  "racket_finder_email": {
+    "heading": "Want a coupon for your racket?",
+    "body": "Leave your email and we’ll send you a discount code for your next HNDRD racket.",
+    "label": "Email",
+    "placeholder": "you@example.com",
+    "submit": "Send me the coupon",
+    "consent": "By signing up you agree to receive emails from HNDRD. Unsubscribe anytime.",
+    "success": "You’re in. Your coupon is on its way to your inbox."
   },
   "prebook": {
     "eyebrow": "Pre-book your pair",
@@ -707,13 +712,28 @@
       }
     },
     "cart": {
-      "title": "Your Shopping Bag",
+      "title": "Shopping Bag",
       "caption": "Bag items",
       "remove_title": "Remove {{ title }}",
       "show_bundle": "Show bundle",
       "hide_bundle": "Hide bundle",
+      "remove": "Remove",
       "free": "FREE",
+      "service_details": "Details",
+      "milestone_gift": "Free gift",
+      "milestone_gift_unavailable": "Your free gift is out of stock right now.",
+      "progress": {
+        "add_to_unlock_html": "Add <strong>{{ amount }}</strong> to unlock {{ reward }}",
+        "unlocked": "Eligible for {{ reward }}."
+      },
+      "total_savings": "Your Savings",
       "estimated_total": "Estimated total",
+      "upsell": {
+        "heading": "Complete your kit",
+        "add": "+ Add",
+        "adding": "Adding…",
+        "choose": "Choose"
+      },
       "new_estimated_total": "New estimated total",
       "note": "Order special instructions",
       "checkout": "Check out",

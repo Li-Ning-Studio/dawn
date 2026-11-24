@@ -56,13 +56,18 @@
           </div>
           {%- if settings.cart_drawer_collection != blank -%}
             <div class="cart-drawer__collection">
-              {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
+              {% render 'cart-drawer-trending', collection: settings.cart_drawer_collection %}
             </div>
           {%- endif -%}
         </div>
       {%- endif -%}
       <div style="margin: 1rem 2rem;" class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        <h2 class="drawer__heading">
+          {{ 'sections.cart.title' | t -}}
+          {%- if cart.item_count > 0 %}
+            <span class="drawer__count">({{ cart.item_count }})</span>
+          {%- endif -%}
+        </h2>
         <button
           class="drawer__close"
           type="button"
@@ -79,6 +84,112 @@
           class=" is-empty"
         {% endif %}
       >
+        {%- comment -%}
+          Rewards progress bar (Kaching-style). DISPLAY ONLY: the real rewards come from
+          Shopify discounts the merchant creates (free shipping, % off at a minimum, gift).
+          Milestone amounts in theme settings (Cart → Rewards progress bar) must be kept in
+          sync with those discounts by hand. Amounts are in shop currency major units and
+          entered in ascending order. Progress uses cart.items_subtotal_price (after line
+          discounts, before cart-level discounts). Lives inside <cart-drawer-items> so every
+          drawer re-render path (cart-drawer.js, cart.js) refreshes it without extra JS.
+        {%- endcomment -%}
+        {%- if settings.cart_progress_enabled and cart != empty -%}
+          {%- liquid
+            assign subtotal = cart.items_subtotal_price
+            assign ms_count = 0
+            assign max_threshold = 0
+            assign last_reached_label = ''
+            assign next_label = ''
+            assign next_threshold = 0
+            for n in (1..3)
+              assign amount_key = 'cart_milestone_' | append: n | append: '_amount'
+              assign label_key = 'cart_milestone_' | append: n | append: '_label'
+              assign amount = settings[amount_key] | default: 0
+              assign label = settings[label_key]
+              if amount > 0 and label != blank
+                assign threshold = amount | times: 100
+                assign ms_count = ms_count | plus: 1
+                assign max_threshold = threshold
+                if subtotal >= threshold
+                  assign last_reached_label = label
+                  assign last_reached_n = n
+                  assign unlocked_key = 'cart_milestone_' | append: n | append: '_unlocked'
+                  assign last_reached_text = settings[unlocked_key]
+                elsif next_label == blank
+                  assign next_label = label
+                  assign next_threshold = threshold
+                endif
+              endif
+            endfor
+            # Per-milestone "Unlocked text" setting; empty = "Eligible for <label>" (sections.cart.progress.unlocked).
+            # default filter, not if/else: this file sits at the Theme Check complexity limit.
+            assign unlocked_fallback = 'sections.cart.progress.unlocked' | t: reward: last_reached_label
+            assign unlocked_text = last_reached_text | default: unlocked_fallback | escape
+          -%}
+          {%- if ms_count > 0 -%}
+            {%- assign fill = subtotal | times: 100 | divided_by: max_threshold | at_most: 100 -%}
+            <div class="cart-progress" role="status">
+              <p class="cart-progress__message">
+                {%- if next_label == blank -%}
+                  {%- liquid
+                    # Everything reached: a tinted banner with the last (highest) reward's icon and name.
+                    assign icon_key = 'cart_milestone_' | append: last_reached_n | append: '_icon'
+                    # Empty = gift icon. No "contains <svg" branch here (complexity limit): stray
+                    # non-SVG text is hidden by font-size: 0 on .cart-progress__banner-icon instead.
+                    assign icon_fallback = 'icon-gift.svg' | inline_asset_content
+                    assign icon = settings[icon_key] | default: icon_fallback
+                  -%}
+                  <span class="cart-progress__banner-icon" aria-hidden="true">{{ icon }}</span>
+                  <span>{{ unlocked_text }}</span>
+                {%- else -%}
+                  {%- if last_reached_label != blank -%}
+                    {{ unlocked_text }}
+                  {% endif -%}
+                  {%- assign remaining = next_threshold | minus: subtotal | money -%}
+                  {{ 'sections.cart.progress.add_to_unlock_html' | t: amount: remaining, reward: next_label }}
+                {%- endif -%}
+              </p>
+              <div class="cart-progress__track">
+                <div class="cart-progress__fill" style="width: {{ fill }}%;"></div>
+                {%- for n in (1..3) -%}
+                  {%- liquid
+                    assign amount_key = 'cart_milestone_' | append: n | append: '_amount'
+                    assign label_key = 'cart_milestone_' | append: n | append: '_label'
+                    assign icon_key = 'cart_milestone_' | append: n | append: '_icon'
+                    assign amount = settings[amount_key] | default: 0
+                    assign label = settings[label_key]
+                  -%}
+                  {%- if amount > 0 and label != blank -%}
+                    {%- liquid
+                      assign threshold = amount | times: 100
+                      assign left = threshold | times: 100 | divided_by: max_threshold
+                      # Merchant-pasted SVG (same pattern as product-highlight icons); gift icon fallback.
+                      assign icon = settings[icon_key]
+                      # Non-SVG text (e.g. old select values like "shipping") also falls back.
+                      unless icon contains '<svg'
+                        assign icon = 'icon-gift.svg' | inline_asset_content
+                      endunless
+                    -%}
+                    <div
+                      class="cart-progress__milestone{% if subtotal >= threshold %} is-reached{% endif %}"
+                      style="--left: {{ left }}%;"
+                    >
+                      <span class="cart-progress__marker" aria-hidden="true">
+                        {{- icon -}}
+                      </span>
+                      <span class="cart-progress__label">
+                        {%- if subtotal >= threshold -%}
+                          {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                        {%- endif -%}
+                        {{- label | escape -}}
+                      </span>
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
         <form
           style="padding: 1rem 2rem;"
           action="{{ routes.cart_url }}"
@@ -91,7 +202,8 @@
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
-                  <thead role="rowgroup">
+                  {%- # Column headings stay for screen readers only; the row layout makes them obvious. -%}
+                  <thead class="visually-hidden" role="rowgroup">
                     <tr role="row">
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
@@ -129,6 +241,10 @@
                         assign is_customised_parent = false
                         assign grouped_original_line_price = item.original_line_price
                         assign grouped_final_line_price = item.final_line_price
+                        # Strung racket: the stringing service child line (assets/product-form.js
+                        # getStringingSelection) carries _tension ("26lbs"). The string name already
+                        # shows under "Show bundle", so only the tension sits next to the options.
+                        assign strung_tension = blank
 
                         if nested_parent == blank and item.properties._customisationId != blank
                           assign is_customised_parent = true
@@ -140,6 +256,9 @@
                               assign has_nested_children = true
                               assign grouped_original_line_price = grouped_original_line_price | plus: candidate.original_line_price
                               assign grouped_final_line_price = grouped_final_line_price | plus: candidate.final_line_price
+                              if candidate.properties._tension != blank
+                                assign strung_tension = candidate.properties._tension | replace: 'lbs', ' lbs'
+                              endif
                             endif
                           endfor
                         endif
@@ -151,6 +270,7 @@
                       <tr
                         id="CartDrawer-Item-{{ item.index | plus: 1 }}"
                         class="cart-item"
+                        data-milestone-gift="{{ item.properties._milestoneGift }}"
                         role="row"
                         {% if nested_parent != blank %}
                           hidden
@@ -330,6 +450,11 @@
                                     </dd>
                                   </div>
                                 {%- endfor -%}
+                                {%- if strung_tension != blank -%}
+                                  <div class="product-option">
+                                    <dd>&middot; {{ strung_tension }}</dd>
+                                  </div>
+                                {%- endif -%}
                               {%- endif -%}
 
                               {%- for property in item.properties -%}
@@ -425,7 +550,6 @@
                         </td>
 
                         <td
-                          style="margin-top: 4px;"
                           class="cart-item__totals right"
                           role="cell"
                           headers="CartDrawer-ColumnTotal"
@@ -444,7 +568,12 @@
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
-                                  {{ grouped_final_line_price | money }}
+                                  {%- # A ₹0 line (e.g. BXGY free string) reads FREE instead of ₹0. -%}
+                                  {%- if grouped_final_line_price == 0 -%}
+                                    {{ 'sections.cart.free' | t }}
+                                  {%- else -%}
+                                    {{ grouped_final_line_price | money }}
+                                  {%- endif -%}
                                 </span>
                               </div>
                             {%- else -%}
@@ -500,6 +629,8 @@
                         >
                           <quantity-popover>
                             <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
+                              {%- # Shown only on milestone gift rows (data-milestone-gift); stepper and Remove are hidden there. -%}
+                              <span class="cart-item__gift-tag">{{ 'sections.cart.milestone_gift' | t }}</span>
                               <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
                                 <quantity-input class="quantity cart-quantity">
                                   <button
@@ -518,7 +649,10 @@
                                       -}}
                                     </span>
                                     <span class="svg-wrapper">
-                                      {{- 'icon-minus.svg' | inline_asset_content -}}
+                                      {%- # Drawn on the same 24px grid as icon-plus.svg so − and + match in size and weight. -%}
+                                      <svg class="icon icon-minus" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M6 12H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                      </svg>
                                     </span>
                                   </button>
                                   <input
@@ -577,9 +711,7 @@
                                   aria-label="{{ 'sections.cart.remove_title' | t: title: item.title | escape }}"
                                   data-variant-id="{{ item.variant.id }}"
                                 >
-                                  <span class="svg-wrapper">
-                                    {{- 'icon-remove.svg' | inline_asset_content -}}
-                                  </span>
+                                  {{- 'sections.cart.remove' | t -}}
                                 </button>
                               </cart-remove-button>
                             </div>
@@ -695,10 +827,12 @@
           <!-- Cart Recommendations -->
 
           {%- if cart != empty -%}
+            {%- assign upsell_heading = 'sections.cart.upsell.heading' | t -%}
             {%- render 'cart-recommendations',
-              limit: 8,
-              heading: "We think you'll like these too",
-              intent: 'complementary'
+              limit: 3,
+              heading: upsell_heading,
+              intent: 'complementary',
+              layout: 'list'
             -%}
           {%- endif -%}
         </form>
@@ -728,24 +862,30 @@
         <!-- Subtotals -->
 
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-          <div>
-            {%- if cart.cart_level_discount_applications.size > 0 -%}
-              <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                {%- for discount in cart.cart_level_discount_applications -%}
-                  <li class="discounts__discount discounts__discount--end">
-                    {{- 'icon-discount.svg' | inline_asset_content -}}
-                    {{ discount.title | escape }}
-                    (-{{ discount.total_allocated_amount | money }})
-                  </li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          </div>
-
           <div class="totals" role="status">
             <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
             <p class="">{{ cart.total_price | money_with_currency }}</p>
           </div>
+
+          {%- liquid
+            # Total savings = what every line would cost at its compare-at price (or regular
+            # price when there's no higher compare-at) minus what the customer actually pays.
+            # Covers sale prices plus all discounts (line-level and cart-level, e.g. BXGY free
+            # strings). `at_least` picks the higher price without an extra condition.
+            assign list_total = 0
+            for item in cart.items
+              assign unit_list_price = item.variant.compare_at_price | default: 0 | at_least: item.original_price
+              assign line_list_price = unit_list_price | times: item.quantity
+              assign list_total = list_total | plus: line_list_price
+            endfor
+            assign total_savings = list_total | minus: cart.total_price
+          -%}
+          {%- if total_savings > 0 -%}
+            <div class="cart-drawer__savings">
+              <span>{{ 'sections.cart.total_savings' | t }}</span>
+              <span class="cart-drawer__savings-amount">{{ total_savings | money }}</span>
+            </div>
+          {%- endif -%}
 
           <small class="tax-note caption-large rte">
             {%- if cart.duties_included and cart.taxes_included -%}

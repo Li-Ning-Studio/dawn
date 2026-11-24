@@ -377,3 +377,27 @@ cart-remove-button .icon-remove {
     padding-left: 0;
   }
 }
+
+/* Rewards progress bar gift lines (data-milestone-gift = milestone number, set by assets/bxgy.js).
+   Quantity is fixed at 1 and the line cannot be removed, so the stepper and Remove give way to a
+   "Free gift" tag. Applies to both the cart drawer and /cart. */
+.cart-item__gift-tag {
+  display: none;
+}
+
+.cart-item[data-milestone-gift]:not([data-milestone-gift='']) .cart-item__gift-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.6rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  background: rgba(var(--color-foreground), 0.06);
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.cart-item[data-milestone-gift]:not([data-milestone-gift='']) .quantity-popover-container,
+.cart-item[data-milestone-gift]:not([data-milestone-gift='']) cart-remove-button {
+  display: none;
+}
