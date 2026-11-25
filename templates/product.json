@@ -265,6 +265,8 @@
           "type": "accordion_row",
           "settings": {
             "heading": "What are Product Specifications?",
+            "question_liquid": "",
+            "collections": [],
             "open_by_default": true,
             "content": "{%render 'product-disclosures'%}\nSKU:  <span id=\"sku\">{{ product.selected_or_first_available_variant.sku }}</span>"
           }
@@ -273,22 +275,40 @@
           "type": "accordion_row",
           "settings": {
             "heading": "How much time it takes to deliver?",
+            "question_liquid": "",
+            "collections": [],
             "open_by_default": false,
             "content": "Delivery dates shown at checkout are estimates, not guarantees, based on average courier performance — actual timing can shift due to courier coverage, holidays, weather, or order volume. Hundred offers two shipping tiers: Economy (surface, slower/cheaper) and Express (air, faster where available). Orders can be tracked live once dispatched via their tracking portal. Hundred isn't liable for delays caused by courier or external factors, but support will help resolve issues if a delivery misses its window."
           }
+        },
+        "product_faqs_UfwnEy": {
+          "type": "product_faqs",
+          "settings": {}
         }
       },
       "block_order": [
         "accordion_row_8qbYAJ",
-        "accordion_row_n7nYQT"
+        "accordion_row_n7nYQT",
+        "product_faqs_UfwnEy"
       ],
       "name": "t:sections.grouped-accordions.presets.name",
       "settings": {
         "color_scheme": "",
         "heading": "Frequently asked questions",
         "heading_size": "h1",
+        "help_text": "Can't find what you're looking for? Our team can help with product details, sizing, orders and delivery. Reach us on [channels] and we'll get back to you.",
         "padding_top": 56,
         "padding_bottom": 56
+      }
+    },
+    "product_reviews_4xqUcx": {
+      "type": "product-reviews",
+      "name": "t:sections.product_reviews.name",
+      "settings": {
+        "color_scheme": "",
+        "heading_size": "h1",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "1749537046e7aecdbc": {
@@ -371,6 +391,7 @@
     "product_specifications_ygFx6W",
     "product_s_plus_9EmbcA",
     "grouped_accordions_73M8Y6",
+    "product_reviews_4xqUcx",
     "1749537046e7aecdbc",
     "pairs-well-with",
     "related-products",
