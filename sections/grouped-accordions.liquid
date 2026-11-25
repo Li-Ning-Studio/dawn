@@ -15,58 +15,201 @@
   }
 {%- endstyle -%}
 
-<section class="grouped-accordions color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  <div class="page-width">
-    <div class="grouped-accordions__layout">
-      <div class="grouped-accordions__header">
-        {%- if section.settings.heading != blank -%}
-          <h2 class="grouped-accordions__heading inline-richtext {{ section.settings.heading_size }}">
-            {{ section.settings.heading }}
-          </h2>
-        {%- else -%}
-          <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
-        {%- endif -%}
-      </div>
+{%- comment -%}
+  FAQ rows, rendered first so empty ones can be dropped. Two block types, one row markup
+  (snippets/grouped-accordion-row.liquid):
 
-      <div class="grouped-accordions__items">
-        {%- for block in section.blocks -%}
-          <div class="grouped-accordions__item accordion" {{ block.shopify_attributes }}>
-            <details
-              id="Details-{{ block.id }}-{{ section.id }}"
-              {% if block.settings.open_by_default %}
-                open
-              {% endif %}
-            >
-              <summary id="Summary-{{ block.id }}-{{ section.id }}">
-                <div class="summary__title">
-                  <h3 class="accordion__title inline-richtext s3_subtitle">
-                    {{ block.settings.heading | escape }}
-                  </h3>
-                </div>
-                <span class="accordion__toggle-icons" aria-hidden="true">
-                  <span class="accordion__toggle-icon accordion__toggle-icon--plus">
-                    {{- 'icon-accordion-plus.svg' | inline_asset_content -}}
-                  </span>
-                  <span class="accordion__toggle-icon accordion__toggle-icon--minus">
-                    {{- 'icon-accordion-minus.svg' | inline_asset_content -}}
-                  </span>
-                </span>
-              </summary>
-              <div
-                class="accordion__content s3_paragraph rte"
-                id="GroupedAccordion-{{ block.id }}-{{ section.id }}"
-                role="region"
-                aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
-              >
-                {{ block.settings.content }}
-              </div>
-            </details>
-          </div>
-        {%- endfor -%}
+  1. "Row" (accordion_row): answer ("content") and optional "Heading (Liquid)" are Liquid settings,
+     so they can read `product` and render snippets: for computed answers such as the legal info
+     ({% render 'product-disclosures' %} + SKU). A row whose answer renders empty is hidden, so
+     conditions live in the answer. "Collections" limits the row to products in any of those
+     collections (blank = every product; ignored where there is no `product`). Liquid setting
+     values aren't translatable in Translate & Adapt, so written Q&A belongs in (2).
+
+  2. "Product FAQs" (product_faqs, max one): expands, at its position, into the `product_faq`
+     metaobject entries that target this product (fields: question, answer = rich text,
+     collections = list of collections, products = list of products). Translatable and editable in
+     admin. An entry shows when the product is in its products OR in one of its collections, in
+     the order Liquid returns entries. Up to 250 entries are read with paginate, which only runs
+     when the definition has entries, so stores without it never reach paginate. (paginate reads
+     ?page= from the URL, so a product URL carrying ?page=2 shows no Product FAQs; acceptable.) Collections must
+     be published to the Online Store, since product.collections only lists those.
+
+  If every row is hidden, the whole section (heading + help line) is not output.
+{%- endcomment -%}
+{%- liquid
+  assign faq_block = section.blocks | where: 'type', 'product_faqs' | first
+  # ",id,id," so a collection id can be matched with `contains` without partial-number hits.
+  assign product_collection_ids = product.collections | map: 'id' | join: ','
+  assign product_collection_ids = ',' | append: product_collection_ids | append: ','
+-%}
+
+{%- comment -%} Product FAQ rows, built once and output where the "Product FAQs" block sits. {%- endcomment -%}
+{%- capture product_faq_rows -%}
+  {%- if faq_block and product and metaobjects.product_faq.values_count > 0 -%}
+    {%- paginate metaobjects.product_faq.values by 250 -%}
+      {%- assign faq_attributes = faq_block.shopify_attributes -%}
+      {%- for faq in metaobjects.product_faq.values -%}
+        {%- liquid
+          assign show_faq = false
+          for faq_product in faq.products.value
+            if faq_product.id == product.id
+              assign show_faq = true
+              break
+            endif
+          endfor
+          unless show_faq
+            for faq_collection in faq.collections.value
+              assign collection_key = ',' | append: faq_collection.id | append: ','
+              if product_collection_ids contains collection_key
+                assign show_faq = true
+                break
+              endif
+            endfor
+          endunless
+          assign faq_answer = faq.answer | metafield_tag
+          assign faq_answer_text = faq_answer | strip_html | strip
+          assign faq_question = faq.question.value | escape
+          if faq_answer_text == blank or faq_question == blank
+            assign show_faq = false
+          endif
+        -%}
+        {%- if show_faq -%}
+          {%- liquid
+            assign faq_row_id = 'faq-' | append: faq.system.handle
+            # Only the first row carries the editor attributes: one block = one element.
+            render 'grouped-accordion-row', row_id: faq_row_id, section_id: section.id, question: faq_question, answer: faq_answer, open: false, attributes: faq_attributes
+            assign faq_attributes = ''
+          -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endpaginate -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture rows -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'product_faqs' -%}
+      {{- product_faq_rows -}}
+      {%- continue -%}
+    {%- endif -%}
+    {%- liquid
+      assign show_row = true
+      if product and block.settings.collections != blank
+        assign show_row = false
+        for row_collection in block.settings.collections
+          assign collection_key = ',' | append: row_collection.id | append: ','
+          if product_collection_ids contains collection_key
+            assign show_row = true
+            break
+          endif
+        endfor
+      endif
+    -%}
+    {%- if show_row -%}
+      {%- capture answer -%}{{ block.settings.content }}{%- endcapture -%}
+      {%- capture question -%}{{ block.settings.question_liquid }}{%- endcapture -%}
+      {%- liquid
+        assign question = question | strip
+        if question == blank
+          assign question = block.settings.heading | escape
+        endif
+        # Text after stripping tags, so a false condition wrapped in a paragraph tag still counts as
+        # empty; an answer that is only an image or embed is kept.
+        assign answer_text = answer | strip_html | strip
+        assign answer_escaped = answer | escape
+        if answer_escaped contains '&lt;img' or answer_escaped contains '&lt;iframe' or answer_escaped contains '&lt;video'
+          assign answer_text = 'media'
+        endif
+        if answer_text != blank and question != blank
+          render 'grouped-accordion-row', row_id: block.id, section_id: section.id, question: question, answer: answer, open: block.settings.open_by_default, attributes: block.shopify_attributes
+        endif
+      -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- assign rows = rows | strip -%}
+{%- if rows != blank -%}
+  <section class="grouped-accordions color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+    <div class="page-width">
+      <div class="grouped-accordions__layout">
+        <div class="grouped-accordions__header">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="grouped-accordions__heading inline-richtext {{ section.settings.heading_size }}">
+              {{ section.settings.heading }}
+            </h2>
+          {%- else -%}
+            <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
+          {%- endif -%}
+
+          {%- comment -%}
+            Help line under the heading. "[channels]" in the text is replaced by the store's contact
+            channels, read from the footer's "Communication channel" blocks (.footer__upper-channel):
+            sections can't read another section's settings in Liquid, so the footer stays the single
+            source. Channels are listed with Intl.ListFormat ("Mail, Phone or WhatsApp") as underlined
+            links. If the footer has none, the whole line is removed.
+          {%- endcomment -%}
+          {%- if section.settings.help_text != blank -%}
+            {%- liquid
+              assign channels_marker = '<span data-comm-channels></span>'
+              assign help_text = section.settings.help_text | replace_first: '[channels]', channels_marker
+            -%}
+            <p class="grouped-accordions__help" data-help-text>{{ help_text }}</p>
+            {%- if help_text contains channels_marker -%}
+              <script>
+                (() => {
+                  // Captured now: currentScript is only set while this script is parsing.
+                  const help = document.currentScript.previousElementSibling;
+                  const fill = () => {
+                    const slot = help.querySelector('[data-comm-channels]');
+                    const links = [...document.querySelectorAll('.footer__upper-channel')]
+                      .map((channel) => {
+                        const source = channel.querySelector('a[href]');
+                        if (!source) return null;
+                        const link = document.createElement('a');
+                        link.className = 'grouped-accordions__help-link';
+                        link.href = source.getAttribute('href');
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        // Label, else the visible value span: the whole <a> also holds the
+                        // visually-hidden "Opens in a new window" text.
+                        const label =
+                          channel.querySelector('.footer__upper-channel-label') ||
+                          source.querySelector('span') ||
+                          source;
+                        link.textContent = label.textContent.trim();
+                        return link;
+                      })
+                      .filter(Boolean);
+                    if (!links.length) return help.remove();
+                    // ListFormat gives "A or B" / "A, B or C" in the page language; links fill its slots.
+                    const parts = new Intl.ListFormat(document.documentElement.lang || 'en', {
+                      type: 'disjunction',
+                    }).formatToParts(links.map((_, index) => String(index)));
+                    slot.replaceWith(
+                      ...parts.map((part) => (part.type === 'element' ? links[Number(part.value)] : part.value)),
+                    );
+                  };
+                  // The theme editor re-renders sections after DOMContentLoaded has already fired.
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', fill);
+                  } else {
+                    fill();
+                  }
+                })();
+              </script>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+
+        <div class="grouped-accordions__items">
+          {{- rows -}}
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+{%- endif -%}
 
 {% schema %}
 {
@@ -110,6 +253,13 @@
       "label": "t:sections.all.heading_size.label"
     },
     {
+      "type": "inline_richtext",
+      "id": "help_text",
+      "label": "t:sections.grouped-accordions.settings.help_text.label",
+      "info": "t:sections.grouped-accordions.settings.help_text.info",
+      "default": "t:sections.grouped-accordions.settings.help_text.default"
+    },
+    {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
@@ -146,6 +296,18 @@
           "default": "t:sections.grouped-accordions.blocks.accordion_row.settings.heading.default"
         },
         {
+          "type": "liquid",
+          "id": "question_liquid",
+          "label": "t:sections.grouped-accordions.blocks.accordion_row.settings.question_liquid.label",
+          "info": "t:sections.grouped-accordions.blocks.accordion_row.settings.question_liquid.info"
+        },
+        {
+          "type": "collection_list",
+          "id": "collections",
+          "label": "t:sections.grouped-accordions.blocks.accordion_row.settings.collections.label",
+          "info": "t:sections.grouped-accordions.blocks.accordion_row.settings.collections.info"
+        },
+        {
           "type": "checkbox",
           "id": "open_by_default",
           "label": "t:sections.grouped-accordions.blocks.accordion_row.settings.open_by_default.label",
@@ -156,6 +318,17 @@
           "id": "content",
           "label": "t:sections.grouped-accordions.blocks.accordion_row.settings.content.label",
           "info": "t:sections.grouped-accordions.blocks.accordion_row.settings.content.info"
+        }
+      ]
+    },
+    {
+      "type": "product_faqs",
+      "name": "t:sections.grouped-accordions.blocks.product_faqs.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.grouped-accordions.blocks.product_faqs.settings.paragraph.content"
         }
       ]
     }

@@ -3837,3 +3837,19 @@ body,
     background-position: 0 0;
   }
 }
+
+/*
+ * Meter: the thin horizontal bar shared by the cart rewards progress (snippets/cart-drawer.liquid)
+ * and the review star breakdown (sections/product-reviews.liquid). Width of the fill is set inline.
+ * Extra specificity + display: block on the fill beat Dawn's `div:empty { display: none }`.
+ */
+.meter {
+  height: 0.3rem;
+  background: rgba(var(--color-foreground), 0.08);
+}
+
+.meter .meter__fill {
+  display: block;
+  height: 100%;
+  background: rgba(var(--color-foreground), 0.85);
+}
