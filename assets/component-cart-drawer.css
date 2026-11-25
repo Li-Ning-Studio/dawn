@@ -407,20 +407,15 @@ cart-drawer-items {
 }
 
 .cart-progress__track {
+  /* Bar look (height, track, fill) comes from the shared `.meter` in base.css. */
   position: relative;
-  height: 0.3rem;
   /* Starts flush left; right margin = half a marker so the last marker stays inside the drawer.
      Top = half a marker (1.8rem, markers are centred on the track) + 1.4rem clear space under the
      message. All the space lives here: the message has no bottom margin, so nothing collapses. */
   margin: 3.2rem 1.8rem 3.6rem 0;
-  background: rgba(var(--color-foreground), 0.08);
 }
 
-/* Extra specificity + display: block beat Dawn's `div:empty { display: none }` in base.css. */
 .cart-progress .cart-progress__fill {
-  display: block;
-  height: 100%;
-  background: rgba(var(--color-foreground), 0.85);
   transition: width var(--duration-long) ease;
 }
 

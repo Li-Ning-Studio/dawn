@@ -3187,6 +3187,11 @@
         "heading": {
           "label": "Heading",
           "default": "Frequently asked questions"
+        },
+        "help_text": {
+          "label": "Help text",
+          "info": "[channels] is replaced by the contact channels from the footer (e.g. Mail or WhatsApp).",
+          "default": "Can't find what you're looking for? Our team can help with product details, sizing, orders and delivery. Reach us on [channels] and we'll get back to you."
         }
       },
       "blocks": {
@@ -3200,9 +3205,25 @@
             "open_by_default": {
               "label": "Open by default"
             },
+            "question_liquid": {
+              "label": "Heading (Liquid)",
+              "info": "Optional. Replaces the heading and can use product data, e.g. {{ product.title }}."
+            },
+            "collections": {
+              "label": "Collections",
+              "info": "Optional. On product pages the row shows only for products in one of these collections. Leave empty for all products."
+            },
             "content": {
               "label": "Content",
-              "info": "Supports Liquid, including product metafields and snippets."
+              "info": "Supports Liquid, including product metafields and snippets. Rows whose content is empty are hidden, so wrap it in a condition to show it only on some products. Liquid isn't translatable: use Product FAQs for written questions."
+            }
+          }
+        },
+        "product_faqs": {
+          "name": "Product FAQs",
+          "settings": {
+            "paragraph": {
+              "content": "Shows the product's FAQs here: entries from Content → Metaobjects → Product FAQ that list this product, or one of its collections. Only on product pages."
             }
           }
         }
@@ -3513,6 +3534,9 @@
           "label": "Show download links"
         }
       }
+    },
+    "product_reviews": {
+      "name": "Product reviews"
     },
     "collapsible_content": {
       "name": "Collapsible content",

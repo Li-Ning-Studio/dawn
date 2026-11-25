@@ -600,6 +600,31 @@
       "manufactured_by": "Manufactured by",
       "imported_marketed_by": "Imported and marketed by"
     },
+    "reviews": {
+      "heading": "Reviews",
+      "count": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} reviews"
+      },
+      "empty": "No reviews yet.",
+      "write": "Write a review",
+      "write_first": "Write the first review",
+      "ask": "Ask a question",
+      "more": "Show more reviews",
+      "error": "Reviews couldn't load. Refresh the page to try again.",
+      "reply": "Reply from the store",
+      "photo": "Customer photo",
+      "stars_label": "{{ score }} out of 5 stars",
+      "filter_label": "Show {{ star }}-star reviews ({{ count }})",
+      "sort": {
+        "label": "Sort by",
+        "most_recent": "Most recent",
+        "highest": "Highest rating",
+        "lowest": "Lowest rating",
+        "with_photos": "With photos",
+        "most_helpful": "Most helpful"
+      }
+    },
     "modal": {
       "label": "Media gallery"
     },

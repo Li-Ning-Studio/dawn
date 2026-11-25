@@ -149,8 +149,8 @@
                   {{ 'sections.cart.progress.add_to_unlock_html' | t: amount: remaining, reward: next_label }}
                 {%- endif -%}
               </p>
-              <div class="cart-progress__track">
-                <div class="cart-progress__fill" style="width: {{ fill }}%;"></div>
+              <div class="cart-progress__track meter">
+                <div class="cart-progress__fill meter__fill" style="width: {{ fill }}%;"></div>
                 {%- for n in (1..3) -%}
                   {%- liquid
                     assign amount_key = 'cart_milestone_' | append: n | append: '_amount'
@@ -828,11 +828,7 @@
 
           {%- if cart != empty -%}
             {%- assign upsell_heading = 'sections.cart.upsell.heading' | t -%}
-            {%- render 'cart-recommendations',
-              limit: 5,
-              heading: upsell_heading,
-              layout: 'list'
-            -%}
+            {%- render 'cart-recommendations', limit: 5, heading: upsell_heading, layout: 'list' -%}
           {%- endif -%}
         </form>
       </cart-drawer-items>

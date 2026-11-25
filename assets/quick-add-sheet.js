@@ -19,6 +19,10 @@ if (!customElements.get('quick-add-sheet')) {
       const drawer = document.querySelector('cart-drawer');
       const sections = drawer ? drawer.getSectionsToRender().map((section) => section.id) : [];
       const label = button.innerHTML; // chip value, "+ Add" (with icon) or "Add to Bag"
+      // One add at a time per sheet: while busy, onClick ignores chips/Add and update() keeps
+      // "Add to Bag" disabled, so a second tap can't add the item twice.
+      const sheet = button.closest('quick-add-sheet');
+      sheet?.setAttribute('aria-busy', 'true');
 
       button.disabled = true;
       const adding = button.closest('[data-adding-label]')?.dataset.addingLabel;
@@ -44,6 +48,15 @@ if (!customElements.get('quick-add-sheet')) {
         document.querySelector('quick-add-sheet:not([hidden])')?.close({ restoreFocus: false });
         drawer.renderContents(data);
         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'quick-add-sheet', cartData: data });
+        // A button outside the drawer (sheet on a collection/product card, or a "+ Add" not
+        // re-rendered) survives the add: reset it so the next add works without a reload.
+        if (button.isConnected) {
+          button.innerHTML = label;
+          button.disabled = false;
+          if (button.classList.contains('quick-add-sheet__chip')) button.setAttribute('aria-pressed', 'false');
+          sheet?.removeAttribute('aria-busy');
+          sheet?.update(); // re-derives "Add to Bag" and chip states
+        }
       } catch (error) {
         console.error('[quick-add-sheet] add failed:', error);
         button.disabled = false;
@@ -54,6 +67,8 @@ if (!customElements.get('quick-add-sheet')) {
         setTimeout(() => {
           button.innerHTML = label;
         }, 3000);
+      } finally {
+        sheet?.removeAttribute('aria-busy');
       }
     }
 
@@ -120,6 +135,7 @@ if (!customElements.get('quick-add-sheet')) {
     onClick(event) {
       const target = event.target;
       if (target.closest('[data-quick-add-close]')) return this.close();
+      if (this.getAttribute('aria-busy') === 'true') return; // an add is running
 
       const chip = target.closest('.quick-add-sheet__chip');
       if (chip && !chip.disabled) return this.select(chip);
@@ -176,7 +192,7 @@ if (!customElements.get('quick-add-sheet')) {
       if (!add) return;
       const chosen = this.selection();
       const variant = available.find((v) => v.options.every((value, i) => value === chosen[i]));
-      add.disabled = !variant;
+      add.disabled = !variant || this.getAttribute('aria-busy') === 'true';
       if (variant) add.dataset.variantId = variant.id;
       // Show what will be charged: the chosen variant's price, else the server-rendered default.
       if (this.priceElement) {
