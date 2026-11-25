@@ -1,0 +1,206 @@
+/*
+  Quick-add sheet (snippets/quick-add-sheet.liquid, assets/quick-add-sheet.js). Loaded globally.
+  While open the JS moves it into <body>, so it always covers the viewport, above the cart drawer
+  (z-index 1000).
+  - Mobile (< 750px): full-width bottom sheet sliding up from the bottom edge.
+  - Desktop (>= 750px): centred modal dialog.
+*/
+.quick-add-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.quick-add-sheet[hidden] {
+  display: none;
+}
+
+.quick-add-sheet__backdrop {
+  position: absolute;
+  inset: 0;
+  display: block; /* a span: Dawn hides empty divs */
+  background: rgba(var(--color-foreground), 0.35);
+  animation: quickAddSheetFade 0.2s ease both;
+}
+
+.quick-add-sheet__panel {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 1.6rem 2rem calc(2.4rem + env(safe-area-inset-bottom));
+  border-radius: 1.6rem 1.6rem 0 0;
+  background: rgb(var(--color-background));
+  box-shadow: 0 -0.4rem 2.4rem rgba(var(--color-foreground), 0.12);
+  animation: quickAddSheetSlide 0.25s ease both;
+}
+
+@media screen and (min-width: 750px) {
+  .quick-add-sheet {
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .quick-add-sheet__panel {
+    max-width: 52rem;
+    max-height: 80vh;
+    padding: 2.4rem 2.8rem 2.8rem;
+    gap: 2rem;
+    border-radius: 1.6rem;
+    box-shadow: 0 1.2rem 4rem rgba(var(--color-foreground), 0.18);
+    animation-name: quickAddSheetPop;
+  }
+}
+
+.quick-add-sheet__head {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.quick-add-sheet__image {
+  flex: none;
+  box-sizing: border-box;
+  width: 9.6rem;
+  height: 9.6rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  background: rgba(var(--color-foreground), 0.04);
+  object-fit: contain;
+}
+
+.quick-add-sheet__close {
+  flex: none;
+  align-self: flex-start;
+  margin: -1rem -1rem 0 0; /* 36px tap target, icon optically flush with the top-right edge */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+}
+
+.quick-add-sheet__close svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.quick-add-sheet__option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.quick-add-sheet__option-name {
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.quick-add-sheet__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.quick-add-sheet__chip {
+  min-height: 3.6rem;
+  padding: 0 1.4rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-radius: 999px;
+  background: transparent;
+  font: inherit;
+  font-size: 1.3rem;
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+}
+
+.quick-add-sheet__chip:hover:not([disabled]) {
+  border-color: rgba(var(--color-foreground), 0.4);
+}
+
+.quick-add-sheet__chip[aria-pressed='true'] {
+  border-color: rgb(var(--color-foreground));
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+.quick-add-sheet__chip[disabled] {
+  cursor: default;
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.quick-add-sheet__chip:focus-visible,
+.quick-add-sheet__close:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.2rem;
+}
+
+.quick-add-sheet__add {
+  width: 100%;
+  min-height: 6.4rem;
+}
+
+@keyframes quickAddSheetSlide {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes quickAddSheetPop {
+  from {
+    opacity: 0;
+    transform: translateY(1.2rem) scale(0.98);
+  }
+}
+
+@keyframes quickAddSheetFade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-add-sheet__panel,
+  .quick-add-sheet__backdrop {
+    animation: none;
+  }
+}
+
+.quick-add-sheet__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* "Add {product}": up to two lines, then ellipsis. */
+.quick-add-sheet__title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: 1.6rem;
+  line-height: 1.35;
+}
+
+.quick-add-sheet__price {
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+  color: rgba(var(--color-foreground), 0.6);
+}

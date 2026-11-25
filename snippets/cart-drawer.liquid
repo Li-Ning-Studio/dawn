@@ -829,9 +829,8 @@
           {%- if cart != empty -%}
             {%- assign upsell_heading = 'sections.cart.upsell.heading' | t -%}
             {%- render 'cart-recommendations',
-              limit: 3,
+              limit: 5,
               heading: upsell_heading,
-              intent: 'complementary',
               layout: 'list'
             -%}
           {%- endif -%}
