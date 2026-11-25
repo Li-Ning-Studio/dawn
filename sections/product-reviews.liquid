@@ -1,0 +1,231 @@
+{% comment %}
+  Product reviews in our own Swiss design (spec: docs/superpowers/specs/2026-11-25-pdp-reviews-design.md).
+
+  Judge.me stays the review store. Its app block must stay on the product template (in an Apps
+  section below this one, padding 0): it server-renders the first page of reviews, provides the
+  write-review modal, the question form and structured data, and is the fallback display.
+
+  - Summary (score, stars, count) is rendered here from the metafields Judge.me syncs
+    (reviews.rating / reviews.rating_count), so it paints without JS.
+  - assets/product-reviews.js reads the first page from the in-page Judge.me widget, fetches the
+    star breakdown, sorting and further pages from Judge.me's public widget endpoint, and renders
+    everything with textContent. If anything fails, Judge.me's own widget stays visible.
+  - id="judge_product_reviews" is the anchor the title rating (snippets/product-rating.liquid) links to.
+{% endcomment %}
+
+{{ 'grouped-accordions.css' | asset_url | stylesheet_tag }}
+{{ 'section-product-reviews.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-reviews.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign rating = product.metafields.reviews.rating.value
+  assign rating_count = product.metafields.reviews.rating_count.value | default: 0
+  assign rating_value = 0
+  assign rating_max = 5
+  if rating != blank
+    assign rating_value = rating.rating
+    assign rating_max = rating.scale_max
+  endif
+  assign rating_percent = rating_value | times: 100.0 | divided_by: rating_max
+-%}
+
+{%- comment -%}
+  Star row from assets/icon-star.svg: five faint stars with five ink stars on top, clipped to
+  --percent (so 4.5 shows half a star). The JS clones the same markup from <template data-stars>.
+{%- endcomment -%}
+{%- capture star_icons -%}
+  {%- for i in (1..5) -%}{{ 'icon-star.svg' | inline_asset_content }}{%- endfor -%}
+{%- endcapture -%}
+{%- capture stars_inner -%}
+  <span class="product-reviews__stars-base" aria-hidden="true">{{ star_icons }}</span>
+  <span class="product-reviews__stars-fill" aria-hidden="true">{{ star_icons }}</span>
+{%- endcapture -%}
+
+{%- comment -%}
+  Layout reuses the FAQ section's grid (grouped-accordions.css: .grouped-accordions__layout and
+  __heading) so "Reviews" and "Frequently asked questions" share columns and heading style.
+{%- endcomment -%}
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    <product-reviews
+      id="judge_product_reviews"
+      class="product-reviews grouped-accordions__layout"
+      data-product-id="{{ product.id }}"
+      data-shop-domain="{{ shop.permanent_domain }}"
+      data-locale="{{ request.locale.iso_code | split: '-' | first }}-{{ localization.country.iso_code }}"
+      data-count="{{ rating_count }}"
+      data-per-page="5"
+    >
+      <div class="product-reviews__summary">
+        <h2 class="grouped-accordions__heading {{ section.settings.heading_size }}">
+          {{- 'products.reviews.heading' | t -}}
+        </h2>
+
+        {%- if rating_count > 0 -%}
+          <div class="product-reviews__score">
+            <span class="product-reviews__average">{{ rating_value | round: 1 }}</span>
+            <span
+              class="product-reviews__stars"
+              style="--percent: {{ rating_percent }}%"
+              role="img"
+              aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: rating_value, rating_max: rating_max }}"
+            >
+              {{- stars_inner -}}
+            </span>
+            <span class="product-reviews__count">
+              {{- 'products.reviews.count' | t: count: rating_count -}}
+            </span>
+          </div>
+
+          {%- comment -%} Filled by JS: one button per star (5 → 1), hidden until counts load. {%- endcomment -%}
+          <div class="product-reviews__bars" hidden></div>
+
+          <div class="product-reviews__sort-row" hidden>
+            <label class="product-reviews__sort-label" for="ReviewsSort-{{ section.id }}">
+              {{- 'products.reviews.sort.label' | t -}}
+            </label>
+            {%- comment -%} Native select styled as plain text (no pill) so it reads as a row of the panel. {%- endcomment -%}
+            <span class="product-reviews__select">
+              <select class="product-reviews__sort" id="ReviewsSort-{{ section.id }}" data-sort>
+                <option value="">{{ 'products.reviews.sort.most_recent' | t }}</option>
+                <option value="rating:desc">{{ 'products.reviews.sort.highest' | t }}</option>
+                <option value="rating:asc">{{ 'products.reviews.sort.lowest' | t }}</option>
+                <option value="with_pictures:">{{ 'products.reviews.sort.with_photos' | t }}</option>
+                <option value="most_helpful:desc">{{ 'products.reviews.sort.most_helpful' | t }}</option>
+              </select>
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </div>
+        {%- else -%}
+          <p class="product-reviews__empty">{{ 'products.reviews.empty' | t }}</p>
+        {%- endif -%}
+
+        <div class="product-reviews__actions">
+          <button type="button" class="product-reviews__button product-reviews__button--primary" data-write-review>
+            {%- if rating_count > 0 -%}
+              {{ 'products.reviews.write' | t }}
+            {%- else -%}
+              {{ 'products.reviews.write_first' | t }}
+            {%- endif -%}
+          </button>
+          <button type="button" class="product-reviews__button" data-ask-question>
+            {{ 'products.reviews.ask' | t }}
+          </button>
+        </div>
+      </div>
+
+      <div class="product-reviews__main">
+        {%- if rating_count > 0 -%}
+          <ol class="product-reviews__list" aria-live="polite"></ol>
+          <p class="product-reviews__status" hidden>{{ 'products.reviews.error' | t }}</p>
+          <button type="button" class="product-reviews__button product-reviews__more" data-more hidden>
+            {{ 'products.reviews.more' | t }}
+          </button>
+        {%- endif -%}
+
+        {%- comment -%} JS moves Judge.me's widget here so its inline question form opens in place. {%- endcomment -%}
+        <div class="product-reviews__judgeme" data-judgeme-slot></div>
+      </div>
+
+      {%- comment -%} Markup and strings the script clones; kept in Liquid so icons and copy stay in the theme. {%- endcomment -%}
+      <template data-stars>{{ stars_inner }}</template>
+      <template data-reply-icon>
+        <svg
+          class="product-reviews__reply-icon"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          fill="currentColor"
+        >
+          <path d="M229.66,173.66l-48,48a8,8,0,0,1-11.32-11.32L204.69,176H88A64,64,0,0,1,88,48h88a8,8,0,0,1,0,16H88a48,48,0,0,0,0,96H204.69l-34.35-34.34a8,8,0,0,1,11.32-11.32l48,48A8,8,0,0,1,229.66,173.66Z"/>
+        </svg>
+      </template>
+      <script type="application/json" data-strings>
+        {
+          "reply": {{ 'products.reviews.reply' | t | json }},
+          "photo": {{ 'products.reviews.photo' | t | json }},
+          "starsLabel": {{ 'products.reviews.stars_label' | t: score: '[score]' | json }},
+          "filterLabel": {{ 'products.reviews.filter_label' | t: star: '[star]', count: '[count]' | json }}
+        }
+      </script>
+    </product-reviews>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.product_reviews.name",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.product_reviews.name"
+    }
+  ]
+}
+{% endschema %}

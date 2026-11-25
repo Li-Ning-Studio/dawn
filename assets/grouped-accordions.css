@@ -49,3 +49,48 @@
     gap: clamp(4rem, 8vw, 14rem);
   }
 }
+
+/*
+ * At the default "h1" heading size, FAQ and product reviews (which reuse this class) use 28px on
+ * desktop instead of the theme's 32px. Done in shared CSS, not per-store templates, so every store
+ * branch gets it. h2 and h0 from the setting keep the theme sizes.
+ */
+@media screen and (min-width: 750px) {
+  .grouped-accordions__heading.h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Help line under the heading: muted text with the contact channels as underlined inline links. */
+.grouped-accordions__header {
+  display: grid;
+  gap: 1.6rem;
+  align-content: start;
+}
+
+.grouped-accordions__help {
+  margin: 0;
+  max-width: 38rem;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+/* Subtle link: faint dotted underline that firms up on hover/focus. */
+.grouped-accordions__help-link {
+  color: rgb(var(--color-foreground));
+  text-decoration: underline dotted rgba(var(--color-foreground), 0.35);
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.4rem;
+}
+
+.grouped-accordions__help-link:hover,
+.grouped-accordions__help-link:focus-visible {
+  text-decoration-color: rgb(var(--color-foreground));
+}
+
+/* Desktop: the heading column stays in view while long answers scroll (same as the reviews summary). */
+@media screen and (min-width: 990px) {
+  .grouped-accordions__header {
+    position: sticky;
+    top: 9.6rem;
+  }
+}
