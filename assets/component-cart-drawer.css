@@ -902,8 +902,7 @@ cart-drawer-items {
 }
 
 /* Same slim pill language as the quantity stepper. */
-.cart-upsell__add,
-.cart-upsell__choose {
+.cart-upsell__add {
   flex: none;
   display: inline-flex;
   align-items: center;
@@ -919,13 +918,23 @@ cart-drawer-items {
   cursor: pointer;
 }
 
-.cart-upsell__add:hover:not([disabled]),
-.cart-upsell__choose:hover {
+/* "+ Add": icon-plus.svg sized up so the plus reads clearly next to the label. */
+.cart-upsell__add {
+  gap: 0.4rem;
+}
+
+.cart-upsell__add .icon-plus {
+  flex: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: -0.4rem;
+}
+
+.cart-upsell__add:hover:not([disabled]) {
   border-color: rgba(var(--color-foreground), 0.4);
 }
 
-.cart-upsell__add:focus-visible,
-.cart-upsell__choose:focus-visible {
+.cart-upsell__add:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.2rem;
 }

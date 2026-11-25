@@ -1,0 +1,46 @@
+{% comment %}
+  Which customisations (services) a product offers, for quick-add entry points only.
+  Outputs space-separated keys of the visible ones, e.g. "stringing remix", or nothing.
+
+  Used by snippets/cart-recommendations.liquid (and any future quick-add entry point, see
+  snippets/quick-add-sheet.liquid): a product with any customisation is linked to its product page
+  ("Customise") instead of being quick-added, so customers can customise it fully.
+
+  KEEP IN SYNC with sections/main-product.liquid (block 'variant_picker'), which decides what the
+  PDP renders and is deliberately left untouched (critical path). The conditions below are verbatim
+  copies of its is_*_visible checks. ADDING A CUSTOMISATION: add its condition here too, otherwise
+  that product keeps showing "+ Add" in the drawer and is added without the customisation.
+
+  Accepts:
+  - product: {Object}
+
+  Usage:
+    {%- capture customisations -%}{% render 'product-customisations', product: product %}{%- endcapture -%}
+    {%- if customisations != blank -%} … {%- endif -%}
+{% endcomment %}
+{%- liquid
+  assign remix_service_handle = 'remix'
+  case product.type
+    when 'Pickleball Paddle'
+      assign remix_service_handle = 'paddle-remix'
+    when 'Badminton Kitbags'
+      assign remix_service_handle = 'bag-remix'
+  endcase
+  assign remix_service_variant = all_products[remix_service_handle].variants.first
+
+  if settings.is_stringing_enabled_globally and product.metafields.custom_but_hidden.studio_pro_stringing and settings.stringing_collection_id != blank and product.available == true
+    echo 'stringing '
+  endif
+
+  if settings.is_gripping_enabled_globally and product.metafields.custom_but_hidden.studio_grip_service and settings.gripping_collection_id != blank and product.available == true
+    echo 'gripping '
+  endif
+
+  if settings.is_remix_enabled_globally and product.metafields.custom_but_hidden.stickers == true and product.available == true and product.selected_or_first_available_variant.metafields.custom_but_hidden.rmx_3d_model and remix_service_variant.available
+    echo 'remix '
+  endif
+
+  if settings.is_tshirt_printing_enabled_globally and product.available == true and product.metafields.custom_but_hidden.customise == true
+    echo 'tshirt-printing '
+  endif
+-%}

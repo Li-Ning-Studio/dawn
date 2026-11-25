@@ -291,6 +291,9 @@
     {{ 's3-typography.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
+    {%- comment -%} Quick-add sheet (snippets/quick-add-sheet.liquid): global, so sheets rendered later by AJAX work. {%- endcomment -%}
+    {{ 'quick-add-sheet.css' | asset_url | stylesheet_tag }}
+
     {%- if settings.cart_type == 'drawer' -%}
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
       {{ 'component-cart.css' | asset_url | stylesheet_tag }}
@@ -446,6 +449,7 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    <script src="{{ 'quick-add-sheet.js' | asset_url }}" defer="defer"></script>
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'cart-recommendations.js' | asset_url }}" defer="defer"></script>
