@@ -53,6 +53,40 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {}
     },
+    "hero_component_D4bCLN": {
+      "type": "hero-component",
+      "name": "Hero Component",
+      "settings": {
+        "image": "shopify://shop_images/New_Banner.jpg",
+        "mobile_image": "shopify://shop_images/New_Banner_R.jpg",
+        "subtitle": "Axforce Canon",
+        "title": "POWER HAS A NEW NAME",
+        "description": "Bring power to every attack with a head-heavy balance and a flexible shaft built for commanding smashes.",
+        "button_text": "CHECK IT OUT",
+        "link_to": "shopify://products/axforce-cannon-4u",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "swipeable_products_XYKJa8": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "AxForce Cannon Edition",
+        "products": [
+          "axforce-cannon-4u",
+          "axforce-cannon-4u-copy",
+          "axforce-cannon-5u",
+          "axforce-cannon-5u-light",
+          "axforce-cannon-6u"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "hero_component_xTDVjV": {
       "type": "hero-component",
       "name": "Hero Component",
@@ -67,6 +101,23 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 52
+      }
+    },
+    "swipeable_products_AXFYAK": {
+      "type": "swipeable-products",
+      "name": "Swipeable Products",
+      "settings": {
+        "title": "AxForce Tiger&nbsp;",
+        "products": [
+          "axforce-tiger-4u",
+          "axforce-tiger-5u",
+          "axforce-tiger-4u-strung",
+          "axforce-tiger-5u-strung"
+        ],
+        "show_color_variants": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
     "media_x9qieF": {
@@ -145,40 +196,6 @@
         "title": "One Shoe. Full Court.",
         "products": [
           "ranger-force"
-        ],
-        "show_color_variants": true,
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "hero_component_D4bCLN": {
-      "type": "hero-component",
-      "name": "Hero Component",
-      "settings": {
-        "image": "shopify://shop_images/New_Banner.jpg",
-        "mobile_image": "shopify://shop_images/New_Banner_R.jpg",
-        "subtitle": "Axforce Canon",
-        "title": "POWER HAS A NEW NAME",
-        "description": "Bring power to every attack with a head-heavy balance and a flexible shaft built for commanding smashes.",
-        "button_text": "CHECK IT OUT",
-        "link_to": "shopify://products/axforce-cannon-4u",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "swipeable_products_XYKJa8": {
-      "type": "swipeable-products",
-      "name": "Swipeable Products",
-      "settings": {
-        "title": "AxForce Cannon Edition",
-        "products": [
-          "axforce-cannon-4u",
-          "axforce-cannon-4u-copy",
-          "axforce-cannon-5u",
-          "axforce-cannon-5u-light",
-          "axforce-cannon-6u"
         ],
         "show_color_variants": true,
         "color_scheme": "",
@@ -365,6 +382,7 @@
     },
     "hero_component_8aGUPp": {
       "type": "hero-component",
+      "disabled": true,
       "name": "Hero Component",
       "settings": {
         "image": "shopify://shop_images/Banner_3.png",
@@ -381,6 +399,7 @@
     },
     "swipeable_products_4Nkray": {
       "type": "swipeable-products",
+      "disabled": true,
       "name": "Swipeable Products",
       "settings": {
         "title": "PADDLE UP AND BE GAME - READY",
@@ -476,15 +495,16 @@
   },
   "order": [
     "responsive_slideshow_iH6DVM",
+    "hero_component_D4bCLN",
+    "swipeable_products_XYKJa8",
     "hero_component_xTDVjV",
+    "swipeable_products_AXFYAK",
     "media_x9qieF",
     "hero_component_a9mpjV",
     "swipeable_products_zQQwqq",
     "custom_liquid_wCCxbf",
     "hero_component_ErFhK9",
     "swipeable_products_TPy6Ug",
-    "hero_component_D4bCLN",
-    "swipeable_products_XYKJa8",
     "hero_component_NrAraR",
     "swipeable_products_BcAtaU",
     "custom_liquid_yLVFUK",
