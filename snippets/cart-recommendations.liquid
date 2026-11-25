@@ -8,9 +8,11 @@
   - limit: {Number} Number of recommendations to show (default: 4, max: 10)
   - heading: {String} Section heading text
   - intent: {String} Recommendation intent - 'related' or 'complementary' (default: 'related')
-  - layout: {String} 'list' renders compact rows with a one-tap "+ Add" (cart drawer "Complete
-    your kit"); omitted = the default horizontal carousel. See renderList in
-    assets/cart-recommendations.js.
+    (carousel layout only; the list layout ignores it)
+  - layout: {String} 'list' = cart drawer "Complete your kit": compact rows picked server-side
+    from the store's `cart_upsell_rule` metaobjects (see the list branch below), with a one-tap
+    "+ Add" handled by assets/cart-recommendations.js. Omitted = the default horizontal carousel,
+    fetched client-side from Shopify's /recommendations endpoint.
 {% endcomment %}
 
 {%- liquid
@@ -44,33 +46,212 @@
 
 {{ 'component-cart-recommendations.css' | asset_url | stylesheet_tag }}
 
-<cart-recommendations
-  class="cart-recommendations"
-  data-limit="{{ limit }}"
-  data-intent="{{ intent }}"
-  data-product-ids="{{ cart_product_ids | join: ',' }}"
-  data-icon-arrow-url="{{ 'icon-arrow.svg' | asset_url }}"
-  data-section-id="cart-recommendations"
-  {% if layout == 'list' %}
-    data-layout="list"
-    data-label-add="{{ 'sections.cart.upsell.add' | t | escape }}"
-    data-label-adding="{{ 'sections.cart.upsell.adding' | t | escape }}"
-    data-label-choose="{{ 'sections.cart.upsell.choose' | t | escape }}"
-  {% endif %}
->
-  <div class="cart-recommendations__container">
-    <h3 class="cart-recommendations__heading h4" hidden>{{ heading }}</h3>
+{%- if layout == 'list' -%}
+  {%- comment -%}
+    Cart drawer "Complete your kit": hand-made category rules, picked on the server.
 
-    <div class="cart-recommendations__loading">
-      {%- render 'loading-spinner' -%}
-    </div>
+    Rules are `cart_upsell_rule` metaobjects (Shopify admin → Content → Metaobjects), fields:
+    - product_types (list of text): product types this rule applies to, matched case-insensitively
+      against product.type. The entry whose product type is "default" is the fallback.
+    - collections (list of collections): where suggestions come from, in priority order. Within a
+      collection, products follow that collection's own sort order (set it to "Best selling").
 
-    <div class="cart-recommendations__content" hidden>
-      <!-- Recommendations will be loaded here via JavaScript -->
-    </div>
+    Picking:
+    1. Main item = the top-level cart line (not nested under another line, e.g. a stringing
+       service or string under a strung racket) whose type isn't "Service" and that isn't a milestone
+       gift (`_milestoneGift`), with the highest unit price. Its product type selects the rule; no match → only the default rule.
+    2. Every product and product type already in the cart (nested lines included) is skipped, so a
+       strung racket never gets strings and a racket never gets another racket. Picked products'
+       types are skipped too, so suggestions are all different kinds of product.
+    3. Each rule collection contributes its first available, non-skipped product (first 10 scanned),
+       in order, until `limit` rows; still short → the default rule's collections fill the rest
+       (several products per collection allowed there, still one per product type).
+    4. Nothing picked → nothing rendered.
+    The drawer re-renders this snippet after every cart change, so picks always match the cart.
+  {%- endcomment -%}
+  {%- liquid
+    # "|"-delimited strings act as sets (Liquid has no push/includes for arrays).
+    assign skip_ids = '|'
+    assign skip_types = '|'
+    assign main_item = nil
+    for item in cart.items
+      assign skip_ids = skip_ids | append: item.product_id | append: '|'
+      for component in item.item_components
+        assign skip_ids = skip_ids | append: component.product_id | append: '|'
+      endfor
+      assign item_type = item.product.type | downcase | strip
+      if item_type != blank
+        assign skip_types = skip_types | append: item_type | append: '|'
+      endif
+      # Milestone gift lines (assets/bxgy.js) are free extras, never what the customer came for.
+      if item.parent_relationship.parent == blank and item_type != 'service' and item.properties._milestoneGift == blank
+        if main_item == blank or item.final_price > main_item.final_price
+          assign main_item = item
+        endif
+      endif
+    endfor
+    assign main_type = main_item.product.type | downcase | strip
 
-    <div class="cart-recommendations__error" hidden>
-      <p class="cart-recommendations__error-text">Unable to load recommendations</p>
+    assign rule = nil
+    assign default_rule = nil
+    for upsell_rule in shop.metaobjects.cart_upsell_rule.values
+      for raw_type in upsell_rule.product_types.value
+        assign rule_type = raw_type | downcase | strip
+        if rule_type == 'default'
+          assign default_rule = upsell_rule
+        elsif rule == blank and main_type != blank and rule_type == main_type
+          assign rule = upsell_rule
+        endif
+      endfor
+    endfor
+
+    assign picked = 0
+    assign label_add = 'sections.cart.upsell.add' | t
+    assign label_customise = 'sections.cart.upsell.customise' | t
+  -%}
+  {%- capture upsell_rows -%}
+    {%- for pass in (1..2) -%}
+      {%- liquid
+        if pass == 1
+          assign source_rule = rule
+        else
+          assign source_rule = default_rule
+        endif
+        if source_rule == blank or picked >= limit
+          continue
+        endif
+      -%}
+      {%- for upsell_collection in source_rule.collections.value -%}
+        {%- if picked >= limit -%}{%- break -%}{%- endif -%}
+        {%- for product in upsell_collection.products limit: 10 -%}
+          {%- liquid
+            assign id_key = '|' | append: product.id | append: '|'
+            assign product_type = product.type | downcase | strip
+            assign type_key = '|' | append: product_type | append: '|'
+            if product.available == false or skip_ids contains id_key
+              continue
+            endif
+            if product_type != blank and skip_types contains type_key
+              continue
+            endif
+            assign picked = picked | plus: 1
+            assign skip_ids = skip_ids | append: product.id | append: '|'
+            if product_type != blank
+              assign skip_types = skip_types | append: product_type | append: '|'
+            endif
+            assign single_variant = false
+            if product.variants.size == 1 and product.variants.first.available
+              assign single_variant = true
+            endif
+          -%}
+          <li class="cart-upsell__item">
+            <a href="{{ product.url }}" class="cart-upsell__media" tabindex="-1" aria-hidden="true">
+              {%- if product.featured_image -%}
+                {{
+                  product.featured_image
+                  | image_url: width: 160
+                  | image_tag: class: 'cart-upsell__image', alt: '', loading: 'lazy', width: 80, height: 80
+                }}
+              {%- endif -%}
+            </a>
+            <div class="cart-upsell__info">
+              <a href="{{ product.url }}" class="cart-upsell__title">{{ product.title | escape }}</a>
+              <span class="cart-upsell__price">
+                {%- comment -%} Variants at different prices: "From <lowest>", never a price the customer may not get. {%- endcomment -%}
+                {%- if product.price_varies -%}
+                  {%- assign lowest_price = product.price | money -%}
+                  {{- 'products.product.price.from_price_html' | t: price: lowest_price -}}
+                {%- else -%}
+                  {%- if product.compare_at_price > product.price -%}
+                    <s>{{ product.compare_at_price | money }}</s>
+                  {% endif -%}
+                  {{- product.price | money -}}
+                {%- endif -%}
+              </span>
+            </div>
+            {%- comment -%}
+              Customisable products (any service in snippets/product-customisations.liquid) go to
+              the product page so they can be customised fully; quick-add would skip that.
+            {%- endcomment -%}
+            {%- capture customisations -%}{%- render 'product-customisations', product: product -%}{%- endcapture -%}
+            {%- if customisations != blank -%}
+              <a href="{{ product.url }}" class="cart-upsell__add">{{ label_customise }}</a>
+            {%- elsif single_variant -%}
+              <button
+                type="button"
+                class="cart-upsell__add"
+                data-variant-id="{{ product.variants.first.id }}"
+                aria-label="{{ label_add | append: ' ' | append: product.title | escape }}"
+              >
+                {{- 'icon-plus.svg' | inline_asset_content -}}
+                <span>{{ label_add }}</span>
+              </button>
+            {%- else -%}
+              {%- comment -%}
+                Products with options: "+ Add" opens the shared quick-add sheet
+                (snippets/quick-add-sheet.liquid): bottom sheet on mobile, centred dialog on desktop.
+              {%- endcomment -%}
+              <button
+                type="button"
+                class="cart-upsell__add"
+                data-quick-add-sheet
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="QuickAddSheet-{{ product.id }}"
+                aria-label="{{ label_add | append: ' ' | append: product.title | escape }}"
+              >
+                {{- 'icon-plus.svg' | inline_asset_content -}}
+                <span>{{ label_add }}</span>
+              </button>
+              {%- render 'quick-add-sheet', product: product -%}
+            {%- endif -%}
+          </li>
+          {%- comment -%}Rule collections give one product each; the default pass fills from as many as needed.{%- endcomment -%}
+          {%- if pass == 1 or picked >= limit -%}{%- break -%}{%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {%- if picked > 0 -%}
+    <cart-recommendations
+      class="cart-recommendations"
+      data-layout="list"
+      data-adding-label="{{ 'sections.cart.upsell.adding' | t | escape }}"
+    >
+      <div class="cart-recommendations__container">
+        <h3 class="cart-recommendations__heading h4">{{ heading }}</h3>
+        <div class="cart-recommendations__content">
+          <ul class="cart-upsell list-unstyled" role="list">
+            {{- upsell_rows -}}
+          </ul>
+        </div>
+      </div>
+    </cart-recommendations>
+  {%- endif -%}
+{%- else -%}
+  <cart-recommendations
+    class="cart-recommendations"
+    data-limit="{{ limit }}"
+    data-intent="{{ intent }}"
+    data-product-ids="{{ cart_product_ids | join: ',' }}"
+    data-icon-arrow-url="{{ 'icon-arrow.svg' | asset_url }}"
+    data-section-id="cart-recommendations"
+  >
+    <div class="cart-recommendations__container">
+      <h3 class="cart-recommendations__heading h4" hidden>{{ heading }}</h3>
+
+      <div class="cart-recommendations__loading">
+        {%- render 'loading-spinner' -%}
+      </div>
+
+      <div class="cart-recommendations__content" hidden>
+        <!-- Recommendations will be loaded here via JavaScript -->
+      </div>
+
+      <div class="cart-recommendations__error" hidden>
+        <p class="cart-recommendations__error-text">Unable to load recommendations</p>
+      </div>
     </div>
-  </div>
-</cart-recommendations>
+  </cart-recommendations>
+{%- endif -%}
