@@ -1321,7 +1321,329 @@
           "shipping_credential_py": "CI/RUC/TVA",
           "shipping_credential_pt": "NIF/TVA",
           "shipping_credential_tw": "Numéro d’identité nationale/TVA",
-          "shipping_credential_tr": "Numéro d’identification de la République de Turquie/TVA"
+          "shipping_credential_tr": "Numéro d’identification de la République de Turquie/TVA",
+          "title": "Informations complémentaires",
+          "tax_credential_it": "Code fiscal (facultatif)",
+          "tax_credential_type_co": "Type carte d’identité",
+          "tax_credential_my": "Numéro d’identification fiscale/d’immatriculation",
+          "tax_credential_type_mx": "Régime fiscal",
+          "tax_credential_use_mx": "Utilisation du CFDI",
+          "tax_credential_py": "CI/RUC/TVA",
+          "tax_credential_pt": "NIF/TVA",
+          "tax_credential_tr": "Numéro d’identification de la République de Turquie/TVA"
+        }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "Ce produit n’est pas disponible pour la livraison à %{location_name}.",
+          "some_products_other": "Ces produits ne sont pas disponibles pour la livraison à %{location_name}.",
+          "all_products_one": "Le produit dans votre panier ne peut pas être livré à %{location_name}.",
+          "all_products_other": "Les produits de votre panier ne peuvent pas être livrés à %{location_name}."
+        },
+        "change_address_only": "Modifiez l’adresse de livraison pour continuer.",
+        "remove_items_action": {
+          "other": "Supprimer les articles indisponibles"
+        },
+        "empty_cart_action": "panier vide et retourner à la boutique"
+      },
+      "merchant_instruction_errors": {
+        "empty_stable_id": "L’instruction de marchandisage %{position} %{name} contient un identifiant stable vide.",
+        "invalid_stable_id_target": "L’instruction de merchandising %{position} %{name} fait référence à l’identifiant stable %{stable_id}, mais cet identifiant stable ne figure pas dans les lignes de merchandising.",
+        "duplicate_variant_id": "L’instruction de marchandisage %{position} %{name} contient un ID de variante en double %{variant_id}.",
+        "invalid_variant_id_target": "L’instruction de marchandise %{name} fait référence à l’ID de variante %{variant_id}, mais cette variante ne figure pas dans les lignes de marchandise.",
+        "invalid_price_override_target": "L’instruction de remplacement du prix de l’article %{stable_id} est invalide, car il s’agit d’un composant d’un lot.",
+        "discount_not_supported": "L’instruction du marchand « appliquer la remise sur les marchandises » ne prend pas en charge ce type de remise."
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Envoyez-moi des actualités et des offres par e-mail.",
+        "post_accept_marketing_checkbox_label": "Vous êtes abonné(e) aux actualités et offres par e-mail.",
+        "pending_accept_marketing_checkbox_label": "Consultez votre e-mail pour confirmer votre inscription aux actualités et aux offres",
+        "accept_sms_checkbox_label": "Envoyez-moi des nouvelles et des offres",
+        "accept_whatsapp_marketing_checkbox_label": "Envoyez-moi des actualités et des offres sur WhatsApp",
+        "disclaimer": {
+          "terms_of_service": "Conditions d’utilisation"
+        },
+        "sms": {
+          "disclaimer": {
+            "description_html": "En vous inscrivant par SMS, vous acceptez de recevoir des messages marketing automatisés récurrents, notamment des rappels concernant votre panier, au numéro de téléphone fourni. Votre consentement n’est pas une condition d’achat. Répondez STOP pour vous désabonner. Répondez HELP pour obtenir de l’aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s’appliquer. Consultez notre %{privacy_policy_link} et nos %{terms_of_service_link}.",
+            "description_transactional_html": "Vous pouvez recevoir des SMS concernant la confirmation de commande et les mises à jour de livraison. Répondez STOP pour vous désabonner. Répondez HELP pour obtenir de l’aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s’appliquer. Consultez notre %{privacy_policy_modal_link} et nos %{terms_of_service_modal_link}."
+          },
+          "get_offers_by_text": "Recevez des offres par SMS"
+        },
+        "whatsapp": {
+          "disclaimer": {
+            "description_html": "En vous inscrivant via WhatsApp, vous acceptez de recevoir des messages marketing WhatsApp au numéro de téléphone fourni. Votre consentement n’est pas une condition d’achat. Répondez STOP pour vous désabonner. La fréquence des messages varie. Des frais de messagerie et de données peuvent s’appliquer. Consultez notre %{privacy_policy_link} et nos %{terms_of_service_link}."
+          }
+        },
+        "unsubscribe": {
+          "title": "Vous êtes désabonné(e)",
+          "description": "Vous ne recevrez plus de rappels de panier de notre part."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Inscrivez-moi pour recevoir les actualités et les offres de cette boutique."
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Conditions générales du marchand officiel",
+        "privacy_policy": "Politique de confidentialité du marchand officiel"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Vérifiez vos coordonnées avant de finaliser le paiement."
+      },
+      "no_address_location": {
+        "header": "Vous n’avez pas d’adresse de livraison pour cet emplacement.",
+        "alt_header": "Adresse de livraison manquante",
+        "message": "Contactez-nous pour ajouter une adresse pour cet emplacement et finaliser votre commande."
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Retourner au panier",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} pour modifier les quantités",
+        "company_location_changed": "Votre panier a été mis à jour. Vérifiez votre commande avant de la soumettre.",
+        "company_location_changed_product_removed": "Votre panier a été mis à jour, car certains produits ne sont pas disponibles à cet emplacement. Vérifiez votre commande avant de la soumettre.",
+        "violations_title": "{{violation}} est manquant ou invalide",
+        "individual_violations_title": {
+          "DeliveryViolations": "Adresse de livraison"
+        },
+        "all_violations_content": "Appelez-nous ou contactez-nous à {{emailLink}} pour mettre à jour ces informations et finaliser votre commande :",
+        "editable_shipping_address_violations_message_title": "Ajoutez ces informations pour finaliser votre commande :",
+        "editable_shipping_address_violations_message_footer": "Pour mettre à jour définitivement l’adresse de cet établissement, {{emailLink}}.",
+        "delivery_address_validation_errors_banner": {
+          "title": "L’adresse de livraison n’est pas valide."
+        },
+        "shipping_address_incomplete_title": "L’adresse de livraison est incomplète.",
+        "calculating_shipping": "Les frais de livraison sont encore en cours de calcul. Réessayez dans quelques secondes. Vous n’avez pas été débité.",
+        "calculating_taxes": "Le calcul des taxes est toujours en cours. Réessayez dans quelques secondes. Aucun montant ne vous a été facturé.",
+        "generic_processing_error": {
+          "title": "Un problème est survenu lors du traitement de votre commande.",
+          "body": "Vous n’avez pas été débité. Réessayez ou utilisez un autre moyen de paiement."
+        },
+        "payment_method_not_available_with_payment_terms": "Le mode de paiement que vous avez sélectionné n’est plus disponible, car le paiement de cette commande est désormais soumis aux conditions {{paymentTerms}}.",
+        "payment_method_not_available_with_fulfillment_terms": "Le mode de paiement que vous avez sélectionné n’est plus disponible, car le paiement de cette commande est désormais dû à la livraison.",
+        "payment_method_not_available_with_fixed_terms": "Le mode de paiement que vous avez sélectionné n’est plus disponible, car le paiement de cette commande est prévu ultérieurement.",
+        "payment_method_not_available_with_review_requirement": "Le mode de paiement que vous avez sélectionné n’est plus disponible, car le paiement sera dû une fois votre commande confirmée.",
+        "contact_information": {
+          "title": "Les coordonnées sont invalides."
+        },
+        "validation_errors_banner": {
+          "heading": {
+            "one": "Il y a {{count}} erreur :",
+            "other": "Il y a {{count}} erreurs :"
+          },
+          "section_label": {
+            "contact": "Contactez-nous"
+          }
+        }
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Examiner",
+          "link_label": "Conditions générales de {{partnerDisplayName}}"
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "Réduisez la note à 5 000 caractères ou moins."
+      },
+      "memberships": {
+        "items_split_across_locations_unsupported": "La livraison Prime n’est pas disponible pour votre commande. Vos options de livraison ont été mises à jour."
+      },
+      "order_summary": {
+        "discount_title": "Réduction",
+        "discount_title_with_position": "Remise %{position}",
+        "discount_title_stacking": {
+          "other": "Remises"
+        },
+        "discount_order_stacking": {
+          "one": "Remise sur commande",
+          "other": "Remises sur les commandes"
+        },
+        "discount_label": "Code de réduction",
+        "discount_not_found": "Impossible de trouver une réduction valide correspondant au code saisi.",
+        "discount_placeholder": "Code de réduction",
+        "discount_code_applied_with_code": "Le code de réduction %{code} a été appliqué.",
+        "discount_code_replaced": "Le code de réduction %{old_code} a été supprimé et le code %{code} a été appliqué.",
+        "discount_code_replaced_multiple": "Plusieurs codes de réduction ont été supprimés et %{code} a été appliqué.",
+        "discount_code_allocations_mismatch": "Votre code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> a changé. Vérifiez votre panier et réessayez.",
+        "enter_shipping_address": "Saisir l’adresse de livraison",
+        "apply_discount_button_label": "Appliquer",
+        "applied_discount_message": "%{amount} de réduction sur le prix total de la commande",
+        "discount_has_been_applied": "La réduction a été appliquée.",
+        "discount_has_been_removed": "La remise a été supprimée.",
+        "automatic_discount_tooltip": "Les remises appliquées automatiquement ne peuvent pas être supprimées.",
+        "discount_already_applied": "Une réduction a été appliquée à cette commande. Vous ne pouvez pas en ajouter une autre.",
+        "cart_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> n’est pas valable pour les articles de votre panier.",
+        "discount_requires_customer_notice": "Saisissez vos informations de livraison pour appliquer le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> n’est pas disponible pour vous actuellement.",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> code de réduction réservé aux clients admissibles",
+        "customer_already_used_once_per_customer_discount_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> a déjà été utilisé.",
+        "calculating_shipping": "Calcul en cours…",
+        "calculating": "Calcul en cours…",
+        "deposit_label": "Dépôt",
+        "duties_included_label": "Le total comprend les taxes et les droits de douane. Aucun frais supplémentaire à la livraison.",
+        "discount_and_gift_card_savings_notice": "Après %{discount_amount} de réductions et %{gift_card_amount} en cartes-cadeaux",
+        "discount_savings_notice": "Après %{discount_amount} de réductions",
+        "cost_table_title": "Récapitulatif des coûts",
+        "compare_at_sale": "Soldes (%{sale_amount})",
+        "confirmation_number_label": "Confirmation n°%{confirmation_number}",
+        "amount_off_shipping": "%{amount} de réduction sur les frais de livraison",
+        "deferred_payment_info": {
+          "description_html": "Pour toute question concernant votre commande, %{contact_us}.",
+          "paid_today": "Total payé aujourd’hui",
+          "due_on_fulfillment_title": "Le paiement de %{amount_due} est dû à l’expédition.",
+          "due_on_receipt_title": "Le paiement de %{amount_due} est dû à réception."
+        },
+        "deferred_balance_info": {
+          "due_on_fulfillment_title": "Le solde de {{amount_due}} est dû à l’expédition."
+        },
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> ne fonctionne pas pour le moment. Contactez-nous pour obtenir de l’aide.",
+        "discount_code_client_error": "Un problème est survenu lors de l’application de %{code}. Réessayez.",
+        "due_on_fulfillment": "À régler à la livraison",
+        "duties_label": "Fonctions",
+        "duty_label": "Devoir",
+        "error_duties_tooltip": "Cette commande est expédiée depuis un autre pays, des droits de douane et des taxes peuvent donc être facturés à la livraison.",
+        "deferred_total_due_date_label": "Total à payer {{date}}",
+        "deferred_total_due_date_label_next": "À rendre le %{date}",
+        "custom_discount": "Remise personnalisée",
+        "collapse_component_information": {
+          "one": "Masquer %{count} article",
+          "other": "Masquer %{count} éléments"
+        },
+        "discount_discovery": {
+          "add_code": "Ajouter une remise",
+          "back_to_finalize_order": "Retourner finaliser la commande",
+          "merchandise_quantity_label": {
+            "one": "%{count} article",
+            "other": "%{count} articles"
+          }
+        },
+        "alternative_payment_currency_total": "Facturé à hauteur de %{amount_due}",
+        "alternative_payment_currency_chinese_yuan": "Confirmez le montant total final en CNY dans l’application %{wallet}.",
+        "discount_applies_to_subscription_items_only": "Cette réduction s’applique uniquement aux articles par abonnement.",
+        "final_sale": "Vente finale",
+        "product_disclosures": {
+          "title": "Informations sur le produit"
+        },
+        "group_title_label": "Partie de « %{group_title} »",
+        "for_add_on": "Pour : %{group_title}",
+        "from_other_stores_heading": "D’autres magasins",
+        "from_multiple_stores_heading": "Depuis plusieurs magasins",
+        "number_items": {
+          "one": "%{count} article",
+          "other": "%{count} articles"
+        },
+        "more_items_modal": {
+          "empty_results": "Aucun résultat trouvé pour \"%{searchText}\". Vérifiez l’orthographe ou essayez avec un autre mot ou une autre expression.",
+          "number_items_shown": "%{shownNumber} éléments sur %{totalNumber}"
+        },
+        "order_name_label": "Commandez %{name}",
+        "item_discounts_label": "Remises sur les articles",
+        "order_discounts_apply_to_local_shop": "Les remises sur commande s’appliquent uniquement aux articles de %{shop_name}",
+        "gift_card_applied": "Carte-cadeau appliquée",
+        "gift_card_title": "Carte cadeau",
+        "gift_card_label": "Carte cadeau",
+        "gift_card_placeholder": "Carte cadeau",
+        "gift_card_and_discount_title": "Code de réduction ou carte-cadeau",
+        "gift_card_and_discount_label": "Code de réduction ou carte-cadeau",
+        "gift_card_and_discount_placeholder": "Code de réduction ou carte-cadeau",
+        "gift_cards_apply_to_local_shop": "Les cartes-cadeaux s’appliquent uniquement aux articles de %{shop_name}",
+        "remove_gift_card_label": "Carte-cadeau Clear",
+        "remove_discount_label": "Supprimer la réduction",
+        "return_restocking_fee_label": "Frais de réapprovisionnement",
+        "return_shipping_fee_label": "Expédition des retours",
+        "free_shipping_discount_label": "Livraison gratuite",
+        "gift_card_has_been_removed": "La carte-cadeau a été supprimée.",
+        "gift_card_subscriptions_notice": "Les cartes-cadeaux ne s’appliqueront qu’à votre premier paiement.",
+        "pickup_label": "Retrait en magasin",
+        "no_pickup_location": "Aucun point de retrait n’est disponible.",
+        "pickup_unavailable_banner_title": {
+          "one": "Aucun magasin ne propose votre article",
+          "other": "Aucun magasin ne propose vos articles"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Aucun magasin ne propose votre article en %{country}.",
+          "other": "Aucun magasin disponible dans %{country} avec vos articles"
+        },
+        "estimated_taxes_label": "Impôts estimés",
+        "information_estimated_taxes_label": "Taxes (estimées)",
+        "estimated_taxes_finalization_tooltip_content": "Le montant final des taxes et le total vous seront confirmés par e-mail ou SMS après avoir passé votre commande.",
+        "price_per_item": {
+          "label": "%{price}/unité"
+        },
+        "scroll_order_summary": "Faites défiler pour voir plus d’articles",
+        "sale_price": "Prix soldé",
+        "multiple_shipping_lines_label": "Total des frais de livraison",
+        "recurring_total_tooltip": "N’inclut pas les frais d’expédition, les taxes, les droits de douane ni les réductions applicables.",
+        "recurring_total_tooltip_taxes_included": "Ne comprend pas les frais d’expédition, les droits de douane ni les réductions applicables.",
+        "recurring_total_tooltip_duties_included": "Ne comprend pas les frais de livraison, les taxes ni les réductions applicables.",
+        "recurring_total_tooltip_taxes_and_duties_included": "N’inclut pas les frais de livraison ni les réductions applicables.",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> n’a pas pu être utilisé avec vos réductions actuelles.",
+        "percent_off_shipping": "%{percent}% de réduction sur les frais de livraison",
+        "payment_terms_totals": {
+          "due_later": "Total dû le %{due_at}",
+          "due_on_fulfillment": "Total dû à l’exécution de la commande",
+          "due_on_fulfillment_next": "À régler à la livraison",
+          "due_on_receipt": "Total dû à réception",
+          "due_later_checkout_to_draft": "Total dû ultérieurement"
+        },
+        "maximum_discount_code_limit_reached": "Vous avez atteint le nombre maximal de codes de réduction. Supprimez un code existant pour utiliser <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "may_be_charged_on_delivery": "Peut être facturé à la livraison",
+        "recurring_total_multiple_label": "Cette commande comporte des frais récurrents pour plusieurs articles.",
+        "full_price": "Prix plein : %{price}",
+        "expand_component_information": {
+          "one": "Afficher %{count} article",
+          "other": "Afficher %{count} articles"
+        },
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "Confirmez le montant total final en CNY dans l’application WeChat.",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} traitera ce paiement d’un montant de %{amount_due} %{processing_currency}, que WeChat convertira en CNY.",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} traitera ce paiement de %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "Voir le total en CNY dans WeChat"
+          },
+          "alipay": {
+            "checkout_disclosure": "Confirmez le montant total final en CNY dans l’application Alipay.",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} traitera ce paiement en %{amount_due} %{processing_currency}, qu’Alipay convertira en CNY",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} traitera ce paiement de %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "Voir le total en CNY dans Alipay"
+          }
+        }
+      },
+      "order_payment_collection": {
+        "changes_summary": {
+          "added": {
+            "other": "%{count} ajouté"
+          },
+          "subtracted": "%{count} supprimé",
+          "returned": "Retourné %{count}",
+          "return_line_item_removed": "%{count} article retiré du retour"
+        },
+        "additional_payment_requested": "Le paiement de %{total_outstanding} est requis.",
+        "checkout_review_and_pay": "Votre commande %{order_name} a été mise à jour. Consultez les modifications, puis payez pour confirmer votre commande.",
+        "order_review_and_pay": "Votre commande a été mise à jour. Consultez-la et payez pour confirmer votre commande.",
+        "pay_now": "Payez maintenant"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "one": "Achetez %{product_name} et %{count} autre article",
+          "other": "Achetez %{product_name} et %{count} autres articles"
+        }
+      },
+      "order_errors": {
+        "creation_failure": "Un problème est survenu lors de la création de votre commande. Réessayez ou contactez-nous pour en savoir plus.",
+        "network_failure": "Votre commande n'a pas pu être envoyée en raison d'une erreur réseau. Vérifiez votre connexion et réessayez."
+      },
+      "online_store_chat": {
+        "title": "Des questions ? Discutez avec nous."
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_text": "Essayez de scanner à nouveau le code QR. Si cela ne fonctionne toujours pas, informez notre personnel et essayez un autre mode de paiement.",
+        "payment_link_expired_title": "Le lien de paiement a expiré.",
+        "payment_link_expired_text": "Essayez de scanner à nouveau le code QR."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_not_exceed_limit": "Le prix de la carte-cadeau ne doit pas dépasser %{gift_card_limit}.",
+            "subtotal_limit_reached": "La valeur maximale des articles a été atteinte.",
+            "signature_mismatch": "Incohérence de la signature de la marchandise pour la ligne %{stable_id}."
+          }
         }
       }
     },

@@ -1661,7 +1661,104 @@
           "back_to_finalize_order": "Tilbage for at færdiggøre bestillingen"
         },
         "alternative_payment_currency_total": "Opkrævet med %{amount_due}",
-        "alternative_payment_currency_chinese_yuan": "Bekræft det endelige CNY-beløb i %{wallet}-appen."
+        "alternative_payment_currency_chinese_yuan": "Bekræft det endelige CNY-beløb i %{wallet}-appen.",
+        "final_sale": "Endeligt udsalg",
+        "group_title_label": "En del af \"%{group_title}\"",
+        "for_add_on": "Til: %{group_title}",
+        "more_items_modal": {
+          "empty_results": "Ingen resultater fundet for \"%{searchText}\". Kontrollér stavemåden, eller brug et andet ord eller en anden sætning."
+        },
+        "order_name_label": "Bestil %{name}",
+        "item_discounts_label": "Vare-rabatter",
+        "gift_card_applied": "Gavekort anvendt",
+        "remove_gift_card_label": "Indløs gavekort",
+        "return_restocking_fee_label": "Gebyr for genopfyldning af lageret",
+        "return_shipping_fee_label": "Returfragt",
+        "free_shipping_discount_label": "Gratis fragt",
+        "gift_card_has_been_applied": "Gavekortet er blevet anvendt",
+        "gift_card_has_been_removed": "Gavekortet er blevet fjernet",
+        "gift_card_subscriptions_notice": "Gavekort gælder kun for din første betaling",
+        "pickup_label": "Afhent i butikken",
+        "no_pickup_location": "Der er ingen afhentningssteder tilgængelige.",
+        "pickup_unavailable_banner_title": {
+          "one": "Ingen butikker har varen på lager",
+          "other": "Ingen butikker tilgængelige med dine varer"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Ingen butikker med din vare er tilgængelige i %{country}",
+          "other": "Ingen butikker er tilgængelige i %{country} med dine varer"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Send til adressen"
+        },
+        "estimated_taxes_label": "Estimeret skat",
+        "estimated_taxes_finalization_tooltip_content": "Den endelige afgift og det samlede beløb bekræftes via e-mail eller sms, efter du har afgivet din bestilling.",
+        "estimated_taxes_finalization_tooltip_content_short": "Skat fastlagt efter betaling",
+        "order_total_label": "Ordretotal",
+        "price_after_discount_aria_text": "Nedsat pris",
+        "partial_total_label": "Total",
+        "payment_due_label": "Betaling forfalder",
+        "product_change_label": "Ændr",
+        "order_total_updated_label": "Opdateret total",
+        "gift_card_ending": "Gavekort, der slutter med %{last_characters}",
+        "multiple_shipping_lines_label": "Samlet fragtpris",
+        "recurring_subtotal_label": "Gentagen subtotal",
+        "recurring_total_label": "Samlet beløb, der gentages",
+        "recurring_total_tooltip": "Inkluderer ikke fragt, moms, told eller eventuelle rabatter",
+        "recurring_total_tooltip_duties_included": "Inkluderer ikke fragt, moms eller eventuelle rabatter",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> kunne ikke bruges sammen med dine eksisterende rabatter.",
+        "percent_off_shipping": "%{percent}% rabat på fragt",
+        "payment_terms_totals": {
+          "due_today": "I alt, der skal betales i dag",
+          "due_later": "I alt skyldig %{due_at}",
+          "due_on_fulfillment": "I alt ved levering",
+          "due_on_fulfillment_next": "Forfalder ved opfyldelse",
+          "due_on_receipt": "Samlet beløb til betaling ved modtagelsen",
+          "due_later_checkout_to_draft": "Samlet beløb, der skal betales senere",
+          "total_paid": "Samlet betalt"
+        },
+        "maximum_discount_code_limit_reached": "Du har nået det maksimale antal rabatkoder. Fjern en eksisterende kode for at bruge <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "recurring_total_multiple_label": "Denne ordre har en tilbagevendende betaling for flere varer",
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "Bekræft det endelige beløb i CNY i WeChat-appen",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} behandler denne betaling som %{amount_due} %{processing_currency}, som WeChat omregner til CNY",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} vil behandle denne betaling som %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "Se totalen i CNY i WeChat"
+          },
+          "alipay": {
+            "checkout_disclosure": "Bekræft det endelige CNY-beløb i Alipay-appen",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} behandler denne betaling som %{amount_due} %{processing_currency}, som Alipay omregner til CNY",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} vil behandle denne betaling som %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "Se det samlede beløb i CNY i Alipay"
+          }
+        },
+        "secondary_aside_label": "Yderligere oplysninger om betaling",
+        "shipping_information_does_not_meet_discount_requirements_notice": "%{code} rabatkode er ikke tilgængelig for din leveringsadresse",
+        "subtotal_label_with_quantity": {
+          "one": "Delsum · %{count} vare",
+          "other": "Delsum · %{count} varer"
+        },
+        "shipping_label": "Forsendelse",
+        "shipping_default_value": "Beregnes ved næste trin",
+        "shipping_discount_title": "Rabat på fragt",
+        "shipping_policy_link": "Forsendelsesomkostninger",
+        "taxes_label": "Skatter",
+        "total_label": "Total",
+        "total_due_label": "Samlet beløb, der skal betales",
+        "total_paid_label": "Samlet betalt",
+        "total_due_today_label": "I alt, der skal betales i dag",
+        "total_due_later_label": "Samlet beløb, der skal betales senere",
+        "vat_label_html": "Inklusive %{amount} i skatter",
+        "unit_price": {
+          "accessible_separator": "per",
+          "per_item": {
+            "single": "%{price} stykket",
+            "one": "%{price} pr. %{count} vare",
+            "other": "%{price} pr. %{count} varer"
+          }
+        },
+        "updated_shipping_method": "Opdateret forsendelsesmetode: %{shipping_method}"
       },
       "order_payment_collection": {
         "custom_line_item_description": "Beløb til betaling for ordre %{order_name}",
@@ -1701,6 +1798,37 @@
             "signature_mismatch": "Signatur for vare stemmer ikke overens for linje %{stable_id}."
           }
         }
+      },
+      "payment": {
+        "amazon_payments_could_not_enqueue_authorize": "Der opstod et problem med at behandle din betaling. Prøv igen, eller brug en anden betalingsmetode.",
+        "amount_left_to_pay_label": "Betaling forfalder:",
+        "apply_gift_card_button_label": "Anvend",
+        "bogus_test_checkout": {
+          "title": "Testinstruktion",
+          "intro": "Brug disse værdier til at teste din betaling:"
+        },
+        "card_change_label": "Ændr",
+        "bank_account_vaulted_company_location": "Bankkonto gemt for denne placering",
+        "billing_address_associated_with_mandate": "Brug adressen, der er knyttet til betalingsmetoden",
+        "billing_address_associated_with_mandate_info": "Hvis du vil ændre din faktureringsadresse, skal du fjerne og indtaste dine kreditkortoplysninger igen.",
+        "billing_address_rollup_accessibility_label": "Faktureringsadresseindstillinger",
+        "billing_address_description": "Vælg den adresse, der passer til dit kort eller din betalingsmetode.",
+        "billing_address_description_no_shipping_address": "Indtast den adresse, der er knyttet til dit kort eller din betalingsmetode.",
+        "bank_payment_method_label": "Betalingsmetode via bank",
+        "afterpay_label": "Efterbetaling",
+        "account_connected": "Kontoen er tilknyttet.",
+        "billing_must_match_shipping_notice": "Din betalingsmetodes faktureringsadresse skal være den samme som leveringsadressen.",
+        "brand_not_available": "Denne butik accepterer ikke {{brand}}. Betal med et andet kort.",
+        "business_customer_vaulting_payment_label": "Gem denne betalingsmetode ved betaling, og giv %{company} tilladelse til at opkræve betaling for fremtidige køb på denne lokation. Alle kontakter, der er tilknyttet denne lokation, kan bruge betalingsmetoden.",
+        "business_customer_with_bank_account_vaulting_payment_label": "Gem denne betalingsmetode ved betaling, og giv %{company} tilladelse til at trække beløbet fra din konto for fremtidige køb, du godkender for denne lokation, indtil du opsiger tilladelsen. Alle kontakter, der er knyttet til denne lokation, kan bruge betalingsmetoden.",
+        "alternative_payment_currency_total_notice": "Bemærk: Du vil blive opkrævet %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Bemærk: det omregnede beløb er %{amount_due}.",
+        "bank_account_type": {
+          "checking": "Tjekker"
+        },
+        "bank_account_disclaimer": "ACH-betalinger kan tage op til 4 hverdage at behandle.",
+        "bank_account_choose": "Vælg en konto for at gennemføre dit køb sikkert",
+        "bank_account_connect_another": "Tilslut en anden bankkonto"
       }
     },
     "attributes": {

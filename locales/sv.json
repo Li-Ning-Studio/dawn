@@ -1164,7 +1164,8 @@
           "other": "Det finns %{count} platser med din vara"
         },
         "location_information_far_away_one_item": {
-          "one": "Det finns %{count} plats med din vara."
+          "one": "Det finns %{count} plats med din vara.",
+          "other": "Det finns %{count} platser med din vara"
         },
         "location_far_away": {
           "one": "%{count} plats med din vara",
@@ -1190,7 +1191,235 @@
         "could_not_resolve_address": "Din adress kunde inte hittas. Försök igen eller använd en annan adress.",
         "geolocation": {
           "permission_not_allowed": "Tillåt platsdelning eller sök i stället."
+        },
+        "only_fully_stocked_locations": "Visa endast platser där alla artiklar finns i lager",
+        "unavailable_item_count": {
+          "one": "%{count} vara är inte tillgänglig",
+          "other": "%{count} artiklar är inte tillgängliga"
+        },
+        "ship_separately_notice": {
+          "other": "%{count} artiklar skickas separat."
+        },
+        "stock_details": {
+          "ship_separately": {
+            "one": "Skickas separat",
+            "other": "Skickas separat"
+          },
+          "remove_items": {
+            "one": "Kommer att tas bort från din beställning",
+            "other": "Kommer att tas bort från din beställning"
+          }
+        },
+        "stock_details_modal": {
+          "unavailable_title": "Inte tillgänglig för avhämtning",
+          "can_ship_description": {
+            "one": "Den här varan är slut i lager på ditt valda upphämtningsställe.",
+            "other": "De här varorna är slut i lager på ditt valda upphämtningsställe."
+          },
+          "cannot_ship_description": {
+            "one": "Den här varan är slut i lager på ditt valda utlämningsställe och kan inte skickas.",
+            "other": "Dessa varor är slut i lager på ditt valda utlämningsställe och kan inte skickas."
+          },
+          "cannot_ship_bundle_description": {
+            "one": "Den här varan finns inte i lager på ditt valda utlämningsställe och kan inte skickas. Även varor som ingår i ett paket tas bort.",
+            "other": "Dessa varor är slut i lager på det valda upphämtningsstället och kan inte skickas. Även varor som ingår i paket tas bort."
+          },
+          "ship_separately": "Skicka separat"
+        },
+        "stock_details_banner": {
+          "heading": {
+            "one": "%{count} vara finns inte tillgänglig för upphämtning på %{location}",
+            "other": "%{count} artiklar finns inte tillgängliga för upphämtning på %{location}"
+          },
+          "closest_location": "Den närmaste upphämtningsplatsen där alla varor finns i lager ligger %{distance} bort",
+          "ship_separately": {
+            "one": "skicka den separat",
+            "other": "Skicka dem separat"
+          }
+        },
+        "location_selected": "Din valda plats",
+        "location_information_far_away_other_items": {
+          "one": "Det finns %{count} plats med dina varor."
+        },
+        "location_nearby": {
+          "one": "Det finns %{count} närliggande plats med din vara.",
+          "other": "Det finns %{count} närliggande platser med din vara"
+        },
+        "location_nearby_one_item": {
+          "one": "Det finns %{count} närliggande plats med din vara.",
+          "other": "Det finns %{count} närliggande platser med din vara"
+        },
+        "location_nearby_other_items": {
+          "one": "Det finns %{count} närliggande plats med dina varor.",
+          "other": "Det finns %{count} platser i närheten med dina varor."
+        },
+        "location_nearby_short": {
+          "one": "%{count} närliggande plats med din vara",
+          "other": "%{count} närliggande platser med din vara"
+        },
+        "location_nearby_short_one_item": {
+          "one": "%{count} närliggande plats med din vara",
+          "other": "%{count} närliggande platser med din vara"
+        },
+        "location_nearby_short_other_items": {
+          "one": "%{count} närliggande plats med dina varor",
+          "other": "%{count} närliggande platser med dina varor"
+        },
+        "toggle_location": "Ändra plats",
+        "toggle_more_locations": {
+          "one": "%{count} fler platser",
+          "other": "%{count} fler platser"
+        },
+        "toggle_multiple_locations": "%{count}+ fler platser",
+        "pick_up_location": "Upphämtningsplats",
+        "selected_pickup_option_no_longer_available": {
+          "title": "Platsen du tidigare valde är inte längre tillgänglig",
+          "description": "Vi har valt den närmaste platsen som har dina varor i lager"
+        },
+        "paginator": {
+          "accessibility_label": "Sidnumrering för lokal upphämtning",
+          "label": {
+            "one": "%{first} - %{last} av %{count} butiker"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Visa %{count} fler platser",
+          "other": "Visa %{count} fler platser"
+        },
+        "no_pickup_locations_found": "Inga upphämtningsställen hittades",
+        "pickup_unavailable_banner_title": {
+          "one": "Inga platser med din vara",
+          "other": "Inga platser med dina varor"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Inga platser i %{country} har din artikel",
+          "other": "Inga platser i %{country} har dina artiklar"
+        },
+        "pickup_unavailable_banner_body": {
+          "try_different_location": "Prova en annan plats",
+          "ship_to_address": "skicka till adressen",
+          "there_are_no_stores": "Det finns inga butiker nära din adress, eller så är dina varor inte tillgängliga för upphämtning.",
+          "ship_items": "Skicka dina varor",
+          "search_elsewhere": "Sök någon annanstans"
         }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "shipping_credential_cn": "Personnummer",
+          "tax_credential_co": "ID-nummer/moms",
+          "shipping_credential_co": "ID-nummer/moms",
+          "shipping_credential_type_co": "Typ av identitetskort",
+          "tax_credential_cr": "Identifikationsnummer/RUT",
+          "shipping_credential_cr": "Identifikationsnummer/RUT",
+          "shipping_credential_my": "TIN/registreringsnummer",
+          "shipping_credential_pt": "NIF/moms",
+          "shipping_credential_tr": "Turkiets identitetsnummer/moms",
+          "tax_credential_it": "Skattenummer (valfritt)",
+          "tax_credential_type_co": "Typ av identitetskort",
+          "tax_credential_my": "TIN/registreringsnummer",
+          "tax_credential_type_mx": "Skattesystem",
+          "tax_credential_use_mx": "Användning av CFDI",
+          "tax_credential_pt": "NIF/moms",
+          "tax_credential_tr": "Turkiets identitetsnummer/moms"
+        }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "Den här produkten kan inte levereras till %{location_name}.",
+          "some_products_other": "Dessa produkter kan inte levereras till %{location_name}.",
+          "all_products_one": "Produkten i din varukorg kan inte levereras till %{location_name}.",
+          "all_products_other": "Produkterna i din varukorg kan inte levereras till %{location_name}."
+        },
+        "cart_updated": "Din kundvagn har uppdaterats.",
+        "change_address_only": "Ändra leveransadressen för att fortsätta.",
+        "change_address_or_remove": "Ändra leveransadress eller %{remove_action}.",
+        "remove_items_action": {
+          "one": "Ta bort otillgänglig vara",
+          "other": "Ta bort otillgängliga artiklar"
+        },
+        "empty_cart_action": "Töm varukorgen och återgå till butiken"
+      },
+      "merchant_instruction_errors": {
+        "empty_stable_id": "Varuinstruktionen %{position} %{name} innehåller ett tomt stabilt ID.",
+        "invalid_stable_id_target": "Varuinstruktionen för %{position} %{name} hänvisar till det stabila ID:t %{stable_id}, men det stabila ID:t finns inte bland varuraderna.",
+        "duplicate_variant_id": "Varuinstruktionen för %{position} %{name} innehåller ett duplicerat variant-ID %{variant_id}.",
+        "invalid_variant_id_target": "Merchandiseinstruktionen för %{name} hänvisar till variant-ID %{variant_id}, men den varianten finns inte bland merchandise-raderna.",
+        "invalid_price_override_target": "Prisöverskrivningsinstruktionen för varuposten %{stable_id} är ogiltig eftersom den är en del av ett paket.",
+        "discount_not_supported": "Handlarinstruktionen för tillämpning av varurabatt har inte stöd för den här typen av rabatt."
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Mejla mig om nyheter och erbjudanden",
+        "post_accept_marketing_checkbox_label": "Du prenumererar på att få nyheter och erbjudanden via e-post.",
+        "accept_sms_checkbox_label": "Skicka nyheter och erbjudanden till mig via sms.",
+        "accept_whatsapp_marketing_checkbox_label": "Skicka nyheter och erbjudanden till mig på WhatsApp",
+        "sms": {
+          "disclaimer": {
+            "description_html": "Genom att registrera dig via sms samtycker du till att få återkommande automatiserade marknadsföringsmeddelanden, inklusive påminnelser om varor i kundvagnen, till det angivna telefonnumret. Samtycke är inget krav för köp. Svara STOP för att avsluta prenumerationen. Svara HELP för att få hjälp. Meddelandefrekvensen varierar. Avgifter för meddelanden och data kan tillkomma. Läs vår %{privacy_policy_link} och våra %{terms_of_service_link}.",
+            "description_transactional_html": "Du kan få textmeddelanden om orderbekräftelse och leveransuppdateringar. Svara STOPP för att avsluta prenumerationen. Svara HJÄLP för att få hjälp. Meddelandefrekvensen varierar. Avgifter för meddelanden och data kan tillkomma. Visa vår %{privacy_policy_modal_link} och %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Mobiltelefonnummer",
+          "get_offers_by_text": "Få erbjudanden via sms"
+        },
+        "whatsapp": {
+          "disclaimer": {
+            "description_html": "Genom att registrera dig via WhatsApp samtycker du till att ta emot marknadsföringsmeddelanden via WhatsApp på det angivna telefonnumret. Samtycke är inte ett krav för att genomföra ett köp. Svara STOP för att avsluta prenumerationen. Meddelandefrekvensen varierar. Avgifter för meddelanden och data kan tillkomma. Läs vår %{privacy_policy_link} och %{terms_of_service_link}."
+          }
+        },
+        "unsubscribe": {
+          "title": "Du har avslutat prenumerationen.",
+          "description": "Du kommer inte att få fler påminnelser om varukorgen från oss."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Anmäl mig till nyheter och erbjudanden från den här butiken."
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Villkor för Merchant of Record",
+        "privacy_policy": "Integritetspolicy för registrerad handlare"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Granska dina kontaktuppgifter innan du slutför betalningen"
+      },
+      "no_address_location": {
+        "header": "Du har ingen leveransadress för den här platsen",
+        "alt_header": "Saknad leveransadress",
+        "message": "Kontakta oss för att lägga till en adress för den här platsen och slutföra köpet.",
+        "email_us_button_label": "Skicka ett mejl till oss"
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Gå tillbaka till varukorgen",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} för att uppdatera antalen",
+        "company_location_changed": "Din varukorg har uppdaterats. Granska din beställning innan du skickar in den.",
+        "company_location_changed_product_removed": "Din kundvagn har uppdaterats eftersom vissa produkter inte är tillgängliga på den här platsen. Granska din beställning innan du skickar in den.",
+        "all_violations_content": "Ring eller kontakta oss via {{emailLink}} för att uppdatera den här informationen och slutföra din beställning:",
+        "editable_shipping_address_violations_message_title": "Lägg till den här informationen för att slutföra din beställning:",
+        "editable_shipping_address_violations_message_footer": "För att permanent uppdatera adressen för den här platsen, {{emailLink}}.",
+        "delivery_address_validation_errors_banner": {
+          "text_html": "%{contact_us} för att redigera din adress"
+        },
+        "calculating_shipping": "Fraktkostnaden beräknas fortfarande. Försök igen om några sekunder. Du har inte debiterats.",
+        "calculating_taxes": "Skatterna beräknas fortfarande. Försök igen om några sekunder. Du har inte debiterats.",
+        "generic_processing_error": {
+          "title": "Det uppstod ett problem när din beställning behandlades."
+        },
+        "payment_method_not_available_with_payment_terms": "Betalningsmetoden du valde är inte längre tillgänglig eftersom betalningen för den här beställningen nu sker enligt {{paymentTerms}} villkor.",
+        "payment_method_not_available_with_fulfillment_terms": "Betalningsmetoden du valde är inte längre tillgänglig eftersom betalningen för den här beställningen nu ska göras vid leverans.",
+        "payment_method_not_available_with_fixed_terms": "Betalningsmetoden du valde är inte längre tillgänglig eftersom betalningen för den här beställningen ska göras senare.",
+        "payment_method_not_available_with_review_requirement": "Betalningsmetoden du valde är inte längre tillgänglig eftersom betalningen ska göras när din beställning har bekräftats.",
+        "contact_information": {
+          "title": "Kontaktinformationen är ogiltig.",
+          "header": "Uppdatera din information genom att {{emailLink}}."
+        }
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "link_label": "{{partnerDisplayName}} Villkor"
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "Minska anteckningen till högst 5000 tecken."
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "Adressen stöds inte för det aktuella medlemskapet.",
+        "items_split_across_locations_unsupported": "Prime-leverans är inte tillgänglig för din beställning. Dina leveransalternativ har uppdaterats."
       }
     },
     "attributes": {
