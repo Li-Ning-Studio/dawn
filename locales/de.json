@@ -119,85 +119,85 @@
     "product": {
       "add_to_cart": "In den Warenkorb legen",
       "description": "Beschreibung",
-      "on_sale": "Sale",
+      "on_sale": "Ausverkauf",
       "quantity": {
-        "label": "Anzahl",
-        "input_label": "Anzahl von {{ product }}",
-        "increase": "Erhöhe die Menge für {{ product }}",
-        "decrease": "Verringere die Menge für {{ product }}",
+        "label": "Menge",
+        "input_label": "Menge für {{ product }}",
+        "increase": "Menge für {{ product }} erhöhen",
+        "decrease": "Menge für {{ product }} verringern",
         "minimum_of": "Mindestens {{ quantity }}",
-        "maximum_of": "Maximal {{ quantity }}",
-        "multiples_of": "In {{ quantity }}er Schritten",
+        "maximum_of": "Höchstens {{ quantity }}",
+        "multiples_of": "Schritte von {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> im Warenkorb",
         "note": "Mengenregeln anzeigen",
         "min_of": "Mindestens {{ quantity }}",
-        "max_of": "Höchstens {{ quantity }}"
+        "max_of": "Max. {{ quantity }}"
       },
       "price": {
-        "from_price_html": "Von {{ price }}",
-        "regular_price": "Normaler Preis",
+        "from_price_html": "Ab {{ price }}",
+        "regular_price": "Regulärer Preis",
         "sale_price": "Verkaufspreis",
-        "unit_price": "Grundpreis",
-        "usually_sells_at_html": "Wird normalerweise für {{ price }} verkauft"
+        "unit_price": "Stückpreis",
+        "usually_sells_at_html": "Wird normalerweise für {{ price }} verkauft."
       },
       "share": "Dieses Produkt teilen",
       "sold_out": "Ausverkauft",
       "unavailable": "Nicht verfügbar",
       "vendor": "Anbieter",
-      "video_exit_message": "{{ title }} öffnet das Video auf derselben Seite im Vollbildmodus.",
-      "xr_button": "In deinem Bereich ansehen",
-      "xr_button_label": "\"Ansicht in deinem Raum\" lädt den Artikel in ein Augmented-Reality-Fenster",
+      "video_exit_message": "{{ title }} öffnet ein Video im selben Fenster im Vollbildmodus.",
+      "xr_button": "In deinem Raum ansehen",
+      "xr_button_label": "In deinem Raum ansehen, lädt den Artikel in einem Fenster für erweiterte Realität.",
       "pickup_availability": {
-        "view_store_info": "Shop-Informationen anzeigen",
-        "check_other_stores": "Verfügbarkeit in anderen Shops überprüfen",
-        "pick_up_available": "Abholung verfügbar",
-        "pick_up_available_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}</span> verfügbar",
+        "view_store_info": "Store-Informationen anzeigen",
+        "check_other_stores": "Verfügbarkeit in anderen Geschäften prüfen",
+        "pick_up_available": "Abholung möglich",
+        "pick_up_available_at_html": "Abholung verfügbar bei <span class=\"color-foreground\">{{ location_name }}</span>",
         "pick_up_unavailable_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}</span> derzeit nicht verfügbar",
-        "unavailable": "Verfügbarkeit für Abholungen konnte nicht geladen werden",
+        "unavailable": "Abholverfügbarkeit konnte nicht geladen werden",
         "refresh": "Aktualisieren"
       },
       "media": {
-        "open_media": "Medien {{ index }} in Modal öffnen",
+        "open_media": "Medium {{ index }} im Modal öffnen",
         "play_model": "3D-Viewer abspielen",
         "play_video": "Video abspielen",
         "gallery_viewer": "Galerie-Viewer",
-        "load_image": "Bild {{ index }} in Galerieansicht laden",
-        "load_model": "3D-Modell {{ index }} in Galerieansicht laden",
-        "load_video": "Video {{ index }} in Galerieansicht abspielen",
-        "image_available": "Bild {{ index }} ist nun in der Galerieansicht verfügbar"
+        "load_image": "Bild {{ index }} in der Galerieansicht laden",
+        "load_model": "3D-Modell {{ index }} in der Galerieansicht laden",
+        "load_video": "Video {{ index }} in der Galerieansicht abspielen",
+        "image_available": "Bild {{ index }} ist jetzt in der Galerieansicht verfügbar."
       },
-      "view_full_details": "Vollständige Details anzeigen",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Versand</a> wird beim Checkout berechnet",
+      "view_full_details": "Alle Details ansehen",
+      "shipping_policy_html": "Die <a href=\"{{ link }}\">Versandkosten</a> werden an der Kasse berechnet.",
       "choose_options": "Optionen auswählen",
       "choose_product_options": "Optionen für {{ product_name }} auswählen",
-      "value_unavailable": "{{ option_value }} – nicht verfügbar",
+      "value_unavailable": "{{ option_value }} - Nicht verfügbar",
       "variant_sold_out_or_unavailable": "Variante ausverkauft oder nicht verfügbar",
       "inventory_in_stock": "Auf Lager",
       "inventory_in_stock_show_count": "{{ quantity }} auf Lager",
-      "inventory_low_stock": "Niedriger Lagerbestand",
-      "inventory_low_stock_show_count": "Niedriger Lagerbestand: {{ quantity }} verbleibend",
-      "inventory_out_of_stock": "Nicht vorrätig",
+      "inventory_low_stock": "Geringer Lagerbestand",
+      "inventory_low_stock_show_count": "Nur noch wenige auf Lager: {{ quantity }} verfügbar",
+      "inventory_out_of_stock": "Nicht auf Lager",
       "inventory_out_of_stock_continue_selling": "Auf Lager",
       "sku": "SKU",
       "volume_pricing": {
-        "title": "Volumenabhängige Preisgestaltung",
-        "note": "Volumenabhängige Preisgestaltung verfügbar",
+        "title": "Mengenrabatt",
+        "note": "Mengenrabatte verfügbar",
         "minimum": "{{ quantity }}+",
         "price_range": "{{ minimum }}–{{ maximum }}",
-        "price_at_each_html": "bei {{ price }}/Stück"
+        "price_at_each_html": "je {{ price }}/Stk."
       },
       "product_variants": "Produktvarianten",
-      "taxes_included": "Inkl. Steuern.",
-      "duties_included": "Inkl. Zollgebühren.",
-      "duties_and_taxes_included": "Inkl. Zollgebühren und Steuern.",
-      "key_highlights": "Wichtige Highlights",
+      "taxes_included": "Steuern inbegriffen.",
+      "duties_included": "Aufgaben inbegriffen.",
+      "duties_and_taxes_included": "Zölle und Steuern inbegriffen.",
+      "key_highlights": "Wichtigste Merkmale",
       "all_prices_incl_taxes": "(inkl. Steuern)",
       "country_of_origin": "Herkunftsland",
       "manufactured_by": "Hergestellt von",
       "imported_marketed_by": "Importiert und vermarktet von"
     },
     "modal": {
-      "label": "Medien-Galerie"
+      "label": "Mediengalerie"
     },
     "facets": {
       "apply": "Anwenden",
@@ -223,7 +223,7 @@
       "reset": "Zurücksetzen",
       "sort_button": "Sortieren",
       "sort_by_label": "Sortieren nach:",
-      "to": "Bis",
+      "to": "Zu",
       "clear_filter": "Filter entfernen",
       "filter_selected_accessibility": "{{ type }} ({{ count }} Filter ausgewählt)",
       "show_more": "Mehr anzeigen",
@@ -541,8 +541,8 @@
   },
   "recipient": {
     "form": {
-      "checkbox": "Ich möchte dies als Geschenk senden",
-      "email_label": "Empfänger E-Mail",
+      "checkbox": "Ich möchte das als Geschenk verschicken.",
+      "email_label": "E-Mail des Empfängers",
       "email": "E-Mail",
       "name_label": "Name des Empfängers (optional)",
       "name": "Name",
@@ -552,8 +552,8 @@
       "email_label_optional_for_no_js_behavior": "E-Mail-Adresse des Empfängers (optional)",
       "send_on": "JJJJ-MM-TT",
       "send_on_label": "Senden am (optional)",
-      "expanded": "Formular für den Empfänger des Gutscheins erweitert",
-      "collapsed": "Formular für den Empfänger des Gutscheins minimiert"
+      "expanded": "Geschenkkarten-Empfängerformular erweitert",
+      "collapsed": "Geschenkkarten-Empfängerformular eingeklappt"
     }
   },
   "studio": {
@@ -739,8 +739,115 @@
     "product_customisations": {
       "factory_grip_image": {
         "label": "Bild des Werksgriffs",
-        "info": "Neben der Option Factory Grip angezeigt."
+        "info": "Neben der Option „Factory Grip“ angezeigt."
       }
+    }
+  },
+  "shopify": {
+    "addresses": {
+      "state": "Bundesstaat",
+      "county": "Landkreis",
+      "emirate": "Emirat",
+      "governorate": "Gouvernement",
+      "confirm": "Möchten Sie diese Adresse wirklich löschen?",
+      "state_and_territory": "Bundesstaat/Territorium"
+    },
+    "checkout": {
+      "contact": {
+        "delivery_option_title": "Liefermethode",
+        "email_or_phone_label": "E-Mail-Adresse oder Mobiltelefonnummer",
+        "email_or_phone_placeholder": "E-Mail-Adresse oder Mobiltelefonnummer",
+        "field_tooltip_helper_text": "Wird für Ihre Bestellbestätigung und Erinnerungen an den Warenkorb verwendet",
+        "field_tooltip_accessibility_label": "Weitere Informationen dazu, wie Ihre Kontaktdaten verwendet werden",
+        "new_address_label": "Eine neue Adresse verwenden",
+        "company_label": "Unternehmen",
+        "company_attention_label": "Unternehmen/Zu Händen",
+        "address2_label": "Wohnung, Suite usw.",
+        "neighborhood_label": "Nachbarschaft",
+        "colony_label": "Kolonie",
+        "district_label": "Bezirk",
+        "area_label": "Bereich",
+        "country_label": "Land/Region",
+        "county_label": "Landkreis",
+        "county_placeholder": "Landkreis",
+        "governorate_label": "Gouvernement",
+        "governorate_placeholder": "Gouvernement",
+        "emirate_label": "Emirat",
+        "emirate_placeholder": "Emirat",
+        "civic_number_warning": "Fügen Sie eine Hausnummer hinzu, falls Sie eine haben.",
+        "different_shipping_address_label": "An eine andere Adresse liefern",
+        "different_shipping_address_text": "Verwenden Sie für diese Bestellung eine einmalige Adresse",
+        "change_location_link_label": "Standort ändern"
+      },
+      "billing": {
+        "same_as_shipping": "Wie Lieferadresse",
+        "add_address": "Verwenden Sie eine andere Adresse",
+        "address_more": "Weitere Aktionen für diese Adresse",
+        "address_confirm": "Möchten Sie diese Adresse wirklich aus Ihrem Konto löschen?",
+        "address_form": {
+          "cancel": "Abbrechen"
+        }
+      },
+      "company_location": {
+        "location_rollup_accessibility_label": "Unternehmensstandortoptionen"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Express-Kauf",
+        "or_pay_another_way": "Oder anders bezahlen",
+        "or_check_out_another_way": "Oder probiere eine andere Möglichkeit aus.",
+        "or_pay_with_credit_card": "Oder mit Kreditkarte bezahlen"
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "Ihre Kreditkarte wird mit %{amount} belastet.",
+        "payment_total_label": "Gesamtbetrag der Zahlung",
+        "card_provider_fx_charges_warning": "Ihr Kartenanbieter erhebt möglicherweise Gebühren für Transaktionen in %{currency_code}.",
+        "currency_not_supported_by_shop": "Die von Ihnen ausgewählte Währung ist nicht mehr verfügbar. Alle Preise werden jetzt in %{currency_code} angezeigt."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Ihr Warenkorb wurde anhand Ihres Versandlandes aktualisiert.",
+        "cart_and_currency_updated_based_on_country": "Dein Warenkorb und die Währung wurden entsprechend deinem Versandland aktualisiert."
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Dein Land/deine Region wurde aktualisiert. Gib deine Lieferadresse ein, um den Checkout fortzusetzen."
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Bei der Bearbeitung Ihrer Anfrage ist ein Problem aufgetreten. Wenden Sie sich an den Shopbetreiber."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "Beim Verarbeiten deiner Bestellung ist ein Problem aufgetreten. Versuche es in ein paar Minuten erneut."
+      },
+      "captcha": {
+        "title": "Schließen Sie das CAPTCHA ab, um fortzufahren.",
+        "errors": {
+          "not_solved": "Schließen Sie das CAPTCHA ab, um fortzufahren."
+        }
+      },
+      "clipboard": {
+        "failed_to_copy": "Kopieren fehlgeschlagen"
+      },
+      "b2b_errors": {
+        "company_location_required": {
+          "title": "Wählen Sie aus, wie Sie zur Kasse gehen möchten.",
+          "description": "Melden Sie sich an und wählen Sie einen Unternehmensstandort aus, um eine Geschäftsbestellung aufzugeben, oder bestellen Sie als Gast.",
+          "continue_button": "Weiter zur geschäftlichen Anmeldung"
+        },
+        "lost_b2b_purchasing_permissions": "Sie haben keine Berechtigung mehr, B2B-Bestellungen aufzugeben. %{logout_url}, um stattdessen eine persönliche Bestellung aufzugeben.",
+        "lost_permissions_subtitle": "Sie haben keine Berechtigung mehr, B2B-Bestellungen aufzugeben. Melden Sie sich ab, um eine private Bestellung aufzugeben."
+      },
+      "address_management": {
+        "saved_with_store": "Mit diesem Store gespeichert"
+      }
+    },
+    "attributes": {
+      "password_confirmation": "Die Passwortbestätigung",
+      "body": "Körper"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} Rabatte wurden angewendet."
+    },
+    "challenge": {
+      "message": "Um fortzufahren, bestätige bitte, dass du kein Roboter bist.",
+      "submit_button_text": "Absenden"
     }
   }
 }

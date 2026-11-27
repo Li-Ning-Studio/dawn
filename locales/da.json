@@ -117,65 +117,65 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Læg i indkøbskurv",
+      "add_to_cart": "Læg i kurven",
       "description": "Beskrivelse",
       "on_sale": "Udsalg",
       "quantity": {
         "label": "Antal",
         "input_label": "Antal for {{ product }}",
-        "increase": "Øg antallet for {{ product }}",
-        "decrease": "Reducer antallet for {{ product }}",
-        "minimum_of": "Minimum på {{ quantity }}",
-        "maximum_of": "Maksimum på {{ quantity }}",
-        "multiples_of": "Intervaller på {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i indkøbskurven",
+        "increase": "Øg mængden af {{ product }}",
+        "decrease": "Reducer antal for {{ product }}",
+        "minimum_of": "Minimum {{ quantity }}.",
+        "maximum_of": "Højst {{ quantity }}",
+        "multiples_of": "Trin på {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i kurven",
         "note": "Se mængderegler",
-        "min_of": "Min. {{ quantity }}",
+        "min_of": "Min {{ quantity }}",
         "max_of": "Maks. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Fra {{ price }}",
         "regular_price": "Normalpris",
         "sale_price": "Udsalgspris",
-        "unit_price": "Stykpris",
+        "unit_price": "Enhedspris",
         "usually_sells_at_html": "Sælges normalt til {{ price }}"
       },
       "share": "Del dette produkt",
       "sold_out": "Udsolgt",
       "unavailable": "Ikke tilgængelig",
-      "vendor": "Forhandler",
-      "video_exit_message": "{{ title }} åbner video i fuld skærm i samme vindue.",
-      "xr_button": "Se den i dit område",
-      "xr_button_label": "Se den i dine omgivelser – indlæser vare i et augmented reality-vindue",
+      "vendor": "Leverandør",
+      "video_exit_message": "{{ title }} åbner videoen i fuld skærm i samme vindue.",
+      "xr_button": "Se den i dit hjem",
+      "xr_button_label": "Se varen i dit hjem i et augmented reality-vindue",
       "pickup_availability": {
         "view_store_info": "Se butiksoplysninger",
-        "check_other_stores": "Kontrollér tilgængelighed i andre butikker",
-        "pick_up_available": "Afhentning er tilgængelig",
-        "pick_up_available_at_html": "Afhentning er tilgængelig på <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig på <span class=\"color-foreground\">{{ location_name }}</span> i øjeblikket",
-        "unavailable": "Tilgængelighed for afhentning kunne ikke indlæses",
+        "check_other_stores": "Tjek tilgængeligheden i andre butikker",
+        "pick_up_available": "Afhentning tilgængelig",
+        "pick_up_available_at_html": "Afhentning er mulig hos <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Afhentning er i øjeblikket ikke tilgængelig på <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Kunne ikke indlæse afhentningstilgængelighed",
         "refresh": "Opdater"
       },
       "media": {
-        "open_media": "Åbn mediet {{ index }} i modus",
-        "play_model": "Afspil 3D-fremviser",
+        "open_media": "Åbn medie {{ index }} i et modalt vindue",
+        "play_model": "Afspil 3D-visning",
         "play_video": "Afspil video",
-        "gallery_viewer": "Fremviser til Galleri",
-        "load_image": "Indlæs billedet {{ index }} i gallerivisning",
-        "load_model": "Indlæs 3D-modellen {{ index }} i gallerivisning",
-        "load_video": "Afspil videoen {{ index }} i gallerivisning",
-        "image_available": "Billedet {{ index }} er nu tilgængeligt i gallerivisning"
+        "gallery_viewer": "Galleriviser",
+        "load_image": "Indlæs billede {{ index }} i gallerivisning",
+        "load_model": "Indlæs 3D-model {{ index }} i gallerivisning",
+        "load_video": "Afspil video {{ index }} i gallerivisning",
+        "image_available": "Billede {{ index }} er nu tilgængeligt i gallerivisningen"
       },
-      "view_full_details": "Se komplette oplysninger",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Levering</a> beregnes ved betaling.",
+      "view_full_details": "Se alle detaljer",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Fragt</a> beregnes ved betaling.",
       "choose_options": "Vælg muligheder",
       "choose_product_options": "Vælg muligheder for {{ product_name }}",
       "value_unavailable": "{{ option_value }} - Ikke tilgængelig",
       "variant_sold_out_or_unavailable": "Varianten er udsolgt eller utilgængelig",
       "inventory_in_stock": "På lager",
       "inventory_in_stock_show_count": "{{ quantity }} på lager",
-      "inventory_low_stock": "Lav lagerbeholdning",
-      "inventory_low_stock_show_count": "Lav lagerbeholdning: {{ quantity }} tilbage",
+      "inventory_low_stock": "Få på lager",
+      "inventory_low_stock_show_count": "Få på lager: {{ quantity }} tilbage",
       "inventory_out_of_stock": "Ikke på lager",
       "inventory_out_of_stock_continue_selling": "På lager",
       "sku": "SKU",
@@ -184,12 +184,12 @@
         "note": "Mængderabat tilgængelig",
         "minimum": "Mere end {{ quantity }}",
         "price_range": "{{ minimum }} – {{ maximum }}",
-        "price_at_each_html": "til {{ price }} pr. stk."
+        "price_at_each_html": "til {{ price }}/stk."
       },
       "product_variants": "Produktvarianter",
-      "taxes_included": "Inklusive skatter.",
-      "duties_included": "Inklusive told.",
-      "duties_and_taxes_included": "Inklusive told og skatter.",
+      "taxes_included": "Afgifter inkluderet.",
+      "duties_included": "Opgaver inkluderet.",
+      "duties_and_taxes_included": "Told og afgifter inkluderet.",
       "key_highlights": "Vigtige højdepunkter",
       "all_prices_incl_taxes": "(inkl. skatter)",
       "country_of_origin": "Oprindelsesland",
@@ -541,19 +541,19 @@
   },
   "recipient": {
     "form": {
-      "checkbox": "Jeg vil sende som en gave",
-      "email_label": "Modtagers mailadresse",
-      "email": "Mail",
-      "name_label": "Modtagerens navn (valgfrit)",
+      "checkbox": "Jeg vil gerne sende dette som en gave",
+      "email_label": "Modtagers e-mail",
+      "email": "E-mail",
+      "name_label": "Modtagernavn (valgfrit)",
       "name": "Navn",
       "message_label": "Besked (valgfrit)",
       "message": "Besked",
-      "max_characters": "Højst {{ max_chars }} tegn",
-      "email_label_optional_for_no_js_behavior": "Modtagerens mailadresse (valgfrit)",
+      "max_characters": "Maks. {{ max_chars }} tegn",
+      "email_label_optional_for_no_js_behavior": "Modtagerens e-mail (valgfrit)",
       "send_on": "ÅÅÅÅ-MM-DD",
-      "send_on_label": "Send (valgfrit)",
-      "expanded": "Formularen til modtager af gavekort er vist",
-      "collapsed": "Formularen til modtager af gavekort er skjult"
+      "send_on_label": "Send videre (valgfrit)",
+      "expanded": "Gavekortmodtagerens formular udvidet",
+      "collapsed": "Gavekortmodtagerens formular er skjult"
     }
   },
   "studio": {
@@ -741,6 +741,266 @@
         "label": "Billede af fabriksmonteret greb",
         "info": "Vises ved siden af fabriksgribemuligheden."
       }
+    }
+  },
+  "shopify": {
+    "addresses": {
+      "region": "Region",
+      "county": "Amt",
+      "confirm": "Er du sikker på, at du vil slette denne adresse?",
+      "state_and_territory": "Delstat/territorium"
+    },
+    "checkout": {
+      "contact": {
+        "contact_method_title": "Kontakt",
+        "email_label": "E-mail",
+        "email_rollup_accessibility_label": "E-mailmuligheder",
+        "email_placeholder": "E-mail",
+        "email_or_phone_label": "E-mail eller mobilnummer",
+        "email_or_phone_placeholder": "E-mail eller mobilnummer",
+        "field_tooltip_helper_text": "Bruges til din ordrebekræftelse og påmindelser om varer i kurven",
+        "field_tooltip_accessibility_label": "Flere oplysninger om, hvordan dine kontaktoplysninger bruges",
+        "company_label": "Virksomhed",
+        "company_attention_label": "Virksomhed/Att.",
+        "address2_label": "Lejlighed, suite osv.",
+        "neighborhood_label": "Nabolag",
+        "country_code": "Lande-/regionskode",
+        "county_label": "Amt",
+        "county_placeholder": "Amt",
+        "civic_number_warning": "Tilføj et husnummer, hvis du har et",
+        "different_shipping_address_label": "Send til en anden adresse",
+        "change_company_location_link_label": "Skift virksomhedens placering",
+        "change_location_link_label": "Skift placering",
+        "title": "Information",
+        "shipping_used_as_billing_notice": "Denne adresse vil også blive brugt som faktureringsadresse for denne ordre.",
+        "optional_first_name_label": "Fornavn (valgfrit)",
+        "storefront_link": "forhandlerens hjemmeside",
+        "optional_company_attention_label": "Virksomhed/Att. (valgfrit)",
+        "optional_company_label": "Virksomhed (valgfrit)",
+        "optional_street_name_label": "Gade (valgfrit)",
+        "optional_address2_label": "Lejlighed, suite osv. (valgfrit)",
+        "optional_neighborhood_label": "Kvarter (valgfrit)",
+        "optional_subdistrict_label": "Underområde (valgfrit)",
+        "ward_label": "Afdeling",
+        "optional_ward_label": "Afdeling (valgfrit)",
+        "optional_area_label": "Område (valgfrit)",
+        "region_label": "Region",
+        "region_placeholder": "Region",
+        "region_none": "Ingen valgt",
+        "state_and_territory_label": "Delstat/territorium",
+        "state_and_territory_placeholder": "Delstat/territorium",
+        "phone_rollup_accessibility_label": "Telefonmuligheder",
+        "optional_phone_label": "Telefon (valgfrit)",
+        "phone_tooltip": "Hvis vi får brug for at kontakte dig om din ordre",
+        "pincode_label": "PIN-kode",
+        "optional_pincode_label": "PIN-kode (valgfrit)",
+        "pincode_placeholder": "PIN-kode"
+      },
+      "billing": {
+        "billing_address_title": "Faktureres til",
+        "billing_address_rollup_accessibility_label": "Faktureringsmuligheder",
+        "same_as_shipping": "Samme som leveringsadressen"
+      },
+      "company_location": {
+        "location_title": "Virksomhedens placering",
+        "location_rollup_accessibility_label": "Muligheder for virksomhedsplacering"
+      },
+      "alternative_payment_method_banner": {
+        "or_check_out_another_way": "Eller se på en anden måde"
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "Dit kreditkort vil blive opkrævet %{amount}",
+        "payment_total_label": "Betalingsbeløb",
+        "card_provider_fx_charges_warning": "Din kortudbyder kan opkræve gebyrer for transaktioner i %{currency_code}.",
+        "currency_not_supported_by_shop": "Den valuta, du har valgt, er ikke længere tilgængelig. Alle priser vises nu i %{currency_code}."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Din indkøbskurv er blevet opdateret ud fra dit leveringsland.",
+        "cart_and_currency_updated_based_on_country": "Din indkøbskurv og valuta er blevet opdateret ud fra dit leveringsland.",
+        "currency_updated_for_country": "Valuta opdateret for %{country}"
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Dit land/område er blevet opdateret. Indtast din leveringsadresse for at fortsætte til betaling."
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Der opstod et problem med at behandle din anmodning. Kontakt butiksejeren."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "Der opstod et problem med at behandle din ordre. Prøv igen om et par minutter."
+      },
+      "captcha": {
+        "title": "Gennemfør CAPTCHA'en for at fortsætte",
+        "errors": {
+          "not_solved": "Gennemfør CAPTCHA'en for at fortsætte",
+          "load_failed": "CAPTCHA'en kunne ikke indlæses. Prøv igen."
+        }
+      },
+      "clipboard": {
+        "failed_to_copy": "Kopiering mislykkedes"
+      },
+      "b2b_errors": {
+        "company_location_required": {
+          "title": "Vælg, hvordan du vil gå til kassen",
+          "description": "Log ind, og vælg en virksomhedsadresse for at afgive en erhvervsordre, eller gå til kassen som gæst.",
+          "continue_button": "Fortsæt til virksomhedslogin"
+        },
+        "lost_permissions_subtitle": "Du har ikke længere tilladelse til at afgive B2B-ordrer. Log ud for at afgive en privat ordre."
+      },
+      "address_management": {
+        "saved_with_store": "Gemt med denne butik"
+      },
+      "delivery_options": {
+        "pick_up": "Hent",
+        "pick_up_from_store": "Afhent i butikken",
+        "pick_up_in_one_hour": "Normalt klar om 1 time",
+        "pick_up_in_two_hours": "Normalt klar om 2 timer",
+        "pick_up_in_four_hours": "Normalt klar om 4 timer",
+        "pick_up_in_two_to_four_days": "Normalt klar på 2-4 dage",
+        "pick_up_in_five_or_more_days": "Normalt klar om 5+ dage",
+        "company_location_no_address_banner": "Ordrer, der sendes til steder uden en adresse, bliver sendt til gennemgang.",
+        "ship": "Send afsted",
+        "ship_to_address": "Send til adressen",
+        "pick_up_locations": "Afhentningssteder",
+        "pickup_point_map_title": "Kort over afhentningssteder",
+        "pickup_point_method_definition": "Send til afhentningssted",
+        "retail_method_definition": "Detailforsendelse",
+        "subscription_pickup_information": "Dette bliver afhentningsstedet for alle fremtidige ordrer på dit abonnement."
+      },
+      "customer_account": {
+        "save_my_information_label": "Gem disse oplysninger til næste gang.",
+        "invalid_address": "Den valgte adresse er ugyldig. %{update_address_link} eller vælg en anden adresse.",
+        "incomplete_address": "Den valgte adresse er ufuldstændig. %{update_address_link}, eller vælg en anden adresse.",
+        "rollup_accessibility_label": "Kontoindstillinger"
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Produktet er ikke tilgængeligt",
+          "other": "Utilgængelige produkter"
+        },
+        "products_not_available": {
+          "one": "Dette produkt fjernes fra din indkøbskurv, fordi det ikke er tilgængeligt i dit land/område.",
+          "other": "Disse produkter fjernes fra din indkøbskurv, fordi de ikke er tilgængelige i dit land/din region."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Dette produkt er ikke tilgængeligt i dit land/din region."
+        }
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Ingen levering mulig for %{count} vare",
+            "other": "Ingen levering er tilgængelig for %{count} varer"
+          },
+          "message": {
+            "one": "Denne vare fjernes fra din kurv, fordi der ikke er nogen leveringsmetoder tilgængelige for din adresse.",
+            "other": "Disse varer fjernes fra din indkøbskurv, fordi der ikke er nogen leveringsmetoder tilgængelige for din adresse."
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "delete_customer_mandate": {
+          "generic_error": "Der opstod et problem med at behandle din anmodning.",
+          "success_message": "Din betalingsmetode er blevet slettet."
+        }
+      },
+      "field_errors": {
+        "address_first_name_blank": "Indtast et fornavn",
+        "address_first_name_too_long": "Fornavnet er for langt (maksimalt 255 tegn)",
+        "address_first_name_contains_emojis": "Fornavnet må ikke indeholde emojis.",
+        "address_first_name_contains_html_tags": "Fornavnet må ikke indeholde HTML-tags.",
+        "address_first_name_contains_url": "Fornavnet må ikke indeholde en URL.",
+        "address_last_name_blank": "Indtast et efternavn",
+        "address_last_name_too_long": "Efternavnet er for langt (maks. 255 tegn)",
+        "address_last_name_contains_emojis": "Efternavnet må ikke indeholde emojis.",
+        "address_last_name_contains_html_tags": "Efternavnet må ikke indeholde HTML-tags",
+        "address_last_name_contains_url": "Efternavnet må ikke indeholde en URL",
+        "address_last_name_contains_mathematical_symbols": "Efternavnet må ikke indeholde matematiske symboler.",
+        "address_address1_blank": "Indtast en adresse",
+        "address_address1_too_long": "Den første adresselinje er for lang (maksimum er 255 tegn)",
+        "address_address1_contains_html_tags": "Adresse1 må ikke indeholde HTML-tags",
+        "address_address1_contains_mathematical_symbols": "Den første adresselinje må ikke indeholde matematiske symboler",
+        "address_line2_blank": "Indtast lejlighed, suite osv.",
+        "address_address2_blank": "Indtast lejlighed, suite osv.",
+        "address_address2_too_long": "Den anden adresselinje er for lang (maksimum er 255 tegn)",
+        "address_address2_contains_emojis": "Adresse2 må ikke indeholde emojis.",
+        "address_address2_contains_html_tags": "Adresse2 må ikke indeholde HTML-tags.",
+        "address_address2_contains_mathematical_symbols": "Den anden adresselinje må ikke indeholde matematiske symboler.",
+        "address_barangay_blank": "Indtast en barangay",
+        "address_barangay_too_long": "Barangay er for langt (maksimalt {{count}} tegn)",
+        "address_barangay_contains_emojis": "Barangay må ikke indeholde emojis.",
+        "address_barangay_contains_html_tags": "Barangay må ikke indeholde HTML-tags.",
+        "address_barangay_contains_mathematical_symbols": "Barangay må ikke indeholde matematiske symboler",
+        "address_colony_blank": "Gå ind i en koloni",
+        "address_colony_too_long": "Kolonien er for lang (maksimalt {{count}} tegn)",
+        "address_colony_contains_emojis": "Kolonien må ikke indeholde emojis",
+        "address_colony_contains_mathematical_symbols": "Kolonien må ikke indeholde matematiske symboler",
+        "address_commune_blank": "Gå ind i en kommune",
+        "address_commune_too_long": "Kommune er for lang (maksimalt {{count}} tegn)",
+        "address_commune_contains_html_tags": "Kommunen må ikke indeholde HTML-tags",
+        "address_commune_contains_mathematical_symbols": "Kommune kan ikke indeholde matematiske symboler.",
+        "address_district_blank": "Indtast et distrikt",
+        "address_district_too_long": "Distriktet er for langt (maksimalt {{count}} tegn)",
+        "address_district_contains_emojis": "Distriktet kan ikke indeholde emojis",
+        "address_district_contains_html_tags": "Området må ikke indeholde HTML-tags",
+        "address_district_contains_mathematical_symbols": "Distriktet må ikke indeholde matematiske symboler",
+        "address_block_blank": "Indtast en blok",
+        "address_block_contains_emojis": "Blokken må ikke indeholde emojis.",
+        "address_block_contains_html_tags": "Blokke kan ikke indeholde HTML-tags.",
+        "address_area_blank": "Indtast et område",
+        "address_area_contains_emojis": "Området må ikke indeholde emojis.",
+        "address_area_contains_html_tags": "Området må ikke indeholde HTML-tags",
+        "address_city_blank": "Indtast en by",
+        "address_city_too_long": "Byen er for lang (maksimalt 255 tegn)",
+        "address_city_contains_emojis": "Byen må ikke indeholde emojis.",
+        "address_city_contains_html_tags": "Byen må ikke indeholde HTML-tags.",
+        "address_city_contains_mathematical_symbols": "Byen må ikke indeholde matematiske symboler.",
+        "address_country_blank": "Vælg et land/en region",
+        "address_country_not_supported": "Vi sender ikke til dette land eller denne region. Indtast en ny leveringsadresse, og prøv igen.",
+        "address_company_blank": "Indtast et firmanavn",
+        "address_company_too_long": "Virksomhedsnavnet er for langt (maksimalt 255 tegn)",
+        "address_company_contains_emojis": "Virksomheden må ikke indeholde emojis",
+        "address_company_contains_html_tags": "Virksomheden må ikke indeholde HTML-tags.",
+        "address_company_contains_mathematical_symbols": "Virksomhedsnavnet må ikke indeholde matematiske symboler.",
+        "address_generic_invalid": "Ugyldig post",
+        "address_country_invalid": "Vælg et land/en region på listen"
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Der opstod et problem med vores betaling",
+          "message": "Opdater denne side, eller prøv igen om et par minutter.",
+          "request_id": "Anmodnings-ID: {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "Denne butik er beskyttet med adgangskode.",
+          "customer_account_required": "En kundekonto er nødvendig for at gennemføre købet",
+          "cart_completed": "Denne betaling er allerede gennemført.",
+          "invalid_cart": "Kurven er ikke længere gyldig",
+          "not_authorized": "Godkendelse ved betaling mislykkedes. Kontrollér dine app-legitimationsoplysninger.",
+          "killswitch_enabled": "Betaling er midlertidigt utilgængelig",
+          "policy_violation": "Kunne ikke gennemføre betalingen på grund af begrænsninger i politikindstillingerne",
+          "unrecoverable_failure": "Kunne ikke indlæse betalingssiden. Prøv igen."
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Din ordre kunne ikke behandles, fordi din rabatkode ikke længere er tilgængelig. Gennemgå det samlede ordrebeløb, og prøv igen."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Gå til webshoppen"
+        }
+      }
+    },
+    "attributes": {
+      "email": "e-mail",
+      "password_confirmation": "Bekræftelse af adgangskode",
+      "body": "krop"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} rabatter er blevet anvendt."
+    },
+    "challenge": {
+      "message": "For at fortsætte skal du fortælle os, at du ikke er en robot.",
+      "error": "Dit svar var ikke korrekt, prøv venligst igen."
     }
   }
 }

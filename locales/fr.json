@@ -120,79 +120,85 @@
     "product": {
       "add_to_cart": "Ajouter au panier",
       "description": "Description",
-      "on_sale": "Promotion",
-      "product_variants": "Variantes de produits",
+      "on_sale": "Vente",
+      "product_variants": "Variantes du produit",
       "quantity": {
         "label": "Quantité",
         "input_label": "Quantité pour {{ product }}",
         "increase": "Augmenter la quantité de {{ product }}",
-        "decrease": "Réduire la quantité de {{ product }}",
+        "decrease": "Diminuer la quantité de {{ product }}",
         "minimum_of": "Minimum de {{ quantity }}",
         "maximum_of": "Maximum de {{ quantity }}",
         "multiples_of": "Incréments de {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> dans le panier",
         "note": "Voir les règles de quantité",
-        "min_of": "Min. {{ quantity }}",
-        "max_of": "Max. {{ quantity }}"
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}"
       },
       "price": {
         "from_price_html": "À partir de {{ price }}",
-        "regular_price": "Prix habituel",
-        "sale_price": "Prix promotionnel",
-        "unit_price": "Prix unitaire"
+        "regular_price": "Prix normal",
+        "sale_price": "Prix soldé",
+        "unit_price": "Prix unitaire",
+        "usually_sells_at_html": "Se vend généralement à {{ price }}"
       },
       "share": "Partager ce produit",
       "sold_out": "Épuisé",
-      "unavailable": "Non disponible(s)",
+      "unavailable": "Indisponible",
       "vendor": "Fournisseur",
       "video_exit_message": "{{ title }} ouvre la vidéo en plein écran dans la même fenêtre.",
-      "xr_button": "Afficher dans son espace",
-      "xr_button_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée",
+      "xr_button": "Voir dans votre espace",
+      "xr_button_label": "Voir dans votre espace, charge l’article dans une fenêtre de réalité augmentée",
       "pickup_availability": {
-        "view_store_info": "Afficher les informations de la boutique",
-        "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
-        "pick_up_available": "Service de retrait disponible",
-        "pick_up_available_at_html": "Service de retrait disponible à <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Service de retrait non disponible actuellement à <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Impossible de charger la disponibilité du service de retrait",
+        "view_store_info": "Voir les informations du magasin",
+        "check_other_stores": "Vérifier la disponibilité dans d’autres magasins",
+        "pick_up_available": "Retrait disponible",
+        "pick_up_available_at_html": "Retrait disponible à <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Retrait actuellement indisponible à <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Impossible de charger la disponibilité du retrait en magasin",
         "refresh": "Actualiser"
       },
       "media": {
         "open_media": "Ouvrir le média {{ index }} dans une fenêtre modale",
-        "play_model": "Lire la visionneuse 3D",
+        "play_model": "Lecteur 3D",
         "play_video": "Lire la vidéo",
-        "gallery_viewer": "Visionneuse de la galerie",
-        "load_image": "Charger l'image {{ index }} dans la galerie",
-        "load_model": "Charger le modèle 3D {{ index }} dans la galerie",
-        "load_video": "Lire la vidéo {{ index }} dans la galerie",
-        "image_available": "L'image {{ index }} est maintenant disponible dans la galerie"
+        "gallery_viewer": "Visionneuse de galerie",
+        "load_image": "Charger l’image {{ index }} dans la vue galerie",
+        "load_model": "Charger le modèle 3D {{ index }} en vue galerie",
+        "load_video": "Lire la vidéo {{ index }} en mode galerie",
+        "image_available": "L’image {{ index }} est maintenant disponible dans la vue Galerie."
       },
-      "view_full_details": "Afficher tous les détails",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Frais d'expédition</a> calculés à l'étape de paiement.",
+      "view_full_details": "Voir tous les détails",
+      "shipping_policy_html": "Frais de livraison calculés au moment du paiement via <a href=\"{{ link }}\">Expédition</a>.",
       "choose_options": "Choisir des options",
-      "choose_product_options": "Choisir des options pour {{ product_name }}",
-      "value_unavailable": "{{ option_value }} – indisponible",
+      "choose_product_options": "Choisissez les options pour {{ product_name }}",
+      "value_unavailable": "{{ option_value }} - Indisponible",
       "variant_sold_out_or_unavailable": "Variante épuisée ou indisponible",
       "inventory_in_stock": "En stock",
-      "inventory_in_stock_show_count": "{{ quantity }} en stock",
-      "inventory_low_stock": "Stock bas",
-      "inventory_low_stock_show_count": "Stock bas : {{ quantity }} restant(s)",
+      "inventory_in_stock_show_count": "{{ quantity }} en stock",
+      "inventory_low_stock": "Stock faible",
+      "inventory_low_stock_show_count": "Stock faible : plus que {{ quantity }} en stock",
       "sku": "SKU",
       "inventory_out_of_stock": "En rupture de stock",
       "inventory_out_of_stock_continue_selling": "En stock",
       "volume_pricing": {
-        "title": "Tarification basée sur le volume",
-        "note": "La tarification basée sur le volume est disponible",
+        "title": "Tarification selon le volume",
+        "note": "Tarifs dégressifs disponibles",
         "minimum": "{{ quantity }} ou plus",
         "price_range": "{{ minimum }} - {{ maximum }}",
-        "price_at_each_html": "à {{ price }}/pièce"
+        "price_at_each_html": "à {{ price }}/unité"
       },
       "taxes_included": "Taxes incluses.",
-      "duties_included": "Frais de douane inclus.",
-      "duties_and_taxes_included": "Frais de douane et taxes inclus."
+      "duties_included": "Fonctions incluses.",
+      "duties_and_taxes_included": "Droits et taxes inclus.",
+      "key_highlights": "Points clés",
+      "all_prices_incl_taxes": "(taxes comprises)",
+      "country_of_origin": "Pays d’origine",
+      "manufactured_by": "Fabriqué par",
+      "imported_marketed_by": "Importé et commercialisé par"
     },
     "modal": {
-      "label": "Galerie de supports multimédias"
+      "label": "Galerie multimédia"
     },
     "facets": {
       "apply": "Appliquer",
@@ -215,13 +221,13 @@
       },
       "product_count_simple": {
         "one": "{{ count }} produit",
-        "other": "{{ count }} produits",
+        "other": "{{ count }} produits",
         "many": "{{ count }} produits"
       },
       "reset": "Réinitialiser",
       "sort_button": "Trier",
-      "sort_by_label": "Trier par :",
-      "to": "Destination",
+      "sort_by_label": "Trier par :",
+      "to": "Vers",
       "clear_filter": "Supprimer le filtre",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
       "show_more": "Afficher plus",
@@ -533,19 +539,115 @@
   },
   "recipient": {
     "form": {
-      "checkbox": "Je veux envoyer ce produit comme cadeau",
-      "email_label": "E‑mail du destinataire",
-      "email": "E‑mail",
+      "checkbox": "Je souhaite envoyer ceci comme cadeau.",
+      "email_label": "E-mail du destinataire",
+      "email": "E-mail",
       "name_label": "Nom du destinataire (facultatif)",
       "name": "Nom",
       "message_label": "Message (facultatif)",
       "message": "Message",
-      "max_characters": "{{ max_chars }} caractères au maximum",
-      "email_label_optional_for_no_js_behavior": "E‑mail du destinataire (facultatif)",
+      "max_characters": "{{ max_chars }} caractères maximum",
+      "email_label_optional_for_no_js_behavior": "E-mail du destinataire (facultatif)",
       "send_on": "AAAA-MM-JJ",
       "send_on_label": "Envoyer le (facultatif)",
-      "expanded": "Formulaire de destinataire de carte-cadeau agrandi",
-      "collapsed": "Formulaire de destinataire de carte-cadeau réduit"
+      "expanded": "Formulaire du destinataire de la carte-cadeau développé",
+      "collapsed": "Formulaire du destinataire de la carte-cadeau réduit"
+    }
+  },
+  "shopify": {
+    "addresses": {
+      "pincode": "Code postal",
+      "confirm": "Voulez-vous vraiment supprimer cette adresse ?",
+      "zip_code": "Code postal"
+    },
+    "checkout": {
+      "contact": {
+        "contact_method_title": "Contactez-nous",
+        "email_label": "E-mail",
+        "email_rollup_accessibility_label": "Options de courriel",
+        "email_placeholder": "E-mail",
+        "email_or_phone_label": "Adresse e-mail ou numéro de téléphone portable",
+        "email_or_phone_placeholder": "Adresse e-mail ou numéro de téléphone portable",
+        "field_tooltip_helper_text": "Utilisé pour la confirmation de votre commande et les rappels de panier",
+        "last_name_label": "Nom de famille",
+        "country_label": "Pays/Région",
+        "country_code": "Code pays/région",
+        "civic_number_warning": "Ajoutez un numéro de maison si vous en avez un.",
+        "different_shipping_address_label": "Expédier à une autre adresse",
+        "different_shipping_address_text": "Utilisez une adresse à usage unique pour cette commande.",
+        "change_company_location_link_label": "Modifier l’emplacement de l’entreprise",
+        "change_location_link_label": "Changer de lieu"
+      },
+      "billing": {
+        "same_as_shipping": "Identique à l’adresse de livraison",
+        "add_address": "Utilisez une autre adresse",
+        "address_more": "Plus d'actions pour cette adresse",
+        "address_confirm": "Voulez-vous vraiment supprimer cette adresse de votre compte ?"
+      },
+      "company_location": {
+        "location_rollup_accessibility_label": "Options de localisation de l’entreprise"
+      },
+      "alternative_payment_method_banner": {
+        "or_pay_another_way": "Ou payez autrement",
+        "or_check_out_another_way": "Ou découvrez une autre façon",
+        "or_pay_with_credit_card": "Ou payez par carte de crédit"
+      },
+      "change_currency": {
+        "payment_total_label": "Total du paiement",
+        "card_provider_fx_charges_warning": "Votre fournisseur de carte peut facturer des frais sur les transactions en %{currency_code}.",
+        "currency_not_supported_by_shop": "La devise que vous avez sélectionnée n’est plus disponible. Tous les prix sont désormais en %{currency_code}."
+      },
+      "change_country": {
+        "cart_and_currency_updated_based_on_country": "Votre panier et votre devise ont été mis à jour en fonction de votre pays de livraison.",
+        "currency_updated_for_country": "Devise mise à jour pour %{country}"
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Votre pays/région a été mis à jour. Saisissez votre adresse de livraison pour poursuivre la commande."
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Un problème est survenu lors du traitement de votre demande. Contactez le propriétaire de la boutique."
+      },
+      "captcha": {
+        "title": "Complétez le CAPTCHA pour continuer.",
+        "retry": "Réessayez le CAPTCHA",
+        "errors": {
+          "not_solved": "Complétez le CAPTCHA pour continuer.",
+          "load_failed": "Le CAPTCHA n’a pas pu se charger. Réessayez."
+        }
+      },
+      "clipboard": {
+        "failed_to_copy": "Échec de la copie"
+      },
+      "b2b_errors": {
+        "company_location_required": {
+          "title": "Choisissez comment passer à la caisse",
+          "description": "Connectez-vous et sélectionnez un établissement de l’entreprise pour passer une commande professionnelle, ou commandez en tant qu’invité.",
+          "continue_button": "Continuer vers la connexion professionnelle"
+        },
+        "lost_b2b_purchasing_permissions": "Vous n’avez plus l’autorisation de passer des commandes B2B. %{logout_url} pour passer plutôt une commande personnelle.",
+        "lost_permissions_subtitle": "Vous n’avez plus l’autorisation de passer des commandes B2B. Déconnectez-vous pour passer une commande personnelle.",
+        "lost_permissions_title": "Aucune autorisation de localisation"
+      },
+      "address_management": {
+        "saved_with_store": "Enregistré dans cette boutique"
+      }
+    },
+    "attributes": {
+      "first_name": "prénom",
+      "last_name": "nom de famille",
+      "body": "corps"
+    },
+    "challenge": {
+      "message": "Pour continuer, indiquez-nous que vous n’êtes pas un robot.",
+      "error": "Votre réponse n’était pas correcte, veuillez réessayer."
+    }
+  },
+  "settings_schema": {
+    "product_customisations": {
+      "factory_grip_image": {
+        "label": "Image de la poignée d'usine",
+        "info": "Affiché à côté de l’option de poignée d’usine."
+      }
     }
   }
 }
