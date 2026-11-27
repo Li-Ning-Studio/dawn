@@ -2911,7 +2911,172 @@
         "order_updates_subscribe_to_email_notifications_failed": "Vi kan inte spara den här e-postadressen för uppdateringar. Försök igen eller använd en annan e-postadress.",
         "order_updates_subscribe_to_email_notifications_email_already_exists": "E-postadressen du angav finns redan.",
         "manage_order_label": "Hantera din beställning",
-        "resend_gift_cards_by_text": "Skicka textmeddelandet igen"
+        "resend_gift_cards_by_text": "Skicka textmeddelandet igen",
+        "thank_you_title": "Din beställning är bekräftad.",
+        "thank_you_title_payment": "Din betalning är bekräftad.",
+        "thank_you_title_review": "Din beställning har skickats in för granskning",
+        "thank_you_title_payments_app_pending_default": "Din betalning behandlas",
+        "thank_you_title_payments_app_pending_buyer_action_required": "Din beställning har mottagits",
+        "thank_you_title_payments_app_failed_pending_payment": "Din betalning kunde inte behandlas",
+        "thank_you_confirmed_with_email_description": {
+          "single_store": "Du får snart ett bekräftelsemejl",
+          "multi_store": "Du kommer snart att få separata bekräftelsemejl från varje butik."
+        },
+        "thank_you_confirmed_with_phone_description": {
+          "single_store": "Du får snart ett bekräftelsemeddelande",
+          "multi_store": "Du kommer snart att få separata bekräftelser från varje butik."
+        },
+        "thank_you_confirmed_with_email_and_phone_description": {
+          "single_store": "Du får snart ett bekräftelsemejl",
+          "multi_store": "Du kommer snart att få separata bekräftelsemejl från varje butik."
+        },
+        "thank_you_confirmed_order_with_email": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_confirmed_order_with_phone": "Du får snart ett bekräftelsemeddelande med ditt ordernummer.",
+        "thank_you_confirmed_order_with_email_and_phone": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_confirmed_orders_with_email": "Du får snart separata bekräftelsemejl med dina ordernummer.",
+        "thank_you_confirmed_orders_with_phone": "Du får separata bekräftelsemeddelanden med dina ordernummer snart.",
+        "thank_you_confirmed_orders_with_email_and_phone": "Du får snart separata bekräftelsemejl med dina ordernummer.",
+        "thank_you_confirmed_order_with_email_payment": "Du gjorde en betalning för din beställning %{date}.",
+        "thank_you_confirmed_order_with_phone_payment": "Du gjorde en betalning för din beställning %{date}.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "Du gjorde en betalning för din beställning %{date}.",
+        "thank_you_confirmed_order_with_email_pick_up": "Du får ett e-postmeddelande när din beställning är klar att hämtas.",
+        "thank_you_confirmed_order_with_phone_pick_up": "Du får ett sms när din beställning är klar att hämtas.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "Du får ett e-postmeddelande när din beställning är klar att hämtas.",
+        "thank_you_confirmed_order_with_draft": "Vi meddelar dig om vi behöver mer information eller när din beställning har bekräftats.",
+        "thank_you_confirmed_order_with_draft_payment": "Vi meddelar dig om vi behöver mer information eller när din beställning har bekräftats.",
+        "thank_you_confirmed_order_with_draft_pick_up": "Vi meddelar dig om vi behöver mer information eller när din beställning har bekräftats.",
+        "thank_you_unconfirmed_items_heading": {
+          "one": "1 vara är inte bekräftad"
+        },
+        "thank_you_unconfirmed_items_description": {
+          "one": "Du har inte debiterats för detta."
+        },
+        "thank_you_payments_app_failed_pending_payment": "Du debiterades inte för din beställning. Gå tillbaka till din varukorg för att granska beställningen och betala igen.",
+        "thank_you_payments_app_failed_pending_payment_payment": "Du debiterades inte för din beställning. Gå tillbaka till din varukorg för att granska beställningen och betala igen.",
+        "thank_you_payments_app_failed_pending_payment_pick_up": "Du debiterades inte för din beställning. Gå tillbaka till din varukorg för att granska beställningen och betala igen.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_payment": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_email": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_payment": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "Du får snart ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone": "Du får snart ett bekräftelsemeddelande med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_payment": "Du får snart ett bekräftelsemeddelande med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_pick_up": "Du får snart ett bekräftelsemeddelande med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "När du har slutfört betalningen får du ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "När du har slutfört betalningen får du ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "När du har slutfört betalningen får du ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email": "När du har slutfört betalningen får du ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "När du har slutfört betalningen får du ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "När du har slutfört betalningen får du ett bekräftelsemejl med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone": "När du har genomfört betalningen får du ett bekräftelse-sms med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "När du har genomfört betalningen får du ett bekräftelse-sms med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "När du har genomfört betalningen får du ett bekräftelse-sms med ditt ordernummer.",
+        "thank_you_payments_app_pending_payment_description_provider_action_required_default": "Du får ett mejl när din betalning har bekräftats.",
+        "track_your_order_link_text": "Spåra din beställning",
+        "shop_phone_description": "Du får ett meddelande med en länk till Shop-appen som hjälper dig att spåra din beställning.",
+        "updated_time": "Uppdaterad för %{time_ago} sedan",
+        "unfulfilled_items_description": "Vi förbereder för närvarande dessa varor för leverans.",
+        "thank_you_ready_for_picked_up": "Din beställning hämtades på %{address}.",
+        "vat_invoices": {
+          "title": "moms fakturor"
+        },
+        "verify_shop_account_message": "Dina uppgifter sparades med Shop. Verifiera ditt konto för att automatiskt använda dem i miljontals butiker."
+      },
+      "throttle": {
+        "inventory": {
+          "partial_inventory_banner": "En del av varorna i din kundvagn är slutsålda och kommer inte att gå att köpa i kassan.",
+          "sold_out": {
+            "no_storefront_body": "Tyvärr är varan du vill köpa inte längre tillgänglig.",
+            "link": "Tillbaka till butiken"
+          }
+        },
+        "estimated_wait_time": {
+          "calculating": "Beräknar uppskattad väntetid",
+          "less_than_one": "Beräknad väntetid: mindre än en minut"
+        },
+        "footer": {
+          "heading": "Uppdatera inte den här sidan, den uppdateras automatiskt.",
+          "body": "Varorna i din varukorg är inte reserverade förrän du har slutfört köpet."
+        },
+        "too_many_attempts": {
+          "description": "Försök igen om några minuter."
+        },
+        "line_to_check_out": "Du står i kö för att betala",
+        "merchandise": {
+          "available": "Tillgänglig"
+        }
+      },
+      "ucp": {
+        "totals": {
+          "items_discount": "Varurabatter"
+        },
+        "validation_errors": {
+          "invalid_gid": "är inte ett giltigt %{type} GID (fick: %{value})",
+          "missing_destination_country": "Leveransmetodens destinationsfält address_country saknas",
+          "invalid_destination_country": "Förväntade %{country_code} att vara en av: %{valid_country_codes}",
+          "unsupported_quantity_unit": "Endast kvantiteter som mäts i styck (C62) med skala 0 stöds. Använd den enheten eller utelämna värdet."
+        }
+      },
+      "vaulted": {
+        "loading_section": "Läser in {{section}}…"
+      },
+      "tips": {
+        "custom_label": "Anpassad dricks",
+        "update_tip": "Uppdatera tipset",
+        "message": "Tack, vi uppskattar det.",
+        "not_available_with_spi": "Inte tillgängligt med avbetalning via Shop Pay"
+      },
+      "wallets": {
+        "deceleration": {
+          "one_more_step_to_complete_order": "Ett steg till för att slutföra din beställning",
+          "split_delivery_notice": "Din beställning innehåller varor för frakt och avhämtning. Granska dina leveransuppgifter och slutför sedan din beställning.",
+          "pickup_only_notice": "Kontrollera upphämtningsplatsen och slutför sedan din beställning."
+        },
+        "errors": {
+          "discount_code": "Det går inte att använda den här rabattkoden. Kontrollera koden och försök igen.",
+          "detour": {
+            "price_change": "Vissa artikelpriser har ändrats. Stäng {{walletName}} för att granska din beställning och försök igen.",
+            "queue": "Du har placerats i en kö för att slutföra köpet. Stäng {{walletName}} för att fortsätta."
+          },
+          "invalid": {
+            "shipping_option": "Välj ett giltigt fraktalternativ",
+            "email": "Ange en giltig e-postadress.",
+            "zone": "Ange en giltig delstat/provins",
+            "billing_zone": "Ange en giltig delstat/provins för faktureringsadressen",
+            "postal_code": "Ange ett giltigt postnummer",
+            "billing_phone": "Ange ett giltigt telefonnummer för faktureringsadressen",
+            "reduction_code": "Ange en giltig rabattkod eller ett presentkort",
+            "billing_zip": "Ange ett giltigt postnummer för faktureringsadressen"
+          },
+          "missing": {
+            "billing_first_name": "Ange faktureringsadressens förnamn",
+            "address2": "Ange lägenhet, svit osv.",
+            "billing_address2": "Ange lägenhetsnummer, svitnummer osv. för faktureringsadressen.",
+            "billing_city": "Ange staden för faktureringsadressen",
+            "billing_province": "Välj delstat/provins för faktureringsadressen",
+            "billing_zip": "Ange postnummer för faktureringsadressen"
+          },
+          "formatting": {
+            "name_contains_emojis": "Ta bort emojin från ditt namn.",
+            "postal_code_contains_emoji": "Ta bort emojin från ditt postnummer",
+            "last_name_too_long": "Efternamnet innehåller för många bokstäver."
+          }
+        }
+      },
+      "units": {
+        "liter": "L",
+        "fluid_ounce": "fluid ounces",
+        "pint": "pt",
+        "quart": "qt",
+        "inch": "in",
+        "yard": "yd",
+        "square_foot": "ft²",
+        "item": "objekt"
+      },
+      "too_many_requests": {
+        "title": "För många försök att slutföra köpet",
+        "return_to_cart": "Gå tillbaka till varukorgen"
       }
     },
     "attributes": {
