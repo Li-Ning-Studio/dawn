@@ -273,7 +273,9 @@
         "send": "Send",
         "post_success": "Tak for din henvendelse. Vi kontakter dig hurtigst muligt.",
         "error_heading": "Juster følgende:",
-        "title": "Kontaktformular"
+        "title": "Kontaktformular",
+        "consent": "Ved at bekræfte accepterer jeg, at mine personoplysninger må bruges til at besvare min forespørgsel.",
+        "consent_value": "Enig"
       }
     },
     "404": {
@@ -683,6 +685,41 @@
         "remove": "Fjern",
         "add_second_line": "Tilføj land og logo for {{ price }}",
         "clear_second_line": "Fjern land og logo"
+      },
+      "form_labels": {
+        "personalisation_service": "Tilføj personlig tilpasning"
+      },
+      "description": {
+        "personalisation_service": "Gør denne {{ product_title }} helt personlig ved at få trykt noget særligt på den"
+      },
+      "headings": {
+        "personalise": "Tilpas denne {{ product_title }}"
+      },
+      "labels": {
+        "free": "GRATIS",
+        "input": "Din personlige tilpasning",
+        "second_input": "Land",
+        "note": "Bemærk: Dette er kun til illustrationsformål. Teksten vil blive trykt på T-shirtens bagside. Betaling ved levering gælder ikke for ordrer, der indeholder personlige T-shirts.",
+        "step": "Trin",
+        "summary": "Personalisering",
+        "summary_html": "Helt dit eget - Du gør denne {{ product_title }} helt din egen ved at personliggøre den med",
+        "title": "Gør denne T-shirt til din egen"
+      },
+      "messages": {
+        "invalid_input": "Kun bogstaver, punktummer og mellemrum er tilladt.",
+        "logo_unavailable": "Land- og logoindstillingen er ikke tilgængelig. Fjern den for at fortsætte med kun at få trykt navnet.",
+        "logo_loading": "Indlæser dit inkluderede brandlogo…"
+      },
+      "countries": {
+        "india": "Indien",
+        "indonesia": "Indonesien",
+        "china": "Kina",
+        "japan": "Japan",
+        "malaysia": "Malaysia",
+        "denmark": "Danmark"
+      },
+      "errors": {
+        "load_failed": "Kunne ikke indlæse mulighederne for personalisering af T-shirten. Opdater siden."
       }
     }
   },
