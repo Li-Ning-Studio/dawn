@@ -3491,7 +3491,65 @@
       "invalid_for_country_and_province": "ist für %{province} und %{country} nicht gültig",
       "full_name_required": "Vor- und Nachnamen eingeben",
       "invalid_for_card_type": "ist nicht gültig",
-      "expired": "ist abgelaufen"
+      "expired": "ist abgelaufen",
+      "taken": "wurde bereits eingenommen",
+      "too_short": "ist zu kurz (mindestens %{count} Zeichen)",
+      "too_long": "ist zu lang (maximal %{count} Zeichen)",
+      "invalid_state_in_country": "ist kein gültiger Bundesstaat in %{country}",
+      "invalid_type": "Entschuldigung, wir akzeptieren keine Karten dieses Typs.",
+      "invalid_format": "Das Format ist ungültig.",
+      "invalid_start_date_or_issue_number_for_debit": "Ein gültiges Startdatum oder eine Ausgabenummer ist erforderlich.",
+      "reset_password_html": "Diese E-Mail-Adresse ist bereits mit einem Konto verknüpft. Wenn dieses Konto Ihnen gehört, können Sie <a href=\"/account/login#recover\">Ihr Passwort zurücksetzen</a>.",
+      "verify_email": "Wir haben eine E-Mail an %{customer_email} gesendet. Bitte klicken Sie auf den darin enthaltenen Link, um Ihre E-Mail-Adresse zu bestätigen.",
+      "verify_email_sent": "Wir haben Ihnen eine E-Mail gesendet. Bitte klicken Sie auf den darin enthaltenen Link, um Ihre E-Mail-Adresse zu bestätigen.",
+      "product_not_available": "Das Produkt ist für diesen Kunden nicht veröffentlicht.",
+      "shop_404": {
+        "title": "Erstelle eine E-Commerce-Website und verkaufe online! E-Commerce-Software von Shopify.",
+        "title_unavailable": "Geschäft nicht verfügbar",
+        "heros": {
+          "store_will_be_right_back": "Dieser Shop ist gleich wieder da."
+        },
+        "subtitles": {
+          "store_will_be_right_back": "Shopify arbeitet daran, den Dienst so schnell wie möglich wieder online zu bringen."
+        },
+        "links": {
+          "explore_other_stores": "Weitere Geschäfte entdecken",
+          "start_free_trial": "Starte eine kostenlose Testversion"
+        },
+        "status_card": {
+          "eyebrow": "Hilfe für Ladenbesitzerinnen und Ladenbesitzer",
+          "header": "Shopify-Status überprüfen",
+          "caption": "Finde heraus, ob es bei Shopify eine Störung gibt, die mehr als nur diesen Shop betrifft."
+        },
+        "owner_ctas": {
+          "header": "Sind Sie der Inhaber des Geschäfts?",
+          "fix_domain": "Schließen Sie die Einrichtung Ihrer neuen Webadresse ab und rufen Sie %{domain_settings_link} auf. Klicken Sie auf „Domain verbinden“ und geben Sie Folgendes ein: %{domain}.<br>Wenn Sie Probleme haben, auf Ihren Shop zuzugreifen, versuchen Sie es auf der Seite %{forgot_your_store_link}.",
+          "fix_domain_link_text": "Ihre Domaineinstellungen",
+          "forgot_your_store_link_text": "Deinen Laden vergessen",
+          "add_storefront": "Du kannst deine Website einrichten, indem du den Onlineshop-Kanal in deinem %{admin_link} hinzufügst. Wenn du Probleme hast, auf deinen Shop zuzugreifen, versuche es auf der Seite %{forgot_your_store_link}.",
+          "admin_link_text": "Administrator"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "caption": "Holen Sie sich die Funktionen, die Sie für den Betrieb Ihres Einzelhandelsgeschäfts benötigen, egal, ob Sie gerade erst anfangen oder expandieren.",
+            "link_text": "Kostenlose Testversion starten"
+          },
+          "open_a_store": {
+            "caption": "Starte eine 3-tägige kostenlose Testphase und zahle anschließend 1 $ pro Monat für die nächsten 3 Monate.",
+            "link_text": "Jetzt anmelden"
+          },
+          "editions": {
+            "header": "Entdecke die Shopify Editions",
+            "caption": "Mit über 100 Produktaktualisierungen können Sie produktiver und kreativer sein und im Handel mehr erreichen, als Sie sich je vorgestellt haben.",
+            "link_text": "Neueste Ausgaben entdecken"
+          },
+          "store_owner": {
+            "header": "Sind Sie der Inhaber des Geschäfts?",
+            "caption": "Haben Sie Schwierigkeiten, auf Ihren Shop zuzugreifen? Nutzen Sie die Funktion %{forgot_your_store_link}. Wenn Sie Ihren Shop reaktivieren möchten, wenden Sie sich an %{shopify_support_link}.",
+            "shopify_support_link_text": "Shopify-Support"
+          }
+        }
+      }
     },
     "email_marketing": {
       "subscribed": {
@@ -3542,6 +3600,58 @@
       "message": "Lösen Sie das CAPTCHA, um fortzufahren.",
       "error": "Die Captcha-Überprüfung ist fehlgeschlagen.",
       "submit_button_text": "Absenden"
+    },
+    "links": {
+      "powered_by_shopify": "Unterstützt von Shopify"
+    },
+    "notices": {
+      "cart": {
+        "only_n_items_available": "Du kannst nur %{count} %{name} in den Warenkorb legen.",
+        "too_many_items_in_cart": "Du kannst dem Warenkorb nicht mehr %{name} hinzufügen.",
+        "only_one_added_to_cart": "Aufgrund der Verfügbarkeit wurde nur 1 Artikel in deinen Warenkorb gelegt.",
+        "only_n_added_to_cart": "Aufgrund der Verfügbarkeit wurden deinem Warenkorb nur %{quantity} Artikel hinzugefügt.",
+        "maximum_available_quantity_reached": "Die Höchstmenge dieses Artikels befindet sich bereits in deinem Warenkorb.",
+        "less_than_minimum": "Für diesen Artikel gilt eine Mindestbestellmenge von %{min}.",
+        "more_than_maximum": "Dieser Artikel hat einen Höchstwert von %{max}.",
+        "not_respect_step": "Du kannst diesen Artikel nur in Schritten von %{step} hinzufügen.",
+        "empty_update": "Leerer Warenkorb kann nicht aktualisiert werden.",
+        "missing_parameters": "Keine gültige ID oder kein gültiger Zeilenparameter",
+        "generic_error": "Warenkorbf ehler",
+        "invalid_input": "%{parameter} Parameter ist ungültig.",
+        "too_many_line_items_error": "Dein Warenkorb kann nicht mehr als %{max} Artikel enthalten.",
+        "stock_problems_html": "Ein oder mehrere Artikel sind nicht mehr verfügbar. Wir haben einen <a href='%{link}'>aktualisierten Warenkorb</a> bereitgestellt.",
+        "items_changed": "Ein oder mehrere Artikel wurden geändert.",
+        "product_sold_out": "Das Produkt „%{name}“ ist bereits ausverkauft.",
+        "variant_not_found": "Variante nicht gefunden",
+        "variant_requires_selling_plan": "Die Variante kann nur mit einem Verkaufsplan erworben werden.",
+        "selling_plan_not_available_for_company_locations": "Für B2B-Bestellungen ist nur ein einmaliger Kauf möglich.",
+        "buyer_cannot_purchase_for_company_locations": "Für diesen Standort können Sie nichts kaufen.",
+        "selling_plan_not_applicable": "Verkaufsplan kann nicht auf Variante angewendet werden",
+        "shipping_address_not_required": "Für diesen Warenkorb ist kein Versand erforderlich.",
+        "shipping_address_invalid": "Beim Berechnen der Versandkosten ist ein Problem aufgetreten. Fahren Sie mit dem Checkout fort, um einen Versandtarif auszuwählen, bevor Sie Ihre Bestellung abschließen.",
+        "bundle_requires_components": "Das Bundle-Produkt „%{name}“ kann nicht in den Warenkorb gelegt werden.",
+        "gift_card_with_components_not_supported": "Das Bundle-Produkt „%{name}“ kann nicht in den Warenkorb gelegt werden.",
+        "gift_card_price_must_be_greater_than_zero": "Das Bundle-Produkt „%{name}“ kann nicht in den Warenkorb gelegt werden.",
+        "gift_card_recipient_validation_error": "Der angegebene Empfänger der Geschenkkarte ist ungültig.",
+        "cart_too_large": "Der Einkaufswagen ist zu groß.",
+        "cart_attributes_error": "Warenkorbattribute enthalten ungültige Daten.",
+        "merchandise_line_transformers": {
+          "run_error": "In Ihrem Warenkorb ist ein Fehler aufgetreten."
+        },
+        "merchandise_not_applicable": "Artikel kann in dieser Konfiguration nicht gekauft werden."
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "out_of_stock": "Nicht auf Lager"
+        }
+      }
+    },
+    "managed_markets": {
+      "buyer_consent": "Mit Ihrer Bestellung stimmen Sie zu, bei Global-e als eingetragenem Händler einzukaufen, vorbehaltlich der %{termsAndConditionsLink} und %{privacyPolicyLink} von Global-e, und Ihre Informationen mit %{shopName} zu teilen.",
+      "terms_and_conditions": "Allgemeine Geschäftsbedingungen",
+      "privacy_policy": "Datenschutzrichtlinie"
     }
   }
 }
