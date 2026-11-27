@@ -3309,7 +3309,55 @@
         "merchandise_line_transformers": {
           "run_error": "Ett fel uppstod i din kundvagn."
         },
-        "merchandise_not_applicable": "Artikeln kan inte köpas i den konfigurerade formen."
+        "merchandise_not_applicable": "Artikeln kan inte köpas i den konfigurerade formen.",
+        "view_lines_limit_reached": "Raderna måste vara högst %{limit} tecken långa."
+      },
+      "customer": {
+        "unsubscribe_error": "Avregistreringsfel",
+        "open_tracking_error": "Fel vid öppning av spårning",
+        "no_account_found": "Inget konto hittades med den e-postadressen.",
+        "invalid_credentials": "Felaktig e-postadress eller lösenord.",
+        "denylisted_reset_password": "Det gick inte att komma åt ditt konto eftersom det nuvarande lösenordet inte är säkert. Du får ett e-postmeddelande om hur du uppdaterar ditt lösenord."
+      },
+      "line_item": {
+        "item_status": {
+          "decrement_return_line_item": "Tog bort %{delta} från returbeloppet"
+        }
+      },
+      "order": {
+        "not_available": "Den här beställningen är inte tillgänglig",
+        "financial_status": {
+          "pending": "Väntande",
+          "expired": "Utgången"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Uppfylld",
+          "complete": "Slutför",
+          "unfulfilled": "Ej uppfylld",
+          "restocked": "Påfyllt"
+        },
+        "transaction_status": {
+          "success": "Framgång",
+          "pending": "Väntande",
+          "failure": "Misslyckande"
+        },
+        "cancel_reason": {
+          "declined": "Betalningen nekades",
+          "inventory": "Artiklar ej tillgängliga",
+          "fraud": "Bedräglig beställning",
+          "customer": "Kunden ändrade/avbeställde beställningen",
+          "staff": "Personalmisstag",
+          "other": "Annat"
+        },
+        "cash_on_delivery": "Kontant vid leverans (COD)"
+      },
+      "storefront": {
+        "invalid_password": "Fel lösenord, försök igen."
+      },
+      "tags": {
+        "add_products": "Begränsa urvalet till produkter med taggen %{tag}",
+        "remove_articles": "Utöka sökningen till artiklar som inte är taggade med %{tag}",
+        "remove_products": "Ta bort taggen %{tag}"
       }
     },
     "filters": {
@@ -3322,6 +3370,46 @@
     "managed_markets": {
       "buyer_consent": "Genom att lägga din beställning godkänner du att köpa från Global-e, som är den juridiskt ansvariga säljaren, enligt Global-e:s %{termsAndConditionsLink} och %{privacyPolicyLink}, och att dela dina uppgifter med %{shopName}.",
       "terms_and_conditions": "Villkor och bestämmelser"
+    },
+    "sentence": {
+      "two_words_connector": "och",
+      "last_word_connector": ", och"
+    },
+    "search": {
+      "error": "Det uppstod ett problem när sökresultaten skulle läsas in. Uppdatera sidan eller försök igen senare.",
+      "sorting": {
+        "price_ascending": "Pris, lägst till högst",
+        "price_descending": "Pris, från högst till lägst"
+      }
+    },
+    "page_titles": {
+      "shopping_cart": "Din kundvagn",
+      "order": "Beställ %{name}",
+      "search_results": {
+        "one": "Sök: %{count} resultat hittades för \"%{terms}\"",
+        "other": "Sök: %{count} resultat hittades för \"%{terms}\""
+      },
+      "collections": "Samlingar",
+      "not_found": "404 Hittades inte",
+      "checkpoint": "Kontrollpunkt"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Vanligtvis klar inom 1 timme",
+        "two_hours": "Vanligtvis klar inom 2 timmar",
+        "four_hours": "Vanligtvis klar inom 4 timmar",
+        "twenty_four_hours": "Vanligtvis klar inom 24 timmar",
+        "five_or_more_days": "Vanligtvis klar inom 5+ dagar",
+        "zero_to_two_hours": "Vanligtvis klar inom 2 timmar",
+        "two_to_four_hours": "Vanligtvis klar inom 4 timmar",
+        "immediately": "Redo för upphämtning nu",
+        "next_day": "Redo för upphämtning nästa dag"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Den här artikeln är ett återkommande eller uppskjutet köp. Genom att fortsätta godkänner jag %{cancellationPolicyLink} och ger er tillstånd att debitera min betalningsmetod enligt priserna, med den frekvens och på de datum som anges på den här sidan, tills min beställning har fullföljts eller jag avbryter den, om det är tillåtet.",
+      "buyer_consent_cart": "En eller flera av produkterna i din kundvagn är ett återkommande eller uppskjutet köp. Genom att fortsätta godkänner jag %{cancellationPolicyLink} och ger dig tillstånd att debitera min betalningsmetod enligt priserna, frekvensen och datumen som anges på den här sidan tills min beställning har fullgjorts eller jag säger upp den, om det är tillåtet.",
+      "cancellation_policy": "avbokningspolicy"
     }
   },
   "settings_schema": {
@@ -3329,6 +3417,39 @@
       "factory_grip_image": {
         "label": "Bild av fabriksgrepp",
         "info": "Visas bredvid alternativet Fabriksgrepp."
+      }
+    }
+  },
+  "studio": {
+    "gripping": {
+      "form_labels": {
+        "frame": "Grepp",
+        "grip_service": "Gripservice för studio",
+        "no_grip": "Fabriksgrepp"
+      },
+      "description": {
+        "grip_service": "Låt våra Studio-proffs montera ett grepp",
+        "no_grip": "Levereras med fabriksgrepp, som varierar beroende på modell. Vi rekommenderar att du uppgraderar greppet.",
+        "grip_application_note": "Observera att ersättningsgrepp sätts på efter att originalgreppet har tagits bort, medan övergrepp sätts utanpå det befintliga originalgreppet."
+      },
+      "headings": {
+        "choose_grip": "Välj grepp",
+        "select_color": "Välj greppfärg"
+      },
+      "actions": {
+        "add": "Lägg till",
+        "selected": "Vald",
+        "change": "Ändra",
+        "next": "Nästa",
+        "back": "Tillbaka",
+        "submit": "Applicera Grip",
+        "close": "Stäng",
+        "remove": "Ta bort"
+      },
+      "errors": {
+        "load_failed": "Det gick inte att läsa in greppalternativen. Uppdatera sidan.",
+        "missing_product": "Välj ett greppalternativ.",
+        "missing_variant": "Välj en greppfärg."
       }
     }
   }

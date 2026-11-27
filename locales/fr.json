@@ -3257,7 +3257,70 @@
       "full_name_required": "Saisissez un prénom et un nom de famille",
       "invalid_for_card_type": "n’est pas valide",
       "expired": "a expiré",
-      "invalid_expiry_year": "n’est pas une année d’expiration valide"
+      "invalid_expiry_year": "n’est pas une année d’expiration valide",
+      "taken": "a déjà été pris",
+      "too_short": "est trop court (minimum : %{count} caractères)",
+      "too_long": "est trop long (la limite est de %{count} caractères)",
+      "invalid_province_in_country": "n’est pas une province valide en %{country}",
+      "invalid_state_in_country": "n’est pas un État valide de %{country}",
+      "invalid_region_in_country": "n’est pas une région valide dans %{country}",
+      "not_supported": "n’est pas pris en charge",
+      "invalid_type": "Désolé, nous n’acceptons pas les cartes de ce type.",
+      "invalid_format": "Le format n’est pas valide.",
+      "invalid_start_date_or_issue_number_for_debit": "une date de début ou un numéro de numéro valide est requis",
+      "reset_password_html": "Cette adresse e-mail est déjà associée à un compte. Si ce compte vous appartient, vous pouvez <a href=\"/account/login#recover\">réinitialiser votre mot de passe</a>",
+      "verify_email": "Nous avons envoyé un e-mail à %{customer_email}. Veuillez cliquer sur le lien qu’il contient pour vérifier votre adresse e-mail.",
+      "product_not_available": "Le produit n’est pas publié pour ce client.",
+      "shop_404": {
+        "title": "Créez une boutique en ligne et vendez sur Internet ! Logiciel de commerce électronique par Shopify",
+        "title_unavailable": "Magasin indisponible",
+        "heros": {
+          "store_will_be_right_back": "Cette boutique sera de nouveau disponible très bientôt.",
+          "store_not_exist": "Ce magasin n’existe pas."
+        },
+        "subtitles": {
+          "store_will_be_right_back": "Shopify s’efforce de remettre le service en ligne dès que possible."
+        },
+        "links": {
+          "refresh_page": "Actualisez la page",
+          "explore_other_stores": "Découvrez d’autres boutiques",
+          "start_free_trial": "Commencer un essai gratuit"
+        },
+        "status_card": {
+          "eyebrow": "Aide aux propriétaires de magasins",
+          "header": "Vérifier l’état de Shopify",
+          "caption": "Vérifiez si une panne touche d’autres boutiques Shopify que la vôtre.",
+          "link_text": "Voir l’état des systèmes Shopify"
+        },
+        "owner_ctas": {
+          "header": "Êtes-vous propriétaire de la boutique ?",
+          "fix_domain": "Terminez la configuration de votre nouvelle adresse web en accédant à %{domain_settings_link}. Cliquez sur « Connecter un domaine » et saisissez : %{domain}.<br>Si vous avez du mal à accéder à votre boutique, essayez la page %{forgot_your_store_link}.",
+          "forgot_your_store_link_text": "vous avez oublié votre magasin",
+          "add_storefront": "Vous pouvez configurer votre site Web en ajoutant le canal Boutique en ligne dans votre %{admin_link}. Si vous avez du mal à accéder à votre boutique, essayez la page %{forgot_your_store_link}.",
+          "admin_link_text": "administrateur"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Vendez en personne",
+            "caption": "Profitez des fonctionnalités dont vous avez besoin pour gérer votre magasin, que vous débutiez ou que vous développiez votre activité.",
+            "link_text": "Commencer l’essai gratuit"
+          },
+          "open_a_store": {
+            "caption": "Commencez un essai gratuit de 3 jours, puis continuez pour 1 $/mois pendant les 3 mois suivants.",
+            "link_text": "Inscrivez-vous maintenant"
+          },
+          "editions": {
+            "header": "Découvrez les éditions Shopify",
+            "caption": "Avec plus de 100 améliorations de produits, vous pouvez être plus productif, plus créatif et plus performant dans le commerce que vous ne l’auriez jamais imaginé.",
+            "link_text": "Découvrez les dernières éditions"
+          },
+          "store_owner": {
+            "header": "Êtes-vous propriétaire de la boutique ?",
+            "caption": "Vous avez du mal à accéder à votre boutique ? Essayez la fonctionnalité %{forgot_your_store_link}. Si vous souhaitez réactiver votre boutique, contactez %{shopify_support_link}.",
+            "shopify_support_link_text": "Assistance Shopify"
+          }
+        }
+      }
     },
     "email_marketing": {
       "subscribed": {
@@ -3305,6 +3368,148 @@
     "checkpoint": {
       "message": "Résolvez le CAPTCHA pour continuer.",
       "error": "Échec de la validation du CAPTCHA"
+    },
+    "links": {
+      "powered_by_shopify": "Propulsé par Shopify"
+    },
+    "notices": {
+      "address": {
+        "updated": "Adresse mise à jour avec succès.",
+        "error_updating": "Erreur lors de la mise à jour de l’adresse",
+        "created": "Adresse créée avec succès",
+        "error_creating": "Erreur lors de la création de l’adresse.",
+        "deleted": "Adresse supprimée avec succès",
+        "error_deleting": "Erreur lors de la suppression de l’adresse."
+      },
+      "cart": {
+        "only_n_items_available": "Vous ne pouvez ajouter que %{count} %{name} au panier.",
+        "only_one_added_to_cart": "Un seul article a été ajouté à votre panier en raison de sa disponibilité.",
+        "only_n_added_to_cart": "Seuls %{quantity} articles ont été ajoutés à votre panier en raison des disponibilités.",
+        "not_respect_step": "Vous ne pouvez ajouter cet article que par incréments de %{step}.",
+        "all_items_in_cart": "Les %{count} %{name} sont dans votre panier.",
+        "empty_update": "Impossible de mettre à jour un panier vide",
+        "missing_parameters": "aucun identifiant valide ni paramètre de ligne",
+        "generic_error": "Erreur du panier",
+        "product_not_available": "Le produit n’est pas disponible",
+        "too_many_line_items_error": "Votre panier ne peut pas contenir plus de %{max} articles.",
+        "link_expired": "Le lien a expiré.",
+        "link_no_longer_exists": "Le lien n’existe plus.",
+        "stock_problems_html": "Un ou plusieurs articles ne sont plus disponibles. Nous avons mis à jour votre <a href='%{link}'>panier</a>.",
+        "changed": "Panier modifié",
+        "product_sold_out": "Le produit « %{name} » est déjà épuisé.",
+        "variant_not_found": "Variante introuvable",
+        "variant_requires_selling_plan": "La variante ne peut être achetée qu’avec un plan de vente.",
+        "selling_plan_not_available_for_company_locations": "Seul l’achat unique est disponible pour les commandes B2B.",
+        "digital_product_not_available_for_company_locations": "Cet article ne peut pas être ajouté à une commande B2B.",
+        "buyer_cannot_purchase_for_company_locations": "Vous ne pouvez pas acheter pour cet emplacement.",
+        "selling_plan_not_applicable": "Impossible d’appliquer un plan de vente à la variante",
+        "shipping_address_not_required": "Ce panier ne nécessite pas de livraison.",
+        "shipping_address_invalid": "Un problème est survenu lors du calcul des frais de livraison. Passez à la caisse pour choisir un mode de livraison avant de finaliser votre commande.",
+        "bundle_requires_components": "Le produit groupé « %{name} » ne peut pas être ajouté au panier.",
+        "gift_card_with_components_not_supported": "Le produit groupé « %{name} » ne peut pas être ajouté au panier.",
+        "gift_card_price_must_be_greater_than_zero": "Le produit groupé « %{name} » ne peut pas être ajouté au panier.",
+        "gift_card_recipient_validation_error": "Le destinataire indiqué pour la carte-cadeau n’est pas valide.",
+        "cart_too_large": "Le panier est trop volumineux.",
+        "cart_attributes_error": "Les attributs du panier contiennent des données invalides.",
+        "merchandise_not_applicable": "Cet article ne peut pas être acheté avec cette configuration.",
+        "view_lines_limit_reached": "Les lignes doivent compter %{limit} caractères ou moins."
+      },
+      "customer": {
+        "password_reset_error": "Erreur de réinitialisation du mot de passe",
+        "no_account_found": "Aucun compte associé à cette adresse e-mail n’a été trouvé.",
+        "invalid_credentials": "Adresse e-mail ou mot de passe incorrect.",
+        "denylisted_reset_password": "Votre compte n’a pas pu être consulté, car le mot de passe actuel n’est pas sécurisé. Vous recevrez un e-mail pour mettre à jour votre mot de passe.",
+        "signup_disabled": "La création de comptes clients a été désactivée."
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "%{delta} ajouté",
+          "increment_item": "%{delta} ajouté",
+          "decrement_item": "%{delta} supprimé sur %{total}",
+          "decrement_fulfilled_line_item": "%{delta} retourné sur %{total}",
+          "decrement_return_line_item": "%{delta} supprimé du retour"
+        }
+      },
+      "order": {
+        "not_available": "Cette commande n’est pas disponible.",
+        "financial_status": {
+          "authorized": "Autorisé",
+          "pending": "En attente",
+          "paid": "Payé",
+          "unpaid": "Impayé",
+          "voided": "Annulé",
+          "partially_paid": "Partiellement payé",
+          "partially_refunded": "Partiellement remboursé",
+          "refunded": "Remboursé"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Exécuté",
+          "complete": "Terminé",
+          "partial": "Partiel",
+          "unfulfilled": "Non honoré",
+          "restocked": "De nouveau en stock"
+        },
+        "transaction_status": {
+          "success": "Réussite",
+          "pending": "En attente"
+        },
+        "cancel_reason": {
+          "inventory": "Articles indisponibles"
+        },
+        "cash_on_delivery": "Paiement à la livraison (COD)"
+      },
+      "storefront": {
+        "invalid_password": "Mot de passe incorrect, veuillez réessayer."
+      },
+      "tags": {
+        "add_articles": "Affiner la recherche aux articles ayant également le tag %{tag}",
+        "add_products": "Réduire la sélection aux produits correspondant au tag %{tag}",
+        "remove_articles": "Élargir la recherche aux articles qui ne sont pas étiquetés %{tag}"
+      }
+    },
+    "managed_markets": {
+      "buyer_consent": "En passant votre commande, vous acceptez d’effectuer votre achat auprès de Global-e, en tant que vendeur officiel, sous réserve des %{termsAndConditionsLink} et %{privacyPolicyLink} de Global-e, et de partager vos informations avec %{shopName}.",
+      "terms_and_conditions": "Conditions générales de vente"
+    },
+    "sentence": {
+      "two_words_connector": "et",
+      "last_word_connector": "et"
+    },
+    "search": {
+      "error": "Un problème est survenu lors du chargement des résultats de recherche. Veuillez actualiser la page ou réessayer plus tard.",
+      "sorting": {
+        "price_ascending": "Prix, du plus bas au plus élevé",
+        "price_descending": "Prix, du plus élevé au plus bas"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Erreur - %{title}",
+      "shopping_cart": "Votre panier d’achat",
+      "order": "Commandez %{name}",
+      "search_results": {
+        "one": "Recherche : %{count} résultat trouvé pour « %{terms} »",
+        "other": "Recherche : %{count} résultats trouvés pour « %{terms} »"
+      },
+      "not_found": "404 Introuvable"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Généralement prêt en 1 heure",
+        "two_hours": "Généralement prêt en 2 heures",
+        "four_hours": "Généralement prêt en 4 heures",
+        "twenty_four_hours": "Généralement prêt sous 24 heures",
+        "two_to_four_days": "Généralement prêt en 2-4 jours",
+        "five_or_more_days": "Généralement prêt sous 5 jours ou plus.",
+        "zero_to_two_hours": "Généralement prêt en 2 heures",
+        "two_to_four_hours": "Généralement prêt en 4 heures",
+        "immediately": "Prêt à être retiré maintenant",
+        "next_day": "Prêt à être retiré dès le lendemain"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Cet article correspond à un achat récurrent ou différé. En continuant, j’accepte la %{cancellationPolicyLink} et vous autorise à débiter mon moyen de paiement aux prix, selon la fréquence et aux dates indiqués sur cette page, jusqu’à l’exécution de ma commande ou à son annulation, si celle-ci est autorisée.",
+      "buyer_consent_cart": "Un ou plusieurs articles de votre panier font l’objet d’un achat récurrent ou différé. En continuant, j’accepte la %{cancellationPolicyLink} et vous autorise à débiter mon moyen de paiement aux prix, selon la fréquence et aux dates indiqués sur cette page, jusqu’à ce que ma commande soit exécutée ou que je l’annule, si cela est autorisé.",
+      "cancellation_policy": "politique d’annulation"
     }
   },
   "settings_schema": {
@@ -3312,6 +3517,39 @@
       "factory_grip_image": {
         "label": "Image de la poignée d'usine",
         "info": "Affiché à côté de l’option de poignée d’usine."
+      }
+    }
+  },
+  "studio": {
+    "gripping": {
+      "form_labels": {
+        "frame": "Prise en main",
+        "grip_service": "Service de grip en studio",
+        "no_grip": "Adhérence d’usine"
+      },
+      "description": {
+        "grip_service": "Laissez nos professionnels de l’atelier installer une poignée d’adhérence.",
+        "no_grip": "Livré avec une poignée d’origine, qui varie selon le modèle. Nous recommandons d’opter pour une poignée améliorée.",
+        "grip_application_note": "Veuillez noter que les grips de remplacement s’appliquent après avoir retiré le grip d’origine, tandis que les surgrips se posent par-dessus le grip d’origine."
+      },
+      "headings": {
+        "choose_grip": "Choisissez une poignée antidérapante",
+        "select_color": "Sélectionner la couleur de la poignée"
+      },
+      "actions": {
+        "add": "Ajouter",
+        "selected": "Sélectionné",
+        "change": "Modifier",
+        "next": "Suivant",
+        "back": "Retour",
+        "submit": "Appliquer Grip",
+        "close": "Fermer",
+        "remove": "Supprimer"
+      },
+      "errors": {
+        "load_failed": "Échec du chargement des options de prise en main. Veuillez actualiser la page.",
+        "missing_product": "Veuillez sélectionner une option de poignée.",
+        "missing_variant": "Veuillez sélectionner une couleur de poignée."
       }
     }
   }

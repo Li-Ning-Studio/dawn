@@ -677,13 +677,13 @@
     "gripping": {
       "form_labels": {
         "frame": "Griff",
-        "grip_service": "Studio Grip Service",
+        "grip_service": "Studio-Grip-Service",
         "no_grip": "Werksgriff"
       },
       "description": {
-        "grip_service": "Lass unsere Studio-Profis einen Grip anbringen",
-        "no_grip": "Wird mit einem Werksgriff geliefert, der je nach Modell variiert. Wir empfehlen, auf einen anderen Griff umzurüsten.",
-        "grip_application_note": "Bitte beachten Sie, dass Ersatzgriffe nach dem Entfernen des Werksgriffs angebracht werden, während Overgrips über den vorhandenen Werksgriff angebracht werden."
+        "grip_service": "Lassen Sie unsere Studio-Profis einen Griff montieren",
+        "no_grip": "Wird mit einem werkseitig montierten Griff geliefert, der je nach Modell variiert. Wir empfehlen, den Griff aufzurüsten.",
+        "grip_application_note": "Bitte beachten Sie, dass Ersatzgriffe nach dem Entfernen des werkseitigen Griffs angebracht werden, während Overgrips über den vorhandenen werkseitigen Griff gewickelt werden."
       },
       "labels": {
         "current_selection": "Aktuelle Auswahl",
@@ -704,16 +704,16 @@
         "add": "Hinzufügen",
         "selected": "Ausgewählt",
         "change": "Ändern",
-        "next": "Nächste",
+        "next": "Weiter",
         "back": "Zurück",
-        "submit": "Grip anwenden",
+        "submit": "Griff anbringen",
         "close": "Schließen",
         "remove": "Entfernen"
       },
       "errors": {
-        "load_failed": "Fehler beim Laden der Griffoptionen. Bitte laden Sie die Seite neu.",
-        "missing_product": "Bitte wählen Sie eine Griffoption.",
-        "missing_variant": "Bitte wählen Sie eine Griff Farbe."
+        "load_failed": "Die Griffoptionen konnten nicht geladen werden. Bitte aktualisieren Sie die Seite.",
+        "missing_product": "Bitte wählen Sie eine Griffoption aus.",
+        "missing_variant": "Bitte wählen Sie eine Grifffarbe aus."
       }
     },
     "remix": {
@@ -3638,7 +3638,51 @@
         "merchandise_line_transformers": {
           "run_error": "In Ihrem Warenkorb ist ein Fehler aufgetreten."
         },
-        "merchandise_not_applicable": "Artikel kann in dieser Konfiguration nicht gekauft werden."
+        "merchandise_not_applicable": "Artikel kann in dieser Konfiguration nicht gekauft werden.",
+        "view_lines_limit_reached": "Die Zeilen dürfen höchstens %{limit} lang sein."
+      },
+      "customer": {
+        "subscribe_error": "Abonnementfehler",
+        "unsubscribe_error": "Fehler beim Abmelden",
+        "open_tracking_error": "Fehler bei der Öffnungsverfolgung",
+        "no_account_found": "Für diese E-Mail-Adresse wurde kein Konto gefunden.",
+        "invalid_credentials": "E-Mail-Adresse oder Passwort falsch.",
+        "denylisted_reset_password": "Auf Ihr Konto konnte nicht zugegriffen werden, da das aktuelle Passwort nicht sicher ist. Sie erhalten eine E-Mail, um Ihr Passwort zu ändern.",
+        "signup_disabled": "Die Erstellung von Kundenkonten wurde deaktiviert."
+      },
+      "line_item": {
+        "item_status": {
+          "decrement_return_line_item": "%{delta} von der Rücksendung entfernt"
+        }
+      },
+      "order": {
+        "not_available": "Diese Bestellung ist nicht verfügbar.",
+        "financial_status": {
+          "voided": "Ungültig",
+          "refunded": "Erstattet"
+        },
+        "fulfillment_status": {
+          "unfulfilled": "Unerfüllt",
+          "restocked": "Wieder auf Lager"
+        },
+        "transaction_status": {
+          "failure": "Fehler"
+        },
+        "cancel_reason": {
+          "declined": "Zahlung abgelehnt",
+          "fraud": "Betrügerische Bestellung",
+          "customer": "Kunde hat die Bestellung geändert/storniert",
+          "other": "Andere"
+        },
+        "cash_on_delivery": "Barzahlung bei Lieferung (Nachnahme)"
+      },
+      "storefront": {
+        "invalid_password": "Das Passwort ist falsch. Bitte versuche es erneut."
+      },
+      "tags": {
+        "add_articles": "Suche auf Artikel mit dem Tag %{tag} eingrenzen",
+        "add_products": "Auswahl auf Produkte mit dem Tag %{tag} eingrenzen",
+        "remove_articles": "Suche auf Artikel ausweiten, die nicht mit %{tag} gekennzeichnet sind"
       }
     },
     "filters": {
@@ -3652,6 +3696,52 @@
       "buyer_consent": "Mit Ihrer Bestellung stimmen Sie zu, bei Global-e als eingetragenem Händler einzukaufen, vorbehaltlich der %{termsAndConditionsLink} und %{privacyPolicyLink} von Global-e, und Ihre Informationen mit %{shopName} zu teilen.",
       "terms_and_conditions": "Allgemeine Geschäftsbedingungen",
       "privacy_policy": "Datenschutzrichtlinie"
+    },
+    "sentence": {
+      "two_words_connector": "und",
+      "last_word_connector": "und"
+    },
+    "pagination": {
+      "previous": "Zurück",
+      "next": "Weiter"
+    },
+    "search": {
+      "error": "Beim Laden Ihrer Suchergebnisse ist ein Problem aufgetreten. Bitte aktualisieren Sie die Seite oder versuchen Sie es später erneut.",
+      "sorting": {
+        "price_ascending": "Preis, aufsteigend",
+        "price_descending": "Preis, absteigend sortiert"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Fehler - %{title}",
+      "shopping_cart": "Ihr Warenkorb",
+      "order": "%{name} bestellen",
+      "search": "Suchen",
+      "search_results": {
+        "one": "Suche: %{count} Ergebnis für \"%{terms}\"",
+        "other": "Suche: %{count} Ergebnisse für „%{terms}“ gefunden"
+      },
+      "collections": "Sammlungen",
+      "checkpoint": "Kontrollpunkt"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Normalerweise in 1 Stunde fertig",
+        "two_hours": "Normalerweise in 2 Stunden abholbereit.",
+        "four_hours": "Normalerweise in 4 Stunden fertig",
+        "twenty_four_hours": "Normalerweise innerhalb von 24 Stunden fertig",
+        "two_to_four_days": "Normalerweise in 2-4 Tagen fertig",
+        "five_or_more_days": "Normalerweise in 5+ Tagen fertig",
+        "zero_to_two_hours": "Normalerweise in 2 Stunden abholbereit.",
+        "two_to_four_hours": "Normalerweise in 4 Stunden fertig",
+        "immediately": "Jetzt abholbereit",
+        "next_day": "Bereits am nächsten Tag abholbereit"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Dieser Artikel ist ein wiederkehrender oder aufgeschobener Kauf. Wenn ich fortfahre, stimme ich der %{cancellationPolicyLink} zu und ermächtige Sie, meine Zahlungsmethode zu den auf dieser Seite aufgeführten Preisen, in den angegebenen Abständen und an den angegebenen Terminen zu belasten, bis meine Bestellung erfüllt ist oder ich storniere, sofern dies zulässig ist.",
+      "buyer_consent_cart": "Mindestens einer der Artikel in deinem Warenkorb ist ein wiederkehrender oder aufgeschobener Kauf. Wenn ich fortfahre, stimme ich der %{cancellationPolicyLink} zu und ermächtige dich, meine Zahlungsmethode zu den auf dieser Seite angegebenen Preisen, in der angegebenen Häufigkeit und zu den angegebenen Terminen zu belasten, bis meine Bestellung erfüllt ist oder ich storniere, sofern dies zulässig ist.",
+      "cancellation_policy": "Stornierungsbedingungen"
     }
   }
 }
