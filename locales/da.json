@@ -294,35 +294,35 @@
     },
     "cart": {
       "title": "Din indkøbskurv",
-      "caption": "Varer i indkøbskurv",
+      "caption": "Varer i posen",
       "remove_title": "Fjern {{ title }}",
-      "note": "Særlige instruktioner til ordre",
-      "checkout": "Gå til betaling",
+      "note": "Særlige instruktioner til ordren",
+      "checkout": "Se nærmere på",
       "empty": "Din indkøbskurv er tom",
-      "cart_error": "Der opstod en fejl under opdatering af din indkøbskurv. Prøv igen.",
-      "cart_quantity_error_html": "Du kan kun lægge {{ quantity }} af denne vare i indkøbskurven.",
+      "cart_error": "Der opstod en fejl under opdateringen af din kurv. Prøv igen.",
+      "cart_quantity_error_html": "Du kan kun lægge {{ quantity }} af denne vare i din indkøbskurv.",
       "headings": {
         "product": "Produkt",
         "price": "Pris",
-        "total": "I alt",
+        "total": "Total",
         "quantity": "Antal",
         "image": "Produktbillede"
       },
       "update": "Opdater",
       "login": {
         "title": "Har du en konto?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log ind</a> for at betale hurtigere."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log ind</a> for at gå hurtigere til betaling."
       },
-      "estimated_total": "Estimeret totalbeløb",
-      "new_estimated_total": "Ny estimeret totalbeløb",
-      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Inklusive told og skatter. Rabatter og <a href=\"{{ link }}\">levering</a> beregnes ved betaling.",
-      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Inklusive told og skatter. Rabatter og levering beregnes ved betaling.",
-      "taxes_included_shipping_at_checkout_with_policy_html": "Inklusive skatter. Rabatter og <a href=\"{{ link }}\">levering</a> beregnes ved betaling.",
-      "taxes_included_shipping_at_checkout_without_policy": "Inklusive skatter. Rabatter og levering beregnes ved betaling.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Inklusive told. Skatter, rabatter og <a href=\"{{ link }}\">levering</a> beregnes ved betaling.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Inklusive told. Skatter, rabatter og levering beregnes ved betaling.",
-      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Skatter, rabatter og <a href=\"{{ link }}\">levering</a> beregnes ved betaling.",
-      "taxes_at_checkout_shipping_at_checkout_without_policy": "Skatter, rabatter og levering beregnes ved betaling.",
+      "estimated_total": "Anslået total",
+      "new_estimated_total": "Nyt anslået totalbeløb",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Told og afgifter er inkluderet. Rabatter og <a href=\"{{ link }}\">forsendelse</a> beregnes ved betaling.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Afgifter og skatter er inkluderet. Rabatter og fragt beregnes ved betaling.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Moms inkluderet. Rabatter og <a href=\"{{ link }}\">fragt</a> beregnes ved kassen.",
+      "taxes_included_shipping_at_checkout_without_policy": "Skatter inkluderet. Rabatter og fragt beregnes ved kassen.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Afgifter er inkluderet. Skatter, rabatter og <a href=\"{{ link }}\">forsendelse</a> beregnes ved betaling.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Afgifter inkluderet. Skatter, rabatter og fragt beregnes ved betaling.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Skatter, rabatter og <a href=\"{{ link }}\">fragt</a> beregnes ved kassen.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Skatter, rabatter og fragt beregnes ved betaling.",
       "show_bundle": "Vis pakke",
       "hide_bundle": "Skjul pakken"
     },
@@ -333,8 +333,8 @@
     },
     "featured_blog": {
       "view_all": "Se alle",
-      "onboarding_title": "Blogopslag",
-      "onboarding_content": "Giv dine kunder en oversigt over dit blogopslag"
+      "onboarding_title": "Blogindlæg",
+      "onboarding_content": "Giv dine kunder et resumé af dit blogindlæg"
     },
     "featured_collection": {
       "view_all": "Se alle",
@@ -345,7 +345,7 @@
     },
     "collection_template": {
       "title": "Kollektion",
-      "empty": "Der blev ikke fundet nogen produkter",
+      "empty": "Ingen produkter fundet",
       "use_fewer_filters_html": "Brug færre filtre, eller <a class=\"{{ class }}\" href=\"{{ link }}\">fjern alle</a>"
     },
     "video": {
@@ -353,26 +353,26 @@
     },
     "slideshow": {
       "load_slide": "Indlæs dias",
-      "previous_slideshow": "Forrige dias",
-      "next_slideshow": "Næste dias",
+      "previous_slideshow": "Forrige slide",
+      "next_slideshow": "Næste slide",
       "pause_slideshow": "Sæt diasshow på pause",
       "play_slideshow": "Afspil diasshow",
       "carousel": "Karrusel",
-      "slide": "Dias"
+      "slide": "Slide"
     },
     "page": {
       "title": "Sidetitel"
     },
     "announcements": {
-      "previous_announcement": "Forrige meddelelse",
+      "previous_announcement": "Tidligere meddelelse",
       "next_announcement": "Næste meddelelse",
       "carousel": "Karrusel",
       "announcement": "Meddelelse",
-      "announcement_bar": "Meddelelseslinje"
+      "announcement_bar": "Meddelelsesbjælke"
     },
     "quick_order_list": {
-      "product_total": "Subtotal for produkt",
-      "view_cart": "Se indkøbskurv",
+      "product_total": "Produktsubtotal",
+      "view_cart": "Se indkøbskurven",
       "each": "{{ money }}/stk.",
       "product": "Produkt",
       "variant": "Variant",
@@ -386,13 +386,13 @@
         "other": "{{ quantity }} varer fjernet"
       },
       "product_variants": "Produktvarianter",
-      "total_items": "Varer i alt",
-      "remove_all_items_confirmation": "Vil du fjerne alle {{ quantity }} varer fra din indkøbskurv?",
+      "total_items": "Antal varer",
+      "remove_all_items_confirmation": "Fjern alle {{ quantity }} varer fra din kurv?",
       "remove_all": "Fjern alle",
       "cancel": "Annuller",
-      "remove_all_single_item_confirmation": "Vil du fjerne 1 vare fra din indkøbskurv?",
-      "min_error": "Denne vare har en minimumsgrænse på {{ min }}",
-      "max_error": "Denne vare har en maksimumgrænse på {{ max }}",
+      "remove_all_single_item_confirmation": "Fjern 1 vare fra din kurv?",
+      "min_error": "Denne vare har et minimum på {{ min }}",
+      "max_error": "Denne vare har et maksimum på {{ max }}",
       "step_error": "Du kan kun tilføje denne vare i intervaller på {{ step }}"
     },
     "main-product": {
@@ -962,7 +962,92 @@
         "address_company_contains_html_tags": "Virksomheden må ikke indeholde HTML-tags.",
         "address_company_contains_mathematical_symbols": "Virksomhedsnavnet må ikke indeholde matematiske symboler.",
         "address_generic_invalid": "Ugyldig post",
-        "address_country_invalid": "Vælg et land/en region på listen"
+        "address_country_invalid": "Vælg et land/en region på listen",
+        "handle_email_invalid": "Indtast en gyldig e-mailadresse",
+        "email_invalid": "Indtast en gyldig e-mailadresse",
+        "email_or_phone_blank": "Indtast en e-mailadresse eller et telefonnummer",
+        "email_or_phone_invalid": "Indtast en gyldig e-mailadresse eller et mobiltelefonnummer",
+        "address_street_name_blank": "Indtast et gadenavn",
+        "address_street_name_too_long": "Gaden er for lang (maksimalt {{count}} tegn)",
+        "address_street_name_contains_emojis": "Gaden må ikke indeholde emojis.",
+        "address_street_name_contains_html_tags": "Gaden må ikke indeholde HTML-tags.",
+        "address_street_name_contains_mathematical_symbols": "Gaden må ikke indeholde matematiske symboler.",
+        "address_street_number_blank": "Indtast et bygningsnummer",
+        "address_street_number_too_long": "Bygningsnummeret er for langt (maksimum er {{count}} tegn)",
+        "address_street_number_contains_html_tags": "Bygningsnummeret må ikke indeholde HTML-tags",
+        "address_street_number_contains_mathematical_symbols": "Husnummeret må ikke indeholde matematiske symboler.",
+        "address_line2_contains_emojis": "Den anden adresselinje må ikke indeholde emojis.",
+        "address_line2_contains_html_tags": "Den anden adresselinje må ikke indeholde HTML-tags.",
+        "address_line2_contains_mathematical_symbols": "Den anden adresselinje må ikke indeholde matematiske symboler.",
+        "address_neighborhood_blank": "Indtast et kvarter",
+        "address_neighborhood_too_long": "Kvarteret er for langt (maksimum er {{count}} tegn)",
+        "address_neighborhood_contains_emojis": "Kvarteret må ikke indeholde emojis",
+        "address_neighborhood_contains_html_tags": "Nabolaget må ikke indeholde HTML-tags.",
+        "address_neighborhood_contains_mathematical_symbols": "Nabolaget må ikke indeholde matematiske symboler.",
+        "address_subdistrict_blank": "Indtast et underdistrikt",
+        "address_subdistrict_too_long": "Distriktet er for langt (maksimalt {{count}} tegn)",
+        "address_subdistrict_contains_emojis": "Underområde må ikke indeholde emojis",
+        "address_subdistrict_contains_html_tags": "Underområde må ikke indeholde HTML-tags.",
+        "delivery_address_code_too_long": "Adressen er for lang (maksimalt %{count} tegn)",
+        "delivery_address_code_contains_emojis": "Adressekoden må ikke indeholde emojis.",
+        "delivery_address_code_contains_html_tags": "Adressekoden må ikke indeholde HTML-tags",
+        "delivery_address_code_contains_mathematical_symbols": "Adressekoden må ikke indeholde matematiske symboler",
+        "address_ward_blank": "Gå ind på en afdeling",
+        "address_ward_too_long": "Afdelingen er for lang (maks. {{count}} tegn)",
+        "address_ward_contains_emojis": "Afdelingen må ikke indeholde emojis.",
+        "address_ward_contains_html_tags": "Afdelingen må ikke indeholde HTML-tags",
+        "address_ward_contains_mathematical_symbols": "Afdelingen må ikke indeholde matematiske symboler",
+        "address_province_blank": "Vælg en stat/provins",
+        "address_phone_contains_emojis": "Telefonnummeret må ikke indeholde emojis",
+        "address_zip_blank": "Indtast et postnummer",
+        "address_zip_blocked_address": "Denne placering understøttes ikke",
+        "address_zip_too_long": "Postnummeret er for langt (maksimalt 255 tegn)",
+        "address_zip_not_supported": "Denne placering understøttes ikke",
+        "address_zip_invalid_for_country": "Indtast et gyldigt postnummer for %{country}",
+        "address_zip_invalid_for_province": "Indtast et gyldigt postnummer for %{province}",
+        "address_zip_invalid_for_country_and_province": "Indtast et gyldigt postnummer for %{province}, %{country}",
+        "address_zip_contains_emojis": "Postnummeret må ikke indeholde emojis.",
+        "address_zip_contains_mathematical_symbols": "Postnummer må ikke indeholde matematiske symboler.",
+        "credit_card_name_blank": "Indtast dit navn præcis, som det står på dit kort.",
+        "credit_card_name_invalid": "Indtast dit navn præcis, som det står på dit kort.",
+        "credit_card_name_billing_invalid": "Indtast først dit navn på faktureringsadressen",
+        "credit_card_number_invalid": "Indtast et gyldigt kortnummer",
+        "credit_card_start_invalid": "Indtast en gyldig startdato for kortet",
+        "credit_card_start_month_invalid": "Indtast en gyldig startmåned for kortet",
+        "credit_card_start_year_invalid": "Indtast et gyldigt startår for kortet",
+        "credit_card_verification_value_blank": "Indtast kortets CVV- eller sikkerhedskode",
+        "delivery_line_detail_changed": "Nogle leveringsoplysninger kan have ændret sig. Kontrollér din leveringsmetode, og prøv igen.",
+        "reduction_code_code_not_found": "Indtast en gyldig rabatkode eller et gavekort",
+        "reduction_code_gift_card_unusable": "Du kan ikke bruge et gavekort til at købe et andet gavekort.",
+        "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "Gavekort understøttes ikke med betalingsmuligheder med udsat betaling.",
+        "gift_card_already_applied": "Dette gavekort er allerede blevet anvendt på din ordre",
+        "gift_card_depleted": "Dette gavekort har ingen penge tilbage",
+        "gift_card_currency_mismatch": "Kun gavekort i %{checkout_currency} kan bruges til denne ordre",
+        "gift_cards_not_supported_with_deferred_purchase_options": "Gavekort understøttes ikke med betalingsmuligheder med udsat betaling.",
+        "gift_card_buying_gift_card": "Du kan ikke bruge et gavekort til at købe et andet gavekort.",
+        "payment_gateway_needs_paid_plan_error": "Denne betalingsmetode er ikke tilgængelig i butikken lige nu",
+        "payment_gateway_not_in_test_mode": "er ikke konfigureret til at teste ordrer. Denne butik kan ikke modtage rigtige ordrer eller rigtige betalinger.",
+        "payment_gateway_incompatible_with_multi_currency": "For at gennemføre denne betaling i din lokale valuta skal du betale med kreditkort.",
+        "payment_gateway_unsupported_for_development_store_html": "For at afgive en testordre skal du bruge en testbetalingsgateway. Få mere at vide om <a href=\"%{docs_link}\">test af ordrer i udviklingsbutikker</a>.",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "Du har nået grænsen for ordrer i udviklingsbutikken med denne betalingsudbyder. Hvis du vil afgive endnu en ordre, skal du bruge en testbetalingsgateway. Få mere at vide om <a href=\"%{docs_link}\">test af ordrer i udviklingsbutikker</a>.",
+        "purchase_options_agreement_blank": "For at fortsætte med dit køb skal du acceptere vilkårene for udskudt eller tilbagevendende køb.",
+        "physical_gift_card_invalid_quantity": "Antallet af fysiske gavekort i ordrelinjen skal svare til antallet af gavekortkoder.",
+        "physical_gift_card_duplicate_code": "Fysisk gavekortlinje indeholder en dubletkode.",
+        "physical_gift_card_invalid_code": "Koden til det fysiske gavekort er ugyldig.",
+        "email_blank": "Indtast en e-mail",
+        "phone_blank": "Indtast et telefonnummer",
+        "address_zip_invalid": "Indtast et gyldigt postnummer",
+        "invalid_delivery_address_reference_handle": "Referencen til leveringsadressen kunne ikke matches med nogen tilgængelige leveringsadresser.",
+        "must_use_available_shipping_rate": "Forsendelsesprisen skal vælges blandt de tilgængelige forsendelsespriser.",
+        "tips_invalid_tip_amount": "Indtast et drikkepengebeløb under %{amount}",
+        "shop_pay_mobile_phone_blank": "Indtast et mobiltelefonnummer",
+        "vaulting_agreement_blank": "Din betalingsmetode skal gemmes, da restbeløbet for denne ordre skal betales senere.",
+        "shipping_method_invalid_phone_number": "Opdater telefonnummeret i din leveringsadresse for at se de tilgængelige leveringsmetoder.",
+        "split_cart_tax_engine_not_supported": "Alle varer skal bruge den samme leveringsmetode som den skatteberegner, der bruges af butikkens placering.",
+        "split_cart_international_shipping_not_supported": "Alle varer skal bruge samme leveringsmetode ved international forsendelse. Opdater leveringsmetoden, eller opret flere ordrer.",
+        "split_by_delivery_method_requires_merchandise_from_single_location": "Opdeling efter leveringsmetode kræver, at de enkelte varelinjer ekspederes fra ét enkelt sted.",
+        "split_by_delivery_method_unsupported_method_type": "Opdel efter leveringsmetode forsøgt med en leveringsmetodetype, der ikke understøttes.",
+        "split_quantity_per_delivery_line_not_allowed": "Mindst én varelinje henvises til af flere leveringslinjer."
       },
       "error_page": {
         "terminal": {
@@ -987,6 +1072,78 @@
       "editor": {
         "navigation": {
           "store_logo_accessibility_label": "Gå til webshoppen"
+        }
+      },
+      "general": {
+        "complete_purchase_button_label": "Gennemfør ordren",
+        "all_rights_reserved": "Alle rettigheder forbeholdes %{shop_name}",
+        "continue_to_review": "Gennemgå ordre",
+        "back_to_cart": "Gå tilbage til kurven",
+        "back_to_contact_information": "Tilbage til oplysningerne",
+        "choose_shipping_method": "Vælg en forsendelsesmetode",
+        "autocomplete_title": "Forslag",
+        "autocomplete_single_item": "1 vare på lager",
+        "autocomplete_selection": "{{number}} af {{total}}",
+        "checkout_context": {
+          "step_one": "%{shop_name} - Gå til kassen"
+        },
+        "errors": {
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Virksomhedens kontaktperson har ikke adgang til virksomheden.",
+            "company_location_required": "Kunden skal vælge en virksomhedsplacering for at fortsætte.",
+            "personal_order_not_allowed": "Personlige ordrer er ikke tilladt i denne butik.",
+            "lost_access_to_company": "Kunden mistede adgangen til alle virksomheder.",
+            "phone_number_does_not_match_expected_pattern": "Det angivne telefonnummer følger ikke det forventede mønster.",
+            "email_required": "En e-mail er påkrævet, når varen købes med et abonnement.",
+            "email_domain_is_invalid": "Dette angivne domæne kan ikke opløses.",
+            "checkout_completion_target_is_missing": "Målet for gennemførelse af betaling mangler.",
+            "customer_profile_access_restricted": "Checkout har ikke tilladelse til at få adgang til kundeprofilen.",
+            "checkout_completion_target_is_invalid_proc": "Ugyldigt mål for gennemførelse af betaling.",
+            "buyer_identity_presentment_currency_does_not_match": "Der opstod et problem med at behandle din ordre. Prøv igen om et par minutter."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Detailhandelstilskrivning er ikke tilladt for denne betaling.",
+            "retail_attribution_required": "Detailhandelstilskrivning er påkrævet for denne betaling."
+          },
+          "captcha": {
+            "job_already_queued": "Captcha-validering er allerede sat i kø for dette captcha-token."
+          }
+        },
+        "confirm_order_button_label": "Bekræft ordre",
+        "back_button_label": "Return",
+        "autocomplete_zero_item": "Ingen varer tilgængelige",
+        "dates": {
+          "weekdays": {
+            "tuesday": "tirsdag",
+            "friday": "fredag",
+            "saturday": "lørdag"
+          },
+          "weekdays_abbreviation": {
+            "monday": "Mo",
+            "tuesday": "Din",
+            "wednesday": "Vi",
+            "thursday": "Tors",
+            "friday": "Fra",
+            "saturday": "Så",
+            "sunday": "Din"
+          },
+          "months": {
+            "march": "marts",
+            "june": "juni",
+            "july": "juli",
+            "october": "oktober",
+            "november": "november"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Vis forrige måned, {{month}} {{year}}",
+          "range_start": "Startinterval",
+          "in_range": "Inden for rækkevidde",
+          "range_end": "Rækkevidde-slutning"
+        },
+        "dropzone": {
+          "invalid_file_type": "Filtypen understøttes ikke",
+          "dragged_over": "Slip filen for at overføre"
         }
       }
     },

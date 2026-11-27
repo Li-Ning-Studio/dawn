@@ -121,77 +121,83 @@
       "description": "Beskrivning",
       "on_sale": "Rea",
       "quantity": {
-        "label": "Kvantitet",
-        "input_label": "Kvantitet för {{ product }}",
-        "increase": "Öka kvantitet för {{ product }}",
-        "decrease": "Minska kvantitet för {{ product }}",
-        "minimum_of": "Minimum på {{ quantity }}",
-        "maximum_of": "Maximum på {{ quantity }}",
-        "multiples_of": "Ökningar i steg om {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i varukorg",
+        "label": "Antal",
+        "input_label": "Antal för {{ product }}",
+        "increase": "Öka antalet för {{ product }}",
+        "decrease": "Minska antal för {{ product }}",
+        "minimum_of": "Minst {{ quantity }}",
+        "maximum_of": "Högst {{ quantity }}",
+        "multiples_of": "Ökningar med {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i varukorgen",
         "note": "Visa kvantitetsregler",
-        "min_of": "Min. {{ quantity }}",
-        "max_of": "Max. {{ quantity }}"
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}"
       },
       "price": {
         "from_price_html": "Från {{ price }}",
         "regular_price": "Ordinarie pris",
-        "sale_price": "Försäljningspris",
-        "unit_price": "Enhetspris"
+        "sale_price": "Reapris",
+        "unit_price": "Styckpris",
+        "usually_sells_at_html": "Säljs vanligtvis för {{ price }}"
       },
       "share": "Dela den här produkten",
       "sold_out": "Slutsåld",
-      "unavailable": "Inte tillgängliga",
-      "vendor": "Säljare",
+      "unavailable": "Otillgänglig",
+      "vendor": "Leverantör",
       "video_exit_message": "{{ title }} öppnar helskärmsvideo i samma fönster.",
       "xr_button": "Visa i ditt utrymme",
-      "xr_button_label": "Visa i ditt utrymme, laddar artiklar i fönster med förstärkt verklighet",
+      "xr_button_label": "Visa i ditt utrymme, laddar objektet i ett fönster för förstärkt verklighet",
       "pickup_availability": {
         "view_store_info": "Visa butiksinformation",
-        "check_other_stores": "Kontrollerar tillgänglighet i andra butiker",
-        "pick_up_available": "Hämtning tillgänglig",
-        "pick_up_available_at_html": "Hämtning tillgänglig på <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Det går för närvarande inte att få hämtning på <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Det gick inte att ladda hämtningstillgänglighet",
+        "check_other_stores": "Kontrollera tillgängligheten i andra butiker",
+        "pick_up_available": "Upphämtning tillgänglig",
+        "pick_up_available_at_html": "Hämtning tillgänglig hos <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Upphämtning är för närvarande inte tillgänglig på <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Det gick inte att läsa in tillgänglighet för upphämtning",
         "refresh": "Uppdatera"
       },
       "media": {
-        "open_media": "Öppna mediet {{ index }} i modalfönster",
-        "play_model": "Spela 3D-visaren",
-        "play_video": "Spela video",
-        "gallery_viewer": "Gallerivisning",
-        "load_image": "Ladda bilden {{ index }} i gallerivisning",
-        "load_model": "Ladda 3D-modellen {{ index }} i gallerivisning",
-        "load_video": "Spela videon {{ index }} i gallerivisning",
-        "image_available": "Bilden {{ index }} är nu tillgänglig i gallerivisning"
+        "open_media": "Öppna media {{ index }} i en modal",
+        "play_model": "Spela 3D-visare",
+        "play_video": "Spela upp videon",
+        "gallery_viewer": "Gallerivisare",
+        "load_image": "Ladda bilden {{ index }} i gallerivyn",
+        "load_model": "Ladda 3D-modell {{ index }} i gallerivyn",
+        "load_video": "Spela upp video {{ index }} i gallerivyn",
+        "image_available": "Bild {{ index }} är nu tillgänglig i gallerivyn."
       },
-      "view_full_details": "Visa alla uppgifter",
+      "view_full_details": "Visa alla detaljer",
       "shipping_policy_html": "<a href=\"{{ link }}\">Frakt</a> beräknas i kassan.",
       "choose_options": "Välj alternativ",
       "choose_product_options": "Välj alternativ för {{ product_name }}",
-      "value_unavailable": "{{ option_value }} – inte tillgängligt",
+      "value_unavailable": "{{ option_value }} - Ej tillgänglig",
       "variant_sold_out_or_unavailable": "Varianten är slutsåld eller inte tillgänglig",
       "inventory_in_stock": "I lager",
       "inventory_in_stock_show_count": "{{ quantity }} i lager",
-      "inventory_low_stock": "Låg lagernivå",
-      "inventory_low_stock_show_count": "Låg lagernivå: {{ quantity }} kvar",
-      "inventory_out_of_stock": "Slut i lager",
+      "inventory_low_stock": "Lågt lagersaldo",
+      "inventory_low_stock_show_count": "Få kvar i lager: {{ quantity }} kvar",
+      "inventory_out_of_stock": "Tillfälligt slut i lager",
       "inventory_out_of_stock_continue_selling": "I lager",
-      "sku": "Lagerhållningsenhet",
+      "sku": "SKU",
       "volume_pricing": {
-        "title": "Volymprissättning",
-        "note": "Volymprissättning är tillgängligt",
+        "title": "Volympriser",
+        "note": "Volympriser tillgängliga",
         "minimum": "Fler än {{ quantity }}",
         "price_range": "{{ minimum }}–{{ maximum }}",
-        "price_at_each_html": "för {{ price }}/st"
+        "price_at_each_html": "à {{ price }}/st"
       },
       "product_variants": "Produktvarianter",
       "taxes_included": "Skatter ingår.",
-      "duties_included": "Tullavgifter ingår.",
-      "duties_and_taxes_included": "Tullavgifter och skatter ingår."
+      "duties_included": "Tullar ingår.",
+      "duties_and_taxes_included": "Tullar och skatter ingår.",
+      "key_highlights": "Viktiga höjdpunkter",
+      "all_prices_incl_taxes": "(inkl. skatter)",
+      "country_of_origin": "Ursprungsland",
+      "manufactured_by": "Tillverkad av",
+      "imported_marketed_by": "Importerad och marknadsförd av"
     },
     "modal": {
-      "label": "Mediagalleri"
+      "label": "Mediegalleri"
     },
     "facets": {
       "apply": "Använd",
@@ -521,19 +527,291 @@
   },
   "recipient": {
     "form": {
-      "checkbox": "Jag vill skicka detta som en gåva",
+      "checkbox": "Jag vill skicka detta som en present",
       "email_label": "Mottagarens e-postadress",
-      "email": "E-postadress",
+      "email": "E-post",
       "name_label": "Mottagarens namn (valfritt)",
       "name": "Namn",
       "message_label": "Meddelande (valfritt)",
       "message": "Meddelande",
-      "max_characters": "Max. {{ max_chars }} tecken",
+      "max_characters": "{{ max_chars }} tecken max.",
       "email_label_optional_for_no_js_behavior": "Mottagarens e-postadress (valfritt)",
-      "send_on": "ÅÅÅÅ-MM-DD",
+      "send_on": "YYYY-MM-DD",
       "send_on_label": "Skicka den (valfritt)",
-      "expanded": "Mottagarformulär för presentkort öppnat",
-      "collapsed": "Mottagarformulär för presentkort stängt"
+      "expanded": "Presentkortsmottagarens formulär har utökats",
+      "collapsed": "Presentkortsmottagarens formulär är hopfällt"
+    }
+  },
+  "shopify": {
+    "addresses": {
+      "pincode": "PIN-kod",
+      "state": "Delstat",
+      "governorate": "Guvernement",
+      "confirm": "Är du säker på att du vill ta bort den här adressen?",
+      "state_and_territory": "Delstat/territorium"
+    },
+    "checkout": {
+      "contact": {
+        "field_saved_label": "Sparat",
+        "field_tooltip_helper_text": "Används för orderbekräftelser och påminnelser om varukorgen",
+        "company_attention_label": "Företag/Attn.",
+        "address2_label": "Lägenhet, svit osv.",
+        "neighborhood_label": "Grannskap",
+        "commune_label": "Kommunen",
+        "block_label": "Block",
+        "country_label": "Land/region",
+        "country_code": "Lands-/regionkod",
+        "governorate_label": "Guvernement",
+        "governorate_placeholder": "Guvernement",
+        "civic_number_warning": "Lägg till ett husnummer om du har ett",
+        "different_shipping_address_text": "Använd en engångsadress för den här beställningen",
+        "change_company_location_link_label": "Ändra företagets plats",
+        "change_location_link_label": "Ändra plats",
+        "shipping_used_as_billing_notice": "Detta kommer också att användas som faktureringsadress för den här beställningen.",
+        "optional_company_attention_label": "Företag/Att (valfritt)",
+        "street_number_label": "Byggnadsnummer",
+        "optional_street_number_label": "Byggnadsnummer (valfritt)",
+        "optional_address2_label": "Lägenhet, svit osv. (valfritt)",
+        "subdistrict_label": "Delområde",
+        "optional_subdistrict_label": "Delområde (valfritt)",
+        "ward_label": "Församling",
+        "optional_ward_label": "Avdelning (valfritt)",
+        "optional_block_label": "Block (valfritt)",
+        "suburb_label": "Förort",
+        "province_label": "Provins",
+        "province_placeholder": "Provins",
+        "state_label": "Delstat",
+        "state_placeholder": "Delstat",
+        "region_none": "Inga valda",
+        "state_and_territory_label": "Delstat/territorium",
+        "state_and_territory_placeholder": "Delstat/territorium",
+        "phone_country_code_label": "Landskod för telefonnummer",
+        "phone_tooltip": "Om vi behöver kontakta dig angående din beställning",
+        "pincode_label": "PIN-kod",
+        "pincode_placeholder": "PIN-kod",
+        "ship_to_company": "Skicka till {{companyName}}"
+      },
+      "billing": {
+        "billing_address_title": "Faktureras till",
+        "billing_address_rollup_accessibility_label": "Faktureringsalternativ",
+        "address_delete": "Ta bort adressen",
+        "address_confirm": "Är du säker på att du vill ta bort den här adressen från ditt konto?"
+      },
+      "company_location": {
+        "location_title": "Företagets plats",
+        "location_rollup_accessibility_label": "Företagsplatsalternativ"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Expressutcheckning",
+        "or_check_out_another_way": "Eller kolla in ett annat sätt",
+        "or_pay_with_credit_card": "Eller betala med kreditkort"
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "Ditt kreditkort kommer att debiteras med %{amount}",
+        "payment_total_label": "Totalt att betala",
+        "change_currency_link": "Byt till %{currency_name}",
+        "card_provider_fx_charges_warning": "Din kortutgivare kan ta ut avgifter för transaktioner i %{currency_code}.",
+        "currency_not_supported_by_shop": "Valutan du valde är inte längre tillgänglig. Alla priser visas nu i %{currency_code}."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Din varukorg har uppdaterats utifrån ditt leveransland.",
+        "cart_and_currency_updated_based_on_country": "Din varukorg och valuta har uppdaterats utifrån ditt leveransland.",
+        "currency_updated_for_country": "Valuta uppdaterad för %{country}"
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Ditt land/din region har uppdaterats. Ange din leveransadress för att fortsätta till kassan."
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Det uppstod ett problem när din begäran skulle behandlas. Kontakta butiksägaren."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "Det uppstod ett problem när din beställning skulle behandlas. Försök igen om några minuter."
+      },
+      "captcha": {
+        "title": "Slutför CAPTCHA-kontrollen för att fortsätta",
+        "retry": "Försök med CAPTCHA igen",
+        "errors": {
+          "not_solved": "Slutför CAPTCHA-kontrollen för att fortsätta",
+          "load_failed": "CAPTCHA kunde inte laddas. Försök igen."
+        }
+      },
+      "clipboard": {
+        "failed_to_copy": "Det gick inte att kopiera."
+      },
+      "b2b_errors": {
+        "company_location_required": {
+          "title": "Välj hur du vill gå till kassan",
+          "description": "Logga in och välj en företagsplats för att göra en företagsbeställning, eller gå till kassan som gäst."
+        },
+        "lost_b2b_purchasing_permissions": "Du har inte längre behörighet att lägga B2B-beställningar. %{logout_url} för att lägga en privat beställning i stället.",
+        "lost_permissions_subtitle": "Du har inte längre behörighet att lägga B2B-beställningar. Logga ut för att lägga en privat beställning."
+      },
+      "address_management": {
+        "saved_with_store": "Sparat i den här butiken"
+      },
+      "delivery_options": {
+        "pick_up": "Hämta upp",
+        "pick_up_from_store": "Hämta i butik",
+        "pick_up_in_one_hour": "Vanligtvis klar inom 1 timme",
+        "pick_up_in_two_hours": "Vanligtvis klar inom 2 timmar",
+        "pick_up_in_four_hours": "Vanligtvis klar inom 4 timmar",
+        "pick_up_in_twenty_four_hours": "Vanligtvis klar inom 24 timmar",
+        "pick_up_in_two_to_four_days": "Vanligtvis redo inom 2-4 dagar",
+        "pick_up_in_five_or_more_days": "Vanligtvis klar inom 5+ dagar",
+        "pick_up_immediately": "Redo för upphämtning nu",
+        "company_location_no_address_banner": "Beställningar som skickas till platser utan adress skickas för granskning.",
+        "none_method_definition": "Ingen frakt",
+        "ship": "Skicka",
+        "ship_to_address": "Skicka till adressen",
+        "pickup": "Hämtning",
+        "pick_up_locations": "Upphämtningsplatser",
+        "pick_up_in_two_to_four_hours": "Klar för avhämtning om 4 timmar",
+        "pick_up_next_day": "Redo för upphämtning nästa dag",
+        "pickup_point_method_definition": "Leverera till utlämningsställe",
+        "retail_method_definition": "Detaljhandelns frakt",
+        "subscription_pickup_information": "Detta blir upphämtningsplatsen för alla framtida beställningar av din prenumeration."
+      },
+      "customer_account": {
+        "save_my_information_label": "Spara den här informationen till nästa gång.",
+        "invalid_address": "Den valda adressen är ogiltig. %{update_address_link} eller välj en annan adress.",
+        "incomplete_address": "Den valda adressen är ofullständig. %{update_address_link} eller välj en annan adress.",
+        "rollup_accessibility_label": "Kontoinställningar",
+        "invalid_shipping_method_summary": "Välj en giltig leveransadress för att se tillgängliga leveransmetoder"
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Produkten är inte tillgänglig",
+          "other": "Otillgängliga produkter"
+        },
+        "products_not_available": {
+          "one": "Den här produkten tas bort från din varukorg eftersom den inte är tillgänglig i ditt land/din region.",
+          "other": "Dessa produkter tas bort från din varukorg eftersom de inte är tillgängliga i ditt land eller din region."
+        },
+        "unavailable_label": "Otillgänglig"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Ingen leverans är tillgänglig för %{count} vara"
+          },
+          "message": {
+            "one": "Den här varan tas bort från din kundvagn eftersom det inte finns några leveransmetoder tillgängliga för din adress.",
+            "other": "Dessa varor tas bort från din varukorg eftersom det inte finns några leveransmetoder tillgängliga för din adress."
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "update_card_button_label": "Uppdatera kortet",
+        "delete_customer_mandate": {
+          "generic_error": "Det uppstod ett problem när din begäran behandlades.",
+          "success_message": "Din betalningsmetod har tagits bort."
+        }
+      },
+      "embed": {
+        "header": {
+          "review_order": "Granska din beställning"
+        },
+        "shipping": {
+          "shipping_options": "Se alla leveransalternativ"
+        }
+      },
+      "field_errors": {
+        "address_first_name_too_long": "Förnamnet är för långt (högst 255 tecken)",
+        "address_first_name_contains_emojis": "Förnamnet får inte innehålla emojis.",
+        "address_first_name_contains_html_tags": "Förnamnet får inte innehålla HTML-taggar.",
+        "address_first_name_contains_url": "Förnamnet får inte innehålla en webbadress.",
+        "address_first_name_contains_mathematical_symbols": "Förnamnet får inte innehålla matematiska symboler.",
+        "address_last_name_too_long": "Efternamnet är för långt (maximalt 255 tecken)",
+        "address_last_name_contains_emojis": "Efternamnet får inte innehålla emojis.",
+        "address_last_name_contains_html_tags": "Efternamnet får inte innehålla HTML-taggar.",
+        "address_last_name_contains_url": "Efternamnet får inte innehålla en URL",
+        "address_last_name_contains_mathematical_symbols": "Efternamnet får inte innehålla matematiska symboler.",
+        "address_address1_too_long": "Den första adressraden är för lång (maximalt 255 tecken)",
+        "address_address1_contains_emojis": "Adress1 får inte innehålla emojis",
+        "address_address1_contains_html_tags": "Adress1 får inte innehålla HTML-taggar",
+        "address_address1_contains_mathematical_symbols": "Den första adressraden får inte innehålla matematiska symboler.",
+        "address_line2_blank": "Ange lägenhet, svit osv.",
+        "address_address2_blank": "Ange lägenhet, svit osv.",
+        "address_address2_contains_html_tags": "Adress 2 får inte innehålla HTML-taggar",
+        "address_address2_contains_mathematical_symbols": "Den andra adressraden får inte innehålla matematiska symboler.",
+        "address_barangay_too_long": "Barangay är för långt (maximalt {{count}} tecken)",
+        "address_barangay_contains_emojis": "Barangay får inte innehålla emojis.",
+        "address_barangay_contains_html_tags": "Barangay får inte innehålla HTML-taggar",
+        "address_colony_blank": "Gå in i en koloni",
+        "address_colony_too_long": "Koloni är för lång (maximalt {{count}} tecken)",
+        "address_colony_contains_emojis": "Koloni får inte innehålla emojis.",
+        "address_colony_contains_html_tags": "Koloni får inte innehålla HTML-taggar",
+        "address_colony_contains_mathematical_symbols": "Kolonin får inte innehålla matematiska symboler.",
+        "address_commune_too_long": "Kommunen är för lång (maximalt {{count}} tecken)",
+        "address_commune_contains_emojis": "Kommunen får inte innehålla emojis.",
+        "address_commune_contains_html_tags": "Kommunen får inte innehålla HTML-taggar.",
+        "address_commune_contains_mathematical_symbols": "Kommunen får inte innehålla matematiska symboler.",
+        "address_district_too_long": "Distriktet är för långt (maximalt {{count}} tecken)",
+        "address_district_contains_emojis": "Distrikt får inte innehålla emojis.",
+        "address_district_contains_html_tags": "Distriktet får inte innehålla HTML-taggar",
+        "address_block_too_long": "Blocket är för långt (maximalt {{count}} tecken)",
+        "address_block_contains_emojis": "Block får inte innehålla emojis.",
+        "address_block_contains_html_tags": "Block kan inte innehålla HTML-taggar",
+        "address_area_too_long": "Området är för långt (maximalt {{count}} tecken)",
+        "address_area_contains_emojis": "Området får inte innehålla emojier",
+        "address_area_contains_html_tags": "Området får inte innehålla HTML-taggar.",
+        "address_area_contains_mathematical_symbols": "Området får inte innehålla matematiska symboler.",
+        "address_city_too_long": "Staden är för lång (högst 255 tecken)",
+        "address_city_contains_emojis": "Staden får inte innehålla emojis",
+        "address_city_contains_html_tags": "Staden får inte innehålla HTML-taggar.",
+        "address_country_blank": "Välj ett land/en region",
+        "address_country_not_supported": "Vi levererar inte till det här landet eller området. Ange en ny leveransadress och försök igen.",
+        "address_company_too_long": "Företagsnamnet är för långt (maximalt 255 tecken)",
+        "address_company_contains_emojis": "Företagsnamnet får inte innehålla emojis.",
+        "address_company_contains_html_tags": "Företagsnamnet får inte innehålla HTML-taggar.",
+        "address_company_contains_mathematical_symbols": "Företagsnamnet får inte innehålla matematiska symboler.",
+        "address_generic_invalid": "Ogiltig post",
+        "address_generic_error": "Fältfel"
+      },
+      "error_page": {
+        "terminal": {
+          "action": {
+            "cta": "Uppdatera sidan"
+          }
+        },
+        "embed_errors": {
+          "storefront_password_required": "Den här butiken är lösenordsskyddad",
+          "customer_account_required": "Kundkonto krävs för att slutföra köpet",
+          "cart_completed": "Den här kassan har redan slutförts.",
+          "not_authorized": "Autentiseringen vid betalningen misslyckades. Kontrollera dina autentiseringsuppgifter för appen.",
+          "killswitch_enabled": "Kassan är tillfälligt otillgänglig",
+          "policy_violation": "Det går inte att slutföra köpet på grund av begränsningar i policykonfigurationen.",
+          "unrecoverable_failure": "Det gick inte att läsa in kassan. Försök igen."
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Din beställning kunde inte behandlas eftersom din rabattkod inte längre är tillgänglig. Kontrollera ordersumman och försök igen."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Gå till webbutiken"
+        }
+      }
+    },
+    "attributes": {
+      "password_confirmation": "Bekräftelse av lösenordet",
+      "body": "kropp"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} rabatter har tillämpats"
+    },
+    "challenge": {
+      "message": "För att fortsätta behöver vi veta att du inte är en robot.",
+      "error": "Ditt svar var inte korrekt, försök igen.",
+      "submit_button_text": "Skicka in"
+    }
+  },
+  "settings_schema": {
+    "product_customisations": {
+      "factory_grip_image": {
+        "label": "Bild av fabriksgrepp",
+        "info": "Visas bredvid alternativet Fabriksgrepp."
+      }
     }
   }
 }

@@ -576,7 +576,20 @@
         "different_shipping_address_label": "Expédier à une autre adresse",
         "different_shipping_address_text": "Utilisez une adresse à usage unique pour cette commande.",
         "change_company_location_link_label": "Modifier l’emplacement de l’entreprise",
-        "change_location_link_label": "Changer de lieu"
+        "change_location_link_label": "Changer de lieu",
+        "optional_barangay_label": "Quartier (facultatif)",
+        "ward_label": "Service",
+        "optional_ward_label": "Quartier (facultatif)",
+        "optional_block_label": "Bloquer (facultatif)",
+        "region_none": "Aucun sélectionné",
+        "phone_rollup_accessibility_label": "Options téléphoniques",
+        "phone_country_code_label": "Indicatif téléphonique du pays",
+        "phone_tooltip": "Au cas où nous aurions besoin de vous contacter au sujet de votre commande",
+        "zip_code_label": "Code postal",
+        "zip_code_placeholder": "Code postal",
+        "pincode_label": "Code PIN",
+        "pincode_placeholder": "Code PIN",
+        "optional_last_name_label": "Nom de famille (facultatif)"
       },
       "billing": {
         "same_as_shipping": "Identique à l’adresse de livraison",
@@ -630,6 +643,163 @@
       },
       "address_management": {
         "saved_with_store": "Enregistré dans cette boutique"
+      },
+      "datepicker": {
+        "choose_date": "Choisissez une date"
+      },
+      "delivery_options": {
+        "pick_up": "Ramasser",
+        "pick_up_from_store": "Retrait en magasin",
+        "pick_up_in_one_hour": "Généralement prêt en 1 heure",
+        "pick_up_in_two_hours": "Généralement prêt en 2 heures",
+        "pick_up_in_four_hours": "Généralement prêt en 4 heures",
+        "pick_up_in_twenty_four_hours": "Généralement prêt sous 24 heures",
+        "pick_up_in_two_to_four_days": "Généralement prêt en 2-4 jours",
+        "pick_up_in_five_or_more_days": "Généralement prêt sous 5 jours ou plus.",
+        "pick_up_immediately": "Prêt à être retiré maintenant",
+        "company_location_no_address_banner": "Les commandes expédiées vers des lieux sans adresse seront soumises à vérification.",
+        "none_method_definition": "Pas de livraison",
+        "shipping_address": "Adresse de livraison",
+        "pickup_store": "Retrait en magasin",
+        "pick_up_locations": "Points de retrait",
+        "pick_up_in_zero_to_two_hours": "Prêt à être récupéré dans 2 heures",
+        "pick_up_in_two_to_four_hours": "Prêt à être retiré dans 4 heures",
+        "pick_up_next_day": "Prêt à être retiré dès le lendemain",
+        "pickup_point_method_definition": "Faites livrer à un point relais",
+        "subscription_pickup_information": "Ce sera le lieu de retrait de toutes les prochaines commandes de votre abonnement."
+      },
+      "customer_account": {
+        "not_user_label": "Ce n’est pas %{first_name} ?",
+        "have_an_account_label": "Vous avez un compte ?",
+        "sign_in_link_label": "Connectez-vous",
+        "save_my_information_label": "Enregistrez ces informations pour la prochaine fois.",
+        "invalid_address": "L’adresse sélectionnée n’est pas valide. %{update_address_link} ou sélectionnez une autre adresse.",
+        "incomplete_address": "L’adresse sélectionnée est incomplète. %{update_address_link} ou sélectionnez une autre adresse.",
+        "invalid_shipping_method_summary": "Sélectionnez une adresse de livraison valide pour afficher les modes de livraison disponibles.",
+        "saved_address_option_description": {
+          "one": "Vous avez {{count}} adresse enregistrée.",
+          "other": "Vous avez {{count}} adresses enregistrées."
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Produit indisponible",
+          "other": "Produits indisponibles"
+        },
+        "products_not_available": {
+          "one": "Ce produit sera retiré de votre panier, car il n’est pas disponible dans votre pays/région.",
+          "other": "Ces produits seront retirés de votre panier, car ils ne sont pas disponibles dans votre pays/région."
+        },
+        "unavailable_label": "Indisponible"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Aucune livraison disponible pour %{count} article",
+            "other": "Aucune livraison disponible pour %{count} articles"
+          },
+          "message": {
+            "one": "Cet article sera retiré de votre panier, car aucune méthode de livraison n’est disponible à votre adresse.",
+            "other": "Ces articles seront retirés de votre panier, car aucun mode de livraison n’est disponible pour votre adresse."
+          },
+          "label": "Pas de livraison"
+        }
+      },
+      "customer_payment_methods": {
+        "delete_customer_mandate": {
+          "success_message": "Votre moyen de paiement a été supprimé avec succès."
+        }
+      },
+      "embed": {
+        "header": {
+          "review_order": "Vérifiez votre commande"
+        },
+        "shipping": {
+          "shipping_options": "Voir toutes les options de livraison"
+        }
+      },
+      "field_errors": {
+        "address_first_name_blank": "Saisissez un prénom",
+        "address_first_name_too_long": "Le prénom est trop long (255 caractères maximum)",
+        "address_first_name_contains_emojis": "Le prénom ne peut pas contenir d’émojis.",
+        "address_first_name_contains_html_tags": "Le prénom ne peut pas contenir de balises HTML.",
+        "address_first_name_contains_url": "Le prénom ne peut pas contenir d’URL.",
+        "address_first_name_contains_mathematical_symbols": "Le prénom ne peut pas contenir de symboles mathématiques.",
+        "address_last_name_blank": "Saisissez un nom de famille",
+        "address_last_name_too_long": "Le nom de famille est trop long (255 caractères maximum)",
+        "address_last_name_contains_emojis": "Le nom de famille ne peut pas contenir d’émojis.",
+        "address_last_name_contains_html_tags": "Le nom de famille ne peut pas contenir de balises HTML.",
+        "address_last_name_contains_url": "Le nom de famille ne peut pas contenir d’URL.",
+        "address_last_name_contains_mathematical_symbols": "Le nom de famille ne peut pas contenir de symboles mathématiques.",
+        "address_address1_blank": "Saisissez une adresse",
+        "address_address1_too_long": "La première ligne de l’adresse est trop longue (255 caractères maximum)",
+        "address_address1_contains_emojis": "L’adresse 1 ne peut pas contenir d’émojis.",
+        "address_address1_contains_html_tags": "L’adresse 1 ne peut pas contenir de balises HTML.",
+        "address_address1_contains_mathematical_symbols": "La première ligne d’adresse ne peut pas contenir de symboles mathématiques.",
+        "address_address2_blank": "Saisissez un appartement, une suite, etc.",
+        "address_address2_too_long": "La deuxième ligne de l’adresse est trop longue (255 caractères maximum)",
+        "address_address2_contains_emojis": "Le champ Adresse 2 ne peut pas contenir d’émojis.",
+        "address_address2_contains_html_tags": "L’adresse 2 ne peut pas contenir de balises HTML.",
+        "address_address2_contains_mathematical_symbols": "La deuxième ligne d’adresse ne peut pas contenir de symboles mathématiques.",
+        "address_barangay_blank": "Entrez dans un barangay",
+        "address_barangay_too_long": "Barangay est trop long (maximum {{count}} caractères)",
+        "address_barangay_contains_emojis": "Le barangay ne peut pas contenir d’émojis.",
+        "address_barangay_contains_html_tags": "Le barangay ne peut pas contenir de balises HTML.",
+        "address_barangay_contains_mathematical_symbols": "Le barangay ne peut pas contenir de symboles mathématiques.",
+        "address_colony_blank": "Entrez dans une colonie",
+        "address_colony_too_long": "Colonie est trop longue (maximum de {{count}} caractères)",
+        "address_colony_contains_emojis": "Une colonie ne peut pas contenir d’émojis.",
+        "address_colony_contains_html_tags": "La colonie ne peut pas contenir de balises HTML.",
+        "address_colony_contains_mathematical_symbols": "La colonie ne peut pas contenir de symboles mathématiques.",
+        "address_commune_too_long": "Le nom de la commune est trop long ({{count}} caractères maximum)",
+        "address_commune_contains_emojis": "La commune ne peut pas contenir d’émojis.",
+        "address_commune_contains_html_tags": "La commune ne peut pas contenir de balises HTML.",
+        "address_commune_contains_mathematical_symbols": "Le nom de la commune ne peut pas contenir de symboles mathématiques.",
+        "address_district_blank": "Saisissez un quartier",
+        "address_district_too_long": "Le district est trop long (maximum de {{count}} caractères)",
+        "address_district_contains_emojis": "Le district ne peut pas contenir d’émojis.",
+        "address_district_contains_html_tags": "Le district ne peut pas contenir de balises HTML.",
+        "address_district_contains_mathematical_symbols": "Le district ne peut pas contenir de symboles mathématiques.",
+        "address_block_blank": "Entrez un bloc",
+        "address_block_too_long": "Le bloc est trop long ({{count}} caractères maximum)",
+        "address_block_contains_emojis": "Le bloc ne peut pas contenir d’émojis.",
+        "address_block_contains_html_tags": "Le bloc ne peut pas contenir de balises HTML.",
+        "address_area_blank": "Saisissez une zone",
+        "address_area_too_long": "La zone est trop longue ({{count}} caractères maximum)",
+        "address_area_contains_emojis": "La zone ne peut pas contenir d’émojis.",
+        "address_area_contains_html_tags": "La zone ne peut pas contenir de balises HTML.",
+        "address_area_contains_mathematical_symbols": "La zone ne peut pas contenir de symboles mathématiques.",
+        "address_city_blank": "Saisissez une ville",
+        "address_city_too_long": "La ville est trop longue (255 caractères maximum)",
+        "address_city_contains_emojis": "La ville ne peut pas contenir d’émojis",
+        "address_city_contains_html_tags": "La ville ne peut pas contenir de balises HTML.",
+        "address_city_contains_mathematical_symbols": "La ville ne peut pas contenir de symboles mathématiques.",
+        "address_country_not_supported": "Nous ne livrons pas dans ce pays ou cette région. Saisissez une nouvelle adresse de livraison et réessayez.",
+        "address_company_blank": "Saisissez le nom d’une entreprise",
+        "address_company_too_long": "Le nom de l’entreprise est trop long (255 caractères maximum)",
+        "address_company_contains_emojis": "L’entreprise ne peut pas contenir d’émojis.",
+        "address_company_contains_html_tags": "L’entreprise ne peut pas contenir de balises HTML.",
+        "address_company_contains_mathematical_symbols": "L’entreprise ne peut pas contenir de symboles mathématiques.",
+        "address_generic_invalid": "Entrée invalide"
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Un problème est survenu lors du paiement.",
+          "message": "Actualisez cette page ou réessayez dans quelques minutes.",
+          "request_id": "ID de demande : {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "Cette boutique est protégée par un mot de passe.",
+          "customer_account_required": "Un compte client est requis pour finaliser la commande.",
+          "cart_completed": "Ce paiement a déjà été effectué.",
+          "not_authorized": "Échec de l’authentification au paiement. Vérifiez les identifiants de votre application.",
+          "killswitch_enabled": "Le paiement est temporairement indisponible.",
+          "policy_violation": "Impossible de finaliser le paiement en raison de restrictions liées à la configuration des règles.",
+          "unrecoverable_failure": "Impossible de charger le paiement. Réessayez."
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Votre commande n’a pas pu être traitée, car votre code de réduction n’est plus disponible. Vérifiez le montant total de votre commande et réessayez."
       }
     },
     "attributes": {
