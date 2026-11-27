@@ -10,14 +10,14 @@
 {
   "general": {
     "password_page": {
-      "login_form_heading": "Shop mit Passwort betreten:",
-      "login_password_button": "Mit Passwort betreten",
+      "login_form_heading": "Mit Passwort den Store betreten:",
+      "login_password_button": "Mit Passwort anmelden",
       "login_form_password_label": "Passwort",
-      "login_form_password_placeholder": "Dein Passwort",
+      "login_form_password_placeholder": "Ihr Passwort",
       "login_form_error": "Falsches Passwort!",
       "login_form_submit": "Eingeben",
-      "admin_link_html": "Bist du der Shop-Inhaber? <a href=\"/admin\" class=\"link underlined-link\">Hier einloggen</a>",
-      "powered_by_shopify_html": "Dieser Shop wird unterstützt von {{ shopify }}"
+      "admin_link_html": "Sind Sie der Ladeninhaber? <a href=\"/admin\" class=\"link underlined-link\">Melden Sie sich hier an</a>",
+      "powered_by_shopify_html": "Dieser Shop wird von {{ shopify }} betrieben."
     },
     "social": {
       "alt_text": {
@@ -37,7 +37,7 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "Weiter shoppen",
+    "continue_shopping": "Weiter einkaufen",
     "pagination": {
       "label": "Seitennummerierung",
       "page": "Seite {{ number }}",
@@ -46,14 +46,14 @@
     },
     "search": {
       "search": "Suchen",
-      "reset": "Suchbegriff zurücksetzen",
+      "reset": "Suchbegriff löschen",
       "featured_collection": "Im Trend",
-      "featured": "Empfohlen"
+      "featured": "Vorgestellt"
     },
     "cart": {
-      "view": "Warenkorb ansehen ({{ count }})",
-      "item_added": "Artikel wurde in den Warenkorb gelegt",
-      "view_empty_cart": "Warenkorb ansehen"
+      "view": "Einkaufstasche ansehen ({{ count }})",
+      "item_added": "Artikel wurde Ihrem Warenkorb hinzugefügt",
+      "view_empty_cart": "Einkaufstasche ansehen"
     },
     "share": {
       "copy_to_clipboard": "Link kopieren",
@@ -65,41 +65,41 @@
       "of": "von",
       "next_slide": "Nach rechts schieben",
       "previous_slide": "Nach links schieben",
-      "name": "Slider"
+      "name": "Schieberegler"
     }
   },
   "newsletter": {
     "label": "E-Mail",
-    "success": "Danke für deine Anmeldung",
+    "success": "Danke für dein Abonnement",
     "button_label": "Abonnieren"
   },
   "accessibility": {
-    "skip_to_text": "Direkt zum Inhalt",
+    "skip_to_text": "Zum Inhalt springen",
     "close": "Schließen",
     "unit_price_separator": "pro",
     "vendor": "Anbieter:",
     "error": "Fehler",
-    "refresh_page": "Wenn du dich für eine Auswahl entscheidest, wird die Seite komplett aktualisiert.",
+    "refresh_page": "Wenn Sie eine Auswahl treffen, wird die gesamte Seite neu geladen.",
     "link_messages": {
       "new_window": "Wird in einem neuen Fenster geöffnet.",
-      "external": "Öffnet externe Webseite."
+      "external": "Öffnet eine externe Website."
     },
-    "loading": "Wird geladen ...",
-    "skip_to_product_info": "Zu Produktinformationen springen",
-    "total_reviews": "Bewertungen insgesamt",
+    "loading": "Wird geladen ...",
+    "skip_to_product_info": "Zum Produktinhalt springen",
+    "total_reviews": "Gesamtzahl der Bewertungen",
     "star_reviews_info": "{{ rating_value }} von {{ rating_max }} Sternen",
-    "collapsible_content_title": "Einklappbarer Inhalt",
+    "collapsible_content_title": "Ausklappbarer Inhalt",
     "complementary_products": "Ergänzende Produkte"
   },
   "blogs": {
     "article": {
       "blog": "Blog",
-      "read_more_title": "Weiterlesen: {{ title }}",
+      "read_more_title": "Mehr lesen: {{ title }}",
       "comments": {
         "one": "{{ count }} Kommentar",
         "other": "{{ count }} Kommentare"
       },
-      "moderated": "Bitte beachte, dass Kommentare vor der Veröffentlichung freigegeben werden müssen.",
+      "moderated": "Bitte beachten Sie, dass Kommentare vor der Veröffentlichung genehmigt werden müssen.",
       "comment_form_title": "Hinterlasse einen Kommentar",
       "name": "Name",
       "email": "E-Mail",
@@ -107,13 +107,13 @@
       "post": "Kommentar posten",
       "back_to_blog": "Zurück zum Blog",
       "share": "Diesen Artikel teilen",
-      "success": "Dein Kommentar wurde erfolgreich gepostet! Vielen Dank!",
-      "success_moderated": "Dein Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen."
+      "success": "Dein Kommentar wurde erfolgreich veröffentlicht! Vielen Dank!",
+      "success_moderated": "Dein Kommentar wurde erfolgreich veröffentlicht. Da unser Blog moderiert wird, wird er in Kürze freigeschaltet."
     }
   },
   "onboarding": {
-    "product_title": "Beispiel für Produkttitel",
-    "collection_title": "Name deiner Kollektion"
+    "product_title": "Beispiel-Produkttitel",
+    "collection_title": "Name Ihrer Sammlung"
   },
   "products": {
     "product": {
@@ -201,19 +201,19 @@
     },
     "facets": {
       "apply": "Anwenden",
-      "clear": "Löschen",
-      "clear_all": "Alle entfernen",
+      "clear": "Klar",
+      "clear_all": "Alles entfernen",
       "from": "Von",
-      "filter_and_sort": "Filtern und sortieren",
+      "filter_and_sort": "Filter",
       "filter_by_label": "Filter:",
       "filter_button": "Filter",
       "filters_selected": {
         "one": "{{ count }} ausgewählt",
         "other": "{{ count }} ausgewählt"
       },
-      "max_price": "Der höchste Preis ist {{ price }}",
+      "max_price": "Der höchste Preis ist {{ price }}.",
       "product_count": {
-        "one": "{{ product_count }} von {{ count }} Produkt",
+        "one": "{{ product_count }} von {{ count }} Produkten",
         "other": "{{ product_count }} von {{ count }} Produkten"
       },
       "product_count_simple": {
@@ -228,7 +228,7 @@
       "filter_selected_accessibility": "{{ type }} ({{ count }} Filter ausgewählt)",
       "show_more": "Mehr anzeigen",
       "show_less": "Weniger anzeigen",
-      "filter_and_operator_subtitle": "Allen entsprechen"
+      "filter_and_operator_subtitle": "Alles abgleichen"
     }
   },
   "templates": {
@@ -416,14 +416,14 @@
   "customer": {
     "account": {
       "title": "Konto",
-      "details": "Kontodetails",
+      "details": "Kontodaten",
       "view_addresses": "Adressen anzeigen",
-      "return": "Zurück zu Kontodetails"
+      "return": "Zu den Kontodetails zurückkehren"
     },
     "account_fallback": "Konto",
     "activate_account": {
       "title": "Konto aktivieren",
-      "subtext": "Erstelle ein Passwort, um dein Konto zu aktiveren.",
+      "subtext": "Erstellen Sie Ihr Passwort, um Ihr Konto zu aktivieren.",
       "password": "Passwort",
       "password_confirm": "Passwort bestätigen",
       "submit": "Konto aktivieren",
@@ -439,48 +439,48 @@
       "company": "Unternehmen",
       "address1": "Adresse 1",
       "address2": "Adresse 2",
-      "city": "Ort",
+      "city": "Stadt",
       "country": "Land/Region",
-      "province": "Bundesland/Provinz",
-      "zip": "PLZ",
-      "phone": "Telefonnummer",
-      "set_default": "Als Standard-Adresse festlegen",
+      "province": "Provinz",
+      "zip": "Postleitzahl",
+      "phone": "Telefon",
+      "set_default": "Als Standardadresse festlegen",
       "add": "Adresse hinzufügen",
       "update": "Adresse aktualisieren",
       "cancel": "Abbrechen",
       "edit": "Bearbeiten",
       "delete": "Löschen",
-      "delete_confirm": "Bist du sicher, dass du diese Adresse löschen möchtest?"
+      "delete_confirm": "Möchten Sie diese Adresse wirklich löschen?"
     },
-    "log_in": "Einloggen",
+    "log_in": "Anmelden",
     "log_out": "Abmelden",
     "login_page": {
       "cancel": "Abbrechen",
       "create_account": "Konto erstellen",
       "email": "E-Mail",
-      "forgot_password": "Hast du dein Passwort vergessen?",
+      "forgot_password": "Passwort vergessen?",
       "guest_continue": "Fortfahren",
-      "guest_title": "Als Gast fortsetzen",
+      "guest_title": "Als Gast fortfahren",
       "password": "Passwort",
-      "title": "Login",
+      "title": "Anmelden",
       "sign_in": "Anmelden",
-      "submit": "Senden",
+      "submit": "Absenden",
       "alternate_provider_separator": "oder"
     },
     "orders": {
-      "title": "Bestellhistorie",
-      "order_number": "Bestellung",
+      "title": "Bestellverlauf",
+      "order_number": "Bestellen",
       "order_number_link": "Bestellnummer {{ number }}",
       "date": "Datum",
       "payment_status": "Zahlungsstatus",
-      "fulfillment_status": "Fulfillmentstatus",
-      "total": "Gesamtsumme",
-      "none": "Du hast noch keine Bestellungen aufgegeben."
+      "fulfillment_status": "Bestellstatus",
+      "total": "Gesamt",
+      "none": "Sie haben noch keine Bestellungen aufgegeben."
     },
     "recover_password": {
-      "title": "Setze dein Passwort zurück",
-      "subtext": "Wir werden dir eine E-Mail zum Zurücksetzen deines Passworts schicken",
-      "success": "Wir haben dir eine E-Mail mit einem Link zum Aktualisieren deines Passworts geschickt."
+      "title": "Setze dein Passwort zurück.",
+      "subtext": "Wir senden Ihnen eine E-Mail, um Ihr Passwort zurückzusetzen.",
+      "success": "Wir haben Ihnen eine E-Mail mit einem Link zum Ändern Ihres Passworts gesendet."
     },
     "register": {
       "title": "Konto erstellen",
@@ -491,21 +491,21 @@
       "submit": "Erstellen"
     },
     "reset_password": {
-      "title": "Passwort für Konto zurücksetzen",
+      "title": "Kontopasswort zurücksetzen",
       "subtext": "Neues Passwort eingeben",
       "password": "Passwort",
       "password_confirm": "Passwort bestätigen",
       "submit": "Passwort zurücksetzen"
     },
     "order": {
-      "title": "Bestellung {{ name }}",
+      "title": "{{ name }} bestellen",
       "date_html": "Aufgegeben am {{ date }}",
-      "cancelled_html": "Bestellung storniert am {{ date }}",
+      "cancelled_html": "Bestellung am {{ date }} storniert",
       "cancelled_reason": "Grund: {{ reason }}",
       "billing_address": "Rechnungsadresse",
       "payment_status": "Zahlungsstatus",
       "shipping_address": "Lieferadresse",
-      "fulfillment_status": "Fulfillmentstatus",
+      "fulfillment_status": "Versandstatus",
       "discount": "Rabatt",
       "shipping": "Versand",
       "tax": "Steuer",
@@ -513,30 +513,30 @@
       "sku": "SKU",
       "price": "Preis",
       "quantity": "Menge",
-      "total": "Gesamtsumme",
-      "fulfilled_at_html": "Ausgeführt am {{ date }}",
-      "track_shipment": "Sendung nachverfolgen",
-      "tracking_url": "Tracking-Link",
-      "tracking_company": "Versanddienstleister",
-      "tracking_number": "Trackingnummer",
+      "total": "Gesamt",
+      "fulfilled_at_html": "Erfüllt am {{ date }}",
+      "track_shipment": "Sendung verfolgen",
+      "tracking_url": "Sendungsverfolgungslink",
+      "tracking_company": "Spediteur",
+      "tracking_number": "Sendungsverfolgungsnummer",
       "subtotal": "Zwischensumme",
-      "total_duties": "Zollgebühren",
-      "total_refunded": "Zurückerstattet"
+      "total_duties": "Aufgaben",
+      "total_refunded": "Erstattet"
     }
   },
   "gift_cards": {
     "issued": {
-      "title": "Hier ist dein {{ value }}-Gutschein für {{ shop }}!",
-      "subtext": "Dein Gutschein",
-      "gift_card_code": "Gutscheincode",
-      "shop_link": "Onlineshop besuchen",
+      "title": "Hier ist dein Geschenkkartenguthaben für {{ shop }}: {{ value }}!",
+      "subtext": "Deine Geschenkkarte",
+      "gift_card_code": "Geschenkkartencode",
+      "shop_link": "Besuchen Sie den Online-Shop",
       "add_to_apple_wallet": "Zu Apple Wallet hinzufügen",
-      "qr_image_alt": "QR-Code – Scannen, um Gutschein einzulösen",
-      "copy_code": "Geschenkgutscheincode kopieren",
+      "qr_image_alt": "QR-Code – scannen, um die Geschenkkarte einzulösen",
+      "copy_code": "Geschenkkartencode kopieren",
       "expired": "Abgelaufen",
       "copy_code_success": "Code erfolgreich kopiert",
-      "how_to_use_gift_card": "Verwende diesen Geschenkgutscheincode online oder verwende den QR-Code im Shop",
-      "expiration_date": "Gültig bis {{ expires_on }}"
+      "how_to_use_gift_card": "Verwenden Sie den Geschenkkartencode online oder den QR-Code im Geschäft",
+      "expiration_date": "Läuft am {{ expires_on }} ab"
     }
   },
   "recipient": {
