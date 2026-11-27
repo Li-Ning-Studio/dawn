@@ -233,7 +233,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "Keine Ergebnisse gefunden für \"{{ terms }}\". Überprüfe die Schreibweise oder versuche es mit einer anderen Suchanfrage.",
+      "no_results": "Keine Ergebnisse für „{{ terms }}“ gefunden. Überprüfe die Rechtschreibung oder verwende ein anderes Wort oder eine andere Formulierung.",
       "results_with_count": {
         "one": "{{ count }} Ergebnis",
         "other": "{{ count }} Ergebnisse"
@@ -241,13 +241,13 @@
       "title": "Suchergebnisse",
       "page": "Seite",
       "products": "Produkte",
-      "search_for": "Nach \"{{ terms }}\" suchen",
+      "search_for": "Nach „{{ terms }}“ suchen",
       "results_with_count_and_term": {
-        "one": "{{ count }} Ergebnis für \"{{ terms }}\" gefunden",
-        "other": "{{ count }} Ergebnisse für \"{{ terms }}\" gefunden"
+        "one": "{{ count }} Ergebnis für „{{ terms }}“ gefunden",
+        "other": "{{ count }} Ergebnisse für „{{ terms }}“ gefunden"
       },
       "results_pages_with_count": {
-        "one": "{{ count }} Seite",
+        "one": "{{ count }} Seiten",
         "other": "{{ count }} Seiten"
       },
       "results_suggestions_with_count": {
@@ -262,7 +262,7 @@
       "pages": "Seiten"
     },
     "cart": {
-      "cart": "Warenkorb"
+      "cart": "Tasche"
     },
     "contact": {
       "form": {
@@ -271,16 +271,16 @@
         "phone": "Telefonnummer",
         "comment": "Kommentar",
         "send": "Senden",
-        "post_success": "Danke, dass du uns kontaktiert hast. Wir werden uns so schnell wie möglich bei dir melden.",
-        "error_heading": "Bitte passe Folgendes an:",
+        "post_success": "Vielen Dank, dass Sie uns kontaktiert haben. Wir melden uns so bald wie möglich bei Ihnen.",
+        "error_heading": "Bitte passen Sie Folgendes an:",
         "title": "Kontaktformular",
-        "consent": "Mit der Bestätigung stimme ich zu, dass meine personenbezogenen Daten verwendet werden dürfen, um auf meine Anfrage zu antworten.",
+        "consent": "Mit der Bestätigung erkläre ich mich damit einverstanden, dass meine personenbezogenen Daten zur Beantwortung meiner Anfrage verwendet werden dürfen.",
         "consent_value": "Einverstanden"
       }
     },
     "404": {
-      "title": "Seite nicht gefunden",
-      "subtext": "404"
+      "title": "Seite für Bankwärmer",
+      "subtext": "Die gesuchte Seite konnte nicht gefunden werden."
     }
   },
   "sections": {
@@ -559,9 +559,9 @@
   "studio": {
     "tshirt_printing": {
       "messages": {
-        "logo_loading": "Ihr enthaltenes Markenlogo wird geladen…",
+        "logo_loading": "Ihr enthaltenes Markenlogo wird geladen …",
         "invalid_input": "Nur Buchstaben, Punkte und Leerzeichen sind zulässig.",
-        "logo_unavailable": "Die Option für Land und Logo ist nicht verfügbar. Entfernen Sie diese, um mit einem Druck nur des Namens fortzufahren."
+        "logo_unavailable": "Die Option für Land und Logo ist nicht verfügbar. Entfernen Sie sie, um mit dem Druck nur des Namens fortzufahren."
       },
       "countries": {
         "india": "Indien",
@@ -574,66 +574,66 @@
       "actions": {
         "add": "Hinzufügen",
         "change": "Ändern",
-        "next": "Nächste",
+        "next": "Weiter",
         "back": "Zurück",
-        "submit": "Personalisieren Sie",
+        "submit": "Personalisieren",
         "close": "Schließen",
         "remove": "Entfernen",
         "add_second_line": "Land und Logo für {{ price }} hinzufügen",
         "clear_second_line": "Land und Logo entfernen"
       },
       "errors": {
-        "load_failed": "T-Shirt-Personalisierungsoptionen konnten nicht geladen werden. Bitte laden Sie die Seite neu."
+        "load_failed": "Die Optionen zur Personalisierung des T-Shirts konnten nicht geladen werden. Bitte aktualisieren Sie die Seite."
       },
       "form_labels": {
         "personalisation_service": "Personalisierung hinzufügen"
       },
       "description": {
-        "personalisation_service": "Mach diesen {{ product_title }} zu deinem ganz persönlichen Unikat, indem du etwas Besonderes darauf drucken lässt"
+        "personalisation_service": "Gestalte dein {{ product_title }} ganz persönlich und lass etwas Besonderes darauf drucken."
       },
       "headings": {
-        "personalise": "Personalisiere dieses {{ product_title }}"
+        "personalise": "Personalisiere diesen {{ product_title }}"
       },
       "labels": {
         "free": "KOSTENLOS",
         "input": "Deine Personalisierung",
         "second_input": "Land",
-        "note": "Hinweis: Dies dient nur zur Veranschaulichung. Der Text wird auf die Rückseite des T-Shirts gedruckt. Nachnahme ist für Bestellungen mit personalisierten T-Shirts nicht möglich.",
+        "note": "Hinweis: Dies dient nur der Veranschaulichung. Der Text wird auf die Rückseite des T-Shirts gedruckt. Bei Bestellungen mit personalisierten T-Shirts ist keine Zahlung per Nachnahme möglich.",
         "step": "Schritt",
-        "summary": "Personalisieren",
-        "summary_html": "Einzigartig deins – Du machst diesen {{ product_title }} mit der Personalisierung zu deinem ganz persönlichen Einzelstück.",
-        "title": "Mach dieses T-Shirt zu deinem"
+        "summary": "Personalisierung",
+        "summary_html": "Ganz nach deinem Geschmack - Mit einer Personalisierung machst du dieses {{ product_title }} wirklich zu deinem ganz persönlichen Stück.",
+        "title": "Gestalte dieses T-Shirt ganz nach deinem Geschmack."
       }
     },
     "labels": {
       "customisations": "Anpassungen"
     },
     "modal_close_guard": {
-      "message": "Möchten Sie Ihre Anpassung wirklich abbrechen?",
-      "keep_editing": "Weiter bearbeiten",
+      "message": "Möchtest du deine Anpassung wirklich abbrechen?",
+      "keep_editing": "Weiterbearbeiten",
       "discard": "Verwerfen"
     },
     "stringing": {
       "form_labels": {
         "frame": "Rahmen",
         "tension": "Spannung",
-        "string": "Zeichenkette",
-        "unstrung": "Ohne Saiten",
+        "string": "Zeichenfolge",
+        "unstrung": "Unbespannt",
         "pro_stringing": "Studio Pro Besaitung",
-        "strung": "Werksbesaitet",
+        "strung": "Werksbesaitung",
         "color": "Farbe"
       },
       "description": {
         "unstrung": "Dieser Schläger wird ohne Besaitung geliefert. Sie müssen ihn in einem Sportgeschäft besaiten lassen.",
-        "pro_stringing": "Werten Sie mit einer individuellen Saite und Spannung auf.",
-        "strung": "Dieser Schläger wird mit der Standardbesaitung und -spannung geliefert.",
-        "two_knots": "Die Zwei-Knoten-Methode verwendet einen einzigen durchgehenden Faden für Längs- und Querstreifen. Geeignet für mäßige Spannungen.",
-        "four_knots": "Die Vier-Knoten-Methode verwendet separate Stränge für Längs- und Querverstrebungen mit vier Abbindungen. Empfohlen für hohe Zugkräfte."
+        "pro_stringing": "Mit einer individuellen Saite und Spannung aufrüsten.",
+        "strung": "Dieser Schläger wird mit der Standardsaite und -bespannung geliefert.",
+        "two_knots": "Bei der Zwei-Knoten-Methode wird für Längs- und Quersaiten eine einzige durchgehende Saite verwendet. Geeignet für mittlere Bespannungshärten.",
+        "four_knots": "Die Four-Knots-Methode verwendet separate Saiten für Längs- und Quersaiten und vier Knoten. Empfohlen für hohe Bespannungshärten."
       },
       "labels": {
         "current_selection": "Aktuelle Auswahl",
         "free": "KOSTENLOS",
-        "strings_guide": "Leitfaden zu Saiten",
+        "strings_guide": "Leitfaden für Zeichenfolgen",
         "tension_unit": "LBS",
         "low_tension": "Niedrig",
         "high_tension": "Hoch",
@@ -641,14 +641,14 @@
         "four_knots": "Vier Knoten"
       },
       "headings": {
-        "choose_string": "Wähle eine Saite",
+        "choose_string": "Zeichenfolge auswählen",
         "select_color": "Wählen Sie eine Farbe",
-        "select_tension": "Mit welcher Spannung <br> sollen wir bespannen?",
-        "select_method": "Wie sollen wir es <br> aufziehen?",
+        "select_tension": "Welche Spannung sollten <br/> wir aufziehen?",
+        "select_method": "Wie sollten wir es <br/> auffädeln?",
         "summary": "Zusammenfassung"
       },
       "filters": {
-        "all": "Alle",
+        "all": "Alles",
         "power": "Leistung",
         "durable": "Langlebig",
         "balanced": "Ausgewogen"
@@ -661,16 +661,16 @@
         "add": "Hinzufügen",
         "selected": "Ausgewählt",
         "change": "Ändern",
-        "next": "Nächste",
+        "next": "Weiter",
         "back": "Zurück",
-        "submit": "Besaitung anwenden",
+        "submit": "Bespannung anbringen",
         "close": "Schließen",
         "remove": "Entfernen"
       },
       "errors": {
-        "load_failed": "Fehler beim Laden der Aufziehoptionen. Bitte laden Sie die Seite neu.",
+        "load_failed": "Die Bespannungsoptionen konnten nicht geladen werden. Bitte aktualisieren Sie die Seite.",
         "missing_product": "Bitte wählen Sie eine Zeichenfolge aus.",
-        "missing_variant": "Bitte wählen Sie eine Saitenfarbe.",
+        "missing_variant": "Bitte wählen Sie eine Textfarbe aus.",
         "missing_tension": "Bitte wählen Sie eine Spannung aus."
       }
     },
@@ -694,11 +694,11 @@
       "headings": {
         "choose_grip": "Griff auswählen",
         "select_color": "Grifffarbe auswählen",
-        "summary": "Bewerbung"
+        "summary": "Wird angewendet"
       },
       "messages": {
-        "loading": "Griffformen werden geladen...",
-        "empty": "Wir konnten derzeit keine Griffformen finden."
+        "loading": "Griffoptionen werden geladen ...",
+        "empty": "Wir konnten derzeit keine Griffoptionen finden."
       },
       "actions": {
         "add": "Hinzufügen",
@@ -721,7 +721,7 @@
         "personalisation_service": "Personalisierung hinzufügen"
       },
       "description": {
-        "personalisation_service": "Mach diesen {{ product_title }} zu deinem ganz persönlichen und zeige auf dem Platz deinen eigenen Stil"
+        "personalisation_service": "Mach dieses {{ product_title }} zu etwas ganz Eigenem und zeig deinen persönlichen Stil auf dem Platz."
       },
       "labels": {
         "free": "KOSTENLOS"
@@ -731,7 +731,7 @@
         "change": "Ändern"
       },
       "errors": {
-        "load_failed": "Personalisierungsoptionen konnten nicht geladen werden. Bitte laden Sie die Seite neu."
+        "load_failed": "Personalisierungsoptionen konnten nicht geladen werden. Bitte aktualisieren Sie die Seite."
       }
     }
   },

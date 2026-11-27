@@ -295,111 +295,123 @@
       "announcement": "Annonce",
       "menu": "Menu",
       "cart_count": {
-        "one": "{{ count }} article",
-        "other": "{{ count }} articles",
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles",
         "many": "{{ count }} articles"
       }
     },
     "cart": {
       "title": "Votre panier",
-      "caption": "Articles du panier",
+      "caption": "Articles du sac d’achat",
       "remove_title": "Supprimer {{ title }}",
-      "note": "Instructions spéciales concernant la commande",
-      "checkout": "Procéder au paiement",
-      "empty": "Votre panier est vide",
-      "cart_error": "Une erreur est survenue lors de l’actualisation de votre panier. Veuillez réessayer.",
-      "cart_quantity_error_html": "Vous ne pouvez pas ajouter plus de {{ quantity }} de ce produit à votre panier.",
+      "note": "Instructions spéciales pour la commande",
+      "checkout": "Découvrez",
+      "empty": "Votre panier est vide.",
+      "cart_error": "Une erreur s’est produite lors de la mise à jour de votre panier. Veuillez réessayer.",
+      "cart_quantity_error_html": "Vous ne pouvez ajouter que {{ quantity }} exemplaire de cet article à votre panier.",
       "headings": {
         "product": "Produit",
         "price": "Prix",
         "total": "Total",
         "quantity": "Quantité",
-        "image": "Image de produit"
+        "image": "Image du produit"
       },
-      "update": "Mise à jour",
+      "update": "Mettre à jour",
       "login": {
-        "title": "Vous possédez un compte ?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous</a> pour payer plus vite."
+        "title": "Vous avez un compte ?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous</a> pour passer à la caisse plus rapidement."
       },
       "estimated_total": "Total estimé",
       "new_estimated_total": "Nouveau total estimé",
-      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Frais de douane et taxes inclus. Réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
-      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Frais de douane et taxes inclus. Réductions et frais d’expédition calculés à l’étape du paiement.",
-      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes incluses. Réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
-      "taxes_included_shipping_at_checkout_without_policy": "Taxes incluses. Réductions et frais d’expédition calculés à l’étape du paiement.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Frais de douane inclus. Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Frais de douane inclus. Taxes, réductions et frais d’expédition calculés à l’étape du paiement.",
-      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
-      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, réductions et frais d’expédition calculés à l’étape du paiement."
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Droits et taxes inclus. Les réductions et les frais de <a href=\"{{ link }}\">livraison</a> sont calculés au moment du paiement.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Droits et taxes inclus. Réductions et frais de livraison calculés lors du paiement.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes incluses. Les réductions et les <a href=\"{{ link }}\">frais de livraison</a> sont calculés au moment du paiement.",
+      "taxes_included_shipping_at_checkout_without_policy": "Taxes incluses. Les réductions et les frais de livraison sont calculés lors du paiement.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Droits inclus. Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés au moment du paiement.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Droits inclus. Taxes, réductions et frais de livraison calculés au moment du paiement.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, réductions et <a href=\"{{ link }}\">frais de livraison</a> calculés lors du paiement.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, remises et frais de livraison calculés au moment du paiement.",
+      "show_bundle": "Afficher le lot",
+      "hide_bundle": "Masquer le lot"
     },
     "footer": {
-      "payment": "Moyens de paiement"
+      "payment": "Moyens de paiement",
+      "communication_channels": "Canaux de communication",
+      "social_links": "Liens vers les réseaux sociaux"
     },
     "featured_blog": {
-      "view_all": "Tout afficher",
+      "view_all": "Tout voir",
       "onboarding_title": "Article de blog",
       "onboarding_content": "Donnez à vos clients un résumé de votre article de blog"
     },
     "featured_collection": {
-      "view_all": "Tout afficher",
-      "view_all_label": "Afficher tous les produits de la collection {{ collection_name }}"
+      "view_all": "Tout voir",
+      "view_all_label": "Voir tous les produits de la collection {{ collection_name }}"
     },
     "collection_list": {
-      "view_all": "Tout afficher"
+      "view_all": "Tout voir"
     },
     "collection_template": {
       "title": "Collection",
       "empty": "Aucun produit trouvé",
-      "use_fewer_filters_html": "Utiliser moins de filtres ou <a class=\"{{ class }}\" href=\"{{ link }}\">tout supprimer</a>"
+      "use_fewer_filters_html": "Utilisez moins de filtres ou <a class=\"{{ class }}\" href=\"{{ link }}\">tout supprimer</a>"
     },
     "video": {
-      "load_video": "Charger la vidéo : {{ description }}"
+      "load_video": "Charger la vidéo : {{ description }}"
     },
     "slideshow": {
       "load_slide": "Charger la diapositive",
       "previous_slideshow": "Diapositive précédente",
       "next_slideshow": "Diapositive suivante",
-      "pause_slideshow": "Interrompre le diaporama",
+      "pause_slideshow": "Mettre le diaporama en pause",
       "play_slideshow": "Lire le diaporama",
       "carousel": "Carrousel",
-      "slide": "Diapositive"
+      "slide": "Faites glisser"
     },
     "page": {
-      "title": "Titre de la page"
+      "title": "Titre de page"
     },
     "announcements": {
       "previous_announcement": "Annonce précédente",
-      "next_announcement": "Annonce suivante",
+      "next_announcement": "Prochaine annonce",
       "carousel": "Carrousel",
       "announcement": "Annonce",
-      "announcement_bar": "Barre d’annonces"
+      "announcement_bar": "Barre d’annonce"
     },
     "quick_order_list": {
       "product_total": "Sous-total des produits",
-      "view_cart": "Voir le panier",
-      "each": "{{ money }}/pièce",
+      "view_cart": "Voir le panier d’achat",
+      "each": "{{ money }}/unité",
       "product": "Produit",
       "variant": "Variante",
-      "variant_total": "Total des variantes",
+      "variant_total": "Nombre total de variantes",
       "items_added": {
-        "one": "{{ quantity }} article ajouté",
-        "other": "{{ quantity }} articles ajoutés",
+        "one": "{{ quantity }} article ajouté",
+        "other": "{{ quantity }} articles ajoutés",
         "many": "{{ quantity }} articles ajoutés"
       },
       "items_removed": {
-        "one": "{{ quantity }} article retiré",
-        "other": "{{ quantity }} articles retirés",
+        "one": "{{ quantity }} article supprimé",
+        "other": "{{ quantity }} articles supprimés",
         "many": "{{ quantity }} articles retirés"
       },
-      "product_variants": "Variantes de produits",
-      "total_items": "Total des articles",
-      "remove_all_items_confirmation": "Retirer les {{ quantity }} articles de votre panier ?",
-      "remove_all": "Tout retirer",
+      "product_variants": "Variantes du produit",
+      "total_items": "Nombre total d’articles",
+      "remove_all_items_confirmation": "Supprimer tous les {{ quantity }} articles de votre panier ?",
+      "remove_all": "Tout supprimer",
       "cancel": "Annuler",
-      "remove_all_single_item_confirmation": "Supprimer 1 article de votre panier ?",
-      "min_error": "Cet article a un minimum de {{ min }}",
-      "max_error": "Cet article a un maximum de {{ max }}",
-      "step_error": "Vous pouvez ajouter cet article uniquement par incréments de {{ step }}"
+      "remove_all_single_item_confirmation": "Supprimer 1 article de votre panier ?",
+      "min_error": "Cet article a un minimum de {{ min }}.",
+      "max_error": "Cet article a un maximum de {{ max }}.",
+      "step_error": "Vous ne pouvez ajouter cet article que par incréments de {{ step }}."
+    },
+    "main-product": {
+      "download_catalog": "Télécharger le catalogue de produits"
+    },
+    "brand_assets": {
+      "download": "Télécharger",
+      "empty": "Aucun élément de marque disponible pour le moment.",
+      "uncategorized": "Autre"
     }
   },
   "localization": {
