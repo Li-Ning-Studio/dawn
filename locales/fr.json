@@ -937,7 +937,132 @@
             "retail_attribution_required": "L’attribution au détaillant est requise pour ce paiement."
           },
           "captcha": {
-            "job_already_queued": "La validation de ce jeton CAPTCHA a déjà été mise en file d’attente."
+            "job_already_queued": "La validation de ce jeton CAPTCHA a déjà été mise en file d’attente.",
+            "metadata_missing": "Il est nécessaire de résoudre un CAPTCHA pour finaliser cette commande.",
+            "metadata_mismatch": "Le fournisseur et le type de CAPTCHA fournis ne correspondent pas aux valeurs attendues.",
+            "token_missing": "Un jeton CAPTCHA doit être fourni pour finaliser cette commande.",
+            "job_enqueue_failed": "La tâche de validation du captcha n’a pas pu être mise en file d’attente.",
+            "token_expired": "Le jeton CAPTCHA fourni a expiré. Remplissez un nouveau CAPTCHA pour poursuivre le paiement.",
+            "token_invalid": "Le jeton CAPTCHA fourni n’était pas valide. Résolvez un nouveau CAPTCHA pour poursuivre le paiement.",
+            "token_not_valid_for_session": "Le CAPTCHA fourni ne peut pas être utilisé pour ce paiement."
+          },
+          "only_empty_terms_accepted": "Cette règle n’accepte que les termes vides.",
+          "line_item_limit_reached": "Le nombre maximal de lignes d’articles a été atteint.",
+          "merchandise": {
+            "only_value_constraint": "Seules les valeurs exactes sont autorisées dans le champ de saisie des marchandises.",
+            "merchandise_not_applicable": "Cette variante du produit ne peut pas être achetée.",
+            "mixed_currencies": "Le panier contient des articles dans différentes devises.",
+            "bundle_products_not_supported_for_b2b": "Les articles groupés ne peuvent pas être ajoutés aux commandes B2B pour cet établissement.",
+            "gift_card_quantity_mismatch": "Lors de la saisie des codes de cartes-cadeaux, la quantité de l’article et le nombre de codes de cartes-cadeaux doivent correspondre.",
+            "gift_card_not_supported": "Les cartes-cadeaux ne sont pas acceptées lors du paiement.",
+            "gift_card_not_unique": "La carte-cadeau avec le code {{code}} apparaît plusieurs fois dans cette commande. Les codes sont normalisés avant comparaison.",
+            "gift_card_used": "Le code de carte-cadeau {{code}} est déjà associé à une carte-cadeau. Les codes sont formatés avant la comparaison.",
+            "gift_card_code_changed": "Le code de la carte cadeau {{proposed_code}} a été remplacé par {{formatted_code}} pour respecter les règles de formatage.",
+            "gift_card_with_attributes_not_supported": "Les cartes-cadeaux avec des attributs personnalisés ne sont pas prises en charge lors du paiement.",
+            "gift_card_with_components_not_supported": "Les cartes-cadeaux avec composants ne sont pas prises en charge lors du paiement.",
+            "selling_plan_not_supported_b2b": "Les abonnements ne sont pas pris en charge pour les commandes B2B.",
+            "price_mismatch": "Le prix précédemment proposé pour cette marchandise était invalide et a été mis à jour.",
+            "inventory_not_found": "Aucun stock trouvé pour cet article.",
+            "product_not_published_in_buyer_location": "Le produit n’est pas disponible dans la région de l’acheteur actuel.",
+            "duplicated_stable_id": "Cette ligne d’articles a le même identifiant stable qu’une autre ligne.",
+            "quantity_increment_not_met": "La quantité de certains articles ne respecte pas les limites de commande.",
+            "quantity_rules_not_met": "La quantité de certains articles ne respecte pas les limites de commande.",
+            "bundle_requires_components": "Cet article vendu en lot ne comporte aucun composant.",
+            "combined_listing_parent_not_purchasable": "Les produits parents d’une annonce combinée ne peuvent pas être achetés directement.",
+            "title_too_long": "Le titre du produit est trop long.",
+            "title_empty": "Le titre du produit est vide."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Le panier ne doit comporter qu’une seule ligne de livraison.",
+            "wrong_number_of_delivery_lines": "Une ligne de livraison doit être spécifiée pour chaque groupe de marchandises.",
+            "external_delivery_promise_error": "Erreur lors de la récupération d’une promesse de livraison externe.",
+            "destination_address_required": "Une adresse de destination est requise pour continuer.",
+            "pickup_points_unavailable": "Les points de retrait sont actuellement indisponibles.",
+            "local_pickup_delivery_line_detail_changed": "La stratégie actuelle de livraison avec retrait local doit être modifiée pour continuer.",
+            "local_pickup_no_delivery_strategy_available": "Aucune stratégie de livraison en retrait local n’a été trouvée.",
+            "origin_location_id_required": "Un identifiant de lieu d’origine est requis lorsque le mode de livraison RETAIL est demandé.",
+            "invalid_origin_location_id": "Impossible de trouver un lieu correspondant à l’ID du lieu d’origine.",
+            "origin_location_id_not_allowed": "Les modes de livraison demandés ne prennent pas en charge l’ID du lieu d’origine.",
+            "auto_fulfill_not_allowed": "Cette session n’est pas autorisée à modifier le comportement d’exécution des commandes.",
+            "auto_fulfill_required": "L’exécution automatique est requise lorsque le mode de livraison RETAIL est demandé.",
+            "prefetch_shipping_rates_used": "Les tarifs d’expédition préchargés ne doivent jamais être renvoyés.",
+            "fulfillment_constraints_not_satisfied": "Une ou plusieurs contraintes d’exécution n’ont pas été respectées.",
+            "must_fulfill_from_constraint_not_satisfied": "Les contraintes d’exécution ne sont pas satisfaites, car les articles ne peuvent pas être expédiés depuis les emplacements requis.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "Les contraintes d’exécution ne sont pas respectées, car les articles ne peuvent pas être expédiés depuis le même emplacement.",
+            "delivery_strategy_conditions_not_satisfied": "Des modes de livraison sont disponibles pour cet emplacement, mais leurs conditions ne sont pas remplies.",
+            "out_of_stock_at_origin_location": "Aucun stock sur le site d’origine.",
+            "invalid_signature": "Signature de réduction invalide.",
+            "mixed_destination_countries": "La livraison n’est pas disponible, car les lignes de livraison traversent plusieurs pays."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "Les remises ne sont pas autorisées dans les boutiques B2B.",
+            "mixed_destination_countries": "Les remises ne sont pas disponibles, car les lignes de livraison couvrent plusieurs pays.",
+            "custom_discount_not_honoured": "La remise personnalisée fournie n’a pas été appliquée.",
+            "unsupported_expectation": "La ligne de remise fournie contenait une attente que la politique ne pouvait pas interpréter.",
+            "additional_requested_discount_code_discarded": "{{code}} est valide, mais ne s’applique pas. Consultez les conditions de la réduction.",
+            "additional_requested_discount_discarded": "Votre remise est valide, mais ne peut pas être appliquée. Consultez les conditions de la remise.",
+            "allocations_mismatch": "Votre code de réduction a changé. Vérifiez votre panier et réessayez.",
+            "discount_title_too_long": "Le titre de la remise ne peut pas dépasser 255 caractères."
+          },
+          "payment": {
+            "missing_session_id": "Informations de session de carte de crédit manquantes.",
+            "gateway_not_supported": "La passerelle de paiement ne prend pas en charge l’enregistrement du moyen de paiement.",
+            "credit_card_last_name_required": "« Nom de famille » ne peut pas être nul.",
+            "invalid_address_type": "Le type d’adresse indiqué n’est pas valide pour ce mode de paiement.",
+            "missing_retail_attributions": "Les attributions de vente au détail sont requises pour les paiements par carte de crédit saisis manuellement.",
+            "invalid_card_source": "Cette session n’est pas autorisée à utiliser cette source de carte.",
+            "payment_instrument_not_found": "Impossible de trouver le mode de paiement.",
+            "saved_payment_methods_not_allowed": "Les moyens de paiement enregistrés ne sont pas autorisés.",
+            "saved_payment_methods_cvv_verification_disabled": "Le mode de paiement sélectionné nécessite une vérification du cryptogramme visuel, qui n’est pas activée pour cette boutique. Sélectionnez un autre mode de paiement.",
+            "store_credit_not_enabled": "Le crédit en magasin n’est pas activé pour cette boutique.",
+            "store_credit_account_mismatch": "Le compte de crédit en magasin ne correspond pas à l’identité de l’acheteur.",
+            "store_credit_mismatched_currency": "La devise du compte de crédit en magasin ne correspond pas à celle de la page de paiement.",
+            "store_credit_insufficient_funds": "Les fonds disponibles sur le compte de crédit en magasin sont insuffisants.",
+            "store_credit_buying_gift_card": "Vous ne pouvez pas utiliser un avoir pour acheter une carte-cadeau.",
+            "paypal_express_address_invalid": "PayPal a renvoyé une adresse invalide.",
+            "total_amount_mismatch": "Le total à payer ne correspond pas à la somme des montants des paiements.",
+            "unexpected_retail_attributions": "Attributions de vente au détail fournies de manière inattendue pour un paiement par carte de crédit.",
+            "unauthorized_capture_method": "La configuration de la méthode de capture des paiements n’est pas autorisée."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "La proposition de votre acheteur doit contenir des conditions non négociables."
+          },
+          "inventory": {
+            "missing_quantity_value": "Le champ de quantité est absent des lignes d’inventaire de l’acheteur.",
+            "changing_behavior_not_allowed": "Ce client n’est pas autorisé à modifier le comportement des stocks.",
+            "only_one_inventory_behavior_allowed": "Actuellement, un seul comportement de stock est autorisé par commande."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Le refus des droits de douane n’est pas autorisé pour cette commande."
+          },
+          "checkout_source": {
+            "revoked": "Cette page de paiement n’est plus disponible."
+          },
+          "session_identifier_not_unique_error": "Une erreur s’est produite avec votre commande. Réessayez de finaliser votre achat.",
+          "session_is_already_finished": "Cette session de paiement a déjà été finalisée.",
+          "tax": {
+            "unresolvable_tax_terms": "Les modalités proposées ne peuvent pas être résolues dans le contexte actuel des négociations.",
+            "delivery_price_is_abstract": "Le prix de livraison correspondant est abstrait.",
+            "tax_inclusivity_mismatch": "Renégociez avec une valeur concrète pour totalTaxAndDutyAmount ou totalAmountIncludedInTarget.",
+            "mixed_tax_inclusivity_not_supported": "Les lignes de taxe doivent toutes être taxes incluses ou toutes être taxes exclues.",
+            "tax_exemption_not_supported": "Les exonérations fiscales ne sont pas prises en charge pour la session de négociation en cours.",
+            "delivery_tax_exemption_not_supported": "Les exonérations fiscales pour les lignes de livraison ne sont pas prises en charge actuellement.",
+            "proposed_allocations_required": "Champ « proposed allocations » manquant.",
+            "merchandise_terms_must_be_defined": "Les termes relatifs aux marchandises doivent être définis.",
+            "delivery_terms_must_be_defined": "Les conditions de livraison doivent être définies.",
+            "merchandise_discount_terms_must_be_defined": "Les conditions de la remise sur les marchandises doivent être définies.",
+            "delivery_discount_terms_must_be_defined": "Les conditions de la remise sur la livraison doivent être définies.",
+            "allocated_required": "Champ « alloué » manquant.",
+            "value_required": "Champ « value » manquant.",
+            "line_splits_not_supported": "Le champ « lignes de marchandises » doit être divisé de sorte que chaque ligne ne comporte qu’un seul composant dans la proposition du vendeur."
+          },
+          "tip": {
+            "only_one_tip_line_allowed": "Les lignes contenant plusieurs pourboires ne sont pas prises en charge.",
+            "tips_not_allowed_for_deferred_purchase_options": "Les pourboires ne sont pas encore pris en charge pour les options d’achat différé."
+          },
+          "sale_attribution": {
+            "staff_member_not_exist": "Ce bâton n’existe pas dans la boutique actuelle.",
+            "unresolvable_target_merchandise_lines": "Les attributions de vente proposées ne peuvent pas être déterminées compte tenu du contexte actuel des négociations."
           }
         },
         "continue_to_payment_plans_button_label": "Passer aux plans de paiement",
@@ -982,6 +1107,221 @@
         },
         "dropzone": {
           "dragged_over": "Déposez le fichier pour le téléverser"
+        },
+        "page_title": "Passer à la caisse",
+        "pay_now_button_label": "Payez maintenant",
+        "forwarding_indicator": {
+          "external": "Ouvre un site Web externe.",
+          "external_and_new_window": "Ouvre un site web externe dans une nouvelle fenêtre."
+        },
+        "tooltip_accessibility_label": "Plus d’informations",
+        "qr_code": "code QR",
+        "full_price": "Prix plein :",
+        "loading": "Chargement…",
+        "google_map_title": "Carte Google",
+        "submit_order_button_label": "Passer la commande",
+        "submit_for_review_notice_label": "Le paiement ne sera exigible qu’après l’examen de votre commande.",
+        "submit": "Soumettre",
+        "processing": "Traitement…",
+        "stepper": {
+          "increase": "Augmenter {{type}}",
+          "decrease": "Diminuer {{type}}"
+        },
+        "remove_chip": "Retirer l’article",
+        "remove_tag": "Supprimer le tag",
+        "list_formatter": {
+          "and": {
+            "lastWordConnector": "{{previousWords}}, et {{lastWord}}"
+          },
+          "or": {
+            "lastWordConnector": "{{previousWords}}, ou {{lastWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Groupe de {{number}} marqueurs",
+            "other": "Groupe de {{number}} marqueurs"
+          }
+        },
+        "sheet": {
+          "expand": "Développer"
+        }
+      },
+      "hsa_qualification_errors": {
+        "ineligible": "Cette commande n’est pas admissible au remboursement par un compte HSA/FSA.",
+        "processing_error": "Un problème est survenu lors du traitement de votre demande HSA/FSA. Réessayez ou passez la commande sans HSA/FSA.",
+        "unsupported_checkout": "Le HSA/FSA n’est pas disponible pour cette commande."
+      },
+      "local_pickup": {
+        "bundle_removal_modal": {
+          "message": {
+            "one": "{{items}} fait partie de {{bundle}}. Les articles groupés seront également supprimés.",
+            "other": "{{items}} font partie de {{bundle}}. Les articles inclus dans le lot seront également supprimés."
+          }
+        },
+        "location_closest": "Emplacement le plus proche où trouver votre article",
+        "location_closest_one_item": "Emplacement le plus proche où trouver votre article",
+        "location_closest_other_items": "L’emplacement le plus proche où trouver vos articles",
+        "location_information": {
+          "one": "Il y a %{count} emplacement avec du stock près de chez vous.",
+          "other": "Il y a %{count} magasins proches de chez vous avec du stock."
+        },
+        "location_information_far_away": {
+          "one": "Il y a %{count} emplacement où votre article est disponible.",
+          "other": "Il y a %{count} lieux où votre article est disponible."
+        },
+        "location_information_far_away_one_item": {
+          "one": "Il y a %{count} emplacement où votre article est disponible.",
+          "other": "Il y a %{count} lieux où votre article est disponible."
+        },
+        "location_far_away": {
+          "one": "%{count} lieu avec votre article"
+        },
+        "location_far_away_one_item": {
+          "one": "%{count} lieu avec votre article",
+          "other": "%{count} emplacements avec votre article"
+        },
+        "location_far_away_other_items": {
+          "one": "%{count} emplacement avec vos articles",
+          "other": "%{count} emplacements contenant vos articles"
+        },
+        "all_stores_far_away": {
+          "title": "Les lieux les plus proches se trouvent à plus de %{distance}.",
+          "title_with_item": {
+            "one": "Le lieu le plus proche où trouver votre article se trouve à plus de %{distance} de %{location}",
+            "other": "L’emplacement le plus proche où vos articles sont disponibles se trouve à plus de %{distance} de %{location}"
+          },
+          "title_with_specific_location": "Le point de vente le plus proche proposant votre article se trouve à plus de %{distance} de %{location}.",
+          "description": "Sélectionnez un lieu ou %{ship_to_address_link}",
+          "change_location_link": "Changez votre emplacement"
+        },
+        "could_not_resolve_address": "Votre adresse n’a pas pu être localisée. Réessayez ou utilisez une autre adresse.",
+        "geolocation": {
+          "permission_not_allowed": "Autorisez le partage de votre position ou effectuez une recherche à la place."
+        },
+        "only_fully_stocked_locations": "Afficher uniquement les lieux où tous les articles sont en stock",
+        "unavailable_item_count": {
+          "one": "%{count} article non disponible",
+          "other": "%{count} articles non disponibles"
+        },
+        "stock_details": {
+          "ship_separately": {
+            "other": "Sera expédié séparément"
+          },
+          "remove_items": {
+            "other": "Sera retiré de votre commande"
+          }
+        },
+        "stock_details_modal": {
+          "unavailable_title": "Non disponible pour le retrait",
+          "can_ship_description": {
+            "one": "Cet article est en rupture de stock dans le lieu de retrait que vous avez sélectionné.",
+            "other": "Ces articles sont en rupture de stock dans le point de retrait que vous avez sélectionné."
+          },
+          "cannot_ship_description": {
+            "one": "Cet article est en rupture de stock dans le point de retrait sélectionné et ne peut pas être expédié.",
+            "other": "Ces articles sont en rupture de stock dans le point de retrait sélectionné et ne peuvent pas être expédiés."
+          },
+          "cannot_ship_bundle_description": {
+            "one": "Cet article est en rupture de stock au point de retrait que vous avez sélectionné et ne peut pas être expédié. Les articles groupés seront également retirés.",
+            "other": "Ces articles sont en rupture de stock dans le point de retrait sélectionné et ne peuvent pas être expédiés. Les articles vendus en lot seront également supprimés."
+          },
+          "choose_different_location": "Choisissez un autre emplacement"
+        },
+        "stock_details_banner": {
+          "heading": {
+            "one": "%{count} article n’est pas disponible pour le retrait à %{location}",
+            "other": "%{count} articles ne sont pas disponibles pour le retrait à %{location}"
+          },
+          "closest_location": "Le point de retrait le plus proche où tous les articles sont en stock se trouve à %{distance} de distance.",
+          "ship_separately": {
+            "one": "Expédiez-le séparément.",
+            "other": "expédiez-les séparément"
+          }
+        },
+        "location_information_far_away_other_items": {
+          "one": "Il y a %{count} lieu avec vos articles.",
+          "other": "Il y a %{count} emplacements contenant vos articles."
+        },
+        "location_nearby": {
+          "one": "Il y a %{count} point de vente à proximité proposant votre article.",
+          "other": "Il y a %{count} points de vente à proximité qui proposent votre article"
+        },
+        "location_nearby_one_item": {
+          "one": "Il y a %{count} point de vente à proximité proposant votre article.",
+          "other": "Il y a %{count} points de vente à proximité qui proposent votre article"
+        },
+        "location_nearby_other_items": {
+          "one": "Il y a %{count} point de vente à proximité où vos articles sont disponibles.",
+          "other": "Il y a %{count} points de vente à proximité proposant vos articles."
+        },
+        "location_nearby_short": {
+          "one": "%{count} emplacement à proximité avec votre article",
+          "other": "%{count} points de vente à proximité proposant votre article"
+        },
+        "location_nearby_short_one_item": {
+          "one": "%{count} emplacement à proximité avec votre article",
+          "other": "%{count} points de vente à proximité proposant votre article"
+        },
+        "location_nearby_short_other_items": {
+          "one": "%{count} emplacement à proximité avec vos articles",
+          "other": "%{count} points de vente à proximité proposant vos articles"
+        },
+        "toggle_location": "Changer de lieu",
+        "toggle_more_locations": {
+          "one": "%{count} emplacements supplémentaires",
+          "other": "%{count} emplacements supplémentaires"
+        },
+        "toggle_multiple_locations": "%{count}+ emplacements supplémentaires",
+        "pick_up_location": "Lieu de retrait",
+        "no_stores_found": "Aucun magasin trouvé",
+        "selected_pickup_option_no_longer_available": {
+          "title": "L’emplacement que vous aviez sélectionné n’est plus disponible",
+          "description": "Nous avons sélectionné le lieu le plus proche où vos articles sont en stock."
+        },
+        "paginator": {
+          "accessibility_label": "Pagination du retrait local",
+          "label": {
+            "one": "%{first} - %{last} sur %{count} magasins",
+            "other": "%{first} - %{last} sur %{count} magasins"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Afficher %{count} lieux supplémentaires",
+          "other": "Afficher %{count} lieux supplémentaires"
+        },
+        "no_pickup_locations_found": "Aucun lieu de retrait trouvé",
+        "pickup_unavailable_banner_title": {
+          "one": "Aucun lieu avec votre article",
+          "other": "Aucun lieu ne contient vos articles"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Aucun lieu dans %{country} ne propose votre article",
+          "other": "Aucun lieu en %{country} avec vos articles"
+        },
+        "pickup_unavailable_banner_body": {
+          "try_different_location": "Essayez un autre emplacement",
+          "there_are_no_stores": "Il n’y a aucun magasin près de votre adresse, ou vos articles ne sont pas disponibles pour le retrait.",
+          "ship_items": "Expédiez vos articles",
+          "search_elsewhere": "chercher ailleurs",
+          "search_elsewhere_standalone": "Rechercher ailleurs"
+        }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "shipping_credential_cn": "Numéro d’identification du résident",
+          "tax_credential_co": "Carte d’identité/TVA",
+          "shipping_credential_co": "Carte d’identité/TVA",
+          "shipping_credential_type_co": "Type carte d’identité",
+          "tax_credential_ec": "CI/RUC/TVA",
+          "shipping_credential_ec": "CI/RUC/TVA",
+          "tax_credential_gt": "NIT/TVA",
+          "shipping_credential_gt": "NIT/TVA",
+          "shipping_credential_my": "Numéro d’identification fiscale/d’immatriculation",
+          "shipping_credential_py": "CI/RUC/TVA",
+          "shipping_credential_pt": "NIF/TVA",
+          "shipping_credential_tw": "Numéro d’identité nationale/TVA",
+          "shipping_credential_tr": "Numéro d’identification de la République de Turquie/TVA"
         }
       }
     },

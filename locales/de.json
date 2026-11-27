@@ -1154,7 +1154,140 @@
             "retail_attribution_required": "Für diesen Bezahlvorgang ist eine Einzelhandelszuordnung erforderlich."
           },
           "captcha": {
-            "job_already_queued": "Die Captcha-Validierung für dieses Captcha-Token wurde bereits in die Warteschlange gestellt."
+            "job_already_queued": "Die Captcha-Validierung für dieses Captcha-Token wurde bereits in die Warteschlange gestellt.",
+            "metadata_missing": "Für diesen Checkout muss ein Captcha gelöst werden.",
+            "metadata_mismatch": "Der angegebene CAPTCHA-Anbieter und -Typ stimmen nicht mit den erwarteten Werten überein.",
+            "token_missing": "Zum Abschließen des Bezahlvorgangs muss ein Captcha-Token angegeben werden.",
+            "job_enqueue_failed": "Der Captcha-Validierungsauftrag konnte nicht in die Warteschlange eingereiht werden.",
+            "token_expired": "Das bereitgestellte CAPTCHA-Token ist abgelaufen. Lösen Sie ein neues CAPTCHA, um mit dem Bezahlvorgang fortzufahren.",
+            "token_invalid": "Das angegebene Captcha-Token war ungültig. Lösen Sie ein neues Captcha, um den Checkout fortzusetzen.",
+            "token_not_valid_for_session": "Das angegebene Captcha kann bei diesem Bezahlvorgang nicht verwendet werden."
+          },
+          "only_empty_terms_accepted": "Diese Richtlinie akzeptiert nur leere Begriffe.",
+          "line_item_limit_reached": "Die maximale Anzahl an Einzelpositionen wurde erreicht.",
+          "merchandise": {
+            "only_value_constraint": "Für die Wareneingabe sind nur exakte Werte zulässig.",
+            "merchandise_not_found": "Produkt nicht gefunden.",
+            "merchandise_variant_not_found": "Produktvariante nicht gefunden.",
+            "merchandise_not_applicable": "Produktvariante kann nicht gekauft werden.",
+            "mixed_currencies": "Der Checkout enthält Positionen mit unterschiedlichen Währungen.",
+            "bundle_products_not_supported_for_b2b": "Gebündelte Artikel können für diesen Standort nicht zu B2B-Bestellungen hinzugefügt werden.",
+            "gift_card_quantity_mismatch": "Bei der Angabe von Geschenkkartencodes müssen die Menge der Position und die Anzahl der Geschenkkartencodes übereinstimmen.",
+            "gift_card_not_supported": "Geschenkkarten werden bei diesem Bezahlvorgang nicht unterstützt.",
+            "gift_card_not_unique": "Geschenkkarte mit dem Code {{code}} kommt in diesem Checkout mehr als einmal vor. Die Codes werden vor dem Vergleich formatiert.",
+            "gift_card_used": "Der Geschenkkartencode {{code}} ist bereits einer Geschenkkarte zugewiesen. Codes werden vor dem Vergleich formatiert.",
+            "gift_card_code_changed": "Der Geschenkkartencode {{proposed_code}} wurde in {{formatted_code}} geändert, um den Formatierungsregeln zu entsprechen.",
+            "gift_card_with_attributes_not_supported": "Geschenkkarten mit benutzerdefinierten Attributen werden bei diesem Checkout nicht unterstützt.",
+            "gift_card_with_components_not_supported": "Geschenkkarten mit Komponenten werden bei diesem Checkout nicht unterstützt.",
+            "selling_plan_not_supported_b2b": "Abonnements werden beim B2B-Checkout nicht unterstützt.",
+            "price_mismatch": "Der zuvor für diese Ware vorgeschlagene Preis war ungültig und wurde aktualisiert.",
+            "inventory_not_found": "Für diesen Artikel wurde kein Lagerbestand gefunden.",
+            "product_not_published": "Produkt ist nicht veröffentlicht.",
+            "duplicated_stable_id": "Diese Warenzeile hat dieselbe stabile ID wie eine andere Zeile.",
+            "minimum_quantity_not_met": "Die Menge einiger Artikel erreicht nicht die erforderliche Mindestmenge.",
+            "maximum_quantity_exceeded": "Die Menge einiger Artikel überschreitet das zulässige Maximum.",
+            "quantity_increment_not_met": "Die Menge einiger Artikel entspricht nicht den Bestelllimits.",
+            "quantity_rules_not_met": "Die Menge einiger Artikel entspricht nicht den Bestelllimits.",
+            "bundle_requires_components": "Dieses Bundle-Produkt enthält keine Komponenten.",
+            "combined_listing_parent_not_purchasable": "Übergeordnete Produkte in kombinierten Angeboten können nicht direkt gekauft werden.",
+            "title_too_long": "Der Produkttitel ist zu lang.",
+            "title_empty": "Der Produkttitel ist leer."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Der Warenkorb darf nur eine Lieferposition enthalten.",
+            "wrong_number_of_delivery_lines": "Für jede Warengruppe muss eine Lieferzeile angegeben werden.",
+            "external_delivery_promise_error": "Fehler beim Abrufen eines externen Lieferterminversprechens",
+            "destination_address_required": "Zum Fortfahren ist eine Zieladresse erforderlich.",
+            "pickup_points_unavailable": "Abholstationen sind derzeit nicht verfügbar.",
+            "local_pickup_delivery_line_detail_changed": "Die aktuelle Strategie für die lokale Abholung muss geändert werden, damit es weitergehen kann.",
+            "selected_pickup_option_no_longer_available": "Die zuvor ausgewählte Abholoption ist nicht mehr verfügbar.",
+            "local_pickup_no_delivery_strategy_available": "Keine verfügbare Versandart für die Abholung vor Ort gefunden.",
+            "origin_location_id_required": "Eine ID für den Ursprungsort ist erforderlich, wenn die RETAIL-Liefermethode angefordert wird.",
+            "invalid_origin_location_id": "Es konnte kein Standort gefunden werden, der mit der ID des Ursprungsstandorts übereinstimmt.",
+            "origin_location_id_not_allowed": "Die angeforderten Versandmethoden unterstützen keine ID des Ursprungsorts.",
+            "auto_fulfill_not_allowed": "Diese Sitzung ist nicht dazu berechtigt, das Fulfillment-Verhalten zu überschreiben.",
+            "auto_fulfill_required": "Automatische Erfüllung ist erforderlich, wenn die RETAIL-Liefermethode angefordert wird.",
+            "prefetch_shipping_rates_used": "Vorab abgerufene Versandtarife sollten niemals Tarife zurückgeben.",
+            "must_fulfill_from_constraint_not_satisfied": "Die Fulfillment-Anforderungen sind nicht erfüllt, da die Artikel nicht von den erforderlichen Standorten aus versendet werden können.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "Die Fulfillment-Bedingungen sind nicht erfüllt, da die Artikel nicht vom selben Standort aus versendet werden können.",
+            "delivery_strategy_conditions_not_satisfied": "Für diesen Standort sind Lieferstrategien verfügbar, aber ihre Bedingungen sind nicht erfüllt.",
+            "out_of_stock_at_origin_location": "Am Ausgangsstandort ist kein Bestand vorhanden.",
+            "mixed_destination_countries": "Die Lieferung ist nicht verfügbar, da sich die Lieferadressen über mehrere Länder erstrecken."
+          },
+          "discount": {
+            "mixed_destination_countries": "Rabatte sind nicht verfügbar, da sich die Lieferadressen über mehrere Länder erstrecken.",
+            "custom_discount_not_honoured": "Der angegebene individuelle Rabatt wurde nicht berücksichtigt.",
+            "unsupported_expectation": "Die angegebene Rabattzeile enthielt eine Erwartung, die die Richtlinie nicht interpretieren konnte.",
+            "additional_requested_discount_code_discarded": "{{code}} ist gültig, aber nicht anwendbar. Prüfe die Rabattbedingungen.",
+            "additional_requested_discount_discarded": "Dein Rabatt ist gültig, aber nicht anwendbar. Prüfe die Rabattbedingungen.",
+            "allocations_mismatch": "Ihr Rabattcode hat sich geändert. Überprüfen Sie Ihren Warenkorb und versuchen Sie es erneut.",
+            "discount_title_too_long": "Der Rabatttitel darf nicht länger als 255 Zeichen sein."
+          },
+          "payment": {
+            "subscription_terms_not_accepted": "Abonnementbedingungen nicht akzeptiert.",
+            "missing_session_id": "Informationen zur Kreditkartensitzung fehlen.",
+            "gateway_not_supported": "Das Zahlungsgateway unterstützt das Speichern der Zahlungsmethode nicht.",
+            "credit_card_last_name_required": "„Nachname“ darf nicht nil sein.",
+            "missing_retail_attributions": "Für manuell eingegebene Kreditkartenzahlungen sind Angaben zum Händler erforderlich.",
+            "invalid_card_source": "Diese Sitzung ist nicht berechtigt, diese Kartenquelle zu verwenden.",
+            "payment_instrument_not_found": "Zahlungsmethode nicht gefunden",
+            "saved_payment_methods_cvv_verification_disabled": "Für die ausgewählte Zahlungsmethode ist eine CVV-Verifizierung erforderlich, die für diesen Shop nicht aktiviert ist. Wähle eine andere Zahlungsmethode.",
+            "store_credit_not_enabled": "Das Shop-Guthaben ist für diesen Shop nicht aktiviert.",
+            "store_credit_account_not_found": "Store-Guthabenkonto nicht gefunden.",
+            "store_credit_account_mismatch": "Das Guthabenkonto stimmt nicht mit der Identität des Käufers überein.",
+            "store_credit_mismatched_currency": "Die Währung des Guthabenkontos stimmt nicht mit der Währung im Checkout überein.",
+            "store_credit_insufficient_funds": "Das Guthabenkonto des Shops weist nicht genügend Guthaben auf.",
+            "store_credit_buying_gift_card": "Sie können Guthaben aus dem Shop nicht zum Kauf einer Geschenkkarte verwenden.",
+            "gift_cards_not_allowed_for_b2b": "Geschenkkarten sind in B2B-Shops nicht zulässig.",
+            "total_amount_mismatch": "Der zu zahlende Gesamtbetrag stimmt nicht mit der Summe der Zahlungsbeträge überein.",
+            "unexpected_retail_attributions": "Unerwartete Angaben zum Einzelhandel bei Kreditkartenzahlung bereitgestellt.",
+            "wallet_content_missing": "Wallet-Inhalt fehlt."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Der Vorschlag Ihres Käufers sollte nicht verhandelbare Bedingungen enthalten."
+          },
+          "inventory": {
+            "missing_quantity_value": "Das Mengenfeld fehlt in den Inventarpositionen des Käufers.",
+            "changing_behavior_not_allowed": "Dieser Kunde ist nicht berechtigt, das Inventarverhalten zu ändern.",
+            "only_one_inventory_behavior_allowed": "Derzeit ist pro Checkout nur ein Lagerverhalten zulässig."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Die Ablehnung von Aufgaben ist bei diesem Bezahlvorgang nicht zulässig."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Der erhaltene Betrag muss in der Währung des Geschäfts angegeben sein."
+          },
+          "session_identifier_not_unique_error": "Bei deiner Bestellung ist etwas schiefgelaufen. Versuche, den Kauf erneut abzuschließen.",
+          "tax": {
+            "new_tax_must_be_accepted": "Die mit deiner Bestellung verbundenen Steuern haben sich geändert. Überprüfe deine Bestellung und versuche es erneut.",
+            "unresolvable_tax_terms": "Die vorgeschlagenen Bedingungen lassen sich angesichts des aktuellen Verhandlungsstands nicht klären.",
+            "delivery_price_is_abstract": "Der zugehörige Lieferpreis ist abstrakt.",
+            "tax_inclusivity_mismatch": "Mit konkretem Wert für totalTaxAndDutyAmount oder totalAmountIncludedInTarget neu verhandeln.",
+            "mixed_tax_inclusivity_not_supported": "Die Steuerpositionen müssen entweder alle Steuern enthalten oder alle ohne Steuern ausgewiesen werden.",
+            "tax_exemption_not_supported": "Steuerbefreiungen werden für die aktuelle Verhandlungssitzung nicht unterstützt.",
+            "delivery_tax_exemption_not_supported": "Steuerbefreiungen für Lieferleitungen werden derzeit nicht unterstützt.",
+            "proposed_allocations_required": "Feld „vorgeschlagene Zuteilungen“ fehlt.",
+            "merchandise_terms_must_be_defined": "Warenzeichen müssen definiert werden.",
+            "delivery_terms_must_be_defined": "Lieferbedingungen müssen festgelegt werden.",
+            "merchandise_discount_terms_must_be_defined": "Die Bedingungen für Warenrabatte müssen festgelegt werden.",
+            "delivery_discount_terms_must_be_defined": "Die Bedingungen für den Liefernachlass müssen festgelegt werden.",
+            "allocated_required": "Fehlendes Feld „allocated“.",
+            "value_required": "Fehlendes Feld „value“.",
+            "line_splits_not_supported": "Das Feld „Warenposten“ muss so aufgeteilt werden, dass jeder Posten im Verkäuferangebot nur eine einzelne Zeilenkomponente enthält."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Der Shop akzeptiert keine Trinkgelder.",
+            "only_one_tip_line_allowed": "Mehrere Trinkgeldzeilen werden nicht unterstützt.",
+            "tips_not_allowed_for_b2b": "Trinkgelder sind in B2B-Shops nicht erlaubt.",
+            "currency_change_reset": "Der Trinkgeldbetrag wurde aufgrund einer Währungsänderung zurückgesetzt.",
+            "tips_not_allowed_for_deferred_purchase_options": "Trinkgelder werden für aufgeschobene Kaufoptionen noch nicht unterstützt."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Dieser Entwurfsauftrag existiert nicht im aktuellen Shop.",
+            "staff_member_not_exist": "Dieser Stab ist im aktuellen Shop nicht verfügbar.",
+            "location_not_exist": "Dieser Standort existiert im aktuellen Shop nicht.",
+            "point_of_sale_device_not_exist": "Dieses Kassengerät ist im aktuellen Shop nicht vorhanden.",
+            "unresolvable_target_merchandise_lines": "Die vorgeschlagenen Zuordnungen des Verkaufs lassen sich angesichts des aktuellen Verhandlungskontexts nicht klären."
           }
         },
         "back_button_label": "Zurückgeben",
@@ -1177,6 +1310,211 @@
         },
         "dropzone": {
           "invalid_file_type": "Dateityp nicht unterstützt"
+        },
+        "page_title": "Zur Kasse",
+        "skip_to_content": "Zum Inhalt springen",
+        "pay_now_button_label": "Jetzt bezahlen",
+        "print_policies_link_label": "Druck",
+        "forwarding_indicator": {
+          "new_window": "Wird in einem neuen Fenster geöffnet.",
+          "external": "Öffnet eine externe Website.",
+          "external_and_new_window": "Öffnet eine externe Website in einem neuen Fenster."
+        },
+        "tooltip_accessibility_label": "Weitere Informationen",
+        "title": "Kasse - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Kasse",
+        "loading": "Wird geladen …",
+        "loading_title": "Kasse - {{shopName}}",
+        "google_map_title": "Google-Karte",
+        "submit_order_button_label": "Bestellung absenden",
+        "submit_for_review_button_label": "Zur Überprüfung einreichen",
+        "submit_for_review_notice_label": "Die Zahlung ist erst fällig, nachdem deine Bestellung geprüft wurde.",
+        "processing": "Wird verarbeitet …",
+        "stepper": {
+          "decrease": "{{type}} verringern",
+          "minimum_reached": "Minimumwert von {{value}} erreicht",
+          "maximum_reached": "Maximum von {{value}} erreicht."
+        },
+        "list_formatter": {
+          "or": {
+            "lastWordConnector": "{{previousWords}}, oder {{lastWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Ansammlung von {{number}} Markierungen",
+            "other": "Ansammlung von {{number}} Markierungen"
+          }
+        }
+      },
+      "hsa_qualification_errors": {
+        "ineligible": "Diese Bestellung ist nicht für HSA/FSA berechtigt.",
+        "processing_error": "Beim Verarbeiten Ihrer HSA/FSA-Anfrage ist ein Fehler aufgetreten. Versuchen Sie es erneut oder fahren Sie ohne HSA/FSA fort."
+      },
+      "local_pickup": {
+        "bundle_removal_modal": {
+          "message": {
+            "one": "{{items}} ist Teil von {{bundle}}. Artikel im Bundle werden ebenfalls entfernt.",
+            "other": "{{items}} sind Teil von {{bundle}}. Artikel im Bundle werden ebenfalls entfernt."
+          }
+        },
+        "location_closest": "Standort in Ihrer Nähe mit Ihrem Artikel",
+        "location_closest_one_item": "Standort in Ihrer Nähe mit Ihrem Artikel",
+        "location_closest_other_items": "Nächstgelegener Standort mit Ihren Artikeln",
+        "location_information": {
+          "one": "Es gibt %{count} Standort mit Lagerbestand in Ihrer Nähe.",
+          "other": "Es gibt %{count} Standorte mit Lagerbestand in Ihrer Nähe."
+        },
+        "location_information_far_away": {
+          "one": "Es gibt %{count} Standort mit Ihrem Artikel.",
+          "other": "Es gibt %{count} Standorte mit Ihrem Artikel"
+        },
+        "location_information_far_away_one_item": {
+          "one": "Es gibt %{count} Standort mit Ihrem Artikel.",
+          "other": "Es gibt %{count} Standorte mit Ihrem Artikel"
+        },
+        "location_far_away": {
+          "one": "%{count} Standort mit Ihrem Artikel",
+          "other": "%{count} Standorte mit Ihrem Artikel"
+        },
+        "location_far_away_one_item": {
+          "one": "%{count} Standort mit Ihrem Artikel",
+          "other": "%{count} Standorte mit Ihrem Artikel"
+        },
+        "location_far_away_other_items": {
+          "one": "%{count} Standort mit Ihren Artikeln",
+          "other": "%{count} Standorte mit Ihren Artikeln"
+        },
+        "cancel": "Abbrechen",
+        "all_stores_far_away": {
+          "title": "Die nächstgelegenen Orte sind mehr als %{distance} entfernt.",
+          "title_with_item": {
+            "one": "Der nächstgelegene Standort, an dem Ihr Artikel verfügbar ist, ist mehr als %{distance} von %{location} entfernt.",
+            "other": "Der nächstgelegene Standort mit deinen Artikeln ist mehr als %{distance} von %{location} entfernt."
+          },
+          "title_with_location": "Der nächstgelegene Ort ist mehr als %{distance} von %{location} entfernt.",
+          "title_with_specific_location": "Der nächstgelegene Standort mit Ihrem Artikel ist mehr als %{distance} von %{location} entfernt.",
+          "description": "Standort auswählen oder %{ship_to_address_link}",
+          "ship_to_address_link": "An Adresse liefern",
+          "change_location_link": "Ändere deinen Standort"
+        },
+        "could_not_resolve_address": "Deine Adresse konnte nicht gefunden werden. Versuche es erneut oder verwende eine andere Adresse.",
+        "geolocation": {
+          "permission_not_allowed": "Standortfreigabe erlauben oder stattdessen suchen."
+        },
+        "only_fully_stocked_locations": "Nur Standorte anzeigen, an denen alle Artikel auf Lager sind",
+        "ship_separately_notice": {
+          "one": "%{count} Artikel wird separat versendet.",
+          "other": "%{count} Artikel werden separat versendet."
+        },
+        "stock_details": {
+          "in_stock": "Auf Lager",
+          "ship_separately": {
+            "other": "Wird separat versendet"
+          },
+          "remove_items": {
+            "one": "Wird aus Ihrer Bestellung entfernt",
+            "other": "Wird aus Ihrer Bestellung entfernt"
+          }
+        },
+        "stock_details_modal": {
+          "cannot_ship_description": {
+            "one": "Dieser Artikel ist an Ihrem ausgewählten Abholort nicht vorrätig und kann nicht versendet werden."
+          },
+          "cannot_ship_bundle_description": {
+            "one": "Dieser Artikel ist an deinem ausgewählten Abholort nicht vorrätig und kann nicht versendet werden. Artikel im Set werden ebenfalls entfernt.",
+            "other": "Diese Artikel sind an Ihrem ausgewählten Abholstandort nicht vorrätig und können nicht versendet werden. Artikel aus Sets werden ebenfalls entfernt."
+          },
+          "choose_different_location": "Wählen Sie einen anderen Standort"
+        },
+        "stock_details_banner": {
+          "heading": {
+            "one": "%{count} Artikel ist bei %{location} nicht zur Abholung verfügbar",
+            "other": "%{count} Artikel können bei %{location} nicht abgeholt werden."
+          },
+          "closest_location": "Der nächstgelegene Abholort, an dem alle Artikel vorrätig sind, ist %{distance} entfernt",
+          "ship_separately": {
+            "one": "Separat versenden",
+            "other": "Versenden Sie sie separat"
+          }
+        },
+        "location_information_far_away_other_items": {
+          "one": "Es gibt %{count} Standort mit Ihren Artikeln.",
+          "other": "Es gibt %{count} Standorte mit Ihren Artikeln."
+        },
+        "location_nearby": {
+          "one": "Es gibt %{count} Standort in Ihrer Nähe, an dem Ihr Artikel verfügbar ist.",
+          "other": "Es gibt %{count} Standorte in deiner Nähe, an denen dein Artikel verfügbar ist."
+        },
+        "location_nearby_one_item": {
+          "one": "Es gibt %{count} Standort in Ihrer Nähe, an dem Ihr Artikel verfügbar ist.",
+          "other": "Es gibt %{count} Standorte in deiner Nähe, an denen dein Artikel verfügbar ist."
+        },
+        "location_nearby_other_items": {
+          "one": "Es gibt %{count} Standort in der Nähe mit Ihren Artikeln.",
+          "other": "Es gibt %{count} Standorte in der Nähe mit deinen Artikeln."
+        },
+        "location_nearby_short": {
+          "one": "%{count} Standort in der Nähe mit Ihrem Artikel",
+          "other": "%{count} Standorte in Ihrer Nähe mit Ihrem Artikel"
+        },
+        "location_nearby_short_one_item": {
+          "one": "%{count} Standort in der Nähe mit Ihrem Artikel",
+          "other": "%{count} Standorte in Ihrer Nähe mit Ihrem Artikel"
+        },
+        "location_nearby_short_other_items": {
+          "one": "%{count} Standort in der Nähe mit Ihren Artikeln",
+          "other": "%{count} Standorte in Ihrer Nähe mit Ihren Artikeln"
+        },
+        "toggle_location": "Standort ändern",
+        "toggle_more_locations": {
+          "one": "%{count} weitere Standorte"
+        },
+        "toggle_multiple_locations": "%{count}+ weitere Standorte",
+        "your_location": "Ihr Standort",
+        "no_stores_found": "Keine Geschäfte gefunden",
+        "selected_pickup_option_no_longer_available": {
+          "title": "Ihr zuvor ausgewählter Standort ist nicht mehr verfügbar.",
+          "description": "Wir haben den nächstgelegenen Standort ausgewählt, an dem Ihre Artikel vorrätig sind."
+        },
+        "paginator": {
+          "accessibility_label": "Seitennummerierung für Abholung vor Ort",
+          "label": {
+            "one": "%{first} - %{last} von %{count} Geschäften",
+            "other": "%{first} - %{last} von %{count} Geschäften"
+          }
+        },
+        "reveal_more_label": {
+          "one": "%{count} weitere Standorte anzeigen"
+        },
+        "pickup_unavailable_banner_title": {
+          "one": "Keine Standorte mit deinem Artikel",
+          "other": "Keine Standorte mit deinen Artikeln"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Keine Standorte in %{country} mit Ihrem Artikel",
+          "other": "Keine Standorte in %{country} mit deinen Artikeln"
+        },
+        "pickup_unavailable_banner_body": {
+          "try_different_location": "Versuche einen anderen Standort",
+          "ship_to_address": "An Adresse liefern",
+          "there_are_no_stores": "In der Nähe Ihrer Adresse gibt es keine Geschäfte, oder Ihre Artikel sind nicht zur Abholung verfügbar.",
+          "ship_items": "Versende deine Artikel",
+          "search_elsewhere": "Anderswo suchen",
+          "search_elsewhere_standalone": "Andernorts suchen"
+        }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "shipping_credential_kr": "Persönlicher Zollcode",
+          "shipping_credential_cn": "Ausweisnummer des Einwohners",
+          "tax_credential_co": "Steueridentifikationsnummer/MwSt.",
+          "shipping_credential_co": "Steueridentifikationsnummer/MwSt.",
+          "shipping_credential_type_co": "Ausweistyp",
+          "shipping_credential_my": "Steueridentifikations-/Registrierungsnummer",
+          "shipping_credential_pt": "NIF/USt-IdNr.",
+          "shipping_credential_tw": "Nationale ID-Nummer/Umsatzsteuer-ID",
+          "shipping_credential_tr": "Türkische Republik-Identifikationsnummer/Umsatzsteuer"
         }
       }
     },

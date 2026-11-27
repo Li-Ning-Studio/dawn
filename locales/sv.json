@@ -843,7 +843,19 @@
         "gift_card_invalid": "Presentkortet ”••••%{last_four_characters}” gäller inte längre",
         "invalid_delivery_address_reference_handle": "Referenshandtaget för leveransadressen kunde inte matchas mot någon tillgänglig leveransadress.",
         "must_use_available_delivery_address": "Leveransadressen måste väljas bland de tillgängliga leveransadresserna.",
-        "must_use_available_shipping_rate": "Fraktalternativet måste väljas bland de tillgängliga fraktalternativen."
+        "must_use_available_shipping_rate": "Fraktalternativet måste väljas bland de tillgängliga fraktalternativen.",
+        "shipping_line_phone_blank": "Ange ett telefonnummer för att använda den här leveransmetoden",
+        "tips_invalid_tip_amount": "Ange ett dricksbelopp som är lägre än %{amount}",
+        "shop_pay_mobile_phone_blank": "Ange ett mobiltelefonnummer",
+        "vaulting_agreement_blank": "Din betalningsmetod måste sparas eftersom betalningen för återstoden av den här beställningen ska göras senare.",
+        "shipping_method_invalid_phone_number": "Uppdatera telefonnumret i din leveransadress för att se tillgängliga fraktmetoder.",
+        "split_cart_tax_engine_not_supported": "Alla artiklar måste använda samma leveransmetod som skatteberäkningsmotorn för butikens plats.",
+        "split_cart_international_shipping_not_supported": "Alla artiklar måste skickas med samma leveransmetod vid internationell frakt. Ändra leveransmetod eller skapa flera beställningar.",
+        "split_by_delivery_method_not_allowed": "Uppdelning efter leveransmetod tillåts inte för den här sessionen eller butiken.",
+        "split_by_delivery_method_requires_merchandise_from_single_location": "Uppdelning efter leveransmetod kräver att enskilda varurader hanteras från en enda plats.",
+        "split_by_delivery_method_unsupported_method_type": "Dela upp efter leveransmetod försöktes med en leveransmetodtyp som inte stöds.",
+        "split_cart_not_allowed": "Ogiltig session eller funktionen är inte aktiverad för den angivna butiken.",
+        "split_quantity_per_delivery_line_not_allowed": "Minst en varurad refereras till av flera leveransrader."
       },
       "error_page": {
         "terminal": {
@@ -867,6 +879,317 @@
       "editor": {
         "navigation": {
           "store_logo_accessibility_label": "Gå till webbutiken"
+        }
+      },
+      "general": {
+        "breadcrumb": "Brödsmula",
+        "complete_purchase_button_label": "Slutför beställningen",
+        "authenticate_purchase_button_label": "Autentisera betalningen",
+        "all_rights_reserved": "Alla rättigheter förbehållna %{shop_name}",
+        "continue_to_shipping_method": "Fortsätt till frakt",
+        "continue_to_review": "Granska beställningen",
+        "back_to_cart": "Gå tillbaka till varukorgen",
+        "back_to_shipping_method": "Tillbaka till leverans",
+        "back_to_payment_method": "Återgå till betalning",
+        "choose_billing_address": "Välj en faktureringsadress",
+        "contact_us_html": "Kontakta oss för mer information",
+        "autocomplete_single_item": "1 artikel tillgänglig",
+        "autocomplete_multi_item": "{{number}} artiklar tillgängliga",
+        "autocomplete_close": "Stäng förslag",
+        "checkout_context": {
+          "step_one": "%{shop_name} - Kassan"
+        },
+        "errors": {
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Företagskontakten har inte åtkomst till företaget.",
+            "customer_account_required": "Du måste logga in för att fortsätta.",
+            "company_purchase_permission_required": "Kunden har inte behörighet att lägga företagsbeställningar.",
+            "personal_order_not_allowed": "Personliga beställningar är inte tillåtna i den här butiken.",
+            "lost_access_to_company": "Kunden förlorade åtkomsten till alla företag.",
+            "contact_info_does_not_match_customer_account": "Kontaktuppgifterna måste stämma överens med kontot du är inloggad på.",
+            "phone_number_does_not_match_expected_pattern": "Det angivna telefonnumret följer inte det förväntade formatet.",
+            "email_required": "En e-postadress krävs när varorna köps med en prenumeration.",
+            "email_domain_is_invalid": "Den angivna domänen kan inte lösas.",
+            "missing_contact_method": "Saknar en giltig kontaktmetod.",
+            "checkout_completion_target_is_missing": "Målet för slutförd utcheckning saknas.",
+            "invalid_customer_profile": "En ogiltig kundprofil angavs.",
+            "customer_profile_access_restricted": "Kassan har inte behörighet att komma åt kundprofilen.",
+            "checkout_completion_target_is_invalid_proc": "Ogiltigt mål för slutförande av kassan.",
+            "buyer_identity_presentment_currency_does_not_match": "Det uppstod ett problem när din beställning skulle behandlas. Försök igen om några minuter."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Butiksattribuering är inte tillåten för den här utcheckningen.",
+            "retail_attribution_required": "Detaljhandelsattribuering krävs för den här kassan."
+          },
+          "captcha": {
+            "job_already_queued": "Captcha-validering har redan lagts i kö för den här captcha-tokenen.",
+            "metadata_missing": "Det krävs att du slutför en captcha för att genomföra köpet.",
+            "metadata_mismatch": "Den angivna captcha-leverantören och typen stämmer inte överens med de förväntade värdena.",
+            "token_missing": "En captcha-token måste anges för att slutföra köpet.",
+            "job_enqueue_failed": "Det gick inte att köa captcha-valideringsjobbet.",
+            "token_expired": "Den angivna captcha-token har gått ut. Slutför en ny captcha för att fortsätta till kassan.",
+            "token_invalid": "Den angivna captcha-tokenen var ogiltig. Slutför en ny captcha för att fortsätta till kassan.",
+            "token_not_valid_for_session": "Den angivna captchan kan inte användas i kassan."
+          },
+          "only_empty_terms_accepted": "Den här policyn godtar endast tomma villkor.",
+          "line_item_limit_reached": "Det maximala antalet artiklar har uppnåtts.",
+          "merchandise": {
+            "only_value_constraint": "Endast exakta värden är tillåtna i varuinmatningen.",
+            "merchandise_not_applicable": "Produktvarianten kan inte köpas.",
+            "mixed_currencies": "Kassan innehåller artiklar med olika valutor.",
+            "bundle_products_not_supported_for_b2b": "Paketartiklar kan inte läggas till i B2B-beställningar för den här platsen.",
+            "gift_card_quantity_mismatch": "När du anger presentkortskoder måste antalet artiklar på raden motsvara antalet presentkortskoder.",
+            "gift_card_not_supported": "Presentkort kan inte användas i kassan.",
+            "gift_card_not_unique": "Presentkortet med koden {{code}} förekommer mer än en gång i kassan. Koderna formateras före jämförelsen.",
+            "gift_card_used": "Presentkortskoden {{code}} är redan kopplad till ett presentkort. Koder formateras före jämförelsen.",
+            "gift_card_invalid": "Presentkortskoden {{code}} är ogiltig.",
+            "gift_card_code_changed": "Presentkortskoden {{proposed_code}} ändrades till {{formatted_code}} för att följa formateringsreglerna.",
+            "gift_card_with_attributes_not_supported": "Presentkort med anpassade attribut stöds inte i den här kassan.",
+            "gift_card_with_components_not_supported": "Presentkort med komponenter stöds inte i den här kassan.",
+            "selling_plan_mismatch": "Prenumerationen har uppdaterats.",
+            "selling_plan_not_supported_b2b": "Prenumerationer stöds inte vid B2B-utcheckning.",
+            "fixed_selling_plans_not_supported_for_draft_orders": "Det här köpalternativet stöds inte för utkastbeställningar.",
+            "price_mismatch": "Det tidigare föreslagna priset för den här varan var ogiltigt och har uppdaterats.",
+            "inventory_not_found": "Inget lager hittades för den här varan.",
+            "product_not_published": "Produkten är inte publicerad.",
+            "product_not_published_in_buyer_location": "Produkten är inte tillgänglig på köparens nuvarande plats.",
+            "duplicated_stable_id": "Den här varuraden har samma stabila ID som en annan rad.",
+            "maximum_quantity_exceeded": "Antalet av vissa artiklar överskrider det högsta tillåtna.",
+            "bundle_requires_components": "Den här paketprodukten har inga komponenter.",
+            "combined_listing_parent_not_purchasable": "Kombinerade listningsföräldraprodukter kan inte köpas direkt.",
+            "title_too_long": "Varutiteln är för lång.",
+            "title_empty": "Produkttiteln är tom."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Varukorgen får bara ha en leveransrad.",
+            "wrong_number_of_delivery_lines": "En leveransrad måste anges för varje varugrupp.",
+            "external_delivery_promise_error": "Ett fel uppstod när det externa leveranslöftet hämtades.",
+            "options_instructions_invalid": "De angivna instruktionerna matchar inte det förväntade mönstret.",
+            "destination_address_required": "En destinationsadress krävs för att fortsätta.",
+            "pickup_points_unavailable": "Utlämningsställen är för närvarande inte tillgängliga.",
+            "local_pickup_delivery_line_detail_changed": "Den nuvarande strategin för lokal upphämtning måste ändras för att fortsätta.",
+            "selected_pickup_option_no_longer_available": "Det tidigare valda upphämtningsalternativet är inte längre tillgängligt.",
+            "local_pickup_no_delivery_strategy_available": "Ingen tillgänglig leveransstrategi för lokal upphämtning hittades.",
+            "origin_location_id_required": "Ett ursprungsplats-ID krävs när leveransmetoden RETAIL begärs.",
+            "invalid_origin_location_id": "Kunde inte hitta någon plats som motsvarar ursprungsplatsens ID.",
+            "origin_location_id_not_allowed": "De begärda leveransmetoderna har inte stöd för ett ursprungsplats-ID.",
+            "auto_fulfill_not_allowed": "Den här sessionen är inte behörig att åsidosätta hanteringen av orderleveranser.",
+            "auto_fulfill_required": "Automatisk orderhantering krävs när leveransmetoden RETAIL begärs.",
+            "prefetch_shipping_rates_used": "Förhämtade fraktpriser ska aldrig returnera några priser.",
+            "fulfillment_constraints_not_satisfied": "Ett eller flera leveransvillkor uppfylldes inte.",
+            "must_fulfill_from_constraint_not_satisfied": "Leveranskraven är inte uppfyllda eftersom artiklarna inte kan levereras från de platser som krävs.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "Leveransvillkoren är inte uppfyllda eftersom varorna inte kan levereras från samma plats.",
+            "delivery_strategy_conditions_not_satisfied": "Leveransalternativ finns tillgängliga för den här platsen, men villkoren för dem är inte uppfyllda.",
+            "mixed_destination_countries": "Leverans är inte tillgänglig eftersom leveranslinjer sträcker sig över flera länder."
+          },
+          "discount": {
+            "custom_discount_not_honoured": "Den angivna anpassade rabatten tillämpades inte.",
+            "unsupported_expectation": "Den angivna rabattregeln innehöll ett uttryck som policyn inte kunde tolka.",
+            "additional_requested_discount_code_discarded": "{{code}} är giltig men kan inte tillämpas. Kontrollera rabattvillkoren.",
+            "additional_requested_discount_discarded": "Din rabatt är giltig men kan inte tillämpas. Kontrollera rabattvillkoren.",
+            "allocations_mismatch": "Din rabattkod har ändrats. Granska din varukorg och försök igen.",
+            "discount_title_too_long": "Rabattens titel får inte vara längre än 255 tecken."
+          },
+          "payment": {
+            "subscription_terms_not_accepted": "Prenumerationsvillkoren har inte godkänts.",
+            "missing_session_id": "Sessionsinformation för kreditkort saknas.",
+            "gateway_not_supported": "Betalningsgatewayen stöder inte lagring av betalningsmetoder.",
+            "credit_card_last_name_required": "”Efternamn” får inte vara nil.",
+            "credit_card_update_failed": "Uppdateringen av kreditkortet misslyckades.",
+            "invalid_address_type": "Den angivna adressen är ogiltig för den här betalningsmetoden.",
+            "missing_retail_attributions": "Butiksattribution krävs för manuellt registrerade kreditkortsbetalningar.",
+            "invalid_card_source": "Den här sessionen har inte behörighet att använda den här kortkällan.",
+            "payment_instrument_not_found": "Det gick inte att hitta någon betalningsmetod",
+            "saved_payment_methods_not_enabled": "Sparade betalningsmetoder är inte aktiverade för den här butiken.",
+            "saved_payment_methods_cvv_verification_disabled": "Den valda betalningsmetoden kräver CVV-verifiering, vilket inte är aktiverat för den här butiken. Välj en annan betalningsmetod.",
+            "store_credit_not_enabled": "Tillgodohavande är inte aktiverat för den här butiken.",
+            "store_credit_account_not_found": "Butikkreditkonto hittades inte.",
+            "store_credit_account_mismatch": "Butikskreditkontot matchar inte köparens identitet.",
+            "store_credit_mismatched_currency": "Valutan för butikskreditkontot matchar inte valutan i kassan.",
+            "store_credit_insufficient_funds": "Det finns inte tillräckligt med pengar på butikskontot.",
+            "store_credit_buying_gift_card": "Du kan inte använda butikskredit för att köpa ett presentkort.",
+            "gift_cards_not_allowed_for_b2b": "Presentkort är inte tillåtna i B2B-butiker.",
+            "method_required": "En betalningsmetod måste anges.",
+            "total_amount_mismatch": "Totalsumman att betala stämmer inte överens med summan av betalningsbeloppen.",
+            "unexpected_retail_attributions": "Detaljhandelsattribueringar visades oväntat för kreditkortsbetalning.",
+            "unauthorized_capture_method": "Det är inte tillåtet att konfigurera metoden för betalningsdebitering."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Ditt köparförslag bör innehålla villkor som inte är förhandlingsbara."
+          },
+          "inventory": {
+            "missing_quantity_value": "Kvantitetsfältet saknas i köparens lagerrader.",
+            "changing_behavior_not_allowed": "Den här klienten har inte behörighet att ändra lagerbeteendet.",
+            "only_one_inventory_behavior_allowed": "För närvarande tillåts bara ett lagerbeteende per utcheckning."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Det är inte tillåtet att avstå från arbetsuppgifter i den här kassan."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Det mottagna beloppet måste anges i butikens valuta."
+          },
+          "session_identifier_not_unique_error": "Något gick fel med din beställning, försök att slutföra köpet igen.",
+          "session_is_already_finished": "Den här kassasessionen har redan slutförts.",
+          "tax": {
+            "new_tax_must_be_accepted": "Skatterna för din beställning har ändrats. Granska och försök igen.",
+            "unresolvable_tax_terms": "De föreslagna villkoren går inte att lösa med tanke på den nuvarande förhandlingssituationen.",
+            "delivery_price_is_abstract": "Det relaterade leveranspriset är abstrakt.",
+            "tax_inclusivity_mismatch": "Omförhandla med ett konkret värde för totalTaxAndDutyAmount eller totalAmountIncludedInTarget.",
+            "mixed_tax_inclusivity_not_supported": "Skatteraderna måste vara antingen alla inklusive skatt eller alla exklusive skatt.",
+            "tax_exemption_not_supported": "Skattebefrielser stöds inte för den aktuella förhandlingssessionen.",
+            "delivery_tax_exemption_not_supported": "Skattebefrielser för leveransrader stöds inte för närvarande.",
+            "proposed_allocations_required": "Fältet ”föreslagen tilldelning” saknas.",
+            "merchandise_terms_must_be_defined": "Varuvillkor måste definieras.",
+            "delivery_terms_must_be_defined": "Leveransvillkoren måste definieras.",
+            "merchandise_discount_terms_must_be_defined": "Villkoren för varurabatter måste definieras.",
+            "delivery_discount_terms_must_be_defined": "Villkoren för leveransrabatten måste definieras.",
+            "allocated_required": "Fältet ”allocated” saknas.",
+            "value_required": "Fältet ”value” saknas.",
+            "line_splits_not_supported": "Fältet ”varurader” måste delas upp så att varje rad innehåller en enda komponent i säljarens förslag."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Shop tar inte emot dricks.",
+            "only_one_tip_line_allowed": "Flera tiprader stöds inte.",
+            "tips_not_allowed_for_b2b": "Dricks är inte tillåtna i B2B-butiker.",
+            "currency_change_reset": "Dricks har återställts på grund av valutabyte.",
+            "tips_not_allowed_for_deferred_purchase_options": "Dricks stöds ännu inte för uppskjutna köpalternativ."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Den här utkastordern finns inte i den aktuella butiken.",
+            "staff_member_not_exist": "Den här personalen finns inte i den aktuella butiken.",
+            "location_not_exist": "Den här platsen finns inte i den aktuella butiken.",
+            "point_of_sale_device_not_exist": "Den här kassaterminalen finns inte i den aktuella butiken.",
+            "unresolvable_target_merchandise_lines": "De föreslagna försäljningsattribueringarna går inte att fastställa utifrån den aktuella förhandlingssituationen."
+          }
+        },
+        "confirm_order_button_label": "Bekräfta beställning",
+        "continue_to_payment_plans_button_label": "Fortsätt till betalningsplanerna",
+        "back_button_label": "Return",
+        "autocomplete_zero_item": "Inga artiklar tillgängliga",
+        "dates": {
+          "weekdays": {
+            "monday": "måndag",
+            "tuesday": "tisdag",
+            "wednesday": "onsdag",
+            "saturday": "lördag"
+          },
+          "weekdays_abbreviation": {
+            "monday": "Mo",
+            "tuesday": "Din",
+            "wednesday": "Vi",
+            "thursday": "Den",
+            "friday": "Fr",
+            "saturday": "Så",
+            "sunday": "Södra"
+          },
+          "months": {
+            "may": "Maj",
+            "august": "Augusti"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Visa föregående månad, {{month}} {{year}}",
+          "show_next_month": "Visa nästa månad, {{month}} {{year}}",
+          "range_start": "Startintervall",
+          "in_range": "Inom räckvidd",
+          "range_end": "Slut på intervall"
+        },
+        "dropzone": {
+          "dragged_over": "Släpp filen för att ladda upp"
+        },
+        "page_title": "Gå till kassan",
+        "skip_to_content": "Hoppa till innehållet",
+        "finalize_order_accessibility_label": "Slutför beställningen",
+        "print_policies_link_label": "Tryck",
+        "forwarding_indicator": {
+          "external_and_new_window": "Öppnar en extern webbplats i ett nytt fönster."
+        },
+        "full_price": "Ordinarie pris:",
+        "title": "Betalning - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Kassan",
+        "loading": "Läser in…",
+        "loading_title": "Betalning - {{shopName}}",
+        "google_map_title": "Google Maps",
+        "submit_order_button_label": "Skicka beställning",
+        "submit_for_review_notice_label": "Betalningen förfaller inte förrän din beställning har granskats",
+        "submit": "Skicka in",
+        "processing": "Bearbetar…",
+        "stepper": {
+          "increase": "Öka {{type}}",
+          "decrease": "Minska {{type}}",
+          "minimum_reached": "Minimum för {{value}} har uppnåtts",
+          "maximum_reached": "Maximalt {{value}} har uppnåtts"
+        },
+        "remove_chip": "Ta bort objektet",
+        "remove_tag": "Ta bort taggen",
+        "list_formatter": {
+          "and": {
+            "lastWordConnector": "{{previousWords}}, och {{lastWord}}"
+          },
+          "or": {
+            "lastWordConnector": "{{previousWords}}, eller {{lastWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Kluster med {{number}} markörer",
+            "other": "Kluster med {{number}} markörer"
+          }
+        },
+        "sheet": {
+          "expand": "Expandera"
+        }
+      },
+      "hsa_qualification_errors": {
+        "ineligible": "Den här beställningen är inte berättigad till HSA/FSA.",
+        "processing_error": "Det uppstod ett problem när din HSA/FSA-begäran behandlades. Försök igen eller gå till kassan utan HSA/FSA.",
+        "unsupported_checkout": "HSA/FSA är inte tillgängligt för den här beställningen."
+      },
+      "local_pickup": {
+        "bundle_removal_modal": {
+          "message": {
+            "one": "{{items}} ingår i {{bundle}}. Produkter som ingår i paketet tas också bort.",
+            "other": "{{items}} ingår i {{bundle}}. Produkter i paketet tas också bort."
+          }
+        },
+        "location_closest": "Närmaste plats med din vara",
+        "location_closest_one_item": "Närmaste plats med din vara",
+        "location_closest_other_items": "Närmaste plats med dina varor",
+        "location_information": {
+          "one": "Det finns %{count} plats med lager nära dig.",
+          "other": "Det finns %{count} platser med varor i lager nära dig"
+        },
+        "location_information_far_away": {
+          "one": "Det finns %{count} plats med din vara.",
+          "other": "Det finns %{count} platser med din vara"
+        },
+        "location_information_far_away_one_item": {
+          "one": "Det finns %{count} plats med din vara."
+        },
+        "location_far_away": {
+          "one": "%{count} plats med din vara",
+          "other": "%{count} platser med din vara"
+        },
+        "location_far_away_one_item": {
+          "one": "%{count} plats med din vara",
+          "other": "%{count} platser med din vara"
+        },
+        "location_far_away_other_items": {
+          "other": "%{count} platser med dina varor"
+        },
+        "all_stores_far_away": {
+          "title": "De närmaste platserna ligger mer än %{distance} bort.",
+          "title_with_item": {
+            "one": "Den närmaste platsen med din vara ligger mer än %{distance} från %{location}",
+            "other": "Närmaste plats med dina varor ligger mer än %{distance} från %{location}"
+          },
+          "title_with_location": "Den närmaste platsen ligger mer än %{distance} från %{location}",
+          "title_with_specific_location": "Den närmaste platsen som har din vara ligger mer än %{distance} från %{location}",
+          "ship_to_address_link": "skicka till adressen"
+        },
+        "could_not_resolve_address": "Din adress kunde inte hittas. Försök igen eller använd en annan adress.",
+        "geolocation": {
+          "permission_not_allowed": "Tillåt platsdelning eller sök i stället."
         }
       }
     },
