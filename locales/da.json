@@ -1106,7 +1106,137 @@
             "retail_attribution_required": "Detailhandelstilskrivning er påkrævet for denne betaling."
           },
           "captcha": {
-            "job_already_queued": "Captcha-validering er allerede sat i kø for dette captcha-token."
+            "job_already_queued": "Captcha-validering er allerede sat i kø for dette captcha-token.",
+            "metadata_missing": "Det er nødvendigt at gennemføre en CAPTCHA for at gå til kassen.",
+            "metadata_mismatch": "Den angivne CAPTCHA-udbyder og -type stemmer ikke overens med de forventede værdier.",
+            "token_missing": "Der skal angives et captcha-token for at gennemføre købet.",
+            "job_enqueue_failed": "Jobbet med captcha-validering kunne ikke sættes i kø.",
+            "token_expired": "Det angivne captcha-token er udløbet. Gennemfør en ny captcha for at fortsætte til betaling.",
+            "token_invalid": "Den angivne captcha-token var ugyldig. Gennemfør en ny captcha for at fortsætte til betaling."
+          },
+          "only_empty_terms_accepted": "Denne politik godkender kun tomme vilkår.",
+          "line_item_limit_reached": "Det maksimale antal linjer er nået.",
+          "merchandise": {
+            "only_value_constraint": "Kun præcise værdier er tilladt i vareinputtet.",
+            "merchandise_not_found": "Produktet blev ikke fundet.",
+            "mixed_currencies": "Betalingssiden indeholder varelinjer med forskellige valutaer.",
+            "bundle_products_not_supported_for_b2b": "Samlede varer kan ikke føjes til B2B-ordrer for denne lokation.",
+            "gift_card_quantity_mismatch": "Når du angiver gavekortkoder, skal linjepostens antal svare til antallet af gavekortkoder.",
+            "gift_card_not_supported": "Gavekort understøttes ikke ved denne betaling.",
+            "gift_card_not_unique": "Gavekort med koden {{code}} forekommer mere end én gang i denne betaling. Koderne formateres før sammenligning.",
+            "gift_card_with_attributes_not_supported": "Gavekort med brugerdefinerede attributter understøttes ikke i denne betaling.",
+            "gift_card_with_components_not_supported": "Gavekort med komponenter understøttes ikke ved denne betaling.",
+            "selling_plan_not_supported_b2b": "Abonnementer understøttes ikke ved B2B-betaling.",
+            "fixed_selling_plans_not_supported_for_draft_orders": "Denne købsmulighed understøttes ikke for kladdeordrer.",
+            "price_mismatch": "Den tidligere foreslåede pris på denne vare var ugyldig og er blevet opdateret.",
+            "inventory_not_found": "Der blev ikke fundet noget lager for denne vare.",
+            "product_not_published": "Produktet er ikke offentliggjort.",
+            "product_not_published_in_buyer_location": "Produktet er ikke tilgængeligt på køberens nuværende placering.",
+            "duplicated_stable_id": "Denne varelinje har samme stabile ID som en anden varelinje.",
+            "minimum_quantity_not_met": "Mængden af nogle varer opfylder ikke minimumskravet.",
+            "maximum_quantity_exceeded": "Mængden af nogle varer overstiger det maksimalt tilladte.",
+            "quantity_increment_not_met": "Antallet af nogle varer overholder ikke bestillingsgrænserne.",
+            "quantity_rules_not_met": "Antallet af nogle varer overholder ikke bestillingsgrænserne.",
+            "bundle_requires_components": "Denne bundtede vare har ingen komponenter.",
+            "combined_listing_parent_not_purchasable": "Kombinerede parent-produkter kan ikke købes direkte.",
+            "title_too_long": "Varebetegnelsen er for lang.",
+            "title_empty": "Varebetegnelsen er tom."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Kurven må kun have én leveringslinje.",
+            "wrong_number_of_delivery_lines": "Der skal angives en leveringslinje for hver varegruppe.",
+            "external_delivery_promise_error": "Fejl ved hentning af et eksternt leveringsløfte.",
+            "destination_address_required": "En destinationsadresse er påkrævet for at fortsætte.",
+            "pickup_points_unavailable": "Afhentningssteder er ikke tilgængelige lige nu.",
+            "local_pickup_delivery_line_detail_changed": "Den nuværende strategi for lokal afhentning skal ændres for at fortsætte.",
+            "local_pickup_no_delivery_strategy_available": "Ingen tilgængelig leveringsmetode for lokal afhentning blev fundet.",
+            "origin_location_id_required": "Der kræves et oprindelsessted-ID, når RETAIL-leveringsmetoden anmodes om.",
+            "invalid_origin_location_id": "Kunne ikke finde en placering, der matcher ID'et for oprindelsesplaceringen.",
+            "origin_location_id_not_allowed": "De ønskede leveringsmetoder understøtter ikke et ID for afhentningsstedet.",
+            "auto_fulfill_not_allowed": "Denne session er ikke godkendt til at tilsidesætte adfærden for ordrebehandling.",
+            "auto_fulfill_required": "Automatisk ordrebehandling er påkrævet, når leveringsmetoden RETAIL anmodes om.",
+            "prefetch_shipping_rates_used": "Forhentede fragtpriser må aldrig returneres.",
+            "fulfillment_constraints_not_satisfied": "En eller flere leveringskrav blev ikke opfyldt.",
+            "must_fulfill_from_constraint_not_satisfied": "Leveringskravene er ikke opfyldt, fordi varerne ikke kan leveres fra de krævede lokationer.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "Leveringskravene er ikke opfyldt, fordi varerne ikke kan leveres fra samme sted.",
+            "delivery_strategy_conditions_not_satisfied": "Leveringsmuligheder er tilgængelige for denne lokation, men betingelserne for dem er ikke opfyldt.",
+            "out_of_stock_at_origin_location": "Ingen lagerbeholdning på oprindelsesstedet.",
+            "mixed_destination_countries": "Levering er ikke tilgængelig, fordi leveringslinjerne går på tværs af flere lande."
+          },
+          "discount": {
+            "mixed_destination_countries": "Rabatter er ikke tilgængelige, fordi leveringslinjerne dækker flere lande.",
+            "custom_discount_not_honoured": "Den angivne brugerdefinerede rabat blev ikke anvendt.",
+            "unsupported_expectation": "Den angivne rabatlinje indeholdt en forventning, som politikken ikke kunne fortolke.",
+            "additional_requested_discount_discarded": "Din rabat er gyldig, men kan ikke anvendes. Tjek rabatbetingelserne.",
+            "discount_title_too_long": "Rabat­titlen må ikke være længere end 255 tegn."
+          },
+          "payment": {
+            "positive_amount_expected": "Beløbet, der skal betales, skal være større end 0.",
+            "missing_session_id": "Manglende oplysninger om kreditkortsessionen.",
+            "gateway_not_supported": "Betalingsgatewayen understøtter ikke lagring af betalingsmetoden.",
+            "credit_card_last_name_required": "'Efternavn' må ikke være nil.",
+            "missing_retail_attributions": "Der kræves oplysninger om forhandleren ved manuelt indtastede kreditkortbetalinger.",
+            "saved_payment_methods_not_enabled": "Gemte betalingsmetoder er ikke aktiveret for denne butik.",
+            "saved_payment_methods_cvv_verification_disabled": "Den valgte betalingsmetode kræver CVV-verifikation, som ikke er aktiveret for denne butik. Vælg en anden betalingsmetode.",
+            "store_credit_not_enabled": "Butikskredit er ikke aktiveret for denne butik.",
+            "store_credit_account_not_found": "Butikskreditkontoen blev ikke fundet.",
+            "store_credit_account_mismatch": "Butikskreditkontoen stemmer ikke overens med køberens identitet.",
+            "store_credit_mismatched_currency": "Butikskreditkontoens valuta stemmer ikke overens med betalingssidens valuta.",
+            "store_credit_insufficient_funds": "Der er ikke tilstrækkelige midler på butikkens tilgodebeviskonto.",
+            "store_credit_buying_gift_card": "Du kan ikke bruge butikskredit til at købe et gavekort.",
+            "method_required": "Der skal foreslås en betalingsmetode.",
+            "paypal_express_address_invalid": "PayPal returnerede en ugyldig adresse.",
+            "total_amount_mismatch": "Det samlede beløb, der skal betales, stemmer ikke overens med summen af betalingsbeløbene.",
+            "unexpected_retail_attributions": "Detailhandelstilskrivninger blev uventet angivet for betaling med kreditkort.",
+            "wallet_content_missing": "Indholdet i tegnebogen mangler.",
+            "unauthorized_capture_method": "Det er ikke tilladt at konfigurere betalingsmetoden for hævning."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Dit købstilbud bør indeholde ufravigelige vilkår.",
+            "invalid_signature": "Signaturen for {{target_terms}} er ugyldig."
+          },
+          "inventory": {
+            "missing_quantity_value": "Antal-feltet mangler i køberens lagerlinjer.",
+            "changing_behavior_not_allowed": "Denne klient har ikke tilladelse til at ændre lageradfærd.",
+            "only_one_inventory_behavior_allowed": "I øjeblikket er kun én lageradfærd tilladt pr. betaling."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Det er ikke tilladt at afvise told og afgifter ved denne betaling."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Det modtagne beløb skal være i butikkens valuta."
+          },
+          "checkout_source": {
+            "revoked": "Denne betaling er ikke længere tilgængelig."
+          },
+          "session_identifier_not_unique_error": "Der opstod et problem med din ordre. Prøv at gå til kassen igen.",
+          "session_is_already_finished": "Denne betalingssession er allerede afsluttet.",
+          "tax": {
+            "new_tax_must_be_accepted": "Skatterne for din ordre er ændret. Gennemgå den, og prøv igen.",
+            "unresolvable_tax_terms": "De foreslåede vilkår kan ikke afklares i den nuværende forhandlingssituation.",
+            "delivery_price_is_abstract": "Den tilhørende leveringspris er abstrakt.",
+            "tax_inclusivity_mismatch": "Genforhandl med en konkret værdi for totalTaxAndDutyAmount eller totalAmountIncludedInTarget.",
+            "mixed_tax_inclusivity_not_supported": "Alle skatteposter skal enten være inklusive eller eksklusive skat.",
+            "proposed_allocations_required": "Feltet \"foreslåede tildelinger\" mangler.",
+            "merchandise_terms_must_be_defined": "Handelsvilkår skal defineres.",
+            "delivery_terms_must_be_defined": "Leveringsvilkårene skal defineres.",
+            "merchandise_discount_terms_must_be_defined": "Vilkårene for varernes rabat skal defineres.",
+            "delivery_discount_terms_must_be_defined": "Vilkår for leveringsrabatten skal fastlægges.",
+            "allocated_required": "Manglende felt: 'allocated'.",
+            "value_required": "Mangler feltet 'value'.",
+            "line_splits_not_supported": "Feltet 'varelinjer' skal opdeles, så hver linje indeholder én enkelt linjekomponent i sælgerens forslag."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Shoppen tager ikke imod drikkepenge.",
+            "only_one_tip_line_allowed": "Flere tiplinjer understøttes ikke.",
+            "currency_change_reset": "Drikkepenge er blevet nulstillet på grund af valutaændring.",
+            "tips_not_allowed_for_deferred_purchase_options": "Drikkepenge understøttes endnu ikke for udskudte købsmuligheder."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Denne kladdeordre findes ikke i den aktuelle butik.",
+            "staff_member_not_exist": "Denne medarbejder findes ikke i den nuværende butik.",
+            "location_not_exist": "Denne placering findes ikke i den nuværende butik.",
+            "unresolvable_target_merchandise_lines": "De foreslåede salgsattribueringer kan ikke fastslås ud fra den aktuelle forhandlingssituation."
           }
         },
         "confirm_order_button_label": "Bekræft ordre",
@@ -1144,6 +1274,99 @@
         "dropzone": {
           "invalid_file_type": "Filtypen understøttes ikke",
           "dragged_over": "Slip filen for at overføre"
+        },
+        "page_title": "Gå til kassen",
+        "skip_to_content": "Gå til indholdet",
+        "finalize_order_accessibility_label": "Færdiggør bestillingen",
+        "expand_notice_label": "Se mere",
+        "forwarding_indicator": {
+          "new_window": "Åbnes i et nyt vindue.",
+          "external": "Åbner et eksternt website.",
+          "external_and_new_window": "Åbner eksternt websted i et nyt vindue."
+        },
+        "tooltip_accessibility_label": "Flere oplysninger",
+        "title": "Gå til betaling - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Betaling",
+        "loading": "Indlæser…",
+        "loading_title": "Gå til betaling - {{shopName}}",
+        "google_map_title": "Google Kort",
+        "submit_order_button_label": "Indsend ordre",
+        "submit_for_review_button_label": "Indsend til gennemgang",
+        "submit_for_review_notice_label": "Betalingen forfalder først, når din ordre er blevet gennemgået.",
+        "submit": "Indsend",
+        "processing": "Behandler…",
+        "stepper": {
+          "decrease": "Reducer {{type}}",
+          "minimum_reached": "Minimum på {{value}} nået",
+          "maximum_reached": "Maksimum på {{value}} nået"
+        },
+        "remove_chip": "Fjern varen",
+        "remove_tag": "Fjern mærke",
+        "list_formatter": {
+          "and": {
+            "lastWordConnector": "{{previousWords}}, og {{lastWord}}"
+          },
+          "or": {
+            "lastWordConnector": "{{previousWords}}, eller {{lastWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Klynge af {{number}} markører",
+            "other": "Klynge af {{number}} markører"
+          }
+        }
+      },
+      "hsa_qualification_errors": {
+        "processing_error": "Der opstod et problem med behandlingen af din HSA/FSA-anmodning. Prøv igen, eller gå til kassen uden HSA/FSA.",
+        "unsupported_checkout": "HSA/FSA er ikke tilgængelig for denne ordre."
+      },
+      "local_pickup": {
+        "bundle_removal_modal": {
+          "message": {
+            "one": "{{items}} er en del af {{bundle}}. Varer i pakken bliver også fjernet.",
+            "other": "{{items}} er en del af {{bundle}}. Varer i pakken bliver også fjernet."
+          }
+        },
+        "location_closest": "Nærmeste sted med din vare",
+        "location_closest_one_item": "Nærmeste sted med din vare",
+        "location_closest_other_items": "Nærmeste sted med dine varer",
+        "location_information": {
+          "one": "Der er %{count} lagerførende lokation tæt på dig.",
+          "other": "Der er %{count} steder med lagerbeholdning tæt på dig."
+        },
+        "location_information_far_away": {
+          "one": "Der er %{count} sted med din vare",
+          "other": "Der er %{count} steder med din vare"
+        },
+        "location_information_far_away_one_item": {
+          "one": "Der er %{count} sted med din vare"
+        },
+        "location_far_away": {
+          "other": "%{count} steder med din vare"
+        },
+        "location_far_away_one_item": {
+          "other": "%{count} steder med din vare"
+        },
+        "location_far_away_other_items": {
+          "one": "%{count} sted med dine varer",
+          "other": "%{count} steder med dine varer"
+        },
+        "all_stores_far_away": {
+          "title": "De nærmeste steder ligger mere end %{distance} væk.",
+          "title_with_item": {
+            "one": "Det nærmeste sted med din vare ligger mere end %{distance} fra %{location}",
+            "other": "Det nærmeste sted med dine varer ligger mere end %{distance} fra %{location}"
+          },
+          "title_with_location": "Den nærmeste lokation ligger mere end %{distance} fra %{location}",
+          "title_with_specific_location": "Den nærmeste placering med din vare ligger mere end %{distance} væk fra %{location}",
+          "description": "Vælg en placering eller %{ship_to_address_link}",
+          "ship_to_address_link": "Send til adresse",
+          "change_location_link": "Skift din placering"
+        },
+        "could_not_resolve_address": "Din adresse kunne ikke findes. Prøv igen, eller brug en anden adresse.",
+        "geolocation": {
+          "permission_not_allowed": "Tillad deling af placering, eller søg i stedet."
         }
       }
     },
