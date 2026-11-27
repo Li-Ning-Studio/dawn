@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -37,7 +46,9 @@
     },
     "search": {
       "search": "Søg",
-      "reset": "Ryd søgeord"
+      "reset": "Ryd søgeord",
+      "featured_collection": "Populær lige nu",
+      "featured": "Udvalgt"
     },
     "cart": {
       "view": "Se indkøbskurv ({{ count }})",
@@ -126,7 +137,8 @@
         "from_price_html": "Fra {{ price }}",
         "regular_price": "Normalpris",
         "sale_price": "Udsalgspris",
-        "unit_price": "Stykpris"
+        "unit_price": "Stykpris",
+        "usually_sells_at_html": "Sælges normalt til {{ price }}"
       },
       "share": "Del dette produkt",
       "sold_out": "Udsolgt",
@@ -177,7 +189,12 @@
       "product_variants": "Produktvarianter",
       "taxes_included": "Inklusive skatter.",
       "duties_included": "Inklusive told.",
-      "duties_and_taxes_included": "Inklusive told og skatter."
+      "duties_and_taxes_included": "Inklusive told og skatter.",
+      "key_highlights": "Vigtige højdepunkter",
+      "all_prices_incl_taxes": "(inkl. skatter)",
+      "country_of_origin": "Oprindelsesland",
+      "manufactured_by": "Fremstillet af",
+      "imported_marketed_by": "Importeret og markedsført af"
     },
     "modal": {
       "label": "Mediegalleri"
@@ -523,6 +540,158 @@
       "send_on_label": "Send (valgfrit)",
       "expanded": "Formularen til modtager af gavekort er vist",
       "collapsed": "Formularen til modtager af gavekort er skjult"
+    }
+  },
+  "studio": {
+    "labels": {
+      "customisations": "Tilpasninger"
+    },
+    "modal_close_guard": {
+      "message": "Er du sikker på, at du vil annullere din tilpasning?",
+      "keep_editing": "Fortsæt redigeringen",
+      "discard": "Kassér"
+    },
+    "stringing": {
+      "form_labels": {
+        "frame": "Ramme",
+        "tension": "Spænding",
+        "string": "String",
+        "unstrung": "Ustrenget",
+        "pro_stringing": "Studio Pro-opstrengning",
+        "strung": "Fabrikstrenget",
+        "color": "Farve"
+      },
+      "description": {
+        "unstrung": "Denne ketsjer leveres uden strenge. Du skal få den opstrenget i en sportsbutik.",
+        "pro_stringing": "Opgrader med en specialtilpasset streng og spænding.",
+        "strung": "Denne ketcher leveres opstrenget med standardstrengen og standardspændingen.",
+        "two_knots": "To-knudemetoden bruger én enkelt, sammenhængende streng til hoved- og tværstrenge. Velegnet til moderate spændinger.",
+        "four_knots": "Fireknudemetoden bruger separate strenge til længde- og tværstrenge med fire knuder. Anbefales til høje spændinger."
+      },
+      "labels": {
+        "current_selection": "Aktuelt valg",
+        "free": "GRATIS",
+        "strings_guide": "Guide til strenge",
+        "tension_unit": "LBS",
+        "low_tension": "Lavt",
+        "high_tension": "Høj",
+        "two_knots": "To knuder",
+        "four_knots": "Fire knobber"
+      },
+      "headings": {
+        "choose_string": "Vælg en streng",
+        "select_color": "Vælg en farve",
+        "select_tension": "Hvilken spænding skal <br/> vi strenge den til?",
+        "select_method": "Hvordan skal vi <br/> strenge det?",
+        "summary": "Resumé"
+      },
+      "filters": {
+        "all": "Alle",
+        "power": "Strøm",
+        "durable": "Holdbar",
+        "balanced": "Afbalanceret"
+      },
+      "messages": {
+        "loading": "Indlæser strengindstillinger...",
+        "empty": "Vi kunne ikke finde nogen strengmuligheder lige nu."
+      },
+      "actions": {
+        "add": "Tilføj",
+        "selected": "Valgt",
+        "change": "Ændr",
+        "next": "Næste",
+        "back": "Tilbage",
+        "submit": "Påfør strengning",
+        "close": "Luk",
+        "remove": "Fjern"
+      },
+      "errors": {
+        "load_failed": "Kunne ikke indlæse strengeindstillingerne. Opdater siden.",
+        "missing_product": "Vælg en streng.",
+        "missing_variant": "Vælg en strengfarve.",
+        "missing_tension": "Vælg venligst en spænding."
+      }
+    },
+    "gripping": {
+      "form_labels": {
+        "frame": "Greb",
+        "grip_service": "Studiegrebsservice",
+        "no_grip": "Fabriksgreb"
+      },
+      "description": {
+        "grip_service": "Lad vores Studio Pro-fagfolk montere et greb",
+        "no_grip": "Leveres med fabriksmonteret greb, som varierer afhængigt af modellen. Vi anbefaler at opgradere grebet.",
+        "grip_application_note": "Bemærk, at udskiftningsgreb sættes på, efter at fabriksmonteret greb er fjernet, mens overgreb sættes uden på det eksisterende fabriksmonterede greb."
+      },
+      "labels": {
+        "current_selection": "Aktuelt valg",
+        "free": "GRATIS",
+        "service_cost": "Serviceomkostninger",
+        "variant_price": "Greb"
+      },
+      "headings": {
+        "choose_grip": "Vælg greb",
+        "select_color": "Vælg grebsfarve",
+        "summary": "Anvender"
+      },
+      "messages": {
+        "loading": "Indlæser grebsmuligheder...",
+        "empty": "Vi kunne ikke finde nogen grebsmuligheder lige nu."
+      },
+      "actions": {
+        "add": "Tilføj",
+        "selected": "Valgt",
+        "change": "Ændr",
+        "next": "Næste",
+        "back": "Tilbage",
+        "submit": "Påfør Grip",
+        "close": "Luk",
+        "remove": "Fjern"
+      },
+      "errors": {
+        "load_failed": "Kunne ikke indlæse grebsmulighederne. Opdater siden.",
+        "missing_product": "Vælg en grebstype.",
+        "missing_variant": "Vælg en grebsfarve."
+      }
+    },
+    "remix": {
+      "form_labels": {
+        "personalisation_service": "Tilføj personlig tilpasning"
+      },
+      "description": {
+        "personalisation_service": "Gør denne {{ product_title }} helt til din egen, og vis din personlige stil frem på banen"
+      },
+      "labels": {
+        "free": "GRATIS"
+      },
+      "actions": {
+        "add": "Tilføj",
+        "change": "Ændr"
+      },
+      "errors": {
+        "load_failed": "Kunne ikke indlæse personaliseringsmulighederne. Opdater siden."
+      }
+    },
+    "tshirt_printing": {
+      "actions": {
+        "add": "Tilføj",
+        "change": "Ændr",
+        "next": "Næste",
+        "back": "Tilbage",
+        "submit": "Tilpas",
+        "close": "Luk",
+        "remove": "Fjern",
+        "add_second_line": "Tilføj land og logo for {{ price }}",
+        "clear_second_line": "Fjern land og logo"
+      }
+    }
+  },
+  "settings_schema": {
+    "product_customisations": {
+      "factory_grip_image": {
+        "label": "Billede af fabriksmonteret greb",
+        "info": "Vises ved siden af fabriksgribemuligheden."
+      }
     }
   }
 }
