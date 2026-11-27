@@ -233,7 +233,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "Inga resultat hittades för \"{{ terms }}\". Kontrollera stavningen eller använd ett annat ord eller fras.",
+      "no_results": "Inga resultat hittades för ”{{ terms }}”. Kontrollera stavningen eller använd ett annat ord eller en annan fras.",
       "results_with_count": {
         "one": "{{ count }} resultat",
         "other": "{{ count }} resultat"
@@ -241,13 +241,13 @@
       "title": "Sökresultat",
       "page": "Sida",
       "products": "Produkter",
-      "search_for": "Sök efter \"{{ terms }}\"",
+      "search_for": "Sök efter ”{{ terms }}”",
       "results_with_count_and_term": {
-        "one": "hittat {{ count }} resultat för \"{{ terms }}\"",
-        "other": "hittat {{ count }} resultat för \"{{ terms }}\""
+        "one": "{{ count }} resultat hittades för ”{{ terms }}”",
+        "other": "{{ count }} resultat hittades för ”{{ terms }}”"
       },
       "results_pages_with_count": {
-        "one": "{{ count }}-sida",
+        "one": "{{ count }} sida",
         "other": "{{ count }} sidor"
       },
       "results_products_with_count": {
@@ -262,23 +262,25 @@
       }
     },
     "cart": {
-      "cart": "Varukorg"
+      "cart": "Väska"
     },
     "contact": {
       "form": {
         "name": "Namn",
-        "email": "E-postadress",
+        "email": "E-post",
         "phone": "Telefonnummer",
         "comment": "Kommentar",
         "send": "Skicka",
-        "post_success": "Tack för att du kontaktar oss. Vi återkommer till dig så snart som möjligt.",
+        "post_success": "Tack för att du kontaktade oss. Vi återkommer till dig så snart som möjligt.",
         "error_heading": "Justera följande:",
-        "title": "Kontaktformulär"
+        "title": "Kontaktformulär",
+        "consent": "Genom att bekräfta godkänner jag att mina personuppgifter får användas för att besvara min förfrågan.",
+        "consent_value": "Överenskommet"
       }
     },
     "404": {
-      "title": "Sidan hittades inte",
-      "subtext": "404"
+      "title": "Sida för bänkspelare",
+      "subtext": "Vi kunde inte hitta sidan du letade efter."
     }
   },
   "sections": {
@@ -3434,7 +3436,8 @@
       },
       "headings": {
         "choose_grip": "Välj grepp",
-        "select_color": "Välj greppfärg"
+        "select_color": "Välj greppfärg",
+        "summary": "Tillämpar"
       },
       "actions": {
         "add": "Lägg till",
@@ -3450,6 +3453,151 @@
         "load_failed": "Det gick inte att läsa in greppalternativen. Uppdatera sidan.",
         "missing_product": "Välj ett greppalternativ.",
         "missing_variant": "Välj en greppfärg."
+      },
+      "labels": {
+        "current_selection": "Aktuellt urval",
+        "free": "Gratis",
+        "service_cost": "Servicekostnad",
+        "variant_price": "Grepp"
+      },
+      "messages": {
+        "loading": "Laddar greppalternativ...",
+        "empty": "Vi kunde inte hitta några greppalternativ just nu."
+      }
+    },
+    "labels": {
+      "customisations": "Anpassningar"
+    },
+    "modal_close_guard": {
+      "message": "Är du säker på att du vill avbryta din anpassning?",
+      "keep_editing": "Fortsätt redigera",
+      "discard": "Kassera"
+    },
+    "stringing": {
+      "form_labels": {
+        "frame": "Ram",
+        "tension": "Spänning",
+        "string": "Sträng",
+        "unstrung": "Osträngad",
+        "pro_stringing": "Studio Pro-strängning",
+        "strung": "Fabriksträngad",
+        "color": "Färg"
+      },
+      "description": {
+        "unstrung": "Det här racket levereras utan strängar. Du behöver få det strängat i en sportbutik.",
+        "pro_stringing": "Uppgradera med en anpassad sträng och spänning.",
+        "strung": "Det här racket levereras strängat med standardsträng och standardspänning.",
+        "two_knots": "Tvåknutsmetoden använder en enda sammanhängande sträng för längsgående och tvärgående strängar. Lämplig för medelhög strängspänning.",
+        "four_knots": "Fyrknutsmetoden använder separata strängar för längs- och tvärsträngarna med fyra knutar. Rekommenderas vid höga strängspänningar."
+      },
+      "labels": {
+        "current_selection": "Aktuellt urval",
+        "free": "Gratis",
+        "strings_guide": "Strängguide",
+        "tension_unit": "LBS",
+        "low_tension": "Låg",
+        "high_tension": "Hög",
+        "two_knots": "Två knutar",
+        "four_knots": "Fyra knutar"
+      },
+      "headings": {
+        "choose_string": "Välj en sträng",
+        "select_color": "Välj en färg",
+        "select_tension": "Vilken strängspänning ska <br/> vi använda?",
+        "select_method": "Hur ska vi <br/> stränga det?",
+        "summary": "Sammanfattning"
+      },
+      "filters": {
+        "all": "Alla",
+        "power": "Ström",
+        "durable": "Hållbar",
+        "balanced": "Balanserad"
+      },
+      "messages": {
+        "loading": "Laddar strängalternativ...",
+        "empty": "Vi kunde inte hitta några strängalternativ just nu."
+      },
+      "actions": {
+        "add": "Lägg till",
+        "selected": "Vald",
+        "change": "Ändra",
+        "next": "Nästa",
+        "back": "Tillbaka",
+        "submit": "Applicera strängning",
+        "close": "Stäng",
+        "remove": "Ta bort"
+      },
+      "errors": {
+        "load_failed": "Det gick inte att läsa in strängningsalternativen. Uppdatera sidan.",
+        "missing_product": "Välj en sträng.",
+        "missing_variant": "Välj en strängfärg.",
+        "missing_tension": "Välj en spänning."
+      }
+    },
+    "remix": {
+      "form_labels": {
+        "personalisation_service": "Lägg till personlig anpassning"
+      },
+      "description": {
+        "personalisation_service": "Gör denna {{ product_title }} till din egen och visa upp din personliga stil på planen"
+      },
+      "labels": {
+        "free": "Gratis"
+      },
+      "actions": {
+        "add": "Lägg till",
+        "change": "Ändra"
+      },
+      "errors": {
+        "load_failed": "Det gick inte att läsa in personaliseringsalternativen. Uppdatera sidan."
+      }
+    },
+    "tshirt_printing": {
+      "form_labels": {
+        "personalisation_service": "Lägg till personlig anpassning"
+      },
+      "description": {
+        "personalisation_service": "Gör den här {{ product_title }} helt personlig genom att få något speciellt tryckt"
+      },
+      "headings": {
+        "personalise": "Anpassa den här {{ product_title }}"
+      },
+      "labels": {
+        "free": "Gratis",
+        "input": "Din personliga anpassning",
+        "second_input": "Land",
+        "note": "Obs: Detta är endast avsett som en illustration. Texten kommer att tryckas på baksidan av T-shirten. Postförskott gäller inte för beställningar som innehåller personliga T-shirts.",
+        "step": "Steg",
+        "summary": "Personanpassning",
+        "summary_html": "Unikt ditt - Du gör denna {{ product_title }} helt och hållet till din genom att anpassa den med",
+        "title": "Gör den här T-shirten till din egen"
+      },
+      "messages": {
+        "invalid_input": "Endast bokstäver, punkter och mellanslag är tillåtna.",
+        "logo_unavailable": "Alternativet med land och logotyp är inte tillgängligt. Ta bort det för att fortsätta med endast namntryck.",
+        "logo_loading": "Laddar din inkluderade varumärkeslogotyp…"
+      },
+      "countries": {
+        "india": "Indien",
+        "indonesia": "Indonesien",
+        "china": "Kina",
+        "japan": "Japan",
+        "malaysia": "Malaysia",
+        "denmark": "Danmark"
+      },
+      "actions": {
+        "add": "Lägg till",
+        "change": "Ändra",
+        "next": "Nästa",
+        "back": "Tillbaka",
+        "submit": "Anpassa",
+        "close": "Stäng",
+        "remove": "Ta bort",
+        "add_second_line": "Lägg till land och logotyp för {{ price }}",
+        "clear_second_line": "Ta bort land och logotyp"
+      },
+      "errors": {
+        "load_failed": "Det gick inte att läsa in alternativen för att anpassa T-shirten. Uppdatera sidan."
       }
     }
   }

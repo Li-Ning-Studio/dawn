@@ -237,24 +237,24 @@
   },
   "templates": {
     "search": {
-      "no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l'orthographe ou utilisez un autre mot ou une autre expression.",
+      "no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l’orthographe ou essayez un autre mot ou une autre expression.",
       "results_with_count": {
-        "one": "{{ count }} résultat",
-        "other": "{{ count }} résultats",
+        "one": "{{ count }} résultat",
+        "other": "{{ count }} résultats",
         "many": "{{ count }} résultats"
       },
-      "title": "Résultats de la recherche",
+      "title": "Résultats de recherche",
       "page": "Page",
       "products": "Produits",
-      "search_for": "Rechercher « {{ terms }} »",
+      "search_for": "Rechercher « {{ terms }} »",
       "results_with_count_and_term": {
-        "one": "{{ count }} résultat trouvé pour « {{ terms }} »",
-        "other": "{{ count }} résultats trouvés pour « {{ terms }} »",
+        "one": "{{ count }} résultat trouvé pour « {{ terms }} »",
+        "other": "{{ count }} résultats trouvés pour « {{ terms }} »",
         "many": "{{ count }} résultats trouvés pour « {{ terms }} »"
       },
       "results_pages_with_count": {
-        "one": "Page {{ count }}",
-        "other": "Pages {{ count }}",
+        "one": "{{ count }} page",
+        "other": "{{ count }} pages",
         "many": "Pages {{ count }}"
       },
       "results_suggestions_with_count": {
@@ -263,31 +263,33 @@
         "many": "{{ count }} suggestions"
       },
       "results_products_with_count": {
-        "one": "Produit {{ count }}",
-        "other": "Produits {{ count }}",
+        "one": "{{ count }} produit",
+        "other": "{{ count }} produits",
         "many": "Produits {{ count }}"
       },
       "suggestions": "Suggestions",
       "pages": "Pages"
     },
     "cart": {
-      "cart": "Panier"
+      "cart": "Sac"
     },
     "contact": {
       "form": {
         "name": "Nom",
         "email": "E-mail",
         "phone": "Numéro de téléphone",
-        "comment": "Commentaire",
+        "comment": "Comment",
         "send": "Envoyer",
         "post_success": "Merci de nous avoir contactés. Nous vous répondrons dès que possible.",
-        "error_heading": "Veuillez ajuster les éléments suivants :",
-        "title": "Formulaire de contact"
+        "error_heading": "Veuillez ajuster ce qui suit :",
+        "title": "Formulaire de contact",
+        "consent": "En confirmant, j’accepte que mes informations personnelles soient utilisées pour répondre à ma demande.",
+        "consent_value": "D’accord"
       }
     },
     "404": {
-      "title": "Page non trouvée",
-      "subtext": "404"
+      "title": "Page de chauffe-banc",
+      "subtext": "Nous n’avons pas trouvé la page que vous cherchiez."
     }
   },
   "sections": {
@@ -3546,7 +3548,8 @@
       },
       "headings": {
         "choose_grip": "Choisissez une poignée antidérapante",
-        "select_color": "Sélectionner la couleur de la poignée"
+        "select_color": "Sélectionner la couleur de la poignée",
+        "summary": "Application"
       },
       "actions": {
         "add": "Ajouter",
@@ -3562,6 +3565,151 @@
         "load_failed": "Échec du chargement des options de prise en main. Veuillez actualiser la page.",
         "missing_product": "Veuillez sélectionner une option de poignée.",
         "missing_variant": "Veuillez sélectionner une couleur de poignée."
+      },
+      "labels": {
+        "current_selection": "Sélection actuelle",
+        "free": "GRATUIT",
+        "service_cost": "Coût du service",
+        "variant_price": "Prise en main"
+      },
+      "messages": {
+        "loading": "Chargement des options de préhension...",
+        "empty": "Nous n’avons trouvé aucune option de prise pour le moment."
+      }
+    },
+    "labels": {
+      "customisations": "Personnalisations"
+    },
+    "modal_close_guard": {
+      "message": "Voulez-vous vraiment annuler votre personnalisation ?",
+      "keep_editing": "Continuer à modifier",
+      "discard": "Jeter"
+    },
+    "stringing": {
+      "form_labels": {
+        "frame": "Cadre",
+        "tension": "Tension",
+        "string": "Chaîne de caractères",
+        "unstrung": "Non cordé",
+        "pro_stringing": "Cordage Studio Pro",
+        "strung": "Cordé en usine",
+        "color": "Couleur"
+      },
+      "description": {
+        "unstrung": "Cette raquette est livrée sans cordage. Vous devrez la faire corder dans un magasin de sport.",
+        "pro_stringing": "Améliorez vos performances avec un cordage personnalisé et une tension adaptée.",
+        "strung": "Cette raquette sera livrée cordée avec le cordage et la tension par défaut.",
+        "two_knots": "La méthode des deux nœuds utilise une seule corde continue pour les montants et les travers. Convient aux tensions modérées.",
+        "four_knots": "La méthode à quatre nœuds utilise des cordes distinctes pour les montants et les travers, avec quatre nœuds de fermeture. Recommandée pour les tensions élevées."
+      },
+      "labels": {
+        "current_selection": "Sélection actuelle",
+        "free": "GRATUIT",
+        "strings_guide": "Guide des chaînes de caractères",
+        "tension_unit": "LBS",
+        "low_tension": "Bas",
+        "high_tension": "Élevé",
+        "two_knots": "Deux nœuds",
+        "four_knots": "Quatre nœuds"
+      },
+      "headings": {
+        "choose_string": "Choisissez une chaîne",
+        "select_color": "Choisissez une couleur",
+        "select_tension": "Quelle tension devons-nous mettre ?",
+        "select_method": "Comment devrions-nous l’enfiler ?<br/>",
+        "summary": "Résumé"
+      },
+      "filters": {
+        "all": "Tous",
+        "power": "Puissance",
+        "durable": "Durable",
+        "balanced": "Équilibré"
+      },
+      "messages": {
+        "loading": "Chargement des options de chaîne...",
+        "empty": "Nous n’avons trouvé aucune option de chaîne pour le moment."
+      },
+      "actions": {
+        "add": "Ajouter",
+        "selected": "Sélectionné",
+        "change": "Modifier",
+        "next": "Suivant",
+        "back": "Retour",
+        "submit": "Appliquer le cordage",
+        "close": "Fermer",
+        "remove": "Supprimer"
+      },
+      "errors": {
+        "load_failed": "Échec du chargement des options de cordage. Veuillez actualiser la page.",
+        "missing_product": "Veuillez sélectionner une chaîne.",
+        "missing_variant": "Veuillez choisir une couleur de fil.",
+        "missing_tension": "Veuillez sélectionner une tension."
+      }
+    },
+    "remix": {
+      "form_labels": {
+        "personalisation_service": "Ajouter une personnalisation"
+      },
+      "description": {
+        "personalisation_service": "Personnalisez vraiment ce {{ product_title }} et affirmez votre style sur le court"
+      },
+      "labels": {
+        "free": "GRATUIT"
+      },
+      "actions": {
+        "add": "Ajouter",
+        "change": "Modifier"
+      },
+      "errors": {
+        "load_failed": "Échec du chargement des options de personnalisation. Veuillez actualiser la page."
+      }
+    },
+    "tshirt_printing": {
+      "form_labels": {
+        "personalisation_service": "Ajouter une personnalisation"
+      },
+      "description": {
+        "personalisation_service": "Faites de ce {{ product_title }} un objet vraiment à vous en y faisant imprimer quelque chose de spécial."
+      },
+      "headings": {
+        "personalise": "Personnalisez ce {{ product_title }}"
+      },
+      "labels": {
+        "free": "GRATUIT",
+        "input": "Votre personnalisation",
+        "second_input": "Pays",
+        "note": "Remarque : ceci est uniquement à titre indicatif. Le texte sera imprimé au dos du t-shirt. Le paiement à la livraison n’est pas disponible pour les commandes contenant des t-shirts personnalisés.",
+        "step": "Étape",
+        "summary": "Personnalisation",
+        "summary_html": "Rien qu’à vous - Vous personnalisez ce {{ product_title }} pour qu’il vous ressemble vraiment en y ajoutant votre touche personnelle",
+        "title": "Personnalisez ce t-shirt"
+      },
+      "messages": {
+        "invalid_input": "Seules les lettres, les points et les espaces sont autorisés.",
+        "logo_unavailable": "L’option pays et logo n’est pas disponible. Supprimez-la pour continuer avec une impression du nom uniquement.",
+        "logo_loading": "Chargement du logo de marque inclus…"
+      },
+      "countries": {
+        "india": "Inde",
+        "indonesia": "Indonésie",
+        "china": "Encre de Chine",
+        "japan": "Japon",
+        "malaysia": "Malaisie",
+        "denmark": "Danemark"
+      },
+      "actions": {
+        "add": "Ajouter",
+        "change": "Modifier",
+        "next": "Suivant",
+        "back": "Retour",
+        "submit": "Personnaliser",
+        "close": "Fermer",
+        "remove": "Supprimer",
+        "add_second_line": "Ajouter le pays et le logo pour {{ price }}",
+        "clear_second_line": "Supprimer le pays et le logo"
+      },
+      "errors": {
+        "load_failed": "Impossible de charger les options de personnalisation du t-shirt. Veuillez actualiser la page."
       }
     }
   }
