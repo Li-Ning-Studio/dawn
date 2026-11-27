@@ -233,7 +233,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "Der blev ikke fundet nogen resultater for “{{ terms }}”. Kontrollér stavemåden, eller brug et andet ord eller udtryk.",
+      "no_results": "Ingen resultater fundet for “{{ terms }}”. Kontrollér stavningen, eller prøv et andet ord eller en anden sætning.",
       "results_with_count": {
         "one": "{{ count }} resultat",
         "other": "{{ count }} resultater"
@@ -243,11 +243,11 @@
       "products": "Produkter",
       "search_for": "Søg efter “{{ terms }}”",
       "results_with_count_and_term": {
-        "one": "Der blev fundet {{ count }} resultat for “{{ terms }}”",
-        "other": "Der blev fundet {{ count }} resultater for “{{ terms }}”"
+        "one": "{{ count }} resultat fundet for “{{ terms }}”",
+        "other": "{{ count }} resultater fundet for “{{ terms }}”"
       },
       "results_pages_with_count": {
-        "one": "{{ count }} side",
+        "one": "{{ count }} sider",
         "other": "{{ count }} sider"
       },
       "results_products_with_count": {
@@ -262,25 +262,25 @@
       }
     },
     "cart": {
-      "cart": "Indkøbskurv"
+      "cart": "Taske"
     },
     "contact": {
       "form": {
         "name": "Navn",
-        "email": "Mailadresse",
+        "email": "E-mail",
         "phone": "Telefonnummer",
         "comment": "Kommentar",
         "send": "Send",
-        "post_success": "Tak for din henvendelse. Vi kontakter dig hurtigst muligt.",
-        "error_heading": "Juster følgende:",
+        "post_success": "Tak, fordi du kontakter os. Vi vender tilbage til dig så hurtigt som muligt.",
+        "error_heading": "Juster venligst følgende:",
         "title": "Kontaktformular",
         "consent": "Ved at bekræfte accepterer jeg, at mine personoplysninger må bruges til at besvare min forespørgsel.",
         "consent_value": "Enig"
       }
     },
     "404": {
-      "title": "Siden blev ikke fundet",
-      "subtext": "404"
+      "title": "Side til bænkvarmer",
+      "subtext": "Vi kunne ikke finde den side, du ledte efter."
     }
   },
   "sections": {
@@ -3383,12 +3383,86 @@
         "merchandise_line_transformers": {
           "run_error": "Der opstod en fejl i din indkøbskurv."
         },
-        "merchandise_not_applicable": "Varen kan ikke købes i den valgte konfiguration."
+        "merchandise_not_applicable": "Varen kan ikke købes i den valgte konfiguration.",
+        "view_lines_limit_reached": "Linjer skal være mindre end eller lig med %{limit}"
+      },
+      "customer": {
+        "password_reset_error": "Fejl ved nulstilling af adgangskode",
+        "subscribe_error": "Fejl ved abonnement",
+        "unsubscribe_error": "Fejl ved afmelding",
+        "open_tracking_error": "Fejl ved åbningssporing",
+        "no_account_found": "Der blev ikke fundet en konto med den e-mailadresse.",
+        "invalid_credentials": "Forkert e-mail eller adgangskode.",
+        "denylisted_reset_password": "Du kunne ikke få adgang til din konto, fordi den nuværende adgangskode ikke er sikker. Du modtager en e-mail med instruktioner til, hvordan du opdaterer din adgangskode.",
+        "signup_disabled": "Oprettelse af kundekonto er deaktiveret."
+      },
+      "line_item": {
+        "item_status": {
+          "decrement_return_line_item": "%{delta} blev fjernet fra returneringen"
+        }
+      },
+      "order": {
+        "financial_status": {
+          "unpaid": "Ubetalt"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Opfyldt",
+          "complete": "Fuldfør",
+          "unfulfilled": "Ikke opfyldt",
+          "restocked": "På lager igen"
+        },
+        "cancel_reason": {
+          "inventory": "Varer er ikke tilgængelige",
+          "customer": "Kunden ændrede/annullerede ordren",
+          "staff": "Personalefejl"
+        }
+      },
+      "storefront": {
+        "invalid_password": "Forkert adgangskode, prøv igen."
+      },
+      "tags": {
+        "add_articles": "Begræns søgningen til artikler, der også har tagget %{tag}",
+        "add_products": "Begræns udvalget til produkter med mærket %{tag}",
+        "remove_products": "Fjern tag %{tag}"
       }
     },
     "managed_markets": {
       "buyer_consent": "Ved at afgive din ordre accepterer du at købe fra Global-e, der er den registrerede forhandler, underlagt Global-e’s %{termsAndConditionsLink} og %{privacyPolicyLink}, og at dele dine oplysninger med %{shopName}.",
       "privacy_policy": "Privatlivspolitik"
+    },
+    "sentence": {
+      "two_words_connector": "og",
+      "last_word_connector": "og"
+    },
+    "search": {
+      "error": "Der opstod et problem med at indlæse dine søgeresultater. Opdater siden, eller prøv igen senere.",
+      "sorting": {
+        "price_descending": "Pris, fra høj til lav"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Fejl - %{title}",
+      "order": "Bestil %{name}",
+      "search_results": {
+        "other": "Søg: %{count} resultater fundet for \"%{terms}\""
+      },
+      "collections": "Samlinger"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Normalt klar om 1 time",
+        "two_hours": "Normalt klar om 2 timer",
+        "four_hours": "Normalt klar om 4 timer",
+        "two_to_four_days": "Normalt klar på 2-4 dage",
+        "five_or_more_days": "Normalt klar om 5+ dage",
+        "zero_to_two_hours": "Normalt klar om 2 timer",
+        "two_to_four_hours": "Normalt klar om 4 timer"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Dette produkt er et tilbagevendende eller udskudt køb. Ved at fortsætte accepterer jeg %{cancellationPolicyLink} og giver tilladelse til, at I opkræver betaling via min betalingsmetode til de priser og med den hyppighed og på de datoer, der er angivet på denne side, indtil min ordre er fuldført, eller jeg annullerer den, hvis det er tilladt.",
+      "buyer_consent_cart": "En eller flere af varerne i din kurv er et tilbagevendende eller udskudt køb. Ved at fortsætte accepterer jeg %{cancellationPolicyLink} og giver dig tilladelse til at opkræve betaling på min betalingsmetode til de priser og med den hyppighed og på de datoer, der er angivet på denne side, indtil min ordre er opfyldt, eller jeg annullerer den, hvis det er tilladt.",
+      "cancellation_policy": "afbestillingspolitik"
     }
   }
 }

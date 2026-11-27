@@ -3156,7 +3156,14 @@
             "city": "Saisissez une ville",
             "billing_city": "Saisissez la ville de l’adresse de facturation",
             "billing_province": "Sélectionnez l’État/la province de l’adresse de facturation",
-            "billing_zip": "Saisissez le code postal de l’adresse de facturation"
+            "billing_zip": "Saisissez le code postal de l’adresse de facturation",
+            "first_name": "Saisissez un prénom",
+            "last_name": "Saisissez un nom de famille",
+            "province": "Sélectionnez un État / une province",
+            "country": "Sélectionner un pays/une région",
+            "zip": "Saisissez un code postal",
+            "phone": "Saisissez un numéro de téléphone",
+            "contact_info": "Saisir les coordonnées de contact"
           },
           "formatting": {
             "name_contains_emojis": "Supprimez les emoji de votre nom.",
@@ -3164,7 +3171,35 @@
             "first_name_too_long": "Le prénom contient trop de lettres.",
             "last_name_too_long": "Le nom de famille contient trop de lettres.",
             "address_too_long": "La ligne d’adresse est trop longue."
-          }
+          },
+          "unavailable": {
+            "title": "{{walletName}} indisponible",
+            "instructions": "Un problème est survenu avec {{walletName}}. Retournez à la boutique pour réessayer ou payez d’une autre manière.",
+            "unavailable_for_country": "{{walletName}} n’est pas disponible en {{countryName}}. Sélectionnez un autre mode de paiement pour finaliser votre achat."
+          },
+          "sdk_load_failure": "Un problème est survenu lors du chargement de {{walletName}}. {{refresh_link}} pour réessayer, ou utilisez un autre mode de paiement.",
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} n’est actuellement pas disponible pour votre commande. Pour poursuivre votre achat, choisissez un autre mode de paiement."
+          },
+          "subscription_review_required": "Votre commande comprend un abonnement. Vous devez consulter les conditions ci-dessous avant de finaliser votre commande.",
+          "unsupported": {
+            "address": "Le marchand ne peut pas livrer à cette adresse.",
+            "wallet_is_unavailable": "{{walletName}} ne peut pas être utilisé avec cette adresse. Sélectionnez une autre adresse ou fermez {{walletName}} pour finaliser votre achat.",
+            "postal_code": "Cet emplacement n’est pas pris en charge."
+          },
+          "outdated": {
+            "shipping_method": "Les options de livraison de votre commande ont changé. Vérifiez votre sélection.",
+            "payment_terms": "Les conditions de paiement ont changé. Vérifiez votre commande."
+          },
+          "select_different_shipping_address_to_resolve_errors": "Votre adresse de livraison est invalide. Sélectionnez une autre adresse ou utilisez-en une nouvelle.",
+          "processing_error_checkout_as_guest": "Un problème est survenu lors du traitement de votre paiement. Réessayez ou {{checkout_as_guest_link}}."
+        },
+        "redirect_hint": "Vous serez invité à vous connecter avec {{walletName}}.",
+        "payment_in_progress_body": "Votre paiement est en cours de traitement. Votre commande sera bientôt finalisée.",
+        "place_order": "Passer commande",
+        "recovery_notice": "Il y a un problème avec les détails de votre commande. Mettez à jour vos informations pour finaliser le paiement.",
+        "scrim": {
+          "continue_purchase_in_window": "Continuez votre achat dans la fenêtre {{walletName}}."
         }
       },
       "units": {
@@ -3190,6 +3225,86 @@
     "challenge": {
       "message": "Pour continuer, indiquez-nous que vous n’êtes pas un robot.",
       "error": "Votre réponse n’était pas correcte, veuillez réessayer."
+    },
+    "collections": {
+      "sorting": {
+        "manual": "À la une",
+        "az": "Par ordre alphabétique, de A à Z.",
+        "za": "Par ordre alphabétique, de Z à A",
+        "price_ascending": "Prix, du plus bas au plus élevé",
+        "price_descending": "Prix, du plus élevé au plus bas",
+        "date_descending": "Date, du plus récent au plus ancien",
+        "most_relevant": "Les plus pertinents"
+      }
+    },
+    "errors": {
+      "blank": "ne peut pas être vide",
+      "blocked_address": "Cet emplacement n’est pas pris en charge.",
+      "credit_card_session_expired": "L’autorisation de votre carte de crédit a expiré. Veuillez saisir à nouveau vos informations de paiement. Votre carte n’a pas été débitée.",
+      "empty": "ne peut pas être vide",
+      "discount_disabled": "Cette réduction a été désactivée.",
+      "discount_expired": "Cette réduction n’est plus valable.",
+      "discount_limit_reached": "Cette remise a atteint sa limite d’utilisation.",
+      "discount_not_found": "Impossible de trouver une réduction valide correspondant au code saisi.",
+      "customer_already_used_once_per_customer_discount_notice": "Cette remise a atteint sa limite d’utilisation.",
+      "gift_card_already_applied": "Le code a déjà été appliqué à votre commande.",
+      "gift_card_code_invalid": "Le code n’est pas valide.",
+      "gift_card_depleted": "Il ne reste plus de fonds sur cette carte-cadeau",
+      "gift_card_disabled": "La carte-cadeau est désactivée.",
+      "gift_card_expired": "La carte-cadeau a expiré.",
+      "invalid_for_country": "n’est pas valide pour %{country}",
+      "invalid_for_country_and_province": "n’est pas valide pour %{province} et %{country}",
+      "full_name_required": "Saisissez un prénom et un nom de famille",
+      "invalid_for_card_type": "n’est pas valide",
+      "expired": "a expiré",
+      "invalid_expiry_year": "n’est pas une année d’expiration valide"
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Merci de vous être abonné à notre liste de diffusion."
+      },
+      "unsubscribed": {
+        "confirmation": "Vous vous êtes désabonné de notre liste de diffusion.",
+        "disclaimer": "Vous ne recevrez plus d’actualités marketing de notre part. Vous pouvez vous réabonner à tout moment.",
+        "preview": "Vous prévisualisez ce que les clients verront lorsqu’ils se désabonneront."
+      },
+      "unsubscribe_confirm": {
+        "title": "Se désabonner des e-mails ?",
+        "description": "Vous ne recevrez plus d’e-mails marketing de %{shop_name}"
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "Voulez-vous vraiment vous désabonner des SMS marketing ?"
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Vous avez activé le suivi des ouvertures des e-mails.</b>",
+          "visibility": "Les taux d’ouverture des e-mails seront communiqués de manière anonyme. Nous saurons uniquement si vous avez ouvert un e-mail dans le cadre d’un taux d’ouverture global.",
+          "opt_out_html": "Vous pouvez <a style='text-decoration:underline;' href='%{link}'>désactiver</a> le suivi des ouvertures d’e-mails si vous ne souhaitez pas partager ces informations.",
+          "preview_bar": "Vous prévisualisez ce que les clients verront lorsqu’ils accepteront le suivi des ouvertures d’e-mails."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Vous avez désactivé le suivi des ouvertures d’e-mails.</b>",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Activez le</a> suivi des ouvertures des e-mails.",
+          "preview_bar": "Vous prévisualisez ce que les clients verront lorsqu’ils désactiveront le suivi des ouvertures d’e-mails."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Nous ne suivons plus aucune ouverture d’e-mail.</b>",
+          "privacy_policy": "Après l’envoi de cet e-mail, nous avons mis à jour notre politique de confidentialité et nous ne suivons plus les ouvertures."
+        },
+        "track": {
+          "status_html": "<b>Le suivi des ouvertures d’e-mails est signalé.</b>",
+          "visibility": "Nous verrons uniquement si vous avez ouvert l’e-mail, dans le cadre du taux d’ouverture global des e-mails."
+        },
+        "updated_policy": {
+          "status_html": "<b>Le suivi des ouvertures d’e-mails est signalé.</b>",
+          "visibility": "Nous avons mis à jour notre politique et suivons désormais les ouvertures des e-mails. Les taux d’ouverture des e-mails seront communiqués de manière anonyme. Nous saurons uniquement si vous avez ouvert un e-mail, dans le cadre du taux d’ouverture global des e-mails.",
+          "opt_out_html": "Si vous ne souhaitez pas partager ces informations, vous pouvez <a style='text-decoration:underline;' href='%{link}'>vous désabonner.</a>"
+        }
+      }
+    },
+    "checkpoint": {
+      "message": "Résolvez le CAPTCHA pour continuer.",
+      "error": "Échec de la validation du CAPTCHA"
     }
   },
   "settings_schema": {

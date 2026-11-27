@@ -3055,13 +3055,48 @@
             "billing_address2": "Ange lägenhetsnummer, svitnummer osv. för faktureringsadressen.",
             "billing_city": "Ange staden för faktureringsadressen",
             "billing_province": "Välj delstat/provins för faktureringsadressen",
-            "billing_zip": "Ange postnummer för faktureringsadressen"
+            "billing_zip": "Ange postnummer för faktureringsadressen",
+            "province": "Välj en delstat/provins",
+            "country": "Välj ett land/en region",
+            "phone": "Ange ett telefonnummer",
+            "contact_info": "Ange kontaktuppgifter"
           },
           "formatting": {
             "name_contains_emojis": "Ta bort emojin från ditt namn.",
             "postal_code_contains_emoji": "Ta bort emojin från ditt postnummer",
             "last_name_too_long": "Efternamnet innehåller för många bokstäver."
-          }
+          },
+          "unavailable": {
+            "title": "{{walletName}} är inte tillgänglig",
+            "description": "{{walletName}} var inte tillgänglig. Använd en annan betalningsmetod eller försök igen senare.",
+            "instructions": "Det uppstod ett problem med {{walletName}}. Gå tillbaka till butiken och försök igen eller betala på ett annat sätt.",
+            "unavailable_for_country": "{{walletName}} är inte tillgänglig i {{countryName}}. Välj en annan betalningsmetod för att slutföra ditt köp."
+          },
+          "sdk_load_failure": "Det uppstod ett problem när {{walletName}} skulle läsas in. {{refresh_link}} för att försöka igen, eller använd en annan betalningsmetod.",
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} är inte tillgänglig för din beställning just nu. Välj ett annat betalningssätt för att fortsätta med ditt köp."
+          },
+          "subscription_review_required": "Din beställning innehåller en prenumeration. Du måste läsa igenom villkoren nedan innan du slutför beställningen.",
+          "unsupported": {
+            "address": "Handlaren kan inte leverera till den här adressen",
+            "wallet_is_unavailable": "{{walletName}} kan inte användas med den här adressen. Välj en annan adress eller stäng {{walletName}} för att slutföra ditt köp.",
+            "postal_code": "Den här platsen stöds inte"
+          },
+          "outdated": {
+            "shipping_method": "Fraktalternativen för din beställning har ändrats. Granska ditt val.",
+            "payment_terms": "Betalningsvillkoren har ändrats. Granska din beställning."
+          },
+          "processing_error_checkout_as_guest": "Det uppstod ett problem när din betalning skulle behandlas. Försök igen eller {{checkout_as_guest_link}}."
+        },
+        "return_to_store": "Återgå till butiken",
+        "return_to_checkout": "Återgå till kassan",
+        "shipping_line_label": "Frakt",
+        "payment_in_progress_body": "Din betalning behandlas. Din beställning slutförs snart.",
+        "place_order": "Lägg beställning",
+        "redirection_notice": "Du omdirigeras till {{walletName}} för att slutföra ditt köp.",
+        "recovery_notice": "Det har uppstått ett problem med dina beställningsuppgifter. Uppdatera dina uppgifter för att slutföra betalningen.",
+        "scrim": {
+          "and_return_to_checkout": "och gå tillbaka till kassan"
         }
       },
       "units": {
@@ -3090,6 +3125,203 @@
       "message": "För att fortsätta behöver vi veta att du inte är en robot.",
       "error": "Ditt svar var inte korrekt, försök igen.",
       "submit_button_text": "Skicka in"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Utvalda",
+        "az": "Alfabetiskt, A–Z.",
+        "za": "Alfabetiskt, Z-A",
+        "price_ascending": "Pris, lägst till högst",
+        "price_descending": "Pris, från högst till lägst",
+        "date_ascending": "Datum, äldst till nyast",
+        "date_descending": "Datum, nyast först"
+      }
+    },
+    "errors": {
+      "blocked_address": "Den här platsen stöds inte",
+      "credit_card_session_expired": "Kortauktoriseringen har löpt ut. Ange dina betalningsuppgifter igen. Ditt kort har inte debiterats.",
+      "invalid_email": "måste vara en giltig e-postadress",
+      "discount_disabled": "Den här rabatten har inaktiverats",
+      "discount_expired": "Den här rabatten gäller inte längre",
+      "discount_limit_reached": "Den här rabatten har nått sin användningsgräns.",
+      "discount_not_found": "Det gick inte att hitta någon giltig rabatt som matchar den angivna koden.",
+      "customer_already_used_once_per_customer_discount_notice": "Den här rabatten har nått sin användningsgräns.",
+      "gift_card_already_applied": "Rabattkoden har redan tillämpats i kassan.",
+      "gift_card_code_invalid": "Koden är ogiltig.",
+      "gift_card_currency_mismatch": "Det här presentkortet kan inte användas för det här köpet. Kontakta %{shop_name} för att få det utfärdat på nytt.",
+      "gift_card_depleted": "Det finns inga pengar kvar på det här presentkortet",
+      "gift_card_disabled": "Presentkortet är inaktiverat",
+      "gift_card_expired": "Presentkortet har gått ut",
+      "contains_spaces": "börjar eller slutar med blanksteg.",
+      "invalid_for_country": "är inte giltigt för %{country}",
+      "invalid_for_country_and_province": "är inte giltigt för %{province} och %{country}",
+      "full_name_required": "Ange ett förnamn och ett efternamn",
+      "invalid_for_card_type": "är inte giltig",
+      "too_short": "är för kort (minst %{count} tecken)",
+      "too_long": "är för långt (maximalt %{count} tecken)",
+      "invalid_state_in_country": "är inte en giltig delstat i %{country}",
+      "invalid_type": "Tyvärr accepterar vi inte kort av den här typen.",
+      "invalid_start_date_or_issue_number_for_debit": "ett giltigt startdatum eller utgåvenummer krävs",
+      "reset_password_html": "Den här e-postadressen är redan kopplad till ett konto. Om kontot är ditt kan du <a href=\"/account/login#recover\">återställa ditt lösenord</a>",
+      "verify_email": "Vi har skickat ett e-postmeddelande till %{customer_email}. Klicka på länken i meddelandet för att verifiera din e-postadress.",
+      "verify_email_sent": "Vi har skickat ett e-postmeddelande till dig. Klicka på länken i meddelandet för att verifiera din e-postadress.",
+      "product_not_available": "Produkten är inte publicerad för den här kunden.",
+      "shop_404": {
+        "title": "Skapa en e-handelswebbplats och sälj online! E-handelsprogramvara från Shopify",
+        "title_unavailable": "Butiken är inte tillgänglig",
+        "heros": {
+          "store_will_be_right_back": "Butiken är snart tillbaka",
+          "store_unavailable": "Den här butiken är för närvarande inte tillgänglig.",
+          "store_not_exist": "Den här butiken finns inte.",
+          "no_storefront": "Den här butiken har ingen webbplats ännu."
+        },
+        "subtitles": {
+          "store_will_be_right_back": "Shopify arbetar för att få igång det igen så snart som möjligt."
+        },
+        "links": {
+          "start_free_trial": "Starta en kostnadsfri provperiod"
+        },
+        "status_card": {
+          "caption": "Ta reda på om det är ett avbrott som påverkar fler än bara den här butiken på Shopify.",
+          "link_text": "Visa status för Shopify-systemen"
+        },
+        "owner_ctas": {
+          "header": "Är du butiksägaren?",
+          "fix_domain": "Slutför konfigurationen av din nya webbadress genom att gå till %{domain_settings_link}. Klicka på ”Anslut domän” och ange: %{domain}.<br>Om du har problem med att komma in i din butik kan du prova sidan %{forgot_your_store_link}.",
+          "forgot_your_store_link_text": "glömt din butik",
+          "add_storefront": "Du kan konfigurera din webbplats genom att lägga till kanalen Webbshop i din %{admin_link}. Om du har problem med att komma åt din butik kan du prova sidan %{forgot_your_store_link}.",
+          "admin_link_text": "administratör"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "caption": "Få funktionerna du behöver för att driva din butik, oavsett om du precis har kommit igång eller vill växa.",
+            "link_text": "Starta gratis provperiod"
+          },
+          "open_a_store": {
+            "caption": "Starta en 3-dagars gratis provperiod och fortsätt sedan för 1 dollar i månaden under de följande 3 månaderna."
+          },
+          "editions": {
+            "header": "Upptäck Shopify Editions",
+            "caption": "Med över 100 produktuppdateringar kan du bli mer produktiv och kreativ och få större kraft inom e-handel än du någonsin kunnat föreställa dig.",
+            "link_text": "Utforska de senaste utgåvorna"
+          },
+          "store_owner": {
+            "header": "Är du butiksägaren?",
+            "caption": "Har du problem med att komma in i din butik? Prova funktionen %{forgot_your_store_link}. Om du vill återaktivera din butik, kontakta %{shopify_support_link}.",
+            "shopify_support_link_text": "Shopify-support"
+          }
+        }
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "unsubscribe": "Avprenumerera"
+      },
+      "unsubscribed": {
+        "confirmation": "Du har avslutat prenumerationen på vår e-postlista.",
+        "disclaimer": "Du kommer inte att få fler marknadsföringsuppdateringar från oss. Du kan prenumerera igen när som helst.",
+        "preview": "Du förhandsgranskar vad kunderna kommer att se när de avslutar sin prenumeration."
+      },
+      "unsubscribe_confirm": {
+        "title": "Avsluta prenumerationen på e-postmeddelanden?",
+        "description": "Du kommer inte längre att få marknadsföringsmejl från %{shop_name}",
+        "button": "Avprenumerera"
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "Är du säker på att du vill avsluta prenumerationen på SMS-marknadsföring?",
+        "button": "Avprenumerera"
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Du har aktiverat spårning av e-postöppningar.</b>",
+          "visibility": "E-postens öppningsfrekvens rapporteras anonymt. Vi ser bara om du har öppnat ett e-postmeddelande som en del av en sammanställd öppningsfrekvens för e-post.",
+          "opt_out_html": "Du kan <a style='text-decoration:underline;' href='%{link}'>välja bort</a> spårning av e-postöppningar om du inte vill dela den här informationen.",
+          "preview_bar": "Du förhandsgranskar vad kunderna kommer att se när de väljer att aktivera spårning av e-postöppningar."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Du har valt bort spårning av e-postöppningar.</b>",
+          "visibility": "Vi kommer inte att se om du har öppnat våra mejl.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Välj att delta</a> i spårning av e-postöppningar.",
+          "preview_bar": "Du förhandsgranskar vad kunderna kommer att se när de väljer bort spårning av e-postöppningar."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Vi spårar inte längre några e-postöppningar.</b>",
+          "privacy_policy": "Efter att detta mejl skickades uppdaterade vi vår integritetspolicy och spårar inte längre öppningar."
+        },
+        "track": {
+          "status_html": "<b>Spårning av e-postöppningar rapporteras.</b>",
+          "visibility": "Vi ser bara om du har öppnat e-postmeddelandet, som en del av den totala öppningsfrekvensen för e-post."
+        },
+        "updated_policy": {
+          "status_html": "<b>Spårning av e-postöppningar rapporteras.</b>",
+          "visibility": "Vi har uppdaterat vår policy och spårar nu när e-postmeddelanden öppnas. Öppningsfrekvensen för e-postmeddelanden rapporteras anonymt. Vi ser bara om du har öppnat ett e-postmeddelande som en del av den totala öppningsfrekvensen.",
+          "opt_out_html": "Om du inte vill dela den här informationen kan du <a style='text-decoration:underline;' href='%{link}'>avregistrera dig.</a>"
+        }
+      }
+    },
+    "checkpoint": {
+      "message": "Lös captcha för att fortsätta",
+      "error": "Captcha-valideringen misslyckades",
+      "submit_button_text": "Skicka in"
+    },
+    "links": {
+      "powered_by_shopify": "Drivs av Shopify"
+    },
+    "notices": {
+      "address": {
+        "updated": "Adressen har uppdaterats.",
+        "error_updating": "Fel vid uppdatering av adressen",
+        "created": "Adressen har skapats",
+        "error_creating": "Fel vid skapandet av adressen.",
+        "deleted": "Adressen har tagits bort",
+        "error_deleting": "Fel vid borttagning av adress."
+      },
+      "cart": {
+        "only_n_items_available": "Du kan bara lägga till %{count} %{name} i kundvagnen.",
+        "only_one_added_to_cart": "Endast 1 vara lades till i din kundvagn på grund av tillgängligheten.",
+        "only_n_added_to_cart": "Endast %{quantity} artiklar lades till i din kundvagn på grund av tillgänglighet.",
+        "maximum_available_quantity_reached": "Maxantalet för den här varan finns redan i din varukorg.",
+        "less_than_minimum": "Den här artikeln har ett minimum på %{min}.",
+        "more_than_maximum": "Den här varan har ett maxvärde på %{max}.",
+        "not_respect_step": "Du kan bara lägga till den här artikeln i steg om %{step}.",
+        "all_items_in_cart": "Alla %{count} %{name} finns i din varukorg.",
+        "empty_update": "Kan inte uppdatera en tom varukorg",
+        "missing_parameters": "inget giltigt id eller linjeparameter",
+        "generic_error": "Fel i kundvagnen",
+        "too_many_line_items_error": "Din varukorg kan inte innehålla fler än %{max} varor.",
+        "link_expired": "Länken har gått ut",
+        "link_no_longer_exists": "Länken finns inte längre.",
+        "stock_problems_html": "En eller flera artiklar är inte längre tillgängliga. Vi har tillhandahållit en <a href='%{link}'>uppdaterad varukorg</a>.",
+        "items_changed": "Ett eller flera objekt har ändrats.",
+        "variant_not_found": "Kan inte hitta varianten",
+        "variant_requires_selling_plan": "Varianten kan endast köpas med en prenumerationsplan.",
+        "selling_plan_not_available_for_company_locations": "Endast engångsköp är tillgängliga för B2B-beställningar.",
+        "digital_product_not_available_for_company_locations": "Den här artikeln kan inte läggas till i en B2B-beställning",
+        "buyer_cannot_purchase_for_company_locations": "Du kan inte köpa för den här platsen.",
+        "selling_plan_not_applicable": "Kan inte tillämpa försäljningsplanen på varianten",
+        "shipping_address_not_required": "Den här varukorgen kräver inte frakt.",
+        "shipping_address_invalid": "Det uppstod ett problem när fraktkostnaderna skulle beräknas. Fortsätt till kassan för att välja ett fraktalternativ innan du slutför din beställning.",
+        "bundle_requires_components": "Paketprodukten '%{name}' kan inte läggas till i kundvagnen.",
+        "gift_card_with_components_not_supported": "Paketprodukten '%{name}' kan inte läggas till i kundvagnen.",
+        "gift_card_price_must_be_greater_than_zero": "Paketprodukten '%{name}' kan inte läggas till i kundvagnen.",
+        "gift_card_recipient_validation_error": "Den angivna mottagaren av presentkortet är ogiltig.",
+        "cart_attributes_error": "Varukorgens attribut innehåller ogiltiga data.",
+        "merchandise_line_transformers": {
+          "run_error": "Ett fel uppstod i din kundvagn."
+        },
+        "merchandise_not_applicable": "Artikeln kan inte köpas i den konfigurerade formen."
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "out_of_stock": "Tillfälligt slut i lager"
+        }
+      }
+    },
+    "managed_markets": {
+      "buyer_consent": "Genom att lägga din beställning godkänner du att köpa från Global-e, som är den juridiskt ansvariga säljaren, enligt Global-e:s %{termsAndConditionsLink} och %{privacyPolicyLink}, och att dela dina uppgifter med %{shopName}.",
+      "terms_and_conditions": "Villkor och bestämmelser"
     }
   },
   "settings_schema": {
