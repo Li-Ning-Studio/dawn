@@ -1708,7 +1708,123 @@
         },
         "alternative_payment_currency_total": "Berechnet mit %{amount_due}",
         "alternative_payment_currency_chinese_yuan": "Bestätigen Sie den endgültigen CNY-Gesamtbetrag in der %{wallet}-App.",
-        "discount_applies_to_subscription_items_only": "Dieser Rabatt gilt nur für Artikel im Abonnement."
+        "discount_applies_to_subscription_items_only": "Dieser Rabatt gilt nur für Artikel im Abonnement.",
+        "final_sale": "Schlussverkauf",
+        "product_disclosures": {
+          "title": "Produktangaben"
+        },
+        "from_other_stores_heading": "Von anderen Geschäften",
+        "from_multiple_stores_heading": "Aus mehreren Geschäften",
+        "more_items_modal": {
+          "search_item": "Suchen",
+          "clear_search": "Suche löschen",
+          "empty_results": "Keine Ergebnisse für \"%{searchText}\" gefunden. Überprüfen Sie die Schreibweise oder verwenden Sie ein anderes Wort oder eine andere Formulierung."
+        },
+        "order_name_label": "%{name} bestellen",
+        "order_discounts_apply_to_local_shop": "Bestellrabatte gelten nur für Artikel von %{shop_name}",
+        "gift_card_applied": "Geschenkkarte eingelöst",
+        "gift_card_and_discount_title": "Rabattcode oder Geschenkkarte",
+        "gift_card_and_discount_label": "Rabattcode oder Geschenkkarte",
+        "gift_card_and_discount_placeholder": "Rabattcode oder Geschenkkarte",
+        "gift_cards_apply_to_local_shop": "Geschenkkarten gelten nur für Artikel von %{shop_name}",
+        "return_shipping_fee_label": "Rückversand",
+        "free_shipping_discount_label": "Kostenloser Versand",
+        "gift_card_has_been_applied": "Geschenkkarte wurde angewendet",
+        "gift_card_has_been_removed": "Die Geschenkkarte wurde entfernt.",
+        "gift_card_subscriptions_notice": "Geschenkkarten gelten nur für deine erste Zahlung.",
+        "pickup_label": "Im Geschäft abholen",
+        "pickup_unavailable_banner_title": {
+          "one": "Für Ihren Artikel sind keine Geschäfte verfügbar.",
+          "other": "Für Ihre Artikel sind keine Geschäfte verfügbar"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "In %{country} sind keine Geschäfte mit Ihrem Artikel verfügbar.",
+          "other": "Keine Geschäfte mit Ihren Artikeln in %{country} verfügbar"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "An Adresse liefern",
+          "ship_to_address_instead_html": "stattdessen %{link}"
+        },
+        "estimated_taxes_finalization_tooltip_content": "Die endgültige Steuer und der Gesamtbetrag werden nach deiner Bestellung per E-Mail oder SMS bestätigt.",
+        "estimated_taxes_finalization_tooltip_content_short": "Steuer nach der Zahlung endgültig festgelegt",
+        "order_total_label": "Gesamtbetrag der Bestellung",
+        "price_before_discount_aria_text": "Originalpreis",
+        "price_after_discount_aria_text": "Reduzierter Preis",
+        "payment_due_label": "Zahlung fällig",
+        "gift_card_savings_notice": "Nach %{gift_card_amount} in Geschenkkarten",
+        "price_per_item": {
+          "accessibility_label": "%{price} pro Stück",
+          "label": "%{price}/Stk."
+        },
+        "quantity_label": "Menge",
+        "product_image_quantity_label": "Menge",
+        "scroll_order_summary": "Scrollen Sie für weitere Artikel",
+        "expand_order_summary_short": "Zeigen",
+        "original_price": "Originalpreis",
+        "sale_price": "Verkaufspreis",
+        "gift_card_ending": "Geschenkkarte mit der Endung %{last_characters}",
+        "recurring_total_label": "Wiederkehrender Gesamtbetrag",
+        "recurring_total_tooltip": "Versand, Steuern, Zölle und gegebenenfalls geltende Rabatte sind nicht enthalten.",
+        "recurring_total_tooltip_taxes_included": "Versandkosten, Zollgebühren und gegebenenfalls geltende Rabatte sind nicht enthalten.",
+        "recurring_total_tooltip_duties_included": "Versand, Steuern und etwaige Rabatte sind nicht enthalten.",
+        "recurring_total_tooltip_taxes_and_duties_included": "Versand und gegebenenfalls anfallende Rabatte sind nicht inbegriffen",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> konnte nicht mit deinen bestehenden Rabatten verwendet werden.",
+        "percent_off_shipping": "%{percent}% Rabatt auf den Versand",
+        "payment_terms_totals": {
+          "due_today": "Heute fälliger Gesamtbetrag",
+          "due_later": "Gesamtbetrag fällig %{due_at}",
+          "due_on_fulfillment": "Gesamtbetrag bei Lieferung",
+          "due_on_fulfillment_next": "Bei Erfüllung fällig",
+          "due_on_receipt": "Bei Erhalt fälliger Gesamtbetrag",
+          "due_later_checkout_to_draft": "Später fällig",
+          "total_paid": "Gesamtbetrag bezahlt"
+        },
+        "maximum_discount_code_limit_reached": "Du hast die maximale Anzahl an Rabattcodes erreicht. Entferne einen vorhandenen Code, um <strong style=\"text-transform:uppercase\">%{code}</strong> zu verwenden.",
+        "may_be_charged_on_delivery": "Möglicherweise bei Lieferung zu bezahlen",
+        "recurring_total_multiple_label": "Für diese Bestellung wird für mehrere Artikel eine wiederkehrende Gebühr berechnet.",
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "Bestätige den endgültigen Gesamtbetrag in CNY in der WeChat-App.",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} verarbeitet diese Zahlung als %{amount_due} %{processing_currency}, die WeChat in CNY umrechnet.",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} wird diese Zahlung als %{amount_due} %{processing_currency} abwickeln.",
+            "post_purchase_disclosure": "CNY-Gesamtbetrag in WeChat anzeigen"
+          },
+          "alipay": {
+            "checkout_disclosure": "Bestätige den endgültigen CNY-Betrag in der Alipay-App.",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} verarbeitet diese Zahlung als %{amount_due} %{processing_currency}, die Alipay in CNY umrechnet.",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} wird diese Zahlung als %{amount_due} %{processing_currency} abwickeln.",
+            "post_purchase_disclosure": "CNY-Gesamtbetrag in Alipay ansehen"
+          }
+        },
+        "pay_merchant_label": "Bezahle %{merchant_name}",
+        "view_all_items": {
+          "one": "%{count} Artikel ansehen",
+          "other": "Alle %{count} Artikel ansehen"
+        },
+        "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Rabattcode ist für Ihre Lieferadresse nicht verfügbar",
+        "subtotal_label_with_quantity": {
+          "one": "Zwischensumme · %{count} Artikel",
+          "other": "Zwischensumme · %{count} Artikel"
+        },
+        "tip_label": "Tipp",
+        "unconfirmed_label": "Unbestätigt",
+        "shipping_pending_message": "Noch nicht verfügbar",
+        "shipping_policy_link": "Versandkosten",
+        "tax_label": "Steuer",
+        "total_savings": "Gesamtersparnis",
+        "total_due_label": "Gesamtbetrag fällig",
+        "total_paid_label": "Gesamtbetrag bezahlt",
+        "total_due_later_label": "Später fällig",
+        "vat_label_html": "Einschließlich %{amount} Steuern",
+        "total_updated_label": "Aktualisierter Gesamtpreis:",
+        "unit_price": {
+          "per_item": {
+            "single": "je %{price}",
+            "one": "%{price} pro %{count} Artikel",
+            "other": "%{price} pro %{count} Artikel"
+          }
+        },
+        "total_updated_label_with_price": "Aktualisierter Gesamtpreis: %{totalPrice}"
       },
       "order_payment_collection": {
         "custom_line_item_description": "Zu zahlender Betrag für Bestellung %{order_name}",
@@ -1747,6 +1863,154 @@
             "signature_mismatch": "Signaturabweichung bei der Ware für die Zeile %{stable_id}."
           }
         }
+      },
+      "payment": {
+        "amazon_payments_login_hint": "Sie werden aufgefordert, sich bei Amazon anzumelden.",
+        "amazon_payments_failed_mfa_challenge": "Die ausgewählte Zahlungsmethode konnte nicht verwendet werden. Wählen Sie eine andere Zahlungsmethode aus oder wenden Sie sich an Ihre Bank oder Ihren Kartenanbieter.",
+        "amazon_payments_abandoned_mfa_challenge": "Deine Zahlung konnte nicht abgeschlossen werden. Versuche es mit einer anderen Zahlungsmethode oder wende dich an deine Bank oder deinen Kartenanbieter.",
+        "amazon_payments_could_not_enqueue_authorize": "Bei der Verarbeitung Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "amount_left_to_pay_label": "Zahlung fällig:",
+        "bogus_test_checkout": {
+          "title": "Testanweisung",
+          "approved_transaction": "{{card_number}} zur Simulation einer genehmigten Transaktion",
+          "declined_transaction": "{{card_number}} zum Simulieren einer abgelehnten Transaktion",
+          "gateway_failure": "{{card_number}} zum Simulieren eines Gateway-Ausfalls",
+          "additional_instructions": "Verwenden Sie ein beliebiges zukünftiges Ablaufdatum und einen beliebigen 3-stelligen Sicherheitscode."
+        },
+        "billing_address_associated_with_mandate": "Adresse der Zahlungsmethode verwenden",
+        "billing_address_associated_with_mandate_info": "Wenn Sie Ihre Rechnungsadresse ändern möchten, entfernen Sie Ihre Kreditkartendaten und geben Sie sie erneut ein.",
+        "billing_address_rollup_accessibility_label": "Optionen für die Rechnungsadresse",
+        "billing_address_description": "Wählen Sie die Adresse aus, die mit Ihrer Karte oder Zahlungsmethode übereinstimmt.",
+        "billing_address_description_no_shipping_address": "Gib die Adresse ein, die mit deiner Karte oder Zahlungsmethode übereinstimmt.",
+        "bank_payment_method_label": "Zahlungsmethode Bank",
+        "billing_address_not_supported_for_payment_method_error": "Diese Zahlungsmethode ist für deine Rechnungsadresse und Währung nicht verfügbar. Versuche es mit einer anderen Zahlungsmethode.",
+        "apple_pay_payment_error": "Deine Zahlung konnte nicht abgeschlossen werden. Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "apple": {
+          "connect": "Klicken Sie, um Ihr Apple Pay-Konto zu verbinden.",
+          "not_available": "Apple Pay ist in diesem Browser nicht verfügbar. Um deinen Apple Pay Account zu verknüpfen, musst du Safari auf einem Apple-Gerät verwenden."
+        },
+        "brand_not_available": "Dieser Shop akzeptiert {{brand}} nicht. Verwende zum Bezahlen eine andere Karte.",
+        "billing_address_invalid_phone": "Aktualisieren Sie die Telefonnummer in Ihrer Rechnungsadresse für {{label}} {{last_digits}}, um fortzufahren.",
+        "billing_address_invalid_phone_no_card": "Aktualisieren Sie die Telefonnummer in Ihrer Rechnungsadresse, um fortzufahren.",
+        "business_customer_vaulting_payment_label": "Speichere diese Zahlungsmethode beim Bezahlvorgang und ermächtige %{company}, sie für zukünftige Einkäufe an diesem Standort zu belasten. Alle diesem Standort zugewiesenen Kontakte können die Zahlungsmethode verwenden.",
+        "business_customer_with_bank_account_vaulting_payment_label": "Speichere diese Zahlungsmethode beim Bezahlvorgang und ermächtige %{company}, dein Konto für zukünftige Käufe zu belasten, die du für diesen Standort genehmigst, bis du die Ermächtigung widerrufst. Alle Kontakte, die diesem Standort zugewiesen sind, können die Zahlungsmethode verwenden.",
+        "add_credit_card_modal": {
+          "cancel": "Abbrechen"
+        },
+        "alternative_payment_currency_total_notice": "Hinweis: Ihnen wird %{amount_due} berechnet.",
+        "alternative_payment_currency_total_manual_payment_notice": "Hinweis: Der umgerechnete Gesamtbetrag beträgt %{amount_due}.",
+        "bank_account_type": {
+          "checking": "Prüfung",
+          "savings": "Ersparnisse"
+        },
+        "bank_account_disclaimer": "ACH-Zahlungen können bis zu 4 Werktage dauern.",
+        "bank_account_choose": "Wählen Sie ein Konto aus, um Ihren Kauf sicher abzuschließen.",
+        "bank_account_connect_another": "Ein weiteres Bankkonto verbinden",
+        "bank_account_missing": "Das Bankkonto muss verbunden sein.",
+        "bank_account_generic_error": "Bankkonto konnte nicht hinzugefügt werden. Versuchen Sie es später erneut.",
+        "discount_button_action_label": "Rabattcode anwenden",
+        "discount_codes_removed_summary": {
+          "one": "Der Rabattcode %{count} wurde entfernt.",
+          "other": "%{count} Rabattcodes wurden entfernt."
+        },
+        "discount_codes_modified_summary": {
+          "one": "%{count} Rabattcode wurde geändert",
+          "other": "%{count} Rabattcodes wurden geändert"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "%{count} Rabattcode wurde entfernt oder geändert",
+          "other": "%{count} Rabattcodes wurden entfernt oder geändert"
+        },
+        "gift_card_code_label": "Geschenkkartencode",
+        "gift_card_balance_label": "Guthaben:",
+        "credit_card_vaulting_sign_in_banner_title": "Speichern Sie Ihre Kreditkarte",
+        "credit_card_vaulting_sign_in_banner_info": "Melden Sie sich an oder erstellen Sie ein Konto, um Ihre Kreditkarte für zukünftige Einkäufe zu speichern.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Anmelden",
+        "ftd_vault_credit_card_label": "Diese Kreditkarte für einen schnelleren Checkout in meinem Konto speichern",
+        "card_pay_with": "Bezahlen mit:",
+        "card_security_vault_notice": "Wir benötigen deine Angaben für zukünftige Zahlungen. Alle Transaktionen sind sicher und verschlüsselt.",
+        "card_expiry_label": "Ablaufdatum (MM / JJ)",
+        "card_expiry_placeholder": "Ablaufdatum (MM / JJ)",
+        "credit_card_start_month": "Startmonat",
+        "credit_card_start_year": "Startjahr",
+        "delete_customer_mandate_modal_body": "Wenn du diese Karte entfernst, musst du sie erneut hinzufügen, bevor du sie für Zahlungen verwenden kannst.",
+        "delete_customer_mandate_modal_cancel": "Abbrechen",
+        "card_verification_confirm": "Geben Sie zur Verifizierung den Sicherheitscode Ihrer Karte ein.",
+        "card_verification_value_explanation": "3-stelliger Sicherheitscode, der sich normalerweise auf der Rückseite Ihrer Karte befindet. American Express-Karten haben einen 4-stelligen Code auf der Vorderseite.",
+        "card_verification_value_explanation_amex": "4-stelliger Sicherheitscode auf der Vorderseite Ihrer Karte",
+        "card_verification_value_explanation_other": "3-stelliger Sicherheitscode auf der Rückseite Ihrer Karte",
+        "card_start_label": "Ausstellungsdatum (MM / JJ)",
+        "card_start_placeholder": "Ausstellungsdatum (MM / JJ)",
+        "card_issue_number_label": "Ausgabenummer",
+        "card_issue_number_placeholder": "Ausgabenummer",
+        "expiry_long": "(Läuft ab %{month}/%{year})",
+        "expiry_short": "(Exp %{month}/%{year})",
+        "crypto_payment_method": {
+          "description": "Verbinde dein Wallet sicher. Dein Guthaben und deine Adresse werden nicht weitergegeben.",
+          "tooltip": "Ihr Wallet-Guthaben und Ihre Adresse werden nicht weitergegeben, und es kann nur der angeforderte Betrag abgebucht werden.",
+          "cashback_descriptor": {
+            "one": "Sie erhalten Ihr Cashback nach %{count} Tagen.",
+            "other": "Sie erhalten Ihr Cashback nach %{count} Tagen."
+          }
+        },
+        "crypto_modal": {
+          "header": "Bezahle %{shop_name} %{total_price} USDC",
+          "error": {
+            "close": "Schließen",
+            "sandbox_error": "Etwas ist schiefgelaufen.",
+            "web_component_error": "Beim Laden dieser Seite ist ein Problem aufgetreten."
+          }
+        },
+        "different_credit_card_label": "Verwenden Sie eine andere Kreditkarte",
+        "free_order_notice_html": "Ihre Bestellung ist <strong>kostenlos</strong>. Eine Zahlung ist nicht erforderlich.",
+        "express_checkout_free_order": "Für eine kostenlose Bestellung werden Ihnen keine Kosten berechnet.",
+        "card_fields_container_prefix": "Feldcontainer für:",
+        "card_fields_unavailable_html": {
+          "one": "Zahlungen mit Kredit- und Debitkarten sind derzeit nicht verfügbar.<br><a href=\"%{current_url}\">Aktualisiere diese Seite</a> oder versuche es später erneut.",
+          "other": "Zahlungen per Kredit- und Debitkarte sind derzeit nicht verfügbar.<br><a href=\"%{current_url}\">Aktualisieren Sie diese Seite</a> oder versuchen Sie eine andere Zahlungsmethode."
+        },
+        "card_fields_processing_error": "Bei der Verarbeitung der Zahlung ist ein Problem aufgetreten. Aktualisiere diese Seite oder überprüfe deine Internetverbindung.",
+        "generic_incorrect_card_info": "Deine Zahlungsdaten konnten nicht verifiziert werden. Überprüfe deine Kartendaten und versuche es erneut.",
+        "continue_to_guest_checkout": "Als Gast zur Kasse gehen",
+        "change_currency_section_description": "Wählen Sie eine Währungsoption aus.",
+        "clear": "Klar",
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Geben Sie ein gültiges Ausstellungsdatum ein",
+              "issue_number": "Geben Sie eine gültige Vorgangsnummer ein."
+            },
+            "invalid": {
+              "verification_value": "Geben Sie einen gültigen CVV- oder Sicherheitscode ein."
+            }
+          }
+        },
+        "delete_credit_card_modal": {
+          "confirmation": "Möchtest du {{brandName}} mit der Endung {{lastDigits}} wirklich löschen?",
+          "cancel": "Abbrechen"
+        },
+        "edit_credit_card_modal": {
+          "done": "Erledigt",
+          "cancel": "Abbrechen",
+          "description": "Sie können nur die Rechnungsadresse Ihrer Karte ändern.",
+          "fields": {
+            "name": "Name auf der Karte"
+          }
+        },
+        "expired_cards_info": {
+          "one": "Es gibt %{count} abgelaufene Karte, die du in deinem Konto ansehen und bearbeiten kannst.",
+          "other": "Es gibt %{count} abgelaufene Karten, die du in deinem Konto ansehen und bearbeiten kannst."
+        },
+        "gift_card_store_credit": {
+          "add_label": "Geschenkkarte oder Guthaben hinzufügen",
+          "manage_label": "Geschenkkarten oder Guthaben verwalten"
+        },
+        "gift_card_checkbox_label": "Geschenkkarte einlösen",
+        "custom_onsite_payment_method_modal": {
+          "title": "Benutzerdefinierte Bestätigung der Zahlung vor Ort"
+        },
+        "expired_payment_method": "Die ausgewählte Zahlungsmethode ist abgelaufen.",
+        "choose_new_payment_method": "Wählen Sie eine neue Zahlungsmethode"
       }
     },
     "attributes": {

@@ -1420,6 +1420,248 @@
       "memberships": {
         "delivery_promise_unfulfillable": "Adressen stöds inte för det aktuella medlemskapet.",
         "items_split_across_locations_unsupported": "Prime-leverans är inte tillgänglig för din beställning. Dina leveransalternativ har uppdaterats."
+      },
+      "order_summary": {
+        "discount_order_stacking": {
+          "other": "Beställningsrabatter"
+        },
+        "discount_not_found": "Det gick inte att hitta någon giltig rabatt som matchar den angivna koden.",
+        "discount_code_applied": "Rabattkoden har tillämpats",
+        "discount_code_replaced": "Rabattkoden %{old_code} har tagits bort och %{code} har tillämpats.",
+        "discount_code_allocations_mismatch": "Din <strong style=\"text-transform:uppercase\">%{code}</strong> rabattkod har ändrats. Granska din varukorg och försök igen.",
+        "apply_discount_button_label": "Använd",
+        "applied_discount_message": "%{amount} rabatt på hela orderpriset",
+        "automatic_discount_tooltip": "Automatiskt tillämpade rabatter kan inte tas bort.",
+        "discount_already_applied": "En rabatt har tillämpats på den här beställningen. Du kan inte lägga till ytterligare en rabatt.",
+        "cart_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> rabattkod är inte giltig för varorna i din kundvagn",
+        "discount_requires_customer_notice": "Ange dina leveransuppgifter för att använda rabattkoden <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> rabattkod är inte tillgänglig för dig just nu",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> rabattkod kräver en berättigad kund",
+        "customer_already_used_once_per_customer_discount_notice": "Rabattkoden <strong style=\"text-transform:uppercase\">%{code}</strong> har redan använts.",
+        "calculating_shipping": "Beräknar…",
+        "calculating": "Beräknar…",
+        "duties_included_label": "Totalt inklusive skatter och tullavgifter. Inga extra avgifter vid leverans.",
+        "cost_table_title": "Kostnadssammanfattning",
+        "cost_table_item_column_header": "Föremål",
+        "confirmation_number_label": "Bekräftelse nr %{confirmation_number}",
+        "amount_off_shipping": "%{amount} rabatt på frakten",
+        "deferred_payment_info": {
+          "title": "Betalning av %{amount_due} förfaller den %{due_at}",
+          "description_html": "För frågor om din beställning, %{contact_us}.",
+          "paid_today": "Totalt betalt idag",
+          "paid_today_next": "Betald idag",
+          "due_on_fulfillment_title": "Betalning av %{amount_due} ska ske vid leverans",
+          "due_on_receipt_title": "Betalning av %{amount_due} ska ske vid mottagandet."
+        },
+        "deferred_balance_info": {
+          "title": "Resterande belopp på {{amount_due}} ska betalas senast {{due_at}}",
+          "due_on_fulfillment_title": "Återstående belopp på {{amount_due}} ska betalas vid leverans."
+        },
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> fungerar inte just nu. Kontakta oss för hjälp.",
+        "discount_code_client_error": "Det gick inte att tillämpa %{code}. Försök igen.",
+        "due_on_fulfillment": "Förfaller vid leverans",
+        "duties_label": "Arbetsuppgifter",
+        "duties_and_taxes_label": "Tullar och skatter",
+        "error_duties_tooltip": "Den här beställningen skickas från ett annat land, så tullavgifter och skatter kan tillkomma vid leveransen.",
+        "deferred_total_due_date_label": "Totalt belopp att betala {{date}}",
+        "custom_discount": "Anpassad rabatt",
+        "collapse_component_information": {
+          "one": "Dölj %{count} objekt",
+          "other": "Dölj %{count} objekt"
+        },
+        "discount_discovery": {
+          "back_to_finalize_order": "Tillbaka för att slutföra beställningen"
+        },
+        "alternative_payment_currency_total": "Debiteras med %{amount_due}",
+        "discount_applies_to_subscription_items_only": "Den här rabatten gäller endast prenumerationsvaror.",
+        "final_sale": "Slutrea",
+        "product_disclosures": {
+          "title": "Produktinformation"
+        },
+        "more_items_modal": {
+          "empty_results": "Inga resultat hittades för \"%{searchText}\". Kontrollera stavningen eller prova med ett annat ord eller en annan fras.",
+          "number_items_shown": "%{shownNumber} av %{totalNumber} objekt"
+        },
+        "order_name_label": "Beställ %{name}",
+        "item_discounts_label": "Varurabatter",
+        "order_discounts_apply_to_local_shop": "Orderrabatter gäller endast varor från %{shop_name}",
+        "gift_card_applied": "Presentkort tillämpat",
+        "gift_cards_apply_to_local_shop": "Presentkort gäller endast för varor från %{shop_name}",
+        "remove_gift_card_label": "Rensa presentkortet",
+        "free_shipping_discount_label": "Fri frakt",
+        "gift_card_has_been_applied": "Presentkortet har använts",
+        "gift_card_subscriptions_notice": "Presentkort gäller endast din första betalning",
+        "pickup_label": "Hämta i butik",
+        "no_pickup_location": "Det finns inga upphämtningsplatser tillgängliga.",
+        "pickup_unavailable_banner_title": {
+          "one": "Inga butiker har din vara i lager",
+          "other": "Inga butiker tillgängliga med dina varor"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Inga butiker finns tillgängliga i %{country} med din vara",
+          "other": "Inga butiker finns tillgängliga i %{country} med dina varor."
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Skicka till adressen",
+          "ship_to_address_instead_html": "%{link} i stället"
+        },
+        "estimated_taxes_label": "Uppskattade skatter",
+        "information_estimated_taxes_label": "Skatter (uppskattade)",
+        "estimated_taxes_finalization_tooltip_content": "Den slutliga skatten och totalsumman bekräftas via e-post eller sms när du har lagt din beställning.",
+        "price_before_discount_aria_text": "Ordinarie pris",
+        "payment_due_label": "Betalning förfaller",
+        "price_per_item": {
+          "accessibility_label": "%{price} per styck",
+          "label": "%{price}/st"
+        },
+        "quantity_label": "Antal",
+        "product_image_quantity_label": "Antal",
+        "scroll_order_summary": "Rulla för fler artiklar",
+        "original_price": "Ordinarie pris",
+        "sale_price": "Reapris",
+        "order_total_updated_label": "Uppdaterad summa",
+        "gift_card_ending": "Presentkort som slutar på %{last_characters}",
+        "multiple_shipping_lines_label": "Total fraktkostnad",
+        "recurring_total_tooltip_taxes_included": "Frakt, tullavgifter och eventuella rabatter ingår inte",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> kunde inte användas tillsammans med dina befintliga rabatter.",
+        "percent_off_shipping": "%{percent}% rabatt på frakten",
+        "payment_terms_totals": {
+          "due_today": "Totalt att betala idag",
+          "due_today_next": "Förfaller i dag",
+          "due_later": "Totalt belopp som ska betalas %{due_at}",
+          "due_on_fulfillment": "Totalt att betala vid leverans",
+          "due_on_fulfillment_next": "Förfaller vid leverans",
+          "due_on_receipt": "Totalt belopp att betala vid mottagandet",
+          "due_later_checkout_to_draft": "Totalt att betala senare",
+          "total_paid": "Totalt betalt"
+        },
+        "maximum_discount_code_limit_reached": "Du har nått det maximala antalet rabattkoder. Ta bort en befintlig kod för att använda <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "recurring_total_multiple_label": "Den här beställningen har en återkommande avgift för flera artiklar.",
+        "full_price": "Ordinarie pris: %{price}",
+        "expand_component_information": {
+          "one": "Visa %{count} objekt",
+          "other": "Visa %{count} objekt"
+        },
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "Bekräfta det slutliga totalbeloppet i CNY i WeChat-appen",
+            "post_purchase_disclosure": "Visa totalsumman i CNY i WeChat"
+          },
+          "alipay": {
+            "checkout_disclosure": "Bekräfta den slutliga totalsumman i CNY i Alipay-appen.",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} behandlar den här betalningen som %{amount_due} %{processing_currency}, vilket Alipay konverterar till CNY",
+            "post_purchase_disclosure": "Visa CNY-totalen i Alipay"
+          }
+        },
+        "view_all_items": {
+          "one": "Visa %{count} objekt",
+          "other": "Visa alla %{count} produkter"
+        },
+        "subtotal_label_with_quantity": {
+          "one": "Delsumma · %{count} vara"
+        },
+        "tip_label": "Tipsa",
+        "shipping_default_value": "Beräknas i nästa steg",
+        "shipping_discount_title": "Fraktrabatt",
+        "shipping_pending_message": "Inte tillgänglig ännu",
+        "tax_line": {
+          "gst": "GST"
+        },
+        "total_due_label": "Totalt att betala",
+        "total_paid_label": "Totalt betalt",
+        "total_outstanding_label": "Belopp att betala",
+        "total_due_today_label": "Totalt att betala idag",
+        "total_due_later_label": "Totalt att betala senare",
+        "vat_label_html": "Inklusive %{amount} i skatt",
+        "total_already_paid_label": "Betald",
+        "waived_label": "Avstår",
+        "unit_price": {
+          "per_item": {
+            "single": "%{price} styck",
+            "one": "%{price} per %{count} vara"
+          }
+        }
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Belopp att betala för beställning %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Tillagd",
+            "other": "Lade till %{count}"
+          },
+          "subtracted": "Tog bort %{count}",
+          "returned": "Returnerade %{count}",
+          "return_line_item_removed": "Tog bort %{count} från returen"
+        },
+        "additional_payment_requested": "Betalning av %{total_outstanding} krävs.",
+        "checkout_review_and_pay": "Din beställning %{order_name} har uppdaterats. Granska ändringarna och betala sedan för att bekräfta beställningen.",
+        "order_updated_on": "Din beställning uppdaterades den %{last_edited_at}.",
+        "order_review_and_pay": "Din beställning har uppdaterats. Granska och betala för att bekräfta din beställning."
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "one": "Köp %{product_name} och %{count} andra varor"
+        }
+      },
+      "order_errors": {
+        "creation_failure": "Det uppstod ett problem när din beställning skulle skapas. Försök igen eller kontakta oss för mer information.",
+        "network_failure": "Din beställning kunde inte skickas på grund av ett nätverksfel. Kontrollera din anslutning och försök igen."
+      },
+      "online_store_chat": {
+        "title": "Frågor? Chatta med oss."
+      },
+      "offsite_payment_failed": {
+        "title": "Betalning utanför webbplatsen misslyckades",
+        "payment_not_processed_text": "Försök skanna QR-koden igen. Om det fortfarande inte fungerar, meddela vår personal och prova ett annat betalningssätt.",
+        "payment_link_expired_text": "Försök att skanna QR-koden igen."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "Presentkortets pris måste vara större än 0.",
+            "gift_card_price_must_not_exceed_limit": "Presentkortets pris får inte överstiga %{gift_card_limit}.",
+            "subtotal_limit_reached": "Det högsta värdet för radposter har uppnåtts.",
+            "signature_mismatch": "Signaturfel för merchandise på raden %{stable_id}."
+          }
+        }
+      },
+      "payment": {
+        "amazon_payments_failed_mfa_challenge": "Den valda betalningsmetoden kunde inte användas. Välj en annan metod eller kontakta din bank eller kortutgivare.",
+        "amazon_payments_abandoned_mfa_challenge": "Din betalning kunde inte genomföras. Försök med en annan betalningsmetod eller kontakta din bank eller kortutgivare.",
+        "amazon_payments_could_not_enqueue_authorize": "Det uppstod ett problem när din betalning behandlades. Försök igen eller använd en annan betalningsmetod.",
+        "amount_left_to_pay_label": "Betalning förfaller:",
+        "apply_gift_card_button_label": "Använd",
+        "bogus_test_checkout": {
+          "intro": "Använd dessa värden för att testa kassan:",
+          "gateway_failure": "{{card_number}} för att simulera ett betalningsgatewaysfel",
+          "additional_instructions": "Använd valfritt framtida utgångsdatum och valfri tresiffrig säkerhetskod."
+        },
+        "bank_account_vaulted_company_location": "Bankkonto sparat för den här platsen",
+        "billing_address_associated_with_mandate": "Använd adressen som hör till betalningsmetoden",
+        "billing_address_associated_with_mandate_info": "Om du vill ändra din faktureringsadress tar du bort och anger dina kortuppgifter på nytt.",
+        "billing_address_description": "Välj adressen som stämmer överens med ditt kort eller din betalningsmetod.",
+        "billing_address_description_no_shipping_address": "Ange adressen som är kopplad till ditt kort eller din betalningsmetod.",
+        "billing_address_not_supported_for_payment_method_error": "Den här betalningsmetoden är inte tillgänglig för din faktureringsadress och valuta. Försök med en annan betalningsmetod.",
+        "afterpay_label": "Efterbetalning",
+        "apple_pay_payment_error": "Din betalning kunde inte genomföras. Försök igen eller använd en annan betalningsmetod.",
+        "apple": {
+          "not_available": "Apple Pay är inte tillgängligt i den här webbläsaren. För att ansluta ditt Apple Pay-konto behöver du använda Safari på en Apple-enhet."
+        },
+        "account_connected": "Konto anslutet.",
+        "billing_must_match_shipping_notice": "Faktureringsadressen för din betalningsmetod måste stämma överens med leveransadressen.",
+        "brand_not_available": "Den här butiken accepterar inte {{brand}}. Använd ett annat kort för att betala.",
+        "business_customer_vaulting_payment_label": "Spara den här betalningsmetoden i kassan och ge %{company} tillstånd att debitera den för framtida köp på den här platsen. Alla kontakter som är tilldelade den här platsen kan använda betalningsmetoden.",
+        "business_customer_with_bank_account_vaulting_payment_label": "Spara den här betalningsmetoden i kassan och ge %{company} tillstånd att debitera ditt konto för framtida köp som du godkänner för den här platsen, tills du säger upp det. Alla kontakter som är tilldelade den här platsen kan använda betalningsmetoden.",
+        "alternative_payment_currency_total_notice": "Obs! Du kommer att debiteras %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Obs: det konverterade totalbeloppet är %{amount_due}.",
+        "bank_account_type": {
+          "checking": "Kontroll",
+          "savings": "Besparingar"
+        },
+        "bank_account_disclaimer": "ACH-betalningar kan ta upp till 4 arbetsdagar att behandla.",
+        "bank_account_choose": "Välj ett konto för att slutföra ditt köp på ett säkert sätt",
+        "bank_account_missing": "Bankkontot måste vara anslutet",
+        "bank_account_generic_error": "Det gick inte att lägga till bankkontot. Försök igen senare."
       }
     },
     "attributes": {

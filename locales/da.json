@@ -1828,7 +1828,246 @@
         },
         "bank_account_disclaimer": "ACH-betalinger kan tage op til 4 hverdage at behandle.",
         "bank_account_choose": "Vælg en konto for at gennemføre dit køb sikkert",
-        "bank_account_connect_another": "Tilslut en anden bankkonto"
+        "bank_account_connect_another": "Tilslut en anden bankkonto",
+        "gift_card_code_label": "Gavekortkode",
+        "gift_card_balance_label": "Balance:",
+        "detected_card_brand": "Registreret korttype: {brand}",
+        "ftd_vault_credit_card_label": "Gem dette kreditkort på min konto, så jeg kan betale hurtigere ved kassen.",
+        "card_nickname_label": "Kælenavn (valgfrit)",
+        "card_expiry_label": "Udløbsdato (MM / ÅÅ)",
+        "card_expiry_placeholder": "Udløbsdato (MM / ÅÅ)",
+        "delete_customer_mandate_modal_title": "Fjern dette betalingskort?",
+        "delete_customer_mandate_modal_body": "Hvis du fjerner dette kort, skal du tilføje det igen, før du kan bruge det til betalinger.",
+        "delete_customer_mandate_modal_confirm": "Fjern kort",
+        "card_verification_confirm": "Indtast kortets sikkerhedskode for at bekræfte din identitet.",
+        "card_expiry_date_explanation": "Kortets udløbsdato i formatet: måned, måned, år, år",
+        "card_verification_value_explanation": "3-cifret sikkerhedskode, som normalt findes på bagsiden af dit kort. American Express-kort har en 4-cifret kode på forsiden.",
+        "card_verification_value_explanation_amex": "4-cifret sikkerhedskode på forsiden af dit kort",
+        "card_verification_value_explanation_other": "3-cifret sikkerhedskode på bagsiden af dit kort",
+        "card_start_label": "Udstedelsesdato (MM / ÅÅ)",
+        "card_start_placeholder": "Udstedelsesdato (MM / ÅÅ)",
+        "card_issue_number_label": "Udgavenummer",
+        "card_issue_number_placeholder": "Udgavenummer",
+        "ends_with_label": "der slutter med %{last_digits}",
+        "card_vaulted_company_location": "Kort gemt for denne placering",
+        "expiry_short": "(Udløber %{month}/%{year})",
+        "crypto_payment_method": {
+          "description": "Forbind din wallet sikkert. Din saldo og adresse bliver ikke delt.",
+          "tooltip": "Din tegnebogssaldo og adresse bliver ikke delt, og kun det ønskede beløb kan blive trukket fra.",
+          "cashback_descriptor": {
+            "one": "Du modtager din cashback efter %{count} dag",
+            "other": "Du får din cashback efter %{count} dage"
+          },
+          "usdc_label": "Krypto: USDC"
+        },
+        "crypto_modal": {
+          "header": "Betal %{shop_name} %{total_price} USDC",
+          "error": {
+            "sandbox_error": "Noget gik galt.",
+            "web_component_error": "Der opstod et problem med at indlæse denne side."
+          }
+        },
+        "free_order_notice_html": "Din bestilling er <strong>gratis</strong>. Du skal ikke betale.",
+        "express_checkout_free_order": "Du bliver ikke opkrævet for en gratis ordre.",
+        "card_fields_container_prefix": "Feltbeholder til:",
+        "card_fields_unavailable_html": {
+          "one": "Betaling med kredit- og debetkort er ikke tilgængelig lige nu.<br><a href=\"%{current_url}\">Opdater denne side</a> eller prøv igen senere.",
+          "other": "Betaling med kredit- eller debetkort er ikke tilgængelig lige nu.<br><a href=\"%{current_url}\">Opdater denne side</a> eller prøv en anden betalingsmetode."
+        },
+        "card_fields_processing_error": "Der opstod et problem med at behandle betalingen. Prøv at opdatere denne side, eller tjek din internetforbindelse.",
+        "generic_incorrect_card_info": "Dine betalingsoplysninger kunne ikke bekræftes. Tjek dine kortoplysninger, og prøv igen.",
+        "continue_to_guest_checkout": "Fortsæt til gæstekassen",
+        "eps_label": "eps-overførsel",
+        "clear": "Klar",
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Indtast en gyldig udstedelsesdato",
+              "issue_number": "Indtast et gyldigt sagsnummer"
+            },
+            "invalid": {
+              "verification_value": "Indtast en gyldig CVV- eller sikkerhedskode"
+            }
+          }
+        },
+        "edit_credit_card_modal": {
+          "done": "Færdig",
+          "fields": {
+            "billing": "Faktureres til"
+          }
+        },
+        "gift_card_store_credit": {
+          "add_label": "Tilføj et gavekort eller butikskredit",
+          "manage_label": "Administrer gavekort eller butikskredit"
+        },
+        "gift_card_checkbox_label": "Indløs gavekort",
+        "custom_onsite_payment_method_modal": {
+          "title": "Tilpasset betalingsbekræftelse på stedet"
+        },
+        "expired_payment_method": "Den valgte betalingsmetode er udløbet.",
+        "network_card_payment_options": "Vælg et kortnetværk",
+        "network_card_persistence_description": "Det valgte netværk gemmes sammen med din betalingsmetode til fremtidige transaktioner.",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Din ordre er dækket af dit gavekort.",
+          "other": "Dine gavekort dækker din ordre."
+        },
+        "offsite_gateway_redirect_hint": "Du bliver omdirigeret til %{gateway_label} for at gennemføre dit køb.",
+        "offsite_gateway_review_page_redirect_hint": "Når du har gennemgået din ordre, bliver du omdirigeret til %{gateway_label} for at gennemføre dit køb.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "Samlet %{gateway_label} %{total_shop_price}",
+        "offsite_gateway_redirect_hint_no_button_label": "Du bliver omdirigeret til %{gateway_label} for at gennemføre dit køb.",
+        "no_js_credit_card_fields_redirect_hint": "Du bliver omdirigeret for at tilføje dine betalingsoplysninger.",
+        "missing_credit_card_error": "Indtast dine kortoplysninger for at gennemføre betalingen.",
+        "klarna_slice_it_label": "Finansier med Klarna",
+        "kcp_creditcard_label": "KCP-kreditkort",
+        "konbini_label": "Nærbutik",
+        "no_real_orders_dev_store": "Denne butik kan ikke modtage rigtige ordrer eller betalinger.",
+        "no_taxes_banner_content": "Der opkræves ikke skat på denne ordre. Når du har opkrævet betalingen, kan der ikke længere tilføjes skat.",
+        "google": {
+          "error_authorizing": "Fejl ved godkendelse af betaling"
+        },
+        "mor_disclaimer_html": "Ved at klikke nedenfor og gennemføre din ordre accepterer du at købe dine varer af Global-e, der er sælgeren i denne transaktion,\npå Global-e's <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">vilkår og betingelser</a>\nog <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">privatlivspolitik</a>. Global-e er en international\nleverandør af opfyldelsestjenester til %{shop_name}\n",
+        "lpm": {
+          "multibanco": {
+            "voucher": {
+              "codes": {
+                "reference_number": "Henvisning"
+              }
+            }
+          },
+          "konbini": {
+            "voucher": {
+              "label": "Nærbutik",
+              "outlets": {
+                "ministop": "Minimarked"
+              },
+              "steps": {
+                "familymart": {
+                  "1": "Vælg 代金支払い／チャージ (\"Betaling / Optankning\") på kopimaskinen.",
+                  "4": "Kontrollér oplysningerne, og tryk på 確認 (\"Bekræft\") for at udskrive din kvittering.",
+                  "5": "Tag kvitteringen med til kassen inden for 30 minutter, og betal kontant eller med FamiPay."
+                },
+                "lawson": {
+                  "3": "Indtast din bekræftelseskode, og tryk på Næste.",
+                  "4": "Tjek oplysningerne, og tryk på はい (\"Ja\") for at udskrive din kvittering.",
+                  "5": "Tag kvitteringen med til kassen inden for 30 minutter, og betal kontant."
+                },
+                "ministop": {
+                  "3": "Indtast din bekræftelseskode, og tryk på Næste.",
+                  "4": "Tjek oplysningerne, og tryk på はい (\"Ja\") for at udskrive din kvittering.",
+                  "5": "Tag kvitteringen med til kassen inden for 30 minutter, og betal kontant."
+                },
+                "seicomart": {
+                  "1": "Ved kassen skal du sige インターネット支払い (\"internetbetaling\") til ekspedienten.",
+                  "2": "Indtast din betalingskode på kundeskærmen, og vælg Registrer (\"Indtast\")",
+                  "3": "Indtast din bekræftelseskode, og vælg Registrer.",
+                  "4": "Kontrollér oplysningerne, og vælg OK."
+                },
+                "seven_eleven": {
+                  "1": "Tryk på Vis stregkode ved kassen, så kassemedarbejderen kan scanne den."
+                },
+                "1": "Tag betalingskoden og bekræftelseskoden med til butikkens betalingsterminal eller kasse, og betal kontant, inden værdikuponen udløber."
+              },
+              "choose_outlet": "Vælg en Konbini for at se dine koder og, hvordan du betaler",
+              "expired_title": "Betalingskoden er udløbet",
+              "view_instructions": "Se betalingsvejledningen",
+              "view_instructions_accessibility_label": "Se betalingsvejledningen (åbnes i en ny fane)"
+            }
+          },
+          "oxxo": {
+            "voucher": {
+              "steps": {
+                "scan_barcode_at_oxxo": "Scan stregkoden i den nærmeste OXXO."
+              },
+              "barcode_alt": "OXXO-kuponens stregkode for referencenummer %{reference_number}"
+            }
+          }
+        },
+        "location_billing_address_label": "Faktureringsadresse for lokation",
+        "location_shipping_address_label": "Leveringsadresse",
+        "no_working_method_error": "Denne butik kan ikke modtage betalinger lige nu. Opdater siden, eller kom tilbage senere.",
+        "local_payment_method_receiver_notice": "Når du har afgivet din ordre, modtager du betalingsoplysninger. Betal i en hæveautomat eller online inden for {{dueDays}} dage.",
+        "gift_card_wrapper": {
+          "apply_gift_card_label": "Indløs et gavekort"
+        },
+        "markets_pro_disclaimer_label": "Når du afgiver din ordre, accepterer du at købe fra Global-e, der er den registrerede forhandler, underlagt Global-e’s %{markets_pro_terms} og %{privacy_policy}, og at dele dine oplysninger med %{shop_name}.",
+        "markets_pro_disclaimer_privacy_policy": "Privatlivspolitik",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Vilkår og betingelser for Merchant of Record",
+        "markets_pro_disclaimer_privacy_policy_title": "Privatlivspolitik for Merchant of Record",
+        "gift_cards_unavailable": "Dit gavekort kan ikke længere bruges på denne ordre og er blevet fjernet.",
+        "new_bank_account_disclaimer": "Ved at gennemføre din bestilling giver du %{shop_name} tilladelse til at trække det viste beløb fra kontoen nedenfor via ACH på det viste tidspunkt.",
+        "paypal_disconnect": "Afbryd forbindelsen",
+        "payment_method_saved": "Betalingsmetode gemt",
+        "pay_with_credit_or_debit_card": "Betal med kredit- eller betalingskort",
+        "paypal_wallet_label": "PayPal Wallet",
+        "paypal_modal": {
+          "order_contains_fixed_selling_plans": "Totalbeløbet inkluderer muligvis ikke skatter, fragt, udskudte gebyrer og visse rabatter. Gå videre til kassen for at se beløbet, der skal betales i dag."
+        },
+        "paynow_label": "Betal nu",
+        "purchase_options_agreement_label": "Et eller flere varer i din kurv er et udskudt eller tilbagevendende køb. Når du fortsætter med betalingen, accepterer du, at din betalingsmetode automatisk bliver trukket med den pris og hyppighed, der er angivet på denne side, indtil det ophører, eller du annullerer. Alle annulleringer er underlagt %{cancellation_policy_label}.",
+        "pending_payment": {
+          "apple_wallet": {
+            "pass": {
+              "description": "Betalingsvoucher fra %{shop_name}",
+              "logo_text": "Betalingsbilag",
+              "payment_due_label": "Betaling forfalder"
+            }
+          },
+          "due_notice": "Din betaling på %{amount_due} forfalder den %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "Din betaling på %{amount_due} forfalder.",
+            "instruction_html": "Betal via Multibanco eller online med oplysningerne nedenfor. Hvis du har spørgsmål eller vil opdatere betalingsoplysningerne, %{contact_us}.",
+            "reference": "Henvisning",
+            "find_nearest_atm": "Find nærmeste hæveautomat"
+          },
+          "oxxo": {
+            "steps": {
+              "1": "Scan stregkoden i den nærmeste OXXO.",
+              "2": "Betal det præcise beløb kontant ved kassen."
+            },
+            "expires_when_unknown": "Brug den, før værdikuponen udløber",
+            "print_voucher": "Udskriv værdibevis",
+            "print": {
+              "instructions_title": "Sådan betaler du hos OXXO:"
+            },
+            "important_details": {
+              "canceled_by_expiry": "Din ordre bliver annulleret, hvis betalingen ikke er modtaget inden %{date}.",
+              "canceled_when_expired": "Din ordre bliver annulleret, hvis betalingen ikke modtages, før værdikuponen udløber.",
+              "tracking_after_payment": "Du modtager sporingsoplysninger for forsendelsen inden for én hverdag efter betaling."
+            },
+            "barcode_alt": "OXXO-kuponens stregkode for referencenummer %{reference_number}"
+          }
+        },
+        "order_covered_by_store_credit_notice": "Din ordre er dækket af dit tilgodebevis.",
+        "order_covered_by_redeemables_notice": "Din ordre er dækket.",
+        "preview_not_available": {
+          "title": "Forhåndsvisning ikke tilgængelig",
+          "button": "Okay"
+        },
+        "order_edit_banner_title": "Betaling af {{amount_owed}} er påkrævet",
+        "order_edit_banner_subtitle": "Din ordre {{order_number}} er blevet opdateret. Gennemgå ændringerne, og betal derefter for at bekræfte din ordre.",
+        "order_edit_banner_items_added": {
+          "other": "Tilføjet %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "with_quantities": "Fjernet {{delta}} af {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Returneret {{quantity}}",
+          "with_quantities": "Returneret {{delta}} af {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Fjernet fra returneringen",
+          "with_quantities": "{{delta}} blev fjernet fra returneringen"
+        },
+        "order_edit_banner_multiple_items_added": "Tilføjet {{amount}}",
+        "order_edit_banner_multiple_items_removed": "Fjernet {{amount}}",
+        "order_edit_banner_multiple_items_returned": "Returneret {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Fjernet fra returneringen",
+        "order_edit_banner_multiple_items_return_line_item_removed": "Fjernet {{amount}} fra returneringen",
+        "payment_method_rollup_accessibility_label": "Betalingsmuligheder",
+        "payment_method_update_failed": "Opdatering af betalingsmetode mislykkedes.",
+        "payment_method_incompatible_with_payment_terms": "Betalingsmetoden er ikke kompatibel med betalingsbetingelserne.",
+        "payment_flexibility_terms_id_mismatch": "Uoverensstemmelse i ID for vilkår om fleksibel betaling"
       }
     },
     "attributes": {

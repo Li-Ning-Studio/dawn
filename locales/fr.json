@@ -1603,7 +1603,43 @@
             "checkout_disclosure_charged_in_cny": "%{shop_name} traitera ce paiement de %{amount_due} %{processing_currency}",
             "post_purchase_disclosure": "Voir le total en CNY dans Alipay"
           }
-        }
+        },
+        "title": "Récapitulatif de la commande",
+        "secondary_aside_label": "Informations complémentaires sur la commande",
+        "view_all_items": {
+          "one": "Voir %{count} article",
+          "other": "Voir les %{count} articles"
+        },
+        "shopping_cart_label": "Panier d’achat",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> n’est pas disponible pour votre adresse de livraison.",
+        "subtotal_label_with_quantity": {
+          "one": "Sous-total · %{count} article",
+          "other": "Sous-total · %{count} articles"
+        },
+        "tip_label": "Conseil",
+        "shipping_discount_title": "Réduction sur les frais de livraison",
+        "shipping_policy_link": "Frais d’expédition",
+        "tax_label": "Impôt",
+        "tax_line": {
+          "hst": "HST",
+          "gst": "GST",
+          "pst": "HNP",
+          "rst": "RST",
+          "qst": "QST",
+          "vpt": "VPT"
+        },
+        "total_due_label": "Total à payer",
+        "total_due_later_label": "Total dû ultérieurement",
+        "total_updated_label": "Prix total mis à jour :",
+        "unit_price": {
+          "per_item": {
+            "single": "%{price} l’unité",
+            "one": "%{price} par article de %{count}",
+            "other": "%{price} pour %{count} articles"
+          }
+        },
+        "total_updated_label_with_price": "Prix total mis à jour : %{totalPrice}",
+        "updated_shipping_method": "Mode d’expédition mis à jour : %{shipping_method}"
       },
       "order_payment_collection": {
         "changes_summary": {
@@ -1645,6 +1681,143 @@
             "signature_mismatch": "Incohérence de la signature de la marchandise pour la ligne %{stable_id}."
           }
         }
+      },
+      "payment": {
+        "amazon_payments_login_hint": "Vous serez invité à vous connecter à Amazon.",
+        "amazon_payments_logout": "Se déconnecter d’Amazon Pay",
+        "amazon_payments_failed_mfa_challenge": "Le mode de paiement sélectionné n’a pas pu être utilisé. Sélectionnez un autre mode de paiement ou contactez votre banque ou l’émetteur de votre carte.",
+        "amazon_payments_abandoned_mfa_challenge": "Votre paiement n’a pas pu être effectué. Essayez un autre mode de paiement ou contactez votre banque ou l’émetteur de votre carte.",
+        "amount_left_to_pay_label": "Paiement dû :",
+        "bogus_test_checkout": {
+          "title": "Consigne de test",
+          "intro": "Utilisez ces valeurs pour tester votre passage en caisse :",
+          "gateway_failure": "{{card_number}} pour simuler une défaillance de la passerelle",
+          "additional_instructions": "Utilisez une date d’expiration future et n’importe quel code de sécurité à 3 chiffres.",
+          "support_link": "Obtenir de l’aide"
+        },
+        "billing_address_associated_with_mandate": "Utilisez l’adresse associée au mode de paiement",
+        "billing_address_associated_with_mandate_info": "Si vous souhaitez modifier votre adresse de facturation, supprimez les coordonnées de votre carte bancaire et saisissez-les à nouveau.",
+        "billing_address_description": "Sélectionnez l’adresse correspondant à votre carte ou à votre mode de paiement.",
+        "billing_address_description_no_shipping_address": "Saisissez l’adresse associée à votre carte ou à votre mode de paiement.",
+        "bank_payment_method_label": "Mode de paiement bancaire",
+        "billing_address_not_supported_for_payment_method_error": "Ce mode de paiement n’est pas disponible pour votre adresse de facturation et votre devise. Essayez un autre mode de paiement.",
+        "apple_pay_payment_error": "Votre paiement n’a pas pu être effectué. Réessayez ou utilisez un autre moyen de paiement.",
+        "apple": {
+          "not_available": "Apple Pay n’est pas disponible dans ce navigateur. Pour connecter votre compte Apple Pay, vous devez utiliser Safari sur un appareil Apple."
+        },
+        "billing_must_match_shipping_notice": "L’adresse de facturation de votre moyen de paiement doit correspondre à l’adresse de livraison.",
+        "brand_not_available": "Ce magasin n’accepte pas {{brand}}. Utilisez une autre carte pour payer.",
+        "billing_address_invalid_phone": "Mettez à jour le numéro de téléphone de votre adresse de facturation pour {{label}} {{last_digits}} afin de continuer.",
+        "billing_address_invalid_phone_no_card": "Mettez à jour le numéro de téléphone de votre adresse de facturation pour continuer.",
+        "business_customer_vaulting_payment_label": "Enregistrez ce moyen de paiement lors du paiement et autorisez %{company} à l’utiliser pour les achats futurs associés à cet emplacement. Tous les contacts associés à cet emplacement peuvent utiliser ce moyen de paiement.",
+        "business_customer_with_bank_account_vaulting_payment_label": "Enregistrez ce moyen de paiement lors du paiement et autorisez %{company} à débiter votre compte pour les futurs achats que vous approuvez à cet emplacement, jusqu’à ce que vous annuliez cette autorisation. Tous les contacts associés à cet emplacement peuvent utiliser ce moyen de paiement.",
+        "add_credit_card_modal": {
+          "title": "Ajouter une carte"
+        },
+        "alternative_payment_currency_total_notice": "Remarque : vous serez facturé %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Remarque : le total converti est de %{amount_due}.",
+        "bank_account_type": {
+          "checking": "Vérification"
+        },
+        "bank_account_disclaimer": "Le traitement des paiements ACH peut prendre jusqu’à 4 jours ouvrables.",
+        "bank_account_choose": "Choisissez un compte pour finaliser votre achat en toute sécurité.",
+        "bank_account_connect_another": "Connecter un autre compte bancaire",
+        "bank_account_connect": "Connecter un compte bancaire",
+        "bank_account_missing": "Le compte bancaire doit être connecté.",
+        "bank_account_generic_error": "Impossible d’ajouter le compte bancaire. Réessayez plus tard.",
+        "discount_button_action_label": "Appliquer le code de réduction",
+        "discount_codes_removed_summary": {
+          "one": "Le code de réduction %{count} a été supprimé.",
+          "other": "%{count} codes de réduction ont été supprimés"
+        },
+        "discount_codes_modified_summary": {
+          "one": "Le code de réduction %{count} a été modifié.",
+          "other": "%{count} codes de réduction ont été modifiés"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "Le code de réduction %{count} a été supprimé ou modifié.",
+          "other": "%{count} codes de réduction ont été supprimés ou modifiés."
+        },
+        "gift_card_balance_label": "Solde :",
+        "detected_card_brand": "Marque de carte détectée : {brand}",
+        "credit_card_vaulting_sign_in_banner_info": "Connectez-vous ou créez un compte pour enregistrer votre carte de crédit pour vos prochains achats.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Connectez-vous",
+        "ftd_vault_credit_card_label": "Enregistrer cette carte de crédit dans mon compte pour payer plus rapidement",
+        "card_pay_with": "Payer avec :",
+        "card_security_vault_notice": "Nous avons besoin de vos coordonnées pour vos prochains paiements. Toutes les transactions sont sécurisées et chiffrées.",
+        "card_information_notice": "Toutes les transactions sont sécurisées et chiffrées. Les informations de carte bancaire ne sont jamais enregistrées.",
+        "card_expiry_label": "Date d’expiration (MM / AA)",
+        "card_expiry_placeholder": "Date d’expiration (MM / AA)",
+        "credit_card_start_month": "Mois de début",
+        "credit_card_start_year": "Année de début",
+        "delete_customer_mandate_modal_title": "Supprimer cette carte de paiement ?",
+        "delete_customer_mandate_modal_body": "Si vous supprimez cette carte, vous devrez l’ajouter à nouveau avant de pouvoir l’utiliser pour effectuer des paiements.",
+        "delete_customer_mandate_modal_confirm": "Retirer la carte",
+        "card_verification_confirm": "À des fins de vérification, saisissez le code de sécurité de votre carte.",
+        "card_expiry_date_explanation": "Date d’expiration de la carte au format : mois, mois, année, année",
+        "card_verification_value_explanation": "Code de sécurité à 3 chiffres, généralement situé au dos de votre carte. Les cartes American Express ont un code à 4 chiffres situé à l’avant.",
+        "card_verification_value_explanation_amex": "Code de sécurité à 4 chiffres au recto de votre carte",
+        "card_verification_value_explanation_other": "code de sécurité à 3 chiffres au dos de votre carte",
+        "card_start_label": "Date d’émission (MM / AA)",
+        "card_start_placeholder": "Date d’émission (MM / AA)",
+        "card_issue_number_label": "Numéro de numéro",
+        "card_issue_number_placeholder": "Numéro de numéro",
+        "expiry_short": "(Exp. %{month}/%{year})",
+        "crypto_payment_method": {
+          "tooltip": "Le solde et l’adresse de votre portefeuille ne seront pas partagés et seul le montant demandé pourra être déduit.",
+          "cashback_descriptor": {
+            "other": "Vous recevrez votre remise en argent après %{count} jours."
+          },
+          "usdc_label": "Crypto : USDC"
+        },
+        "crypto_modal": {
+          "header": "Payez %{shop_name} %{total_price} USDC",
+          "error": {
+            "sandbox_error": "Une erreur s’est produite.",
+            "web_component_error": "Un problème est survenu lors du chargement de cette page."
+          }
+        },
+        "different_credit_card_label": "Utilisez une autre carte de crédit",
+        "different_billing_address_label": "Utiliser une autre adresse de facturation",
+        "express_checkout_free_order": "Aucun frais ne vous sera facturé pour une commande gratuite.",
+        "card_fields_container_prefix": "Conteneur de champ pour :",
+        "card_fields_processing_error": "Un problème est survenu lors du traitement du paiement. Essayez d’actualiser cette page ou vérifiez votre connexion Internet.",
+        "generic_incorrect_card_info": "Vos informations de paiement n’ont pas pu être vérifiées. Vérifiez les coordonnées de votre carte et réessayez.",
+        "continue_to_guest_checkout": "Continuer en tant qu’invité",
+        "eps_label": "virement EPS",
+        "cashapppay_label": "Paiement Cash App",
+        "change_currency_section_description": "Sélectionnez une devise",
+        "clear": "Clair",
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_number": "Saisissez un numéro de problème valide."
+            },
+            "invalid": {
+              "verification_value": "Saisissez un CVV ou un code de sécurité valide."
+            }
+          }
+        },
+        "delete_credit_card_modal": {
+          "confirmation": "Voulez-vous vraiment supprimer le {{brandName}} se terminant par {{lastDigits}} ?"
+        },
+        "edit_credit_card_modal": {
+          "done": "Terminé",
+          "description": "Vous pouvez uniquement modifier l’adresse de facturation de votre carte."
+        },
+        "expired_cards_info": {
+          "one": "Il y a %{count} carte expirée que vous pouvez consulter et modifier dans votre compte.",
+          "other": "Il y a %{count} cartes expirées que vous pouvez consulter et modifier dans votre compte."
+        },
+        "gift_card_store_credit": {
+          "add_label": "Ajouter une carte-cadeau ou un avoir en magasin",
+          "manage_label": "Gérez les cartes-cadeaux ou les crédits en magasin"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "Confirmation personnalisée du paiement sur place"
+        },
+        "expired_payment_method": "Le moyen de paiement sélectionné a expiré.",
+        "choose_new_payment_method": "Choisissez un nouveau mode de paiement"
       }
     },
     "attributes": {
