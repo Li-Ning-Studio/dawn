@@ -2380,7 +2380,210 @@
       "payment_gateway": {
         "bogus_label": "Zahlungsgateway testen",
         "bank_deposit_label": "Bankeinzahlung",
-        "cash_on_delivery_label": "Barzahlung bei Lieferung (Nachnahme)"
+        "cash_on_delivery_label": "Barzahlung bei Lieferung (Nachnahme)",
+        "money_order_label": "Zahlungsanweisung",
+        "credit_or_debit_tile_label": "Kredit- oder Debitkarte",
+        "fixed_payment_label": "Ihre Zahlung ist am {{dueDate}} fällig.",
+        "generic_payment_terms": "Für {{translatedName}} gelten besondere Bedingungen. Ihre Zahlung ist am {{dueDate}} fällig.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} bei einem Konto mit Zugriff auf diesen Standort, um gespeicherte Zahlungsmethoden hinzuzufügen oder zu verwenden.",
+            "link": "Anmelden"
+          },
+          "not_signed_in": {
+            "message": "{{signIn}}, um gespeicherte Zahlungsmethoden zu verwenden."
+          },
+          "different_account": {
+            "message": "Du bist bei einem anderen Konto angemeldet. {{switchAccount}}, um gespeicherte Zahlungsmethoden zu verwenden."
+          }
+        },
+        "direct_payment_terms": "Du bist mit {{translatedName}} per Du. Deine Karte wird am {{dueDate}} belastet.",
+        "fixed_direct_payment_terms": "Ihre Karte wird am {{dueDate}} belastet.",
+        "order_due_on_fulfillment_choose_later": "Ihre Zahlung ist fällig, sobald Ihre Bestellung ausgeführt wurde.",
+        "order_due_on_fulfillment_payment": "Ihre Karte wird belastet, sobald Ihre Bestellung ausgeführt wurde.",
+        "order_due_on_receipt_choose_later": "Ihre Zahlung ist bei Erhalt fällig.",
+        "order_deposit_due_now": "{{depositAmount}} ist heute fällig. Der Restbetrag ist gemäß den Bedingungen von {{translatedName}} am {{dueDate}} fällig.",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} ist heute fällig. Der Restbetrag wird fällig, sobald deine Bestellung ausgeführt wurde.",
+        "order_deposit_due_on_receipt": "{{depositAmount}} ist heute fällig. Der Restbetrag ist später fällig.",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} ist heute fällig. Der Restbetrag ist am {{dueDate}} fällig.",
+        "draft_order_payment_due_later_no_terms": "Ihre Zahlung wird fällig, sobald Ihre Bestellung bestätigt wurde.",
+        "draft_order_payment_due_later_no_terms_payment_selected": "Ihre Karte wird belastet, sobald Ihre Bestellung bestätigt wurde.",
+        "draft_order_payment_due_later_terms": "Sobald deine Bestellung bestätigt wurde, bist du mit {{translatedName}} per Du.",
+        "draft_order_deposit_due_later": "{{depositAmount}} wird fällig, sobald deine Bestellung bestätigt wurde. Der Restbetrag ist zu den Bedingungen von {{translatedName}} fällig.",
+        "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} ist fällig, sobald Ihre Bestellung bestätigt wurde. Der Restbetrag ist fällig, sobald Ihre Bestellung erfüllt wurde."
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Aktueller Kontostand %{amount}",
+        "credit_card_expires_on_notice": "Läuft ab am %{month}/%{year}",
+        "express_payment_gateway_label": "Ausdrücken",
+        "manual_payment_gateway_label": "Handbuch"
+      },
+      "redeemable_errors": {
+        "gift_card": {
+          "currency_mismatch": "Es werden nur Geschenkkarten in %{shop_currency} akzeptiert",
+          "duplicate": "Die Geschenkkarte wurde bereits auf deine Bestellung angerechnet.",
+          "insufficient_funds": "Auf dieser Geschenkkarte ist kein Guthaben mehr.",
+          "expired": "Diese Geschenkkarte ist abgelaufen.",
+          "not_available": "Diese Geschenkkarte ist nicht mehr verfügbar.",
+          "invalid": "Gib eine gültige Geschenkkarte ein",
+          "generic": "Die Geschenkkarte konnte nicht zum Checkout hinzugefügt werden.",
+          "throttle_limit_exceeded": "Du hast die maximale Anzahl an Versuchen überschritten. Versuche es später erneut.",
+          "no_longer_available": "Diese Geschenkkarte kann für diesen Checkout nicht mehr verwendet werden."
+        }
+      },
+      "post_purchase": {
+        "escape_confirmation": "Sie haben Ihre Bestellung bezahlt.",
+        "escape_action": "Bestellbestätigung ansehen ›",
+        "components": {
+          "processing": "Wird verarbeitet …",
+          "submit": "Absenden"
+        }
+      },
+      "processing": {
+        "redirecting_page_title": "Weiterleitung …",
+        "redirecting_title": "Weiterleitung …",
+        "redirecting_notice": "Bitte warten Sie, während wir Sie weiterleiten.",
+        "redirecting_to_bank": "Weiterleitung zu {{bank}}",
+        "complete_your_purchase_title": "Schließen Sie Ihren Kauf ab",
+        "continue_to_payment_gateway_notice": "Fahren Sie mit der Zahlung fort, um Ihre Zahlungsinformationen hinzuzufügen.",
+        "complete_your_purchase_title_error": "Korrigieren Sie Ihre Zahlungsinformationen",
+        "continue_to_payment_gateway_notice_error": "Ihre Zahlungsinformationen konnten nicht verifiziert werden.",
+        "page_title": "Verarbeitungsreihenfolge",
+        "title": "Verarbeitungsreihenfolge",
+        "your_order_has_been_received_title": "Vielen Dank für Ihre Bestellung.",
+        "you_will_receive_confirmation": "Wir erhalten gerade sehr viele Bestellungen. Du solltest bald eine Bestätigung per E-Mail oder SMS erhalten. Wenn du sie nicht innerhalb der nächsten Stunde erhältst, gib uns Bescheid.",
+        "you_will_not_be_charged": "Ihnen wird noch nichts berechnet.",
+        "wait": {
+          "long": "Du erhältst eine E-Mail, sobald deine Bestellung bearbeitet wurde. Derzeit ist das Bestellaufkommen hoch.",
+          "refresh_this_page": "Diese Seite aktualisieren"
+        },
+        "remote_shops_payments_processing": "Zahlungen werden verarbeitet",
+        "modal_notice": "Wir kontaktieren {{paymentMethod}}."
+      },
+      "pickup_point": {
+        "title": "Abholstelle",
+        "search_button": "Suchen",
+        "selector_tabs": "Abholort-Auswahl",
+        "could_not_resolve_address": "Deine Adresse konnte nicht gefunden werden. Versuche es erneut oder verwende eine andere Adresse.",
+        "no_pickup_points_near_you": "Keine Abholstationen in der Nähe der ausgewählten Adresse gefunden.",
+        "no_pickup_points_near_location": "Keine Abholstationen in Ihrer Nähe gefunden",
+        "pickup_unavailable_banner_title": {
+          "one": "Für deinen Artikel sind keine Abholstationen verfügbar.",
+          "other": "Für deine Artikel sind keine Abholstationen verfügbar."
+        },
+        "no_pickup_points_found": "Keine Abholstellen gefunden",
+        "paginator": {
+          "header": {
+            "one": "%{first} - %{last} von %{count} Punkt",
+            "other": "%{first} - %{last} von %{count} Punkten"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} von %{count} Punkten",
+            "other": "%{pickup_point_index} von %{count} Punkten"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} von %{count} Punkt",
+            "other": "%{first} - %{last} von %{count} Punkten"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} Abholstation in Ihrer Nähe",
+          "other": "%{count} Abholstellen in Ihrer Nähe"
+        },
+        "change": "Standort ändern",
+        "waiting_on_pickup_point_location_notice": "Suche nach Abholstellen...",
+        "geolocation": {
+          "errors": {
+            "unsuported_by_browser": "Die Standortbestimmung wird von deinem Browser nicht unterstützt. Versuche es erneut oder verwende einen anderen Browser.",
+            "permission_not_allowed": "Standortfreigabe erlauben.",
+            "permission_denied": "Dein Standort konnte nicht ermittelt werden. Versuche es erneut."
+          }
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Schließen Sie Ihren Kauf ab",
+        "remote_only_notice": "Diese Artikel werden von anderen Händlern verkauft und versandt. Schließen Sie Ihren Einkauf direkt beim jeweiligen Händler ab.",
+        "return_to_store_label": "Zum Shop zurückkehren",
+        "checkout_on_shop_label": "Bei %{shop_name} zur Kasse gehen"
+      },
+      "shipping": {
+        "cheapest_rate_label": "Am günstigsten",
+        "delivery_today": "Lieferung am selben Tag %{time}",
+        "delivery_tomorrow": "Lieferung am nächsten Tag %{time}",
+        "delivery": "Lieferung %{time}",
+        "delivery_to": "Lieferung an",
+        "arrives_time": "Kommt %{time} an",
+        "arrives_time_range": "Kommt %{min_time}–%{max_time} an",
+        "default_description": "Versand innerhalb von 1 Werktag",
+        "duties_and_taxes_options": {
+          "ddp_title": "Jetzt bezahlen",
+          "ddp_caption": "Keine zusätzlichen Gebühren bei der Lieferung"
+        },
+        "add_address": "Verwenden Sie eine andere Adresse",
+        "add_delivery_instructions": "Lieferhinweise hinzufügen",
+        "address_more": "Weitere Aktionen für diese Adresse",
+        "address_confirm": "Möchten Sie diese Adresse wirklich aus Ihrem Konto löschen?",
+        "address_form": {
+          "cancel": "Abbrechen",
+          "generic_error": "Beim Speichern deiner Adresse ist ein Problem aufgetreten. Versuche es erneut.",
+          "one_time_address_subtitle": "Verwenden Sie für diese Bestellung eine einmalige Adresse"
+        },
+        "different_shipping_method_summary": "Gib eine andere Lieferadresse ein, um verfügbare Versandarten anzuzeigen.",
+        "add_new_delivery_address": "Neue Lieferadresse hinzufügen",
+        "choose_new_address": "Wählen Sie eine neue Adresse"
+      },
+      "review": {
+        "review_and_confirm_title": "Prüfen und bestätigen",
+        "checkout_as_guest": "Als Gast fortfahren",
+        "account_more_actions": "Weitere Aktionen für dieses Konto",
+        "checkout_a_different_way": "Entdecke eine andere Möglichkeit",
+        "blocks": {
+          "billing_address_title": "Abrechnung",
+          "shipping_address_title": "Versenden an",
+          "change_contact_method_link_label": "Kontaktinformationen ändern",
+          "pick_up_in_store_shipping_method_html": "Abholung im Geschäft · %{location_name}",
+          "change_purchase_order_number_label": "PO-Nummer ändern",
+          "change_delivery_method_link_label": "Liefermethode ändern",
+          "due_after_order_reviewed_html": "Nach Prüfung der Bestellung fällig",
+          "review_title_free_order": "Überprüfen Sie Ihre Bestellung und schließen Sie sie ab.",
+          "pickup_items_at": {
+            "one": "%{count} Artikel abholen bei",
+            "other": "%{count} Artikel abholen bei"
+          },
+          "ship_items_to": {
+            "one": "%{count} Artikel versenden an",
+            "other": "%{count} Artikel versenden an"
+          }
+        },
+        "block_title": "Überprüfen Sie Ihre Angaben"
+      },
+      "remote_policies": {
+        "unavailable_policy": "Für diesen Shop wurde keine %{policy_name} angegeben. Weitere Informationen erhalten Sie direkt bei %{shop_name}."
+      },
+      "session_errors": {
+        "session_not_unique": "Beim Bearbeiten Ihrer Bestellung ist ein Problem aufgetreten. Aktualisieren Sie diese Seite, um zum Shop zurückzukehren.",
+        "session_already_finished": "Diese Bestellung wurde bereits aufgegeben. Du kannst zum Shop zurückkehren, um eine neue Bestellung zu beginnen."
+      },
+      "review_address_modal": {
+        "subtitle": {
+          "other": "Diese Bestellung wird an eine von {{merchant}} angegebene Adresse versandt. Wählen Sie eine Versandadresse aus."
+        },
+        "subtitle_no_match": "Diese Adresse stimmt mit keiner Ihrer gespeicherten Adressen überein.",
+        "subtitle_must_use": "Ihre Bestellung wird an diese Adresse versandt.",
+        "use_saved_address": "Verwenden Sie eine andere Adresse",
+        "return_to_cart": "Zum Warenkorb zurückkehren"
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "Der Checkout enthält ausschließlich Produkte aus dem Fernabsatz. Um den Kauf abzuschließen, ist eine Weiterleitung zum Fernabsatz-Shop erforderlich.",
+          "currency_mismatch": "Dieser Artikel kann nicht zu Ihrem Warenkorb hinzugefügt werden, da er aus einem Shop stammt, der eine andere Währung verwendet.",
+          "max_remote_shops_exceeded": "Dieses Produkt kann nicht hinzugefügt werden, da sich bereits die maximale Anzahl von anderen Shops in deinem Warenkorb befindet."
+        }
+      },
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "Zum Abschließen des Bezahlvorgangs ist eine Interaktion mit einer Erweiterung erforderlich."
+        }
       }
     },
     "attributes": {

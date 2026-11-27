@@ -2417,7 +2417,28 @@
           },
           "free_for_first_n_order": {
             "one": "Til første ordre"
-          }
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Gratis fragt for den første %{cycle}, derefter %{recurring_order_shipping_price}",
+            "other": "Gratis fragt for den første %{cycle}, derefter %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} for %{count} levering mere, efterfulgt af %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} for %{count} leveringer mere (%{per_delivery_cost}), efterfulgt af %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} for %{count} levering, efterfulgt af %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} for %{count} leveringer (%{per_delivery_cost}), efterfulgt af %{recurring_order_shipping_price}"
+          },
+          "subscription_free_with_frequency_label": "Gratis fragt %{delivery_frequency}",
+          "subscription_delivery_frequency": {
+            "day": {
+              "other": "hver %{count} dag"
+            }
+          },
+          "prepaid_initial_order_discounted": "Første forsendelsesomkostning %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Første forsendelsespris %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), derefter %{shipping_price} %{billing_cycle}",
+          "recurring_order_shipping_price": "efterfulgt af %{recurring_order_shipping_price}"
         },
         "duties_and_taxes_title": "Told og afgifter",
         "shipping_information_required_notice": "Leveringsoplysninger er påkrævet. {{link}}.",
@@ -2449,7 +2470,24 @@
         "split_shipping_option_free": "Gratis fragt",
         "split_shipping_option_fastest": "Hurtigst",
         "split_shipping_option_recommended": "Anbefalet",
-        "split_shipping_option_custom": "Brugerdefineret"
+        "split_shipping_option_custom": "Brugerdefineret",
+        "title": "Forsendelse",
+        "subscription_shipping": "Abonnementsforsendelse",
+        "subscription_local_delivery": "Lokalt abonnementsleveret",
+        "subscription_pickup": "Afhentning af abonnement",
+        "waiting_on_rate_notice": "Henter tilgængelige forsendelsespriser…",
+        "waiting_on_pickup_location_notice": "Henter tilgængelige afhentningssteder…",
+        "two_day_delivery": "Levering på 2 dage %{time}",
+        "unbranded_description_with_fulfillment_days": {
+          "other": "Afsendes inden for %{count} hverdage"
+        },
+        "unbranded_description_with_fulfillment_weeks": {
+          "one": "Afsendes om %{count} uge",
+          "other": "Sendes om %{count} uger"
+        },
+        "third_party_address_timeout": "Adresserne kunne ikke indlæses. Prøv igen, eller brug en anden adresse.",
+        "third_party_address_error": "Der opstod en fejl ved indlæsning af adressevalg. Indtast din adresse manuelt nedenfor.",
+        "third_party_payment_error": "Der opstod en fejl under indlæsning af betalingsvalg. Brug en anden betalingsmetode."
       },
       "review": {
         "title": "Gennemgå",
@@ -2510,6 +2548,179 @@
       "required_extensions": {
         "errors": {
           "interaction_required": "Der kræves en interaktion med en udvidelse for at gennemføre betalingen."
+        }
+      },
+      "shipping_errors": {
+        "shipping_method": "Leveringsmulighederne for din ordre er ændret. Gennemgå dit valg.",
+        "shipping_method_not_available": "Din kurv er blevet opdateret, og varerne, du har tilføjet, kan ikke leveres til din adresse. Fjern varerne for at gennemføre din bestilling.",
+        "shipping_method_not_available_generic": {
+          "one": "Din ordre kan ikke sendes til den valgte adresse. Kontrollér, at adressen er korrekt, og prøv igen, eller vælg en anden adresse.",
+          "other": "Nogle varer i din indkøbskurv kan ikke sendes til den adresse, du har angivet. Kontrollér, at adressen er korrekt, og prøv igen, eller vælg en anden adresse."
+        },
+        "no_delivery_strategy_available": "Din ordre kan ikke sendes til den valgte adresse. Kontrollér, at adressen er korrekt, og prøv igen, eller brug en anden adresse.",
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Varerne i kurven opfylder ikke pris- eller vægtkravene for at kvalificere sig til forsendelse. Opdater din kurv, og prøv igen.",
+        "shipping_method_not_available_updated": {
+          "one": "Varen, du har tilføjet, leveres ikke til din adresse. Fjern den for at gå til kassen, eller kontakt butikken.",
+          "other": "En eller flere varer, du har tilføjet, kan ikke leveres til din adresse. Fjern dem for at gå til kassen, eller kontakt butikken."
+        },
+        "payment_method_not_supported": "Du kan ikke bruge denne betalingsmetode til %{country}. Brug en anden betalingsmetode for at få sendt til dette land.",
+        "empty_state": "Indtast din leveringsadresse for at se de tilgængelige leveringsmetoder.",
+        "invalid_selected_address": "Den valgte leveringsadresse er ugyldig",
+        "invalid_selected_address_with_update_link": "Den valgte leveringsadresse er ikke gyldig. %{update_address_link} eller vælg en anden adresse",
+        "unavailable_addresses_only_countries": "Din ordre kan kun sendes til {{countriesList}}. Tilføj en ny adresse for at fortsætte.",
+        "unavailable_address_country": "Levering er ikke tilgængelig i det land, du har valgt. Brug en anden adresse for at fortsætte.",
+        "unavailable_selected_address": "Levering er ikke tilgængelig til den valgte adresse",
+        "unavailable_selected_address_for_region": "Forsendelse er ikke tilgængelig for {{region}}. Vælg en anden adresse for at fortsætte."
+      },
+      "shop_policies": {
+        "refund_policy": "Refunderingspolitik",
+        "privacy_policy": "Privatlivspolitik",
+        "shipping_policy": "Forsendelse",
+        "terms_of_sale": "Salgsbetingelser",
+        "subscription_policy": "Afbestillinger",
+        "purchase_options_policy": "Politik for købsindstillinger",
+        "purchase_options_cancellation_policy": "Afbestillinger"
+      },
+      "shop_wallet": {
+        "confirm": {
+          "label": "Bekræft valget",
+          "success_message": "Oplysningerne om den valgte wallet er klar. Denne prototype sender dem endnu ikke tilbage til partnerappen.",
+          "retryable_error_title": "Udvalget deles ikke",
+          "retryable_error_message": "Prøv at bekræfte dit valg af wallet igen.",
+          "terminal_error_title": "Walletforbindelsen blev afbrudt"
+        },
+        "cancelled": {
+          "message": "Der blev ikke delt nogen tegnebogsoplysninger, og der blev ikke foretaget noget køb."
+        },
+        "empty": {
+          "message": "Der er ingen gemte kort i denne Shop Pay-wallet."
+        },
+        "expired": {
+          "message": "Gå tilbage til partnerappen, og start købet igen.",
+          "title": "Denne tegnebogssession er udløbet"
+        },
+        "error": {
+          "title": "Din Shop Pay-wallet kunne ikke indlæses",
+          "message": "Gå tilbage til Hatch, og prøv at åbne Shop Pay igen."
+        },
+        "loading": "Indlæser din Shop Pay-wallet…",
+        "retry": "Prøv igen.",
+        "payment_method": {
+          "accessibility_label": "{{brand}} slutter på {{lastDigits}}"
+        },
+        "ineligible": {
+          "title": "Ingen kvalificerede kort"
+        },
+        "revoked": {
+          "title": "Shop Pay er ikke længere tilsluttet",
+          "message": "Genopret forbindelsen til Shop Pay i partnerappen, før du fortsætter."
+        }
+      },
+      "shop_pay_external": {
+        "errors": {
+          "problem_loading": "Der opstod et problem med at indlæse Shop Pay.",
+          "try_again_later": "Tjek din forbindelse, eller luk dette vindue, og prøv igen om et øjeblik.",
+          "checkout_has_expired": "Din betaling er udløbet. Luk dette vindue, og prøv at gennemføre købet igen fra {{shopName}}."
+        }
+      },
+      "stock": {
+        "page_title": "Lagerproblemer",
+        "removed_from_cart_notice": "Fjernet fra kurven",
+        "remove_from_cart_button_label": "Fjern fra indkøbskurven",
+        "continue_shopping_button_label": "Fortsæt",
+        "continue_cta_label": "Fortsæt til betaling",
+        "empty_cart_label": "Din indkøbskurv er tom.",
+        "quantity_update": {
+          "page_title": "Antal opdateret",
+          "title": "Antal opdateret",
+          "description": "De tilgængelige mængder for disse varer er ændret og opdateret i din indkøbskurv."
+        },
+        "price_update": {
+          "description": "Priserne på disse varer er ændret og opdateret i din indkøbskurv."
+        },
+        "price_and_quantity_update": {
+          "title": "Pris- og mængdeopdatering",
+          "description": "Priserne og de tilgængelige mængder for disse varer er ændret og opdateret i din indkøbskurv."
+        },
+        "out_of_stock": {
+          "description": "Disse varer er ikke længere tilgængelige og fjernes fra din indkøbskurv.",
+          "items_unavailable": "Nogle varer er ikke længere tilgængelige og bliver fjernet fra din kurv.",
+          "missing_items": {
+            "some_available_notice": {
+              "one": "De resterende varer kan stadig købes. Den utilgængelige vare fjernes fra indkøbskurven.",
+              "other": "De resterende varer kan stadig købes. De varer, der ikke er tilgængelige, fjernes fra indkøbskurven."
+            },
+            "none_available_notice": {
+              "one": "Denne vare er ikke længere tilgængelig og er blevet fjernet fra din indkøbskurv.",
+              "other": "Disse varer er ikke længere tilgængelige og er blevet fjernet fra din indkøbskurv."
+            }
+          }
+        },
+        "out_of_stock_in_context_label": "Dette produkt er ikke tilgængeligt i dit land/din region.",
+        "unavailable_at_pickup_location_label": "Denne vare kan ikke afhentes på det valgte sted."
+      },
+      "split_delivery": {
+        "accessibility": {
+          "status": {
+            "ship_separately": "%{items} bliver sendt separat.",
+            "remove_items": "%{items} fjernet fra indkøbskurven."
+          }
+        },
+        "pickup_all_items": "Hent alle varer",
+        "pickup_and_ship": "Afhentning og forsendelse",
+        "ship_all_items": "Send alle varer",
+        "separate_pickup_email_notice": "Du modtager en separat e-mail, når din ordre er klar til afhentning.",
+        "items_moved_to_shipping_toast": "Varer, der ikke kan afhentes, er blevet flyttet til levering.",
+        "delivery_updated_toast": {
+          "shipping_only": "Din levering er blevet opdateret. {{shipping}}",
+          "removal_only": "Din levering er blevet opdateret. {{removal}}",
+          "shipping_and_removal": "Din levering er blevet opdateret. {{shipping}} {{removal}}",
+          "shipping": {
+            "one": "{{count}} vare er blevet flyttet til levering.",
+            "other": "{{count}} varer er blevet flyttet til forsendelse."
+          },
+          "removal": {
+            "one": "{{count}} vare er blevet fjernet.",
+            "other": "{{count}} varer er blevet fjernet."
+          }
+        },
+        "pickup_items_count": {
+          "other": "Hent %{count} varer"
+        },
+        "ship_items_count": {
+          "one": "Send %{count} vare",
+          "other": "Send %{count} varer"
+        },
+        "delivery_method": "Opdel leveringsmetode",
+        "delivery_method_menu": "Menu til valg af leveringsmetode",
+        "inventory_issue_banner": {
+          "heading": {
+            "cannot_be_shipped": {
+              "one": "%{count} vare kan ikke sendes",
+              "other": "%{count} varer kan ikke sendes"
+            }
+          },
+          "remove_item": {
+            "one": "Fjern vare",
+            "other": "Fjern varer"
+          },
+          "remove_item_only": {
+            "one": "Fjern varen"
+          },
+          "ship_separately": {
+            "one": "Send det separat",
+            "other": "Send dem separat"
+          },
+          "pick_them_up_in_store": {
+            "one": "Hent i butik"
+          }
+        },
+        "cross_border": {
+          "modal": {
+            "content": "Dine afhentnings- og leveringssteder skal være i samme land. Hvis du ændrer land, bliver alle varer ændret til levering.",
+            "country_changed_heading": "Land ændret"
+          },
+          "banner": "Din leveringsmetode blev opdateret."
         }
       }
     },

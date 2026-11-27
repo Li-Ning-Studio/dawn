@@ -2117,7 +2117,203 @@
       "payment_gateway": {
         "credit_card_label": "Kreditkort",
         "bogus_label": "Testa betalningsgatewayen",
-        "cash_on_delivery_label": "Kontant vid leverans (COD)"
+        "cash_on_delivery_label": "Kontant vid leverans (COD)",
+        "debit_card_label": "Betalkort",
+        "credit_or_debit_tile_label": "Kredit- eller debetkort",
+        "fixed_payment_label": "Din betalning ska vara betald senast {{dueDate}}.",
+        "generic_payment_terms": "Du är på {{translatedName}}-villkor. Din betalning förfaller den {{dueDate}}.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} på ett konto med åtkomst till den här platsen för att lägga till eller använda sparade betalningsmetoder."
+          }
+        },
+        "direct_payment_terms": "Du har {{translatedName}} villkor. Ditt kort debiteras den {{dueDate}}.",
+        "fixed_direct_payment_terms": "Ditt kort kommer att debiteras den {{dueDate}}.",
+        "order_due_on_fulfillment_choose_later": "Din betalning förfaller när din beställning har skickats.",
+        "order_due_on_fulfillment_payment": "Ditt kort debiteras när din beställning har expedierats.",
+        "order_due_on_receipt_choose_later": "Din betalning förfaller vid mottagandet.",
+        "order_deposit_due_now": "{{depositAmount}} ska betalas idag. Återstående belopp betalas enligt {{translatedName}} villkor och förfaller den {{dueDate}}.",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} ska betalas idag. Resterande belopp ska betalas när din beställning har expedierats.",
+        "order_deposit_due_on_receipt": "{{depositAmount}} ska betalas idag. Resten ska betalas senare.",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} ska betalas idag. Resten ska betalas den {{dueDate}}.",
+        "draft_order_payment_due_later_no_terms": "Din betalning förfaller när din beställning har bekräftats.",
+        "draft_order_payment_due_later_no_terms_payment_selected": "Ditt kort debiteras när din beställning har bekräftats.",
+        "draft_order_payment_due_later_terms": "Du kommer att vara på {{translatedName}}-villkor när din beställning har bekräftats.",
+        "draft_order_payment_due_on_fulfillment": "Din betalning ska göras när din beställning har bekräftats och fullföljts.",
+        "draft_order_deposit_due_later": "{{depositAmount}} ska betalas när din beställning bekräftas. Resterande belopp betalas enligt villkoren för {{translatedName}}.",
+        "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} ska betalas när din beställning bekräftas. Resterande belopp betalas när din beställning har fullgjorts."
+      },
+      "payment_summary": {
+        "credit_card_expires_on_notice": "Går ut %{month}/%{year}",
+        "express_payment_gateway_label": "Uttryck",
+        "manual_payment_gateway_label": "Handbok"
+      },
+      "redeemable_errors": {
+        "gift_card": {
+          "currency_mismatch": "Endast presentkort i %{shop_currency} accepteras.",
+          "duplicate": "Presentkortet har redan använts på din beställning.",
+          "insufficient_funds": "Det finns inga pengar kvar på det här presentkortet.",
+          "expired": "Det här presentkortet har gått ut",
+          "not_available": "Det här presentkortet är inte längre tillgängligt",
+          "generic": "Presentkortet kunde inte läggas till i kassan",
+          "throttle_limit_exceeded": "Du har överskridit det högsta antalet försök. Försök igen senare.",
+          "no_longer_available": "Det här presentkortet kan inte längre användas i kassan"
+        }
+      },
+      "post_purchase": {
+        "page_title": "Efter köp",
+        "title": "Efter köp",
+        "escape_confirmation": "Du har betalat för din beställning.",
+        "components": {
+          "processing": "Bearbetar…",
+          "submit": "Skicka in"
+        }
+      },
+      "processing": {
+        "redirecting_page_title": "Omdirigerar…",
+        "redirecting_title": "Omdirigerar…",
+        "redirecting_to_bank": "Omdirigerar till {{bank}}",
+        "continue_to_payment_gateway_notice": "Fortsätt till betalningen för att lägga till dina betalningsuppgifter.",
+        "complete_your_purchase_title_error": "Korrigera dina betalningsuppgifter",
+        "continue_to_payment_gateway_notice_error": "Dina betalningsuppgifter kunde inte verifieras.",
+        "continue_to_payment_gateway_button_label_error": "Uppdatera betalningsinformation",
+        "page_title": "Bearbetar beställningen",
+        "title": "Bearbetar beställningen",
+        "your_order_has_been_received_title": "Tack för din beställning",
+        "you_will_receive_confirmation": "Vi får många beställningar just nu. Du bör få en bekräftelse via e-post eller sms snart. Om du inte får den inom en timme, hör av dig till oss.",
+        "wait": {
+          "short": "Din beställning behandlas.",
+          "medium": {
+            "one": "Din beställning behandlas. Beräknad väntetid är %{count} minut.",
+            "other": "Din beställning behandlas. Beräknad väntetid är %{count} minuter."
+          },
+          "long": "Du får ett e-postmeddelande så snart din beställning har behandlats. Just nu är det många beställningar.",
+          "no_auto_refresh_html": "Om du inte omdirigeras automatiskt, %{link}.",
+          "refresh_this_page": "Uppdatera den här sidan"
+        },
+        "remote_shops_payments_processing": "Betalningar behandlas"
+      },
+      "pickup_point": {
+        "no_business_hours": "Inga öppettider tillgängliga",
+        "title": "Utlämningsställe",
+        "search_button": "Sök",
+        "selector_tabs": "Välj upphämtningsställe",
+        "could_not_resolve_address": "Din adress kunde inte hittas. Försök igen eller använd en annan adress.",
+        "no_pickup_points_near_you": "Inga upphämtningsställen hittades nära den valda adressen",
+        "no_pickup_points_near_location": "Inga upphämtningsställen hittades nära din plats",
+        "pickup_unavailable_banner_title": {
+          "one": "Inga upphämtningsställen är tillgängliga för din vara",
+          "other": "Inga upphämtningsställen finns tillgängliga för dina varor."
+        },
+        "no_pickup_points_found": "Inga utlämningsställen hittades",
+        "paginator": {
+          "header": {
+            "one": "Visar %{first} - %{last} av %{count} poäng"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} av %{count} punkt",
+            "other": "%{pickup_point_index} av %{count} punkter"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} av %{count} poäng",
+            "other": "%{first} - %{last} av %{count} poäng"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} utlämningsställe nära din plats",
+          "other": "%{count} utlämningsställen nära din plats"
+        },
+        "waiting_on_pickup_point_location_notice": "Söker efter upphämtningsställen...",
+        "geolocation": {
+          "errors": {
+            "unsuported_by_browser": "Geolokalisering stöds inte av din webbläsare. Försök igen eller använd en annan webbläsare."
+          }
+        }
+      },
+      "remote_merchandise_only": {
+        "remote_only_notice": "Dessa varor säljs och skickas av andra butiker. Slutför ditt köp hos varje butik.",
+        "return_to_store_label": "Återgå till butiken",
+        "detail_item_label": {
+          "one": "{{count}} föremål"
+        },
+        "checkout_on_shop_label": "Gå till kassan hos %{shop_name}",
+        "single_shop_transition": "Du omdirigeras till %{advertiser} för att slutföra ditt köp."
+      },
+      "shipping": {
+        "cheapest_rate_label": "Billigast",
+        "delivery_tomorrow": "Leverans nästa dag %{time}",
+        "arrives_time": "Anländer %{time}",
+        "arrives_time_range": "Anländer %{min_time}–%{max_time}",
+        "default_description": "Skickas inom 1 arbetsdag",
+        "duties_and_taxes_options": {
+          "ddp_title": "Betala nu",
+          "ddp_caption": "Inga extra avgifter vid leverans"
+        },
+        "address_update": "Uppdatera adressen",
+        "address_delete": "Ta bort adressen",
+        "address_confirm": "Är du säker på att du vill ta bort den här adressen från ditt konto?",
+        "address_form": {
+          "update": "Spara ändringarna",
+          "one_time_address_subtitle": "Använd en engångsadress för den här beställningen"
+        }
+      },
+      "review": {
+        "title": "Granska",
+        "review_title": "Slutför din beställning",
+        "checkout_a_different_way": "Upptäck ett annat sätt",
+        "blocks": {
+          "contact_method_title": "Kontakt",
+          "shipping_method_title": "Fraktmetod",
+          "change_company_location_link_label": "Ändra företagets plats",
+          "change_shipping_method_link_label": "Ändra fraktsätt",
+          "change_payment_method_link_label": "Byt betalningsmetod",
+          "pick_up_in_store_shipping_method_html": "Hämta i butik · %{location_name}",
+          "change_purchase_order_number_label": "Ändra PO-nummer",
+          "change_delivery_method_link_label": "Ändra leveranssätt",
+          "no_purchase_order_number": "(Inget PO-nummer)",
+          "due_after_order_reviewed_html": "Förfaller efter att beställningen har granskats",
+          "review_title_free_order": "Granska och slutför din beställning",
+          "payment_method_saved_company_location": "Spara kort för den här platsen",
+          "pickup_items_at": {
+            "one": "Hämta %{count} vara på",
+            "other": "Hämta %{count} varor på"
+          },
+          "ship_items_to": {
+            "one": "Skicka %{count} vara till",
+            "other": "Skicka %{count} artiklar till"
+          }
+        }
+      },
+      "remote_policies": {
+        "unavailable_policy": "Ingen %{policy_name} har angetts för den här butiken. Kontakta %{shop_name} direkt för mer information."
+      },
+      "session_errors": {
+        "session_not_unique": "Det uppstod ett problem när din beställning skulle behandlas. Uppdatera sidan för att återgå till butiken.",
+        "session_already_finished": "Den här beställningen har redan skickats. Du kan gå tillbaka till butiken för att påbörja en ny beställning."
+      },
+      "review_address_modal": {
+        "title": "Granska adressen",
+        "subtitle": {
+          "one": "Den här beställningen skickas till adressen som angetts av {{merchant}}.",
+          "other": "Den här beställningen skickas till en adress som {{merchant}} har angett. Välj en leveransadress."
+        },
+        "subtitle_no_match": "Den här adressen matchar inte någon av dina sparade adresser.",
+        "subtitle_must_use": "Din beställning skickas till den här adressen.",
+        "continue": "Fortsätt med den här adressen",
+        "return_to_cart": "Gå tillbaka till varukorgen"
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "Kassan innehåller endast fjärrprodukter. En omdirigering till fjärrbutiken krävs för att slutföra köpet.",
+          "currency_mismatch": "Den här varan kan inte läggas till i din varukorg eftersom den kommer från en butik som använder en annan valuta.",
+          "currency_mismatch_removal": "En vara har tagits bort från din varukorg eftersom den kommer från en butik som använder en annan valuta.",
+          "max_remote_shops_exceeded": "Den här produkten kan inte läggas till eftersom din varukorg redan innehåller det maximala antalet från andra butiker."
+        }
+      },
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "En interaktion med ett tillägg krävs för att slutföra köpet."
+        }
       }
     },
     "attributes": {

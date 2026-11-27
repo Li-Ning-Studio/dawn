@@ -2195,7 +2195,15 @@
       },
       "redeemable_errors": {
         "gift_card": {
-          "currency_mismatch": "Seules les cartes-cadeaux en %{shop_currency} sont acceptées."
+          "currency_mismatch": "Seules les cartes-cadeaux en %{shop_currency} sont acceptées.",
+          "duplicate": "La carte-cadeau a déjà été appliquée à votre commande.",
+          "insufficient_funds": "Cette carte cadeau n’a plus de solde.",
+          "expired": "Cette carte-cadeau a expiré.",
+          "not_available": "Cette carte-cadeau n’est plus disponible.",
+          "invalid": "Saisissez une carte-cadeau valide",
+          "generic": "La carte-cadeau n’a pas pu être ajoutée au paiement.",
+          "throttle_limit_exceeded": "Vous avez dépassé le nombre maximal de tentatives. Réessayez plus tard.",
+          "no_longer_available": "Cette carte-cadeau ne peut plus être utilisée pour ce paiement."
         }
       },
       "post_purchase": {
@@ -2266,6 +2274,89 @@
             "permission_not_allowed": "Autoriser le partage de votre position.",
             "permission_denied": "Impossible d’obtenir votre position. Réessayez."
           }
+        }
+      },
+      "remote_merchandise_only": {
+        "remote_only_notice": "Ces articles sont vendus et expédiés par d’autres magasins. Passez à la caisse auprès de chaque magasin pour finaliser votre achat.",
+        "detail_item_label": {
+          "one": "{{count}} article",
+          "other": "{{count}} articles"
+        },
+        "checkout_on_shop_label": "Finaliser la commande sur %{shop_name}",
+        "single_shop_transition": "Vous allez être redirigé vers %{advertiser} pour finaliser votre achat."
+      },
+      "shipping": {
+        "arrives_time": "Arrive %{time}",
+        "arrives_time_range": "Arrive dans %{min_time}–%{max_time}",
+        "default_description": "Expédié sous 1 jour ouvré",
+        "duties_and_taxes_options": {
+          "ddp_title": "Payez maintenant",
+          "ddp_caption": "Aucun frais supplémentaires à la livraison"
+        },
+        "add_address": "Utilisez une autre adresse",
+        "add_delivery_instructions": "Ajouter des instructions de livraison",
+        "address_more": "Plus d'actions pour cette adresse",
+        "address_confirm": "Voulez-vous vraiment supprimer cette adresse de votre compte ?",
+        "address_default": "Définir par défaut",
+        "address_form": {
+          "generic_error": "Un problème est survenu lors de l’enregistrement de votre adresse. Réessayez.",
+          "one_time_address_subtitle": "Utilisez une adresse à usage unique pour cette commande."
+        },
+        "different_shipping_method_summary": "Saisissez une autre adresse de livraison pour voir les modes de livraison disponibles.",
+        "choose_new_address": "Choisissez une nouvelle adresse"
+      },
+      "review": {
+        "title": "Examiner",
+        "review_title": "Finalisez votre commande",
+        "review_and_confirm_title": "Vérifiez et confirmez",
+        "checkout_as_guest": "Payer en tant qu’invité",
+        "checkout_a_different_way": "Découvrez une autre façon",
+        "blocks": {
+          "contact_method_title": "Contactez-nous",
+          "payment_method_title": "Mode de paiement",
+          "change_contact_method_link_label": "Modifier les coordonnées de contact",
+          "change_company_location_link_label": "Modifier l’emplacement de l’entreprise",
+          "change_shipping_method_link_label": "Modifier le mode de livraison",
+          "change_payment_method_link_label": "Changer de mode de paiement",
+          "pick_up_in_store_shipping_method_html": "Retrait en magasin · %{location_name}",
+          "purchase_order_number_title": "numéro de commande d’achat",
+          "change_purchase_order_number_label": "Modifier le numéro de commande",
+          "change_delivery_method_link_label": "Changer le mode de livraison",
+          "no_purchase_order_number": "(Aucun numéro de commande)",
+          "due_after_order_reviewed_html": "À régler après examen de la commande",
+          "review_title_free_order": "Vérifiez et finalisez votre commande",
+          "pickup_items_at": {
+            "one": "Récupérer %{count} article à",
+            "other": "Récupérez %{count} articles à"
+          }
+        },
+        "block_title": "Vérifiez vos informations"
+      },
+      "session_errors": {
+        "session_not_unique": "Un problème est survenu lors du traitement de votre commande. Actualisez cette page pour retourner à la boutique.",
+        "session_already_finished": "Cette commande a déjà été envoyée. Vous pouvez retourner à la boutique pour commencer une nouvelle commande."
+      },
+      "review_address_modal": {
+        "subtitle": {
+          "one": "Cette commande sera expédiée à l’adresse fournie par {{merchant}}.",
+          "other": "Cette commande sera expédiée à une adresse fournie par {{merchant}}. Sélectionnez une adresse de livraison."
+        },
+        "subtitle_no_match": "Cette adresse ne correspond à aucune de vos adresses enregistrées.",
+        "continue": "Continuez avec cette adresse",
+        "use_saved_address": "Utilisez une autre adresse",
+        "return_to_cart": "Retourner au panier"
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "Le panier ne contient que des articles de la boutique à distance. Une redirection vers la boutique à distance est nécessaire pour finaliser la commande.",
+          "currency_mismatch": "Cet article ne peut pas être ajouté à votre panier, car il provient d’une boutique qui utilise une autre devise.",
+          "currency_mismatch_removal": "Un article a été retiré de votre panier, car il provient d’une boutique qui utilise une devise différente.",
+          "max_remote_shops_exceeded": "Ce produit ne peut pas être ajouté, car votre panier contient déjà le nombre maximal d’articles provenant d’autres magasins."
+        }
+      },
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "Une interaction avec une extension est nécessaire pour finaliser le paiement."
         }
       }
     },
