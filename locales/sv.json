@@ -1855,7 +1855,95 @@
         "markets_pro_disclaimer_terms_and_conditions_title": "Villkor för Merchant of Record",
         "markets_pro_disclaimer_privacy_policy_title": "Integritetspolicy för registrerad handlare",
         "gift_cards_unavailable": "Ditt presentkort kan inte längre användas för den här beställningen och har tagits bort",
-        "new_bank_account_disclaimer": "Genom att slutföra din beställning godkänner du att %{shop_name} debiterar kontot nedan via ACH med det angivna beloppet och vid den angivna tidpunkten."
+        "new_bank_account_disclaimer": "Genom att slutföra din beställning godkänner du att %{shop_name} debiterar kontot nedan via ACH med det angivna beloppet och vid den angivna tidpunkten.",
+        "payment_method_saved": "Betalningsmetod sparad",
+        "pay_with_debit_card": "Betala med bankkort",
+        "payment_method_not_available_for_shipping_address_error": "Betalningsmetoden är inte tillgänglig för den valda leveransadressen. Välj en annan betalningsmetod.",
+        "payment_method_loading_error": "Den här betalningsmetoden läses fortfarande in. Försök igen om några sekunder.",
+        "paypal_wallet_label": "PayPal-plånbok",
+        "paypal_modal": {
+          "order_contains_fixed_selling_plans": "Totalsumman kanske inte inkluderar skatter, frakt, uppskjutna avgifter och vissa rabatter. Fortsätt till kassan för att se beloppet som ska betalas idag."
+        },
+        "paynow_label": "Betala nu",
+        "purchase_options_agreement_label": "En eller flera varor i din kundvagn är ett uppskjutet eller återkommande köp. När du fortsätter med betalningen godkänner du att din betalningsmetod automatiskt debiteras med det pris och den frekvens som anges på den här sidan tills det upphör eller du säger upp det. Alla uppsägningar omfattas av %{cancellation_policy_label}.",
+        "pending_payment": {
+          "apple_wallet": {
+            "pass": {
+              "description": "%{shop_name} betalningskupong",
+              "logo_text": "Betalningskupong",
+              "payment_due_label": "Betalning förfaller",
+              "ordered_on_label": "Beställd den"
+            }
+          },
+          "multibanco": {
+            "buyer_action_info": "Din betalning på %{amount_due} förfaller nu.",
+            "instruction_html": "Betala via Multibanco eller online med uppgifterna nedan. Om du har frågor eller vill uppdatera betalningsuppgifterna, %{contact_us}.",
+            "entity": "Entitet",
+            "expired": "Har gått ut %{date}",
+            "expired_title": "Betalningsreferensen har löpt ut"
+          },
+          "oxxo": {
+            "steps": {
+              "1": "Skanna streckkoden hos ditt närmaste OXXO."
+            },
+            "expires_at": "Går ut %{date}",
+            "expires_when_unknown": "Använd innan värdebeviset går ut",
+            "print_voucher": "Skriv ut värdebeviset",
+            "print": {
+              "instructions_title": "Instruktioner för att betala din OXXO:",
+              "important_details_title": "Viktiga detaljer:"
+            },
+            "important_details": {
+              "canceled_by_expiry": "Din beställning avbryts om betalningen inte har tagits emot senast %{date}.",
+              "canceled_when_expired": "Din beställning annulleras om betalningen inte har mottagits innan värdekupongen går ut.",
+              "non_refundable": "Beställningar hos OXXO återbetalas inte.",
+              "tracking_after_payment": "Du får spårningsinformation för försändelsen inom en arbetsdag efter att betalningen har genomförts."
+            },
+            "barcode_alt": "OXXO-kupongens streckkod för referensnummer %{reference_number}"
+          }
+        },
+        "order_covered_by_store_credit_notice": "Din beställning täcks av ditt tillgodohavande i butiken.",
+        "order_covered_by_redeemables_notice": "Din beställning är skyddad.",
+        "preview_not_available": {
+          "title": "Förhandsvisning inte tillgänglig",
+          "content": "Oroa dig inte, den här expresskassan fungerar för dina kunder."
+        },
+        "order_edit_banner_title": "Betalning av {{amount_owed}} krävs",
+        "order_edit_banner_subtitle": "Din beställning {{order_number}} har uppdaterats. Granska ändringarna och betala sedan för att bekräfta beställningen.",
+        "order_edit_banner_items_added": {
+          "one": "Tillagd",
+          "other": "Lade till %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Borttagen",
+          "with_quantities": "Tog bort {{delta}} av {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Returnerade {{quantity}}",
+          "with_quantities": "Returnerade {{delta}} av {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Borttagen från returen",
+          "with_quantities": "{{delta}} har tagits bort från returen"
+        },
+        "order_edit_banner_single_item_added": "Tillagd",
+        "order_edit_banner_multiple_items_added": "Lade till {{amount}}",
+        "order_edit_banner_single_item_removed": "Borttagen",
+        "order_edit_banner_multiple_items_removed": "Tog bort {{amount}}",
+        "order_edit_banner_multiple_items_returned": "Returnerade {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Borttagen från returen",
+        "order_edit_banner_multiple_items_return_line_item_removed": "{{amount}} har tagits bort från returen",
+        "order_edit_banner_updated_order_label": "Uppdaterad beställning",
+        "order_edit_banner_previous_taxes_label": "Tidigare skatter:",
+        "order_edit_banner_new_taxes_label": "Nya skatter:",
+        "order_edit_banner_line_discount_updated": "Rabatten har uppdaterats",
+        "order_edit_banner_line_discount_removed": "Rabatten har tagits bort",
+        "payment_method_rollup_accessibility_label": "Betalningsalternativ",
+        "payment_method_update_failed": "Uppdateringen av betalningsmetoden misslyckades.",
+        "payment_method_incompatible_with_payment_terms": "Betalningsmetoden är inte kompatibel med betalningsvillkoren.",
+        "proposed_gateway_unavailable": "Den föreslagna betalningsgatewayen är inte tillgänglig.",
+        "pay_in_installments_split_pay_short": "4 betalningar på %{amount}",
+        "payment_flexibility_terms_id_mismatch": "Villkor för flexibel betalning ID stämmer inte överens"
       }
     },
     "attributes": {
