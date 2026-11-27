@@ -2517,7 +2517,9 @@
         "default_description": "Versand innerhalb von 1 Werktag",
         "duties_and_taxes_options": {
           "ddp_title": "Jetzt bezahlen",
-          "ddp_caption": "Keine zusätzlichen Gebühren bei der Lieferung"
+          "ddp_caption": "Keine zusätzlichen Gebühren bei der Lieferung",
+          "ddu_title": "Zahlung bei Lieferung",
+          "ddu_caption": "Es können zusätzliche Gebühren anfallen."
         },
         "add_address": "Verwenden Sie eine andere Adresse",
         "add_delivery_instructions": "Lieferhinweise hinzufügen",
@@ -2530,7 +2532,148 @@
         },
         "different_shipping_method_summary": "Gib eine andere Lieferadresse ein, um verfügbare Versandarten anzuzeigen.",
         "add_new_delivery_address": "Neue Lieferadresse hinzufügen",
-        "choose_new_address": "Wählen Sie eine neue Adresse"
+        "choose_new_address": "Wählen Sie eine neue Adresse",
+        "shipping_method_title": "Versandart",
+        "shipping_method_rollup_accessibility_label": "Versandoptionen",
+        "shipping_method_one_time_purchase_group_title": "Einmalkauf",
+        "no_rates_for_cart_or_destination_notice": "Für Ihren Warenkorb oder Ihre Adresse sind keine Versandmethoden verfügbar.",
+        "no_pickup_location_notice": "Mindestens eines Ihrer Produkte ist nicht zur Abholung verfügbar.",
+        "no_rates_contact_notice": "Kontaktieren Sie uns für weitere Informationen.",
+        "estimated_delivery_time": "Voraussichtliche Lieferung %{time}",
+        "estimated_delivery_time_range": "Voraussichtliche Lieferung %{min_time}–%{max_time}",
+        "estimated_time": "Geschätzte %{time}",
+        "estimated_time_range": "Geschätzte %{min_time}–%{max_time}",
+        "shipping_line_phone_label": "Mobiltelefonnummer (erforderlich)",
+        "shipping_line_phone": "Ihr Kurier kann diese Nummer verwenden, um Sie zu kontaktieren.",
+        "shipping_line_delivery_phone_label": "Mobiltelefonnummer",
+        "shipping_line_delivery_phone": "Möglicherweise werden Sie mit Updates zu Ihrer Lieferung kontaktiert.",
+        "optional_shipping_line_delivery_instructions_label": "Lieferhinweise (optional)",
+        "shipping_line_delivery_instructions": "Gib erforderliche Informationen wie Türcodes oder Anweisungen zur Ablage an.",
+        "other_method": {
+          "one": "%{count} weitere Methode verfügbar unter",
+          "other": "%{count} weitere Methoden verfügbar ab"
+        },
+        "shipping_rate_discounted_amount": "Vorher: %{original_amount}. Jetzt: %{amount}",
+        "local_delivery": "Lokale Lieferung",
+        "prime_not_available": {
+          "default": "Prime-Lieferung ist für Ihre Bestellung nicht verfügbar. Ihre Versandoptionen wurden aktualisiert."
+        },
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "Kostenloser Versand für %{count} weitere Lieferungen",
+            "other": "Kostenloser Versand ab %{count} weiteren Lieferungen"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Kostenloser Versand für %{count} Lieferung",
+            "other": "Kostenloser Versand für %{count} Lieferungen"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Kostenloser Versand für %{count} weitere Lieferung, danach %{recurring_order_shipping_price}",
+            "other": "Kostenloser Versand für %{count} weitere Lieferungen, danach %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Kostenloser Versand für %{count} Lieferung, danach %{recurring_order_shipping_price}",
+            "other": "Kostenloser Versand für %{count} Lieferungen, danach %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} weitere Lieferung für %{shipping_price}",
+            "other": "%{count} weitere Lieferungen für jeweils %{shipping_price}"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "Lieferung für %{count} für %{shipping_price}",
+            "other": "%{count} weitere Lieferungen für jeweils %{shipping_price}"
+          },
+          "initial_order_discounted": "Erste Versandkosten %{discounted_shipping_cost}, danach %{frequency_description}",
+          "first_order_shipping_price_included": "Erste Bestellung inklusive, danach %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} pro Lieferung), danach %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Erste Bestellung kostenlos",
+            "other": "Die ersten %{count} Bestellungen kostenlos"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Kostenloser Versand für den ersten %{cycle}, danach %{recurring_order_shipping_price}",
+            "other": "Kostenloser Versand für den ersten %{cycle}, danach %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} für %{count} weitere Lieferung",
+            "other": "%{shipping_price} für %{count} weitere Lieferungen (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} für %{count} Lieferung",
+            "other": "%{shipping_price} für %{count} Lieferungen (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} für %{count} weitere Lieferung, danach %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} für %{count} weitere Lieferungen (%{per_delivery_cost}), danach %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} für %{count} Lieferung, danach %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} für %{count} Lieferungen (%{per_delivery_cost}), danach %{recurring_order_shipping_price}"
+          },
+          "prepaid_delivery_frequency": {
+            "one": "für %{count} Lieferungen",
+            "other": "für %{count} Lieferungen"
+          },
+          "prepaid_initial_order_discounted": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency}, danach %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), danach %{shipping_price} %{billing_cycle}"
+        },
+        "duties_and_taxes_title": "Zölle und Steuern",
+        "shipping_information_redirect_link": "Geben Sie hier Ihre Informationen ein.",
+        "loading_progressive_rates": "Suche nach weiteren Tarifen …",
+        "shipping_used_as_billing_notice": "Diese Adresse wird für diese Bestellung auch als Rechnungsadresse verwendet.",
+        "shipping_address_rollup_accessibility_label": "Versandoptionen an die Adresse",
+        "protected_destination_notice": "Du versendest direkt an {{firstName}}.",
+        "invalid_shipping_method_summary": "Gib eine gültige Lieferadresse ein, um die verfügbaren Versandarten anzuzeigen.",
+        "invalid_shipping_method_summary_selected": "Wählen Sie eine andere Lieferadresse aus, um die verfügbaren Versandmethoden anzuzeigen.",
+        "method_summary": {
+          "incomplete_address_entered": "Gib eine vollständige Lieferadresse ein, um die verfügbaren Versandmethoden anzuzeigen.",
+          "incomplete_address_selected": "Wählen Sie eine vollständige Lieferadresse aus, um die verfügbaren Versandmethoden anzuzeigen."
+        },
+        "local_pickup": {
+          "rollup_accessibility_label": "Abholortoptionen"
+        },
+        "missing_shipping_address": "Die Lieferadresse fehlt",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} mehr",
+        "split_shipping_merchandise_shipment_number": "Sendung %{number} von %{total}",
+        "pre_order_ships_date": "Versand am %{date}",
+        "split_shipping_shipped_by_shop": "Versendet von %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Mehrere Sendungen",
+        "split_shipping_shipping_label": "Methode",
+        "split_shipping_shipment_notice": "Ihre Bestellung wird in %{quantity_shipments} eintreffen.",
+        "split_shipping_first_shipment_notice": "Ihre erste Bestellung trifft in %{quantity_shipments} ein.",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} Sendungen",
+        "split_shipping_multiple_shipment_notice": "Ihre Bestellung wird in mehreren Sendungen geliefert.",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Ihre Bestellung wird in %{quantity} Sendungen geliefert.",
+        "split_shipping_shipment_count_notice_one_time_purchase": {
+          "one": "Ihre Bestellung wird in %{count} Sendung(en) geliefert.",
+          "other": "Ihre Bestellung wird in %{count} Sendungen eintreffen."
+        },
+        "split_shipping_arrives_in_shipments": {
+          "one": "Kommt in %{count} Sendung an",
+          "other": "Kommt in %{count} Sendungen an"
+        },
+        "split_shipping_shipment_number": "Sendung %{number}",
+        "split_shipping_option_free": "Kostenloser Versand",
+        "subscription_shipping": "Abonnementversand",
+        "subscription_local_delivery": "Lokale Lieferung im Abonnement",
+        "subscription_pickup": "Abonnementabholung",
+        "waiting_on_rate_notice": "Verfügbare Versandtarife werden abgerufen …",
+        "waiting_on_pickup_location_notice": "Verfügbare Abholorte werden abgerufen …",
+        "two_day_delivery": "Lieferung innerhalb von 2 Tagen %{time}",
+        "unbranded_description_same_day": "Versand noch am selben Werktag",
+        "unbranded_description_with_fulfillment_days": {
+          "other": "Versand in %{count} Werktagen"
+        },
+        "unbranded_description_with_fulfillment_weeks": {
+          "one": "Versand in %{count} Woche",
+          "other": "Wird in %{count} Wochen versandt"
+        },
+        "third_party_address_timeout": "Adressen konnten nicht geladen werden. Versuchen Sie es erneut oder verwenden Sie eine andere Adresse.",
+        "third_party_address_error": "Beim Laden der Adressauswahl ist ein Fehler aufgetreten. Geben Sie Ihre Adresse unten manuell ein.",
+        "third_party_payment_timeout": "Zahlungsmethoden konnten nicht geladen werden. Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "third_party_payment_error": "Beim Laden der Zahlungsauswahl ist ein Fehler aufgetreten. Verwenden Sie eine andere Zahlungsmethode."
       },
       "review": {
         "review_and_confirm_title": "Prüfen und bestätigen",
@@ -2583,6 +2726,160 @@
       "required_extensions": {
         "errors": {
           "interaction_required": "Zum Abschließen des Bezahlvorgangs ist eine Interaktion mit einer Erweiterung erforderlich."
+        }
+      },
+      "shipping_errors": {
+        "shipping_method": "Die Versandoptionen für Ihre Bestellung haben sich geändert. Überprüfen Sie Ihre Auswahl.",
+        "shipping_method_not_available": "Ihr Warenkorb wurde aktualisiert. Die hinzugefügten Artikel können nicht an Ihre Adresse geliefert werden. Entfernen Sie die Artikel, um Ihre Bestellung abzuschließen.",
+        "shipping_method_not_available_generic": {
+          "one": "Deine Bestellung kann nicht an die ausgewählte Adresse geliefert werden. Überprüfe deine Adresse auf Richtigkeit und versuche es erneut oder wähle eine andere Adresse aus.",
+          "other": "Einige Artikel in Ihrem Warenkorb können nicht an die von Ihnen eingegebene Adresse geliefert werden. Überprüfen Sie, ob Ihre Adresse korrekt ist, und versuchen Sie es erneut, oder wählen Sie eine andere Adresse."
+        },
+        "no_delivery_strategy_available": "Deine Bestellung kann nicht an die ausgewählte Adresse versandt werden. Überprüfe, ob deine Adresse korrekt ist, und versuche es erneut oder verwende eine andere Adresse.",
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Die Artikel im Warenkorb erfüllen nicht die Preis- oder Gewichtsvoraussetzungen für den Versand. Aktualisiere deinen Warenkorb und versuche es erneut.",
+        "shipping_method_not_available_updated": {
+          "one": "Der Artikel, den du hinzugefügt hast, wird nicht an deinen Standort geliefert. Entferne ihn, um zur Kasse zu gehen, oder kontaktiere den Shop.",
+          "other": "Ein oder mehrere Artikel, die du hinzugefügt hast, werden nicht an deinen Standort geliefert. Entferne sie, um zur Kasse zu gehen, oder kontaktiere den Shop."
+        },
+        "payment_method_not_supported": "Diese Zahlungsmethode ist für %{country} nicht verfügbar. Verwende eine andere Zahlungsmethode, um in dieses Land liefern zu lassen.",
+        "empty_state": "Gib deine Lieferadresse ein, um die verfügbaren Versandmethoden anzuzeigen.",
+        "invalid_selected_address": "Die ausgewählte Lieferadresse ist ungültig.",
+        "invalid_selected_address_with_update_link": "Die ausgewählte Lieferadresse ist ungültig. %{update_address_link} oder wähle eine andere Adresse aus.",
+        "unavailable_address_country": "Der Versand ist in dem von Ihnen ausgewählten Land nicht verfügbar. Verwenden Sie eine andere Adresse, um fortzufahren.",
+        "unavailable_selected_address": "Der Versand ist für die ausgewählte Adresse nicht verfügbar.",
+        "unavailable_selected_address_for_region": "Der Versand ist für {{region}} nicht verfügbar. Wählen Sie eine andere Adresse, um fortzufahren."
+      },
+      "shop_policies": {
+        "select_policy_label": "Richtlinie auswählen",
+        "refund_policy": "Rückerstattungsrichtlinie",
+        "terms_of_service": "Nutzungsbedingungen",
+        "legal_notice": "Rechtlicher Hinweis",
+        "purchase_options_policy": "Richtlinie zu Kaufoptionen",
+        "terms_and_policies": "Bedingungen und Richtlinien"
+      },
+      "shop_wallet": {
+        "description": "Wählen Sie aus, was Sie für diesen Kauf verwenden möchten.",
+        "confirm": {
+          "retryable_error_message": "Versuche, deine Wallet-Auswahl erneut zu bestätigen.",
+          "terminal_error_message": "Geh zurück und öffne Shop Pay erneut."
+        },
+        "cancelled": {
+          "message": "Es wurden keine Wallet-Daten weitergegeben und kein Kauf getätigt."
+        },
+        "empty": {
+          "message": "In dieser Shop Pay-Wallet sind keine Karten gespeichert."
+        },
+        "error": {
+          "title": "Deine Shop-Pay-Wallet konnte nicht geladen werden.",
+          "message": "Kehre zu Hatch zurück und versuche, Shop Pay erneut zu öffnen."
+        },
+        "loading": "Deine Shop Pay-Geldbörse wird geladen…",
+        "ready_status": "Deine Shop Pay Wallet ist bereit. Wähle eine Zahlungsmethode aus.",
+        "retry": "Versuch es noch einmal.",
+        "return_to_hatch": "Zur Luke zurückkehren",
+        "payment_method": {
+          "expiry": "Läuft ab am {{expiry}}",
+          "accessibility_label": "{{brand}} mit der Endung {{lastDigits}}"
+        },
+        "expired": {
+          "title": "Diese Wallet-Sitzung ist abgelaufen."
+        },
+        "revoked": {
+          "message": "Verbinde Shop Pay in der Partner-App erneut, bevor du fortfährst."
+        }
+      },
+      "shop_pay_external": {
+        "title": "Shop Pay-Kasse",
+        "errors": {
+          "problem_loading": "Beim Laden von Shop Pay ist ein Problem aufgetreten.",
+          "try_again_later": "Überprüfe deine Verbindung oder schließe dieses Fenster und versuche es in wenigen Augenblicken erneut.",
+          "checkout_has_expired": "Dein Checkout ist abgelaufen. Schließe dieses Fenster und versuche es erneut über {{shopName}}."
+        },
+        "return_to_store": "Zu {{shopName}} zurückkehren",
+        "return_to_store_simple": "Zum Shop zurückkehren"
+      },
+      "stock": {
+        "page_title": "Lagerbestandsprobleme",
+        "title": "Nicht auf Lager",
+        "items_unavailable_notice": "Einige Artikel sind nicht mehr verfügbar.",
+        "quantity_column_header": "Menge",
+        "reduced_with_quantity_label": "Nur noch %{quantity_available} übrig",
+        "go_back_to_cart_button_label": "Zu meinem Warenkorb zurückgehen",
+        "return_to_store_label": "Zum Shop zurückkehren",
+        "continue_cta_label": "Mit dem Checkout fortfahren",
+        "empty_cart_label": "Dein Warenkorb ist leer.",
+        "quantity_update": {
+          "description": "Die verfügbaren Mengen dieser Artikel wurden geändert und in Ihrem Warenkorb aktualisiert."
+        },
+        "price_update": {
+          "updated_price": "Aktualisierter Preis"
+        },
+        "price_and_quantity_update": {
+          "description": "Preise und verfügbare Mengen dieser Artikel haben sich geändert und wurden in Ihrem Warenkorb aktualisiert."
+        },
+        "out_of_stock": {
+          "description": "Diese Artikel sind nicht mehr verfügbar und werden aus Ihrem Warenkorb entfernt.",
+          "items_unavailable": "Einige Artikel sind nicht mehr verfügbar und werden aus Ihrem Warenkorb entfernt.",
+          "missing_items": {
+            "some_available_notice": {
+              "one": "Die übrigen Artikel können weiterhin gekauft werden. Der nicht verfügbare Artikel wird aus dem Warenkorb entfernt.",
+              "other": "Die übrigen Artikel können weiterhin gekauft werden. Die nicht verfügbaren Artikel werden aus dem Warenkorb entfernt."
+            },
+            "none_available_notice": {
+              "one": "Dieser Artikel ist nicht mehr verfügbar und wurde aus Ihrem Warenkorb entfernt.",
+              "other": "Diese Artikel sind nicht mehr verfügbar und wurden aus Ihrem Warenkorb entfernt."
+            },
+            "mixed_issues_title": "Einige Artikel sind nicht mehr verfügbar."
+          }
+        },
+        "out_of_stock_in_context_label": "Dieses Produkt ist in deinem Land/deiner Region nicht verfügbar."
+      },
+      "shop_wallet_button": {
+        "label": "Mit Shop Pay bezahlen"
+      },
+      "split_delivery": {
+        "accessibility": {
+          "status": {
+            "ship_separately": "%{items} wird separat versendet.",
+            "pickup_in_store": "%{items} werden im Geschäft abgeholt.",
+            "remove_items": "%{items} aus dem Warenkorb entfernt."
+          }
+        },
+        "pickup_and_ship": "Abholen und versenden",
+        "separate_pickup_email_notice": "Sie erhalten eine separate E-Mail, sobald Ihre Bestellung abholbereit ist.",
+        "items_for_pickup": "Artikel zur Abholung",
+        "items_moved_to_shipping_toast": "Artikel, die nicht abgeholt werden können, wurden auf Versand umgestellt.",
+        "delivery_updated_toast": {
+          "shipping_only": "Ihre Lieferung wurde aktualisiert. {{shipping}}",
+          "removal_only": "Deine Lieferung wurde aktualisiert. {{removal}}",
+          "shipping_and_removal": "Ihre Lieferung wurde aktualisiert. {{shipping}} {{removal}}",
+          "shipping": {
+            "one": "{{count}} Artikel wurde zum Versand verschoben.",
+            "other": "{{count}} Artikel wurden zum Versand verschoben."
+          }
+        },
+        "delivery_method": "Liefermethode aufteilen",
+        "delivery_method_menu": "Menü für geteilte Liefermethoden",
+        "inventory_issue_banner": {
+          "heading": {
+            "cannot_be_picked_up": {
+              "one": "%{count} Artikel kann nicht abgeholt werden.",
+              "other": "%{count} Artikel können nicht abgeholt werden."
+            }
+          },
+          "ship_separately": {
+            "other": "Versenden Sie sie separat."
+          },
+          "pick_them_up_in_store": {
+            "one": "Im Geschäft abholen",
+            "other": "Hol sie im Geschäft ab"
+          }
+        },
+        "cross_border": {
+          "modal": {
+            "content": "Deine Abhol- und Versandstandorte müssen sich im selben Land befinden. Wenn du das Land änderst, werden alle Artikel auf Versand umgestellt."
+          },
+          "banner": "Ihre Liefermethode wurde aktualisiert."
         }
       }
     },

@@ -2247,7 +2247,8 @@
         "default_description": "Skickas inom 1 arbetsdag",
         "duties_and_taxes_options": {
           "ddp_title": "Betala nu",
-          "ddp_caption": "Inga extra avgifter vid leverans"
+          "ddp_caption": "Inga extra avgifter vid leverans",
+          "ddu_caption": "Ytterligare avgifter kan tillkomma."
         },
         "address_update": "Uppdatera adressen",
         "address_delete": "Ta bort adressen",
@@ -2255,7 +2256,144 @@
         "address_form": {
           "update": "Spara ändringarna",
           "one_time_address_subtitle": "Använd en engångsadress för den här beställningen"
-        }
+        },
+        "shipping_method_rollup_accessibility_label": "Fraktalternativ",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Första leveransen",
+          "other": "Första leveranserna"
+        },
+        "no_pickup_location_notice": "Minst en av dina produkter är inte tillgänglig för upphämtning",
+        "no_rates_for_country_notice": "Inga fraktpriser hittades för den här adressen.",
+        "no_rates_contact_notice": "Kontakta oss för mer information",
+        "estimated_time": "Uppskattad %{time}",
+        "estimated_time_range": "Uppskattat %{min_time}–%{max_time}",
+        "shipping_line_phone": "Ditt bud kan använda det här numret för att kontakta dig.",
+        "shipping_line_delivery_phone_label": "Mobiltelefonnummer",
+        "shipping_line_delivery_phone": "Du kan bli kontaktad med uppdateringar om din leverans.",
+        "shipping_line_delivery_instructions": "Ange nödvändig information, till exempel portkoder eller instruktioner för avlämning.",
+        "other_method": {
+          "zero": "Inga andra metoder tillgängliga",
+          "one": "%{count} annan metod tillgänglig på",
+          "other": "%{count} andra metoder tillgängliga från"
+        },
+        "shipping_rate_discounted_amount": "Var: %{original_amount}. Nu: %{amount}",
+        "prime_not_available": {
+          "default": "Prime-leverans är inte tillgänglig för din beställning. Dina leveransalternativ har uppdaterats."
+        },
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "Fri frakt för %{count} leveranser till",
+            "other": "Fri frakt för %{count} leveranser till"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Fri frakt för %{count} leverans till, sedan %{recurring_order_shipping_price}",
+            "other": "Fri frakt i %{count} leveranser till, sedan %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Fri frakt för %{count} leverans, därefter %{recurring_order_shipping_price}",
+            "other": "Fri frakt för %{count} leveranser, sedan %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} leverans till för %{shipping_price}",
+            "other": "%{count} leveranser till för %{shipping_price} styck"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "other": "%{count} leveranser till för %{shipping_price} styck"
+          },
+          "initial_order_discounted": "Första fraktkostnaden %{discounted_shipping_cost}, sedan %{frequency_description}",
+          "first_order_shipping_price_included": "Första beställningen ingår, därefter %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} per leverans), följt av %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Första beställningen gratis",
+            "other": "De första %{count} beställningarna är gratis"
+          },
+          "free_for_first_n_order": {
+            "one": "För första beställningen",
+            "other": "För de första %{count} beställningarna"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Fri frakt under den första %{cycle}, därefter %{recurring_order_shipping_price}",
+            "other": "Fri frakt under den första %{cycle}, därefter %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} för %{count} leveranser till"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} för %{count} leverans till, följt av %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} för %{count} ytterligare leveranser (%{per_delivery_cost}), följt av %{recurring_order_shipping_price}"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "other": "var %{count}:e dag"
+            },
+            "week": {
+              "other": "var %{count}:e vecka"
+            },
+            "month": {
+              "other": "var %{count}:e månad"
+            },
+            "year": {
+              "other": "vart %{count}:e år"
+            }
+          },
+          "prepaid_initial_order_discounted": "Första fraktkostnaden %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Första fraktkostnaden %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Första fraktkostnaden %{discounted_shipping_price} %{prepaid_delivery_frequency}, därefter %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Första fraktkostnaden %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), därefter %{shipping_price} %{billing_cycle}"
+        },
+        "one_time_purchase_shipping": "Engångsfrakt",
+        "duties_and_taxes_title": "Tullar och skatter",
+        "shipping_information_required_notice": "Fraktinformation krävs. {{link}}.",
+        "loading_progressive_rates": "Söker efter fler priser…",
+        "no_other_methods_available": "Inga andra metoder tillgängliga",
+        "shipping_used_as_billing_notice": "Detta kommer också att användas som faktureringsadress för den här beställningen.",
+        "shipping_address_title": "Skicka till",
+        "shipping_address_rollup_accessibility_label": "Leveransalternativ för adress",
+        "invalid_shipping_method_summary": "Ange en giltig leveransadress för att se tillgängliga leveransmetoder.",
+        "method_summary": {
+          "incomplete_address_entered": "Ange en fullständig leveransadress för att se tillgängliga leveransmetoder."
+        },
+        "local_pickup": {
+          "rollup_title": "Upphämtningsplats"
+        },
+        "missing_shipping_address": "Leveransadressen saknas",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} till",
+        "split_shipping_merchandise_shipment_number": "Försändelse %{number} av %{total}",
+        "pre_order_ships_now": "Skickas nu",
+        "pre_order_ships_later": "Skickas senare",
+        "pre_order_ships_date": "Skickas %{date}",
+        "split_shipping_shipment_notice": "Din beställning kommer fram i %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "Din första beställning kommer fram om %{quantity_shipments}",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} försändelser",
+        "split_shipping_multiple_shipment_notice": "Din beställning kommer att levereras i flera försändelser.",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Din beställning kommer att levereras i %{quantity} försändelser.",
+        "split_shipping_shipment_count_notice_one_time_purchase": {
+          "one": "Din beställning kommer fram i %{count} leverans",
+          "other": "Din beställning levereras i %{count} försändelser."
+        },
+        "split_shipping_arrives_in_shipments": {
+          "one": "Anländer i %{count} försändelse",
+          "other": "Anländer i %{count} leveranser"
+        },
+        "includes_recurring_items": "Inkluderar återkommande artiklar",
+        "split_shipping_more_shipping_options": "Fler fraktalternativ",
+        "split_shipping_shipment_number": "Försändelse %{number}",
+        "split_shipping_option_recommended": "Rekommenderat",
+        "subscription_shipping": "Prenumerationsleverans",
+        "subscription_local_delivery": "Lokal prenumerationsleverans",
+        "subscription_pickup": "Prenumerationshämtning",
+        "waiting_on_rate_notice": "Hämtar tillgängliga fraktpriser…",
+        "waiting_on_pickup_location_notice": "Hämtar tillgängliga upphämtningsplatser…",
+        "two_day_delivery": "Leverans inom 2 dagar %{time}",
+        "unbranded_default_description": "Klar att skickas",
+        "unbranded_description_same_day": "Skickas samma arbetsdag",
+        "unbranded_description_with_fulfillment_weeks": {
+          "one": "Skickas om %{count} vecka"
+        },
+        "third_party_address_timeout": "Det går inte att läsa in adresserna. Försök igen eller använd en annan adress.",
+        "third_party_address_error": "Ett fel uppstod när adressvalet skulle läsas in. Ange din adress manuellt nedan.",
+        "third_party_payment_timeout": "Det gick inte att läsa in betalningsmetoder. Försök igen eller använd en annan betalningsmetod.",
+        "third_party_payment_error": "Ett fel uppstod när betalningsalternativen skulle läsas in. Använd en annan betalningsmetod."
       },
       "review": {
         "title": "Granska",
@@ -2314,6 +2452,65 @@
         "errors": {
           "interaction_required": "En interaktion med ett tillägg krävs för att slutföra köpet."
         }
+      },
+      "shipping_errors": {
+        "shipping_method": "Fraktalternativen för din beställning har ändrats. Granska ditt val.",
+        "shipping_method_not_available": "Din varukorg har uppdaterats och varorna du lagt till kan inte skickas till din adress. Ta bort varorna för att slutföra din beställning.",
+        "shipping_method_not_available_generic": {
+          "one": "Din beställning kan inte skickas till den valda adressen. Kontrollera att adressen är korrekt och försök igen, eller välj en annan adress.",
+          "other": "Vissa varor i din varukorg kan inte skickas till adressen du angav. Kontrollera att adressen är korrekt och försök igen, eller välj en annan adress."
+        },
+        "no_delivery_strategy_available": "Din beställning kan inte skickas till den valda adressen. Kontrollera att adressen är korrekt och försök igen, eller använd en annan adress.",
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Varorna i kundvagnen uppfyller inte pris- eller viktkraven för frakt. Uppdatera kundvagnen och försök igen.",
+        "shipping_method_not_available_updated": {
+          "one": "Varan du lade till skickas inte till din plats. Ta bort den för att gå till kassan eller kontakta butiken.",
+          "other": "En eller flera artiklar som du har lagt till levereras inte till din plats. Ta bort dem för att gå till kassan eller kontakta butiken."
+        },
+        "payment_method_not_supported": "Du kan inte använda den här betalningsmetoden för %{country}. Använd en annan betalningsmetod för att skicka till det här landet.",
+        "title": "Frakt inte tillgänglig",
+        "invalid_selected_address": "Den valda leveransadressen är inte giltig",
+        "invalid_selected_address_with_update_link": "Den valda leveransadressen är inte giltig. %{update_address_link} eller välj en annan adress",
+        "unavailable_addresses_only_countries": "Din beställning kan endast skickas till {{countriesList}}. Lägg till en ny adress för att fortsätta.",
+        "unavailable_address_country": "Leverans är inte tillgänglig i det land du har valt. Använd en annan adress för att fortsätta.",
+        "unavailable_selected_address": "Frakt är inte tillgänglig för den valda adressen",
+        "unavailable_selected_address_for_region": "Frakt är inte tillgänglig för {{region}}. Välj en annan adress för att fortsätta."
+      },
+      "shop_policies": {
+        "legal_notice": "Juridiskt meddelande",
+        "subscription_policy": "Avbokningar",
+        "contact_information": "Kontakt",
+        "purchase_options_cancellation_policy": "Avbokningar"
+      },
+      "shop_wallet": {
+        "description": "Välj vad du vill använda för det här köpet.",
+        "confirm": {
+          "label": "Bekräfta valet",
+          "success_message": "De valda plånboksuppgifterna är klara. Den här prototypen skickar inte tillbaka dem till partnerappen ännu.",
+          "retryable_error_title": "Urvalet har inte delats",
+          "retryable_error_message": "Försök bekräfta ditt plånboksval igen.",
+          "terminal_error_title": "Plånboksanslutningen avslutades"
+        },
+        "cancelled": {
+          "title": "Urvalet avbröts",
+          "message": "Inga plånboksuppgifter delades och inget köp gjordes."
+        },
+        "expired": {
+          "message": "Gå tillbaka till partnerappen och starta köpet igen."
+        },
+        "error": {
+          "title": "Din Shop Pay-plånbok kunde inte läsas in",
+          "message": "Återgå till Hatch och försök öppna Shop Pay igen."
+        }
+      },
+      "shop_pay_external": {
+        "title": "Shop Pay-betalning",
+        "errors": {
+          "problem_loading": "Det uppstod ett problem när Shop Pay skulle läsas in",
+          "try_again_later": "Kontrollera anslutningen eller stäng det här fönstret och försök igen om en liten stund.",
+          "checkout_has_expired": "Din betalningstid har gått ut. Stäng det här fönstret och försök genomföra köpet igen från {{shopName}}."
+        },
+        "return_to_store": "Återgå till {{shopName}}",
+        "return_to_store_simple": "Återgå till butiken"
       }
     },
     "attributes": {

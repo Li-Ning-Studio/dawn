@@ -2657,7 +2657,24 @@
           }
         },
         "out_of_stock_in_context_label": "Dette produkt er ikke tilgængeligt i dit land/din region.",
-        "unavailable_at_pickup_location_label": "Denne vare kan ikke afhentes på det valgte sted."
+        "unavailable_at_pickup_location_label": "Denne vare kan ikke afhentes på det valgte sted.",
+        "unpurchasable_product": {
+          "header": "Nogle varer blev fjernet fra din indkøbskurv.",
+          "message": "Disse varer er ikke tilgængelige for B2B-ordrer."
+        },
+        "unpurchasable_product_generic": {
+          "header": "Nogle varer blev fjernet fra din indkøbskurv."
+        },
+        "unshippable_product": {
+          "header": {
+            "one": "Ingen levering mulig for %{count} vare",
+            "other": "Ingen levering er tilgængelig for %{count} varer"
+          },
+          "message": {
+            "one": "Denne vare fjernes fra din kurv, fordi der ikke er nogen leveringsmetoder tilgængelige for din adresse.",
+            "other": "Disse varer fjernes fra din indkøbskurv, fordi der ikke er nogen leveringsmetoder tilgængelige for din adresse."
+          }
+        }
       },
       "split_delivery": {
         "accessibility": {
@@ -2721,6 +2738,157 @@
             "country_changed_heading": "Land ændret"
           },
           "banner": "Din leveringsmetode blev opdateret."
+        }
+      },
+      "store_credit_errors": {
+        "generic_error": "Der opstod et problem med din butikskredit. Prøv igen, eller genindlæs siden."
+      },
+      "subscriptions": {
+        "recurring_totals": "%{total_price} hver %{interval}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Første betaling %{total_price}"
+          },
+          "following_cycles": ", derefter %{total_price} hver %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", derefter %{count} betaling til %{total_price}"
+          }
+        }
+      },
+      "taxes": {
+        "vat_number": {
+          "field": {
+            "tooltip": "Validerer momsnummeret og anvender automatisk omvendt betalingspligt på ordrer, når betingelserne er opfyldt."
+          },
+          "domestic_order": "Omvendt betalingspligt gælder kun for grænseoverskridende EU-ordrer. Der opkræves almindelig moms på lokale ordrer.",
+          "status": {
+            "invalid_format": {
+              "at": "Østrigske momsnumre indeholder AT og 9 tegn",
+              "be": "Belgiske momsnumre indeholder BE og 10 tegn.",
+              "bg": "Bulgarske momsnumre indeholder BG og 9-10 tegn",
+              "hr": "Kroatiske momsnumre indeholder HR og 11 tegn",
+              "cy": "Cypriotiske momsnumre indeholder CY og 9 tegn",
+              "cz": "Tjekkiske momsnumre indeholder CZ og 8-10 tegn",
+              "dk": "Danske momsnumre indeholder DK og 8 tegn",
+              "ee": "Estiske momsnumre indeholder EE og 9 tegn",
+              "fi": "Finske momsnumre indeholder FI og 8 tegn",
+              "fr": "Franske momsnumre indeholder FR og 11 tegn.",
+              "de": "Tyske momsnumre indeholder DE og 9 tegn.",
+              "gr": "Græske momsnumre indeholder EL og 9 tegn",
+              "hu": "Ungarske momsnumre indeholder HU og 8 tegn",
+              "ie": "Irske momsnumre indeholder IE og 8-9 tegn",
+              "it": "Italienske momsnumre indeholder IT og 11 tegn",
+              "lv": "Lettiske momsnumre indeholder LV og 11 tegn",
+              "lt": "Litauiske momsnumre indeholder LT og 9-12 tegn",
+              "nl": "Hollandske momsnumre indeholder NL og 12 tegn",
+              "pl": "Polske momsnumre indeholder PL og 10 tegn",
+              "pt": "Portugisiske momsnumre indeholder PT og 9 tegn",
+              "ro": "Rumænske momsnumre indeholder RO og 10 tegn",
+              "sk": "Slovakiske momsnumre indeholder SK og 10 tegn",
+              "si": "Slovenske momsnumre indeholder SI og 8 tegn",
+              "es": "Spanske momsnumre indeholder ES og 9 tegn",
+              "se": "Svenske momsnumre indeholder SE og 12 tegn.",
+              "gb": "Britiske momsnumre indeholder GB eller XI og består af 5-12 tegn."
+            },
+            "invalid_number": {
+              "mt": "Indtast et gyldigt maltesisk momsnummer",
+              "si": "Indtast et gyldigt slovensk momsnummer"
+            },
+            "service_unavailable": "Valideringstjenesten er ikke tilgængelig.",
+            "service_error": "Valideringstjenesten er ikke tilgængelig."
+          },
+          "accessibility": {
+            "status": {
+              "validating": "Validering af momsnummer er i gang",
+              "applied": "Momsfritagelse er blevet anvendt",
+              "domestic": "Momafritagelse er ikke anvendt",
+              "invalid_number": "Momsefritagelse mislykkedes",
+              "service_unavailable": "Kunne ikke bekræfte momsfritagelsen",
+              "service_error": "Kunne ikke bekræfte momsfritagelsen"
+            }
+          }
+        }
+      },
+      "thank_you": {
+        "confirmation_email_sent_text": "En bekræftelsesmail er sendt til %{email}",
+        "failed_pending_payment_page_title": "Der er et problem med din betaling",
+        "customer_information_title": "Bestillingsoplysninger",
+        "contact_information_title": "Kontaktoplysninger",
+        "cashback_notice": "Du får din cashback efter 30 dage",
+        "company_location_title": "Placering",
+        "company_tracking_number": "%{company} sporingsnummer:",
+        "estimated_arrival": "Forventet leveringsdato:",
+        "estimated_delivery": "Nuværende forventede leveringstid:",
+        "items_fulfilled_by_store": {
+          "one": "Varer, du har købt, kommer fra %{remote_shop_name}.",
+          "other": "Varer, du har købt, kommer fra andre butikker."
+        },
+        "gift_card_confirmation_by_text": "Hvis du ikke har modtaget det, så send teksten igen eller kontakt os.",
+        "gift_card_confirmation_by_email": "Hvis du ikke har modtaget den, kan du sende e-mailen igen eller kontakte os.",
+        "hsa_qualification": {
+          "review_pending": "Vi gennemgår din helbredsundersøgelse. Din betaling bliver trukket, når dit brev om medicinsk nødvendighed er udstedt. Du modtager snart en bekræftelsesmail.",
+          "review_pending_pickup": "Vi gennemgår din sundhedsundersøgelse. Din betaling bliver trukket, når din lægefaglige nødvendighedserklæring er udstedt."
+        },
+        "checkout_on_remote_shop_link_text": "Gå til betaling hos %{remoteShopName}",
+        "checkout_on_another_store": "Se i en anden butik",
+        "confirmed_title": "Din ordre er bekræftet.",
+        "confirmed_description": "Vi har modtaget din ordre og er ved at gøre den klar. Kom tilbage til denne side for at få opdateringer om din forsendelsesstatus.",
+        "in_transit_description": "Du modtager opdateringer om dens fremskridt.",
+        "in_transit_description_days": "Du bør modtage din ordre inden for de næste %{number} dage.",
+        "in_transit_description_today": "Du bør modtage din ordre i dag.",
+        "in_transit_description_tomorrow": "Du bør modtage din ordre i morgen.",
+        "attempted_delivery": "Levering forsøgt",
+        "attempted_delivery_title": "Der blev gjort et forsøg på at levere din ordre",
+        "attempted_delivery_description_html": "Et forsøg på at levere din ordre mislykkedes. %{contact_us} for at aftale et nyt leveringsforsøg.",
+        "attempted_delivery_local_title": "Mislykket levering",
+        "attempted_delivery_local_description_html": "Vi kunne ikke levere din ordre. Kontakt %{contact_us} for at aftale en ny levering.",
+        "delivered_title": "Din ordre er blevet leveret.",
+        "delivered_description_html": "Din ordre er blevet leveret til den adresse, du har oplyst. Hvis du ikke har modtaget den, eller hvis du har andre problemer, %{contact_us}.",
+        "delivered_local_title": "Din ordre er blevet leveret.",
+        "contact_us": "Kontakt os",
+        "contact_us_lowercase": "kontakt os",
+        "failed_contact_merchant": "Kontakt %{company} for at arrangere levering.",
+        "login_title": "Log ind for at se alle ordreoplysninger",
+        "login_description": "Du kan finde dit ordrenummer på kvitteringen, du har modtaget via e-mail.",
+        "login_description_phone": "Du kan finde dit ordrenummer i kvitteringen, du har modtaget via sms.",
+        "login_not_customer_html": "Er du ikke %{name}? Du kan %{link}",
+        "login_reorder_link_text": {
+          "one": "Køb også dette produkt"
+        },
+        "cancelled_title": "Din ordre er blevet annulleret.",
+        "customer_validation_error": "Indtast en gyldig e-mailadresse eller et ordrenummer.",
+        "fulfillment": {
+          "unfulfilled_table_title": "Varer klargøres til afsendelse"
+        },
+        "gift_card_sent_confirmation": "Gavekort sendt",
+        "breadcrumbs_in_review": "Til gennemsyn",
+        "first_payment_complete": "Første betaling gennemført",
+        "company_location_section_title": "Virksomhed og placering",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Du modtager en besked med dit gavekort om et par minutter.",
+          "other": "Du modtager en tekstbesked med dine gavekort om et par minutter."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Du modtager en e-mail med dit gavekort om et par minutter.",
+          "other": "Du modtager en e-mail med dine gavekort om et par minutter."
+        },
+        "gift_card_email_title": {
+          "one": "Gavekortet blev sendt via e-mail.",
+          "other": "Gavekort blev sendt via e-mail"
+        },
+        "gift_card_text_title": {
+          "one": "Gavekortet blev sendt via sms.",
+          "other": "Gavekort blev sendt via sms"
+        },
+        "gift_card_resent_confirmation": {
+          "one": "Gavekortet blev sendt igen.",
+          "other": "Gavekortene er blevet sendt igen."
+        },
+        "gift_card_resend_failure": {
+          "one": "Der opstod et problem med at sende dit gavekort igen. Prøv igen, eller kontakt os.",
+          "other": "Der opstod et problem med at gensende dine gavekort. Prøv igen, eller kontakt os."
         }
       }
     },
