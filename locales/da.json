@@ -3048,7 +3048,8 @@
           "sold_out": {
             "heading": "Din kurv er udsolgt",
             "no_storefront_body": "Den vare, du ønsker at købe, er desværre ikke længere tilgængelig.",
-            "link": "Tilbage til butikken"
+            "link": "Tilbage til butikken",
+            "storefront_body": "Gå tilbage til butikken for at fortsætte med at handle"
           }
         },
         "estimated_wait_time": {
@@ -3059,7 +3060,99 @@
         "footer": {
           "heading": "Opdater ikke denne side, den opdateres automatisk.",
           "body": "Varerne i din kurv er ikke reserveret, før du gennemfører købet."
+        },
+        "too_many_attempts": {
+          "description": "Prøv igen om et par minutter."
+        },
+        "line_to_check_out": "Du står i kø for at betale",
+        "merchandise": {
+          "available": "Tilgængelig"
+        },
+        "time_to_checkout_title": "Det er tid til at betale - {{shopName}}"
+      },
+      "ucp": {
+        "totals": {
+          "items_discount": "Vare-rabatter",
+          "discount": "Mængderabatter",
+          "fulfillment": "Forsendelse",
+          "duty": "Pligt",
+          "total": "Total"
+        },
+        "validation_errors": {
+          "invalid_gid": "er ikke et gyldigt %{type} GID (modtog: %{value})",
+          "missing_destination_country": "Leveringsmetodens destinationsadresse address_country mangler",
+          "unsupported_quantity_unit": "Kun mængder målt i stk. (C62) med skala 0 understøttes. Brug denne enhed, eller udelad denne værdi."
         }
+      },
+      "vaulted": {
+        "change_button": "Ændr"
+      },
+      "tips": {
+        "description": "Vis din støtte til holdet hos %{shop_name}",
+        "presets_description": "Vælg en drikkepengeprocent",
+        "custom_label": "Tilpasset tip",
+        "update_tip": "Opdater tip",
+        "message": "Tak, det sætter vi pris på.",
+        "not_available_with_spi": "Ikke tilgængelig med Shop Pay-afbetaling"
+      },
+      "wallets": {
+        "deceleration": {
+          "one_more_step_to_complete_order": "Ét trin mere for at gennemføre din bestilling",
+          "one_more_step": "Et skridt mere...",
+          "split_delivery_notice": "Din ordre indeholder varer til forsendelse og afhentning. Gennemgå dine leveringsoplysninger, og færdiggør derefter din ordre.",
+          "pickup_only_notice": "Gennemgå afhentningsstedet, og færdiggør derefter din ordre."
+        },
+        "errors": {
+          "discount_code": "Denne rabatkode kan ikke anvendes. Tjek din kode, og prøv igen.",
+          "detour": {
+            "price_change": "Priserne på nogle varer er ændret. Luk {{walletName}} for at gennemgå din ordre, og prøv igen.",
+            "queue": "Du er blevet sat i kø for at gå til kassen. Luk {{walletName}} for at fortsætte."
+          },
+          "invalid": {
+            "email": "Indtast en gyldig e-mailadresse",
+            "zone": "Indtast en gyldig stat/provins",
+            "billing_zone": "Indtast en gyldig stat/provins for faktureringsadressen",
+            "emirate": "Indtast et gyldigt emirat",
+            "postal_code": "Indtast et gyldigt postnummer",
+            "billing_phone": "Indtast et gyldigt telefonnummer til faktureringsadressen",
+            "reduction_code": "Indtast en gyldig rabatkode eller et gavekort",
+            "billing_must_match_shipping": "Skal stemme overens med leveringsadressen",
+            "billing_zip": "Indtast et gyldigt postnummer til faktureringsadressen"
+          },
+          "missing": {
+            "billing_first_name": "Indtast et fornavn til faktureringsadressen",
+            "address1": "Indtast en adresse",
+            "billing_address1": "Indtast en faktureringsadresse",
+            "address2": "Indtast lejlighed, suite osv.",
+            "billing_address2": "Indtast lejlighed, suite osv. i faktureringsadressen.",
+            "city": "Indtast en by",
+            "billing_city": "Indtast byen for faktureringsadressen",
+            "billing_province": "Vælg en stat/provins til faktureringsadressen",
+            "billing_zip": "Indtast postnummer til faktureringsadressen"
+          },
+          "formatting": {
+            "name_contains_emojis": "Fjern emoji fra dit navn",
+            "postal_code_contains_emoji": "Fjern emojis fra dit postnummer",
+            "last_name_too_long": "Efternavnet indeholder for mange bogstaver."
+          }
+        }
+      },
+      "units": {
+        "milliliter": "milliliter",
+        "liter": "L",
+        "pound": "lb",
+        "inch": "i",
+        "foot": "ft",
+        "square_foot": "ft²"
+      },
+      "tooltip": {
+        "accessibility_label_context": "Flere oplysninger om %{context}",
+        "additional_payment_methods": "Yderligere betalingsmetoder"
+      },
+      "too_many_requests": {
+        "title": "For mange betalingsforsøg ved kassen",
+        "body": "Vent et par minutter, og prøv igen fra din indkøbskurv.",
+        "return_to_cart": "Gå tilbage til kurven"
       }
     },
     "attributes": {

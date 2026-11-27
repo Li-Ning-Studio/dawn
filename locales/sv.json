@@ -2722,7 +2722,9 @@
               "es": "Spanska momsregistreringsnummer innehåller ES och 9 tecken.",
               "se": "Svenska momsregistreringsnummer innehåller SE och 12 tecken.",
               "gb": "Brittiska momsregistreringsnummer innehåller GB eller XI och består av 5-12 tecken."
-            }
+            },
+            "service_unavailable": "Valideringstjänsten är inte tillgänglig.",
+            "service_error": "Valideringstjänsten är inte tillgänglig."
           },
           "accessibility": {
             "status": {
@@ -2731,8 +2733,185 @@
               "service_unavailable": "Det går inte att verifiera momsbefrielsen",
               "service_error": "Det går inte att verifiera momsbefrielsen"
             }
-          }
+          },
+          "vaulted": "Momsnummer: %{number}"
         }
+      },
+      "thank_you": {
+        "confirmation_email_sent_text": "Ett bekräftelsemejl har skickats till %{email}",
+        "cancelled_page_title": "Beställningen har avbrutits",
+        "failed_pending_payment_page_title": "Det är problem med din betalning",
+        "customer_information_title": "Orderinformation",
+        "cashback_notice": "Du får din cashback efter 30 dagar.",
+        "estimated_arrival": "Beräknat leveransdatum:",
+        "estimated_delivery": "Aktuell beräknad leveranstid:",
+        "confirmed_items_count": "%{confirmed_count} av %{total_count} objekt är bekräftade",
+        "items_fulfilled_by_store": {
+          "one": "Varor som du har köpt kommer från %{remote_shop_name}.",
+          "other": "Varor du har köpt kommer från andra butiker."
+        },
+        "gift_card_confirmation_by_text": "Om du inte fick det, skicka texten igen eller kontakta oss.",
+        "gift_card_confirmation_by_email": "Om du inte fick det, skicka mejlet igen eller kontakta oss.",
+        "hsa_qualification": {
+          "review_pending": "Vi granskar din hälsoundersökning. Din betalning dras när ditt medicinska intyg har utfärdats. Du får snart en bekräftelse via e-post.",
+          "review_pending_pickup": "Vi granskar din hälsoundersökning. Betalningen dras när ditt medicinska nödvändighetsintyg har utfärdats."
+        },
+        "checkout_again": "Gå till kassan igen",
+        "checkout_on_remote_shop_link_text": "Slutför köpet på %{remoteShopName}",
+        "checkout_on_another_store": "Gå till kassan i en annan butik",
+        "confirmed_title": "Din beställning är bekräftad.",
+        "confirmed_description": "Vi har tagit emot din beställning och förbereder den. Kom tillbaka till den här sidan för uppdateringar om din försändelse.",
+        "confirmed_orders_title": "Dina beställningar är bekräftade.",
+        "in_transit_title": "Din beställning är på väg.",
+        "in_transit_description": "Du får uppdateringar om hur det går.",
+        "in_transit_description_days": "Du bör få din beställning inom de närmaste %{number} dagarna.",
+        "in_transit_description_today": "Du bör få din beställning idag.",
+        "in_transit_description_tomorrow": "Du bör få din beställning inom ett dygn.",
+        "attempted_delivery": "Leveransförsök",
+        "attempted_delivery_title": "Ett försök gjordes att leverera din beställning",
+        "attempted_delivery_description_html": "Ett försök gjordes att leverera din beställning, men det misslyckades. %{contact_us} för att ordna ett nytt leveransförsök.",
+        "attempted_delivery_local_description_html": "Vi kunde inte leverera din beställning. Kontakta %{contact_us} för att boka en ny leverans.",
+        "delivered_title": "Din beställning har levererats",
+        "delivered_description_html": "Din beställning har levererats till adressen du angav. Om du inte har fått den eller har några andra problem, %{contact_us}.",
+        "delivered_local_title": "Din beställning har levererats",
+        "delivered_local_description_html": "Har du inte fått din beställning? %{let_us_know}.",
+        "failed_title": "Din beställning kunde inte levereras.",
+        "failed_contact_merchant": "Kontakta %{company} för att ordna leveransen.",
+        "failed_contact_merchant_no_company": "Kontakta oss för att ordna leveransen.",
+        "let_us_know": "Meddela oss",
+        "login_title": "Logga in för att se alla orderuppgifter",
+        "login_description": "Du hittar ditt ordernummer i kvittot som du fick via e-post.",
+        "login_description_phone": "Du hittar ditt ordernummer i kvittot som du fick via sms.",
+        "login_reorder_link_text": {
+          "one": "köp även den här produkten",
+          "other": "Köp även dessa produkter"
+        },
+        "customer_information_hidden_fields_message": "Logga in för att se all kundinformation.",
+        "cancelled_title": "Din beställning har avbokats",
+        "cancelled_description": "Din beställning avbröts den %{date}. Kontakta oss om du har några frågor.",
+        "customer_validation_error": "Ange en giltig e-postadress eller ett giltigt ordernummer.",
+        "fulfillment": {
+          "fulfilled_table_title": "Artiklar i den här försändelsen",
+          "unfulfilled_table_title": "Varor som förbereds för leverans",
+          "quantity_label": "Antal"
+        },
+        "first_payment_complete": "Första betalningen är genomförd",
+        "in_store_purchase": "Köp i butik",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Du får ett sms med ditt presentkort om några minuter.",
+          "other": "Du får ett sms med dina presentkort om några minuter."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Du får ett mejl med ditt presentkort om några minuter.",
+          "other": "Du får ett mejl med dina presentkort om några minuter."
+        },
+        "gift_card_email_title": {
+          "other": "Presentkort skickades via e-post"
+        },
+        "gift_card_text_title": {
+          "other": "Presentkort skickades via sms"
+        },
+        "gift_card_resent_confirmation": {
+          "one": "Presentkortet skickades igen.",
+          "other": "Presentkorten har skickats igen."
+        },
+        "gift_card_resend_failure": {
+          "one": "Det gick inte att skicka ditt presentkort igen. Försök igen eller kontakta oss.",
+          "other": "Det gick inte att skicka dina presentkort igen. Försök igen eller kontakta oss."
+        },
+        "announcement": {
+          "expand": "Expandera",
+          "collapse": "Fäll ihop"
+        },
+        "return_to_store_link_label": "Fortsätt handla",
+        "page_title": "Tack, %{display_name}!",
+        "recommendations": {
+          "title": "Du kanske också gillar detta"
+        },
+        "purchase_order_number_title": "PO-nummer #%{purchase_order_number}",
+        "pickup_address_title": "Avhämtning vid",
+        "shipping_address_map_title": "Google Maps visar en nål på leveransadressen: %{address}",
+        "re-order": "Beställ samma artiklar igen",
+        "resend_gift_cards": "Skicka presentkort igen",
+        "order_status_confirmed_order_with_email": "Du får ett mejl när din beställning är klar.",
+        "order_status_confirmed_order_with_phone": "Du kan få ett meddelande när din beställning är klar.",
+        "order_status_confirmed_order_with_email_and_phone": "Du får ett mejl när din beställning är klar.",
+        "order_status_confirmed_order_with_email_payment": "Du gjorde en betalning för din beställning %{date}.",
+        "order_status_confirmed_order_with_phone_payment": "Du gjorde en betalning för din beställning %{date}.",
+        "order_status_confirmed_order_with_email_and_phone_payment": "Du gjorde en betalning för din beställning %{date}.",
+        "order_status_confirmed_order_with_email_pick_up": "Du får ett e-postmeddelande när din beställning är klar att hämtas.",
+        "order_status_confirmed_order_with_phone_pick_up": "Du får ett sms när din beställning är klar att hämtas.",
+        "order_status_confirmed_order_with_email_and_phone_pick_up": "Du får ett e-postmeddelande och ett sms när din beställning är klar att hämtas.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "Du får snart ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_payment": "Du får snart ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "Du får snart ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_email": "Du får snart ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_email_payment": "Du får snart ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "Du får snart ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_phone": "Du får snart ett bekräftelse-sms. Spåra din beställning i Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_payment": "Du får snart ett bekräftelse-sms. Spåra din beställning i Shop-appen.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_pick_up": "Du får snart ett bekräftelse-sms. Spåra din beställning i Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "När du har genomfört betalningen får du ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "När du har genomfört betalningen får du ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "När du har genomfört betalningen får du ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "När du har genomfört betalningen får du ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "När du har genomfört betalningen får du ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "När du har genomfört betalningen får du ett bekräftelsemejl. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "När du har slutfört betalningen får du en bekräftelse via sms. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "När du har slutfört betalningen får du en bekräftelse via sms. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "När du har slutfört betalningen får du en bekräftelse via sms. Spåra din beställning med Shop-appen.",
+        "order_status_payments_app_failed_pending_payment": "Du debiterades inte för din beställning. Gå tillbaka till din varukorg för att granska beställningen och betala igen.",
+        "order_status_payments_app_failed_pending_payment_payment": "Du debiterades inte för din beställning. Gå tillbaka till din varukorg för att granska beställningen och betala igen.",
+        "order_status_payments_app_failed_pending_payment_pick_up": "Du debiterades inte för din beställning. Gå tillbaka till din varukorg för att granska beställningen och betala igen.",
+        "order_status_confirmed_order_local": "Vi förbereder din beställning för leverans.",
+        "order_status_confirmed_order_local_pick_up": "Vi förbereder din beställning.",
+        "order_status_confirmed_order_local_payment": "Vi gör i ordning din beställning.",
+        "order_status_updates_with_email": "Du får uppdateringar om frakt och leverans via e-post.",
+        "order_status_updates_with_phone": "Du kan få uppdateringar om frakt och leverans via sms.",
+        "order_status_updates_with_email_and_phone": "Du får uppdateringar om frakt och leverans via e-post.",
+        "order_status_confirmed_with_installments_payment_return": "Rikta uppmärksamheten tillbaka mot säljaren.",
+        "order_status_confirmed_with_installments_payment_confirm": "Du får snart ett bekräftelsemejl med ditt ordernummer och information om din avbetalningsplan.",
+        "ready_for_pickup_title": "Din beställning är klar att hämtas.",
+        "ready_for_pickup_description": "Din beställning är klar att hämtas. Ta med din orderbekräftelse när du hämtar beställningen.",
+        "ready_for_delivery_title": "Din beställning är redo för leverans",
+        "ready_for_delivery_description": "Vi har förberett din beställning.",
+        "order_updates_title": "Orderuppdateringar",
+        "order_updates_current_step_prefix": "Aktuellt steg:",
+        "order_updates_past_step_prefix": "Föregående steg:",
+        "order_updates_upcoming_step_prefix": "Kommande steg:",
+        "no_tracking_number": "Det finns inget spårningsnummer för den här beställningen.",
+        "out_for_delivery": "Ute för leverans",
+        "out_for_delivery_title": "Din beställning är ute för leverans",
+        "out_for_delivery_description_html": "Din beställning är på väg och bör komma fram idag. Om den inte levereras inom de närmaste 2 dagarna, %{contact_us}.",
+        "out_for_delivery_local_title": "Din beställning är ute för leverans",
+        "out_for_delivery_local_description_html": "Din beställning kommer snart.",
+        "picked_up_title": "Din beställning har hämtats upp",
+        "picked_up_description_html": "Din beställning hämtades på %{location_name} den %{date}.",
+        "non_shippable_title": "Din beställning är klar.",
+        "marker": {
+          "current": "Aktuell leveransplats"
+        },
+        "pickup_map_marker": {
+          "callout": "Hämta på {{location}}",
+          "directions_link_accessibility_label": "Hämta på {{location}}, få vägbeskrivning"
+        },
+        "pick_up_in_store_marker": {
+          "current": "Aktuell leveransplats",
+          "shipping": "Upphämtningsplats"
+        },
+        "order_updates_description_missing": "Du får inga leveransuppdateringar.",
+        "order_updates_submit_subscription": "Skicka in",
+        "qr_code": {
+          "title": "Spåra på din telefon"
+        },
+        "missing_shipping_address_banner": {
+          "title": "Beställningen har ingen leveransadress."
+        },
+        "ready_for_delivery": "Klar för leverans",
+        "order_updates_subscribe_to_email_notifications_failed": "Vi kan inte spara den här e-postadressen för uppdateringar. Försök igen eller använd en annan e-postadress.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "E-postadressen du angav finns redan.",
+        "manage_order_label": "Hantera din beställning",
+        "resend_gift_cards_by_text": "Skicka textmeddelandet igen"
       }
     },
     "attributes": {
