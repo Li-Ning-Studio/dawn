@@ -2631,7 +2631,27 @@
             "mixed_issues_title": "Certains articles ne sont plus disponibles."
           }
         },
-        "unavailable_at_pickup_location_label": "Cet article n’est pas disponible pour le retrait à l’emplacement sélectionné."
+        "unavailable_at_pickup_location_label": "Cet article n’est pas disponible pour le retrait à l’emplacement sélectionné.",
+        "unpurchasable_product": {
+          "title": "Produit indisponible à l’achat"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Produit indisponible à l’achat"
+        },
+        "unfulfillable_product": {
+          "title": "Livraison non disponible"
+        },
+        "unshippable_product": {
+          "header": {
+            "one": "Aucune livraison disponible pour %{count} article",
+            "other": "Aucune livraison disponible pour %{count} articles"
+          },
+          "message": {
+            "one": "Cet article sera retiré de votre panier, car aucune méthode de livraison n’est disponible à votre adresse.",
+            "other": "Ces articles seront retirés de votre panier, car aucun mode de livraison n’est disponible pour votre adresse."
+          },
+          "status_column_header": "Pas de livraison"
+        }
       },
       "split_delivery": {
         "accessibility": {
@@ -2686,6 +2706,105 @@
             "content": "Vos lieux de retrait et d’expédition doivent se trouver dans le même pays. Changer de pays réinitialisera tous les articles en mode expédition."
           },
           "banner": "Votre mode de livraison a été mis à jour."
+        }
+      },
+      "tax": {
+        "attribution": {
+          "orders_sold_by_shop_marketplace": "Commandes traitées via la plateforme Shop"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "other": "%{count} jours"
+          },
+          "week": {
+            "other": "%{count} semaines"
+          },
+          "month": {
+            "other": "%{count} mois"
+          },
+          "year": {
+            "one": "année",
+            "other": "%{count} ans"
+          }
+        },
+        "recurring_totals": "%{total_price} tous les %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Premier paiement %{total_price_with_discount}, puis %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Premier paiement %{total_price}",
+            "other": "Les %{count} premiers paiements de %{total_price} chacun"
+          },
+          "following_cycles": ", puis %{total_price} tous les %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", puis %{count} paiement de %{total_price}",
+            "other": ", puis %{count} paiements de %{total_price} chacun"
+          }
+        }
+      },
+      "taxes": {
+        "tax_details": "Détails fiscaux supplémentaires",
+        "vat_number": {
+          "field": {
+            "tooltip": "Valide le numéro de TVA et applique automatiquement l’autoliquidation aux commandes admissibles."
+          },
+          "badge": "Numéro de TVA : %{number}",
+          "domestic_order": "L’exonération de TVA autoliquidée s’applique uniquement aux commandes transfrontalières au sein de l’UE. La TVA au taux normal est appliquée aux commandes locales.",
+          "status": {
+            "invalid_format": {
+              "at": "Les numéros de TVA autrichiens contiennent AT et 9 caractères",
+              "be": "Les numéros de TVA belges contiennent BE et 10 caractères.",
+              "bg": "Les numéros de TVA bulgares contiennent BG et 9 à 10 caractères.",
+              "hr": "Les numéros de TVA croates contiennent HR et 11 caractères.",
+              "cy": "Les numéros de TVA chypriotes contiennent CY et 9 caractères.",
+              "cz": "Les numéros de TVA de la République tchèque contiennent CZ et 8 à 10 caractères.",
+              "dk": "Les numéros de TVA danois contiennent DK et 8 caractères.",
+              "ee": "Les numéros de TVA estoniens contiennent EE et 9 caractères.",
+              "fi": "Les numéros de TVA finlandais contiennent FI et 8 caractères.",
+              "fr": "Les numéros de TVA français contiennent FR et 11 caractères.",
+              "de": "Les numéros de TVA allemands contiennent DE et 9 caractères.",
+              "gr": "Les numéros de TVA grecs contiennent « EL » et 9 caractères.",
+              "hu": "Les numéros de TVA hongrois contiennent HU et 8 caractères.",
+              "ie": "Les numéros de TVA irlandais contiennent IE et 8 à 9 caractères.",
+              "it": "Les numéros de TVA italiens contiennent IT et 11 caractères",
+              "lv": "Les numéros de TVA lettons contiennent LV et 11 caractères.",
+              "lt": "Les numéros de TVA de Lituanie contiennent LT et 9 à 12 caractères.",
+              "lu": "Les numéros de TVA luxembourgeois contiennent LU et 8 caractères",
+              "mt": "Les numéros de TVA maltais contiennent MT et 8 caractères",
+              "nl": "Les numéros de TVA néerlandais contiennent NL et 12 caractères.",
+              "pl": "Les numéros de TVA polonais contiennent PL et 10 caractères.",
+              "pt": "Les numéros de TVA portugais contiennent PT et 9 caractères.",
+              "ro": "Les numéros de TVA roumains contiennent RO et 10 caractères.",
+              "sk": "Les numéros de TVA slovaques contiennent SK et 10 caractères.",
+              "si": "Les numéros de TVA slovènes contiennent SI et 8 caractères.",
+              "es": "Les numéros de TVA espagnols contiennent ES et 9 caractères.",
+              "se": "Les numéros de TVA suédois contiennent SE et 12 caractères.",
+              "gb": "Les numéros de TVA du Royaume-Uni contiennent GB ou XI et comportent de 5 à 12 caractères."
+            },
+            "invalid_number": {
+              "be": "Saisissez un numéro de TVA belge valide.",
+              "gr": "Saisissez un numéro de TVA grec valide.",
+              "hu": "Saisissez un numéro de TVA hongrois valide.",
+              "lu": "Saisissez un numéro de TVA luxembourgeois valide.",
+              "mt": "Saisissez un numéro de TVA maltais valide.",
+              "nl": "Saisissez un numéro de TVA valide aux Pays-Bas",
+              "gb": "Saisissez un numéro de TVA britannique valide."
+            }
+          },
+          "accessibility": {
+            "status": {
+              "validating": "La validation du numéro de TVA est en cours.",
+              "valid": "Le numéro de TVA est valide.",
+              "applied": "L’exonération de TVA a été appliquée.",
+              "domestic": "Exonération de TVA non appliquée",
+              "invalid_number": "Échec de l’exonération de TVA",
+              "service_unavailable": "Impossible de vérifier l’exonération de TVA",
+              "service_error": "Impossible de vérifier l’exonération de TVA"
+            }
+          }
         }
       }
     },

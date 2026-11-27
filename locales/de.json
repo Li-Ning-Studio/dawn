@@ -2832,7 +2832,35 @@
             "mixed_issues_title": "Einige Artikel sind nicht mehr verfügbar."
           }
         },
-        "out_of_stock_in_context_label": "Dieses Produkt ist in deinem Land/deiner Region nicht verfügbar."
+        "out_of_stock_in_context_label": "Dieses Produkt ist in deinem Land/deiner Region nicht verfügbar.",
+        "unpurchasable_product": {
+          "title": "Nicht käufliches Produkt",
+          "header": "Einige Artikel wurden aus Ihrem Warenkorb entfernt",
+          "message": "Diese Artikel sind für B2B-Bestellungen nicht verfügbar."
+        },
+        "unpurchasable_product_generic": {
+          "title": "Nicht käufliches Produkt",
+          "header": "Einige Artikel wurden aus Ihrem Warenkorb entfernt"
+        },
+        "unfulfillable_product": {
+          "title": "Lieferung nicht verfügbar",
+          "default_message": {
+            "one": "Die ausgewählte Versandart ist für diesen Artikel nicht mehr verfügbar.",
+            "other": "Die ausgewählte Versandart ist für diese Artikel nicht mehr verfügbar."
+          }
+        },
+        "unshippable_product": {
+          "title": "Keine Lieferung verfügbar",
+          "header": {
+            "one": "Keine Lieferung für %{count} Artikel verfügbar",
+            "other": "Keine Lieferung für %{count} Artikel verfügbar"
+          },
+          "message": {
+            "one": "Dieser Artikel wird aus Ihrem Warenkorb entfernt, da für Ihre Adresse keine Versandarten verfügbar sind.",
+            "other": "Diese Artikel werden aus Ihrem Warenkorb entfernt, da für Ihre Adresse keine Versandarten verfügbar sind."
+          },
+          "status_column_header": "Keine Lieferung"
+        }
       },
       "shop_wallet_button": {
         "label": "Mit Shop Pay bezahlen"
@@ -2880,6 +2908,109 @@
             "content": "Deine Abhol- und Versandstandorte müssen sich im selben Land befinden. Wenn du das Land änderst, werden alle Artikel auf Versand umgestellt."
           },
           "banner": "Ihre Liefermethode wurde aktualisiert."
+        }
+      },
+      "tax": {
+        "attribution": {
+          "orders_sold_by_shop_marketplace": "Über den Shop-Marktplatz abgewickelte Bestellungen",
+          "orders_sold_by_shop_name": "Bestellungen, verkauft von %{shop_name}"
+        }
+      },
+      "store_credit_errors": {
+        "generic_error": "Es gab ein Problem mit deinem Guthaben. Versuche es erneut oder lade die Seite neu."
+      },
+      "subscriptions": {
+        "recurring_totals": "%{total_price} alle %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Erste Zahlung %{total_price_with_discount}, danach %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "other": "Erste %{count} Zahlungen zu je %{total_price}"
+          },
+          "following_cycles": ", dann %{total_price} alle %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", dann %{count} Zahlung über %{total_price}",
+            "other": ", dann %{count} Zahlungen zu je %{total_price}"
+          }
+        }
+      },
+      "taxes": {
+        "tax_details": "Zusätzliche Steuerangaben",
+        "vat_number": {
+          "field": {
+            "tooltip": "Prüft die Umsatzsteuer-Identifikationsnummer und wendet bei berechtigten Bestellungen automatisch das Reverse-Charge-Verfahren an."
+          },
+          "add": "Eine Umsatzsteuer-Identifikationsnummer hinzufügen",
+          "badge": "Umsatzsteuer-Identifikationsnummer: %{number}",
+          "domestic_order": "Die Befreiung von der Umsatzsteuer im Reverse-Charge-Verfahren gilt nur für grenzüberschreitende Bestellungen innerhalb der EU. Bei Bestellungen im Inland wird die reguläre Umsatzsteuer berechnet.",
+          "status": {
+            "invalid_format": {
+              "at": "Österreichische Umsatzsteuer-Identifikationsnummern enthalten AT und 9 Zeichen.",
+              "be": "Belgische Umsatzsteuer-Identifikationsnummern enthalten BE und 10 Zeichen",
+              "bg": "Bulgarische Umsatzsteuer-Identifikationsnummern enthalten BG und 9-10 Zeichen.",
+              "hr": "Kroatische Umsatzsteuer-Identifikationsnummern enthalten HR und 11 Zeichen.",
+              "cy": "Zyprische Umsatzsteuer-Identifikationsnummern enthalten CY und 9 Zeichen",
+              "cz": "Tschechische Umsatzsteuer-Identifikationsnummern enthalten CZ und 8-10 Zeichen",
+              "dk": "Dänische Umsatzsteuer-Identifikationsnummern enthalten DK und 8 Zeichen.",
+              "ee": "Estnische Umsatzsteuer-Identifikationsnummern enthalten EE und 9 Zeichen",
+              "fi": "Finnische Umsatzsteuer-Identifikationsnummern enthalten FI und 8 Zeichen",
+              "fr": "Französische Umsatzsteuer-Identifikationsnummern enthalten FR und 11 Zeichen.",
+              "de": "Deutsche Umsatzsteuer-Identifikationsnummern enthalten DE und 9 Zeichen.",
+              "gr": "Griechische Umsatzsteuer-Identifikationsnummern enthalten EL und 9 Zeichen",
+              "hu": "Ungarische Umsatzsteuer-Identifikationsnummern enthalten HU und 8 Zeichen.",
+              "ie": "Irische Umsatzsteuer-Identifikationsnummern enthalten IE und 8-9 Zeichen",
+              "it": "Italienische Umsatzsteuer-Identifikationsnummern enthalten „IT“ und 11 Zeichen.",
+              "lv": "Lettische Umsatzsteuer-Identifikationsnummern enthalten LV und 11 Zeichen.",
+              "lt": "Litauische Umsatzsteuer-Identifikationsnummern enthalten LT und 9-12 Zeichen.",
+              "lu": "Luxemburger Umsatzsteuer-Identifikationsnummern enthalten LU und 8 Zeichen",
+              "mt": "Maltesische Umsatzsteuer-Identifikationsnummern enthalten MT und 8 Zeichen.",
+              "nl": "Niederländische Umsatzsteuer-Identifikationsnummern enthalten NL und 12 Zeichen",
+              "pl": "Polnische Umsatzsteuer-Identifikationsnummern enthalten PL und 10 Zeichen.",
+              "pt": "Portugiesische Umsatzsteuer-Identifikationsnummern enthalten PT und 9 Zeichen.",
+              "ro": "Rumänische Umsatzsteuer-Identifikationsnummern enthalten RO und 10 Zeichen.",
+              "sk": "Slowakische Umsatzsteuer-Identifikationsnummern enthalten SK und 10 Zeichen",
+              "si": "Slowenische Umsatzsteuer-Identifikationsnummern enthalten SI und 8 Zeichen",
+              "es": "Spanische Umsatzsteuer-Identifikationsnummern enthalten ES und 9 Zeichen.",
+              "se": "Schwedische Umsatzsteuer-Identifikationsnummern enthalten SE und 12 Zeichen.",
+              "gb": "Umsatzsteuer-Identifikationsnummern des Vereinigten Königreichs enthalten GB oder XI und 5-12 Zeichen"
+            },
+            "invalid_number": {
+              "at": "Geben Sie eine gültige österreichische Umsatzsteuer-Identifikationsnummer ein.",
+              "be": "Geben Sie eine gültige belgische Umsatzsteuer-Identifikationsnummer ein.",
+              "bg": "Geben Sie eine gültige bulgarische Umsatzsteuer-Identifikationsnummer ein.",
+              "hr": "Geben Sie eine gültige kroatische Umsatzsteuer-Identifikationsnummer ein",
+              "cy": "Geben Sie eine gültige zyprische Umsatzsteuer-Identifikationsnummer ein.",
+              "cz": "Geben Sie eine gültige tschechische Umsatzsteuer-Identifikationsnummer ein.",
+              "dk": "Geben Sie eine gültige dänische Umsatzsteuer-Identifikationsnummer ein.",
+              "ee": "Geben Sie eine gültige estnische Umsatzsteuer-Identifikationsnummer ein.",
+              "fi": "Geben Sie eine gültige finnische Umsatzsteuer-Identifikationsnummer ein.",
+              "fr": "Geben Sie eine gültige französische Umsatzsteuer-Identifikationsnummer ein.",
+              "de": "Geben Sie eine gültige deutsche Umsatzsteuer-Identifikationsnummer ein.",
+              "gr": "Geben Sie eine gültige griechische Umsatzsteuer-Identifikationsnummer ein.",
+              "hu": "Geben Sie eine gültige ungarische Umsatzsteuer-Identifikationsnummer ein.",
+              "ie": "Geben Sie eine gültige irische Umsatzsteuer-Identifikationsnummer ein.",
+              "it": "Geben Sie eine gültige italienische Umsatzsteuer-Identifikationsnummer ein.",
+              "lv": "Geben Sie eine gültige lettische Umsatzsteuer-Identifikationsnummer ein.",
+              "lt": "Geben Sie eine gültige litauische Umsatzsteuer-Identifikationsnummer ein.",
+              "lu": "Geben Sie eine gültige luxemburgische Umsatzsteuer-Identifikationsnummer ein.",
+              "mt": "Geben Sie eine gültige maltesische Umsatzsteuer-Identifikationsnummer ein.",
+              "nl": "Geben Sie eine gültige niederländische Umsatzsteuer-Identifikationsnummer ein",
+              "es": "Geben Sie eine gültige spanische Umsatzsteuer-Identifikationsnummer ein.",
+              "gb": "Geben Sie eine gültige britische Umsatzsteuer-Identifikationsnummer ein"
+            }
+          },
+          "accessibility": {
+            "status": {
+              "validating": "Die Umsatzsteuer-Identifikationsnummer wird überprüft.",
+              "valid": "Die Umsatzsteuer-Identifikationsnummer ist gültig.",
+              "applied": "Die Mehrwertsteuerbefreiung wurde angewendet.",
+              "domestic": "Mehrwertsteuerbefreiung nicht angewendet",
+              "invalid_number": "Mehrwertsteuerbefreiung fehlgeschlagen",
+              "service_unavailable": "Umsatzsteuerbefreiung konnte nicht bestätigt werden",
+              "service_error": "Umsatzsteuerbefreiung konnte nicht bestätigt werden"
+            }
+          }
         }
       }
     },

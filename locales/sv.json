@@ -2495,11 +2495,20 @@
           "message": "Inga plånboksuppgifter delades och inget köp gjordes."
         },
         "expired": {
-          "message": "Gå tillbaka till partnerappen och starta köpet igen."
+          "message": "Gå tillbaka till partnerappen och starta köpet igen.",
+          "title": "Den här plånbokssessionen har löpt ut."
         },
         "error": {
           "title": "Din Shop Pay-plånbok kunde inte läsas in",
           "message": "Återgå till Hatch och försök öppna Shop Pay igen."
+        },
+        "return_to_hatch": "Återgå till Hatch",
+        "ineligible": {
+          "message": "Inget av de sparade korten kan användas för det här köpet."
+        },
+        "revoked": {
+          "title": "Shop Pay är inte längre anslutet",
+          "message": "Återanslut Shop Pay i partnerappen innan du fortsätter."
         }
       },
       "shop_pay_external": {
@@ -2511,6 +2520,219 @@
         },
         "return_to_store": "Återgå till {{shopName}}",
         "return_to_store_simple": "Återgå till butiken"
+      },
+      "stock": {
+        "page_title": "Lagerproblem",
+        "title": "Tillfälligt slut i lager",
+        "quantity_column_header": "Antal",
+        "removed_from_cart_notice": "Borttagen från varukorgen",
+        "reduced_label": "Minskad",
+        "reduced_with_quantity_label": "Endast %{quantity_available} kvar",
+        "go_back_to_cart_button_label": "Gå tillbaka till min kundvagn",
+        "return_to_store_label": "Återgå till butiken",
+        "continue_cta_label": "Fortsätt till kassan",
+        "item_label": {
+          "one": "{{count}} föremål"
+        },
+        "empty_cart_label": "Din kundvagn är tom",
+        "quantity_update": {
+          "page_title": "Uppdatering av antal",
+          "title": "Uppdatering av antal",
+          "description": "Tillgängliga mängder för dessa artiklar har ändrats och uppdaterats i din varukorg."
+        },
+        "price_update": {
+          "description": "Priserna på dessa varor har ändrats och uppdaterats i din kundvagn."
+        },
+        "price_and_quantity_update": {
+          "title": "Pris- och kvantitetsuppdatering",
+          "description": "Priserna och de tillgängliga kvantiteterna för dessa artiklar har ändrats och uppdaterats i din varukorg."
+        },
+        "out_of_stock": {
+          "description": "Dessa varor är inte längre tillgängliga och kommer att tas bort från din kundvagn.",
+          "items_unavailable": "Vissa varor är inte längre tillgängliga och tas bort från din varukorg.",
+          "missing_items": {
+            "title": {
+              "one": "{{count}} vara är inte längre tillgänglig"
+            },
+            "some_available_notice": {
+              "one": "De återstående varorna kan fortfarande köpas. Den otillgängliga varan tas bort från kundvagnen.",
+              "other": "Återstående varor finns fortfarande tillgängliga för utcheckning. De otillgängliga varorna tas bort från kundvagnen."
+            },
+            "none_available_notice": {
+              "one": "Den här varan är inte längre tillgänglig och har tagits bort från din kundvagn.",
+              "other": "Dessa artiklar är inte längre tillgängliga och har tagits bort från din varukorg."
+            }
+          }
+        },
+        "unavailable_at_pickup_location_label": "Den här varan är inte tillgänglig för avhämtning på den valda platsen.",
+        "unpurchasable_product": {
+          "title": "Produkt som inte går att köpa",
+          "header": "Vissa varor har tagits bort från din varukorg",
+          "message": "Dessa artiklar är inte tillgängliga för B2B-beställningar."
+        },
+        "unpurchasable_product_generic": {
+          "title": "Produkt som inte går att köpa",
+          "header": "Vissa varor har tagits bort från din varukorg"
+        },
+        "unfulfillable_product": {
+          "title": "Leverans är inte tillgänglig",
+          "message": {
+            "one": "%{delivery_method} är inte längre tillgängligt för den här varan.",
+            "other": "%{delivery_method} är inte längre tillgängligt för dessa artiklar."
+          },
+          "default_message": {
+            "one": "Den valda leveransmetoden är inte längre tillgänglig för den här varan.",
+            "other": "Det valda leveranssättet är inte längre tillgängligt för dessa varor."
+          }
+        },
+        "unshippable_product": {
+          "header": {
+            "one": "Ingen leverans är tillgänglig för %{count} vara"
+          },
+          "message": {
+            "one": "Den här varan tas bort från din kundvagn eftersom det inte finns några leveransmetoder tillgängliga för din adress.",
+            "other": "Dessa varor tas bort från din varukorg eftersom det inte finns några leveransmetoder tillgängliga för din adress."
+          }
+        }
+      },
+      "split_delivery": {
+        "accessibility": {
+          "status": {
+            "ship_separately": "%{items} skickas separat.",
+            "pickup_in_store": "%{items} hämtas i butik."
+          }
+        },
+        "pickup_all_items": "Hämta alla varor",
+        "pickup_and_ship": "Hämta och skicka",
+        "ship_all_items": "Skicka alla varor",
+        "separate_pickup_email_notice": "Du får ett separat e-postmeddelande när din beställning är klar att hämtas.",
+        "items_for_pickup": "Varor för avhämtning",
+        "items_for_shipping": "Varor för frakt",
+        "items_moved_to_shipping_toast": "Varor som inte kan hämtas har flyttats till fraktleverans",
+        "delivery_updated_toast": {
+          "shipping": {
+            "one": "{{count}} artikel har flyttats till leverans."
+          },
+          "removal": {
+            "one": "{{count}} objekt har tagits bort.",
+            "other": "{{count}} objekt har tagits bort."
+          }
+        },
+        "pickup_items_count": {
+          "one": "Hämta %{count} vara",
+          "other": "Hämta %{count} varor"
+        },
+        "ship_items_count": {
+          "one": "Skicka %{count} vara",
+          "other": "Skicka %{count} artiklar"
+        },
+        "delivery_method": "Dela upp leveransmetoden",
+        "delivery_method_menu": "Meny för val av leveransmetod",
+        "inventory_issue_banner": {
+          "heading": {
+            "cannot_be_picked_up": {
+              "one": "%{count} vara kan inte hämtas upp",
+              "other": "%{count} artiklar kan inte hämtas upp"
+            },
+            "cannot_be_shipped": {
+              "one": "%{count} vara kan inte skickas",
+              "other": "%{count} artiklar kan inte skickas"
+            }
+          },
+          "remove_item": {
+            "one": "Ta bort objektet",
+            "other": "ta bort objekt"
+          },
+          "remove_item_only": {
+            "one": "Ta bort objektet",
+            "other": "Ta bort objekt"
+          },
+          "ship_separately": {
+            "one": "Skicka den separat",
+            "other": "Skicka dem separat"
+          },
+          "pick_them_up_in_store": {
+            "one": "Hämta i butik"
+          }
+        },
+        "cross_border": {
+          "modal": {
+            "heading": "Byta land?",
+            "content": "Dina upphämtnings- och leveransplatser måste vara i samma land. Om du byter land ändras alla varor till leverans.",
+            "country_changed_heading": "Land ändrad",
+            "change_country": "Byt land"
+          },
+          "banner": "Din leveransmetod har uppdaterats"
+        }
+      },
+      "tax": {
+        "attribution": {
+          "orders_sold_by_shop_marketplace": "Beställningar som hanteras via Shop-marknadsplatsen",
+          "orders_sold_by_shop_name": "Beställningar som säljs av %{shop_name}"
+        }
+      },
+      "store_credit_errors": {
+        "generic_error": "Det uppstod ett problem med ditt butikstillgodohavande. Försök igen eller ladda om sidan."
+      },
+      "subscriptions": {
+        "recurring_totals": "%{total_price} varje %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Första betalningen %{total_price_with_discount}, därefter %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Första betalningen %{total_price}",
+            "other": "Första %{count} betalningarna på %{total_price} vardera"
+          },
+          "following_cycles": ", sedan %{total_price} varje %{interval}"
+        }
+      },
+      "taxes": {
+        "vat_number": {
+          "field": {
+            "tooltip": "Validerar momsregistreringsnummer och tillämpar automatiskt omvänd skattskyldighet på beställningar när villkoren är uppfyllda"
+          },
+          "badge": "Momsnummer: %{number}",
+          "domestic_order": "Omvänd skattskyldighet gäller endast för gränsöverskridande beställningar inom EU. Standardskatt på moms debiteras för lokala beställningar.",
+          "status": {
+            "invalid_format": {
+              "at": "Österrikiska momsregistreringsnummer innehåller AT och 9 tecken.",
+              "be": "Belgiska momsregistreringsnummer innehåller BE och 10 tecken",
+              "bg": "Bulgariska momsregistreringsnummer innehåller BG och 9-10 tecken",
+              "hr": "Kroatiska momsnummer innehåller HR och 11 tecken.",
+              "cy": "Cyperns momsregistreringsnummer innehåller CY och 9 tecken",
+              "cz": "Tjeckiska momsregistreringsnummer innehåller CZ och 8–10 tecken",
+              "dk": "Danska momsregistreringsnummer innehåller DK och 8 tecken.",
+              "ee": "Estniska momsregistreringsnummer innehåller EE och 9 tecken",
+              "fi": "Finska momsregistreringsnummer innehåller FI och 8 tecken.",
+              "fr": "Franska momsregistreringsnummer innehåller FR och 11 tecken.",
+              "de": "Tyska momsregistreringsnummer innehåller DE och 9 tecken.",
+              "gr": "Grekiska momsregistreringsnummer innehåller EL och 9 tecken",
+              "hu": "Ungerska momsregistreringsnummer innehåller HU och 8 tecken.",
+              "ie": "Irländska momsregistreringsnummer innehåller IE och 8-9 tecken",
+              "it": "Italienska momsregistreringsnummer innehåller IT och 11 tecken",
+              "lv": "Lettiska momsregistreringsnummer innehåller LV och 11 tecken.",
+              "lt": "Litauiska momsnummer innehåller LT och 9-12 tecken",
+              "lu": "Luxemburgska momsregistreringsnummer innehåller LU och 8 tecken.",
+              "mt": "Maltas momsnummer innehåller MT och 8 tecken",
+              "nl": "Nederländska momsregistreringsnummer innehåller NL och 12 tecken.",
+              "pl": "Polska momsregistreringsnummer innehåller PL och 10 tecken",
+              "pt": "Portugisiska momsregistreringsnummer innehåller PT och 9 tecken",
+              "ro": "Rumänska momsregistreringsnummer innehåller RO och 10 tecken.",
+              "sk": "Slovakiska momsregistreringsnummer innehåller SK och 10 tecken",
+              "si": "Sloveniens momsregistreringsnummer innehåller SI och 8 tecken",
+              "es": "Spanska momsregistreringsnummer innehåller ES och 9 tecken.",
+              "se": "Svenska momsregistreringsnummer innehåller SE och 12 tecken.",
+              "gb": "Brittiska momsregistreringsnummer innehåller GB eller XI och består av 5-12 tecken."
+            }
+          },
+          "accessibility": {
+            "status": {
+              "valid": "Momsregistreringsnumret är giltigt.",
+              "invalid_number": "Momsen kunde inte undantas",
+              "service_unavailable": "Det går inte att verifiera momsbefrielsen",
+              "service_error": "Det går inte att verifiera momsbefrielsen"
+            }
+          }
+        }
       }
     },
     "attributes": {
