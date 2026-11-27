@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -37,7 +46,9 @@
     },
     "search": {
       "search": "Suchen",
-      "reset": "Suchbegriff zurücksetzen"
+      "reset": "Suchbegriff zurücksetzen",
+      "featured_collection": "Im Trend",
+      "featured": "Empfohlen"
     },
     "cart": {
       "view": "Warenkorb ansehen ({{ count }})",
@@ -126,7 +137,8 @@
         "from_price_html": "Von {{ price }}",
         "regular_price": "Normaler Preis",
         "sale_price": "Verkaufspreis",
-        "unit_price": "Grundpreis"
+        "unit_price": "Grundpreis",
+        "usually_sells_at_html": "Wird normalerweise für {{ price }} verkauft"
       },
       "share": "Dieses Produkt teilen",
       "sold_out": "Ausverkauft",
@@ -177,7 +189,12 @@
       "product_variants": "Produktvarianten",
       "taxes_included": "Inkl. Steuern.",
       "duties_included": "Inkl. Zollgebühren.",
-      "duties_and_taxes_included": "Inkl. Zollgebühren und Steuern."
+      "duties_and_taxes_included": "Inkl. Zollgebühren und Steuern.",
+      "key_highlights": "Wichtige Highlights",
+      "all_prices_incl_taxes": "(inkl. Steuern)",
+      "country_of_origin": "Herkunftsland",
+      "manufactured_by": "Hergestellt von",
+      "imported_marketed_by": "Importiert und vermarktet von"
     },
     "modal": {
       "label": "Medien-Galerie"
@@ -256,7 +273,9 @@
         "send": "Senden",
         "post_success": "Danke, dass du uns kontaktiert hast. Wir werden uns so schnell wie möglich bei dir melden.",
         "error_heading": "Bitte passe Folgendes an:",
-        "title": "Kontaktformular"
+        "title": "Kontaktformular",
+        "consent": "Mit der Bestätigung stimme ich zu, dass meine personenbezogenen Daten verwendet werden dürfen, um auf meine Anfrage zu antworten.",
+        "consent_value": "Einverstanden"
       }
     },
     "404": {
@@ -303,10 +322,14 @@
       "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Inkl. Zollgebühren. Steuern, Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
       "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Inkl. Zollgebühren. Steuern, Rabatte und Versand werden beim Checkout berechnet.",
       "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Steuern, Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
-      "taxes_at_checkout_shipping_at_checkout_without_policy": "Steuern, Rabatte und Versand werden beim Checkout berechnet."
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Steuern, Rabatte und Versand werden beim Checkout berechnet.",
+      "show_bundle": "Bundle anzeigen",
+      "hide_bundle": "Bundle ausblenden"
     },
     "footer": {
-      "payment": "Zahlungsmethoden"
+      "payment": "Zahlungsmethoden",
+      "communication_channels": "Kommunikationskanäle",
+      "social_links": "Social-Media-Links"
     },
     "featured_blog": {
       "view_all": "Alle anzeigen",
@@ -371,6 +394,14 @@
       "min_error": "Dieser Artikel hat ein Minimum von {{ min }}",
       "max_error": "Dieser Artikel hat ein Maximum von {{ max }}",
       "step_error": "Du kannst diesen Artikel nur in Abstufungen von {{ step }} hinzufügen."
+    },
+    "main-product": {
+      "download_catalog": "Produktkatalog herunterladen"
+    },
+    "brand_assets": {
+      "download": "Herunterladen",
+      "empty": "Noch keine Markenressourcen verfügbar.",
+      "uncategorized": "Sonstiges"
     }
   },
   "localization": {
@@ -523,6 +554,193 @@
       "send_on_label": "Senden am (optional)",
       "expanded": "Formular für den Empfänger des Gutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Gutscheins minimiert"
+    }
+  },
+  "studio": {
+    "tshirt_printing": {
+      "messages": {
+        "logo_loading": "Ihr enthaltenes Markenlogo wird geladen…",
+        "invalid_input": "Nur Buchstaben, Punkte und Leerzeichen sind zulässig.",
+        "logo_unavailable": "Die Option für Land und Logo ist nicht verfügbar. Entfernen Sie diese, um mit einem Druck nur des Namens fortzufahren."
+      },
+      "countries": {
+        "india": "Indien",
+        "indonesia": "Indonesien",
+        "china": "China",
+        "japan": "Japan",
+        "malaysia": "Malaysia",
+        "denmark": "Dänemark"
+      },
+      "actions": {
+        "add": "Hinzufügen",
+        "change": "Ändern",
+        "next": "Nächste",
+        "back": "Zurück",
+        "submit": "Personalisieren Sie",
+        "close": "Schließen",
+        "remove": "Entfernen",
+        "add_second_line": "Land und Logo für {{ price }} hinzufügen",
+        "clear_second_line": "Land und Logo entfernen"
+      },
+      "errors": {
+        "load_failed": "T-Shirt-Personalisierungsoptionen konnten nicht geladen werden. Bitte laden Sie die Seite neu."
+      },
+      "form_labels": {
+        "personalisation_service": "Personalisierung hinzufügen"
+      },
+      "description": {
+        "personalisation_service": "Mach diesen {{ product_title }} zu deinem ganz persönlichen Unikat, indem du etwas Besonderes darauf drucken lässt"
+      },
+      "headings": {
+        "personalise": "Personalisiere dieses {{ product_title }}"
+      },
+      "labels": {
+        "free": "KOSTENLOS",
+        "input": "Deine Personalisierung",
+        "second_input": "Land",
+        "note": "Hinweis: Dies dient nur zur Veranschaulichung. Der Text wird auf die Rückseite des T-Shirts gedruckt. Nachnahme ist für Bestellungen mit personalisierten T-Shirts nicht möglich.",
+        "step": "Schritt",
+        "summary": "Personalisieren",
+        "summary_html": "Einzigartig deins – Du machst diesen {{ product_title }} mit der Personalisierung zu deinem ganz persönlichen Einzelstück.",
+        "title": "Mach dieses T-Shirt zu deinem"
+      }
+    },
+    "labels": {
+      "customisations": "Anpassungen"
+    },
+    "modal_close_guard": {
+      "message": "Möchten Sie Ihre Anpassung wirklich abbrechen?",
+      "keep_editing": "Weiter bearbeiten",
+      "discard": "Verwerfen"
+    },
+    "stringing": {
+      "form_labels": {
+        "frame": "Rahmen",
+        "tension": "Spannung",
+        "string": "Zeichenkette",
+        "unstrung": "Ohne Saiten",
+        "pro_stringing": "Studio Pro Besaitung",
+        "strung": "Werksbesaitet",
+        "color": "Farbe"
+      },
+      "description": {
+        "unstrung": "Dieser Schläger wird ohne Besaitung geliefert. Sie müssen ihn in einem Sportgeschäft besaiten lassen.",
+        "pro_stringing": "Werten Sie mit einer individuellen Saite und Spannung auf.",
+        "strung": "Dieser Schläger wird mit der Standardbesaitung und -spannung geliefert.",
+        "two_knots": "Die Zwei-Knoten-Methode verwendet einen einzigen durchgehenden Faden für Längs- und Querstreifen. Geeignet für mäßige Spannungen.",
+        "four_knots": "Die Vier-Knoten-Methode verwendet separate Stränge für Längs- und Querverstrebungen mit vier Abbindungen. Empfohlen für hohe Zugkräfte."
+      },
+      "labels": {
+        "current_selection": "Aktuelle Auswahl",
+        "free": "KOSTENLOS",
+        "strings_guide": "Leitfaden zu Saiten",
+        "tension_unit": "LBS",
+        "low_tension": "Niedrig",
+        "high_tension": "Hoch",
+        "two_knots": "Zwei Knoten",
+        "four_knots": "Vier Knoten"
+      },
+      "headings": {
+        "choose_string": "Wähle eine Saite",
+        "select_color": "Wählen Sie eine Farbe",
+        "select_tension": "Mit welcher Spannung <br> sollen wir bespannen?",
+        "select_method": "Wie sollen wir es <br> aufziehen?",
+        "summary": "Zusammenfassung"
+      },
+      "filters": {
+        "all": "Alle",
+        "power": "Leistung",
+        "durable": "Langlebig",
+        "balanced": "Ausgewogen"
+      },
+      "messages": {
+        "loading": "String-Optionen werden geladen...",
+        "empty": "Wir konnten derzeit keine String-Optionen finden."
+      },
+      "actions": {
+        "add": "Hinzufügen",
+        "selected": "Ausgewählt",
+        "change": "Ändern",
+        "next": "Nächste",
+        "back": "Zurück",
+        "submit": "Besaitung anwenden",
+        "close": "Schließen",
+        "remove": "Entfernen"
+      },
+      "errors": {
+        "load_failed": "Fehler beim Laden der Aufziehoptionen. Bitte laden Sie die Seite neu.",
+        "missing_product": "Bitte wählen Sie eine Zeichenfolge aus.",
+        "missing_variant": "Bitte wählen Sie eine Saitenfarbe.",
+        "missing_tension": "Bitte wählen Sie eine Spannung aus."
+      }
+    },
+    "gripping": {
+      "form_labels": {
+        "frame": "Griff",
+        "grip_service": "Studio Grip Service",
+        "no_grip": "Werksgriff"
+      },
+      "description": {
+        "grip_service": "Lass unsere Studio-Profis einen Grip anbringen",
+        "no_grip": "Wird mit einem Werksgriff geliefert, der je nach Modell variiert. Wir empfehlen, auf einen anderen Griff umzurüsten.",
+        "grip_application_note": "Bitte beachten Sie, dass Ersatzgriffe nach dem Entfernen des Werksgriffs angebracht werden, während Overgrips über den vorhandenen Werksgriff angebracht werden."
+      },
+      "labels": {
+        "current_selection": "Aktuelle Auswahl",
+        "free": "KOSTENLOS",
+        "service_cost": "Servicekosten",
+        "variant_price": "Griff"
+      },
+      "headings": {
+        "choose_grip": "Griff auswählen",
+        "select_color": "Grifffarbe auswählen",
+        "summary": "Bewerbung"
+      },
+      "messages": {
+        "loading": "Griffformen werden geladen...",
+        "empty": "Wir konnten derzeit keine Griffformen finden."
+      },
+      "actions": {
+        "add": "Hinzufügen",
+        "selected": "Ausgewählt",
+        "change": "Ändern",
+        "next": "Nächste",
+        "back": "Zurück",
+        "submit": "Grip anwenden",
+        "close": "Schließen",
+        "remove": "Entfernen"
+      },
+      "errors": {
+        "load_failed": "Fehler beim Laden der Griffoptionen. Bitte laden Sie die Seite neu.",
+        "missing_product": "Bitte wählen Sie eine Griffoption.",
+        "missing_variant": "Bitte wählen Sie eine Griff Farbe."
+      }
+    },
+    "remix": {
+      "form_labels": {
+        "personalisation_service": "Personalisierung hinzufügen"
+      },
+      "description": {
+        "personalisation_service": "Mach diesen {{ product_title }} zu deinem ganz persönlichen und zeige auf dem Platz deinen eigenen Stil"
+      },
+      "labels": {
+        "free": "KOSTENLOS"
+      },
+      "actions": {
+        "add": "Hinzufügen",
+        "change": "Ändern"
+      },
+      "errors": {
+        "load_failed": "Personalisierungsoptionen konnten nicht geladen werden. Bitte laden Sie die Seite neu."
+      }
+    }
+  },
+  "settings_schema": {
+    "product_customisations": {
+      "factory_grip_image": {
+        "label": "Bild des Werksgriffs",
+        "info": "Neben der Option Factory Grip angezeigt."
+      }
     }
   }
 }
