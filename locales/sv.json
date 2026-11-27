@@ -1661,7 +1661,201 @@
         "bank_account_disclaimer": "ACH-betalningar kan ta upp till 4 arbetsdagar att behandla.",
         "bank_account_choose": "Välj ett konto för att slutföra ditt köp på ett säkert sätt",
         "bank_account_missing": "Bankkontot måste vara anslutet",
-        "bank_account_generic_error": "Det gick inte att lägga till bankkontot. Försök igen senare."
+        "bank_account_generic_error": "Det gick inte att lägga till bankkontot. Försök igen senare.",
+        "discount_codes_removed_summary": {
+          "one": "%{count} rabattkod togs bort",
+          "other": "%{count} rabattkoder togs bort"
+        },
+        "discount_codes_modified_summary": {
+          "one": "%{count} rabattkod ändrades",
+          "other": "%{count} rabattkoder ändrades"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "%{count} rabattkod togs bort eller ändrades",
+          "other": "%{count} rabattkoder togs bort eller ändrades"
+        },
+        "gift_card_balance_label": "Balans:",
+        "detected_card_brand": "Upptäckt kortmärke: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "Spara ditt kreditkort",
+        "credit_card_vaulting_sign_in_banner_info": "Logga in eller skapa ett konto för att spara ditt kreditkort inför framtida köp.",
+        "ftd_vault_credit_card_label": "Spara det här kreditkortet på mitt konto för snabbare utcheckning",
+        "card_expired": "Utgången",
+        "card_expiry_label": "Utgångsdatum (MM / ÅÅ)",
+        "card_expiry_placeholder": "Utgångsdatum (MM / ÅÅ)",
+        "delete_customer_mandate_modal_title": "Ta bort det här betalkortet?",
+        "delete_customer_mandate_modal_body": "Om du tar bort det här kortet måste du lägga till det igen innan du kan använda det för betalningar.",
+        "card_verification_confirm": "Ange kortets säkerhetskod för verifiering.",
+        "card_expiry_date_explanation": "Kortets utgångsdatum i formatet: månad, månad, år, år",
+        "card_verification_value_explanation": "Säkerhetskoden med tre siffror finns vanligtvis på baksidan av ditt kort. American Express-kort har en kod med fyra siffror på framsidan.",
+        "card_start_label": "Utfärdandedatum (MM / ÅÅ)",
+        "card_start_placeholder": "Utfärdandedatum (MM / ÅÅ)",
+        "card_issue_number_label": "Ärendenummer",
+        "card_issue_number_placeholder": "Ärendenummer",
+        "card_update_label": "Uppdatera kortet",
+        "ends_with_label": "som slutar med %{last_digits}",
+        "card_vaulted_company_location": "Kortet har sparats för den här platsen",
+        "expiry_short": "(Utgångsdatum %{month}/%{year})",
+        "crypto_payment_method": {
+          "description": "Anslut din plånbok säkert. Ditt saldo och din adress kommer inte att delas.",
+          "tooltip": "Ditt plånbokssaldo och din adress delas inte, och endast det begärda beloppet kan dras av.",
+          "cashback_descriptor": {
+            "one": "Du får din återbäring efter %{count} dag"
+          },
+          "usdc_label": "Krypto: USDC"
+        },
+        "crypto_modal": {
+          "error": {
+            "close": "stäng",
+            "sandbox_error": "Något gick fel",
+            "web_component_error": "Det uppstod ett problem när sidan skulle läsas in."
+          }
+        },
+        "different_credit_card_label": "Använd ett annat kreditkort",
+        "free_order_notice_html": "Din beställning är <strong>gratis</strong>. Ingen betalning krävs.",
+        "express_checkout_free_order": "Du debiteras inte för en kostnadsfri beställning.",
+        "card_fields_container_prefix": "Fältbehållare för:",
+        "card_fields_unavailable_html": {
+          "one": "Betalning med kredit- eller betalkort är inte tillgänglig just nu.<br><a href=\"%{current_url}\">Uppdatera sidan</a> eller försök igen senare.",
+          "other": "Betalning med kredit- eller bankkort är inte tillgänglig just nu.<br><a href=\"%{current_url}\">Uppdatera den här sidan</a> eller prova ett annat betalningssätt."
+        },
+        "card_fields_processing_error": "Det uppstod ett problem när betalningen skulle behandlas. Försök att uppdatera sidan eller kontrollera din internetanslutning.",
+        "generic_incorrect_card_info": "Dina betalningsuppgifter kunde inte verifieras. Kontrollera dina kortuppgifter och försök igen.",
+        "eps_label": "eps-överföring",
+        "change_currency_section_description": "Välj ett valutaalternativ",
+        "clear": "Klar",
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_number": "Ange ett giltigt ärendenummer"
+            },
+            "invalid": {
+              "verification_value": "Ange en giltig CVV-kod eller säkerhetskod"
+            }
+          }
+        },
+        "delete_credit_card_modal": {
+          "title": "Ta bort kortet",
+          "confirmation": "Är du säker på att du vill ta bort {{brandName}} som slutar på {{lastDigits}}?"
+        },
+        "edit_credit_card_modal": {
+          "done": "Klart",
+          "description": "Du kan bara ändra faktureringsadressen för ditt kort.",
+          "fields": {
+            "name": "Namn på kortet",
+            "billing": "Faktureras till"
+          }
+        },
+        "expired_cards_info": {
+          "one": "Det finns %{count} utgånget kort som du kan visa och redigera i ditt konto.",
+          "other": "Det finns %{count} utgångna kort som du kan visa och redigera på ditt konto."
+        },
+        "gift_card_store_credit": {
+          "add_label": "Lägg till ett presentkort eller tillgodohavande i butiken",
+          "manage_label": "Hantera presentkort eller butikskrediter"
+        },
+        "gift_card_checkbox_label": "Lös in presentkort",
+        "custom_onsite_payment_method_modal": {
+          "title": "Anpassad bekräftelse av betalning på plats"
+        },
+        "expired_payment_method": "Den valda betalningsmetoden har gått ut",
+        "choose_new_payment_method": "Välj en ny betalningsmetod",
+        "network_card_payment_options": "Välj ett kortnätverk",
+        "name_on_card_label": "Namn på kortet",
+        "name_on_card_placeholder": "Namn på kortet",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Din beställning betalas med ditt presentkort.",
+          "other": "Din beställning täcks av dina presentkort."
+        },
+        "offsite_gateway_redirect_hint": "Du kommer att omdirigeras till %{gateway_label} för att slutföra ditt köp.",
+        "offsite_gateway_review_page_redirect_hint": "När du har granskat din beställning omdirigeras du till %{gateway_label} för att slutföra ditt köp.",
+        "offsite_gateway_redirect_hint_no_button_label": "Du kommer att omdirigeras till %{gateway_label} för att slutföra ditt köp.",
+        "no_js_credit_card_fields_redirect_hint": "Du kommer att omdirigeras för att lägga till dina betalningsuppgifter.",
+        "no_method_error": "Den här butiken kan inte ta emot betalningar just nu.",
+        "not_configured_error": "Den här butiken kan inte ta emot betalningar just nu.",
+        "kcp_creditcard_label": "KCP-kreditkort",
+        "konbini_label": "Närbutik",
+        "no_real_orders_dev_store": "Den här butiken kan inte ta emot riktiga beställningar eller betalningar.",
+        "loading": "Läser in betalningen...",
+        "no_taxes_banner_content": "Ingen skatt debiteras för den här beställningen. När du har tagit emot betalningen kan skatt inte längre läggas till.",
+        "google": {
+          "connect": "Klicka för att ansluta ditt Google Pay-konto",
+          "error_authorizing": "Fel vid auktorisering av betalningen"
+        },
+        "mor_disclaimer_html": "Genom att klicka nedan och slutföra din beställning godkänner du att köpa dina varor från Global-e, som är avtalspart för denna transaktion, enligt Global-e:s <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">villkor</a>\noch <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">integritetspolicy</a>. Global-e är en internationell\nleverantör av orderhanteringstjänster åt %{shop_name}\n",
+        "lpm": {
+          "multibanco": {
+            "voucher": {
+              "steps": {
+                "pay_at_atm_or_online": "Betala i en Multibanco-bankomat eller via din internetbank med uppgifterna nedan."
+              }
+            }
+          },
+          "konbini": {
+            "voucher": {
+              "label": "Närbutik",
+              "codes": {
+                "reference_number": "Betalkod"
+              },
+              "steps": {
+                "familymart": {
+                  "1": "Välj 代金支払い／チャージ (\"Betalning / påfyllning\") på kopieringsmaskinen.",
+                  "4": "Kontrollera uppgifterna och tryck på 確認 (”Bekräfta”) för att skriva ut ditt kvitto",
+                  "5": "Ta kvittot till kassan inom 30 minuter och betala kontant eller med FamiPay"
+                },
+                "lawson": {
+                  "1": "På Loppi-terminalen väljer du 各種番号をお持ちの方 (”Jag har ett nummer”).",
+                  "2": "Ange din betalningskod och tryck på 次へ (\"Nästa\")",
+                  "3": "Ange din bekräftelsekod och tryck på Nästa",
+                  "4": "Kontrollera uppgifterna och tryck på はい (”Ja”) för att skriva ut ditt kvitto",
+                  "5": "Ta med kvittot till kassan inom 30 minuter och betala kontant"
+                },
+                "ministop": {
+                  "1": "På Loppi-terminalen väljer du 各種番号をお持ちの方 (”Jag har ett nummer”).",
+                  "2": "Ange din betalningskod och tryck på 次へ (\"Nästa\")",
+                  "3": "Ange din bekräftelsekod och tryck på Nästa",
+                  "4": "Kontrollera uppgifterna och tryck på はい (”Ja”) för att skriva ut ditt kvitto",
+                  "5": "Ta med kvittot till kassan inom 30 minuter och betala kontant"
+                },
+                "seicomart": {
+                  "1": "Säg till kassören vid kassan インターネット支払い (”internetbetalning”)",
+                  "2": "Ange din betalningskod på kundskärmen och välj Registrera (”Ange”)",
+                  "3": "Ange din bekräftelsekod och välj Registrera",
+                  "4": "Kontrollera uppgifterna och välj OK."
+                },
+                "seven_eleven": {
+                  "1": "Vid kassan trycker du på Visa streckkod så att kassören kan skanna den."
+                },
+                "1": "Ta med betalningskoden och bekräftelsekoden till butikens betalterminal eller kassa och betala kontant innan värdebeviset går ut."
+              },
+              "expires_at": "Går ut %{date}",
+              "expired_title": "Betalkoden har gått ut",
+              "expired": "Har gått ut %{date}",
+              "keep_receipt": "Behåll kvittot som betalningsbevis"
+            }
+          },
+          "oxxo": {
+            "voucher": {
+              "steps": {
+                "scan_barcode_at_oxxo": "Skanna streckkoden hos ditt närmaste OXXO."
+              },
+              "barcode_alt": "OXXO-kupongens streckkod för referensnummer %{reference_number}"
+            }
+          }
+        },
+        "location_billing_address_label": "Plats för faktureringsadress",
+        "location_shipping_address_label": "Leveransadress",
+        "no_working_method_error": "Den här butiken kan inte ta emot betalningar just nu. Uppdatera sidan eller kom tillbaka senare.",
+        "local_payment_method_receiver_notice": "När du har lagt din beställning får du betalningsuppgifter. Betala i en uttagsautomat eller online inom {{dueDays}} dagar.",
+        "gift_card_wrapper": {
+          "apply_gift_card_label": "Lös in ett presentkort",
+          "apply_another_gift_card_label": "Använd ett annat presentkort"
+        },
+        "markets_pro_disclaimer_label": "Genom att lägga din beställning godkänner du att köpa från Global-e, som är säljare i eget namn, enligt Global-e:s %{markets_pro_terms} och %{privacy_policy}, och att dela dina uppgifter med %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Villkor och bestämmelser",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Villkor för Merchant of Record",
+        "markets_pro_disclaimer_privacy_policy_title": "Integritetspolicy för registrerad handlare",
+        "gift_cards_unavailable": "Ditt presentkort kan inte längre användas för den här beställningen och har tagits bort",
+        "new_bank_account_disclaimer": "Genom att slutföra din beställning godkänner du att %{shop_name} debiterar kontot nedan via ACH med det angivna beloppet och vid den angivna tidpunkten."
       }
     },
     "attributes": {

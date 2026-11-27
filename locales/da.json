@@ -2067,7 +2067,94 @@
         "payment_method_rollup_accessibility_label": "Betalingsmuligheder",
         "payment_method_update_failed": "Opdatering af betalingsmetode mislykkedes.",
         "payment_method_incompatible_with_payment_terms": "Betalingsmetoden er ikke kompatibel med betalingsbetingelserne.",
-        "payment_flexibility_terms_id_mismatch": "Uoverensstemmelse i ID for vilkår om fleksibel betaling"
+        "payment_flexibility_terms_id_mismatch": "Uoverensstemmelse i ID for vilkår om fleksibel betaling",
+        "shop_pay_hsa": {
+          "eligible_product": "Berettiget til HSA/FSA",
+          "partially_eligible_product": "Delvist HSA/FSA-berettiget",
+          "mixed_cart_description": "Din kurv kan kun indeholde produkter, der er berettigede til HSA/FSA.",
+          "mixed_cart_lmn_description": "Brug et personligt kort, og anmod om refusion for det beløb, der er berettiget. Betalingskort til sundhedsordninger vil blive afvist, fordi købet ikke er fuldt ud berettiget til HSA/FSA.",
+          "label": "Jeg vil gerne bruge HSA/FSA-midler til dette køb.",
+          "description": "Betal direkte med dit ydelseskort, eller brug et personligt kort og anmod om refusion for det berettigede beløb.",
+          "powered_by_truemed": "HSA/FSA-betalinger drevet af Truemed",
+          "truemed_terms_disclaimer_html": "Ved at gennemføre købet accepterer du Truemed’s %{terms_link} og bekræfter, at du har læst Truemed’s %{privacy_link}",
+          "privacy_policy": "Privatlivspolitik",
+          "eligibility_disclaimer_html": "HSA/FSA-berettigelse afgøres af Truemed. %{terms_link}"
+        },
+        "supported_card_brands_more_label": "og mere…",
+        "saved_by_payment_method": "Gemt af %{payment_method}",
+        "same_billing_address_label": "Samme som leveringsadressen",
+        "receiver_payment_experience_hint": "Når du har afgivet din ordre, modtager du betalingsoplysningerne. Betal via Multibanco eller online inden for %{due_days} dage.",
+        "technical_error": "Betalinger kan ikke behandles lige nu på grund af et teknisk problem. Prøv igen om et par minutter.",
+        "sofort_label": "Øjeblikkelig bankoverførsel",
+        "shop_pay_installments_label": "Shop Pay-afbetalinger",
+        "set_as_default_card": "Indstil som standardkort",
+        "usdc_cashback_title": "%{incentive_percentage}% cashback",
+        "usdc_cashback_additional_info": "Betal med USDC på Base, og få %{incentive_percentage}% tilbage i din wallet inden for 30 dage.",
+        "purchase_options_card_update_agreement_label_html": "Ved at opdatere din betalingsmetode godkender du betalinger for alle tilbagevendende eller udskudte køb i henhold til denne butiks <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">annulleringspolitik</a>.",
+        "subscription_card_update_agreement_label": "Hvis du ændrer betalingsmetode, opdateres dit abonnement og dine fremtidige tilbagevendende betalinger.",
+        "subscription_agreement_label": "Et eller flere varer i din indkøbskurv er et udskudt køb eller et abonnementskøb. Ved at fortsætte med betalingen accepterer du, at din betalingsmetode automatisk bliver opkrævet det beløb og med den hyppighed, der er angivet på denne side, indtil det udløber, eller du opsiger det. Alle opsigelser er underlagt %{cancelled}.",
+        "subscription_agreement_cancelled": "afbestillingspolitik",
+        "subscription_agreement_label_html": "Jeg forstår, at jeg accepterer et abonnement. Det fornyes til den angivne pris og med den angivne hyppighed, indtil det ophører eller bliver\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">opsagt</a>.\n",
+        "purchase_options_agreement_label_html": "Jeg forstår, at en eller flere varer i min indkøbskurv er et udskudt eller tilbagevendende køb. Ved at fortsætte accepterer jeg\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">annulleringspolitikken</a>\nog giver tilladelse til, at I opkræver betaling via min betalingsmetode til de priser, med den hyppighed og på de datoer, der er angivet på denne side, indtil min\nordre er gennemført, eller jeg annullerer den, hvis det er tilladt.\n",
+        "purchase_options_agreement_label_wallets": "Ved at fortsætte med din betaling accepterer du de fremtidige opkrævninger, der er angivet på denne side, og %{cancellation_policy_label}.",
+        "purchase_options_subscription_agreement_label": "Din indkøbskurv indeholder et abonnement, der fornyes automatisk. Ved at klikke på \"%{button_label},\" accepterer du %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_agreement_label_wallets": "Din kurv indeholder et abonnement, der automatisk fornyes. Ved at bruge ekspresbetaling %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_consent_text": "du giver udtrykkeligt og bekræftende samtykke til, at du automatisk vil blive opkrævet de tilbagevendende beløb, der vises i din indkøbskurv (plus fragt og afgifter), indtil abonnementet eller abonnementerne udløber, eller du opsiger dem.",
+        "purchase_options_subscription_cancellation_instructions": "%{cancel_text} Se venligst %{cancellation_policy_label}.",
+        "purchase_options_subscription_cancel_text": "Du kan til enhver tid opsige ved at gå til din konto eller kontakte butikken.",
+        "waiting_on_payment_methods": "Henter tilgængelige betalingsmetoder...",
+        "taxes_not_included": "Skatter ikke inkluderet",
+        "store_credit": {
+          "label": "Butikskredit",
+          "apply_label": "Anvend butikskredit",
+          "add_label": "Tilføj butikskredit",
+          "manage_label": "Administrer butikskredit",
+          "buying_gift_card": "Du kan ikke bruge butikskredit til at købe et gavekort",
+          "no_fixed_selling_plans": "Du kan ikke bruge butikskredit med betalingsmuligheder med udskudt betaling"
+        },
+        "same_billing_address_checkbox_label": "Brug leveringsadressen som faktureringsadresse",
+        "use_order_billing_address_label": "Brug ordre-faktureringsadressen",
+        "use_location_billing_address_label": "Brug faktureringsadressen som placering",
+        "use_location_shipping_address_label": "Brug leveringsadressen som placering",
+        "shipping_rate_updated": "De tilgængelige leveringsmetoder er blevet opdateret. Bekræft dit valg, før du går til kassen.",
+        "simulated_express_checkout": "Tegnebøger er ikke tilgængelige i editorens forhåndsvisning på grund af din region eller browser",
+        "vaulting_agreement_label": "Gem mine betalingsoplysninger hos %{company} for hurtigere betaling",
+        "purchase_options_and_vaulting_agreement_label": "Et eller flere varer i din indkøbskurv er et udskudt køb eller et abonnementskøb. Ved at fortsætte med betalingen accepterer du, at din betalingsmetode automatisk debiteres til den pris og med den hyppighed, der er angivet på denne side, indtil aftalen ophører, eller du opsiger den. Alle opsigelser er underlagt %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "afbestillingspolitik",
+        "saved_credit_card_info": "De sidste fire cifre",
+        "saved_credit_card_cvv_verification": "Indtast kortets sikkerhedskode for at bekræfte din identitet.",
+        "saved_credit_cards_modal": {
+          "done": "Færdig"
+        },
+        "redeemable_row": {
+          "gift_card_label": "Anvend gavekort %{identifier}",
+          "gift_card_spoken_label": "Anvend gavekortet, der slutter på %{last_characters}",
+          "gift_card_switch_label": "Anvend gavekortet, der slutter på %{last_characters}, %{amount} til rådighed",
+          "store_credit_switch_label": "Anvend butikskredit, %{amount} til rådighed"
+        },
+        "purchase_order_number": {
+          "title": "Indkøbsordrenummer",
+          "label": "PO-nummer (valgfrit)"
+        },
+        "waiting_on_taxes_notice": "Beregner skatter",
+        "separate_payments_label": "Dine varer kommer fra flere butikker. Du bliver opkrævet i %{separate_payments_link}.",
+        "vault_for_payment_later": {
+          "notice": "Du bliver ikke opkrævet nu. Når du fortsætter med betalingen, accepterer du, at din betalingsmetode bliver opkrævet, når din ordre behandles."
+        }
+      },
+      "payment_challenge_modal": {
+        "copy_text": "Kopiér {{paymentMethod}}-kode",
+        "qr_code": {
+          "paynow_instructions": "Scan denne QR-kode med din bank- eller betalingsapp for at gennemføre dit køb.",
+          "paynow_mobile_steps": {
+            "upload": "Upload det fra dine fotos i din bank- eller betalingsapp.",
+            "come_back": "Vend tilbage til denne side, når du har betalt."
+          }
+        },
+        "external": {
+          "instructions": "Bekræft betalingen i din app for at gennemføre købet"
+        },
+        "close": "Afslut udfordringen"
       }
     },
     "attributes": {

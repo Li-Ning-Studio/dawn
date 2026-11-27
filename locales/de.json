@@ -2010,7 +2010,111 @@
           "title": "Benutzerdefinierte Bestätigung der Zahlung vor Ort"
         },
         "expired_payment_method": "Die ausgewählte Zahlungsmethode ist abgelaufen.",
-        "choose_new_payment_method": "Wählen Sie eine neue Zahlungsmethode"
+        "choose_new_payment_method": "Wählen Sie eine neue Zahlungsmethode",
+        "network_card_payment_options": "Wähle ein Kartennetzwerk",
+        "network_card_persistence_description": "Das ausgewählte Netzwerk wird für zukünftige Transaktionen zusammen mit Ihrer Zahlungsmethode gespeichert.",
+        "name_on_card_label": "Name auf der Karte",
+        "name_on_card_placeholder": "Name auf der Karte",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Ihre Bestellung wird mit Ihrer Geschenkkarte bezahlt.",
+          "other": "Ihre Bestellung wird durch Ihre Geschenkkarten abgedeckt."
+        },
+        "offsite_gateway_redirect_hint": "Du wirst zu %{gateway_label} weitergeleitet, um deinen Kauf abzuschließen.",
+        "offsite_gateway_review_page_redirect_hint": "Nachdem Sie Ihre Bestellung überprüft haben, werden Sie zu %{gateway_label} weitergeleitet, um Ihren Kauf abzuschließen.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "Gesamtbetrag für %{gateway_label}: %{total_shop_price}",
+        "offsite_gateway_redirect_hint_no_button_label": "Du wirst zu %{gateway_label} weitergeleitet, um deinen Kauf abzuschließen.",
+        "no_js_credit_card_fields_redirect_hint": "Sie werden weitergeleitet, um Ihre Zahlungsinformationen hinzuzufügen.",
+        "no_method_error": "Dieser Shop kann derzeit keine Zahlungen annehmen.",
+        "not_configured_error": "Dieser Shop kann derzeit keine Zahlungen annehmen.",
+        "missing_credit_card_error": "Geben Sie Ihre Kartendaten ein, um die Zahlung abzuschließen.",
+        "klarna_pay_later_label": "Später mit Klarna bezahlen",
+        "klarna_pay_now_label": "Jetzt mit Klarna bezahlen",
+        "klarna_slice_it_label": "Mit Klarna finanzieren",
+        "konbini_label": "Convenience-Store",
+        "no_real_orders_dev_store": "Dieser Shop kann keine echten Bestellungen oder Zahlungen annehmen.",
+        "loading": "Zahlung wird geladen ...",
+        "no_taxes_banner_content": "Für diese Bestellung werden keine Steuern berechnet. Sobald du die Zahlung eingezogen hast, können keine Steuern mehr hinzugefügt werden.",
+        "google": {
+          "connect": "Klicken Sie, um Ihr Google Pay-Konto zu verbinden"
+        },
+        "mor_disclaimer_html": "Indem Sie unten klicken und Ihre Bestellung abschließen, stimmen Sie zu, Ihre Artikel von Global-e als Verkäufer im Sinne der gesetzlichen Vorschriften\nfür diese Transaktion zu erwerben, gemäß den <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Allgemeinen Geschäftsbedingungen</a>\nund der <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Datenschutzerklärung</a> von Global-e. Global-e ist ein internationaler\nFulfillment-Dienstleister für %{shop_name}\n",
+        "lpm": {
+          "multibanco": {
+            "voucher": {
+              "steps": {
+                "pay_at_atm_or_online": "Bezahlen Sie an einem Multibanco-Geldautomaten oder über Ihr Online-Banking mit den folgenden Angaben."
+              }
+            }
+          },
+          "konbini": {
+            "voucher": {
+              "label": "Convenience-Store",
+              "steps": {
+                "familymart": {
+                  "1": "Wählen Sie am Mehrfachkopierer 代金支払い／チャージ („Bezahlung / Aufladen“) aus.",
+                  "2": "Geben Sie Ihren Zahlungscode ein und drücken Sie OK.",
+                  "3": "Geben Sie Ihren Bestätigungscode ein und drücken Sie auf OK.",
+                  "4": "Prüfen Sie die Angaben und drücken Sie auf 確認 („Bestätigen“), um Ihren Beleg auszudrucken.",
+                  "5": "Bringen Sie den Beleg innerhalb von 30 Minuten zur Kasse und bezahlen Sie bar oder mit FamiPay."
+                },
+                "lawson": {
+                  "1": "Wählen Sie am Loppi-Terminal 各種番号をお持ちの方 („Ich habe eine Nummer“) aus.",
+                  "2": "Geben Sie Ihren Zahlungscode ein und drücken Sie auf 次へ („Weiter“)",
+                  "3": "Geben Sie Ihren Bestätigungscode ein und drücken Sie auf Weiter.",
+                  "4": "Prüfen Sie die Angaben und drücken Sie はい („Ja“), um Ihren Beleg auszudrucken.",
+                  "5": "Bringen Sie den Beleg innerhalb von 30 Minuten zur Kasse und bezahlen Sie bar."
+                },
+                "ministop": {
+                  "1": "Wählen Sie am Loppi-Terminal 各種番号をお持ちの方 („Ich habe eine Nummer“) aus.",
+                  "2": "Geben Sie Ihren Zahlungscode ein und drücken Sie auf 次へ („Weiter“)",
+                  "3": "Geben Sie Ihren Bestätigungscode ein und drücken Sie auf Weiter.",
+                  "4": "Prüfen Sie die Angaben und drücken Sie はい („Ja“), um Ihren Beleg auszudrucken.",
+                  "5": "Bringen Sie den Beleg innerhalb von 30 Minuten zur Kasse und bezahlen Sie bar."
+                },
+                "seicomart": {
+                  "1": "Sagen Sie an der Kasse der Kassenkraft „インターネット支払い“ („Internet-Zahlung“).",
+                  "2": "Geben Sie Ihren Zahlungscode auf dem Kundenbildschirm ein und wählen Sie 登録 („Eingeben“).",
+                  "3": "Geben Sie Ihren Bestätigungscode ein und wählen Sie „登録“ aus.",
+                  "4": "Prüfen Sie die Angaben und wählen Sie „OK“ aus.",
+                  "5": "Bar bezahlen"
+                },
+                "seven_eleven": {
+                  "1": "Tippe an der Kasse auf „Barcode anzeigen“, damit die Kassenkraft ihn scannen kann."
+                },
+                "1": "Bringe den Zahlungscode und den Bestätigungscode zum Terminal oder zur Kasse des Geschäfts und bezahle bar, bevor der Gutschein abläuft."
+              },
+              "choose_outlet": "Wählen Sie einen Konbini aus, um Ihre Codes und die Zahlungsmöglichkeiten zu sehen",
+              "expires_at": "Läuft ab am %{date}",
+              "expired": "Am %{date} abgelaufen",
+              "keep_receipt": "Bewahren Sie Ihren Beleg als Zahlungsnachweis auf."
+            }
+          },
+          "oxxo": {
+            "voucher": {
+              "barcode_alt": "OXXO-Gutschein-Barcode für die Referenznummer %{reference_number}"
+            }
+          }
+        },
+        "location_billing_address_label": "Standort-Rechnungsadresse",
+        "location_shipping_address_label": "Standort Versandadresse",
+        "no_working_method_error": "Dieser Shop kann derzeit keine Zahlungen annehmen. Aktualisiere diese Seite oder versuche es später erneut.",
+        "local_payment_method_receiver_notice": "Nach Aufgabe Ihrer Bestellung erhalten Sie die Zahlungsdetails. Bezahlen Sie innerhalb von {{dueDays}} Tagen an einem Geldautomaten oder online.",
+        "gift_card_wrapper": {
+          "heading": "Geschenkkarte",
+          "apply_gift_card_label": "Geschenkkarte einlösen",
+          "apply_another_gift_card_label": "Eine weitere Geschenkkarte anwenden",
+          "gift_card_label": "Geschenkkarte %{identifier}",
+          "payment_tag": "Geschenkkarte",
+          "add_label": "Eine Geschenkkarte hinzufügen",
+          "manage_label": "Geschenkkarten verwalten"
+        },
+        "markets_pro_disclaimer_label": "Mit deiner Bestellung stimmst du zu, bei Global-e als eingetragenem Händler einzukaufen, vorbehaltlich der %{markets_pro_terms} und %{privacy_policy} von Global-e, und deine Informationen mit %{shop_name} zu teilen.",
+        "markets_pro_disclaimer_terms_and_conditions": "Allgemeine Geschäftsbedingungen",
+        "markets_pro_disclaimer_privacy_policy": "Datenschutzrichtlinie",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Geschäftsbedingungen für den Merchant of Record",
+        "markets_pro_disclaimer_privacy_policy_title": "Datenschutzerklärung des Merchant of Record",
+        "gift_cards_unavailable": "Deine Geschenkkarte kann nicht mehr auf diese Bestellung angerechnet werden und wurde entfernt.",
+        "new_bank_account_disclaimer": "Mit Abschluss Ihrer Bestellung ermächtigen Sie %{shop_name}, den unten aufgeführten Betrag zum angegebenen Zeitpunkt per ACH von dem unten aufgeführten Konto abzubuchen."
       }
     },
     "attributes": {

@@ -1817,7 +1817,176 @@
           "title": "Confirmation personnalisée du paiement sur place"
         },
         "expired_payment_method": "Le moyen de paiement sélectionné a expiré.",
-        "choose_new_payment_method": "Choisissez un nouveau mode de paiement"
+        "choose_new_payment_method": "Choisissez un nouveau mode de paiement",
+        "network_card_payment_options": "Choisissez un réseau de cartes",
+        "network_card_persistence_description": "Le réseau sélectionné sera enregistré avec votre mode de paiement pour vos prochaines transactions.",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Votre commande est réglée avec votre carte-cadeau.",
+          "other": "Votre commande est réglée avec vos cartes-cadeaux."
+        },
+        "offsite_gateway_redirect_hint": "Vous serez redirigé vers %{gateway_label} pour finaliser votre achat.",
+        "offsite_gateway_review_page_redirect_hint": "Après avoir vérifié votre commande, vous serez redirigé vers %{gateway_label} pour finaliser votre achat.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "Total %{gateway_label} %{total_shop_price}",
+        "offsite_gateway_redirect_hint_no_button_label": "Vous serez redirigé vers %{gateway_label} pour finaliser votre achat.",
+        "no_js_credit_card_fields_redirect_hint": "Vous allez être redirigé pour ajouter vos informations de paiement.",
+        "missing_credit_card_error": "Saisissez les informations de votre carte pour finaliser le paiement.",
+        "klarna_pay_later_label": "Payez plus tard avec Klarna",
+        "klarna_slice_it_label": "Financez avec Klarna",
+        "konbini_label": "Supérette",
+        "no_real_orders_dev_store": "Cette boutique ne peut pas accepter de vraies commandes ni de vrais paiements.",
+        "no_taxes_banner_content": "Aucune taxe ne sera facturée sur cette commande. Une fois le paiement encaissé, il ne sera plus possible d’ajouter des taxes.",
+        "google": {
+          "connect": "Cliquez pour vous connecter à votre compte Google Pay"
+        },
+        "mor_disclaimer_html": "En cliquant ci-dessous et en finalisant votre commande, vous acceptez d’acheter votre ou vos articles auprès de Global-e, en tant que vendeur officiel\npour cette transaction, selon les <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Conditions générales</a>\net la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Politique de confidentialité</a> de Global-e. Global-e est un prestataire international de services d’expédition\npour %{shop_name}\n",
+        "lpm": {
+          "multibanco": {
+            "voucher": {
+              "steps": {
+                "pay_at_atm_or_online": "Payez à un distributeur automatique Multibanco ou via votre banque en ligne en utilisant les informations ci-dessous."
+              }
+            }
+          },
+          "konbini": {
+            "voucher": {
+              "label": "Supérette",
+              "steps": {
+                "familymart": {
+                  "1": "Sur la machine multifonction, sélectionnez 代金支払い／チャージ (« Paiement / Recharge »)",
+                  "4": "Vérifiez les détails et appuyez sur 確認 (« Confirmer ») pour imprimer votre ticket.",
+                  "5": "Présentez le ticket à la caisse dans les 30 minutes et payez en espèces ou avec FamiPay."
+                },
+                "lawson": {
+                  "3": "Saisissez votre code de confirmation et appuyez sur Suivant.",
+                  "4": "Vérifiez les détails et appuyez sur はい (« Oui ») pour imprimer votre reçu.",
+                  "5": "Apportez le bordereau à la caisse dans les 30 minutes et payez en espèces."
+                },
+                "ministop": {
+                  "3": "Saisissez votre code de confirmation et appuyez sur Suivant.",
+                  "4": "Vérifiez les détails et appuyez sur はい (« Oui ») pour imprimer votre reçu.",
+                  "5": "Apportez le bordereau à la caisse dans les 30 minutes et payez en espèces."
+                },
+                "seicomart": {
+                  "1": "À la caisse, dites au caissier « paiement Internet ».",
+                  "2": "Saisissez votre code de paiement sur l’écran client et sélectionnez « 登録 » (« Saisir »).",
+                  "3": "Saisissez votre code de confirmation et sélectionnez « S’inscrire ».",
+                  "4": "Vérifiez les détails et sélectionnez OK.",
+                  "5": "Payer en espèces"
+                },
+                "seven_eleven": {
+                  "1": "À la caisse, appuyez sur Afficher le code-barres pour que le caissier puisse le scanner."
+                },
+                "1": "Apportez le code de paiement et le code de confirmation à la borne ou à la caisse du magasin et payez en espèces avant l’expiration du bon d’achat."
+              },
+              "choose_outlet": "Choisissez un konbini pour voir vos codes et savoir comment payer",
+              "expired_title": "Le code de paiement a expiré",
+              "copy_code": "Copier %{label}",
+              "view_instructions": "Voir les instructions de paiement",
+              "view_instructions_accessibility_label": "Voir les instructions de paiement (s’ouvre dans un nouvel onglet)"
+            }
+          },
+          "oxxo": {
+            "voucher": {
+              "steps": {
+                "scan_barcode_at_oxxo": "Scannez le code-barres dans le magasin OXXO le plus proche de chez vous."
+              }
+            }
+          }
+        },
+        "location_shipping_address_label": "Adresse de livraison",
+        "no_working_method_error": "Cette boutique ne peut pas accepter de paiements pour le moment. Actualisez cette page ou revenez plus tard.",
+        "local_payment_method_receiver_notice": "Après avoir passé votre commande, vous recevrez les informations de paiement. Effectuez le paiement à un distributeur automatique ou en ligne dans les {{dueDays}} jours.",
+        "gift_card_wrapper": {
+          "heading": "Carte cadeau",
+          "apply_gift_card_label": "Utiliser une carte-cadeau",
+          "apply_another_gift_card_label": "Utiliser une autre carte-cadeau",
+          "payment_tag": "Carte cadeau",
+          "add_label": "Ajouter une carte-cadeau",
+          "manage_label": "Gérer les cartes-cadeaux"
+        },
+        "markets_pro_disclaimer_label": "En passant votre commande, vous acceptez d’acheter auprès de Global-e, en tant que marchand officiel, sous réserve des %{markets_pro_terms} et de la %{privacy_policy} de Global-e, et de partager vos informations avec %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Conditions générales de vente",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Conditions générales du marchand officiel",
+        "markets_pro_disclaimer_privacy_policy_title": "Politique de confidentialité du marchand officiel",
+        "gift_cards_unavailable": "Votre carte-cadeau ne peut plus être utilisée pour cette commande et a été supprimée.",
+        "new_bank_account_disclaimer": "En finalisant votre commande, vous autorisez %{shop_name} à débiter le compte ci-dessous par ACH du montant indiqué, au moment indiqué.",
+        "multiple_primary_payment_not_allowed": "Modes de paiement non valides",
+        "payment_method_not_available_for_shipping_address_error": "Ce mode de paiement n’est pas disponible pour l’adresse de livraison sélectionnée. Choisissez un autre mode de paiement.",
+        "payment_method_unavailable_error": "Ce mode de paiement n’est pas disponible pour le moment. Choisissez un autre mode de paiement.",
+        "payment_method_loading_error": "Ce mode de paiement est toujours en cours de chargement. Réessayez dans quelques secondes.",
+        "paypal_wallet_label": "Portefeuille PayPal",
+        "paypal_modal": {
+          "order_contains_fixed_selling_plans": "Le total peut ne pas inclure les taxes, les frais de livraison, les frais différés et certaines réductions. Passez à la caisse pour connaître le montant dû aujourd’hui."
+        },
+        "purchase_options_agreement_label": "Un ou plusieurs articles de votre panier correspondent à un achat différé ou récurrent. En poursuivant le paiement, vous acceptez que votre moyen de paiement soit automatiquement débité au prix et à la fréquence indiqués sur cette page jusqu’à la fin de l’achat ou jusqu’à son annulation. Toutes les annulations sont soumises à la %{cancellation_policy_label}.",
+        "pending_payment": {
+          "apple_wallet": {
+            "pass": {
+              "description": "Bon de paiement de %{shop_name}",
+              "store_label": "Magasin",
+              "payment_due_label": "Paiement dû"
+            }
+          },
+          "due_notice": "Votre paiement de %{amount_due} est dû le %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "Votre paiement de %{amount_due} est dû.",
+            "instruction_html": "Effectuez votre paiement à Multibanco ou en ligne à l’aide des informations ci-dessous. Pour toute question ou pour modifier vos informations de paiement, %{contact_us}.",
+            "find_nearest_atm": "Trouver le distributeur automatique le plus proche",
+            "expired_title": "La référence de paiement a expiré."
+          },
+          "oxxo": {
+            "reference_number": "Numéro de référence :",
+            "steps": {
+              "1": "Scannez le code-barres dans le magasin OXXO le plus proche de chez vous."
+            },
+            "expires_when_unknown": "À utiliser avant l’expiration du bon d’achat",
+            "print_voucher": "Imprimer le bon d’achat",
+            "print": {
+              "instructions_title": "Instructions pour payer votre OXXO :"
+            },
+            "important_details": {
+              "canceled_by_expiry": "Votre commande sera annulée si le paiement n’est pas reçu avant le %{date}.",
+              "non_refundable": "Les commandes OXXO ne sont pas remboursables.",
+              "tracking_after_payment": "Vous recevrez les informations de suivi de votre envoi dans un délai d’un jour ouvrable après le paiement."
+            }
+          }
+        },
+        "order_covered_by_store_credit_notice": "Votre commande est couverte par votre avoir en magasin.",
+        "preview_not_available": {
+          "title": "Aperçu indisponible",
+          "button": "D’accord"
+        },
+        "order_edit_banner_title": "Le paiement de {{amount_owed}} est nécessaire.",
+        "order_edit_banner_subtitle": "Votre commande {{order_number}} a été mise à jour. Consultez les modifications, puis payez pour confirmer votre commande.",
+        "order_edit_banner_items_added": {
+          "other": "%{count} ajouté"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Supprimé",
+          "with_quantities": "{{delta}} de {{quantity}} supprimé"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Retourné {{quantity}}",
+          "with_quantities": "{{delta}} retourné sur {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "with_quantities": "{{delta}} supprimé du retour"
+        },
+        "order_edit_banner_multiple_items_added": "Ajouté {{amount}}",
+        "order_edit_banner_multiple_items_removed": "{{amount}} supprimé",
+        "order_edit_banner_single_item_returned": "Retourné",
+        "order_edit_banner_multiple_items_returned": "Retourné {{amount}}",
+        "order_edit_banner_multiple_items_return_line_item_removed": "{{amount}} retiré du retour",
+        "order_edit_banner_no_taxes_label": "Aucun",
+        "order_edit_banner_line_discount_added": "Réduction appliquée",
+        "order_edit_banner_line_discount_removed": "Remise supprimée",
+        "payment_method": "Mode de paiement",
+        "payment_method_rollup_accessibility_label": "Options de paiement",
+        "payment_method_update_failed": "Échec de la mise à jour du mode de paiement.",
+        "payment_method_incompatible_with_payment_terms": "Le mode de paiement est incompatible avec les conditions de paiement.",
+        "proposed_gateway_unavailable": "La passerelle de paiement proposée est indisponible.",
+        "pay_in_installments_split_pay_short": "4 paiements de %{amount}",
+        "payment_flexibility_terms_id_mismatch": "Incohérence entre l’identifiant des conditions de flexibilité de paiement"
       }
     },
     "attributes": {
