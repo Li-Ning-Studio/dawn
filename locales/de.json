@@ -2114,7 +2114,273 @@
         "markets_pro_disclaimer_terms_and_conditions_title": "Geschäftsbedingungen für den Merchant of Record",
         "markets_pro_disclaimer_privacy_policy_title": "Datenschutzerklärung des Merchant of Record",
         "gift_cards_unavailable": "Deine Geschenkkarte kann nicht mehr auf diese Bestellung angerechnet werden und wurde entfernt.",
-        "new_bank_account_disclaimer": "Mit Abschluss Ihrer Bestellung ermächtigen Sie %{shop_name}, den unten aufgeführten Betrag zum angegebenen Zeitpunkt per ACH von dem unten aufgeführten Konto abzubuchen."
+        "new_bank_account_disclaimer": "Mit Abschluss Ihrer Bestellung ermächtigen Sie %{shop_name}, den unten aufgeführten Betrag zum angegebenen Zeitpunkt per ACH von dem unten aufgeführten Konto abzubuchen.",
+        "paypal_disconnect": "Trennen",
+        "pay_with_payment_method": "Mit %{payment_method} bezahlen",
+        "payment_method_not_available_for_shipping_address_error": "Zahlungsmethode für die ausgewählte Lieferadresse nicht verfügbar. Wählen Sie eine andere Zahlungsmethode.",
+        "payment_method_unavailable_error": "Diese Zahlungsmethode ist derzeit nicht verfügbar. Wählen Sie eine andere Zahlungsmethode.",
+        "paypal_modal": {
+          "order_contains_fixed_selling_plans": "Der Gesamtbetrag enthält möglicherweise keine Steuern, Versandkosten, aufgeschobenen Gebühren und bestimmte Rabatte. Gehe zur Kasse, um den heute fälligen Betrag zu sehen."
+        },
+        "paynow_label": "Jetzt bezahlen",
+        "purchase_options_agreement_label": "Ein oder mehrere Artikel in deinem Warenkorb sind aufgeschobene oder wiederkehrende Käufe. Wenn du mit der Zahlung fortfährst, erklärst du dich damit einverstanden, dass deine Zahlungsmethode automatisch in der auf dieser Seite angegebenen Höhe und Häufigkeit belastet wird, bis der Vorgang endet oder du ihn kündigst. Für alle Kündigungen gilt die %{cancellation_policy_label}.",
+        "paypal": {
+          "connect": "Klicken Sie hier, um Ihr PayPal-Konto zu verknüpfen"
+        },
+        "pending_payment": {
+          "apple_wallet": {
+            "pass": {
+              "description": "%{shop_name} Zahlungsgutschein",
+              "logo_text": "Zahlungsbeleg",
+              "store_label": "Laden",
+              "payment_due_label": "Zahlung fällig"
+            }
+          },
+          "due_notice": "Ihre Zahlung in Höhe von %{amount_due} ist am %{due_date} fällig.",
+          "multibanco": {
+            "buyer_action_info": "Ihre Zahlung in Höhe von %{amount_due} ist fällig.",
+            "instruction_html": "Nehmen Sie Ihre Zahlung bei Multibanco oder online mit den unten stehenden Angaben vor. Bei Fragen oder wenn Sie Ihre Zahlungsdetails aktualisieren möchten, %{contact_us}.",
+            "find_nearest_atm": "Nächstgelegenen Geldautomaten finden",
+            "expires_at": "Läuft ab am %{date}",
+            "expired": "Am %{date} abgelaufen"
+          },
+          "oxxo": {
+            "steps": {
+              "1": "Scanne den Barcode in deinem nächstgelegenen OXXO.",
+              "2": "Bezahlen Sie den genauen Betrag bar an der Kasse."
+            },
+            "expires_at": "Läuft ab am %{date}",
+            "expires_when_unknown": "Vor Ablauf des Gutscheins verwenden",
+            "print_voucher": "Gutschein drucken",
+            "print": {
+              "instructions_title": "Anleitung zur Bezahlung bei OXXO:"
+            },
+            "important_details": {
+              "canceled_by_expiry": "Ihre Bestellung wird storniert, wenn die Zahlung nicht bis %{date} eingeht.",
+              "canceled_when_expired": "Deine Bestellung wird storniert, wenn die Zahlung nicht vor Ablauf des Gutscheins eingeht.",
+              "tracking_after_payment": "Sie erhalten die Sendungsverfolgungsinformationen innerhalb eines Werktags nach Zahlungseingang."
+            },
+            "barcode_alt": "OXXO-Gutschein-Barcode für die Referenznummer %{reference_number}"
+          }
+        },
+        "order_covered_by_store_credit_notice": "Deine Bestellung wird mit deinem Guthaben abgedeckt.",
+        "order_covered_by_redeemables_notice": "Ihre Bestellung ist abgesichert.",
+        "preview_not_available": {
+          "content": "Keine Sorge, dieser Express-Checkout funktioniert für Ihre Kunden.",
+          "button": "Okay"
+        },
+        "order_edit_banner_title": "Die Zahlung von {{amount_owed}} ist erforderlich.",
+        "order_edit_banner_subtitle": "Ihre Bestellung {{order_number}} wurde aktualisiert. Prüfen Sie die Änderungen und bezahlen Sie anschließend, um Ihre Bestellung zu bestätigen.",
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Aus der Rücksendung entfernt",
+          "with_quantities": "{{delta}} aus der Rücksendung entfernt"
+        },
+        "order_edit_banner_single_item_return_line_item_removed": "Aus der Rücksendung entfernt",
+        "order_edit_banner_multiple_items_return_line_item_removed": "{{amount}} aus der Rücksendung entfernt",
+        "order_edit_banner_updated_order_label": "Bestellung aktualisiert",
+        "order_edit_banner_previous_taxes_label": "Frühere Steuern:",
+        "order_edit_banner_no_taxes_label": "Keiner",
+        "payment_method_rollup_accessibility_label": "Zahlungsoptionen",
+        "payment_method_update_failed": "Die Zahlungsmethode konnte nicht aktualisiert werden.",
+        "payment_method_incompatible_with_payment_terms": "Die Zahlungsmethode ist mit den Zahlungsbedingungen nicht kompatibel.",
+        "proposed_gateway_unavailable": "Das vorgeschlagene Zahlungsgateway ist nicht verfügbar.",
+        "pay_in_installments_split_pay_short": "4 Zahlungen à %{amount}",
+        "payment_flexibility_terms_id_mismatch": "Abweichung bei den Bedingungen zur Zahlungsflexibilität-ID",
+        "payment_option": {
+          "accessibility_label": "Wählen Sie eine Zahlungsoption"
+        },
+        "shop_pay_hsa": {
+          "eligible_product": "Für HSA/FSA berechtigt",
+          "partially_eligible_product": "Teilweise HSA-/FSA-berechtigt",
+          "mixed_cart_description": "Dein Warenkorb darf nur HSA-/FSA-fähige Produkte enthalten.",
+          "mixed_cart_lmn_description": "Verwenden Sie eine persönliche Karte und beantragen Sie die Erstattung des erstattungsfähigen Betrags. Leistungskarten werden abgelehnt, da der Kauf nicht vollständig HSA-/FSA-berechtigt ist.",
+          "label": "Ich möchte für diesen Kauf HSA-/FSA-Guthaben verwenden.",
+          "description": "Bezahlen Sie direkt mit Ihrer Leistungskarte oder verwenden Sie eine persönliche Karte und beantragen Sie die Erstattung des erstattungsfähigen Betrags.",
+          "powered_by_truemed": "HSA-/FSA-Zahlungen, ermöglicht durch Truemed",
+          "truemed_terms_disclaimer_html": "Mit dem Kauf stimmen Sie den %{terms_link} von Truemed zu und bestätigen, dass Sie die %{privacy_link} von Truemed zur Kenntnis genommen haben.",
+          "terms_of_service": "Nutzungsbedingungen",
+          "privacy_policy": "Datenschutzrichtlinie",
+          "eligibility_disclaimer_html": "Die HSA/FSA-Berechtigung wird von Truemed bestimmt. %{terms_link}",
+          "login_message": "Melden Sie sich bei Shop an, um Ihr HSA-/FSA-Guthaben zu nutzen."
+        },
+        "supported_card_brands_more_label": "und mehr…",
+        "saved_by_payment_method": "Gespeichert mit %{payment_method}",
+        "same_billing_address_label": "Wie Lieferadresse",
+        "receiver_payment_experience_hint": "Nach Aufgabe Ihrer Bestellung erhalten Sie die Zahlungsdetails. Bezahlen Sie innerhalb von %{due_days} Tagen per Multibanco oder online.",
+        "technical_error": "Zahlungen können derzeit aufgrund eines technischen Problems nicht verarbeitet werden. Versuche es in ein paar Minuten erneut.",
+        "shop_pay_ideal_unavailable_error": "iDEAL | Wero ist für diese Bestellung nicht verfügbar. Wähle eine andere Zahlungsmethode.",
+        "sofort_label": "Sofortige Banküberweisung",
+        "shop_pay_installments_label": "Shop Pay Ratenzahlung",
+        "usdc_cashback_title": "%{incentive_percentage}% Cashback",
+        "usdc_cashback_additional_info": "Zahle mit USDC auf Base und erhalte %{incentive_percentage}% innerhalb von 30 Tagen in deiner Wallet zurück.",
+        "usdc_cashback_terms": "Es gelten Bedingungen und Einschränkungen.",
+        "purchase_options_card_update_agreement_label_html": "Indem Sie Ihre Zahlungsmethode aktualisieren, autorisieren Sie Zahlungen für alle wiederkehrenden oder aufgeschobenen Käufe gemäß der <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">Stornierungsrichtlinie</a> dieses Shops.",
+        "subscription_card_update_agreement_label": "Wenn Sie die Zahlungsmethode ändern, werden Ihr Abonnement und zukünftige wiederkehrende Zahlungen aktualisiert.",
+        "subscription_agreement_label": "Mindestens ein Artikel in Ihrem Warenkorb ist ein aufgeschobener Kauf oder ein Abonnement. Wenn Sie mit der Zahlung fortfahren, erklären Sie sich damit einverstanden, dass Ihre Zahlungsmethode automatisch zu dem auf dieser Seite angegebenen Preis und in der angegebenen Häufigkeit belastet wird, bis der Kauf endet oder Sie ihn kündigen. Für alle Kündigungen gelten %{cancelled}.",
+        "subscription_agreement_cancelled": "Stornierungsbedingungen",
+        "subscription_agreement_label_html": "Ich verstehe, dass ich einem Abonnement zustimme. Es verlängert sich zum angegebenen Preis und in der angegebenen Häufigkeit, bis es endet oder\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">gekündigt</a> wird.\n",
+        "purchase_options_agreement_label_html": "Mir ist bewusst, dass es sich bei einem oder mehreren Artikeln in meinem Warenkorb um einen aufgeschobenen oder wiederkehrenden Kauf handelt. Wenn ich fortfahre, stimme ich den\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">Stornierungsbedingungen</a>\nzu und ermächtige Sie, meine Zahlungsmethode zu den auf dieser Seite aufgeführten Preisen und in den angegebenen Intervallen und an den angegebenen Terminen zu belasten, bis meine\nBestellung erfüllt oder von mir storniert wird, sofern dies zulässig ist.\n",
+        "purchase_options_agreement_label_wallets": "Indem Sie mit Ihrer Zahlung fortfahren, stimmen Sie den auf dieser Seite aufgeführten zukünftigen Abbuchungen und der %{cancellation_policy_label} zu.",
+        "purchase_options_subscription_confirmation_title": "Bestätige dein Abonnement",
+        "purchase_options_subscription_agreement_label": "Ihr Warenkorb enthält ein sich automatisch verlängerndes Abonnement. Wenn Sie auf „%{button_label}“ klicken, %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_agreement_label_wallets": "Ihr Warenkorb enthält ein automatisch verlängertes Abonnement. Wenn Sie den Express-Checkout nutzen, %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_consent_text": "Sie stimmen ausdrücklich und ausdrücklich zu, dass Ihnen die in Ihrem Warenkorb angegebenen wiederkehrenden Beträge (zuzüglich Versandkosten und Steuern) automatisch in Rechnung gestellt werden, bis das/die Abonnement(s) endet/enden oder Sie kündigen.",
+        "purchase_options_subscription_cancellation_instructions": "%{cancel_text} Bitte lesen Sie die %{cancellation_policy_label}.",
+        "purchase_options_subscription_cancel_text": "Sie können jederzeit kündigen, indem Sie Ihr Konto aufrufen oder den Store kontaktieren.",
+        "waiting_on_payment_methods": "Verfügbare Zahlungsmethoden werden abgerufen ...",
+        "store_credit": {
+          "label": "Guthaben im Geschäft",
+          "apply_label": "Store-Guthaben anwenden",
+          "add_label": "Store-Guthaben hinzufügen",
+          "manage_label": "Store-Guthaben verwalten",
+          "buying_gift_card": "Store-Guthaben kann nicht zum Kauf einer Geschenkkarte verwendet werden.",
+          "no_fixed_selling_plans": "Store-Guthaben kann nicht mit Optionen für den späteren Kauf verwendet werden."
+        },
+        "use_order_billing_address_label": "Bestellrechnungsadresse verwenden",
+        "use_location_billing_address_label": "Standort-Rechnungsadresse verwenden",
+        "use_location_shipping_address_label": "Standort-Lieferadresse verwenden",
+        "shipping_rate_updated": "Die verfügbaren Versandarten wurden aktualisiert. Bestätige deine Auswahl, bevor du zur Kasse gehst.",
+        "simulated_checkout": "Vorschau folgt in Kürze.",
+        "simulated_express_checkout": "Wallets sind in der Editor-Vorschau aufgrund deiner Region oder deines Browsers nicht verfügbar.",
+        "vaulting_agreement_label": "Speichere meine Zahlungsinformationen bei %{company} für einen schnelleren Bezahlvorgang.",
+        "purchase_options_and_vaulting_agreement_label": "Mindestens ein Artikel in Ihrem Warenkorb ist ein später fälliger oder ein Abonnementkauf. Wenn Sie mit der Zahlung fortfahren, stimmen Sie zu, dass Ihre Zahlungsmethode automatisch zu dem auf dieser Seite angegebenen Preis und in der angegebenen Häufigkeit belastet wird, bis der Kauf endet oder Sie ihn kündigen. Für alle Kündigungen gilt die %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "Stornierungsbedingungen",
+        "use_different_credit_card_label": "Verwenden Sie eine andere Karte",
+        "saved_credit_card": "Ihre gespeicherte Kreditkarte",
+        "saved_credit_card_info": "Letzte vier Ziffern",
+        "saved_credit_card_cvv_verification": "Geben Sie zur Verifizierung den Sicherheitscode Ihrer Karte ein.",
+        "saved_credit_cards_modal": {
+          "done": "Erledigt",
+          "cancel": "Abbrechen"
+        },
+        "redeemable_row": {
+          "gift_card_label": "Geschenkkarte %{identifier} anwenden",
+          "gift_card_spoken_label": "Geschenkkarte mit der Endung %{last_characters} anwenden",
+          "gift_card_switch_label": "Geschenkkarte mit der Endung %{last_characters} anwenden, %{amount} verfügbar",
+          "store_credit_switch_label": "Ladenguthaben anwenden, %{amount} verfügbar"
+        },
+        "waiting_on_taxes_message": "Wenn Ihre Steuern in den nächsten Sekunden nicht berechnet werden, aktualisieren Sie die Seite.",
+        "waiting_on_taxes_notice": "Steuern berechnen",
+        "separate_payments_label": "Deine Artikel stammen aus mehreren Shops. Die Abrechnung erfolgt in %{separate_payments_link}.",
+        "separate_payments_text": "separate Zahlungen",
+        "vault_for_payment_later": {
+          "notice": "Ihnen wird jetzt nichts berechnet. Wenn Sie mit der Zahlung fortfahren, erklären Sie sich damit einverstanden, dass Ihre Zahlungsmethode belastet wird, sobald Ihre Bestellung bearbeitet wird."
+        }
+      },
+      "payment_challenge_modal": {
+        "instructions": "Schließen Sie Ihren Kauf mit Ihrem {{paymentMethod}}-Code ab.",
+        "open_app_text": "Öffne die {{paymentMethod}}-App",
+        "qr_code": {
+          "instructions": "Schließen Sie Ihren Kauf mit Ihrem {{paymentMethod}}-Code ab.",
+          "paynow_instructions": "Scannen Sie diesen QR-Code mit Ihrer Banking- oder Zahlungs-App, um Ihren Kauf abzuschließen.",
+          "paynow_mobile_steps": {
+            "save": "QR-Code speichern",
+            "upload": "Lade es in deiner Bank- oder Zahlungs-App aus deinen Fotos hoch.",
+            "come_back": "Kehren Sie zu dieser Seite zurück, sobald Sie bezahlt haben."
+          },
+          "wechat_instructions": "Scannen Sie diesen QR-Code mit der WeChat-App auf Ihrem Smartphone, um Ihren Einkauf abzuschließen.",
+          "wechat_instructions_mobile": "Scannen Sie diesen QR-Code mit der WeChat-App auf einem anderen Gerät, um Ihren Kauf abzuschließen."
+        },
+        "external": {
+          "instructions": "Bestätige die Zahlung in deiner App, um diesen Kauf abzuschließen."
+        },
+        "close": "Schließe die Herausforderung ab.",
+        "timer_message": "Du hast {{timeLeft}} Zeit zum Bezahlen"
+      },
+      "payment_collection": {
+        "cancelled": "Diese Zahlung ist nicht mehr erforderlich. Weitere Informationen findest du auf der Bestellseite.",
+        "paid": "Diese Zahlung wurde bereits übermittelt. Besuchen Sie die Bestellseite für weitere Informationen."
+      },
+      "payment_errors": {
+        "installments": {
+          "retry_same_instrument": {
+            "heading": "Überprüfen Sie Ihre Kartendaten",
+            "body": "Aktualisieren Sie Ihre Kartendaten oder wählen Sie eine andere Karte"
+          },
+          "retry_different_instrument": {
+            "heading": "Ihre Karte wurde abgelehnt.",
+            "body": "Versuchen Sie es erneut oder wählen Sie eine andere Karte."
+          },
+          "restart_payment_method": {
+            "heading": "Deine Sitzung ist abgelaufen."
+          }
+        },
+        "amount_too_small": "Der Mindestzahlungsbetrag muss höher als 0,50 USD sein. Versuchen Sie es erneut mit einem höheren Betrag.",
+        "method_not_available": "Die angeforderte Zahlungsmethode ist nicht verfügbar. Wähle eine andere Zahlungsmethode und versuche es erneut.",
+        "payment_approval_not_verified": "Wir konnten die Zahlungsfreigabe nicht bestätigen. Bitte genehmigen Sie den Kauf erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "payment_approval_expired": "Diese Zahlungsfreigabe ist abgelaufen. Genehmigen Sie den Kauf erneut, um fortzufahren.",
+        "payment_approval_terms_mismatch": "Diese Zahlungsfreigabe stimmt nicht mit dem Gesamtbetrag, der Währung, der Lieferadresse oder der Zahlungsmethode dieses Checkouts überein. Genehmigen Sie den aktualisierten Kauf, um fortzufahren.",
+        "spend_permission_not_covered": "Die Ausgabenberechtigung des Käufers deckt diesen Kauf nicht ab. Der Käufer kann den Kauf an der Kasse abschließen.",
+        "spend_permission_over_purchase_limit": "Dieser Kauf überschreitet das Limit für einen einzelnen Einkauf innerhalb der Ausgabeberechtigung des Käufers.",
+        "spend_permission_not_enough_left": "Dieser Kauf übersteigt das verbleibende Ausgabenlimit des Käufers.",
+        "spend_permission_card_not_covered": "Die Ausgabeberechtigung des Käufers gilt nicht für diese Karte.",
+        "spend_permission_paused": "Der Käufer hat diese Ausgabeberechtigung pausiert.",
+        "spend_permission_missing": "Der Käufer hat für diesen Agenten keine aktive Ausgabeberechtigung.",
+        "spend_permission_unavailable": "Die Ausgabeberechtigung des Käufers konnte nicht überprüft werden. Bitte versuchen Sie es später erneut.",
+        "local_payment_method_unavailable": "%{payment_method} ist nicht verfügbar.",
+        "available_methods_updated": "Die verfügbaren Zahlungsmethoden wurden aktualisiert.",
+        "generic_error": "Bei der Verarbeitung Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "payment_method_unavailable": "Bei der Verarbeitung Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie es erneut mit einer anderen Zahlungsmethode.",
+        "rejected_transaction": "Ihre Zahlung wurde abgelehnt. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "credit_card_processing": "Ihre Zahlung kann aus technischen Gründen nicht verarbeitet werden. Versuchen Sie es in ein paar Minuten erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "checkout_amount_changed": "Ihre Zahlung konnte nicht verarbeitet werden, da sich der fällige Betrag beim Bezahlen geändert hat. Überprüfen Sie Ihre Bestellung und versuchen Sie es erneut.",
+        "deferred_payment_not_allowed": "Aufgeschobene Zahlungen sind nicht zulässig. Überprüfen Sie Ihre Bestellung und versuchen Sie es erneut.",
+        "deferred_payment_required": "Für diese Bestellung ist eine spätere Zahlung erforderlich. Überprüfe deine Bestellung und versuche es erneut.",
+        "deferred_amount_changed": "Ihre Zahlung konnte nicht verarbeitet werden, da sich der Betrag der späteren Zahlung geändert hat. Überprüfen Sie Ihre Bestellung und versuchen Sie es erneut.",
+        "deferred_date_changed": "Ihre Zahlung konnte nicht verarbeitet werden, da sich das Datum der späteren Zahlung geändert hat. Prüfen Sie Ihre Bestellung und versuchen Sie es erneut.",
+        "order_total_changed": "Der Gesamtbetrag Ihrer Bestellung hat sich geändert. Überprüfen Sie ihn und versuchen Sie es erneut.",
+        "payment_processing": "Ihre Zahlung kann aus technischen Gründen nicht verarbeitet werden. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "paypal_zero_amount": "Für Bestellungen über %{amount} kannst du PayPal nicht verwenden. Überprüfe, ob deine Bestellung korrekt ist, und schließe den Kauf ohne PayPal ab.",
+        "paypal_invalid_token": "PayPal war nicht verfügbar. Versuche es erneut oder nutze eine andere Checkout-Option.",
+        "pay_later_failed": "Bei der Verarbeitung Ihrer Zahlung mit „Später bezahlen“ ist ein Fehler aufgetreten. Wählen Sie eine andere Zahlungsmethode und versuchen Sie es erneut.",
+        "three_d_secure_failed": "Deine Zahlung konnte nicht verifiziert werden. Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "three_d_secure_failed_duplicate": "Die 3D-Secure-Authentifizierung der Kreditkarte ist fehlgeschlagen, weil bereits eine andere läuft.",
+        "three_d_secure_throttled": "Zu viele Versuche; warte, bevor du es erneut versuchst.",
+        "subscription_agreement_blank": "Um ein Abonnement zu kaufen, müssen deine Zahlungsdaten gespeichert werden. Um fortzufahren, bestätige dein Einverständnis oder entferne die Abonnementartikel aus deiner Bestellung.",
+        "insufficient_funds": "Ihre Zahlung wurde mangels ausreichender Deckung abgelehnt. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "multiple_deferred_payment_not_allowed": "Pro Anfrage ist nur eine aufgeschobene Zahlung zulässig. Überprüfen Sie Ihre Anfrage und versuchen Sie es erneut.",
+        "shipping_must_match_billing": "Die Rechnungsadresse muss mit der Lieferadresse übereinstimmen. Verwenden Sie eine andere Zahlungsmethode.",
+        "shipping_company_required_error": "{{shopName}} benötigt einen Firmennamen für die Lieferadresse.",
+        "cancelled_payment": "Ihre Zahlung wurde abgebrochen. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "cannot_verify": "Deine Zahlungsdaten konnten nicht verifiziert werden. Überprüfe deine Kartendaten und versuche es erneut.",
+        "invalid_customer_account": "Wir konnten Ihr Konto nicht belasten. Sie können es erneut versuchen, nachdem Sie das Problem mit Ihrem Konto behoben haben, oder eine andere Zahlungsmethode verwenden.",
+        "code_expired": "Ihr Zahlungscode ist abgelaufen oder wurde bereits verwendet. Rufen Sie in Ihrer Banking-App einen neuen Code ab und versuchen Sie es erneut.",
+        "code_invalid": "Dein Zahlungscode ist ungültig. Überprüfe den Code und versuche es erneut oder fordere einen neuen Code in deiner Banking-App an.",
+        "invalid_number": "Geben Sie eine gültige Kartennummer ein.",
+        "invalid_expiry_date": "Geben Sie ein gültiges Ablaufdatum ein.",
+        "invalid_cvc": "Geben Sie einen gültigen Sicherheitscode ein.",
+        "missing_cvc": "Sicherheitscode eingeben",
+        "expired_card": "Ihre Karte ist abgelaufen. Verwenden Sie eine andere Zahlungsmethode.",
+        "payment_method_not_applicable": "Diese Zahlungsmethode ist nicht verfügbar. Verwenden Sie eine andere Zahlungsmethode.",
+        "processing_error": "Bei der Verarbeitung Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "processing_error_checkout_as_guest": "Bei der Verarbeitung Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie es erneut mit einer anderen Zahlungsmethode oder {{checkout_as_guest_link}}.",
+        "selected_payment_method": "Es gab ein Problem mit der ausgewählten Zahlungsmethode, und Ihnen wurde nichts berechnet. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "duplicate_autopay_card": "Diese Karte ist mit bevorstehenden Raten verknüpft. Zahlen Sie anders oder {{update_payment_details_link}}",
+        "duplicate_autopay_card_link": "Zahlungsdaten aktualisieren",
+        "duplicate_autopay_card_without_link": "Diese Karte ist mit bevorstehenden Ratenzahlungen verknüpft. Bezahle auf andere Weise.",
+        "call_issuer": "Ihre Karte wurde abgelehnt. Verwenden Sie eine andere Zahlungsmethode oder wenden Sie sich an Ihre Bank, um weitere Informationen zu erhalten.",
+        "test_mode_live_card": "Dieser Shop kann keine echten Bestellungen oder Zahlungen annehmen.",
+        "transient_error": "Beim Verarbeiten Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie, diese Seite neu zu laden, oder überprüfen Sie Ihre Internetverbindung.",
+        "missing_shipping_address": "Deine Zahlung konnte nicht verarbeitet werden, da deine Lieferadresse fehlt. Füge eine Lieferadresse hinzu und versuche es erneut.",
+        "invalid_shipping_address": "Deine Zahlung konnte nicht verarbeitet werden, weil wir deine Lieferadresse nicht finden konnten. Überprüfe deine Lieferadresse und versuche es erneut.",
+        "successful_offsite_with_gift_card_error": "Beim Verarbeiten deiner Geschenkkartenzahlung ist ein Problem aufgetreten. Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "development_store_order_limit_reached": "Du hast das Limit für Bestellungen in Entwicklungsshops mit diesem Zahlungsanbieter erreicht. Um eine weitere Bestellung aufzugeben, musst du ein Test-Zahlungsgateway verwenden. Erfahre mehr unter %{development_store_order_testing_docs_link}.",
+        "development_store_with_order_limit": "Um eine Testbestellung aufzugeben, musst du ein Test-Zahlungsgateway verwenden. Erfahre mehr unter %{development_store_order_testing_docs_link}.",
+        "development_store_order_testing_docs_link": "Bestellungen in Entwicklungs-Shops testen",
+        "payment_above_threshold": "Der Zahlungsbetrag liegt über dem Geldlimit für diese Region. Reduzieren Sie den Gesamtbetrag und versuchen Sie es erneut.",
+        "risky": "Bei der Verarbeitung Ihrer Zahlung ist ein Problem aufgetreten. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "expired_buyer_action": "Die Zahlungsmethode ist abgelaufen. Versuche es erneut.",
+        "name_mismatch": "Überprüfe deine Kartendaten. Der Name auf deiner Karte und die Rechnungsadresse stimmen nicht überein.",
+        "market_manager_blocks_wallet_payments": "Diese Zahlungsmethode wird in Ihrem Land nicht unterstützt.",
+        "paypal_over_capture": "Dein Bestellbetrag wurde aktualisiert. Bezahle mit {{walletName}}, um deine Bestellung abzuschließen.",
+        "captcha_required": "Geben Sie Ihre Zahlungsinformationen ein und lösen Sie das Captcha, um Ihren Kauf abzuschließen.",
+        "captcha_required_without_payment_information": "Lösen Sie das CAPTCHA, um Ihren Kauf abzuschließen.",
+        "payment_credential_delegation_error": "Beim Verarbeiten Ihrer Zahlung ist ein Problem aufgetreten. Wählen Sie eine neue Zahlungsmethode."
+      },
+      "payment_gateway": {
+        "bogus_label": "Zahlungsgateway testen",
+        "bank_deposit_label": "Bankeinzahlung",
+        "cash_on_delivery_label": "Barzahlung bei Lieferung (Nachnahme)"
       }
     },
     "attributes": {

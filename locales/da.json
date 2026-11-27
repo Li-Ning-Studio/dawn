@@ -2264,7 +2264,10 @@
       },
       "redeemable_errors": {
         "gift_card": {
-          "currency_mismatch": "Kun gavekort i %{shop_currency} accepteres"
+          "currency_mismatch": "Kun gavekort i %{shop_currency} accepteres",
+          "insufficient_funds": "Dette gavekort har ingen penge tilbage",
+          "generic": "Gavekortet kunne ikke føjes til betalingen",
+          "no_longer_available": "Dette gavekort kan ikke længere bruges ved betalingen"
         }
       },
       "post_purchase": {
@@ -2333,6 +2336,180 @@
             "permission_not_allowed": "Tillad deling af din placering.",
             "permission_denied": "Kunne ikke hente din placering. Prøv igen."
           }
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Gennemfør dit køb",
+        "remote_only_notice": "Disse varer sælges og sendes af andre butikker. Gå til kassen hos hver butik for at gennemføre dit køb.",
+        "return_to_store_label": "Gå tilbage til butikken",
+        "detail_item_label": {
+          "one": "{{count}} vare",
+          "other": "{{count}} varer"
+        },
+        "checkout_on_shop_label": "Gå til kassen hos %{shop_name}",
+        "single_shop_transition": "Omdirigerer dig til %{advertiser}, så du kan gennemføre dit køb."
+      },
+      "shipping": {
+        "delivery": "Levering %{time}",
+        "arrives_time": "Ankommer %{time}",
+        "arrives_time_range": "Ankommer %{min_time}–%{max_time}",
+        "default_description": "Afsendes inden for 1 hverdag",
+        "duties_and_taxes_options": {
+          "ddp_caption": "Ingen ekstra gebyrer ved levering",
+          "ddu_title": "Betaling ved levering",
+          "ddu_caption": "Yderligere gebyrer kan forekomme."
+        },
+        "shipping_method_title": "Forsendelsesmetode",
+        "shipping_method_rollup_accessibility_label": "Muligheder for leveringsmetode",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Gentagen forsendelse",
+          "other": "Gentagne forsendelser"
+        },
+        "no_rates_for_cart_or_destination_notice": "Der er ingen leveringsmetoder tilgængelige for din kurv eller adresse",
+        "no_pickup_location_notice": "Mindst ét af dine produkter kan ikke afhentes",
+        "no_rates_for_country_notice": "Der blev ikke fundet nogen fragtpriser for denne adresse.",
+        "estimated_delivery_date_range": "%{minimum} til %{maximum} hverdage",
+        "estimated_delivery_time": "Forventet levering %{time}",
+        "estimated_delivery_time_range": "Forventet levering %{min_time}–%{max_time}",
+        "estimated_time": "Anslået %{time}",
+        "estimated_time_range": "Estimeret %{min_time}–%{max_time}",
+        "shipping_line_phone_label": "Mobiltelefonnummer (påkrævet)",
+        "shipping_line_phone": "Din kurér kan bruge dette nummer til at kontakte dig.",
+        "shipping_line_delivery_phone_label": "Mobiltelefonnummer",
+        "shipping_line_delivery_instructions": "Indtast nødvendige oplysninger som dørkoder eller instruktioner om aflevering.",
+        "other_method": {
+          "zero": "Ingen andre metoder er tilgængelige",
+          "one": "%{count} anden metode tilgængelig på"
+        },
+        "prime_not_available": {
+          "default": "Prime-levering er ikke tilgængelig for din ordre. Dine leveringsmuligheder er blevet opdateret."
+        },
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "Gratis levering, når du køber for %{count} mere",
+            "other": "Gratis levering for %{count} flere leveringer"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Gratis levering for %{count} leveringer",
+            "other": "Gratis levering for %{count} leveringer"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Gratis fragt for %{count} levering mere, derefter %{recurring_order_shipping_price}",
+            "other": "Gratis fragt i %{count} leveringer mere, derefter %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Gratis fragt for %{count} levering, derefter %{recurring_order_shipping_price}",
+            "other": "Gratis levering for %{count} leveringer, derefter %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} ekstra levering for %{shipping_price}",
+            "other": "%{count} leveringer mere til %{shipping_price} stykket"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "other": "%{count} leveringer mere til %{shipping_price} stykket"
+          },
+          "initial_order_discounted": "Første forsendelsesomkostning %{discounted_shipping_cost}, derefter %{frequency_description}",
+          "first_order_shipping_price_included": "Første ordre inkluderet, efterfulgt af %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} pr. levering), efterfulgt af %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Første ordre gratis",
+            "other": "De første %{count} bestillinger er gratis"
+          },
+          "free_for_first_n_order": {
+            "one": "Til første ordre"
+          }
+        },
+        "duties_and_taxes_title": "Told og afgifter",
+        "shipping_information_required_notice": "Leveringsoplysninger er påkrævet. {{link}}.",
+        "shipping_information_redirect_link": "Indtast dine oplysninger her",
+        "no_other_methods_available": "Ingen andre metoder er tilgængelige",
+        "shipping_used_as_billing_notice": "Denne adresse vil også blive brugt som faktureringsadresse for denne ordre.",
+        "shipping_address_rollup_accessibility_label": "Leveringsmuligheder for adresse",
+        "invalid_shipping_method_summary": "Indtast en gyldig leveringsadresse for at se de tilgængelige leveringsmetoder.",
+        "method_summary": {
+          "incomplete_address_entered": "Indtast en fuldstændig leveringsadresse for at se de tilgængelige leveringsmetoder",
+          "incomplete_address_selected": "Vælg en fuldstændig leveringsadresse for at se tilgængelige leveringsmetoder"
+        },
+        "local_pickup": {
+          "rollup_title": "Afhentningssted",
+          "rollup_accessibility_label": "Muligheder for afhentningssted"
+        },
+        "missing_shipping_address": "Leveringsadressen mangler",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} flere",
+        "pre_order_ships_later": "Sendes senere",
+        "split_shipping_shipped_by_shop": "Sendt af %{shop_name}",
+        "split_shipping_shipment_notice": "Din ordre ankommer i %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "Din første bestilling ankommer i %{quantity_shipments}",
+        "split_shipping_multiple_shipment_notice": "Din ordre ankommer i flere forsendelser.",
+        "split_shipping_shipment_count_notice_one_time_purchase": {
+          "one": "Din ordre ankommer i %{count} forsendelse",
+          "other": "Din ordre ankommer i %{count} forsendelser."
+        },
+        "includes_recurring_items": "Omfatter tilbagevendende varer",
+        "split_shipping_option_free": "Gratis fragt",
+        "split_shipping_option_fastest": "Hurtigst",
+        "split_shipping_option_recommended": "Anbefalet",
+        "split_shipping_option_custom": "Brugerdefineret"
+      },
+      "review": {
+        "title": "Gennemgå",
+        "review_title": "Gennemfør din bestilling",
+        "checkout_as_guest": "Gå til betaling som gæst",
+        "checkout_a_different_way": "Se en anden måde",
+        "blocks": {
+          "shipping_method_title": "Forsendelsesmetode",
+          "change_link_label": "Ændr",
+          "change_contact_method_link_label": "Skift kontaktoplysninger",
+          "change_billing_address_link_label": "Skift faktureringsadresse",
+          "change_company_location_link_label": "Skift virksomhedens placering",
+          "change_shipping_method_link_label": "Skift leveringsmetode",
+          "change_payment_method_link_label": "Skift betalingsmetode",
+          "purchase_order_number_title": "Indkøbsordrenummer",
+          "change_purchase_order_number_label": "Skift PO-nummer",
+          "no_purchase_order_number": "(Intet PO-nummer)",
+          "no_purchase_order_number_long": "Intet indkøbsordrenummer",
+          "due_after_order_reviewed_html": "Forfalder, efter at ordren er gennemgået",
+          "review_title_free_order": "Gennemgå og færdiggør din ordre",
+          "payment_method_saved_company_location": "Gem kort til denne placering",
+          "company_location": "Virksomhedens placering",
+          "pickup_items_at": {
+            "one": "Afhent %{count} vare hos",
+            "other": "Afhent %{count} varer hos"
+          }
+        },
+        "item_header": {
+          "change_value": "Ændr værdien",
+          "section": "Sektion"
+        }
+      },
+      "remote_policies": {
+        "unavailable_policy": "Der er ikke angivet nogen %{policy_name} for denne butik. Kontakt %{shop_name} direkte for yderligere information."
+      },
+      "session_errors": {
+        "session_not_unique": "Der opstod et problem med at behandle din ordre. Opdater denne side for at vende tilbage til butikken.",
+        "session_already_finished": "Denne ordre er allerede afgivet. Du kan gå tilbage til butikken for at starte en ny ordre."
+      },
+      "review_address_modal": {
+        "title": "Gennemgå adressen",
+        "subtitle": {
+          "one": "Denne ordre sendes til den adresse, som {{merchant}} har angivet.",
+          "other": "Denne ordre sendes til en adresse, der er angivet af {{merchant}}. Vælg en leveringsadresse."
+        },
+        "subtitle_no_match": "Denne adresse matcher ikke nogen af dine gemte adresser.",
+        "subtitle_must_use": "Din ordre bliver sendt til denne adresse.",
+        "return_to_cart": "Gå tilbage til kurven"
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "Betalingen indeholder kun varer fra fjernlager. Du skal omdirigeres til fjernbutikken for at gennemføre betalingen.",
+          "currency_mismatch": "Denne vare kan ikke lægges i kurven, fordi den kommer fra en butik, der bruger en anden valuta.",
+          "currency_mismatch_removal": "En vare blev fjernet fra din kurv, fordi den kommer fra en butik, der bruger en anden valuta.",
+          "max_remote_shops_exceeded": "Dette produkt kan ikke føjes til, fordi din indkøbskurv allerede indeholder det maksimale antal fra andre butikker."
+        }
+      },
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "Der kræves en interaktion med en udvidelse for at gennemføre betalingen."
         }
       }
     },

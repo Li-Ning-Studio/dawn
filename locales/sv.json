@@ -1943,7 +1943,181 @@
         "payment_method_incompatible_with_payment_terms": "Betalningsmetoden är inte kompatibel med betalningsvillkoren.",
         "proposed_gateway_unavailable": "Den föreslagna betalningsgatewayen är inte tillgänglig.",
         "pay_in_installments_split_pay_short": "4 betalningar på %{amount}",
-        "payment_flexibility_terms_id_mismatch": "Villkor för flexibel betalning ID stämmer inte överens"
+        "payment_flexibility_terms_id_mismatch": "Villkor för flexibel betalning ID stämmer inte överens",
+        "shop_pay_hsa": {
+          "eligible_product": "Berättigad till HSA/FSA",
+          "partially_eligible_product": "Delvis berättigad till HSA/FSA",
+          "mixed_cart_description": "Din varukorg kan bara innehålla produkter som är berättigade till HSA/FSA.",
+          "mixed_cart_lmn_description": "Använd ett personligt kort och begär ersättning för det belopp som är berättigat. Förmånskort kommer att nekas eftersom köpet inte är helt berättigat till HSA/FSA.",
+          "label": "Jag vill använda HSA/FSA-medel för det här köpet.",
+          "description": "Betala direkt med ditt förmånskort eller använd ett personligt kort och begär ersättning för det belopp du har rätt till.",
+          "powered_by_truemed": "HSA/FSA-betalningar som hanteras av Truemed",
+          "truemed_terms_disclaimer_html": "Genom att genomföra köpet godkänner du Truemed:s %{terms_link} och bekräftar att du har tagit del av Truemed:s %{privacy_link}",
+          "truemed": "Äkta"
+        },
+        "saved_by_payment_method": "Sparad med %{payment_method}",
+        "receiver_payment_experience_hint": "När du har lagt din beställning får du betalningsuppgifter. Betala via Multibanco eller online inom %{due_days} dagar.",
+        "shop_pay_ideal_unavailable_error": "iDEAL | Wero är inte tillgängligt för den här beställningen. Välj en annan betalningsmetod.",
+        "sofort_label": "Direkt banköverföring",
+        "shop_pay_installments_label": "Dela upp betalningen med Shop Pay",
+        "set_as_default_card": "Ställ in som standardkort",
+        "usdc_cashback_title": "%{incentive_percentage}% cashback",
+        "usdc_cashback_additional_info": "Betala med USDC på Base och få %{incentive_percentage}% tillbaka i din plånbok inom 30 dagar.",
+        "purchase_options_card_update_agreement_label_html": "Genom att uppdatera din betalningsmetod godkänner du betalningar för återkommande eller uppskjutna köp i enlighet med den här butikens <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">avbokningspolicy</a>.",
+        "subscription_card_update_agreement_label": "Om du ändrar betalningsmetod uppdateras din prenumeration och framtida återkommande betalningar.",
+        "subscription_agreement_label": "En eller flera varor i din varukorg är ett uppskjutet köp eller ett prenumerationsköp. Genom att fortsätta med betalningen godkänner du att din betalningsmetod automatiskt debiteras enligt priset och frekvensen som anges på den här sidan tills det upphör eller du säger upp det. Alla uppsägningar omfattas av %{cancelled}.",
+        "subscription_agreement_cancelled": "avbokningspolicy",
+        "subscription_heading": "Prenumerationsavtal",
+        "subscription_agreement_label_html": "Jag förstår att jag godkänner en prenumeration. Den förnyas till det angivna priset och med den angivna frekvensen tills den avslutas eller \n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">sägs upp</a>.\n",
+        "purchase_options_agreement_label_html": "Jag förstår att en eller flera artiklar i min varukorg är ett uppskjutet eller återkommande köp. Genom att fortsätta godkänner jag\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">avbokningspolicyn</a>\noch ger dig tillåtelse att debitera min betalningsmetod enligt priserna, frekvensen och datumen som anges på den här sidan tills min\nbeställning har fullgjorts eller jag avbryter, om det är tillåtet.\n",
+        "purchase_options_agreement_label_wallets": "Genom att fortsätta med betalningen godkänner du de framtida debiteringar som anges på den här sidan och %{cancellation_policy_label}.",
+        "purchase_options_subscription_confirmation_title": "Bekräfta din prenumeration",
+        "purchase_options_subscription_agreement_label": "Din varukorg innehåller en prenumeration som förnyas automatiskt. Genom att klicka på \"%{button_label}\" %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_agreement_label_wallets": "Din varukorg innehåller en prenumeration som förnyas automatiskt. Genom att använda expresskassan godkänner du %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_consent_text": "du godkänner uttryckligen och aktivt att du automatiskt debiteras de återkommande belopp som visas i din varukorg (plus frakt och skatter) tills prenumerationen eller prenumerationerna avslutas eller du säger upp dem.",
+        "purchase_options_subscription_cancel_text": "Du kan avbryta när som helst genom att gå till ditt konto eller kontakta butiken.",
+        "waiting_on_payment_methods": "Hämtar tillgängliga betalningsmetoder...",
+        "taxes_not_included": "Skatter ingår inte",
+        "store_credit": {
+          "label": "Tillgodohavande i butiken",
+          "apply_label": "Använd butikskredit",
+          "add_label": "Lägg till butikskredit",
+          "manage_label": "Hantera butikskredit",
+          "buying_gift_card": "Du kan inte använda butikskredit för att köpa ett presentkort",
+          "no_fixed_selling_plans": "Du kan inte använda butikskredit för uppskjutna köp"
+        },
+        "same_billing_address_checkbox_label": "Använd leveransadressen som faktureringsadress",
+        "use_order_billing_address_label": "Använd beställningens faktureringsadress",
+        "use_location_billing_address_label": "Använd platsens faktureringsadress",
+        "use_location_shipping_address_label": "Använd leveransadressen för platsen",
+        "shipping_rate_updated": "Tillgängliga fraktmetoder har uppdaterats. Bekräfta ditt val innan du går till kassan.",
+        "simulated_checkout": "Förhandsvisning kommer snart",
+        "simulated_express_checkout": "Plånböcker är inte tillgängliga i förhandsvisningen av redigeraren på grund av din region eller webbläsare.",
+        "vaulting_agreement_label": "Spara min betalningsinformation hos %{company} för snabbare betalning",
+        "purchase_options_and_vaulting_agreement_label": "En eller flera artiklar i din varukorg är ett uppskjutet köp eller ett prenumerationsköp. När du fortsätter med betalningen godkänner du att din betalningsmetod debiteras automatiskt med det pris och den frekvens som anges på den här sidan tills det upphör eller du säger upp det. Alla uppsägningar omfattas av %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "avbokningspolicy",
+        "saved_credit_card_info": "De fyra sista siffrorna",
+        "saved_credit_card_cvv_verification": "Ange kortets säkerhetskod för verifiering.",
+        "saved_credit_cards_modal": {
+          "done": "Klart"
+        },
+        "redeemable_row": {
+          "gift_card_spoken_label": "Använd presentkortet som slutar på %{last_characters}",
+          "gift_card_switch_label": "Använd presentkortet som slutar på %{last_characters}, %{amount} tillgängligt",
+          "store_credit_switch_label": "Använd butikskrediten, %{amount} tillgängligt"
+        },
+        "waiting_on_taxes_message": "Om dina skatter inte beräknas inom några sekunder kan du uppdatera sidan.",
+        "separate_payments_label": "Dina varor kommer från fler än en butik. Du debiteras via %{separate_payments_link}.",
+        "vault_for_payment_later": {
+          "pay_button_label": "Lägg beställning",
+          "notice": "Du debiteras inte nu. Genom att fortsätta med betalningen godkänner du att din betalningsmetod debiteras när din beställning behandlas."
+        }
+      },
+      "payment_challenge_modal": {
+        "instructions": "Slutför ditt köp med din {{paymentMethod}}-kod",
+        "copy_text": "Kopiera {{paymentMethod}}-koden",
+        "open_app_text": "Öppna appen {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "Slutför ditt köp med din {{paymentMethod}}-kod",
+          "paynow_instructions": "Skanna den här QR-koden med din bank- eller betalningsapp för att slutföra ditt köp.",
+          "paynow_mobile_steps": {
+            "upload": "Ladda upp den från dina foton i din bank- eller betalningsapp"
+          },
+          "wechat_instructions": "Skanna den här QR-koden med WeChat-appen på din telefon för att slutföra köpet.",
+          "wechat_instructions_mobile": "Skanna den här QR-koden med WeChat-appen på en annan enhet för att slutföra ditt köp"
+        },
+        "external": {
+          "instructions": "Bekräfta betalningen i appen för att slutföra köpet."
+        },
+        "close": "Avsluta utmaningen",
+        "timer_message": "Du har {{timeLeft}} på dig att betala."
+      },
+      "payment_collection": {
+        "cancelled": "Den här betalningen behövs inte längre. Besök ordersidan för mer information.",
+        "paid": "Den här betalningen har redan skickats in. Besök ordersidan för mer information."
+      },
+      "payment_errors": {
+        "installments": {
+          "retry_same_instrument": {
+            "heading": "Kontrollera dina kortuppgifter",
+            "body": "Uppdatera dina kortuppgifter eller välj ett annat kort"
+          },
+          "retry_different_instrument": {
+            "heading": "Ditt kort nekades"
+          },
+          "restart_payment_method": {
+            "heading": "Din session har gått ut.",
+            "body": "Välj en betalningsplan för att starta om"
+          }
+        },
+        "amount_too_small": "Minsta betalningsbeloppet måste vara högre än 0,50 USD. Försök igen med ett högre belopp.",
+        "payment_approval_not_verified": "Vi kunde inte verifiera betalningsgodkännandet. Godkänn köpet igen eller använd en annan betalningsmetod.",
+        "payment_approval_expired": "Det här betalningsgodkännandet har löpt ut. Godkänn köpet igen för att fortsätta.",
+        "payment_approval_terms_mismatch": "Det här betalningsgodkännandet stämmer inte överens med det här köpets totalsumma, valuta, leveransadress eller betalningsmetod. Godkänn det uppdaterade köpet för att fortsätta.",
+        "spend_permission_not_covered": "Köparens spenderingsbehörighet omfattar inte det här köpet. Köparen kan slutföra köpet i kassan.",
+        "spend_permission_over_purchase_limit": "Det här köpet överskrider gränsen för ett enskilt köp enligt köparens köpbehörighet.",
+        "spend_permission_not_enough_left": "Det här köpet överstiger det återstående köpbeloppet som köparen har tillstånd att använda.",
+        "spend_permission_card_not_covered": "Köparens utgiftsbehörighet omfattar inte det här kortet.",
+        "spend_permission_paused": "Köparen pausade denna utgiftsbehörighet.",
+        "spend_permission_missing": "Köparen har ingen aktiv spenderingsbehörighet för den här agenten.",
+        "spend_permission_unavailable": "Det gick inte att kontrollera köparens köpbehörighet. Försök igen senare.",
+        "local_payment_method_unavailable": "%{payment_method} är inte tillgänglig",
+        "generic_error": "Det uppstod ett problem när din betalning behandlades. Försök igen eller använd en annan betalningsmetod.",
+        "payment_method_unavailable": "Det uppstod ett problem när din betalning skulle behandlas. Försök igen med en annan betalningsmetod.",
+        "rejected_transaction": "Din betalning nekades. Försök igen eller använd en annan betalningsmetod.",
+        "checkout_amount_changed": "Din betalning kunde inte genomföras eftersom beloppet att betala i kassan har ändrats. Kontrollera din beställning och försök igen.",
+        "deferred_payment_not_allowed": "Uppskjutna betalningar är inte tillåtna. Kontrollera din beställning och försök igen.",
+        "deferred_payment_required": "Den här beställningen kräver uppskjuten betalning. Kontrollera din beställning och försök igen.",
+        "deferred_amount_changed": "Din betalning kunde inte behandlas eftersom beloppet för den uppskjutna betalningen har ändrats. Kontrollera din beställning och försök igen.",
+        "deferred_date_changed": "Din betalning kunde inte behandlas eftersom datumet för den uppskjutna betalningen har ändrats. Kontrollera din beställning och försök igen.",
+        "order_total_changed": "Din ordersumma har ändrats. Granska och försök igen.",
+        "payment_processing_no_retry": "Din betalning kan inte behandlas av tekniska skäl. Prova en annan betalningsmetod.",
+        "paypal_zero_amount": "Du kan inte använda PayPal för beställningar på %{amount}. Bekräfta att din beställning stämmer och slutför köpet utan PayPal.",
+        "paypal_invalid_token": "PayPal var inte tillgängligt. Försök igen eller välj ett annat betalningsalternativ.",
+        "pay_later_failed": "Det gick inte att behandla din betalning med Betala senare. Välj en annan betalningsmetod och försök igen.",
+        "three_d_secure_failed": "Din betalning kunde inte verifieras. Försök igen eller använd ett annat betalningssätt.",
+        "three_d_secure_failed_duplicate": "Kreditkortets 3D Secure-autentisering misslyckades eftersom en annan redan pågår.",
+        "three_d_secure_throttled": "För många försök; vänta innan du försöker igen.",
+        "subscription_agreement_blank": "För att köpa en prenumeration måste dina betalningsuppgifter sparas. Fortsätt genom att bekräfta att du godkänner det eller ta bort prenumerationsartiklarna från din beställning.",
+        "installments_payment_method_incompatible": "Den valda betalningsmetoden kan inte användas för delbetalning. Välj en annan betalningsmetod.",
+        "insufficient_funds": "Din betalning nekades eftersom det saknades tillräckligt med pengar. Försök igen eller använd en annan betalningsmetod.",
+        "multiple_deferred_payment_not_allowed": "Endast en uppskjuten betalning tillåts per begäran. Kontrollera din begäran och försök igen.",
+        "shipping_must_match_billing": "Faktureringsadressen måste vara densamma som leveransadressen. Använd en annan betalningsmetod.",
+        "pick_up_card": "Ditt kort nekades. Försök igen eller använd en annan betalningsmetod.",
+        "invalid_customer_account": "Vi kunde inte debitera ditt konto. Du kan försöka igen när du har löst problemet med ditt konto, eller använda en annan betalningsmetod.",
+        "code_expired": "Din betalningskod har gått ut eller har redan använts. Hämta en ny kod i din bankapp och försök igen.",
+        "code_invalid": "Din betalningskod är inte giltig. Kontrollera koden och försök igen, eller hämta en ny kod i din bankapp.",
+        "expired_card": "Ditt kort har gått ut. Använd en annan betalningsmetod.",
+        "payment_method_not_applicable": "Den här betalningsmetoden kan inte användas. Använd en annan betalningsmetod.",
+        "card_declined": "Ditt kort nekades. Försök igen eller använd en annan betalningsmetod.",
+        "processing_error": "Det uppstod ett problem när din betalning behandlades. Försök igen eller använd en annan betalningsmetod.",
+        "processing_error_checkout_as_guest": "Det uppstod ett problem när din betalning skulle behandlas. Försök igen med en annan betalningsmetod eller {{checkout_as_guest_link}}.",
+        "selected_payment_method": "Det uppstod ett problem med den valda betalningsmetoden och du har inte debiterats. Försök igen eller använd en annan betalningsmetod.",
+        "payment_method_billing_address": "Det uppstod ett problem med faktureringsadressen för din valda betalningsmetod. Kontrollera adressen och försök igen eller använd en annan betalningsmetod.",
+        "duplicate_autopay_card": "Det här kortet är kopplat till kommande delbetalningar. Betala på ett annat sätt eller {{update_payment_details_link}}",
+        "duplicate_autopay_card_link": "Uppdatera betalningsuppgifter",
+        "duplicate_autopay_card_without_link": "Det här kortet är kopplat till kommande delbetalningar. Betala på ett annat sätt.",
+        "call_issuer": "Ditt kort nekades. Använd en annan betalningsmetod eller kontakta din bank för mer information.",
+        "test_mode_live_card": "Den här butiken kan inte ta emot riktiga beställningar eller betalningar.",
+        "test_mode_enabled_only_test_cards": "Testläget är aktiverat, endast testkreditkort kan läggas till.",
+        "transient_error": "Det gick inte att behandla din betalning. Försök att uppdatera sidan eller kontrollera din internetanslutning.",
+        "invalid_shipping_address": "Din betalning kunde inte behandlas eftersom vi inte kunde hitta din leveransadress. Kontrollera leveransadressen och försök igen.",
+        "successful_offsite_with_gift_card_error": "Det uppstod ett problem när din betalning med presentkort skulle behandlas. Försök igen eller använd en annan betalningsmetod.",
+        "development_store_order_limit_reached": "Du har nått gränsen för beställningar i utvecklingsbutiken med den här betalningsleverantören. Om du vill lägga en till beställning måste du använda en testbetalningsgateway. Läs mer om %{development_store_order_testing_docs_link}.",
+        "development_store_with_order_limit": "För att lägga en testbeställning behöver du använda en testbetalningsgateway. Läs mer om %{development_store_order_testing_docs_link}.",
+        "development_store_order_testing_docs_link": "testa beställningar i utvecklingsbutiker",
+        "payment_above_threshold": "Betalningsbeloppet överskrider det monetära gränsvärdet för den här regionen. Sänk totalbeloppet och försök igen.",
+        "risky": "Det uppstod ett problem när din betalning behandlades. Försök igen eller använd en annan betalningsmetod.",
+        "name_mismatch": "Kontrollera dina kortuppgifter. Namnet på kortet stämmer inte överens med faktureringsadressen.",
+        "paypal_over_capture": "Din ordersumma har uppdaterats. Betala med {{walletName}} för att slutföra din beställning.",
+        "captcha_required": "Ange betalningsuppgifter och lös captcha för att slutföra ditt köp.",
+        "captcha_required_without_payment_information": "Lös captchan för att slutföra ditt köp.",
+        "payment_credential_delegation_error": "Det uppstod ett problem när din betalning skulle behandlas. Välj en ny betalningsmetod."
+      },
+      "payment_gateway": {
+        "credit_card_label": "Kreditkort",
+        "bogus_label": "Testa betalningsgatewayen",
+        "cash_on_delivery_label": "Kontant vid leverans (COD)"
       }
     },
     "attributes": {
